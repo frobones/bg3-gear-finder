@@ -6,7 +6,7 @@ Run by hand; the webpage only ever reads data/.
     python3 scripts/fetch_wiki.py --refresh  # re-download everything from bg3.wiki first
 
 Reads data/region_order.json (hand-maintained) and writes items.json,
-acquisitions.json, locations.json and meta.json into data/.
+acquisitions.json, locations.json, abilities.json and meta.json into data/.
 """
 
 import argparse
@@ -48,6 +48,24 @@ LOCATION_ALIASES = {
 }
 # Regions referenced as a parent but with no row of their own in `locations`.
 EXTRA_ROOTS = {"Avernus": "three"}
+
+# Ability tables, the kind recorded for them, and the item fields that name their pages.
+ABILITY_TABLES = {
+    "passives": ("passive", ("passives", "weapon_passives", "passives_main_hand", "passives_off_hand")),
+    "actions": ("action", ("weapon_actions", "special_weapon_actions")),
+}
+ABILITY_FIELDS = (
+    "name",
+    "type",
+    "brief",
+    "description",
+    "extra_description",
+    "recharge",
+    "cost",
+    "image",
+    "icon",
+    "hotbar_icon",
+)
 
 # File/Category links may nest one ordinary link in their alt text: [[File:x.png|alt=Recharge: [[Long rest]]]]
 FILE_LINK = re.compile(r"\[\[(?:File|Category):(?:[^\[\]]|\[\[[^\]]*\]\])*\]\]")
@@ -328,6 +346,44 @@ def build_acquisitions(wiki: WikiClient, items: dict, locations: dict, region_or
     return acquisitions, skipped
 
 
+def build_abilities(wiki: WikiClient, items: dict) -> dict[str, dict]:
+    """Passives and weapon actions that items grant, keyed by wiki page name, for the item panel's pop-outs."""
+    abilities: dict[str, dict] = {}
+    for table, (kind, item_fields) in ABILITY_TABLES.items():
+        wanted = {
+            name
+            for item in items.values()
+            for record in (item, *item["variants"])
+            for field in item_fields
+            for name in record.get(field) or []
+        }
+        full_schema = wiki.schema(table)
+        schema = {field: full_schema[field] for field in ABILITY_FIELDS if field in full_schema}
+        for row in wiki.export(table, schema):
+            record = normalize_row(row, schema)
+            if record["page"] not in wanted:
+                continue
+            _, links = clean_wikitext(row.get("description"))
+            abilities[record["page"]] = {
+                "id": record["page"],
+                "kind": kind,
+                "name": record["name"] or record["page"],
+                "type": record.get("type"),
+                "brief": record.get("brief"),
+                "description": record.get("description"),
+                "extra_description": record.get("extra_description"),
+                "recharge": record.get("recharge"),
+                "cost": record.get("cost"),
+                "icon_url": record.get("icon_url") or record.get("image_url") or record.get("hotbar_icon_url"),
+                "links": links,
+                "wiki_url": wiki_url(record["page"]),
+            }
+            wanted.discard(record["page"])
+        if wanted:
+            raise RuntimeError(f"Items name {table} that bg3.wiki has no row for: {sorted(wanted)}")
+    return abilities
+
+
 def write_json(name: str, payload: Any) -> None:
     (DATA_DIR / name).write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
@@ -342,6 +398,7 @@ def main() -> int:
     items = build_items(wiki)
     locations = build_locations(wiki)
     acquisitions, skipped = build_acquisitions(wiki, items, locations, region_order)
+    abilities = build_abilities(wiki, items)
 
     located = {a["item"] for a in acquisitions}
     for item in items.values():
@@ -350,12 +407,13 @@ def main() -> int:
     write_json("items.json", sorted(items.values(), key=lambda i: i["id"]))
     write_json("acquisitions.json", acquisitions)
     write_json("locations.json", sorted(locations.values(), key=lambda loc: loc["name"]))
+    write_json("abilities.json", sorted(abilities.values(), key=lambda a: a["id"]))
     write_json(
         "meta.json",
         {
             "snapshot_utc": wiki.oldest_fetch.isoformat(timespec="seconds"),
             "source": WIKI,
-            "source_tables": [*GEAR_TABLES, "item_locations", "locations"],
+            "source_tables": [*GEAR_TABLES, "item_locations", "locations", *ABILITY_TABLES],
             "license": "Content from bg3.wiki, CC BY-NC-SA 4.0 or CC BY-SA 4.0",
             "license_url": f"{WIKI}/wiki/bg3wiki:Copyrights",
             "counts": {
@@ -366,6 +424,9 @@ def main() -> int:
                 "acquisitions_without_place": sum(1 for a in acquisitions if a["location"] is None),
                 "item_location_rows_skipped_non_gear": skipped,
                 "locations": len(locations),
+                "abilities_by_kind": {
+                    kind: sum(1 for a in abilities.values() if a["kind"] == kind) for kind, _ in ABILITY_TABLES.values()
+                },
             },
         },
     )

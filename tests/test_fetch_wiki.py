@@ -92,6 +92,56 @@ class RetryDelayTest(unittest.TestCase):
         self.assertTrue(2 <= fetch_wiki._retry_delay(1, urllib.error.URLError("reset")) < 3)
 
 
+class FakeWiki:
+    """Stands in for WikiClient with canned Cargo rows, so no network is used."""
+
+    SCHEMA = {
+        "name": {"type": "String"},
+        "description": {"type": "Wikitext"},
+        "recharge": {"type": "String"},
+        "image": {"type": "File"},
+    }
+
+    def __init__(self, rows: dict[str, list[dict]]) -> None:
+        self.rows = rows
+
+    def schema(self, table: str) -> dict:
+        return self.SCHEMA
+
+    def export(self, table: str, schema: dict) -> list[dict]:
+        return self.rows[table]
+
+
+def _item(**fields: list[str]) -> dict:
+    return {"variants": [], **fields}
+
+
+class BuildAbilitiesTest(unittest.TestCase):
+    def test_keeps_only_abilities_items_use(self) -> None:
+        wiki = FakeWiki(
+            {
+                "passives": [
+                    {"_pageName": "Remedial Rhymes", "name": "Remedial Rhymes", "description": "Gain [[Temp HP]]."},
+                    {"_pageName": "Unused", "name": "Unused", "description": "Nobody has this."},
+                ],
+                "actions": [{"_pageName": "Lacerate", "name": "Lacerate", "image": "Lacerate.webp"}],
+            }
+        )
+        items = {"Blazer": _item(passives=["Remedial Rhymes"]), "Sword": _item(weapon_actions=["Lacerate"])}
+        abilities = fetch_wiki.build_abilities(wiki, items)
+        self.assertEqual(sorted(abilities), ["Lacerate", "Remedial Rhymes"])
+        self.assertEqual(abilities["Remedial Rhymes"]["kind"], "passive")
+        self.assertEqual(abilities["Remedial Rhymes"]["description"], "Gain Temp HP.")
+        self.assertEqual(abilities["Remedial Rhymes"]["links"][0]["page"], "Temp HP")
+        self.assertEqual(abilities["Lacerate"]["kind"], "action")
+        self.assertEqual(abilities["Lacerate"]["icon_url"], fetch_wiki.file_url("Lacerate.webp"))
+
+    def test_missing_ability_stops_the_build(self) -> None:
+        wiki = FakeWiki({"passives": [], "actions": []})
+        with self.assertRaisesRegex(RuntimeError, "Ghost Passive"):
+            fetch_wiki.build_abilities(wiki, {"Ring": _item(passives=["Ghost Passive"])})
+
+
 class FileUrlTest(unittest.TestCase):
     def test_matches_mediawiki_hashed_path(self) -> None:
         # Path observed on bg3.wiki for this file.

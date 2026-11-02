@@ -5,7 +5,9 @@
   "equipment",
   "weapons",
   "item_locations",
-  "locations"
+  "locations",
+  "passives",
+  "actions"
  ],
  "license": "Content from bg3.wiki, CC BY-NC-SA 4.0 or CC BY-SA 4.0",
  "license_url": "https://bg3.wiki/wiki/bg3wiki:Copyrights",
@@ -19,6 +21,10 @@
   "acquisitions": 1317,
   "acquisitions_without_place": 434,
   "item_location_rows_skipped_non_gear": 0,
-  "locations": 184
+  "locations": 184,
+  "abilities_by_kind": {
+   "passive": 458,
+   "action": 70
+  }
  }
 }
