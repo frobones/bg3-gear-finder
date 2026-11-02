@@ -7,10 +7,11 @@ where and when you can pick it up.
   each split into areas you can expand.
 - **All items** is a sortable table: name, slot, rarity, first place found,
   AC or damage, value, and weight.
-- Search matches item names, places, and how-to-get text, such as a
-  merchant's name. Filter by slot, act, rarity, or items with a known place.
-- Select any item to see its stats, passives, actions, and every way to get
-  it, with links back to bg3.wiki.
+- Search matches item names, places, how-to-get text, and the wiki's notes,
+  such as a merchant's name. Filter by slot, act, rarity, or items with a
+  known place.
+- Select any item to see its stats, passives, actions, every way to get it,
+  and the wiki's notes on it, with links back to bg3.wiki.
 - Hover over or focus a passive or weapon action to see what it does; click
   or tap to keep it open. Escape closes it.
 
@@ -29,12 +30,14 @@ Then open <http://localhost:8642>.
 
 All item data comes from [bg3.wiki](https://bg3.wiki/)'s Cargo tables
 (`equipment`, `weapons`, `item_locations`, `locations`, `passives`,
-`actions`) via `Special:CargoExport`. The page never contacts the wiki for
-data; item icons load from the wiki's image server.
+`actions`) via `Special:CargoExport`. Item notes are not in Cargo, so they
+are read from each item page's source and expanded through `api.php`. The
+page never contacts the wiki for data; item icons load from the wiki's image
+server.
 
 | File | Contents |
 | --- | --- |
-| `data/items.json` | Every item, all wiki fields, game `variants` |
+| `data/items.json` | Every item, all wiki fields, notes, game `variants` |
 | `data/acquisitions.json` | Each way to get an item, with place and act |
 | `data/locations.json` | Every place with its act and parent places |
 | `data/abilities.json` | Passives and weapon actions that items grant |

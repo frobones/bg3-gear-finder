@@ -65,6 +65,7 @@ export function renderDetail(panel, item, abilities) {
       <dl class="stats">${stats(item)}</dl>
       <h3>Where to get it</h3>
       ${whereToGet(item)}
+      ${item.notes ? `<h3>Notes</h3><p class="prose">${linkify(item.notes, item.notes_links)}</p>` : ""}
       ${abilityList("Passives", item.passives, abilities)}
       ${abilityList("Weapon passives", item.weapon_passives, abilities)}
       ${abilityList("Main-hand passives", item.passives_main_hand, abilities)}

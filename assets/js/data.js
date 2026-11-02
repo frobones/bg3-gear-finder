@@ -44,6 +44,7 @@ export async function loadData() {
       item.label,
       item.type,
       item.where_to_find,
+      item.notes,
       ...item.acquisitions.flatMap((a) => [a.description, ...(a.path ?? [])]),
     ]
       .filter(Boolean)
