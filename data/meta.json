@@ -22,6 +22,7 @@
   "acquisitions_without_place": 434,
   "item_location_rows_skipped_non_gear": 0,
   "locations": 184,
+  "items_with_notes": 454,
   "abilities_by_kind": {
    "passive": 458,
    "action": 70

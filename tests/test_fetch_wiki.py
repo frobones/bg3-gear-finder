@@ -1,6 +1,7 @@
 """Unit tests for the pure helpers in scripts/fetch_wiki.py (no network)."""
 
 import email.message
+import re
 import sys
 import unittest
 import urllib.error
@@ -140,6 +141,91 @@ class BuildAbilitiesTest(unittest.TestCase):
         wiki = FakeWiki({"passives": [], "actions": []})
         with self.assertRaisesRegex(RuntimeError, "Ghost Passive"):
             fetch_wiki.build_abilities(wiki, {"Ring": _item(passives=["Ghost Passive"])})
+
+
+ROBE_SOURCE = """{{EquipmentPage
+| description = {{very rare|Infernal Robe}} grants [[resistance|Resistance]] to fire.
+| special = {{SpellAction|Fire Shield: Warm|level=4|recharge=Long Rest}}
+| notes = * After recruiting {{CharLink|Wyll}}, kill {{CharLink|Karlach}}.
+* Shares a model with the [[Selûnite Robe|Selûnite Robe]].
+}}
+==Gallery==
+{{Other|notes=ignored}}"""
+
+
+class TemplateParamsTest(unittest.TestCase):
+    def test_reads_fields_with_nested_templates_and_links(self) -> None:
+        params = fetch_wiki.template_params(ROBE_SOURCE)
+        self.assertEqual(
+            params["notes"],
+            "* After recruiting {{CharLink|Wyll}}, kill {{CharLink|Karlach}}.\n"
+            "* Shares a model with the [[Selûnite Robe|Selûnite Robe]].",
+        )
+        self.assertEqual(params["special"], "{{SpellAction|Fire Shield: Warm|level=4|recharge=Long Rest}}")
+        self.assertEqual(params["description"], "{{very rare|Infernal Robe}} grants [[resistance|Resistance]] to fire.")
+
+    def test_page_without_notes(self) -> None:
+        self.assertNotIn("notes", fetch_wiki.template_params("{{WeaponPage|damage=1d6}}"))
+
+
+class FakeApi:
+    """Stands in for WikiClient.api: serves page sources and expands {{CharLink|X}} into a link."""
+
+    def __init__(self, sources: dict[str, str]) -> None:
+        self.sources = sources
+        self.expand_calls = 0
+
+    def api(self, kind: str, form: dict) -> dict:
+        if form["action"] == "query":
+            titles = form["titles"].split("|")
+            pages = [
+                {"title": t, "revisions": [{"slots": {"main": {"content": self.sources[t]}}}]}
+                if t in self.sources
+                else {"title": t, "missing": True}
+                for t in titles
+            ]
+            return {"query": {"pages": pages}}
+        self.expand_calls += 1
+        expanded = re.sub(r"\{\{CharLink\|([^}]*)\}\}", r"<span>[[File:P.png|link=\1]]</span>[[\1|\1]]", form["text"])
+        return {"expandtemplates": {"wikitext": expanded}}
+
+
+class NotesTest(unittest.TestCase):
+    def test_add_notes_expands_and_cleans_each_item(self) -> None:
+        wiki = FakeApi({"Infernal Robe": ROBE_SOURCE, "Dagger": "{{WeaponPage|damage=1d4}}"})
+        items = {"Infernal Robe": {"variants": []}, "Dagger": {"variants": []}}
+        fetch_wiki.add_notes(wiki, items)
+        self.assertEqual(
+            items["Infernal Robe"]["notes"],
+            "• After recruiting Wyll, kill Karlach.\n• Shares a model with the Selûnite Robe.",
+        )
+        self.assertEqual(
+            [link["page"] for link in items["Infernal Robe"]["notes_links"]], ["Wyll", "Karlach", "Selûnite Robe"]
+        )
+        self.assertIsNone(items["Dagger"]["notes"])
+
+    def test_missing_page_stops_the_build(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "Ghost Ring"):
+            fetch_wiki.add_notes(FakeApi({}), {"Ghost Ring": {"variants": []}})
+
+    def test_expansion_is_batched_and_split_back_per_item(self) -> None:
+        wiki = FakeApi({})
+        texts = {f"Item {n:02}": f"Note {n} from {{{{CharLink|Npc{n}}}}}." + "x" * 5000 for n in range(10)}
+        expanded = fetch_wiki.expand_templates(wiki, texts)
+        self.assertGreater(wiki.expand_calls, 1)
+        self.assertEqual(sorted(expanded), sorted(texts))
+        self.assertTrue(expanded["Item 07"].startswith("Note 7 from <span>"))
+
+    def test_link_labels_lose_html_and_refs_are_dropped(self) -> None:
+        text, links = fetch_wiki.clean_wikitext('Deals [[Fire|<span class="x">Fire</span>]] damage<ref>Patch 6</ref>.')
+        self.assertEqual(text, "Deals Fire damage.")
+        self.assertEqual(links[0]["text"], "Fire")
+
+
+class WordJoinerTest(unittest.TestCase):
+    def test_word_joiners_around_removed_icons_become_a_space(self) -> None:
+        text, _ = fetch_wiki.clean_wikitext("deals 1d4⁠[[File:Fire Damage Icon.png|20px]]⁠[[Fire]] damage")
+        self.assertEqual(text, "deals 1d4 Fire damage")
 
 
 class FileUrlTest(unittest.TestCase):

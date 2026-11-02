@@ -561,7 +561,7 @@
  {
   "item": "Amulet of Bhaal",
   "uid": "LOOT_GEN_Amulet_of_Bhaal_A",
-  "description": "Worn by Sarevok Anchev or rewarded by him for completing ⁠Impress the Murder Tribunal",
+  "description": "Worn by Sarevok Anchev or rewarded by him for completing Impress the Murder Tribunal",
   "links": [
    {
     "text": "Sarevok Anchev",
@@ -692,7 +692,7 @@
  {
   "item": "Amulet of Misty Step",
   "uid": "UNI_GOB_DrowCommander_Amulet",
-  "description": "Sold by Omeluum after completing ⁠Help Omeluum Investigate the Parasite",
+  "description": "Sold by Omeluum after completing Help Omeluum Investigate the Parasite",
   "links": [
    {
     "text": "Omeluum",
@@ -931,7 +931,7 @@
  {
   "item": "Amulet of Windrider",
   "uid": "LOW_OfWindrider_Amulet",
-  "description": "Reward by Lora Bergauz for saving her daughter during the quest ⁠Save Vanra",
+  "description": "Reward by Lora Bergauz for saving her daughter during the quest Save Vanra",
   "links": [
    {
     "text": "Lora Bergauz",
@@ -1267,7 +1267,7 @@
  {
   "item": "Armour of Uninhibited Kushigo",
   "uid": "MAG_Monk_Magic_Armor",
-  "description": "Rewarded by Sergeant Thrinn after returning her boots in the quest ⁠Find the Missing Boots",
+  "description": "Rewarded by Sergeant Thrinn after returning her boots in the quest Find the Missing Boots",
   "links": [
    {
     "text": "Sergeant Thrinn",
@@ -1403,7 +1403,7 @@
  {
   "item": "Assassin's Touch",
   "uid": "DEN_CapturedGoblin_MurderDagger",
-  "description": "Reward for completing the quest ⁠Save the Goblin Sazza by escorting Sazza to the Goblin Camp",
+  "description": "Reward for completing the quest Save the Goblin Sazza by escorting Sazza to the Goblin Camp",
   "links": [
    {
     "text": "Save the Goblin Sazza",
@@ -2209,7 +2209,7 @@
  {
   "item": "Blazer of Benevolence",
   "uid": "MAG_Bard_TempHP_Armor",
-  "description": "Reward for rescuing Volo from the Goblin Camp during the quest ⁠Rescue Volo",
+  "description": "Reward for rescuing Volo from the Goblin Camp during the quest Rescue Volo",
   "links": [
    {
     "text": "Volo",
@@ -2310,7 +2310,7 @@
  {
   "item": "Bloodthirst",
   "uid": "MAG_WYR_Orin_Bhaalist_Dagger",
-  "description": "Carried by Orin during the quest ⁠Get Orin's Netherstone",
+  "description": "Carried by Orin during the quest Get Orin's Netherstone",
   "links": [
    {
     "text": "Orin",
@@ -2577,7 +2577,7 @@
  {
   "item": "Bonespike Gloves",
   "uid": "MAG_Barbarian_BoneSpike_Gloves",
-  "description": "Worn by Strangler Luke during the quest ⁠Get Orin's Netherstone",
+  "description": "Worn by Strangler Luke during the quest Get Orin's Netherstone",
   "links": [
    {
     "text": "Strangler Luke",
@@ -2898,7 +2898,7 @@
  {
   "item": "Boots of Stormy Clamour",
   "uid": "MAG_Thunder_ReverberationOnStatusApply_Boots",
-  "description": "Sold by Omeluum after completing the quest ⁠Help Omeluum Investigate the Parasite",
+  "description": "Sold by Omeluum after completing the quest Help Omeluum Investigate the Parasite",
   "links": [
    {
     "text": "Omeluum",
@@ -4358,7 +4358,7 @@
  {
   "item": "Champion's Chain",
   "uid": "UNI_UND_MyconidAmulet_Evil",
-  "description": "Reward for delivering Nere's Head to Glut during the quest ⁠Deliver Nere's Head",
+  "description": "Reward for delivering Nere's Head to Glut during the quest Deliver Nere's Head",
   "links": [
    {
     "text": "Nere's Head",
@@ -5462,7 +5462,7 @@
  {
   "item": "Creation's Echo",
   "uid": "UNI_UND_SocietyOfBrilliance_ElementalResonanceStaff",
-  "description": "Sold by Omeluum after completing the quest ⁠Help Omeluum Investigate the Parasite",
+  "description": "Sold by Omeluum after completing the quest Help Omeluum Investigate the Parasite",
   "links": [
    {
     "text": "Omeluum",
@@ -5489,7 +5489,7 @@
  {
   "item": "Crimson Mischief",
   "uid": "MAG_TheCrimson_Shortsword",
-  "description": "Carried by Orin during the quest ⁠Get Orin's Netherstone",
+  "description": "Carried by Orin during the quest Get Orin's Netherstone",
   "links": [
    {
     "text": "Orin",
@@ -5619,7 +5619,7 @@
  {
   "item": "Crypt Lord Ring",
   "uid": "MAG_OfUndeadServant_Ring",
-  "description": "Rewarded for completion of the quest ⁠Find Mystic Carrion's Servant, if Thrumbo survives",
+  "description": "Rewarded for completion of the quest Find Mystic Carrion's Servant, if Thrumbo survives",
   "links": [
    {
     "text": "Find Mystic Carrion's Servant",
@@ -7226,7 +7226,7 @@
  {
   "item": "Duellist's Prerogative",
   "uid": "MAG_TheDueller_Rapier",
-  "description": "Reward from Lora Bergauz for completing the quest ⁠Save Vanra",
+  "description": "Reward from Lora Bergauz for completing the quest Save Vanra",
   "links": [
    {
     "text": "Lora Bergauz",
@@ -7671,7 +7671,7 @@
  {
   "item": "Envoy's Amulet",
   "uid": "UNI_UND_MyconidAmulet_Good",
-  "description": "Reward for delivering Nere's Head to Spaw during the quest ⁠Deliver Nere's Head",
+  "description": "Reward for delivering Nere's Head to Spaw during the quest Deliver Nere's Head",
   "links": [
    {
     "text": "Nere's Head",
@@ -7953,7 +7953,7 @@
  {
   "item": "Featherlight Boots",
   "uid": "MAG_LowHP_IncreaseSpeed_Boots",
-  "description": "Rewarded by Sovereign Glut for completing ⁠Avenge Glut's Circle (Early Access only)",
+  "description": "Rewarded by Sovereign Glut for completing Avenge Glut's Circle (Early Access only)",
   "links": [
    {
     "text": "Sovereign Glut",
@@ -8003,7 +8003,7 @@
  {
   "item": "Fey Semblance Amulet",
   "uid": "MAG_Greenstone_Amulet",
-  "description": "Reward from Mayrina for completing the quest ⁠Avenge the Hag Survivors",
+  "description": "Reward from Mayrina for completing the quest Avenge the Hag Survivors",
   "links": [
    {
     "text": "Mayrina",
@@ -9073,7 +9073,7 @@
  {
   "item": "Giantbreaker",
   "uid": "MAG_MeleeDebuff_AttackDebuff2_OnDamage_HeavyCrossbow",
-  "description": "Sold by Brem after completing the quest ⁠Find the Missing Shipment",
+  "description": "Sold by Brem after completing the quest Find the Missing Shipment",
   "links": [
    {
     "text": "Brem",
@@ -9877,7 +9877,7 @@
  {
   "item": "Gloves of Fire Resistance",
   "uid": "MAG_LowHP_ResistanceFire_Gloves",
-  "description": "Rewarded by Derryth Bonecloak for completing ⁠Find the Mushroom Picker (Early Access only)",
+  "description": "Rewarded by Derryth Bonecloak for completing Find the Mushroom Picker (Early Access only)",
   "links": [
    {
     "text": "Derryth Bonecloak",
@@ -9906,7 +9906,7 @@
  {
   "item": "Gloves of Flint and Steel",
   "uid": "MAG_Fire_ApplyBurningOnFireDamage_Gloves",
-  "description": "Rewarded by Derryth Bonecloak for completing ⁠Find the Mushroom Picker (Early Access only)",
+  "description": "Rewarded by Derryth Bonecloak for completing Find the Mushroom Picker (Early Access only)",
   "links": [
    {
     "text": "Derryth Bonecloak",
@@ -9935,7 +9935,7 @@
  {
   "item": "Gloves of Hail of Thorns",
   "uid": "UNI_PLA_ZhentCave_Gloves",
-  "description": "Sold by Brem after completing the quest ⁠Find the Missing Shipment",
+  "description": "Sold by Brem after completing the quest Find the Missing Shipment",
   "links": [
    {
     "text": "Brem",
@@ -10051,7 +10051,7 @@
  {
   "item": "Gloves of Soul Catching",
   "uid": "MAG_PHB_OfSoulCatching_Gloves",
-  "description": "Given by Hope for completing her quest ⁠Save Hope",
+  "description": "Given by Hope for completing her quest Save Hope",
   "links": [
    {
     "text": "Hope",
@@ -10171,7 +10171,7 @@
  {
   "item": "Gloves of Thievery",
   "uid": "MAG_PHB_OfThievery_Gloves",
-  "description": "Sold by Brem after completing the quest ⁠Find the Missing Shipment",
+  "description": "Sold by Brem after completing the quest Find the Missing Shipment",
   "links": [
    {
     "text": "Brem",
@@ -10748,7 +10748,7 @@
  {
   "item": "Greatclub +1",
   "uid": "WPN_HUM_Greatclub_A_1",
-  "description": "Sold by any trader using the magic melee table\n• ⁠Goblin Camp: Sold by Grat X: -99 Y: 424\n• ⁠Last Light Inn: Carried by Fist Marcus",
+  "description": "Sold by any trader using the magic melee table\n• Goblin Camp: Sold by Grat X: -99 Y: 424\n• Last Light Inn: Carried by Fist Marcus",
   "links": [
    {
     "text": "magic melee table",
@@ -11724,7 +11724,7 @@
  {
   "item": "Harold",
   "uid": "MAG_BG_Harold_HeavyCrossbow",
-  "description": "Reward for bringing the chest to Zarys as part of ⁠Find the Missing Shipment",
+  "description": "Reward for bringing the chest to Zarys as part of Find the Missing Shipment",
   "links": [
    {
     "text": "Zarys",
@@ -12400,7 +12400,7 @@
  {
   "item": "Hellrider's Pride",
   "uid": "DEN_HellridersPride",
-  "description": "Carried by Zevlor and can be looted from him, stolen, or earned as a reward for ⁠Kill Kagha or ⁠Investigate Kagha",
+  "description": "Carried by Zevlor and can be looted from him, stolen, or earned as a reward for Kill Kagha or Investigate Kagha",
   "links": [
    {
     "text": "Zevlor",
@@ -13124,7 +13124,7 @@
  {
   "item": "Infernal Rapier",
   "uid": "ORI_Wyll_Infernal_Rapier",
-  "description": "Possibly rewarded by Mizora to Wyll if freed during his companion quest, ⁠The Blade of Frontiers",
+  "description": "Possibly rewarded by Mizora to Wyll if freed during his companion quest, The Blade of Frontiers",
   "links": [
    {
     "text": "Mizora",
@@ -14162,7 +14162,7 @@
  {
   "item": "Komira's Locket",
   "uid": "UNI_DEN_Arabella_Locket",
-  "description": "Given to the party by Arabella's parents Komira and Locke, after protecting her from Kagha in ⁠Save Arabella",
+  "description": "Given to the party by Arabella's parents Komira and Locke, after protecting her from Kagha in Save Arabella",
   "links": [
    {
     "text": "Komira",
@@ -15245,7 +15245,7 @@
  {
   "item": "Longbow +1",
   "uid": "WPN_HUM_Longbow_A_1",
-  "description": "Goblin Camp: Sold by Grat the Trader\n• Shattered Sanctum: Sold by Roah Moonglow\n• Zhentarim Hideout: Sold by Brem after completing ⁠Find the Missing Shipment",
+  "description": "Goblin Camp: Sold by Grat the Trader\n• Shattered Sanctum: Sold by Roah Moonglow\n• Zhentarim Hideout: Sold by Brem after completing Find the Missing Shipment",
   "links": [
    {
     "text": "Goblin Camp",
@@ -16587,7 +16587,7 @@
  {
   "item": "Moonlight Glaive",
   "uid": "MAG_Moonlight_Glaive",
-  "description": "Rewarded by the Nightsong for freeing her during the ⁠Find the Nightsong quest",
+  "description": "Rewarded by the Nightsong for freeing her during the Find the Nightsong quest",
   "links": [
    {
     "text": "Nightsong",
@@ -16775,7 +16775,7 @@
  {
   "item": "Mutilated Carapace",
   "uid": "MAG_Orin_Cloth",
-  "description": "Carried by Orin during the quest ⁠Get Orin's Netherstone",
+  "description": "Carried by Orin during the quest Get Orin's Netherstone",
   "links": [
    {
     "text": "Orin",
@@ -17098,7 +17098,7 @@
  {
   "item": "Netherstone-Pommelled Bloodthirst",
   "uid": "S_GLO_Orin_Bhaalist_Dagger_Netherstone",
-  "description": "Carried by Orin during the quest ⁠Get Orin's Netherstone",
+  "description": "Carried by Orin during the quest Get Orin's Netherstone",
   "links": [
    {
     "text": "Orin",
@@ -17125,7 +17125,7 @@
  {
   "item": "Netherstone-Studded Gauntlet",
   "uid": "MAG_Gortash_Gloves",
-  "description": "Carried by Enver Gortash during the quest ⁠Get Gortash's Netherstone",
+  "description": "Carried by Enver Gortash during the quest Get Gortash's Netherstone",
   "links": [
    {
     "text": "Enver Gortash",
@@ -17898,7 +17898,7 @@
  {
   "item": "Pearl of Power Amulet",
   "uid": "MAG_PHB_ofPower_Pearl_Amulet",
-  "description": "Sold by Omeluum after completing the quest ⁠Help Omeluum Investigate the Parasite",
+  "description": "Sold by Omeluum after completing the quest Help Omeluum Investigate the Parasite",
   "links": [
    {
     "text": "Omeluum",
@@ -18366,7 +18366,7 @@
  {
   "item": "Potent Robe",
   "uid": "MAG_CharismaCaster_Robe",
-  "description": "Rewarded by Alfira for successfully completing ⁠Rescue the Tieflings",
+  "description": "Rewarded by Alfira for successfully completing Rescue the Tieflings",
   "links": [
    {
     "text": "Alfira",
@@ -19496,7 +19496,7 @@
  {
   "item": "Ring of Fire",
   "uid": "MAG_Fire_Ring_IncreasedDamage",
-  "description": "Rewarded by Sovereign Glut for completing ⁠Avenge Glut's Circle (Early Access only)",
+  "description": "Rewarded by Sovereign Glut for completing Avenge Glut's Circle (Early Access only)",
   "links": [
    {
     "text": "Sovereign Glut",
@@ -19690,7 +19690,7 @@
  {
   "item": "Ring of Mind-Shielding",
   "uid": "UNI_UND_SocietyOfBrilliance_RingOfMindShielding",
-  "description": "Offered by Omeluum upon completion of the quest ⁠Help Omeluum Investigate the Parasite",
+  "description": "Offered by Omeluum upon completion of the quest Help Omeluum Investigate the Parasite",
   "links": [
    {
     "text": "Omeluum",
@@ -19860,7 +19860,7 @@
  {
   "item": "Ring of Salving",
   "uid": "UNI_UND_SocietyOfBrilliance_PullingRing",
-  "description": "Sold by Omeluum after completing the quest ⁠Help Omeluum Investigate the Parasite",
+  "description": "Sold by Omeluum after completing the quest Help Omeluum Investigate the Parasite",
   "links": [
    {
     "text": "Omeluum",
@@ -20445,7 +20445,7 @@
  {
   "item": "Rupturing Blade",
   "uid": "MAG_OfRupture_Rapier",
-  "description": "Sold by Brem after completing the quest ⁠Find the Missing Shipment",
+  "description": "Sold by Brem after completing the quest Find the Missing Shipment",
   "links": [
    {
     "text": "Brem",
@@ -22074,7 +22074,7 @@
  {
   "item": "Shadow of Menzoberranzan",
   "uid": "UNI_UND_ARM_ShadowOfMenzoberranzan",
-  "description": "On the ground next to Xargrim the Pale Corpse, in the secret area unlocked by completing the quest ⁠Defeat the Duergar Intruders",
+  "description": "On the ground next to Xargrim the Pale Corpse, in the secret area unlocked by completing the quest Defeat the Duergar Intruders",
   "links": [
    {
     "text": "Pale Corpse",
@@ -24587,7 +24587,7 @@
  {
   "item": "Studded Leather Armour +2",
   "uid": "ARM_StuddedLeather_2",
-  "description": "Sold by traders using the levelled magic armour table\n• Worn by Orin during the quest ⁠Get Orin's Netherstone",
+  "description": "Sold by traders using the levelled magic armour table\n• Worn by Orin during the quest Get Orin's Netherstone",
   "links": [
    {
     "text": "levelled magic armour table",
@@ -24754,7 +24754,7 @@
  {
   "item": "Sussur Dagger",
   "uid": "QUEST_FOR_SussurDagger",
-  "description": "Reward for completing the quest ⁠Finish the Masterwork Weapon",
+  "description": "Reward for completing the quest Finish the Masterwork Weapon",
   "links": [
    {
     "text": "Finish the Masterwork Weapon",
@@ -24776,7 +24776,7 @@
  {
   "item": "Sussur Greatsword",
   "uid": "QUEST_FOR_SussurGreatsword",
-  "description": "Reward for completing the quest ⁠Finish the Masterwork Weapon",
+  "description": "Reward for completing the quest Finish the Masterwork Weapon",
   "links": [
    {
     "text": "Finish the Masterwork Weapon",
@@ -24798,7 +24798,7 @@
  {
   "item": "Sussur Sickle",
   "uid": "QUEST_FOR_SussurSickle",
-  "description": "Reward for completing the quest ⁠Finish the Masterwork Weapon",
+  "description": "Reward for completing the quest Finish the Masterwork Weapon",
   "links": [
    {
     "text": "Finish the Masterwork Weapon",
@@ -25032,7 +25032,7 @@
  {
   "item": "Sword of Justice",
   "uid": "UNI_PLA_WPN_SwordOfJustice",
-  "description": "Carried by Anders, can be looted or rewarded by him for killing Karlach in ⁠Hunt the Devil",
+  "description": "Carried by Anders, can be looted or rewarded by him for killing Karlach in Hunt the Devil",
   "links": [
    {
     "text": "Anders",
@@ -26035,7 +26035,7 @@
  {
   "item": "The Joltshooter",
   "uid": "MAG_ChargedLightning_Longbow",
-  "description": "Rewarded by Counsellor Florrick for rescuing her from the burning inn during the quest ⁠Rescue the Grand Duke",
+  "description": "Rewarded by Counsellor Florrick for rescuing her from the burning inn during the quest Rescue the Grand Duke",
   "links": [
    {
     "text": "Counsellor Florrick",
@@ -26062,7 +26062,7 @@
  {
   "item": "The Jolty Vest",
   "uid": "MAG_ChargedLightning_Electrocute_Armor",
-  "description": "Sold by Brem after completing the quest ⁠Find the Missing Shipment",
+  "description": "Sold by Brem after completing the quest Find the Missing Shipment",
   "links": [
    {
     "text": "Brem",
@@ -26274,7 +26274,7 @@
  {
   "item": "The Shadespell Circlet",
   "uid": "MAG_Shadow_SpellDCBonusWhileObscured_Circlet",
-  "description": "Sold by Omeluum after completing the quest ⁠Help Omeluum Investigate the Parasite",
+  "description": "Sold by Omeluum after completing the quest Help Omeluum Investigate the Parasite",
   "links": [
    {
     "text": "Omeluum",
@@ -26362,7 +26362,7 @@
  {
   "item": "The Sparky Points",
   "uid": "MAG_ChargedLightning_Trident",
-  "description": "Rewarded by Counsellor Florrick for rescuing her from the burning inn during the quest ⁠Rescue the Grand Duke",
+  "description": "Rewarded by Counsellor Florrick for rescuing her from the burning inn during the quest Rescue the Grand Duke",
   "links": [
    {
     "text": "Counsellor Florrick",
@@ -26431,7 +26431,7 @@
  {
   "item": "The Spellsparkler",
   "uid": "MAG_ChargedLightning_Quarterstaff",
-  "description": "Rewarded by Counsellor Florrick for rescuing her from the burning inn during the quest ⁠Rescue the Grand Duke.",
+  "description": "Rewarded by Counsellor Florrick for rescuing her from the burning inn during the quest Rescue the Grand Duke.",
   "links": [
    {
     "text": "Counsellor Florrick",
@@ -26908,7 +26908,7 @@
  {
   "item": "Titanstring Bow",
   "uid": "MAG_StrongString_Longbow",
-  "description": "Sold by Brem after completing the quest ⁠Find the Missing Shipment",
+  "description": "Sold by Brem after completing the quest Find the Missing Shipment",
   "links": [
    {
     "text": "Brem",
@@ -26936,7 +26936,7 @@
  {
   "item": "Titanstring Bow",
   "uid": "MAG_StrongString_Longbow",
-  "description": "Sold by Lann Tarv on the main floor, only if Brem's special stock was not unlocked before by completing ⁠Find the Missing Shipment",
+  "description": "Sold by Lann Tarv on the main floor, only if Brem's special stock was not unlocked before by completing Find the Missing Shipment",
   "links": [
    {
     "text": "Lann Tarv",
@@ -26981,7 +26981,7 @@
  {
   "item": "Torch of Revocation",
   "uid": "UNI_LOW_TorchOfRevocation",
-  "description": "Given by Mystic Carrion as a potential reward for the quest ⁠Find Mystic Carrion's Servant, or in the locked chest behind Mystic Carrion",
+  "description": "Given by Mystic Carrion as a potential reward for the quest Find Mystic Carrion's Servant, or in the locked chest behind Mystic Carrion",
   "links": [
    {
     "text": "Mystic Carrion",
@@ -28121,7 +28121,7 @@
  {
   "item": "Wapira's Crown",
   "uid": "MAG_Healer_HealSelf_Helmet",
-  "description": "Rewarded by Zevlor for helping the tiefling refugees during ⁠Save the Refugees, provided the monetary reward is accepted",
+  "description": "Rewarded by Zevlor for helping the tiefling refugees during Save the Refugees, provided the monetary reward is accepted",
   "links": [
    {
     "text": "Zevlor",
@@ -28385,7 +28385,7 @@
  {
   "item": "Wavemother's Robe",
   "uid": "MAG_Umberlee_Robe_A",
-  "description": "Rewarded by Allandra Grey in the basement for completing the quest ⁠Avenge the Drowned",
+  "description": "Rewarded by Allandra Grey in the basement for completing the quest Avenge the Drowned",
   "links": [
    {
     "text": "Allandra Grey",

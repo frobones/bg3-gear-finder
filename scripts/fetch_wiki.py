@@ -1,4 +1,4 @@
-"""Snapshot gear data from bg3.wiki's Cargo tables into static JSON files.
+"""Snapshot gear data from bg3.wiki's Cargo tables (plus each item page's notes) into static JSON files.
 
 Run by hand; the webpage only ever reads data/.
 
@@ -67,10 +67,17 @@ ABILITY_FIELDS = (
     "hotbar_icon",
 )
 
+# Item notes live only in each page's template source ("| notes = ..."), not in Cargo.
+PAGES_PER_QUERY = 50  # api.php's limit on titles per request for anonymous users
+EXPAND_BATCH_CHARS = 20_000  # notes are expanded together, in POSTs of about this size
+NOTE_MARKER = "⟦note-{}⟧"  # survives template expansion; splits a batch back into its notes
+NOTE_SPLIT = re.compile(r"⟦note-(\d+)⟧\n?")
+
 # File/Category links may nest one ordinary link in their alt text: [[File:x.png|alt=Recharge: [[Long rest]]]]
 FILE_LINK = re.compile(r"\[\[(?:File|Category):(?:[^\[\]]|\[\[[^\]]*\]\])*\]\]")
 WIKI_LINK = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]*))?\]\]")
 SUP = re.compile(r"<sup\b.*?</sup>", re.S)
+REF = re.compile(r"<ref\b[^>]*/>|<ref\b[^>]*>.*?</ref>", re.S | re.I)
 ABBR = re.compile(r"<abbr\b[^>]*\btitle=\"([^\"]*)\"[^>]*>.*?</abbr>", re.S)
 LINE_BREAK = re.compile(r"<br\s*/?>|</(?:dt|dd|li|p|div|tr)>", re.I)
 TAG = re.compile(r"<[^>]+>")
@@ -107,22 +114,23 @@ class WikiClient:
         self.network_requests = 0
         self._last_request = 0.0
 
-    def get_json(self, name: str, url: str) -> Any:
-        """Return the cached response for `name`, fetching `url` first if needed."""
+    def get_json(self, name: str, url: str, form: dict | None = None) -> Any:
+        """Return the cached response for `name`, fetching `url` first if needed (POSTing `form` if given)."""
         path = self.cache_dir / f"{name}.json"
         if self.refresh or not path.exists():
             self.cache_dir.mkdir(parents=True, exist_ok=True)
             payload = {"fetched_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "url": url}
-            payload["data"] = self._fetch(url)
+            payload["data"] = self._fetch(url, form)
             path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
         cached = json.loads(path.read_text(encoding="utf-8"))
         fetched = datetime.fromisoformat(cached["fetched_utc"])
         self.oldest_fetch = fetched if self.oldest_fetch is None else min(self.oldest_fetch, fetched)
         return cached["data"]
 
-    def _fetch(self, url: str) -> Any:
-        """GET JSON politely: one request per second, retrying 429/5xx with Retry-After or backoff."""
-        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    def _fetch(self, url: str, form: dict | None) -> Any:
+        """Fetch JSON politely: one request per second, retrying 429/5xx with Retry-After or backoff."""
+        body = urllib.parse.urlencode(form).encode() if form else None
+        request = urllib.request.Request(url, data=body, headers={"User-Agent": USER_AGENT})
         for attempt in range(1, MAX_ATTEMPTS):
             try:
                 return self._spaced_request(request)
@@ -152,6 +160,11 @@ class WikiClient:
             raise RuntimeError(f"{table}: export hit the {ROW_LIMIT}-row limit; add paging")
         return [{key.replace(" ", "_"): value for key, value in row.items()} for row in rows]
 
+    def api(self, kind: str, form: dict) -> Any:
+        """POST to api.php, cached under a digest of the request so a changed request is fetched again."""
+        digest = hashlib.sha256(json.dumps(form, sort_keys=True).encode()).hexdigest()[:16]
+        return self.get_json(f"{kind}.{digest}", API, form={**form, "format": "json", "formatversion": "2"})
+
 
 def unescape(value: Any) -> Any:
     """CargoExport HTML-escapes strings, sometimes twice."""
@@ -175,7 +188,8 @@ def _clean_line(line: str) -> str:
         return ""
     if line.lstrip().startswith("|"):
         line = line.rsplit("|", 1)[-1]  # table cell: content follows the last attribute separator
-    line = re.sub(r"[\s  ]+", " ", line).strip()
+    # Word joiners (U+2060) flank removed icons, as in "1d4 [fire icon] Fire"; treat them as spaces.
+    line = re.sub(r"[\s\u00a0\u202f\u2060]+", " ", line).strip()
     if line[:1] in "*#:;" and line:
         line = "• " + line.lstrip("*#:; ")
     return line
@@ -187,13 +201,14 @@ def clean_wikitext(raw: str | None) -> tuple[str | None, list[dict]]:
         return None, []
     text = unescape(raw)
     text = SUP.sub("", text)
+    text = REF.sub("", text)
     text = ABBR.sub(r"\1", text)
     text = FILE_LINK.sub("", text)
     links: list[dict] = []
 
     def replace_link(match: re.Match) -> str:
         target, label = match.group(1).strip(), match.group(2)
-        label = (label if label is not None else target).strip()
+        label = TAG.sub("", label if label is not None else target).strip()  # e.g. [[Fire|<span ...>Fire</span>]]
         page = target.split("#")[0].replace("_", " ").strip()
         link = {"text": label, "page": page, "url": wiki_url(target)}
         if link not in links:
@@ -384,6 +399,104 @@ def build_abilities(wiki: WikiClient, items: dict) -> dict[str, dict]:
     return abilities
 
 
+def _store_template_fields(fields: list[str], params: dict[str, str]) -> None:
+    for field in fields[1:]:  # fields[0] is the template name
+        name, sep, value = field.partition("=")
+        if sep:
+            params.setdefault(name.strip().lower(), value.strip())
+
+
+def template_params(wikitext: str) -> dict[str, str]:
+    """Named parameters of the page's top-level templates; the first template to set a name wins.
+
+    Splits on "|" only outside nested {{templates}} and [[links]], as MediaWiki does.
+    """
+    params: dict[str, str] = {}
+    braces = links = 0
+    field_start = 0
+    fields: list[str] = []
+    i = 0
+    while i < len(wikitext):
+        pair = wikitext[i : i + 2]
+        if pair == "{{":
+            braces += 1
+            if braces == 1:
+                field_start, fields = i + 2, []
+            i += 2
+        elif pair == "}}" and braces:
+            if braces == 1:
+                fields.append(wikitext[field_start:i])
+                _store_template_fields(fields, params)
+            braces -= 1
+            i += 2
+        elif pair == "[[":
+            links += 1
+            i += 2
+        elif pair == "]]" and links:
+            links -= 1
+            i += 2
+        else:
+            if wikitext[i] == "|" and braces == 1 and links == 0:
+                fields.append(wikitext[field_start:i])
+                field_start = i + 1
+            i += 1
+    return params
+
+
+def fetch_page_sources(wiki: WikiClient, titles: list[str]) -> dict[str, str]:
+    """Current wikitext of each page, fetched PAGES_PER_QUERY titles at a time."""
+    sources: dict[str, str] = {}
+    for start in range(0, len(titles), PAGES_PER_QUERY):
+        batch = titles[start : start + PAGES_PER_QUERY]
+        form = {
+            "action": "query",
+            "prop": "revisions",
+            "rvprop": "content",
+            "rvslots": "main",
+            "titles": "|".join(batch),
+        }
+        for page in wiki.api("pages", form)["query"]["pages"]:
+            if "revisions" in page:
+                sources[page["title"]] = page["revisions"][0]["slots"]["main"]["content"]
+    if missing := sorted(set(titles) - sources.keys()):
+        raise RuntimeError(f"bg3.wiki returned no source for: {missing}")
+    return sources
+
+
+def expand_templates(wiki: WikiClient, texts: dict[str, str]) -> dict[str, str]:
+    """Expand wiki templates in many snippets using a few batched expandtemplates calls."""
+    batches: list[list[str]] = [[]]
+    size = 0
+    for key in sorted(texts):
+        if batches[-1] and size + len(texts[key]) > EXPAND_BATCH_CHARS:
+            batches.append([])
+            size = 0
+        batches[-1].append(key)
+        size += len(texts[key])
+
+    expanded: dict[str, str] = {}
+    for batch in filter(None, batches):
+        text = "\n".join(f"{NOTE_MARKER.format(n)}\n{texts[key]}" for n, key in enumerate(batch))
+        result = wiki.api("expand", {"action": "expandtemplates", "prop": "wikitext", "text": text})
+        pieces = NOTE_SPLIT.split(result["expandtemplates"]["wikitext"])
+        parts = {int(pieces[n]): pieces[n + 1] for n in range(1, len(pieces) - 1, 2)}
+        if sorted(parts) != list(range(len(batch))):
+            raise RuntimeError("Template expansion lost a note marker; lower EXPAND_BATCH_CHARS")
+        expanded.update({key: parts[n] for n, key in enumerate(batch)})
+    return expanded
+
+
+def add_notes(wiki: WikiClient, items: dict[str, dict]) -> None:
+    """Attach each page's `notes` template field to its item as plain text plus links."""
+    sources = fetch_page_sources(wiki, sorted(items))
+    raw_notes = {page: notes for page, src in sources.items() if (notes := template_params(src).get("notes"))}
+    expanded = expand_templates(wiki, raw_notes)
+    for page, item in items.items():
+        if clash := {"notes", "notes_links"} & item.keys():
+            raise RuntimeError(f"{page}: Cargo already has fields {sorted(clash)}")
+        item["notes"], item["notes_links"] = clean_wikitext(expanded.get(page))
+
+
 def write_json(name: str, payload: Any) -> None:
     (DATA_DIR / name).write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
@@ -399,6 +512,7 @@ def main() -> int:
     locations = build_locations(wiki)
     acquisitions, skipped = build_acquisitions(wiki, items, locations, region_order)
     abilities = build_abilities(wiki, items)
+    add_notes(wiki, items)
 
     located = {a["item"] for a in acquisitions}
     for item in items.values():
@@ -424,6 +538,7 @@ def main() -> int:
                 "acquisitions_without_place": sum(1 for a in acquisitions if a["location"] is None),
                 "item_location_rows_skipped_non_gear": skipped,
                 "locations": len(locations),
+                "items_with_notes": sum(1 for i in items.values() if i["notes"]),
                 "abilities_by_kind": {
                     kind: sum(1 for a in abilities.values() if a["kind"] == kind) for kind, _ in ABILITY_TABLES.values()
                 },

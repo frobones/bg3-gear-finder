@@ -50,7 +50,7 @@
   "name": "Absolute Night",
   "type": null,
   "brief": null,
-  "description": "Blind targets that fail a Dexterity Saving Throw. Deals an additional 2d6⁠⁠Piercing to certain creatures that sport multiple sets of eyes.",
+  "description": "Blind targets that fail a Dexterity Saving Throw. Deals an additional 2d6 Piercing to certain creatures that sport multiple sets of eyes.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -72,7 +72,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -85,14 +85,14 @@
   "name": "Absolute Power",
   "type": "weapon action",
   "brief": "Deal +1d6 force damage and possibly push target back 5 m (17 ft).",
-  "description": "A surge of Divine energy accompanies your swing. It deals an additional 1d6⁠⁠Force damage and possibly pushes your target back 5 m (17 ft).",
+  "description": "A surge of Divine energy accompanies your swing. It deals an additional 1d6 Force damage and possibly pushes your target back 5 m (17 ft).",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/5/56/Absolute_Power.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -505,14 +505,14 @@
   "name": "Ambusher's Streak",
   "type": null,
   "brief": null,
-  "description": "In combat, you deal an additional 1d6⁠⁠Necrotic damage against creatures that haven't taken a turn yet.",
+  "description": "In combat, you deal an additional 1d6 Necrotic damage against creatures that haven't taken a turn yet.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -525,14 +525,14 @@
   "name": "Angelclocker Knuckles",
   "type": null,
   "brief": null,
-  "description": "Your unarmed attacks deal an additional 1d4⁠⁠Radiant damage.",
+  "description": "Your unarmed attacks deal an additional 1d4 Radiant damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    }
@@ -565,14 +565,14 @@
   "name": "Arcane Ammunition",
   "type": "weapon action",
   "brief": null,
-  "description": "Infuse your crossbow bolts with arcane energy. Your ranged weapon attacks deal an additional 1d4⁠⁠Force damage.",
+  "description": "Infuse your crossbow bolts with arcane energy. Your ranged weapon attacks deal an additional 1d4 Force damage.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "bonus",
   "icon_url": "https://bg3.wiki/w/images/f/f0/Arcane_Ammunition.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -585,14 +585,14 @@
   "name": "Arcane Ashes",
   "type": null,
   "brief": null,
-  "description": "Whenever you deal ⁠Fire damage, you gain 2 turns of Heat.",
+  "description": "Whenever you deal Fire damage, you gain 2 turns of Heat.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -720,7 +720,7 @@
   "name": "Arcane Vampirism",
   "type": null,
   "brief": "Healed for 1d4 when a target fails a save.",
-  "description": "When the creatures affected by your spells fail any associated Saving Throws, you regain 1d4⁠⁠Hit Points.",
+  "description": "When the creatures affected by your spells fail any associated Saving Throws, you regain 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -732,7 +732,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -845,7 +845,7 @@
   "name": "Aura of Murder",
   "type": null,
   "brief": null,
-  "description": "Enemies within 3 m (10 ft) become Vulnerable to ⁠Piercing damage, unless they are Immune to it.",
+  "description": "Enemies within 3 m (10 ft) become Vulnerable to Piercing damage, unless they are Immune to it.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -857,7 +857,7 @@
     "url": "https://bg3.wiki/wiki/Vulnerable"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
@@ -980,14 +980,14 @@
   "name": "Balduran's Vitality",
   "type": null,
   "brief": null,
-  "description": "The helmet heals you 2⁠⁠Hit Points at the beginning of every turn.",
+  "description": "The helmet heals you 2 Hit Points at the beginning of every turn.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -1214,14 +1214,14 @@
   "name": "Blood Money",
   "type": "weapon action",
   "brief": null,
-  "description": "Strike out greedily, dealing an additional proficiency bonus⁠⁠Piercing damage per 300 gold that the target possesses. The gold will be consumed.",
+  "description": "Strike out greedily, dealing an additional proficiency bonus Piercing damage per 300 gold that the target possesses. The gold will be consumed.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/8/82/Blood_Money.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
@@ -1239,14 +1239,14 @@
   "name": "Blood Thirst",
   "type": null,
   "brief": null,
-  "description": "Unarmed and melee attacks will deal an extra 2⁠⁠Necrotic damage as long as you don't have your full health. If you don't deal any damage this turn, you will take 1d4⁠⁠Necrotic damage at the end of your turn.",
+  "description": "Unarmed and melee attacks will deal an extra 2 Necrotic damage as long as you don't have your full health. If you don't deal any damage this turn, you will take 1d4 Necrotic damage at the end of your turn.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -1424,7 +1424,7 @@
   "name": "Bolt of Celestial Light",
   "type": "weapon action",
   "brief": null,
-  "description": "Frighten your target with intimidating arrows. After attacking, ranged weapon attacks made by Gontr Mael deal an additional 1d4⁠⁠Radiant damage.",
+  "description": "Frighten your target with intimidating arrows. After attacking, ranged weapon attacks made by Gontr Mael deal an additional 1d4 Radiant damage.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
@@ -1436,7 +1436,7 @@
     "url": "https://bg3.wiki/wiki/Frightened_(condition)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    }
@@ -1449,14 +1449,14 @@
   "name": "Booming Blows",
   "type": null,
   "brief": null,
-  "description": "Your unarmed attacks deal an additional 1d4⁠⁠Thunder damage.",
+  "description": "Your unarmed attacks deal an additional 1d4 Thunder damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    }
@@ -1499,14 +1499,14 @@
   "name": "Booze Remedy",
   "type": null,
   "brief": null,
-  "description": "While wearing this amulet, regain 2d4⁠⁠Hit Points per turn while Drunk. Additionally, increase the duration of your inebriation by 5 rounds.",
+  "description": "While wearing this amulet, regain 2d4 Hit Points per turn while Drunk. Additionally, increase the duration of your inebriation by 5 rounds.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    },
@@ -1564,14 +1564,14 @@
   "name": "Break the Unbroken",
   "type": null,
   "brief": null,
-  "description": "Deals an additional 1d8⁠⁠Piercing to targets that still have all their hit points.",
+  "description": "Deals an additional 1d8 Piercing to targets that still have all their hit points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
@@ -1589,14 +1589,14 @@
   "name": "Break the Unbroken",
   "type": null,
   "brief": null,
-  "description": "Deals an additional 1d10⁠⁠Piercing to targets that still have all their hit points.",
+  "description": "Deals an additional 1d10 Piercing to targets that still have all their hit points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
@@ -1614,7 +1614,7 @@
   "name": "Breezeswift Speed",
   "type": null,
   "brief": null,
-  "description": "While using Step of the Wind, your next Attack Roll has Advantage and deals an additional 1d8⁠⁠Force damage.",
+  "description": "While using Step of the Wind, your next Attack Roll has Advantage and deals an additional 1d8 Force damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -1636,7 +1636,7 @@
     "url": "https://bg3.wiki/wiki/Advantage"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -1699,14 +1699,14 @@
   "name": "Burned Alive",
   "type": null,
   "brief": null,
-  "description": "Deals an additional 1d4⁠⁠Weapon damage to Burning targets.",
+  "description": "Deals an additional 1d4 Weapon damage to Burning targets.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-weapon\">Weapon</span>",
+    "text": "Weapon",
     "page": "Weapon",
     "url": "https://bg3.wiki/wiki/Weapon"
    },
@@ -1724,14 +1724,14 @@
   "name": "Burning Fury",
   "type": null,
   "brief": null,
-  "description": "When dealing ⁠Fire damage, the wearer deals an additional 1⁠⁠Fire.",
+  "description": "When dealing Fire damage, the wearer deals an additional 1 Fire.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    }
@@ -1769,14 +1769,14 @@
   "name": "Callous Glow",
   "type": null,
   "brief": null,
-  "description": "The wearer deals an additional 2 points of ⁠Radiant damage against creatures that are illuminated.",
+  "description": "The wearer deals an additional 2 points of Radiant damage against creatures that are illuminated.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    }
@@ -1789,7 +1789,7 @@
   "name": "Caretaker's Care",
   "type": null,
   "brief": "Acidic surfaces don't affect you, and you are Resistant to Acid damage.",
-  "description": "Acidic surfaces don't affect you, and you are Resistant to ⁠Acid damage.",
+  "description": "Acidic surfaces don't affect you, and you are Resistant to Acid damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -1806,7 +1806,7 @@
     "url": "https://bg3.wiki/wiki/Resistant"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    }
@@ -1844,14 +1844,14 @@
   "name": "Caustic Reprisal",
   "type": null,
   "brief": null,
-  "description": "Whenever a creature deals melee damage to the wearer, that creature takes 1d4⁠⁠Acid Damage.",
+  "description": "Whenever a creature deals melee damage to the wearer, that creature takes 1d4 Acid Damage.",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    }
@@ -1864,14 +1864,14 @@
   "name": "Cauteriser",
   "type": null,
   "brief": null,
-  "description": "Deals an additional 1d4⁠⁠Fire. On a hit, the target starts Burning unless it succeeds a Constitution Saving Throw.",
+  "description": "Deals an additional 1d4 Fire. On a hit, the target starts Burning unless it succeeds a Constitution Saving Throw.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -1919,14 +1919,14 @@
   "name": "Chaos",
   "type": null,
   "brief": null,
-  "description": "On dealing damage with this weapon, regain 1d6⁠⁠Hit Points.",
+  "description": "On dealing damage with this weapon, regain 1d6 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -1959,7 +1959,7 @@
   "name": "Chilling Grace",
   "type": null,
   "brief": null,
-  "description": "When the wearer has 50% Hit Points or less, they have Resistance to ⁠Fire damage.",
+  "description": "When the wearer has 50% Hit Points or less, they have Resistance to Fire damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -1976,7 +1976,7 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    }
@@ -1989,14 +1989,14 @@
   "name": "Chilling Strike",
   "type": null,
   "brief": null,
-  "description": "Your unarmed attacks deal an additional 1d4⁠⁠Cold damage.",
+  "description": "Your unarmed attacks deal an additional 1d4 Cold damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    }
@@ -2088,14 +2088,14 @@
   "name": "Colossal Onslaught",
   "type": "weapon action",
   "brief": null,
-  "description": "Channel your mettlesome strength and strike all creatures in a line, dealing bonus ⁠Slashing damage equal to your proficiency bonus.",
+  "description": "Channel your mettlesome strength and strike all creatures in a line, dealing bonus Slashing damage equal to your proficiency bonus.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/a/ae/Colossal_Onslaught.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
@@ -2113,14 +2113,14 @@
   "name": "Combat Regeneration",
   "type": null,
   "brief": null,
-  "description": "At the beginning of your turn, the ring activates and heals you 1d4⁠⁠Hit Points.",
+  "description": "At the beginning of your turn, the ring activates and heals you 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -2203,14 +2203,14 @@
   "name": "Corrosive Strike",
   "type": "weapon action",
   "brief": null,
-  "description": "Deal additional ⁠Acid damage equal to your Proficiency Bonus. On a hit, create a pool of acid around the target which reduces Armour Class by 2.",
+  "description": "Deal additional Acid damage equal to your Proficiency Bonus. On a hit, create a pool of acid around the target which reduces Armour Class by 2.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/0/0c/Corrosive_Strike.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    },
@@ -2318,7 +2318,7 @@
   "name": "Craterous Wounds",
   "type": null,
   "brief": null,
-  "description": "Whenever you score a Critical Hit, deal an additional 1d6⁠⁠ForceDamage Rider As Source damage.",
+  "description": "Whenever you score a Critical Hit, deal an additional 1d6 ForceDamage Rider As Source damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -2330,7 +2330,7 @@
     "url": "https://bg3.wiki/wiki/Critical_Hit"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -2413,14 +2413,14 @@
   "name": "Crowning Glory",
   "type": null,
   "brief": null,
-  "description": "When healing another, the wearer regains 1d6⁠⁠Hit Points.",
+  "description": "When healing another, the wearer regains 1d6 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -2453,7 +2453,7 @@
   "name": "Crushing Blows",
   "type": null,
   "brief": null,
-  "description": "The wearer gains a +1 bonus to unarmed Attack Rolls and their unarmed attacks deal an additional 2⁠⁠Bludgeoning damage.",
+  "description": "The wearer gains a +1 bonus to unarmed Attack Rolls and their unarmed attacks deal an additional 2 Bludgeoning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -2465,7 +2465,7 @@
     "url": "https://bg3.wiki/wiki/Attack_Roll"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -2612,14 +2612,14 @@
   "name": "Dawnburst Strike",
   "type": "weapon action",
   "brief": null,
-  "description": "Deal additional ⁠Radiant damage equal to your proficiency bonus. On a hit, light erupts around you in a 3 m (10 ft) area. Enemies in the light must succeed a Constitution Saving Throw or be Blinded.",
+  "description": "Deal additional Radiant damage equal to your proficiency bonus. On a hit, light erupts around you in a 3 m (10 ft) area. Enemies in the light must succeed a Constitution Saving Throw or be Blinded.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/7/75/Dawnburst_Strike.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    },
@@ -2747,7 +2747,7 @@
   "name": "Deadly Derivation",
   "type": null,
   "brief": null,
-  "description": "When you Poison a foe, heal yourself for 1d4⁠⁠Hit Points.",
+  "description": "When you Poison a foe, heal yourself for 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -2759,7 +2759,7 @@
     "url": "https://bg3.wiki/wiki/Poisoned_(condition)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -2831,14 +2831,14 @@
   "name": "Deathly Slumber",
   "type": null,
   "brief": null,
-  "description": "Deals an additional 1d4⁠⁠Necrotic to creatures that are Knocked Out or Sleeping.",
+  "description": "Deals an additional 1d4 Necrotic to creatures that are Knocked Out or Sleeping.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    },
@@ -2931,7 +2931,7 @@
   "name": "Defier's Rejuvenation",
   "type": null,
   "brief": null,
-  "description": "Whenever the wearer succeeds on a Saving Throw against a Spell, they regain 1d4⁠⁠Hit Points.",
+  "description": "Whenever the wearer succeeds on a Saving Throw against a Spell, they regain 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -2948,7 +2948,7 @@
     "url": "https://bg3.wiki/wiki/Spells"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -2996,7 +2996,7 @@
   "name": "Demonspirit Aura",
   "type": null,
   "brief": null,
-  "description": "The wearer's summoned creatures have resistance to all damage except ⁠Psychic damage.\nAt the start of the summoned creatures turn, it must succeed a Wisdom Saving Throw or be driven Mad.",
+  "description": "The wearer's summoned creatures have resistance to all damage except Psychic damage.\nAt the start of the summoned creatures turn, it must succeed a Wisdom Saving Throw or be driven Mad.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -3008,7 +3008,7 @@
     "url": "https://bg3.wiki/wiki/resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    },
@@ -3081,7 +3081,7 @@
   "type": null,
   "brief": null,
   "description": "Inflicts Shattered on hit.",
-  "extra_description": "Deep Delver deals an additional 1d4⁠⁠Piercing against shattered targets.",
+  "extra_description": "Deep Delver deals an additional 1d4 Piercing against shattered targets.",
   "recharge": null,
   "cost": null,
   "icon_url": null,
@@ -3179,14 +3179,14 @@
   "name": "Dragonfire Fists",
   "type": null,
   "brief": null,
-  "description": "Your unarmed attacks deal an additional 1d4⁠⁠Fire.",
+  "description": "Your unarmed attacks deal an additional 1d4 Fire.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    }
@@ -3199,14 +3199,14 @@
   "name": "Dread Iron Ambush",
   "type": null,
   "brief": null,
-  "description": "While its wielder is hidden, this weapon deals an extra 1d6⁠⁠Necrotic.",
+  "description": "While its wielder is hidden, this weapon deals an extra 1d6 Necrotic.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -3283,7 +3283,7 @@
   "name": "Dwarven Thrower",
   "type": null,
   "brief": null,
-  "description": "When a dwarf throws this warhammer, it deals an extra 1d8⁠⁠Bludgeoning damage, or an extra 2d8⁠⁠Bludgeoning damage if the target is a Large, Huge, or Gargantuan creature.",
+  "description": "When a dwarf throws this warhammer, it deals an extra 1d8 Bludgeoning damage, or an extra 2d8 Bludgeoning damage if the target is a Large, Huge, or Gargantuan creature.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -3295,7 +3295,7 @@
     "url": "https://bg3.wiki/wiki/Dwarf"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -3492,7 +3492,7 @@
   "name": "Elemental Augmentation",
   "type": null,
   "brief": null,
-  "description": "When one of your cantrips deals ⁠Acid, ⁠Cold, ⁠Fire, ⁠Lightning, or ⁠Thunder damage, add your Spellcasting Modifier to the damage dealt.",
+  "description": "When one of your cantrips deals Acid, Cold, Fire, Lightning, or Thunder damage, add your Spellcasting Modifier to the damage dealt.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -3504,27 +3504,27 @@
     "url": "https://bg3.wiki/wiki/List_of_cantrips"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    },
@@ -3542,34 +3542,34 @@
   "name": "Elemental Infusion",
   "type": null,
   "brief": null,
-  "description": "When you deal ⁠Acid, ⁠Cold, ⁠Fire, ⁠Lightning, or ⁠Thunder damage using a Spell or a Cantrip, that element infuses your weapon.\nUntil the end of your next turn, you deal an additional 1d4 damage of that element on your first successful weapon attack.",
+  "description": "When you deal Acid, Cold, Fire, Lightning, or Thunder damage using a Spell or a Cantrip, that element infuses your weapon.\nUntil the end of your next turn, you deal an additional 1d4 damage of that element on your first successful weapon attack.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    },
@@ -3592,34 +3592,34 @@
   "name": "Elemental Momentum",
   "type": null,
   "brief": null,
-  "description": "Whenever the wearer deals ⁠Acid, ⁠Cold, ⁠Fire, ⁠Lightning or ⁠Thunder damage with Spells or Cantrip, they gain Momentum for 2 turns.",
+  "description": "Whenever the wearer deals Acid, Cold, Fire, Lightning or Thunder damage with Spells or Cantrip, they gain Momentum for 2 turns.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    },
@@ -3647,34 +3647,34 @@
   "name": "Elemental Resonance",
   "type": null,
   "brief": null,
-  "description": "If the wielder deals ⁠Acid, ⁠Fire, ⁠Lightning, ⁠Radiant, or ⁠Necrotic damage, it becomes resistant to that damage type for 2 turns.",
+  "description": "If the wielder deals Acid, Fire, Lightning, Radiant, or Necrotic damage, it becomes resistant to that damage type for 2 turns.",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -3772,7 +3772,7 @@
   "name": "Endurance by Fire",
   "type": null,
   "brief": "Resistance to fire and +2 to saving throws.",
-  "description": "You have Resistance to ⁠Fire damage and a +2 bonus to Saving Throws.",
+  "description": "You have Resistance to Fire damage and a +2 bonus to Saving Throws.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -3784,7 +3784,7 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -3802,14 +3802,14 @@
   "name": "Enervating Suffusion",
   "type": null,
   "brief": "Unarmed attacks deal +1d4 Force.",
-  "description": "Your unarmed attacks deal an additional 1d4⁠⁠Force damage.",
+  "description": "Your unarmed attacks deal an additional 1d4 Force damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -3822,14 +3822,14 @@
   "name": "Envenom",
   "type": null,
   "brief": null,
-  "description": "Whenever you deal ⁠Poison damage, the target needs to succeed a Constitution Saving Throw or become Poisoned.",
+  "description": "Whenever you deal Poison damage, the target needs to succeed a Constitution Saving Throw or become Poisoned.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-poison\">Poison</span>",
+    "text": "Poison",
     "page": "Poison",
     "url": "https://bg3.wiki/wiki/Poison"
    },
@@ -3917,24 +3917,24 @@
   "name": "Exceptional Plate",
   "type": null,
   "brief": "Take 2 less damage from Slashing, Piercing and Bludgeoning sources.",
-  "description": "You take 2 less damage from ⁠Slashing, ⁠Piercing and ⁠Bludgeoning sources.",
+  "description": "You take 2 less damage from Slashing, Piercing and Bludgeoning sources.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -3977,7 +3977,7 @@
   "name": "Exoskeletal Endurance",
   "type": null,
   "brief": null,
-  "description": "Reduce all incoming damage by 2. When the wearer is struck by a melee attack, the attacker takes Constitution modifier⁠⁠Piercing damage.",
+  "description": "Reduce all incoming damage by 2. When the wearer is struck by a melee attack, the attacker takes Constitution modifier Piercing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -3989,7 +3989,7 @@
     "url": "https://bg3.wiki/wiki/Constitution"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -4002,7 +4002,7 @@
   "name": "Exoskeletal Reinforcement",
   "type": null,
   "brief": null,
-  "description": "Your attacks ignore Resistance to ⁠Slashing, ⁠Piercing, and ⁠Bludgeoning damage.",
+  "description": "Your attacks ignore Resistance to Slashing, Piercing, and Bludgeoning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4014,17 +4014,17 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -4092,7 +4092,7 @@
   "name": "Exploit Weakness",
   "type": null,
   "brief": "Inflicts vulnerability to piercing.",
-  "description": "Creatures hit with this weapon receive Vulnerability to ⁠Piercing damage.",
+  "description": "Creatures hit with this weapon receive Vulnerability to Piercing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4104,7 +4104,7 @@
     "url": "https://bg3.wiki/wiki/Vulnerability"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -4252,14 +4252,14 @@
   "name": "Fervent Flames",
   "type": null,
   "brief": null,
-  "description": "Whenever you take ⁠Fire damage dealt by another creature, you gain 2 turns of Heat.",
+  "description": "Whenever you take Fire damage dealt by another creature, you gain 2 turns of Heat.",
   "extra_description": null,
   "recharge": "Per turn",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -4342,14 +4342,14 @@
   "name": "Fiery Return",
   "type": null,
   "brief": null,
-  "description": "When you deal ⁠Fire damage with a levelled spell, you Burn yourself and gain an additional Bonus Action this round.",
+  "description": "When you deal Fire damage with a levelled spell, you Burn yourself and gain an additional Bonus Action this round.",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -4372,14 +4372,14 @@
   "name": "Fire Acuity",
   "type": null,
   "brief": null,
-  "description": "Whenever you deal ⁠Fire damage, you gain Arcane Acuity for 2 turns.",
+  "description": "Whenever you deal Fire damage, you gain Arcane Acuity for 2 turns.",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -4436,7 +4436,7 @@
   "name": "Flaming Revenge",
   "type": null,
   "brief": null,
-  "description": "On a successful Saving Throw against a foe's spell, deal 1d4 + proficiency bonus⁠⁠Fire damage to them.",
+  "description": "On a successful Saving Throw against a foe's spell, deal 1d4 + proficiency bonus Fire damage to them.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4458,7 +4458,7 @@
     "url": "https://bg3.wiki/wiki/proficiency_bonus"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    }
@@ -4530,8 +4530,8 @@
   "kind": "passive",
   "name": "Flying Strike",
   "type": null,
-  "brief": "When a githyanki casts Fly, their next melee weapon attack deals an additional 1d4⁠⁠Psychic damage.",
-  "description": "When a githyanki casts Fly, their next melee weapon attack deals an additional 1d4⁠⁠Psychic damage.",
+  "brief": "When a githyanki casts Fly, their next melee weapon attack deals an additional 1d4 Psychic damage.",
+  "description": "When a githyanki casts Fly, their next melee weapon attack deals an additional 1d4 Psychic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4548,7 +4548,7 @@
     "url": "https://bg3.wiki/wiki/Fly"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -4616,7 +4616,7 @@
   "name": "Force Absorption",
   "type": null,
   "brief": null,
-  "description": "Gain 2 turns of Force Conduit when taking ⁠Slashing, ⁠Piercing, or ⁠Bludgeoning damage.",
+  "description": "Gain 2 turns of Force Conduit when taking Slashing, Piercing, or Bludgeoning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4628,17 +4628,17 @@
     "url": "https://bg3.wiki/wiki/Force_Conduit_(condition)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -4735,7 +4735,7 @@
   "name": "Frigid Blade",
   "type": "weapon action",
   "brief": null,
-  "description": "You add your Proficiency Bonus as ⁠Cold Damage.\nWhen the attack hits, apply Frostbitten. The creature takes 1d4⁠⁠Cold damage when making a weapon attack.",
+  "description": "You add your Proficiency Bonus as Cold Damage.\nWhen the attack hits, apply Frostbitten. The creature takes 1d4 Cold damage when making a weapon attack.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
@@ -4747,7 +4747,7 @@
     "url": "https://bg3.wiki/wiki/Proficiency_Bonus"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    },
@@ -4765,7 +4765,7 @@
   "name": "Fury In The Marrow",
   "type": null,
   "brief": null,
-  "description": "When you Rage, hostile creatures in a 3 m (10 ft) radius must succeed a Weapon Action DC Wisdom Saving Throw or take 2d4⁠⁠Psychic damage. The targets receive half damage on a save.",
+  "description": "When you Rage, hostile creatures in a 3 m (10 ft) radius must succeed a Weapon Action DC Wisdom Saving Throw or take 2d4 Psychic damage. The targets receive half damage on a save.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4792,7 +4792,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -4805,14 +4805,14 @@
   "name": "Galvanic Currents",
   "type": null,
   "brief": null,
-  "description": "This weapon deals an additional 1d6⁠⁠Lightning damage.",
+  "description": "This weapon deals an additional 1d6 Lightning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    }
@@ -4825,14 +4825,14 @@
   "name": "Gargantuan Cleave",
   "type": "weapon action",
   "brief": null,
-  "description": "Swing your weapon with all your might. You can attack multiple targets, dealing bonus 1d6⁠⁠SlashingDamage Rider As Source damage, but become Off Balanced.",
+  "description": "Swing your weapon with all your might. You can attack multiple targets, dealing bonus 1d6 SlashingDamage Rider As Source damage, but become Off Balanced.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/e/e9/Gargantuan_Cleave.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
@@ -4909,7 +4909,7 @@
   "kind": "passive",
   "name": "Githborn Psionic Resistance",
   "type": null,
-  "brief": "A githyanki holding this weapon has Advantage on Intelligence, Wisdom, and Charisma saving throws, resistance to ⁠Psychic damage, and cannot be Charmed.",
+  "brief": "A githyanki holding this weapon has Advantage on Intelligence, Wisdom, and Charisma saving throws, resistance to Psychic damage, and cannot be Charmed.",
   "description": "A githyanki holding this weapon has Advantage on Intelligence, Wisdom, and Charisma Saving Throws, resistance to Psychic damage, and cannot be Charmed.",
   "extra_description": null,
   "recharge": null,
@@ -4960,7 +4960,7 @@
   "name": "Githborn Psionic Weapon",
   "type": null,
   "brief": null,
-  "description": "When wielded by a githyanki this weapon deals an additional 1d4⁠⁠Psychic damage.",
+  "description": "When wielded by a githyanki this weapon deals an additional 1d4 Psychic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4972,7 +4972,7 @@
     "url": "https://bg3.wiki/wiki/githyanki"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -4985,7 +4985,7 @@
   "name": "Githborn Psionic Weapon",
   "type": null,
   "brief": null,
-  "description": "When wielded by a githyanki this weapon deals an additional 1d6⁠⁠Psychic damage.",
+  "description": "When wielded by a githyanki this weapon deals an additional 1d6 Psychic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -4997,7 +4997,7 @@
     "url": "https://bg3.wiki/wiki/githyanki"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -5010,7 +5010,7 @@
   "name": "Gleamdance Dagger: Glowing",
   "type": null,
   "brief": null,
-  "description": "This object shines with a glowing light in a radius of ⁠6 m (20 ft).",
+  "description": "This object shines with a glowing light in a radius of 6 m (20 ft).",
   "extra_description": "Toggle this to douse and rekindle the light.",
   "recharge": null,
   "cost": null,
@@ -5138,14 +5138,14 @@
   "name": "Grand Slam",
   "type": "weapon action",
   "brief": null,
-  "description": "Slam your weapon into the ground, dealing additional ⁠Thunder damage equal to your proficiency bonus, thunderously impacting nearby foes and possibly pushing them away.",
+  "description": "Slam your weapon into the ground, dealing additional Thunder damage equal to your proficiency bonus, thunderously impacting nearby foes and possibly pushing them away.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/d/d9/Grand_Slam.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    },
@@ -5188,7 +5188,7 @@
   "name": "Green Bed Regeneration",
   "type": null,
   "brief": null,
-  "description": "When starting your turn on Plant Growth Surface or Vine Surface regain 1d4⁠⁠Hit Points.",
+  "description": "When starting your turn on Plant Growth Surface or Vine Surface regain 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -5205,7 +5205,7 @@
     "url": "https://bg3.wiki/wiki/Difficult_Terrain:_Vines_(condition)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -5283,14 +5283,14 @@
   "name": "Grip of Shadows",
   "type": null,
   "brief": null,
-  "description": "Deals an additional 1d6⁠⁠Necrotic damage if the target is not standing in sunlight.",
+  "description": "Deals an additional 1d6 Necrotic damage if the target is not standing in sunlight.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -5393,14 +5393,14 @@
   "name": "Heart of Ice",
   "type": null,
   "brief": null,
-  "description": "When dealing ⁠Cold damage, the wielder deals an additional 1⁠⁠Cold.",
+  "description": "When dealing Cold damage, the wielder deals an additional 1 Cold.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    }
@@ -5617,7 +5617,7 @@
   "name": "Helm's Protection",
   "type": null,
   "brief": null,
-  "description": "When you heal another creature, it gains Resistance to ⁠Bludgeoning, ⁠Piercing, and ⁠Slashing damage dealt by weapon attacks for 2 turns.",
+  "description": "When you heal another creature, it gains Resistance to Bludgeoning, Piercing, and Slashing damage dealt by weapon attacks for 2 turns.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -5629,17 +5629,17 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    }
@@ -5751,14 +5751,14 @@
   "name": "Hot Little Hands",
   "type": null,
   "brief": null,
-  "description": "When the wearer deals ⁠Fire damage, the target has to succeed a Constitution Saving Throw or start Burning.",
+  "description": "When the wearer deals Fire damage, the target has to succeed a Constitution Saving Throw or start Burning.",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -5846,14 +5846,14 @@
   "name": "Ichorous Corrosion",
   "type": null,
   "brief": null,
-  "description": "When the wearer deals ⁠Acid damage, they also inflict Noxious Fumes on the target(s).",
+  "description": "When the wearer deals Acid damage, they also inflict Noxious Fumes on the target(s).",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    },
@@ -6206,19 +6206,19 @@
   "name": "Infernal Touch",
   "type": null,
   "brief": null,
-  "description": "Your weapon attacks deal an additional 1d6⁠⁠Fire damage. Your unarmed attacks deal an additional 1d6⁠⁠Necrotic damage, and can possibly inflict Bleeding.",
+  "description": "Your weapon attacks deal an additional 1d6 Fire damage. Your unarmed attacks deal an additional 1d6 Necrotic damage, and can possibly inflict Bleeding.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    },
@@ -6236,14 +6236,14 @@
   "name": "Infernal Weapon",
   "type": null,
   "brief": null,
-  "description": "On a hit, this weapon deals an additional 3⁠⁠Poison damage and can possibly Poison its target.",
+  "description": "On a hit, this weapon deals an additional 3 Poison damage and can possibly Poison its target.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-poison\">Poison</span>",
+    "text": "Poison",
     "page": "Poison",
     "url": "https://bg3.wiki/wiki/Poison"
    },
@@ -6466,7 +6466,7 @@
   "name": "Ironvine",
   "type": null,
   "brief": null,
-  "description": "While the wielder is holding a weapon empowered with Shillelagh, and when they are hit by a melee attack, the attacker takes ⁠Piercing Damage equal to the wielder's Wisdom modifier.",
+  "description": "While the wielder is holding a weapon empowered with Shillelagh, and when they are hit by a melee attack, the attacker takes Piercing Damage equal to the wielder's Wisdom modifier.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -6478,7 +6478,7 @@
     "url": "https://bg3.wiki/wiki/Shillelagh_(condition)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
@@ -6496,7 +6496,7 @@
   "name": "It's All In The Wrists",
   "type": null,
   "brief": null,
-  "description": "This weapon has the Thrown property and deals an additional 1d4⁠⁠Thunder damage when thrown.",
+  "description": "This weapon has the Thrown property and deals an additional 1d4 Thunder damage when thrown.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -6508,7 +6508,7 @@
     "url": "https://bg3.wiki/wiki/Thrown"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    }
@@ -6631,7 +6631,7 @@
   "name": "Lathander's Blessing",
   "type": null,
   "brief": null,
-  "description": "Once per Long Rest, when your hit points are reduced to 0, you regain 2d6⁠⁠Hit Points. Allies within 9 m (30 ft) also regain 1d6⁠⁠Hit Points.",
+  "description": "Once per Long Rest, when your hit points are reduced to 0, you regain 2d6 Hit Points. Allies within 9 m (30 ft) also regain 1d6 Hit Points.",
   "extra_description": null,
   "recharge": "long rest",
   "cost": null,
@@ -6643,7 +6643,7 @@
     "url": "https://bg3.wiki/wiki/Long_Rest"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -6756,14 +6756,14 @@
   "name": "Lesser Infernal Retribution",
   "type": null,
   "brief": null,
-  "description": "When you are hit by a foe within 2 m (7 ft), it might take 1d4⁠⁠Fire damage.",
+  "description": "When you are hit by a foe within 2 m (7 ft), it might take 1d4 Fire damage.",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    }
@@ -6776,19 +6776,19 @@
   "name": "Lesser Infernal Touch",
   "type": null,
   "brief": null,
-  "description": "Your weapon attacks deal an additional 1d4⁠⁠Fire damage. Your unarmed attacks deal an additional 1d4⁠⁠Necrotic damage, and can possibly inflict Bleeding.",
+  "description": "Your weapon attacks deal an additional 1d4 Fire damage. Your unarmed attacks deal an additional 1d4 Necrotic damage, and can possibly inflict Bleeding.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    },
@@ -6846,7 +6846,7 @@
   "name": "Lethal Weapon",
   "type": null,
   "brief": null,
-  "description": "This weapon ignores resistance to ⁠Bludgeoning damage.",
+  "description": "This weapon ignores resistance to Bludgeoning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -6858,7 +6858,7 @@
     "url": "https://bg3.wiki/wiki/resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -6871,7 +6871,7 @@
   "name": "Lethal Weapon",
   "type": null,
   "brief": null,
-  "description": "This weapon ignores Resistance to ⁠Slashing damage.",
+  "description": "This weapon ignores Resistance to Slashing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -6883,7 +6883,7 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    }
@@ -6961,7 +6961,7 @@
   "name": "Life Stealing Critical",
   "type": null,
   "brief": null,
-  "description": "On a Critical Hit, the target takes an extra 10⁠⁠NecroticDamage Rider As Source damage as long as it isn't a construct or an undead. You also gain 10 temporary hit points.",
+  "description": "On a Critical Hit, the target takes an extra 10 NecroticDamage Rider As Source damage as long as it isn't a construct or an undead. You also gain 10 temporary hit points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -6973,7 +6973,7 @@
     "url": "https://bg3.wiki/wiki/Critical_Hit"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    },
@@ -7016,14 +7016,14 @@
   "name": "Lightning Strikes",
   "type": null,
   "brief": null,
-  "description": "Your unarmed attacks deal an additional 1d4⁠⁠Lightning.",
+  "description": "Your unarmed attacks deal an additional 1d4 Lightning.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    }
@@ -7228,14 +7228,14 @@
   "name": "Malefic Excretion",
   "type": null,
   "brief": null,
-  "description": "Your weapon attacks also deal 2⁠⁠Acid damage.",
+  "description": "Your weapon attacks also deal 2 Acid damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-acid\">Acid</span>",
+    "text": "Acid",
     "page": "Acid",
     "url": "https://bg3.wiki/wiki/Acid"
    }
@@ -7248,7 +7248,7 @@
   "name": "Malefic Funghi",
   "type": null,
   "brief": null,
-  "description": "The wearer gains a +1 bonus to Spell Save DC and when dealing ⁠Necrotic damage, they deal an additional 1⁠⁠Necrotic damage.",
+  "description": "The wearer gains a +1 bonus to Spell Save DC and when dealing Necrotic damage, they deal an additional 1 Necrotic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -7260,7 +7260,7 @@
     "url": "https://bg3.wiki/wiki/Spell_Save_DC"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -7422,14 +7422,14 @@
   "name": "Mental Interference",
   "type": null,
   "brief": null,
-  "description": "When you deal ⁠Psychic damage, you also inflict Mental Fatigue for 2 turns.",
+  "description": "When you deal Psychic damage, you also inflict Mental Fatigue for 2 turns.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    },
@@ -7518,7 +7518,7 @@
   "type": "weapon action",
   "brief": null,
   "description": "Strike a foe, conjuring an illusory swarm of moon-pale butterflies and gaining Advantage on attacks against the target.",
-  "extra_description": "Deal additional ⁠Psychic damage equal to your proficiency bonus. When the target moves away from your illusion, it takes 1d6⁠⁠Psychic damage.",
+  "extra_description": "Deal additional Psychic damage equal to your proficiency bonus. When the target moves away from your illusion, it takes 1d6 Psychic damage.",
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/3/32/Moonlight_Butterflies.webp",
@@ -7537,7 +7537,7 @@
   "name": "Moonlight Glaive: Glowing",
   "type": null,
   "brief": null,
-  "description": "This object shines with a glowing light in a radius of ⁠6 m (20 ft).",
+  "description": "This object shines with a glowing light in a radius of 6 m (20 ft).",
   "extra_description": "Toggle this to douse and rekindle the light.",
   "recharge": null,
   "cost": null,
@@ -7770,7 +7770,7 @@
   "name": "Nightsinger's Reply",
   "type": null,
   "brief": null,
-  "description": "While obscured by shadow, the wearer deals 1d4⁠⁠Necrotic damage to attackers that hit them with a melee attack.",
+  "description": "While obscured by shadow, the wearer deals 1d4 Necrotic damage to attackers that hit them with a melee attack.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -7782,7 +7782,7 @@
     "url": "https://bg3.wiki/wiki/obscured"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -7894,7 +7894,7 @@
   "name": "Nyrulna: Glowing",
   "type": null,
   "brief": null,
-  "description": "This object shines with a glowing light in a radius of ⁠6 m (20 ft).",
+  "description": "This object shines with a glowing light in a radius of 6 m (20 ft).",
   "extra_description": "Toggle this to douse and rekindle the light.",
   "recharge": null,
   "cost": null,
@@ -7933,7 +7933,7 @@
   "name": "Order of Nature",
   "type": null,
   "brief": null,
-  "description": "Undead creatures that hit the wearer receive 1d6⁠⁠Radiant damage. Beasts that hit the wearer deal an additional 1d6⁠⁠Radiant damage.",
+  "description": "Undead creatures that hit the wearer receive 1d6 Radiant damage. Beasts that hit the wearer deal an additional 1d6 Radiant damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -7945,7 +7945,7 @@
     "url": "https://bg3.wiki/wiki/Undead"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    },
@@ -8145,7 +8145,7 @@
   "name": "Piercing Counter",
   "type": null,
   "brief": null,
-  "description": "When the wearer has 50% hit points or less and is damaged by a melee attack, they deal 1d4⁠⁠Piercing to the attacker.",
+  "description": "When the wearer has 50% hit points or less and is damaged by a melee attack, they deal 1d4 Piercing to the attacker.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -8157,7 +8157,7 @@
     "url": "https://bg3.wiki/wiki/Hit_Points"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -8210,14 +8210,14 @@
   "name": "Poison Mist",
   "type": "weapon action",
   "brief": null,
-  "description": "On a hit, deal extra ⁠Poison damage equal to your proficiency bonus and surround the target in a noxious cloud that possibly Poisons those within it.",
+  "description": "On a hit, deal extra Poison damage equal to your proficiency bonus and surround the target in a noxious cloud that possibly Poisons those within it.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/f/fa/Poison_Mist.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-poison\">Poison</span>",
+    "text": "Poison",
     "page": "Poison",
     "url": "https://bg3.wiki/wiki/Poison"
    },
@@ -8245,14 +8245,14 @@
   "name": "Poison Trails",
   "type": null,
   "brief": null,
-  "description": "When the wearer casts a spell that deals ⁠Poison damage, it deals an additional 1d4⁠⁠Poison damage.",
+  "description": "When the wearer casts a spell that deals Poison damage, it deals an additional 1d4 Poison damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-poison\">Poison</span>",
+    "text": "Poison",
     "page": "Poison",
     "url": "https://bg3.wiki/wiki/Poison"
    }
@@ -8265,7 +8265,7 @@
   "name": "Poisonous Synergy",
   "type": null,
   "brief": null,
-  "description": "While concentrating, your melee weapon attacks deal an additional 1d4⁠⁠Poison.",
+  "description": "While concentrating, your melee weapon attacks deal an additional 1d4 Poison.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -8277,7 +8277,7 @@
     "url": "https://bg3.wiki/wiki/Concentration"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-poison\">Poison</span>",
+    "text": "Poison",
     "page": "Poison",
     "url": "https://bg3.wiki/wiki/Poison"
    }
@@ -8330,7 +8330,7 @@
   "name": "Prepare",
   "type": "weapon action",
   "brief": null,
-  "description": "Spend 6 m (20 ft) of your movement to deal an additional Strength modifier⁠⁠PhysicalDamage Rider As Source damage (minimum 1) on each successful melee weapon attack for the rest of the turn.",
+  "description": "Spend 6 m (20 ft) of your movement to deal an additional Strength modifier PhysicalDamage Rider As Source damage (minimum 1) on each successful melee weapon attack for the rest of the turn.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "movement m:6",
@@ -8342,7 +8342,7 @@
     "url": "https://bg3.wiki/wiki/Movement_Speed"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-physical\">Physical</span>",
+    "text": "Physical",
     "page": "Physical",
     "url": "https://bg3.wiki/wiki/Physical"
    }
@@ -8405,14 +8405,14 @@
   "name": "Prey Upon the Weak",
   "type": null,
   "brief": "Targets at or below half their HP receive +1d4 piercing damage.",
-  "description": "This weapon deals an additional 1d4⁠⁠Piercing damage against targets with 50% of their hit points or fewer.",
+  "description": "This weapon deals an additional 1d4 Piercing damage against targets with 50% of their hit points or fewer.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
@@ -8430,7 +8430,7 @@
   "name": "Prime Aegis of Fire",
   "type": null,
   "brief": null,
-  "description": "You have Resistance to ⁠Fire damage and cannot be Burned. You take 3 less damage from all sources.",
+  "description": "You have Resistance to Fire damage and cannot be Burned. You take 3 less damage from all sources.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -8442,7 +8442,7 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -8460,7 +8460,7 @@
   "name": "Profane Scourge",
   "type": "weapon action",
   "brief": null,
-  "description": "Strike with subjugating fury, adding your proficiency bonus to the damage roll. If you hit a fiend or undead creature, deal an additional 2d6⁠⁠SlashingDamage Rider As Source damage and possibly Bane it.",
+  "description": "Strike with subjugating fury, adding your proficiency bonus to the damage roll. If you hit a fiend or undead creature, deal an additional 2d6 SlashingDamage Rider As Source damage and possibly Bane it.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
@@ -8482,7 +8482,7 @@
     "url": "https://bg3.wiki/wiki/undead"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
@@ -8520,7 +8520,7 @@
   "name": "Psionic Revenge",
   "type": null,
   "brief": "When you succeed a saving throw, the foe that caused it takes 1d4 Psychic.",
-  "description": "When you succeed a Saving Throw, the foe that caused the throw takes 1d4⁠⁠Psychic. Githyanki also gain a +1 bonus to Intelligence, Wisdom, and Charisma Saving Throws.",
+  "description": "When you succeed a Saving Throw, the foe that caused the throw takes 1d4 Psychic. Githyanki also gain a +1 bonus to Intelligence, Wisdom, and Charisma Saving Throws.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -8532,7 +8532,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    },
@@ -8565,7 +8565,7 @@
   "name": "Psionic Ward",
   "type": null,
   "brief": "Resistance to psychic damage. Regain 1d4 hit points on a successful saving throw against a spell.",
-  "description": "If the item detects that the wearer is gith, they have Resistance to ⁠Psychic damage.\nWhenever the wearer succeeds on a Saving Throw against a spell, they regain 1d4⁠⁠Hit Points.",
+  "description": "If the item detects that the wearer is gith, they have Resistance to Psychic damage.\nWhenever the wearer succeeds on a Saving Throw against a spell, they regain 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -8582,7 +8582,7 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    },
@@ -8592,7 +8592,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -8605,7 +8605,7 @@
   "name": "Psychic Leech",
   "type": null,
   "brief": null,
-  "description": "When an enemy fails a Charisma, Intelligence, or Wisdom Saving Throw against one of your spells or cantrips, you regain 1d4⁠⁠Hit Points.",
+  "description": "When an enemy fails a Charisma, Intelligence, or Wisdom Saving Throw against one of your spells or cantrips, you regain 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -8632,7 +8632,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -8665,7 +8665,7 @@
   "name": "Psychic Steel Virtuoso",
   "type": null,
   "brief": null,
-  "description": "When the wielder attacks with Advantage, they deal an additional 1d8⁠⁠Psychic.",
+  "description": "When the wielder attacks with Advantage, they deal an additional 1d8 Psychic.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -8677,7 +8677,7 @@
     "url": "https://bg3.wiki/wiki/Advantage"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -8784,14 +8784,14 @@
   "name": "Radiating Orb Gloves",
   "type": null,
   "brief": null,
-  "description": "When the wearer deals ⁠Radiant damage, the target receives 2 turns of Radiating Orb.",
+  "description": "When the wearer deals Radiant damage, the target receives 2 turns of Radiating Orb.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    },
@@ -8809,14 +8809,14 @@
   "name": "Radiating Shockwave",
   "type": null,
   "brief": null,
-  "description": "When the wearer deals ⁠Radiant damage, they cause a Radiant Shockwave.",
+  "description": "When the wearer deals Radiant damage, they cause a Radiant Shockwave.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    },
@@ -8953,14 +8953,14 @@
   "name": "Rebuke of the Mighty",
   "type": null,
   "brief": null,
-  "description": "When a foe hits you with a melee attack, you can use your reaction, dealing 2d4⁠⁠Force damage and knock it Prone unless they succeed a Dexterity Saving Throw.",
+  "description": "When a foe hits you with a melee attack, you can use your reaction, dealing 2d4 Force damage and knock it Prone unless they succeed a Dexterity Saving Throw.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": "https://bg3.wiki/w/images/4/42/Shield_Bash_Icon.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    },
@@ -8988,7 +8988,7 @@
   "name": "Redvein Savagery",
   "type": null,
   "brief": null,
-  "description": "When you make an attack with Advantage, the target takes an additional 7⁠⁠PiercingDamage Rider As Source damage.",
+  "description": "When you make an attack with Advantage, the target takes an additional 7 PiercingDamage Rider As Source damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -9000,7 +9000,7 @@
     "url": "https://bg3.wiki/wiki/Advantage"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -9033,14 +9033,14 @@
   "name": "Rejuvenating Takedown",
   "type": null,
   "brief": null,
-  "description": "Whenever the wearer knocks a creature unconscious, the wearer regains 1d6⁠⁠Hit Points.",
+  "description": "Whenever the wearer knocks a creature unconscious, the wearer regains 1d6 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -9053,7 +9053,7 @@
   "name": "Relentless Revenge",
   "type": null,
   "brief": null,
-  "description": "When the wielder has 50% hit points or less, they deal an additional 1d4⁠⁠Slashing damage.",
+  "description": "When the wielder has 50% hit points or less, they deal an additional 1d4 Slashing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -9065,7 +9065,7 @@
     "url": "https://bg3.wiki/wiki/hit_points"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    }
@@ -9132,7 +9132,7 @@
   "type": "weapon action",
   "brief": null,
   "description": "Smash into a foe, wounding them and healing your own injuries.",
-  "extra_description": "On a hit, heal 1d6⁠⁠Hit Points. You deal additional ⁠Necrotic damage equal to your Proficiency Bonus.",
+  "extra_description": "On a hit, heal 1d6 Hit Points. You deal additional Necrotic damage equal to your Proficiency Bonus.",
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/a/ac/Revitalising_Strike.webp",
@@ -9345,14 +9345,14 @@
   "name": "Saviour's Allure",
   "type": null,
   "brief": null,
-  "description": "You restore an additional 2⁠⁠Hit Points every time you heal another creature.",
+  "description": "You restore an additional 2 Hit Points every time you heal another creature.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -9440,14 +9440,14 @@
   "name": "Scourge of Pests",
   "type": null,
   "brief": null,
-  "description": "Deals an additional 1d6⁠⁠Fire damage to Plants, Myconids, and Small creatures.",
+  "description": "Deals an additional 1d6 Fire damage to Plants, Myconids, and Small creatures.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
@@ -9475,19 +9475,19 @@
   "name": "Searing Blood",
   "type": "weapon action",
   "brief": null,
-  "description": "Cut into an enemy, dealing an extra Proficiency bonus⁠⁠Fire and 1d6⁠⁠Fire damage to them, while you yourself take 1d6⁠⁠Slashing damage. Additionally, the attack might cause the target to Bleed and Burn.",
+  "description": "Cut into an enemy, dealing an extra Proficiency bonus Fire and 1d6 Fire damage to them, while you yourself take 1d6 Slashing damage. Additionally, the attack might cause the target to Bleed and Burn.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/f/f9/Searing_Blood.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
@@ -9640,7 +9640,7 @@
   "name": "Selûne's Protection",
   "type": null,
   "brief": null,
-  "description": "While the wearer has Mage Armour, each successful Saving Throw causes the source of the Saving Throw to take 1d4⁠⁠Radiant damage.",
+  "description": "While the wearer has Mage Armour, each successful Saving Throw causes the source of the Saving Throw to take 1d4 Radiant damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -9657,7 +9657,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    }
@@ -9850,7 +9850,7 @@
   "name": "Shadowsoaked Blow",
   "type": "weapon action",
   "brief": null,
-  "description": "Strike an enemy, adding your proficiency bonus to the damage. Moreover, if the attack hits, it deals an additional 1d6⁠⁠PsychicDamage Rider As Source damage. This attack doesn't break concealment.",
+  "description": "Strike an enemy, adding your proficiency bonus to the damage. Moreover, if the attack hits, it deals an additional 1d6 PsychicDamage Rider As Source damage. This attack doesn't break concealment.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
@@ -9862,7 +9862,7 @@
     "url": "https://bg3.wiki/wiki/proficiency_bonus"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -9978,7 +9978,7 @@
   "name": "Shar's Protection",
   "type": null,
   "brief": null,
-  "description": "While the wearer has Shield of Faith active, reduce all incoming damage by 2 and reflect damage received back at the attacker, who takes 1d4⁠⁠Necrotic damage.",
+  "description": "While the wearer has Shield of Faith active, reduce all incoming damage by 2 and reflect damage received back at the attacker, who takes 1d4 Necrotic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -9990,7 +9990,7 @@
     "url": "https://bg3.wiki/wiki/Shield_of_Faith_(condition)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -10208,7 +10208,7 @@
   "name": "Shockwave",
   "type": null,
   "brief": null,
-  "description": "When the wearer Jumps, they deal 1d4⁠⁠Thunder damage in a 3 m (10 ft) radius upon landing.",
+  "description": "When the wearer Jumps, they deal 1d4 Thunder damage in a 3 m (10 ft) radius upon landing.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -10220,7 +10220,7 @@
     "url": "https://bg3.wiki/wiki/Jump"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    }
@@ -10233,14 +10233,14 @@
   "name": "Shoe Slinger",
   "type": null,
   "brief": null,
-  "description": "Returns to its owner when thrown. On a hit deal an additional 2d4⁠⁠Psychic damage.",
+  "description": "Returns to its owner when thrown. On a hit deal an additional 2d4 Psychic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -10273,7 +10273,7 @@
   "name": "Skullduggery Attack",
   "type": null,
   "brief": null,
-  "description": "Your Sneak Attack deals an additional 1d4⁠⁠ForceDamage Rider As Source damage.",
+  "description": "Your Sneak Attack deals an additional 1d4 ForceDamage Rider As Source damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -10285,7 +10285,7 @@
     "url": "https://bg3.wiki/wiki/Sneak_Attack"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -10323,14 +10323,14 @@
   "name": "Slay the Wicked",
   "type": null,
   "brief": null,
-  "description": "This weapon deals an additional 1d6⁠⁠Bludgeoning damage against Fiends and Undead.",
+  "description": "This weapon deals an additional 1d6 Bludgeoning damage against Fiends and Undead.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    },
@@ -10353,14 +10353,14 @@
   "name": "Slay the Wicked",
   "type": null,
   "brief": null,
-  "description": "This weapon deals an additional 1d6⁠⁠Slashing damage against Fiends and Undead.",
+  "description": "This weapon deals an additional 1d6 Slashing damage against Fiends and Undead.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
@@ -10418,7 +10418,7 @@
   "name": "Smite the Graceless",
   "type": null,
   "brief": null,
-  "description": "Creatures who miss their Attack Rolls against the wearer must make a DC 14 Dexterity Saving Throw or take 1d4⁠⁠Radiant damage.",
+  "description": "Creatures who miss their Attack Rolls against the wearer must make a DC 14 Dexterity Saving Throw or take 1d4 Radiant damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -10445,7 +10445,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    }
@@ -10478,14 +10478,14 @@
   "name": "Snowburst",
   "type": null,
   "brief": null,
-  "description": "When the wearer deals ⁠Cold damage, they also create a 4.5 m (15 ft) circle of Ice around the target(s).",
+  "description": "When the wearer deals Cold damage, they also create a 4.5 m (15 ft) circle of Ice around the target(s).",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    },
@@ -10543,7 +10543,7 @@
   "name": "Soothing Songs",
   "type": null,
   "brief": null,
-  "description": "When you inspire an ally using Bardic Inspiration, they also regain 1d6⁠⁠Hit Points.",
+  "description": "When you inspire an ally using Bardic Inspiration, they also regain 1d6 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -10555,7 +10555,7 @@
     "url": "https://bg3.wiki/wiki/Bardic_Inspiration_(class_action)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -10568,14 +10568,14 @@
   "name": "Soul Catching",
   "type": null,
   "brief": null,
-  "description": "Once per turn, on an unarmed hit, you regain 10⁠⁠Hit Points. Alternatively, you may forego healing to gain a +5 bonus on an Attack Roll or Saving Throw until the end of your next turn.",
+  "description": "Once per turn, on an unarmed hit, you regain 10 Hit Points. Alternatively, you may forego healing to gain a +5 bonus on an Attack Roll or Saving Throw until the end of your next turn.",
   "extra_description": null,
   "recharge": "Per turn",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    },
@@ -10598,14 +10598,14 @@
   "name": "Soul Fist",
   "type": null,
   "brief": null,
-  "description": "Your unarmed attacks deal an additional 1d10⁠⁠Force damage.",
+  "description": "Your unarmed attacks deal an additional 1d10 Force damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -10648,14 +10648,14 @@
   "name": "Soulbreaker",
   "type": "weapon action",
   "brief": null,
-  "description": "Rend the enemy's body and soul, dealing additional ⁠Psychic damage equal to your proficiency bonus, and possibly Stun them.",
+  "description": "Rend the enemy's body and soul, dealing additional Psychic damage equal to your proficiency bonus, and possibly Stun them.",
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "action",
   "icon_url": "https://bg3.wiki/w/images/2/2b/Soulbreaker.webp",
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    },
@@ -11172,24 +11172,24 @@
   "name": "Steel Physiology",
   "type": null,
   "brief": null,
-  "description": "Reduce incoming ⁠Bludgeoning, ⁠Piercing, and ⁠Slashing damage by 1.",
+  "description": "Reduce incoming Bludgeoning, Piercing, and Slashing damage by 1.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    }
@@ -11202,7 +11202,7 @@
   "name": "Sting The Helpless",
   "type": null,
   "brief": null,
-  "description": "A Drow wielding this weapon deals an additional 1d4⁠⁠Poison against Restrained targets.",
+  "description": "A Drow wielding this weapon deals an additional 1d4 Poison against Restrained targets.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -11214,7 +11214,7 @@
     "url": "https://bg3.wiki/wiki/Drow"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-poison\">Poison</span>",
+    "text": "Poison",
     "page": "Poison",
     "url": "https://bg3.wiki/wiki/Poison"
    },
@@ -11257,7 +11257,7 @@
   "name": "Strange Conduit",
   "type": null,
   "brief": null,
-  "description": "When Concentrating on a spell, the wearer's weapon attacks deal an additional 1d4⁠⁠Psychic damage.",
+  "description": "When Concentrating on a spell, the wearer's weapon attacks deal an additional 1d4 Psychic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -11269,7 +11269,7 @@
     "url": "https://bg3.wiki/wiki/Concentration"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-psychic\">Psychic</span>",
+    "text": "Psychic",
     "page": "Psychic",
     "url": "https://bg3.wiki/wiki/Psychic"
    }
@@ -11282,7 +11282,7 @@
   "name": "Strength in Suffering",
   "type": null,
   "brief": null,
-  "description": "Non-Cantrip spells deal an additional 1d4⁠⁠Force damage when the wearer drops to half their hit points or lower.",
+  "description": "Non-Cantrip spells deal an additional 1d4 Force damage when the wearer drops to half their hit points or lower.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -11294,7 +11294,7 @@
     "url": "https://bg3.wiki/wiki/Cantrip"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-force\">Force</span>",
+    "text": "Force",
     "page": "Force",
     "url": "https://bg3.wiki/wiki/Force"
    }
@@ -11396,14 +11396,14 @@
   "name": "Superior Material",
   "type": null,
   "brief": null,
-  "description": "You take 1 less ⁠Slashing damage.",
+  "description": "You take 1 less Slashing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    }
@@ -11416,14 +11416,14 @@
   "name": "Superior Material",
   "type": null,
   "brief": null,
-  "description": "You take 2 less ⁠Slashing damage.",
+  "description": "You take 2 less Slashing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    }
@@ -11436,14 +11436,14 @@
   "name": "Superior Padding",
   "type": null,
   "brief": "Takes -1 bludgeoning damage.",
-  "description": "You take 1 less ⁠Bludgeoning damage.",
+  "description": "You take 1 less Bludgeoning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -11456,14 +11456,14 @@
   "name": "Superior Padding",
   "type": null,
   "brief": null,
-  "description": "You take 2 less ⁠Bludgeoning damage.",
+  "description": "You take 2 less Bludgeoning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -11476,14 +11476,14 @@
   "name": "Superior Plate",
   "type": null,
   "brief": null,
-  "description": "You take 1 less ⁠Piercing damage.",
+  "description": "You take 1 less Piercing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -11496,14 +11496,14 @@
   "name": "Superior Plate",
   "type": null,
   "brief": null,
-  "description": "You take 2 less ⁠Piercing damage.",
+  "description": "You take 2 less Piercing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -11726,7 +11726,7 @@
   "name": "Temperature Adjustment",
   "type": null,
   "brief": null,
-  "description": "You have Resistance to ⁠Fire and ⁠Cold Damage.",
+  "description": "You have Resistance to Fire and Cold Damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -11738,12 +11738,12 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-fire\">Fire</span>",
+    "text": "Fire",
     "page": "Fire",
     "url": "https://bg3.wiki/wiki/Fire"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    }
@@ -11756,7 +11756,7 @@
   "name": "Tenacity",
   "type": null,
   "brief": "Upon missing a melee attack, still deals bludgeoning damage equal to STR modifier or a minimum of 1.",
-  "description": "When you miss a melee attack, you deal Strength Modifier⁠⁠Bludgeoning damage (minimum of 1) anyway.",
+  "description": "When you miss a melee attack, you deal Strength Modifier Bludgeoning damage (minimum of 1) anyway.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -11773,7 +11773,7 @@
     "url": "https://bg3.wiki/wiki/Modifier"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    }
@@ -11831,7 +11831,7 @@
   "name": "The Scourge Mistress' Bane",
   "type": null,
   "brief": null,
-  "description": "Chance to inflict upon the target a 1d4 penalty to Attack Rolls and Saving Throws. If the attacker still has 50% or more hit points, they take 1d6⁠⁠Piercing themselves.",
+  "description": "Chance to inflict upon the target a 1d4 penalty to Attack Rolls and Saving Throws. If the attacker still has 50% or more hit points, they take 1d6 Piercing themselves.",
   "extra_description": "A Baned creature receives a 1d4 penalty to Attack Rolls and Saving Throws.",
   "recharge": "Per attack",
   "cost": null,
@@ -11853,7 +11853,7 @@
     "url": "https://bg3.wiki/wiki/Hit_Points"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -11886,7 +11886,7 @@
   "name": "The Water Caller",
   "type": null,
   "brief": null,
-  "description": "On a hit, inflict Wet and create a ⁠2 m (7 ft) Water surface centred around the target.",
+  "description": "On a hit, inflict Wet and create a 2 m (7 ft) Water surface centred around the target.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -11951,14 +11951,14 @@
   "name": "Throwing: Lightning Damage",
   "type": null,
   "brief": null,
-  "description": "When launched at a target, deal an additional 1d4⁠⁠Lightning damage.",
+  "description": "When launched at a target, deal an additional 1d4 Lightning damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    }
@@ -11971,14 +11971,14 @@
   "name": "Thunderous Acuity",
   "type": null,
   "brief": null,
-  "description": "Whenever the wearer deals ⁠Thunder damage, they gain Arcane Acuity.",
+  "description": "Whenever the wearer deals Thunder damage, they gain Arcane Acuity.",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    },
@@ -11996,24 +11996,24 @@
   "name": "Thunderous Conversion",
   "type": null,
   "brief": null,
-  "description": "When the wearer deals ⁠Thunder, ⁠Lightning, or ⁠Radiant damage, inflict 2 turns of Reverberation upon the target(s).",
+  "description": "When the wearer deals Thunder, Lightning, or Radiant damage, inflict 2 turns of Reverberation upon the target(s).",
   "extra_description": null,
   "recharge": "Per attack",
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-lightning\">Lightning</span>",
+    "text": "Lightning",
     "page": "Lightning",
     "url": "https://bg3.wiki/wiki/Lightning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-radiant\">Radiant</span>",
+    "text": "Radiant",
     "page": "Radiant",
     "url": "https://bg3.wiki/wiki/Radiant"
    },
@@ -12051,7 +12051,7 @@
   "name": "Tippler's Rage",
   "type": null,
   "brief": null,
-  "description": "While you are Drunk, you have Advantage on Attack Rolls. You also create a blast with each melee hit landed, dealing 1d4⁠⁠Thunder damage to all creatures and objects in a radius of 3 m (10 ft), excluding yourself.",
+  "description": "While you are Drunk, you have Advantage on Attack Rolls. You also create a blast with each melee hit landed, dealing 1d4 Thunder damage to all creatures and objects in a radius of 3 m (10 ft), excluding yourself.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -12073,7 +12073,7 @@
     "url": "https://bg3.wiki/wiki/Attack_Roll"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    }
@@ -12131,7 +12131,7 @@
   "name": "Topple the Big Folk",
   "type": "weapon action",
   "brief": null,
-  "description": "Deal additional damage equal to your proficiency bonus. On a hit, Large, Huge, or Gargantuan creatures take an additional 2d6⁠⁠SlashingDamage Rider As Source damage and must succeed a Strength Saving Throw or fall Prone.",
+  "description": "Deal additional damage equal to your proficiency bonus. On a hit, Large, Huge, or Gargantuan creatures take an additional 2d6 SlashingDamage Rider As Source damage and must succeed a Strength Saving Throw or fall Prone.",
   "extra_description": null,
   "recharge": "short rest",
   "cost": "action",
@@ -12143,7 +12143,7 @@
     "url": "https://bg3.wiki/wiki/proficiency_bonus"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
@@ -12320,14 +12320,14 @@
   "name": "Umbral Attack",
   "type": null,
   "brief": null,
-  "description": "Your weapon attacks deal an additional 1d4⁠⁠Necrotic damage.",
+  "description": "Your weapon attacks deal an additional 1d4 Necrotic damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -12365,7 +12365,7 @@
   "name": "Undead Ward",
   "type": null,
   "brief": null,
-  "description": "Allied undead within 6 m (20 ft) are Resistant to ⁠Bludgeoning, ⁠Slashing, and ⁠Piercing damage.",
+  "description": "Allied undead within 6 m (20 ft) are Resistant to Bludgeoning, Slashing, and Piercing damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -12382,17 +12382,17 @@
     "url": "https://bg3.wiki/wiki/Resistant"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-bludgeoning\">Bludgeoning</span>",
+    "text": "Bludgeoning",
     "page": "Bludgeoning",
     "url": "https://bg3.wiki/wiki/Bludgeoning"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-slashing\">Slashing</span>",
+    "text": "Slashing",
     "page": "Slashing",
     "url": "https://bg3.wiki/wiki/Slashing"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -12590,14 +12590,14 @@
   "name": "Venomous Revenge",
   "type": null,
   "brief": null,
-  "description": "Whenever the wearer is healed, their weapon becomes coated in magic and deals an additional 1d6⁠⁠Poison damage.",
+  "description": "Whenever the wearer is healed, their weapon becomes coated in magic and deals an additional 1d6 Poison damage.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-poison\">Poison</span>",
+    "text": "Poison",
     "page": "Poison",
     "url": "https://bg3.wiki/wiki/Poison"
    }
@@ -12770,7 +12770,7 @@
   "name": "Watery Rejuvenation",
   "type": null,
   "brief": null,
-  "description": "If the wearer is standing in a Water surface at the start of their turn, they heal 1d4⁠⁠Hit Points.",
+  "description": "If the wearer is standing in a Water surface at the start of their turn, they heal 1d4 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -12782,7 +12782,7 @@
     "url": "https://bg3.wiki/wiki/Water_(surface)"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -12815,7 +12815,7 @@
   "name": "Weave Eater",
   "type": null,
   "brief": null,
-  "description": "Whenever the wearer succeeds a Saving Throw against a spell, they regain 1d6⁠⁠Hit Points.",
+  "description": "Whenever the wearer succeeds a Saving Throw against a spell, they regain 1d6 Hit Points.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -12827,7 +12827,7 @@
     "url": "https://bg3.wiki/wiki/Saving_Throw"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    }
@@ -12885,7 +12885,7 @@
   "name": "Willing Whip",
   "type": null,
   "brief": null,
-  "description": "Grants Resistance to ⁠Necrotic damage. Deals an additional 1d6⁠⁠NecroticDamage Rider As Source damage to nearby targets, including the wielder.",
+  "description": "Grants Resistance to Necrotic damage. Deals an additional 1d6 NecroticDamage Rider As Source damage to nearby targets, including the wielder.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -12897,7 +12897,7 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    }
@@ -12910,14 +12910,14 @@
   "name": "Winter's Clutches",
   "type": null,
   "brief": null,
-  "description": "When the wearer deals ⁠Cold damage, inflict 2 turns of Encrusted with Frost upon the target(s).",
+  "description": "When the wearer deals Cold damage, inflict 2 turns of Encrusted with Frost upon the target(s).",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-cold\">Cold</span>",
+    "text": "Cold",
     "page": "Cold",
     "url": "https://bg3.wiki/wiki/Cold"
    },
@@ -12965,14 +12965,14 @@
   "name": "Withering Barrier",
   "type": null,
   "brief": null,
-  "description": "When you deal ⁠Necrotic damage, you gain 1d6 temporary hit points. If a melee attack hits you while you still have temporary hit points, you deal 1d6⁠⁠Piercing to all creatures within 3 m (10 ft).",
+  "description": "When you deal Necrotic damage, you gain 1d6 temporary hit points. If a melee attack hits you while you still have temporary hit points, you deal 1d6 Piercing to all creatures within 3 m (10 ft).",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    },
@@ -12982,7 +12982,7 @@
     "url": "https://bg3.wiki/wiki/temporary_Hit_Points"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-piercing\">Piercing</span>",
+    "text": "Piercing",
     "page": "Piercing",
     "url": "https://bg3.wiki/wiki/Piercing"
    }
@@ -12995,7 +12995,7 @@
   "name": "Withering Cut",
   "type": null,
   "brief": null,
-  "description": "On a hit with a melee weapon, use a Reaction to deal additional ⁠Necrotic damage equal to your Proficiency Bonus.",
+  "description": "On a hit with a melee weapon, use a Reaction to deal additional Necrotic damage equal to your Proficiency Bonus.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
@@ -13007,7 +13007,7 @@
     "url": "https://bg3.wiki/wiki/Resources#Reaction"
    },
    {
-    "text": "<span class=\"bg3wiki-damage-type-necrotic\">Necrotic</span>",
+    "text": "Necrotic",
     "page": "Necrotic",
     "url": "https://bg3.wiki/wiki/Necrotic"
    },
@@ -13090,14 +13090,14 @@
   "name": "Yeenoghu's Gift",
   "type": null,
   "brief": null,
-  "description": "Hitting an enemy with this weapon heals the wielder for 1d6⁠⁠Hit Points - but they can go Mad if they don't continue hitting an enemy each turn.\nHealing through this item doesn't trigger other passives that react to healing.",
+  "description": "Hitting an enemy with this weapon heals the wielder for 1d6 Hit Points - but they can go Mad if they don't continue hitting an enemy each turn.\nHealing through this item doesn't trigger other passives that react to healing.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-healing\">Hit Points</span>",
+    "text": "Hit Points",
     "page": "Hit points",
     "url": "https://bg3.wiki/wiki/Hit_points"
    },
@@ -13135,14 +13135,14 @@
   "name": "Zephyr Connection",
   "type": null,
   "brief": null,
-  "description": "This weapon will return to your hand when thrown. You cannot be forced to drop the trident. When thrown, the weapon creates an explosion that deals 3d4⁠⁠ThunderDamage Rider As Source damage in a ⁠6 m (20 ft) blast centered on the target.",
+  "description": "This weapon will return to your hand when thrown. You cannot be forced to drop the trident. When thrown, the weapon creates an explosion that deals 3d4 ThunderDamage Rider As Source damage in a 6 m (20 ft) blast centered on the target.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
   "icon_url": null,
   "links": [
    {
-    "text": "<span class=\"bg3wiki-damage-type-thunder\">Thunder</span>",
+    "text": "Thunder",
     "page": "Thunder",
     "url": "https://bg3.wiki/wiki/Thunder"
    }
