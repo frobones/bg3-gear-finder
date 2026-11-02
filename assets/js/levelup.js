@@ -17,7 +17,8 @@ export function choiceValue(choice, abilities) {
     );
   }
   if (choice.abilities) parts.push(names(choice.abilities, abilities));
-  if (choice.text) parts.push(choice.abilities ? `<span class="muted">${esc(choice.text)}</span>` : esc(choice.text));
+  // Text beside spell names explains them, so it's set quieter than the names themselves.
+  if (choice.text) parts.push(parts.length ? `<span class="muted">${esc(choice.text)}</span>` : esc(choice.text));
   return parts.join(" ");
 }
 

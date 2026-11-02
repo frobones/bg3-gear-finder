@@ -45,6 +45,8 @@ test("choiceValue shows a replacement with both spells as pop-out triggers", () 
   assert.match(html, /data-ability="Sleep"/);
   assert.match(html, /→/);
   assert.match(html, /data-ability="Magic Missile"/);
+  const optional = choiceValue({ label: "Replace", replace: ["Sleep", "Magic Missile"], text: "only if wanted" }, abilities);
+  assert.match(optional, /<span class="muted">only if wanted<\/span>$/);
 });
 
 test("choiceValue escapes plain text and keeps names without wiki data as text", () => {
