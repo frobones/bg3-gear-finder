@@ -750,6 +750,10 @@ th[aria-sort="descending"] .sort-button::after {
   .detail {
     position: fixed;
     inset: 0;
+    /* Box alignment applies to fixed grid children: "start" would size the sheet to its content and
+       stop it scrolling, so stretch it to the screen. */
+    align-self: stretch;
+    justify-self: stretch;
     z-index: 10;
     max-height: none;
     border-radius: 0;

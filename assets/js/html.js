@@ -41,9 +41,10 @@ export function linkify(text, links = []) {
     .join("");
 }
 
-export function itemIcon(item, size) {
+/** Item icon; lists lazy-load theirs, single icons such as the detail panel's load right away. */
+export function itemIcon(item, size, lazy = true) {
   if (!item.icon_url) return `<span class="item-icon item-icon-empty" style="--size:${size}px"></span>`;
-  return `<img class="item-icon" src="${esc(item.icon_url)}" alt="" width="${size}" height="${size}" loading="lazy" decoding="async" />`;
+  return `<img class="item-icon" src="${esc(item.icon_url)}" alt="" width="${size}" height="${size}"${lazy ? ' loading="lazy"' : ""} decoding="async" />`;
 }
 
 /** The button that opens an item's details, shown wherever an item is named. */

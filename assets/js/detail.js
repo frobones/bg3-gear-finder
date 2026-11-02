@@ -61,7 +61,7 @@ export function renderDetail(panel, item) {
     <div class="detail-inner">
       <button type="button" class="close-button" data-close aria-label="Close item details">Close</button>
       <header class="detail-head">
-        ${itemIcon(item, 64)}
+        ${itemIcon(item, 64, false)}
         <div>
           <h2 class="detail-name ${rarityClass(item.rarity)}">${esc(item.label)}</h2>
           <p class="detail-kind">${esc(capitalize(item.rarity))} ${item.kind === "weapon" ? "weapon" : "equipment"}</p>

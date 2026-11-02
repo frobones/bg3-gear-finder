@@ -93,9 +93,15 @@ function wireEvents() {
 
   // After someone collapses an area from deep inside it, bring its header back into view rather than
   // leaving them far down the page. Bulk "Collapse all" isn't tracked, so it never scrolls.
+  // (Toggle events don't bubble, hence the capture listener.)
   document.addEventListener(
     "toggle",
     (event) => {
+      // Chromium never starts lazy images that were inside a closed <details>, so load an area's icons
+      // when it opens.
+      if (event.target.open) {
+        for (const img of event.target.querySelectorAll('img[loading="lazy"]')) img.loading = "eager";
+      }
       if (event.target !== collapsingZone) return;
       collapsingZone = null;
       if (!event.target.open && event.target.getBoundingClientRect().top < 0) {
