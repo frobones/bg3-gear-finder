@@ -36,11 +36,18 @@ function renderPlaces(acquisitions, byId, zone) {
     .join("");
 }
 
-function renderZone(zone, acquisitions, byId, open) {
+/** An expandable area. Its header sticks while open and a button at the end closes it, so long areas
+ *  can be collapsed from anywhere inside them. */
+function zoneShell(name, count, body, open) {
   return `<details class="zone"${open ? " open" : ""}>
-    <summary><span class="zone-name">${esc(zone)}</span><span class="zone-count">${acquisitions.length}</span></summary>
-    ${renderPlaces(acquisitions, byId, zone)}
+    <summary><span class="zone-name">${esc(name)}</span><span class="zone-count">${count}</span><span class="zone-toggle" aria-hidden="true"></span></summary>
+    ${body}
+    <button type="button" class="text-button zone-close" data-close-zone>Collapse ${esc(name)}</button>
   </details>`;
+}
+
+function renderZone(zone, acquisitions, byId, open) {
+  return zoneShell(zone, acquisitions.length, renderPlaces(acquisitions, byId, zone), open);
 }
 
 function renderStage({ id, marker, title, note, body }) {
@@ -103,15 +110,17 @@ export function renderJourney(container, data, items, filters) {
           marker: "?",
           title: "Not recorded",
           note: "bg3.wiki has no location for these: often basic or spell-summoned gear",
-          body: `<details class="zone"${open ? " open" : ""}>
-            <summary><span class="zone-name">Items without a location</span><span class="zone-count">${unrecorded.length}</span></summary>
-            <ul class="finds finds-compact">${unrecorded
+          body: zoneShell(
+            "Items without a location",
+            unrecorded.length,
+            `<ul class="finds finds-compact">${unrecorded
               .map(
                 (i) =>
                   `<li class="find ${rarityClass(i.rarity)}"><div class="find-item">${itemButton(i)}<span class="find-slot">${esc(i.type)}</span></div></li>`,
               )
-              .join("")}</ul>
-          </details>`,
+              .join("")}</ul>`,
+            open,
+          ),
         }),
       );
     }

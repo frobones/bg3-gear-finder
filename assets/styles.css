@@ -443,6 +443,34 @@ img.item-icon {
   color: var(--brass-strong);
 }
 
+/* While open, the header rides along at the top so the area can be closed from anywhere inside it. */
+.zone[open] > summary {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--page);
+  border-bottom: 1px solid var(--line);
+}
+
+.zone-toggle {
+  margin-left: auto;
+  color: var(--link);
+  font-size: var(--step--1);
+}
+
+.zone[open] > summary .zone-toggle::after {
+  content: "Collapse ▴";
+}
+
+.zone:not([open]) > summary .zone-toggle::after {
+  content: "Expand ▾";
+}
+
+.zone-close {
+  display: block;
+  margin: 0 0 1rem;
+}
+
 .zone-count {
   color: var(--muted);
   font-size: var(--step--1);

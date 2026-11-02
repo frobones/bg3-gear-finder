@@ -18,6 +18,7 @@ const resultCount = document.getElementById("result-count");
 let data = null;
 let sort = { key: "when", descending: false };
 let lastOpener = null;
+let collapsingZone = null;
 
 const currentView = () => (VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "journey");
 
@@ -78,8 +79,31 @@ function wireEvents() {
     const zones = event.target.closest("[data-zones]");
     if (zones) {
       for (const zone of view.querySelectorAll("details.zone")) zone.open = zones.dataset.zones === "open";
+      return;
     }
+    const closeZone = event.target.closest("[data-close-zone]");
+    if (closeZone) {
+      collapsingZone = closeZone.closest("details.zone");
+      collapsingZone.open = false;
+      return;
+    }
+    const summary = event.target.closest("details.zone > summary");
+    if (summary) collapsingZone = summary.parentElement;
   });
+
+  // After someone collapses an area from deep inside it, bring its header back into view rather than
+  // leaving them far down the page. Bulk "Collapse all" isn't tracked, so it never scrolls.
+  document.addEventListener(
+    "toggle",
+    (event) => {
+      if (event.target !== collapsingZone) return;
+      collapsingZone = null;
+      if (!event.target.open && event.target.getBoundingClientRect().top < 0) {
+        event.target.scrollIntoView({ block: "start" });
+      }
+    },
+    true,
+  );
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !detail.hidden) closeDetail();
