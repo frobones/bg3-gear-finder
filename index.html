@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BG3 gear finder</title>
+    <meta name="description" content="Every piece of Baldur's Gate 3 gear on bg3.wiki, and where along the journey you can pick it up." />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <h1>Baldur's Gate 3 gear finder</h1>
+      <p class="lede">Every piece of gear on bg3.wiki, and where along the journey you can pick it up.</p>
+    </header>
+
+    <form class="controls" id="controls" role="search" aria-label="Filter gear">
+      <label class="field field-search">
+        <span class="field-label">Search</span>
+        <input type="search" name="query" placeholder="Item, merchant, place…" autocomplete="off" />
+      </label>
+      <label class="field">
+        <span class="field-label">Slot</span>
+        <select name="slot"><option value="">Any slot</option></select>
+      </label>
+      <label class="field">
+        <span class="field-label">Act</span>
+        <select name="act"><option value="">Any act</option></select>
+      </label>
+      <fieldset class="field rarity-picker">
+        <legend class="field-label">Rarity</legend>
+        <div class="rarity-chips" id="rarity-chips"></div>
+      </fieldset>
+      <label class="toggle">
+        <input type="checkbox" name="knownOnly" />
+        <span>Only items with a known place</span>
+      </label>
+      <button type="reset" class="text-button">Clear filters</button>
+    </form>
+
+    <nav class="view-switch" aria-label="View">
+      <a href="#journey" data-view="journey">Journey</a>
+      <a href="#items" data-view="items">All items</a>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+    </nav>
+
+    <div class="workspace">
+      <main id="view" tabindex="-1">
+        <p class="status">Loading gear…</p>
+      </main>
+      <aside class="detail" id="detail" aria-label="Item details" hidden></aside>
+    </div>
+
+    <footer class="colophon" id="colophon"></footer>
+  </body>
+</html>
