@@ -289,6 +289,13 @@
   {"item": "Adamantine Shield", "priority": "core", "note": "Her first choice for Mithral: +2 AC, crit immunity, and melee attackers that miss become Reeling."},
   {"item": "Adamantine Scale Mail", "priority": "optional", "note": "Great interim armour, but only if there's Mithral left after the shield."},
   {"item": "Dark Justiciar Mail", "priority": "optional", "note": "Fun hit-back effect, but survival comes first."},
+  {"item": "Breastplate +1", "priority": "optional", "suggested": true, "note": "Act 1 armour if the Mithral goes to the shield: AC 15, no Stealth Disadvantage."},
+  {"item": "The Jolty Vest", "priority": "optional", "suggested": true, "note": "With Lightning Charges from the Speedy Lightfeet, attackers must save or be Shocked."},
+  {"item": "Gloves of Belligerent Skies", "priority": "high", "suggested": true, "note": "From level 5, Booming Blade's thunder damage inflicts Reverberation."},
+  {"item": "The Baneful", "priority": "high", "suggested": true, "note": "Her Act 1 weapon: finesse, +1 to hit and damage, and can Bane on a hit."},
+  {"item": "Phalar Aluve", "priority": "optional", "suggested": true, "note": "Finesse longsword. Freeing it needs a DC 15 Strength or Religion check."},
+  {"item": "Sussur Dagger", "priority": "optional", "suggested": true, "note": "Silences a caster it hits if they fail a Constitution save."},
+  {"item": "Yuan-Ti Scale Mail", "priority": "high", "suggested": true, "note": "Act 2 armour: her full DEX to AC (19), no Stealth Disadvantage, +1 initiative."},
   {"item": "Bow of the Banshee", "act": "one", "priority": "high", "note": "While held, its +1d4 against Frightened targets applies to her melee attacks too."},
   {"item": "Holy Lance Helm", "priority": "high", "note": "Enemies that miss her take radiant damage. Pairs with the Adamantine Shield."},
   {"item": "Periapt of Wound Closure", "priority": "high", "note": "Healing she receives is maximised. Great with potions thrown by Mage Hand."},
@@ -325,22 +332,65 @@
   {"item": "Rhapsody", "priority": "yield", "claim": "Druid or Warlock."}
  ],
 
- "loadout": {
-  "slots": [
-   {"slot": "Head", "items": ["Mask of Soul Perception"], "alternates": ["Holy Lance Helm"]},
-   {"slot": "Cloak", "items": ["Cloak of Protection"], "alternates": ["Fleshmelter Cloak"]},
-   {"slot": "Chest", "items": ["Helldusk Armour"], "alternates": ["Armour of Agility"]},
-   {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power"], "note": "Mental Fatigue or Arcane Acuity: swap by fight."},
-   {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": ["Boots of Persistence", "Helldusk Boots"]},
-   {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure"]},
-   {"slot": "Ring", "items": ["Ring of Mental Inhibition"], "alternates": []},
-   {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Shadow-Cloaked Ring", "Ring of Protection"]},
-   {"slot": "Main hand", "abilities": ["Shadow Blade"], "note": "Cast with a 3rd-level slot for 3d8 psychic."},
-   {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield"]},
-   {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
-  ],
-  "armour_class": "Helldusk Armour 21 + Viconia's Walking Fortress 3 = 24 AC. Cloak of Protection makes 25, and Ring of Protection 26. Shield adds +5 when needed. Hits that land lose up to 10 to the Arcane Ward and 3 more to Helldusk."
- },
+ "loadouts": [
+  {
+   "act": "one",
+   "label": "Act 1",
+   "intro": "From level 4, once Moderately Armoured gives her medium armour and shields. Take the theft pieces off after shopping.",
+   "slots": [
+    {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": ["Mask of the Shapeshifter"], "note": "Use the Mask for a disguise, then put the helmet back on."},
+    {"slot": "Cloak", "note": "Nothing worth the slot in Act 1. Cloak of Protection arrives early in Act 2."},
+    {"slot": "Chest", "items": ["Adamantine Scale Mail"], "alternates": ["Breastplate +1", "The Jolty Vest", "The Oak Father's Embrace"], "note": "Only if there's Mithral left after the shield; it also gives Disadvantage on Stealth. Breastplate +1 is the no-Mithral pick, the Jolty Vest pairs with Lightning Charges, and Oak Father's suits undead areas."},
+    {"slot": "Gloves", "items": ["Gloves of Belligerent Skies"], "alternates": ["Gloves of Thievery"], "note": "From level 5, Booming Blade's thunder damage inflicts Reverberation. Swap to Thievery for stealing."},
+    {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": ["Vital Conduit Boots"]},
+    {"slot": "Amulet", "items": ["Periapt of Wound Closure"], "alternates": ["Silver Pendant"], "note": "Silver Pendant gives Guidance when the Druid isn't nearby."},
+    {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring"], "note": "Swap to the Boon ring while disguised."},
+    {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Smuggler's Ring"], "note": "Swap to Smuggler's for stealing, locks and traps."},
+    {"slot": "Main hand", "items": ["The Baneful"], "alternates": ["Phalar Aluve", "Sussur Dagger"], "note": "Finesse, so Sneak Attack works. The Knife of the Undermountain King goes to the Ranger or Warlock. Phalar Aluve needs a DC 15 Strength or Religion check to pull from its stone."},
+    {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": []},
+    {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
+   ],
+   "armour_class": "Adamantine Scale Mail 18 + Adamantine Shield 2 = 20 AC. With Breastplate +1 instead, 19. Shield adds +5 when needed."
+  },
+  {
+   "act": "two",
+   "label": "Act 2",
+   "intro": "Shadow Blade arrives at level 8. Until then, keep the Act 1 weapon.",
+   "slots": [
+    {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": [], "note": "Still her default helmet through Act 2."},
+    {"slot": "Cloak", "items": ["Cloak of Protection"], "alternates": ["Fleshmelter Cloak"]},
+    {"slot": "Chest", "items": ["Yuan-Ti Scale Mail"], "alternates": ["Adamantine Scale Mail", "Breastplate +1"], "note": "Adds her full DEX to AC (19 at DEX 18), no Stealth Disadvantage, and +1 initiative. Adamantine Scale Mail trades 1 AC for crit immunity and 1 less damage per hit."},
+    {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power"], "note": "Braindrain comes at the very end of the act. Until then, wear Battlemage's Power."},
+    {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": ["Vital Conduit Boots"]},
+    {"slot": "Amulet", "items": ["Periapt of Wound Closure"], "alternates": ["Silver Pendant"]},
+    {"slot": "Ring", "items": ["Ring of Mental Inhibition"], "alternates": []},
+    {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Shadow-Cloaked Ring", "Ring of Arcane Synergy"]},
+    {"slot": "Main hand", "abilities": ["Shadow Blade"], "note": "From level 9, cast it with a 3rd-level slot for 3d8."},
+    {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": ["Ketheric's Shield"], "note": "Ketheric's Shield if the Druid passes on it."},
+    {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
+   ],
+   "armour_class": "Yuan-Ti Scale Mail 19 + shield 2 + Cloak of Protection 1 = 22 AC. Shield adds +5 when needed, and the Arcane Ward soaks hits that land."
+  },
+  {
+   "act": "three",
+   "label": "Act 3",
+   "intro": "The survival-first endgame: high AC first, then saves, Arcane Ward, flat damage reduction and reactions.",
+   "slots": [
+    {"slot": "Head", "items": ["Mask of Soul Perception"], "alternates": ["Holy Lance Helm"]},
+    {"slot": "Cloak", "items": ["Cloak of Protection"], "alternates": ["Fleshmelter Cloak"]},
+    {"slot": "Chest", "items": ["Helldusk Armour"], "alternates": ["Armour of Agility"]},
+    {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power"], "note": "Mental Fatigue or Arcane Acuity: swap by fight."},
+    {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": ["Boots of Persistence", "Helldusk Boots"]},
+    {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure"]},
+    {"slot": "Ring", "items": ["Ring of Mental Inhibition"], "alternates": []},
+    {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Shadow-Cloaked Ring", "Ring of Protection"]},
+    {"slot": "Main hand", "abilities": ["Shadow Blade"], "note": "Cast with a 3rd-level slot for 3d8 psychic."},
+    {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield"]},
+    {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
+   ],
+   "armour_class": "Helldusk Armour 21 + Viconia's Walking Fortress 3 = 24 AC. Cloak of Protection makes 25, and Ring of Protection 26. Shield adds +5 when needed. Hits that land lose up to 10 to the Arcane Ward and 3 more to Helldusk."
+  }
+ ],
 
  "playbook": {
   "turn": [

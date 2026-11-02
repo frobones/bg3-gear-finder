@@ -20,6 +20,7 @@ export function parsePartyRoute(hash) {
 const progressById = new Map();
 const viewingById = new Map();
 let hideGot = false;
+let loadoutAct = null;
 
 function progressFor(profileId) {
   if (!progressById.has(profileId)) progressById.set(profileId, loadProgress(profileId));
@@ -99,7 +100,7 @@ function tabNav(profile, tab) {
 
 function tabBody(profile, data, tab) {
   const progress = progressFor(profile.id);
-  if (tab === "gear") return renderGearTab(profile, data, progress, hideGot);
+  if (tab === "gear") return renderGearTab(profile, data, progress, hideGot, loadoutAct);
   if (tab === "scrolls") return renderScrollsTab(profile, data.abilities, progress);
   if (tab === "illithid") return renderIllithidTab(profile, data.abilities, progress);
   if (tab === "playbook") return renderPlaybookTab(profile);
@@ -144,6 +145,12 @@ export function initParty(view, rerender) {
   view.addEventListener("click", (event) => {
     const step = event.target.closest("[data-level-view]");
     if (step) return showLevel(Number(step.dataset.levelView));
+    const act = event.target.closest("[data-loadout-act]");
+    if (act) {
+      loadoutAct = act.dataset.loadoutAct;
+      rerender();
+      return view.querySelector(`[data-loadout-act="${CSS.escape(loadoutAct)}"]`)?.focus({ preventScroll: true });
+    }
     const reached = event.target.closest("[data-level-reached]");
     if (reached) {
       setReached(Number(reached.dataset.levelReached));

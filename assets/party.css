@@ -562,6 +562,49 @@
   padding-left: 2rem;
 }
 
+/* Act picker for the end-of-act loadouts: one joined row of buttons, the chosen act filled in. */
+.segments {
+  display: inline-flex;
+  margin: 0.25rem 0 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.segment {
+  min-height: 2.75rem;
+  min-width: 5.5rem;
+  padding: 0 1rem;
+  background: var(--surface);
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.segment + .segment {
+  border-left: 1px solid var(--line);
+}
+
+.segment[aria-pressed="true"] {
+  background: var(--brass);
+  color: var(--page);
+}
+
+.segment:focus-visible {
+  outline-offset: -3px;
+}
+
+.tag-suggested {
+  border-style: dashed;
+  font-weight: 400;
+}
+
+.loadout-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .loadout-table {
   width: 100%;
   border-collapse: collapse;
@@ -587,8 +630,8 @@
   white-space: nowrap;
 }
 
-.loadout-table td .item-link {
-  display: flex;
+.loadout-table .item-link {
+  min-height: 2.25rem;
 }
 
 .loadout-table p {
@@ -709,5 +752,37 @@
   .primary-button {
     order: -1;
     flex: 1 1 100%;
+  }
+
+  /* Three columns don't fit a phone: stack each row as slot, default, then labelled alternates. */
+  .loadout-table thead {
+    display: none;
+  }
+
+  .loadout-table,
+  .loadout-table tbody,
+  .loadout-table tr,
+  .loadout-table th,
+  .loadout-table td {
+    display: block;
+  }
+
+  .loadout-table tr {
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .loadout-table tbody th,
+  .loadout-table td {
+    padding: 0;
+    border-top: 0;
+  }
+
+  .loadout-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--muted);
+    font-size: var(--step--1);
   }
 }

@@ -5,7 +5,7 @@ import { test } from "node:test";
 import { abilityFacts, abilityName } from "../assets/js/abilities.js";
 import { wantedByItem } from "../assets/js/data.js";
 import { partyPlans } from "../assets/js/detail.js";
-import { planGroups } from "../assets/js/gearplan.js";
+import { planGroups, renderGearTab } from "../assets/js/gearplan.js";
 import { levelLearning } from "../assets/js/guides.js";
 import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
 import { parsePartyRoute } from "../assets/js/party.js";
@@ -118,4 +118,27 @@ test("wantedByItem and partyPlans show who plans around an item", () => {
   assert.match(html, /Party decision/);
   assert.match(html, /Who gets it: Druid first\./);
   assert.equal(partyPlans([]), "");
+});
+
+test("renderGearTab shows the chosen act's loadout and tags only items picked outside the guide", () => {
+  const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
+  const data = { byId: new Map(["Guide Mail", "Wiki Vest", "Late Helm"].map((id) => [id, item(id)])), abilities };
+  const profile = {
+    gear: [
+      { item: "Guide Mail", priority: "core" },
+      { item: "Wiki Vest", priority: "optional", suggested: true },
+    ],
+    loadouts: [
+      { act: "one", label: "Act 1", intro: "", armour_class: "", slots: [{ slot: "Chest", items: ["Guide Mail"], alternates: ["Wiki Vest"] }] },
+      { act: "three", label: "Act 3", intro: "", armour_class: "", slots: [{ slot: "Head", items: ["Late Helm"], alternates: [] }] },
+    ],
+  };
+  const actOne = renderGearTab(profile, data, emptyProgress(), false, null);
+  assert.match(actOne, /data-loadout-act="one" aria-pressed="true"/);
+  const table = actOne.slice(actOne.indexOf("loadout-table"));
+  assert.equal(table.match(/Not in the guide/g)?.length, 1);
+  assert.match(table, /data-item="Wiki Vest"><[^]*?<\/button><span class="tag tag-suggested">/);
+  const actThree = renderGearTab(profile, data, emptyProgress(), false, "three");
+  assert.match(actThree, /data-loadout-act="three" aria-pressed="true"/);
+  assert.match(actThree.slice(actThree.indexOf("loadout-table")), /Late Helm/);
 });

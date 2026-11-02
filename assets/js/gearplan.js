@@ -40,7 +40,7 @@ function planRow({ entry, item }, got) {
       <input type="checkbox" class="plan-check" data-progress="got" value="${esc(id)}"${got ? " checked" : ""}
         aria-label="Picked up ${esc(label)}" />
       <div class="plan-body">
-        <div class="plan-title">${name}${priorityTag(entry.priority)}</div>
+        <div class="plan-title">${name}${priorityTag(entry.priority)}${entry.suggested ? SUGGESTED_TAG : ""}</div>
         ${entry.note ? `<p class="plan-note">${esc(entry.note)}</p>` : ""}
         ${entry.claim ? `<p class="plan-claim">Who gets it: ${esc(entry.claim)}</p>` : ""}
         <p class="plan-where">${where(item, entry)}</p>
@@ -48,35 +48,55 @@ function planRow({ entry, item }, got) {
     </li>`;
 }
 
-function loadout(profile, byId, abilities) {
+const SUGGESTED_TAG = `<span class="tag tag-suggested">Not in the guide</span>`;
+
+function loadoutTable(loadout, byId, abilities, suggested) {
   const cell = (ids) =>
     ids
-      .map((id) => byId.get(id))
-      .map((item) => itemButton(item, 24))
+      .map((id) => `<div class="loadout-item">${itemButton(byId.get(id), 24)}${suggested.has(id) ? SUGGESTED_TAG : ""}</div>`)
       .join("");
-  const rows = profile.loadout.slots
+  const rows = loadout.slots
     .map(
       (slot) => `
       <tr>
         <th scope="row">${esc(slot.slot)}</th>
         <td>${slot.items ? cell(slot.items) : ""}${slot.abilities ? slot.abilities.map((n) => abilityName(n, abilities)).join(", ") : ""}
+          ${!slot.items && !slot.abilities ? `<span class="muted">No pick yet</span>` : ""}
           ${slot.note ? `<p class="muted small">${esc(slot.note)}</p>` : ""}</td>
-        <td class="alternates">${slot.alternates?.length ? cell(slot.alternates) : `<span class="muted">None</span>`}</td>
+        <td class="alternates" data-label="Alternates">${slot.alternates?.length ? cell(slot.alternates) : `<span class="muted">None</span>`}</td>
       </tr>`,
     )
     .join("");
   return `
-    <h3>Endgame loadout</h3>
+    <p class="prose">${esc(loadout.intro)}</p>
     <div class="table-wrap">
       <table class="loadout-table">
+        <caption class="visually-hidden">End of ${esc(loadout.label)} loadout</caption>
         <thead><tr><th scope="col">Slot</th><th scope="col">Default</th><th scope="col">Alternates</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
     </div>
-    <p class="prose">${esc(profile.loadout.armour_class)}</p>`;
+    <p class="prose">${esc(loadout.armour_class)}</p>`;
 }
 
-export function renderGearTab(profile, data, progress, hideGot) {
+/** Loadouts for the end of each act, one shown at a time behind act buttons. */
+function loadouts(profile, byId, abilities, act) {
+  const shown = profile.loadouts.find((l) => l.act === act) ?? profile.loadouts[0];
+  // Items the profile's gear plan marks as picked from the wiki rather than the build guide.
+  const suggested = new Set(profile.gear.filter((e) => e.suggested).map((e) => e.item));
+  const buttons = profile.loadouts
+    .map(
+      (l) =>
+        `<button type="button" class="segment" data-loadout-act="${esc(l.act)}" aria-pressed="${l === shown}">${esc(l.label)}</button>`,
+    )
+    .join("");
+  return `
+    <h3 id="loadout-heading">End-of-act loadout</h3>
+    <div class="segments" role="group" aria-labelledby="loadout-heading">${buttons}</div>
+    ${loadoutTable(shown, byId, abilities, suggested)}`;
+}
+
+export function renderGearTab(profile, data, progress, hideGot, loadoutAct) {
   const got = new Set(progress.got);
   const groups = planGroups(profile.gear, data.byId);
   const total = groups.reduce((n, [, rows]) => n + rows.length, 0);
@@ -113,5 +133,5 @@ export function renderGearTab(profile, data, progress, hideGot) {
     </div>
     ${sections}
     ${leave}
-    ${loadout(profile, data.byId, data.abilities)}`;
+    ${loadouts(profile, data.byId, data.abilities, loadoutAct)}`;
 }

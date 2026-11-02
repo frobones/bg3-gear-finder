@@ -19,7 +19,9 @@ where and when you can pick it up.
   - **Level up**: what to pick at the next level, in the order the game asks,
     then which Wizard spells to prepare and which scrolls to scribe.
   - **Gear plan**: the items the character wants, in play order, with
-    checkboxes for what's been picked up, plus the endgame loadout.
+    checkboxes for what's been picked up, plus a loadout for the end of
+    each act with alternates. Picks that come from the wiki data rather
+    than the character's build guide are tagged "Not in the guide".
   - **Scrolls**: which spell scrolls to scribe, hold back, or skip.
   - **Illithid**: suggested illithid powers, in order.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
