@@ -3611,6 +3611,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Disarming_Strike"
  },
  {
+  "id": "Disguise Self",
+  "kind": "spell",
+  "name": "Disguise Self",
+  "type": null,
+  "brief": null,
+  "description": "Magically change all aspects of your appearance.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/22/Disguise_Self_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Disguise_Self",
+  "spell_level": 1,
+  "school": "Illusion",
+  "concentration": null,
+  "ritual": true,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Displacement",
   "kind": "passive",
   "name": "Displacement",
@@ -10805,20 +10825,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Sanctified_Weapon"
  },
  {
-  "id": "Savage Attacker",
-  "kind": "passive",
-  "name": "Savage Attacker",
-  "type": null,
-  "brief": null,
-  "description": "When making melee weapon attacks, you roll your damage dice twice and use the highest result.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/2/24/Savage_Attacker_Icon.webp",
-  "links": [],
-  "wiki_url": "https://bg3.wiki/wiki/Savage_Attacker"
- },
- {
   "id": "Saviour's Allure",
   "kind": "passive",
   "name": "Saviour's Allure",
@@ -11969,32 +11975,6 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Slay_the_Wicked_(Slashing)"
- },
- {
-  "id": "Sleep",
-  "kind": "spell",
-  "name": "Sleep",
-  "type": null,
-  "brief": null,
-  "description": "Put creatures into a magical slumber. Select targets up to a combined 24 Hit Points.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/9/9b/Sleep_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Hit Points",
-    "page": "Hit Points",
-    "url": "https://bg3.wiki/wiki/Hit_Points"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Sleep",
-  "spell_level": 1,
-  "school": "Enchantment",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "ranged"
  },
  {
   "id": "Slippery Slapsticky",
