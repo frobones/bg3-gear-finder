@@ -594,11 +594,6 @@
   outline-offset: -3px;
 }
 
-.tag-suggested {
-  border-style: dashed;
-  font-weight: 400;
-}
-
 .loadout-item {
   display: flex;
   flex-wrap: wrap;

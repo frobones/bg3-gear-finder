@@ -120,13 +120,13 @@ test("wantedByItem and partyPlans show who plans around an item", () => {
   assert.equal(partyPlans([]), "");
 });
 
-test("renderGearTab shows the chosen act's loadout and tags only items picked outside the guide", () => {
+test("renderGearTab shows the chosen act's loadout with its default and alternates", () => {
   const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
   const data = { byId: new Map(["Guide Mail", "Wiki Vest", "Late Helm"].map((id) => [id, item(id)])), abilities };
   const profile = {
     gear: [
       { item: "Guide Mail", priority: "core" },
-      { item: "Wiki Vest", priority: "optional", suggested: true },
+      { item: "Wiki Vest", priority: "optional" },
     ],
     loadouts: [
       { act: "one", label: "Act 1", intro: "", armour_class: "", slots: [{ slot: "Chest", items: ["Guide Mail"], alternates: ["Wiki Vest"] }] },
@@ -136,8 +136,8 @@ test("renderGearTab shows the chosen act's loadout and tags only items picked ou
   const actOne = renderGearTab(profile, data, emptyProgress(), false, null);
   assert.match(actOne, /data-loadout-act="one" aria-pressed="true"/);
   const table = actOne.slice(actOne.indexOf("loadout-table"));
-  assert.equal(table.match(/Not in the guide/g)?.length, 1);
-  assert.match(table, /data-item="Wiki Vest"><[^]*?<\/button><span class="tag tag-suggested">/);
+  assert.match(table, /data-item="Guide Mail"[^]*data-label="Alternates"[^]*data-item="Wiki Vest"/);
+  assert.doesNotMatch(table, /Late Helm/);
   const actThree = renderGearTab(profile, data, emptyProgress(), false, "three");
   assert.match(actThree, /data-loadout-act="three" aria-pressed="true"/);
   assert.match(actThree.slice(actThree.indexOf("loadout-table")), /Late Helm/);

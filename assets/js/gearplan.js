@@ -24,7 +24,7 @@ function where(item, entry) {
   const first = item ? (item.earliest ?? item.acquisitions[0]) : null;
   if (!first) {
     if (item?.where_to_find) return linkify(item.where_to_find, item.where_to_find_links);
-    return entry.where ? `From the build guide: ${esc(entry.where)}` : "bg3.wiki doesn't record where to find this.";
+    return entry.where ? esc(entry.where) : "bg3.wiki doesn't record where to find this.";
   }
   const place = first.act ? `${[ACT_LABELS[first.act], ...(first.path ?? []).slice(-2)].join(" › ")}: ` : "";
   const more = item.acquisitions.length > 1 ? ` (${item.acquisitions.length} ways to get it)` : "";
@@ -40,7 +40,7 @@ function planRow({ entry, item }, got) {
       <input type="checkbox" class="plan-check" data-progress="got" value="${esc(id)}"${got ? " checked" : ""}
         aria-label="Picked up ${esc(label)}" />
       <div class="plan-body">
-        <div class="plan-title">${name}${priorityTag(entry.priority)}${entry.suggested ? SUGGESTED_TAG : ""}</div>
+        <div class="plan-title">${name}${priorityTag(entry.priority)}</div>
         ${entry.note ? `<p class="plan-note">${esc(entry.note)}</p>` : ""}
         ${entry.claim ? `<p class="plan-claim">Who gets it: ${esc(entry.claim)}</p>` : ""}
         <p class="plan-where">${where(item, entry)}</p>
@@ -48,12 +48,10 @@ function planRow({ entry, item }, got) {
     </li>`;
 }
 
-const SUGGESTED_TAG = `<span class="tag tag-suggested">Not in the guide</span>`;
-
-function loadoutTable(loadout, byId, abilities, suggested) {
+function loadoutTable(loadout, byId, abilities) {
   const cell = (ids) =>
     ids
-      .map((id) => `<div class="loadout-item">${itemButton(byId.get(id), 24)}${suggested.has(id) ? SUGGESTED_TAG : ""}</div>`)
+      .map((id) => `<div class="loadout-item">${itemButton(byId.get(id), 24)}</div>`)
       .join("");
   const rows = loadout.slots
     .map(
@@ -82,8 +80,6 @@ function loadoutTable(loadout, byId, abilities, suggested) {
 /** Loadouts for the end of each act, one shown at a time behind act buttons. */
 function loadouts(profile, byId, abilities, act) {
   const shown = profile.loadouts.find((l) => l.act === act) ?? profile.loadouts[0];
-  // Items the profile's gear plan marks as picked from the wiki rather than the build guide.
-  const suggested = new Set(profile.gear.filter((e) => e.suggested).map((e) => e.item));
   const buttons = profile.loadouts
     .map(
       (l) =>
@@ -93,7 +89,7 @@ function loadouts(profile, byId, abilities, act) {
   return `
     <h3 id="loadout-heading">End-of-act loadout</h3>
     <div class="segments" role="group" aria-labelledby="loadout-heading">${buttons}</div>
-    ${loadoutTable(shown, byId, abilities, suggested)}`;
+    ${loadoutTable(shown, byId, abilities)}`;
 }
 
 export function renderGearTab(profile, data, progress, hideGot, loadoutAct) {
