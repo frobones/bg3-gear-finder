@@ -155,7 +155,9 @@ class WikiClient:
         query = urllib.parse.urlencode(
             {"tables": table, "fields": ",".join(fields), "limit": ROW_LIMIT, "format": "json"}
         )
-        rows = self.get_json(f"{table}.rows", f"{EXPORT}&{query}")
+        # The field list is part of the cache name, so asking for different fields never reuses a narrower export.
+        digest = hashlib.sha256(",".join(fields).encode()).hexdigest()[:8]
+        rows = self.get_json(f"{table}.rows.{digest}", f"{EXPORT}&{query}")
         if len(rows) >= ROW_LIMIT:
             raise RuntimeError(f"{table}: export hit the {ROW_LIMIT}-row limit; add paging")
         return [{key.replace(" ", "_"): value for key, value in row.items()} for row in rows]
