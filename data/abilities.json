@@ -715,6 +715,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Arcane_Radiance"
  },
  {
+  "id": "Arcane Recovery",
+  "kind": "spell",
+  "name": "Arcane Recovery",
+  "type": null,
+  "brief": null,
+  "description": "Replenish Spell Slots while out of combat. You cannot restore spell slots above 5th level.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/dc/Arcane_Recovery_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Spell Slots",
+    "page": "Spells",
+    "url": "https://bg3.wiki/wiki/Spells#Spell_Slots"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Arcane_Recovery",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Arcane Vampirism",
   "kind": "passive",
   "name": "Arcane Vampirism",
@@ -793,6 +819,20 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Arcane_Vivaciousness"
+ },
+ {
+  "id": "Arcane Ward",
+  "kind": "passive",
+  "name": "Arcane Ward",
+  "type": null,
+  "brief": null,
+  "description": "The residual magic of your spells forms a ward around you that protects you from harm.",
+  "extra_description": "Each time you cast an Abjuration spell, the intensity of the ward increases by the amount of the spell's Level, up to a maximum of 2x your Wizard level.\nEach time you take damage, the ward blocks an amount of damage equal to its intensity, and its intensity decreases by 1.\nAfter each Long Rest, the ward's intensity resets, and becomes the same as your Wizard level.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/79/Arcane_Ward_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Arcane_Ward"
  },
  {
   "id": "Arming Enhancement",
@@ -898,6 +938,31 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Authority"
+ },
+ {
+  "id": "Awakened",
+  "kind": "passive",
+  "name": "Awakened",
+  "type": null,
+  "brief": null,
+  "description": "You can use all of your Illithid Powers as a Bonus Action. Your resistance to the zaith'isk in the githyanki infirmary awakened this power.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/a/af/Awakened_Icon.webp",
+  "links": [
+   {
+    "text": "Illithid Powers",
+    "page": "Illithid Powers",
+    "url": "https://bg3.wiki/wiki/Illithid_Powers"
+   },
+   {
+    "text": "Bonus Action",
+    "page": "Bonus Action",
+    "url": "https://bg3.wiki/wiki/Bonus_Action"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Awakened"
  },
  {
   "id": "Backbreaker",
@@ -1105,6 +1170,68 @@
   "wiki_url": "https://bg3.wiki/wiki/Become_the_Bulwark"
  },
  {
+  "id": "Black Hole",
+  "kind": "spell",
+  "name": "Black Hole",
+  "type": null,
+  "brief": null,
+  "description": "Create a point of intense gravity that pulls in all nearby enemies and possibly Slows them.",
+  "extra_description": "Five more black holes can be summoned after this spell's initial casting. Afterwards, you must Short Rest before casting it again.",
+  "recharge": "Short rest",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/42/Black_Hole_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Slows",
+    "page": "Slowed (Condition)",
+    "url": "https://bg3.wiki/wiki/Slowed_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Black_Hole",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
+  "id": "Blade Ward",
+  "kind": "spell",
+  "name": "Blade Ward",
+  "type": null,
+  "brief": null,
+  "description": "Take only half the damage from Bludgeoning, Piercing, and Slashing attacks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/04/Blade_Ward_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Bludgeoning",
+    "page": "Bludgeoning",
+    "url": "https://bg3.wiki/wiki/Bludgeoning"
+   },
+   {
+    "text": "Piercing",
+    "page": "Piercing",
+    "url": "https://bg3.wiki/wiki/Piercing"
+   },
+   {
+    "text": "Slashing",
+    "page": "Slashing",
+    "url": "https://bg3.wiki/wiki/Slashing"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Blade_Ward",
+  "spell_level": 0,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Blessed Mercy",
   "kind": "passive",
   "name": "Blessed Mercy",
@@ -1193,6 +1320,47 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Blinding_Shot"
+ },
+ {
+  "id": "Blindness",
+  "kind": "spell",
+  "name": "Blindness",
+  "type": null,
+  "brief": null,
+  "description": "Blind a creature. Attack Rolls against it have Advantage and the foe attacks with Disadvantage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/13/Blindness_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Blind",
+    "page": "Blindness (Condition)",
+    "url": "https://bg3.wiki/wiki/Blindness_(Condition)"
+   },
+   {
+    "text": "Attack Roll",
+    "page": "Attack Roll",
+    "url": "https://bg3.wiki/wiki/Attack_Roll"
+   },
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Blindness",
+  "spell_level": 2,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Blink-of-an-eye Bolt",
@@ -1339,6 +1507,37 @@
   "wiki_url": "https://bg3.wiki/wiki/Bloodrender"
  },
  {
+  "id": "Blur",
+  "kind": "spell",
+  "name": "Blur",
+  "type": null,
+  "brief": null,
+  "description": "Attackers have Disadvantage on Attack rolls against you.",
+  "extra_description": "Doesn't affect creatures that don't rely on sight or that can see through illusions.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/d4/Blur_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Attack roll",
+    "page": "Attack roll",
+    "url": "https://bg3.wiki/wiki/Attack_roll"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Blur",
+  "spell_level": 2,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Body Aid",
   "kind": "passive",
   "name": "Body Aid",
@@ -1442,6 +1641,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Bolt_of_Celestial_Light"
+ },
+ {
+  "id": "Booming Blade",
+  "kind": "spell",
+  "name": "Booming Blade",
+  "type": null,
+  "brief": null,
+  "description": "Strike with your weapon, afflicting your foe with a resonance that hurts them for 1d8 Thunder when they move.",
+  "extra_description": "This spell can be cast while you are Silenced.",
+  "recharge": "Per action",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/1c/Booming_Blade_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Thunder",
+    "page": "Thunder",
+    "url": "https://bg3.wiki/wiki/Thunder"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Booming_Blade",
+  "spell_level": 0,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "weapon"
  },
  {
   "id": "Booming Blows",
@@ -1739,6 +1964,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Burning_Fury"
  },
  {
+  "id": "Burning Hands",
+  "kind": "spell",
+  "name": "Burning Hands",
+  "type": null,
+  "brief": null,
+  "description": "Each flammable target is hit with 3d6 Fire damage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/37/Burning_Hands_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Fire",
+    "page": "Fire",
+    "url": "https://bg3.wiki/wiki/Fire"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Burning_Hands",
+  "spell_level": 1,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "Self"
+ },
+ {
   "id": "Burst of Speed",
   "kind": "passive",
   "name": "Burst of Speed",
@@ -1762,6 +2013,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Burst_of_Speed"
+ },
+ {
+  "id": "Bursting Sinew",
+  "kind": "spell",
+  "name": "Bursting Sinew",
+  "type": null,
+  "brief": null,
+  "description": "Explode a corpse, causing it to impale those around it.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/41/Bursting_Sinew_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Bursting_Sinew",
+  "spell_level": 0,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Callous Glow",
@@ -2004,6 +2275,62 @@
   "wiki_url": "https://bg3.wiki/wiki/Chilling_Strike"
  },
  {
+  "id": "Chromatic Orb",
+  "kind": "spell",
+  "name": "Chromatic Orb",
+  "type": null,
+  "brief": null,
+  "description": "Hurl a sphere of energy.\nIt deals 3d8 Thunder damage, or 2d8 Acid, Cold, Fire, Lightning or Poison damage and creates a surface.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/f/f2/Chromatic_Orb_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Thunder",
+    "page": "Thunder",
+    "url": "https://bg3.wiki/wiki/Thunder"
+   },
+   {
+    "text": "Acid",
+    "page": "Acid",
+    "url": "https://bg3.wiki/wiki/Acid"
+   },
+   {
+    "text": "Cold",
+    "page": "Cold",
+    "url": "https://bg3.wiki/wiki/Cold"
+   },
+   {
+    "text": "Fire",
+    "page": "Fire",
+    "url": "https://bg3.wiki/wiki/Fire"
+   },
+   {
+    "text": "Lightning",
+    "page": "Lightning",
+    "url": "https://bg3.wiki/wiki/Lightning"
+   },
+   {
+    "text": "Poison",
+    "page": "Poison",
+    "url": "https://bg3.wiki/wiki/Poison"
+   },
+   {
+    "text": "surface",
+    "page": "surfaces",
+    "url": "https://bg3.wiki/wiki/surfaces"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Chromatic_Orb",
+  "spell_level": 1,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Cinders",
   "kind": "passive",
   "name": "Cinders",
@@ -2106,6 +2433,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Colossal_Onslaught"
+ },
+ {
+  "id": "Colour Spray",
+  "kind": "spell",
+  "name": "Colour Spray",
+  "type": null,
+  "brief": null,
+  "description": "Blind creatures up to a combined 33 Hit Points.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/2f/Colour_Spray_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Blind",
+    "page": "Blinded (Condition)",
+    "url": "https://bg3.wiki/wiki/Blinded_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Colour_Spray",
+  "spell_level": 1,
+  "school": "Illusion",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
  },
  {
   "id": "Combat Regeneration",
@@ -2261,6 +2614,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Countershock"
+ },
+ {
+  "id": "Counterspell",
+  "kind": "spell",
+  "name": "Counterspell",
+  "type": null,
+  "brief": null,
+  "description": "Try to stop a spell being cast.",
+  "extra_description": "If it is higher level than the spell slot you used to Counterspell, you must make a check using your spellcasting ability to prevent it. The check's difficulty is equal to 10 plus the level of the spell you are trying to counter.\nThis spell can be cast while you are Silenced.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/35/Counterspell_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Counterspell",
+  "spell_level": 3,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "reaction",
+  "range": null
  },
  {
   "id": "Covert Critical",
@@ -2471,6 +2844,109 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Crushing_Blows"
+ },
+ {
+  "id": "Cull the Weak",
+  "kind": "passive",
+  "name": "Cull the Weak",
+  "type": null,
+  "brief": null,
+  "description": "When you bring a creature down to fewer hit points than your number of evolved illithid powers, it dies and all nearby creatures take 1~4 Psychic damage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/d1/Cull_the_Weak_Icon.webp",
+  "links": [
+   {
+    "text": "Psychic",
+    "page": "Psychic",
+    "url": "https://bg3.wiki/wiki/Psychic"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Cull_the_Weak"
+ },
+ {
+  "id": "Cunning Action: Dash",
+  "kind": "spell",
+  "name": "Cunning Action: Dash",
+  "type": null,
+  "brief": null,
+  "description": "Cover more distance this turn: double your movement speed.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/f/fa/Dash_Bonus_Action_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "movement speed",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Cunning_Action:_Dash",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
+ },
+ {
+  "id": "Cunning Action: Disengage",
+  "kind": "spell",
+  "name": "Cunning Action: Disengage",
+  "type": null,
+  "brief": null,
+  "description": "Retreat safely. Moving won't provoke Opportunity Attacks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/ce/Disengage_Bonus_Action_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Opportunity Attacks",
+    "page": "Attack of Opportunity",
+    "url": "https://bg3.wiki/wiki/Attack_of_Opportunity"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Cunning_Action:_Disengage",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
+ },
+ {
+  "id": "Cunning Action: Hide",
+  "kind": "spell",
+  "name": "Cunning Action: Hide",
+  "type": null,
+  "brief": null,
+  "description": "Hide from enemies by succeeding at Stealth checks. Stick to the dark and avoid enemy sightlines. Attacking or casting a spell will reveal your location.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/6/6f/Hide_Bonus_Action_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Stealth",
+    "page": "Stealth",
+    "url": "https://bg3.wiki/wiki/Stealth"
+   },
+   {
+    "text": "checks",
+    "page": "Ability checks",
+    "url": "https://bg3.wiki/wiki/Ability_checks"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Cunning_Action:_Hide",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
  },
  {
   "id": "Cunning Brume",
@@ -3093,6 +3569,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Dig_Deep"
+ },
+ {
+  "id": "Dimension Door",
+  "kind": "spell",
+  "name": "Dimension Door",
+  "type": null,
+  "brief": null,
+  "description": "Teleport yourself and up to one adjacent ally to a place you can see. The ally cannot be larger than Medium.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/e5/Dimension_Door_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Medium",
+    "page": "Creature Size",
+    "url": "https://bg3.wiki/wiki/Creature_Size"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Dimension_Door",
+  "spell_level": 4,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "50 / 167"
  },
  {
   "id": "Disarming Strike",
@@ -3817,6 +4319,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Enervating_Suffusion"
  },
  {
+  "id": "Enhance Leap",
+  "kind": "spell",
+  "name": "Enhance Leap",
+  "type": null,
+  "brief": null,
+  "description": "Triple a creature's Jumping distance.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/d2/Enhance_Leap_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Jumping",
+    "page": "Jump",
+    "url": "https://bg3.wiki/wiki/Jump"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Enhance_Leap",
+  "spell_level": 1,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": true,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
   "id": "Envenom",
   "kind": "passive",
   "name": "Envenom",
@@ -3850,6 +4378,31 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Envenom"
+ },
+ {
+  "id": "Evasion",
+  "kind": "passive",
+  "name": "Evasion",
+  "type": null,
+  "brief": "Successful DEX saves nullify damage; failed DEX saves reduce it by half.",
+  "description": "Your agility lets you dodge out of the way of certain spells. When a spell or effect would deal half damage on a successful Dexterity Saving Throw, it deals no damage if you succeed, and only half damage if you fail.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/7c/Evasion_Icon.webp",
+  "links": [
+   {
+    "text": "Dexterity",
+    "page": "Dexterity",
+    "url": "https://bg3.wiki/wiki/Dexterity"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Evasion"
  },
  {
   "id": "Evasive Instinct",
@@ -4222,6 +4775,78 @@
   "wiki_url": "https://bg3.wiki/wiki/Favoured_Weapon"
  },
  {
+  "id": "Fear",
+  "kind": "spell",
+  "name": "Fear",
+  "type": null,
+  "brief": null,
+  "description": "Hostile targets drop everything and become Fearful: they have Disadvantage on Ability Checks and Attack Rolls.",
+  "extra_description": "If the target ends their turn where they can't see you, they can make another Saving Throw to shake off their fear.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/5/53/Fear_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Fearful",
+    "page": "Fearful (Condition)",
+    "url": "https://bg3.wiki/wiki/Fearful_(Condition)"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Ability Check",
+    "page": "Ability Check",
+    "url": "https://bg3.wiki/wiki/Ability_Check"
+   },
+   {
+    "text": "Attack Roll",
+    "page": "Attack Roll",
+    "url": "https://bg3.wiki/wiki/Attack_Roll"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Fear",
+  "spell_level": 3,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
+  "id": "Feather Fall",
+  "kind": "spell",
+  "name": "Feather Fall",
+  "type": null,
+  "brief": null,
+  "description": "You and nearby allies gain Immunity to Falling damage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/30/Feather_Fall_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Immunity",
+    "page": "Damage Types",
+    "url": "https://bg3.wiki/wiki/Damage_Types#Immunity"
+   },
+   {
+    "text": "Falling damage",
+    "page": "Falling damage",
+    "url": "https://bg3.wiki/wiki/Falling_damage"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Feather_Fall",
+  "spell_level": 1,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": true,
+  "action_type": "bonus",
+  "range": "self"
+ },
+ {
   "id": "Feller of Monsters",
   "kind": "passive",
   "name": "Feller of Monsters",
@@ -4367,6 +4992,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Fiery_Return"
  },
  {
+  "id": "Find Familiar",
+  "kind": "spell",
+  "name": "Find Familiar",
+  "type": null,
+  "brief": null,
+  "description": "Summon a familiar, a fey spirit that takes an animal form of your choosing",
+  "extra_description": null,
+  "recharge": "Short Rest",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/9/9b/Find_Familiar_Cat_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Find_Familiar",
+  "spell_level": 1,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": true,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Fire Acuity",
   "kind": "passive",
   "name": "Fire Acuity",
@@ -4390,6 +5035,68 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Fire_Acuity"
+ },
+ {
+  "id": "Fire Shield",
+  "kind": "spell",
+  "name": "Fire Shield",
+  "type": null,
+  "brief": null,
+  "description": "Wreathe your body in flames that shed light in a 3 m (10 ft) radius, provide Resistance to Fire or Cold damage, and retaliate against melee attacks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/31/Fire_Shield_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Resistance",
+    "page": "Resistance",
+    "url": "https://bg3.wiki/wiki/Resistance"
+   },
+   {
+    "text": "Fire",
+    "page": "Fire",
+    "url": "https://bg3.wiki/wiki/Fire"
+   },
+   {
+    "text": "Cold",
+    "page": "Cold",
+    "url": "https://bg3.wiki/wiki/Cold"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Fire_Shield",
+  "spell_level": 4,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
+  "id": "Fireball",
+  "kind": "spell",
+  "name": "Fireball",
+  "type": null,
+  "brief": null,
+  "description": "Shoot a bright flame from your fingers that explodes upon contact, torching everything in the vicinity for 8d6 Fire damage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/29/Fireball_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Fire",
+    "page": "Fire",
+    "url": "https://bg3.wiki/wiki/Fire"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Fireball",
+  "spell_level": 3,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
  },
  {
   "id": "First Blood",
@@ -4586,6 +5293,37 @@
   "wiki_url": "https://bg3.wiki/wiki/Focused_Stride"
  },
  {
+  "id": "Fog Cloud",
+  "kind": "spell",
+  "name": "Fog Cloud",
+  "type": null,
+  "brief": null,
+  "description": "Create a cloud of dense fog to Heavily Obscure and Blind creatures within.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/f/fc/Fog_Cloud_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Heavily Obscure",
+    "page": "Heavily Obscured (Condition)",
+    "url": "https://bg3.wiki/wiki/Heavily_Obscured_(Condition)"
+   },
+   {
+    "text": "Blind",
+    "page": "Blinded (Condition)",
+    "url": "https://bg3.wiki/wiki/Blinded_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Fog_Cloud",
+  "spell_level": 1,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Fond Caress",
   "kind": "passive",
   "name": "Fond Caress",
@@ -4685,6 +5423,37 @@
   "wiki_url": "https://bg3.wiki/wiki/Formless_Slaughter"
  },
  {
+  "id": "Fracture Psyche",
+  "kind": "spell",
+  "name": "Fracture Psyche",
+  "type": null,
+  "brief": null,
+  "description": "Invade a target's mind and disrupt its defences. The target's Armour Class and Saving Throws are reduced by 1.",
+  "extra_description": "If the target dies while its psyche is fractured, you can cast Shatter Psyche on another target.",
+  "recharge": "Short Rest",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/cf/Fracture_Psyche_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Armour Class",
+    "page": "Armour Class",
+    "url": "https://bg3.wiki/wiki/Armour_Class"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Fracture_Psyche",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
+ },
+ {
   "id": "Frantic Urgency",
   "kind": "passive",
   "name": "Frantic Urgency",
@@ -4708,6 +5477,47 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Frantic_Urgency"
+ },
+ {
+  "id": "Friends",
+  "kind": "spell",
+  "name": "Friends",
+  "type": null,
+  "brief": null,
+  "description": "Gain Advantage on Charisma Checks against a non-hostile creature.",
+  "extra_description": "This spell can be cast while you are Silenced.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/0d/Friends_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   },
+   {
+    "text": "Charisma",
+    "page": "Charisma",
+    "url": "https://bg3.wiki/wiki/Charisma"
+   },
+   {
+    "text": "Checks",
+    "page": "Checks",
+    "url": "https://bg3.wiki/wiki/Checks"
+   },
+   {
+    "text": "hostile",
+    "page": "hostile",
+    "url": "https://bg3.wiki/wiki/hostile"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Friends",
+  "spell_level": 0,
+  "school": "Enchantment",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
  },
  {
   "id": "Frightened Immunity",
@@ -5069,6 +5879,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Glorious_Pointy_Hat"
  },
  {
+  "id": "Glyph of Warding",
+  "kind": "spell",
+  "name": "Glyph of Warding",
+  "type": null,
+  "brief": null,
+  "description": "Inscribe a circle of arcane glyphs on the ground. When stepped on by an enemy the selected magical effect will trigger.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/32/Glyph_of_Warding_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Glyph_of_Warding",
+  "spell_level": 3,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
+ },
+ {
   "id": "Goblin's Undoing",
   "kind": "passive",
   "name": "Goblin's Undoing",
@@ -5156,6 +5986,68 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Grand_Slam"
+ },
+ {
+  "id": "Grease",
+  "kind": "spell",
+  "name": "Grease",
+  "type": null,
+  "brief": null,
+  "description": "Cover the ground in flammable grease. It becomes Difficult Terrain and creatures within can fall Prone.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/1b/Grease_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Difficult Terrain",
+    "page": "Difficult Terrain",
+    "url": "https://bg3.wiki/wiki/Difficult_Terrain"
+   },
+   {
+    "text": "Prone",
+    "page": "Prone (Condition)",
+    "url": "https://bg3.wiki/wiki/Prone_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Grease",
+  "spell_level": 1,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
+  "id": "Greater Invisibility",
+  "kind": "spell",
+  "name": "Greater Invisibility",
+  "type": null,
+  "brief": null,
+  "description": "Turn a creature Invisible. Attacks against it have Disadvantage. It attacks with Advantage.",
+  "extra_description": "Invisibility breaks when you fail increasingly harder Stealth Checks on attacking, casting spells, or interacting with items.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/38/Greater_Invisibility_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Greater_Invisibility",
+  "spell_level": 4,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "1.5 / 5"
  },
  {
   "id": "Greater Kushigo Counter",
@@ -5366,6 +6258,62 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Haroldish_Doom"
+ },
+ {
+  "id": "Haste",
+  "kind": "spell",
+  "name": "Haste",
+  "type": null,
+  "brief": null,
+  "description": "Target yourself or an ally to become Hastened. The creature has a +2 bonus to Armour Class, Advantage on Dexterity Saving Throws, its Movement Speed is doubled, and can take one additional Action per turn.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/d5/Haste_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Hastened",
+    "page": "Hastened (Condition)",
+    "url": "https://bg3.wiki/wiki/Hastened_(Condition)"
+   },
+   {
+    "text": "Armour Class",
+    "page": "Armour Class",
+    "url": "https://bg3.wiki/wiki/Armour_Class"
+   },
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   },
+   {
+    "text": "Dexterity",
+    "page": "Dexterity",
+    "url": "https://bg3.wiki/wiki/Dexterity"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   },
+   {
+    "text": "Movement Speed",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   },
+   {
+    "text": "Action",
+    "page": "Action",
+    "url": "https://bg3.wiki/wiki/Action"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Haste",
+  "spell_level": 3,
+  "school": "Transmutation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
  },
  {
   "id": "Headcrack",
@@ -5732,6 +6680,42 @@
   "wiki_url": "https://bg3.wiki/wiki/Hoarfrost_Balance"
  },
  {
+  "id": "Hold Person",
+  "kind": "spell",
+  "name": "Hold Person",
+  "type": null,
+  "brief": null,
+  "description": "Hold a humanoid enemy still. They can't move, act, or react. Attacks from within 3 m (10 ft) are always Critical Hits.\nAt the end of each turn, the affected creature can make a Wisdom Saving Throw to end this condition.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/7e/Hold_Person_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Critical Hit",
+    "page": "Critical Hit",
+    "url": "https://bg3.wiki/wiki/Critical_Hit"
+   },
+   {
+    "text": "Wisdom",
+    "page": "Wisdom",
+    "url": "https://bg3.wiki/wiki/Wisdom"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Hold_Person",
+  "spell_level": 2,
+  "school": "Enchantment",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Homing Weapon",
   "kind": "passive",
   "name": "Homing Weapon",
@@ -5839,6 +6823,68 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Hush_You%21"
+ },
+ {
+  "id": "Hypnotic Pattern",
+  "kind": "spell",
+  "name": "Hypnotic Pattern",
+  "type": null,
+  "brief": null,
+  "description": "Hypnotise creatures that can see the pattern. They cannot attack you. They cannot move nor act.",
+  "extra_description": "This spell can be cast while you are Silenced.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/ed/Hypnotic_Pattern_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Hypnotise",
+    "page": "Hypnotised (Condition)",
+    "url": "https://bg3.wiki/wiki/Hypnotised_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Hypnotic_Pattern",
+  "spell_level": 3,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
+  "id": "Ice Knife",
+  "kind": "spell",
+  "name": "Ice Knife",
+  "type": null,
+  "brief": null,
+  "description": "Throw a shard of ice that deals 1d10 Piercing damage. It explodes and deals 2d6 Cold damage to anyone nearby. It leaves an Ice surface. On miss, the shard of ice still explodes.",
+  "extra_description": "This spell can be cast while you are Silenced.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/c0/Ice_Knife_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Piercing",
+    "page": "Piercing",
+    "url": "https://bg3.wiki/wiki/Piercing"
+   },
+   {
+    "text": "Cold",
+    "page": "Cold",
+    "url": "https://bg3.wiki/wiki/Cold"
+   },
+   {
+    "text": "Ice",
+    "page": "Ice (surface)",
+    "url": "https://bg3.wiki/wiki/Ice_(surface)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Ice_Knife",
+  "spell_level": 1,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
  },
  {
   "id": "Ichorous Corrosion",
@@ -6424,6 +7470,42 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Intimate_Embrace"
+ },
+ {
+  "id": "Invisibility (spell)",
+  "kind": "spell",
+  "name": "Invisibility",
+  "type": null,
+  "brief": null,
+  "description": "Touch a creature to turn it Invisible. Attacks against it have Disadvantage. It attacks with Advantage.",
+  "extra_description": "Invisibility ends early if the invisible entity attacks, casts another spell, interacts with an object, takes an action or bonus action, or is damaged.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/b/b9/Invisibility__spell_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Invisible",
+    "page": "Invisible (condition)",
+    "url": "https://bg3.wiki/wiki/Invisible_(condition)"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Invisibility_(spell)",
+  "spell_level": 2,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
  },
  {
   "id": "Invisible Weapon",
@@ -7135,6 +8217,77 @@
   "wiki_url": "https://bg3.wiki/wiki/Lunar_Bestial_Vitality"
  },
  {
+  "id": "Mage Armour",
+  "kind": "spell",
+  "name": "Mage Armour",
+  "type": null,
+  "brief": null,
+  "description": "Surround an unarmoured creature in a protective magical force. Its Armour Class increases to 13 + its Dexterity modifier.",
+  "extra_description": "This effect does not stack with Unarmoured Defence.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/a/a2/Mage_Armour_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Armour Class",
+    "page": "Armour Class",
+    "url": "https://bg3.wiki/wiki/Armour_Class"
+   },
+   {
+    "text": "Dexterity modifier",
+    "page": "Dexterity",
+    "url": "https://bg3.wiki/wiki/Dexterity#Dexterity_modifier_chart"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Mage_Armour",
+  "spell_level": 1,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
+  "id": "Mage Hand Legerdemain",
+  "kind": "passive",
+  "name": "Mage Hand Legerdemain",
+  "type": null,
+  "brief": null,
+  "description": "When you cast Mage Hand, the spectral hand is invisible and permanent.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/f/f9/Mage_Hand_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Mage_Hand_Legerdemain"
+ },
+ {
+  "id": "Magic Missile",
+  "kind": "spell",
+  "name": "Magic Missile",
+  "type": null,
+  "brief": null,
+  "description": "Create three darts of magical force, each dealing 1d4 + 1 Force damage to its target.\nThe darts always hit their target, and can each be targeted individually.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/c4/Magic_Missile_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Force",
+    "page": "Force",
+    "url": "https://bg3.wiki/wiki/Force"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Magic_Missile",
+  "spell_level": 1,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Magical Durability (+1)",
   "kind": "passive",
   "name": "Magical Durability",
@@ -7442,6 +8595,78 @@
   "wiki_url": "https://bg3.wiki/wiki/Mental_Interference"
  },
  {
+  "id": "Mind Blast",
+  "kind": "spell",
+  "name": "Mind Blast",
+  "type": null,
+  "brief": null,
+  "description": "Spew forth a conical wave of psychic energy and possibly Stun targets within.",
+  "extra_description": null,
+  "recharge": "long rest",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/8e/Mind_Blast_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Stun",
+    "page": "Stunned (condition)",
+    "url": "https://bg3.wiki/wiki/Stunned_(condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Mind_Blast",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": null
+ },
+ {
+  "id": "Minor Illusion",
+  "kind": "spell",
+  "name": "Minor Illusion",
+  "type": null,
+  "brief": null,
+  "description": "Create an illusion that compels nearby creatures to investigate.",
+  "extra_description": "You can remain hidden while casting this spell.\nThis spell can be cast while you are Silenced.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/34/Minor_Illusion_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Minor_Illusion",
+  "spell_level": 0,
+  "school": "Illusion",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
+  "id": "Mirror Image",
+  "kind": "spell",
+  "name": "Mirror Image",
+  "type": null,
+  "brief": null,
+  "description": "Create 3 illusory duplicates of yourself to distract attackers. Each duplicate increases your Armour Class by 3.",
+  "extra_description": "Whenever you successfully evade an attack, one of the duplicates disappears.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/83/Mirror_Image_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Armour Class",
+    "page": "Armour Class",
+    "url": "https://bg3.wiki/wiki/Armour_Class"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Mirror_Image",
+  "spell_level": 2,
+  "school": "Illusion",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Missile Snaring",
   "kind": "passive",
   "name": "Missile Snaring",
@@ -7467,6 +8692,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Missile_Snaring"
  },
  {
+  "id": "Misty Step",
+  "kind": "spell",
+  "name": "Misty Step",
+  "type": null,
+  "brief": null,
+  "description": "Surrounded by silver mist, you teleport to an unoccupied space you can see.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/36/Misty_Step_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Misty_Step",
+  "spell_level": 2,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "18 / 60"
+ },
+ {
   "id": "Mobile Shot",
   "kind": "action",
   "name": "Mobile Shot",
@@ -7490,6 +8735,36 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Mobile_Shot"
+ },
+ {
+  "id": "Moderately Armoured",
+  "kind": "passive",
+  "name": "Moderately Armoured",
+  "type": null,
+  "brief": "You have proficiency with medium armour and shields.",
+  "description": "You have armour proficiency with Medium armour and Shields.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/05/Moderately_Armoured_Icon.webp",
+  "links": [
+   {
+    "text": "proficiency",
+    "page": "proficiency",
+    "url": "https://bg3.wiki/wiki/proficiency"
+   },
+   {
+    "text": "Medium armour",
+    "page": "Armour",
+    "url": "https://bg3.wiki/wiki/Armour#List_of_medium_armour"
+   },
+   {
+    "text": "Shields",
+    "page": "Shields",
+    "url": "https://bg3.wiki/wiki/Shields"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Moderately_Armoured"
  },
  {
   "id": "Monsterslayer",
@@ -7978,6 +9253,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Organ_Rearranger"
  },
  {
+  "id": "Otiluke's Resilient Sphere",
+  "kind": "spell",
+  "name": "Otiluke's Resilient Sphere",
+  "type": null,
+  "brief": null,
+  "description": "Enclose a target in a sphere of shimmering force, reducing its movement speed by half, and blocking all incoming and spell effects.",
+  "extra_description": "The sphere reduces the target's movement speed by half, and also prevents it from casting spells or dealing damage.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/33/Otiluke%27s_Resilient_Sphere_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Otiluke's_Resilient_Sphere",
+  "spell_level": 4,
+  "school": "Evocation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
+ },
+ {
   "id": "Outer-Entity Slayer",
   "kind": "passive",
   "name": "Outer-Entity Slayer",
@@ -8138,6 +9433,73 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Personal_Space"
+ },
+ {
+  "id": "Phantasmal Force",
+  "kind": "spell",
+  "name": "Phantasmal Force",
+  "type": null,
+  "brief": null,
+  "description": "Deal damage to a creature each turn. At the start of its turn, it takes Psychic damage. Each subsequent time it takes damage, the damage type of Phantasmal Force changes to match that damage type.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/d5/Phantasmal_Force_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Psychic",
+    "page": "Psychic",
+    "url": "https://bg3.wiki/wiki/Psychic"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Phantasmal_Force",
+  "spell_level": 2,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
+  "id": "Phantasmal Killer",
+  "kind": "spell",
+  "name": "Phantasmal Killer",
+  "type": null,
+  "brief": null,
+  "description": "Haunt a creature with illusions of its greatest fears. It takes 4d10 Psychic Damage per turn, cannot move, has Disadvantage on Ability Checks and Attack Rolls",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/6/6b/Phantasmal_Killer_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Psychic",
+    "page": "Psychic",
+    "url": "https://bg3.wiki/wiki/Psychic"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Ability Checks",
+    "page": "Ability Checks",
+    "url": "https://bg3.wiki/wiki/Ability_Checks"
+   },
+   {
+    "text": "Attack Rolls",
+    "page": "Attack Rolls",
+    "url": "https://bg3.wiki/wiki/Attack_Rolls"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Phantasmal_Killer",
+  "spell_level": 4,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Piercing Counter",
@@ -8513,6 +9875,83 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Promised_Victory"
+ },
+ {
+  "id": "Protection from Evil and Good",
+  "kind": "spell",
+  "name": "Protection from Evil and Good",
+  "type": null,
+  "brief": null,
+  "description": "Protect an ally against the attacks and powers of Aberrations, Celestials, Elementals, Fey, Fiends, and Undead.",
+  "extra_description": "The targets can't be Charmed, Frightened, or possessed by them, and when these creatures attack it, they have Disadvantage.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/29/Protection_from_Evil_and_Good_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Aberrations",
+    "page": "List of Creature  Types",
+    "url": "https://bg3.wiki/wiki/List_of_Creature__Types#Aberration"
+   },
+   {
+    "text": "Celestials",
+    "page": "List of Creature  Types",
+    "url": "https://bg3.wiki/wiki/List_of_Creature__Types#Celestial"
+   },
+   {
+    "text": "Elementals",
+    "page": "List of Creature  Types",
+    "url": "https://bg3.wiki/wiki/List_of_Creature__Types#Elemental"
+   },
+   {
+    "text": "Fey",
+    "page": "List of Creature  Types",
+    "url": "https://bg3.wiki/wiki/List_of_Creature__Types#Fey"
+   },
+   {
+    "text": "Fiends",
+    "page": "List of Creature  Types",
+    "url": "https://bg3.wiki/wiki/List_of_Creature__Types#Fiend"
+   },
+   {
+    "text": "Undead",
+    "page": "List of Creature  Types",
+    "url": "https://bg3.wiki/wiki/List_of_Creature__Types#Undead"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Protection_from_Evil_and_Good",
+  "spell_level": 1,
+  "school": "Abjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
+  "id": "Psionic Overload",
+  "kind": "spell",
+  "name": "Psionic Overload",
+  "type": null,
+  "brief": null,
+  "description": "Your attacks deal an additional 1d4Psychic damage, but you take 1d4Psychic damage every turn.",
+  "extra_description": null,
+  "recharge": "Short Rest",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/6/68/Psionic_Overload_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Psychic",
+    "page": "Psychic",
+    "url": "https://bg3.wiki/wiki/Psychic"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Psionic_Overload",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
  },
  {
   "id": "Psionic Revenge",
@@ -9098,6 +10537,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Remedial_Rhymes"
  },
  {
+  "id": "Remove Curse",
+  "kind": "spell",
+  "name": "Remove Curse",
+  "type": null,
+  "brief": null,
+  "description": "Touch a creature or object to remove all Curses and Hexes affecting it.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/4c/Remove_Curse_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Curses",
+    "page": "Cursed (status group)",
+    "url": "https://bg3.wiki/wiki/Cursed_(status_group)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Remove_Curse",
+  "spell_level": 3,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
   "id": "Reposition Malefactor",
   "kind": "action",
   "name": "Reposition Malefactor",
@@ -9340,6 +10805,20 @@
   "wiki_url": "https://bg3.wiki/wiki/Sanctified_Weapon"
  },
  {
+  "id": "Savage Attacker",
+  "kind": "passive",
+  "name": "Savage Attacker",
+  "type": null,
+  "brief": null,
+  "description": "When making melee weapon attacks, you roll your damage dice twice and use the highest result.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/24/Savage_Attacker_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Savage_Attacker"
+ },
+ {
   "id": "Saviour's Allure",
   "kind": "passive",
   "name": "Saviour's Allure",
@@ -9503,6 +10982,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Searing_Blood"
+ },
+ {
+  "id": "See Invisibility",
+  "kind": "spell",
+  "name": "See Invisibility",
+  "type": null,
+  "brief": null,
+  "description": "Become able to see Invisible creatures, and possibly reveal them to others.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/7e/See_Invisibility_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Invisible",
+    "page": "Invisible (Condition)",
+    "url": "https://bg3.wiki/wiki/Invisible_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/See_Invisibility",
+  "spell_level": 2,
+  "school": "Divination",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
  },
  {
   "id": "Seeking Blood",
@@ -9793,6 +11298,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Shadespell"
+ },
+ {
+  "id": "Shadow Blade",
+  "kind": "spell",
+  "name": "Shadow Blade",
+  "type": null,
+  "brief": null,
+  "description": "Weave a shadowy shortsword in your hand that deals 2d8 Psychic damage.",
+  "extra_description": "When you use the sword to attack a target that is in dim light or darkness, you make the Attack Roll with Advantage.\nThe shadow blade can be unequipped and equipped again, but must remain on the spellcaster's person.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/dc/Shadow_Blade_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Psychic",
+    "page": "Psychic",
+    "url": "https://bg3.wiki/wiki/Psychic"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Shadow_Blade",
+  "spell_level": 2,
+  "school": "Illusion",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
  },
  {
   "id": "Shadow Blade (passive feature)",
@@ -10133,6 +11664,42 @@
   "wiki_url": "https://bg3.wiki/wiki/Shelter"
  },
  {
+  "id": "Shield (spell)",
+  "kind": "spell",
+  "name": "Shield",
+  "type": null,
+  "brief": null,
+  "description": "When you are about to be hit by an enemy, use your Reaction to increase your Armour Class by 5. You also take no damage from Magic Missile. These effects last until the start of your next turn.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/77/Shield__spell_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Reaction",
+    "page": "Reaction",
+    "url": "https://bg3.wiki/wiki/Reaction"
+   },
+   {
+    "text": "Armour Class",
+    "page": "Armour Class",
+    "url": "https://bg3.wiki/wiki/Armour_Class"
+   },
+   {
+    "text": "Magic Missile",
+    "page": "Magic Missile",
+    "url": "https://bg3.wiki/wiki/Magic_Missile"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Shield_(spell)",
+  "spell_level": 1,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "reaction",
+  "range": "self"
+ },
+ {
   "id": "Shield Bash",
   "kind": "passive",
   "name": "Shield Bash",
@@ -10181,6 +11748,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Shield_Conduit"
+ },
+ {
+  "id": "Shield of Thralls",
+  "kind": "spell",
+  "name": "Shield of Thralls",
+  "type": null,
+  "brief": null,
+  "description": "Conjure a volatile shield around yourself or an ally, granting the target 10 temporary hit points.",
+  "extra_description": "If these temporary hit points are lost due to incoming damage, the shield bursts, possibly Stunning nearby foes.",
+  "recharge": "Short Rest",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/15/Shield_of_Thralls_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "temporary hit points",
+    "page": "temporary Hit Points",
+    "url": "https://bg3.wiki/wiki/temporary_Hit_Points"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Shield_of_Thralls",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
  },
  {
   "id": "Shocking Sting",
@@ -10378,6 +11971,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Slay_the_Wicked_(Slashing)"
  },
  {
+  "id": "Sleep",
+  "kind": "spell",
+  "name": "Sleep",
+  "type": null,
+  "brief": null,
+  "description": "Put creatures into a magical slumber. Select targets up to a combined 24 Hit Points.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/9/9b/Sleep_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Hit Points",
+    "page": "Hit Points",
+    "url": "https://bg3.wiki/wiki/Hit_Points"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Sleep",
+  "spell_level": 1,
+  "school": "Enchantment",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Slippery Slapsticky",
   "kind": "passive",
   "name": "Slippery Slapsticky",
@@ -10411,6 +12030,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Slippery_Slapsticky"
+ },
+ {
+  "id": "Slow",
+  "kind": "spell",
+  "name": "Slow",
+  "type": null,
+  "brief": null,
+  "description": "Alter time around up to 6 enemies to Slow them. They won't get far, they can't do much, and they're easier to hit.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/a/af/Slow_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Slow",
+  "spell_level": 3,
+  "school": "Transmutation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Smite the Graceless",
@@ -11721,6 +13360,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Synergetic_Moments"
  },
  {
+  "id": "Tasha's Hideous Laughter",
+  "kind": "spell",
+  "name": "Tasha's Hideous Laughter",
+  "type": null,
+  "brief": null,
+  "description": "Leave a creature Prone with laughter, without the ability to get up.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/a/ae/Tasha%27s_Hideous_Laughter_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Prone",
+    "page": "Prone (Condition)",
+    "url": "https://bg3.wiki/wiki/Prone_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Tasha's_Hideous_Laughter",
+  "spell_level": 1,
+  "school": "Enchantment",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Temperature Adjustment",
   "kind": "passive",
   "name": "Temperature Adjustment",
@@ -12026,6 +13691,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Thunderous_Conversion"
  },
  {
+  "id": "Thunderwave",
+  "kind": "spell",
+  "name": "Thunderwave",
+  "type": null,
+  "brief": null,
+  "description": "Release a wave of thunderous force that pushes away all creatures and objects in an area, while also dealing Thunder damage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/2b/Thunderwave_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Thunder",
+    "page": "Thunder",
+    "url": "https://bg3.wiki/wiki/Thunder"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Thunderwave",
+  "spell_level": 1,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
   "id": "Time Thoroughly Bided",
   "kind": "passive",
   "name": "Time Thoroughly Bided",
@@ -12104,6 +13795,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Titan_Weapon"
+ },
+ {
+  "id": "Toll the Dead",
+  "kind": "spell",
+  "name": "Toll the Dead",
+  "type": null,
+  "brief": null,
+  "description": "Ring the bell of impending doom. If the target is at full health, you deal 1d8 Necrotic damage instead.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/0e/Toll_the_Dead_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Necrotic",
+    "page": "Necrotic",
+    "url": "https://bg3.wiki/wiki/Necrotic"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Toll_the_Dead",
+  "spell_level": 0,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Topple",
@@ -12333,6 +14050,20 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Umbral_Attack"
+ },
+ {
+  "id": "Uncanny Dodge",
+  "kind": "passive",
+  "name": "Uncanny Dodge",
+  "type": null,
+  "brief": "Can use a reaction to reduce the damage of an incoming hit by half.",
+  "description": "Use your lightning-quick reflexes to protect yourself. When an attack hits you, you only take half the usual damage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/4d/Uncanny_Dodge_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Uncanny_Dodge"
  },
  {
   "id": "Undead Bane",
@@ -12833,6 +14564,37 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Weave_Eater"
+ },
+ {
+  "id": "Web",
+  "kind": "spell",
+  "name": "Web",
+  "type": null,
+  "brief": null,
+  "description": "Cover an area in thick, flammable webbing that can Enweb creatures within.\nAn ally can use its Help action to try and tear away the webs.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/f/fc/Web_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Enweb",
+    "page": "Enwebbed (Condition)",
+    "url": "https://bg3.wiki/wiki/Enwebbed_(Condition)"
+   },
+   {
+    "text": "Help",
+    "page": "Help",
+    "url": "https://bg3.wiki/wiki/Help"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Web",
+  "spell_level": 2,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Well-Liked and Well-Fortified",

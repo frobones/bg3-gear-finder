@@ -5,8 +5,9 @@ Run by hand; the webpage only ever reads data/.
     python3 scripts/fetch_wiki.py            # rebuild data/ from cache/wiki/, fetching only what is missing
     python3 scripts/fetch_wiki.py --refresh  # re-download everything from bg3.wiki first
 
-Reads data/region_order.json (hand-maintained) and writes items.json,
-acquisitions.json, locations.json, abilities.json and meta.json into data/.
+Reads data/region_order.json and data/party/ (both hand-maintained) and writes
+items.json, acquisitions.json, locations.json, abilities.json and meta.json
+into data/. abilities.json also holds the spells and features party profiles name.
 """
 
 import argparse
@@ -65,6 +66,28 @@ ABILITY_FIELDS = (
     "image",
     "icon",
     "hotbar_icon",
+)
+
+# Party profiles are hand-written (data/party/); these keys name wiki pages the page shows as pop-outs or items.
+PARTY_DIR = DATA_DIR / "party"
+PROFILE_ABILITY_KEYS = ("abilities", "replace", "scribe", "hold")
+PROFILE_ITEM_KEYS = ("item", "items", "alternates")
+# Tables searched for a profile's ability names, in order, and the kind recorded for each.
+PROFILE_ABILITY_TABLES = {"spells": "spell", "passives": "passive"}
+SPELL_FIELDS = (
+    "name",
+    "brief",
+    "description",
+    "extra_description",
+    "spell_level",
+    "spell_school",
+    "is_concentration",
+    "is_ritual",
+    "action_type",
+    "spell_range",
+    "recharge",
+    "image",
+    "icon",
 )
 
 # Item notes live only in each page's template source ("| notes = ..."), not in Cargo.
@@ -363,6 +386,41 @@ def build_acquisitions(wiki: WikiClient, items: dict, locations: dict, region_or
     return acquisitions, skipped
 
 
+def _ability(record: dict, kind: str, links: list[dict]) -> dict:
+    """The pop-out record for one normalized passives/actions/spells row."""
+    ability = {
+        "id": record["page"],
+        "kind": kind,
+        "name": record["name"] or record["page"],
+        "type": record.get("type"),
+        "brief": record.get("brief"),
+        "description": record.get("description"),
+        "extra_description": record.get("extra_description"),
+        "recharge": record.get("recharge"),
+        "cost": record.get("cost"),
+        "icon_url": record.get("icon_url") or record.get("image_url") or record.get("hotbar_icon_url"),
+        "links": links,
+        "wiki_url": wiki_url(record["page"]),
+    }
+    if kind == "spell":
+        level = record.get("spell_level")
+        ability.update(
+            spell_level=int(level) if level is not None else None,
+            school=record.get("spell_school"),
+            concentration=record.get("is_concentration"),
+            ritual=record.get("is_ritual"),
+            action_type=record.get("action_type"),
+            range=record.get("spell_range"),
+        )
+    return ability
+
+
+def _table_rows(wiki: WikiClient, table: str, fields: tuple[str, ...]) -> tuple[dict, list[dict]]:
+    full_schema = wiki.schema(table)
+    schema = {field: full_schema[field] for field in fields if field in full_schema}
+    return schema, wiki.export(table, schema)
+
+
 def build_abilities(wiki: WikiClient, items: dict) -> dict[str, dict]:
     """Passives and weapon actions that items grant, keyed by wiki page name, for the item panel's pop-outs."""
     abilities: dict[str, dict] = {}
@@ -374,31 +432,66 @@ def build_abilities(wiki: WikiClient, items: dict) -> dict[str, dict]:
             for field in item_fields
             for name in record.get(field) or []
         }
-        full_schema = wiki.schema(table)
-        schema = {field: full_schema[field] for field in ABILITY_FIELDS if field in full_schema}
-        for row in wiki.export(table, schema):
+        schema, rows = _table_rows(wiki, table, ABILITY_FIELDS)
+        for row in rows:
             record = normalize_row(row, schema)
             if record["page"] not in wanted:
                 continue
             _, links = clean_wikitext(row.get("description"))
-            abilities[record["page"]] = {
-                "id": record["page"],
-                "kind": kind,
-                "name": record["name"] or record["page"],
-                "type": record.get("type"),
-                "brief": record.get("brief"),
-                "description": record.get("description"),
-                "extra_description": record.get("extra_description"),
-                "recharge": record.get("recharge"),
-                "cost": record.get("cost"),
-                "icon_url": record.get("icon_url") or record.get("image_url") or record.get("hotbar_icon_url"),
-                "links": links,
-                "wiki_url": wiki_url(record["page"]),
-            }
+            abilities[record["page"]] = _ability(record, kind, links)
             wanted.discard(record["page"])
         if wanted:
             raise RuntimeError(f"Items name {table} that bg3.wiki has no row for: {sorted(wanted)}")
     return abilities
+
+
+def load_profiles() -> list[dict]:
+    """Every filled-in party profile named in data/party/party.json."""
+    roster = json.loads((PARTY_DIR / "party.json").read_text(encoding="utf-8"))
+    return [
+        json.loads((PARTY_DIR / f"{member['profile']}.json").read_text(encoding="utf-8"))
+        for member in roster["members"]
+        if "profile" in member
+    ]
+
+
+def profile_names(node: Any, keys: tuple[str, ...]) -> set[str]:
+    """Every string a profile stores under one of `keys`, at any depth."""
+    if isinstance(node, list):
+        return set().union(*(profile_names(child, keys) for child in node))
+    if not isinstance(node, dict):
+        return set()
+    found: set[str] = set()
+    for key, value in node.items():
+        if key in keys:
+            found.update([value] if isinstance(value, str) else value)
+        else:
+            found |= profile_names(value, keys)
+    return found
+
+
+def check_profile_items(profiles: list[dict], items: dict) -> None:
+    """Stop the build if a profile names an item the snapshot doesn't have, rather than dropping it silently."""
+    for profile in profiles:
+        unknown = profile_names(profile, PROFILE_ITEM_KEYS) - items.keys()
+        if unknown:
+            raise RuntimeError(f"Profile {profile['id']} names items bg3.wiki has no page for: {sorted(unknown)}")
+
+
+def add_profile_abilities(wiki: WikiClient, profiles: list[dict], abilities: dict[str, dict]) -> None:
+    """Add the spells, powers and features that profiles name, so the level-up view can explain them."""
+    wanted = set().union(*(profile_names(p, PROFILE_ABILITY_KEYS) for p in profiles)) - abilities.keys()
+    for table, kind in PROFILE_ABILITY_TABLES.items():
+        schema, rows = _table_rows(wiki, table, SPELL_FIELDS if kind == "spell" else ABILITY_FIELDS)
+        for row in rows:
+            record = normalize_row(row, schema)
+            if record["page"] not in wanted:
+                continue
+            _, links = clean_wikitext(row.get("description"))
+            abilities[record["page"]] = _ability(record, kind, links)
+            wanted.discard(record["page"])
+    if wanted:
+        raise RuntimeError(f"Profiles name spells or features bg3.wiki has no page for: {sorted(wanted)}")
 
 
 def _store_template_fields(fields: list[str], params: dict[str, str]) -> None:
@@ -514,6 +607,9 @@ def main() -> int:
     locations = build_locations(wiki)
     acquisitions, skipped = build_acquisitions(wiki, items, locations, region_order)
     abilities = build_abilities(wiki, items)
+    profiles = load_profiles()
+    check_profile_items(profiles, items)
+    add_profile_abilities(wiki, profiles, abilities)
     add_notes(wiki, items)
 
     located = {a["item"] for a in acquisitions}
@@ -529,7 +625,7 @@ def main() -> int:
         {
             "snapshot_utc": wiki.oldest_fetch.isoformat(timespec="seconds"),
             "source": WIKI,
-            "source_tables": [*GEAR_TABLES, "item_locations", "locations", *ABILITY_TABLES],
+            "source_tables": [*GEAR_TABLES, "item_locations", "locations", *ABILITY_TABLES, *PROFILE_ABILITY_TABLES],
             "license": "Content from bg3.wiki, CC BY-NC-SA 4.0 or CC BY-SA 4.0",
             "license_url": f"{WIKI}/wiki/bg3wiki:Copyrights",
             "counts": {
@@ -542,7 +638,8 @@ def main() -> int:
                 "locations": len(locations),
                 "items_with_notes": sum(1 for i in items.values() if i["notes"]),
                 "abilities_by_kind": {
-                    kind: sum(1 for a in abilities.values() if a["kind"] == kind) for kind, _ in ABILITY_TABLES.values()
+                    kind: sum(1 for a in abilities.values() if a["kind"] == kind)
+                    for kind in sorted({a["kind"] for a in abilities.values()})
                 },
             },
         },

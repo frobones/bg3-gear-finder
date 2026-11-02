@@ -7,7 +7,9 @@
   "item_locations",
   "locations",
   "passives",
-  "actions"
+  "actions",
+  "spells",
+  "passives"
  ],
  "license": "Content from bg3.wiki, CC BY-NC-SA 4.0 or CC BY-SA 4.0",
  "license_url": "https://bg3.wiki/wiki/bg3wiki:Copyrights",
@@ -24,8 +26,9 @@
   "locations": 184,
   "items_with_notes": 454,
   "abilities_by_kind": {
-   "passive": 458,
-   "action": 70
+   "action": 70,
+   "passive": 466,
+   "spell": 54
   }
  }
 }

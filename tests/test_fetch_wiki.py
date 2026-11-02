@@ -1,6 +1,7 @@
 """Unit tests for the pure helpers in scripts/fetch_wiki.py (no network)."""
 
 import email.message
+import json
 import re
 import sys
 import unittest
@@ -226,6 +227,71 @@ class WordJoinerTest(unittest.TestCase):
     def test_word_joiners_around_removed_icons_become_a_space(self) -> None:
         text, _ = fetch_wiki.clean_wikitext("deals 1d4⁠[[File:Fire Damage Icon.png|20px]]⁠[[Fire]] damage")
         self.assertEqual(text, "deals 1d4 Fire damage")
+
+
+class TableFakeWiki(FakeWiki):
+    """FakeWiki whose rows differ per table, so lookup order between tables can be tested."""
+
+    SCHEMA = {**FakeWiki.SCHEMA, "spell_level": {"type": "String"}}
+
+
+class ProfileTest(unittest.TestCase):
+    PROFILE = {
+        "id": "rogue",
+        "levels": [{"choices": [{"abilities": ["Shield (spell)"]}, {"replace": ["Sleep", "Magic Missile"]}]}],
+        "scrolls": {"tiers": [{"scribe": ["Web"], "hold": []}], "no_scroll": [{"level": 3, "abilities": []}]},
+        "gear": [{"item": "Ring", "priority": "core"}],
+        "loadout": {"slots": [{"items": ["Ring"], "alternates": ["Boots"]}]},
+        "illithid": {"powers": [{"abilities": ["Cull the Weak"]}]},
+    }
+
+    def test_profile_names_collects_every_listed_name(self) -> None:
+        self.assertEqual(
+            fetch_wiki.profile_names(self.PROFILE, fetch_wiki.PROFILE_ABILITY_KEYS),
+            {"Shield (spell)", "Sleep", "Magic Missile", "Web", "Cull the Weak"},
+        )
+        self.assertEqual(fetch_wiki.profile_names(self.PROFILE, fetch_wiki.PROFILE_ITEM_KEYS), {"Ring", "Boots"})
+
+    def test_unknown_item_stops_the_build(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "Boots"):
+            fetch_wiki.check_profile_items([self.PROFILE], {"Ring": {}})
+        fetch_wiki.check_profile_items([self.PROFILE], {"Ring": {}, "Boots": {}})
+
+    def test_spells_come_first_then_passives(self) -> None:
+        wiki = TableFakeWiki(
+            {
+                "spells": [
+                    {"_pageName": name, "name": name.replace(" (spell)", ""), "spell_level": 1}
+                    for name in ("Shield (spell)", "Sleep", "Magic Missile", "Web")
+                ],
+                "passives": [{"_pageName": "Cull the Weak", "name": "Cull the Weak", "description": "Execute."}],
+            }
+        )
+        abilities = {"Web": {"id": "Web", "kind": "action"}}
+        fetch_wiki.add_profile_abilities(wiki, [self.PROFILE], abilities)
+        self.assertEqual(abilities["Shield (spell)"]["name"], "Shield")
+        self.assertEqual(abilities["Shield (spell)"]["kind"], "spell")
+        self.assertEqual(abilities["Shield (spell)"]["spell_level"], 1)
+        self.assertEqual(abilities["Cull the Weak"]["kind"], "passive")
+        self.assertEqual(abilities["Web"]["kind"], "action", "an ability items already use is kept as is")
+
+    def test_unknown_spell_stops_the_build(self) -> None:
+        wiki = TableFakeWiki({"spells": [], "passives": []})
+        with self.assertRaisesRegex(RuntimeError, "Cull the Weak"):
+            fetch_wiki.add_profile_abilities(wiki, [self.PROFILE], {})
+
+
+class PartyDataTest(unittest.TestCase):
+    """The committed profiles must match the committed snapshot, or the page would show names it can't explain."""
+
+    def test_profiles_name_only_snapshot_items_and_abilities(self) -> None:
+        data = fetch_wiki.DATA_DIR
+        items = {i["id"] for i in json.loads((data / "items.json").read_text(encoding="utf-8"))}
+        abilities = {a["id"] for a in json.loads((data / "abilities.json").read_text(encoding="utf-8"))}
+        for profile in fetch_wiki.load_profiles():
+            with self.subTest(profile=profile["id"]):
+                self.assertEqual(fetch_wiki.profile_names(profile, fetch_wiki.PROFILE_ITEM_KEYS) - items, set())
+                self.assertEqual(fetch_wiki.profile_names(profile, fetch_wiki.PROFILE_ABILITY_KEYS) - abilities, set())
 
 
 class FileUrlTest(unittest.TestCase):

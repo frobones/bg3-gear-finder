@@ -1,0 +1,386 @@
+{
+ "id": "vesper",
+ "name": "Vesper",
+ "title": "Infernal Shadowblade",
+ "build": "Arcane Tankster, adapted for a four-player co-op party",
+ "classes": "Arcane Trickster Rogue 7 / Abjuration Wizard 5",
+ "race": "Asmodeus Tiefling",
+ "background": "Urchin",
+ "difficulty": "Tactician",
+ "portrait": "assets/portraits/vesper.jpg",
+ "role": "Shield-carrying frontliner, single-hit striker, thief and scout, and control enabler.",
+ "arc": {
+  "before": "How do I get in, take what I need, and get out?",
+  "after": "How do I make sure nobody ever gets into me again?"
+ },
+ "level_order": "Rogue 1–5, then Wizard 1–4, then Rogue 6–7, then Wizard 5",
+
+ "levels": [
+  {
+   "level": 1,
+   "class": "Rogue",
+   "class_level": 1,
+   "choices": [
+    {"label": "Race", "text": "Asmodeus Tiefling"},
+    {"label": "Background", "text": "Urchin (gives Sleight of Hand and Stealth)"},
+    {"label": "Class", "text": "Rogue"},
+    {"label": "Abilities", "text": "STR 8 · DEX 17 · CON 14 · INT 16 · WIS 10 · CHA 8"},
+    {"label": "Skills", "text": "Perception, Deception, Acrobatics, Athletics"},
+    {"label": "Expertise", "text": "Sleight of Hand, Stealth"}
+   ],
+   "gains": "Sneak Attack 1d6 and Expertise.",
+   "play": "Finesse weapon and light armour. Vesper is the party's lock, trap and scouting specialist."
+  },
+  {
+   "level": 2,
+   "class": "Rogue",
+   "class_level": 2,
+   "choices": [],
+   "gains": "Cunning Action: Dash, Disengage or Hide as a bonus action.",
+   "play": "Disengage is her normal answer to opportunity attacks.",
+   "abilities": ["Cunning Action: Dash", "Cunning Action: Disengage", "Cunning Action: Hide"]
+  },
+  {
+   "level": 3,
+   "class": "Rogue",
+   "class_level": 3,
+   "choices": [
+    {"label": "Subclass", "text": "Arcane Trickster"},
+    {"label": "Cantrips", "abilities": ["Booming Blade", "Minor Illusion"]},
+    {"label": "Spells", "abilities": ["Shield (spell)", "Tasha's Hideous Laughter", "Sleep"]}
+   ],
+   "warnings": [
+    "Tasha's Hideous Laughter and Sleep are placeholders. You replace them at levels 4 and 5.",
+    "Set the Sneak Attack reaction to Ask, so it lands on a Booming Blade hit."
+   ],
+   "gains": "Mage Hand Legerdemain, Sneak Attack 2d6, and spellcasting.",
+   "play": "Booming Blade becomes the default melee attack.",
+   "abilities": ["Mage Hand Legerdemain"]
+  },
+  {
+   "level": 4,
+   "class": "Rogue",
+   "class_level": 4,
+   "choices": [
+    {"label": "Feat", "abilities": ["Moderately Armoured"], "text": "+1 Dexterity (DEX becomes 18)"},
+    {"label": "New spell", "abilities": ["Colour Spray"]},
+    {"label": "Replace spell", "replace": ["Tasha's Hideous Laughter", "Thunderwave"]}
+   ],
+   "gains": "Medium armour and shield proficiency. Thunderwave is always prepared.",
+   "play": "Put on medium armour and a shield. The Speedy Lightfeet can now be worn."
+  },
+  {
+   "level": 5,
+   "class": "Rogue",
+   "class_level": 5,
+   "choices": [
+    {"label": "Replace spell", "replace": ["Sleep", "Magic Missile"]}
+   ],
+   "warnings": ["Keep Colour Spray for now. It is replaced at level 11."],
+   "gains": "Uncanny Dodge, Sneak Attack 3d6, and Booming Blade adds 1d8 thunder.",
+   "play": "Big survival jump. Magic Missile is always prepared for ranged cleanup.",
+   "abilities": ["Uncanny Dodge"]
+  },
+  {
+   "level": 6,
+   "class": "Wizard",
+   "class_level": 1,
+   "choices": [
+    {"label": "Class", "text": "Wizard (multiclass)"},
+    {"label": "Cantrips", "abilities": ["Friends", "Toll the Dead", "Blade Ward"]},
+    {"label": "Spells", "abilities": ["Find Familiar", "Enhance Leap", "Protection from Evil and Good", "Mage Armour", "Feather Fall", "Grease"]}
+   ],
+   "warnings": [
+    "Don't scribe Chromatic Orb or Fog Cloud. You learn them free at level 7.",
+    "Find Familiar: prepare it, summon, then unprepare it. The familiar stays."
+   ],
+   "prepare": {
+    "count": 4,
+    "abilities": ["Protection from Evil and Good", "Grease", "Ice Knife", "Burning Hands"],
+    "note": "Ice Knife and Burning Hands are flex picks from scribed scrolls."
+   },
+   "scribe_up_to": 1,
+   "gains": "Spellbook, Arcane Recovery, and level 1 scroll scribing.",
+   "play": "Friends is theft insurance, not face duty. Start scribing level 1 scrolls.",
+   "abilities": ["Arcane Recovery"]
+  },
+  {
+   "level": 7,
+   "class": "Wizard",
+   "class_level": 2,
+   "choices": [
+    {"label": "Subclass", "text": "Abjuration School"},
+    {"label": "Spells", "abilities": ["Chromatic Orb", "Fog Cloud"], "text": "the two level 1 spells you held back"}
+   ],
+   "warnings": [
+    "Hold back two level 1–2 spells for level 9's free picks. The guide's default is Blur and Web."
+   ],
+   "prepare": {
+    "count": 5,
+    "abilities": ["Mirror Image", "Misty Step", "Hold Person", "Blindness", "Protection from Evil and Good"],
+    "note": "Swap Hold Person for Web when the fight isn't against humanoids."
+   },
+   "scribe_up_to": 2,
+   "gains": "Arcane Ward and level 2 scroll scribing.",
+   "play": "Abjuration spells charge the Ward. Scribe level 2 scrolls straight away.",
+   "abilities": ["Arcane Ward"]
+  },
+  {
+   "level": 8,
+   "class": "Wizard",
+   "class_level": 3,
+   "choices": [
+    {"label": "Spells", "abilities": ["Shadow Blade", "Phantasmal Force"]}
+   ],
+   "warnings": ["Neither spell has a scroll. Take both now, or you can't get them."],
+   "prepare": {
+    "count": 6,
+    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Hold Person", "Blindness", "Protection from Evil and Good"],
+    "note": "Swap Protection from Evil and Good for Web as needed. At this level you can cast Shadow Blade, then unprepare it."
+   },
+   "scribe_up_to": 2,
+   "gains": "Shadow Blade: her signature weapon, 2d8 psychic.",
+   "play": "Big breakpoint. Booming Blade with Shadow Blade, then Sneak Attack."
+  },
+  {
+   "level": 9,
+   "class": "Wizard",
+   "class_level": 4,
+   "choices": [
+    {"label": "Feat", "abilities": ["Savage Attacker"]},
+    {"label": "Cantrip", "abilities": ["Bursting Sinew"]},
+    {"label": "Spells", "abilities": ["Blur", "Web"], "text": "or any two level 1–2 spells you held back"}
+   ],
+   "warnings": [
+    "From now on, keep Shadow Blade prepared. Unpreparing it drops an upcast blade to 2d8.",
+    "Counterspell has no scroll. Take it at level 12."
+   ],
+   "prepare": {
+    "count": 7,
+    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Glyph of Warding", "Fear", "Slow", "Blindness"],
+    "note": "Swap in Hold Person, Haste, Hypnotic Pattern, Web or Fireball when the fight calls for it."
+   },
+   "scribe_up_to": 3,
+   "gains": "Savage Attacker and level 3 scroll scribing. Shadow Blade reaches 3d8 from a 3rd-level slot.",
+   "play": "Cast Shadow Blade with a 3rd-level slot."
+  },
+  {
+   "level": 10,
+   "class": "Rogue",
+   "class_level": 6,
+   "choices": [
+    {"label": "Expertise", "text": "Perception, Deception"},
+    {"label": "Replace spell", "text": "Skip"}
+   ],
+   "prepare": {
+    "count": 7,
+    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Glyph of Warding", "Fear", "Slow", "Blindness"],
+    "note": "Same as level 9."
+   },
+   "scribe_up_to": 3,
+   "gains": "Expertise in Perception and Deception.",
+   "play": "Spotting traps and talking her way out of a caught theft both get much more reliable."
+  },
+  {
+   "level": 11,
+   "class": "Rogue",
+   "class_level": 7,
+   "choices": [
+    {"label": "New spell", "abilities": ["Mirror Image"]},
+    {"label": "Replace spell", "replace": ["Colour Spray", "Misty Step"]}
+   ],
+   "warnings": ["Mirror Image and Misty Step are now always prepared. Take them out of the Wizard list."],
+   "prepare": {
+    "count": 7,
+    "abilities": ["Shadow Blade", "Glyph of Warding", "Fear", "Slow", "Blindness", "Haste", "Protection from Evil and Good"],
+    "note": "Two Wizard slots freed up by the Arcane Trickster spells."
+   },
+   "scribe_up_to": 3,
+   "gains": "Evasion, Sneak Attack 4d6, and Booming Blade adds 2d8 thunder.",
+   "play": "Evasion turns many Dexterity-save explosions into no damage.",
+   "abilities": ["Evasion"]
+  },
+  {
+   "level": 12,
+   "class": "Wizard",
+   "class_level": 5,
+   "choices": [
+    {"label": "Spells", "abilities": ["Counterspell", "Remove Curse"], "text": "Counterspell is a must. Remove Curse is a flex pick: any level 3 spell you don't know yet."}
+   ],
+   "warnings": ["Counterspell has no scroll. Don't skip it."],
+   "prepare": {
+    "count": 8,
+    "abilities": ["Shadow Blade", "Counterspell", "Glyph of Warding", "Fire Shield", "Greater Invisibility", "Phantasmal Killer", "Slow", "Fear"],
+    "note": "Swap Slow or Fear for Hold Person, Blindness or Haste by fight. Prepare Mage Armour only for the no-shield clothing variant."
+   },
+   "scribe_up_to": 4,
+   "gains": "Counterspell, 8 Wizard preparations, and level 4 scroll scribing.",
+   "play": "Use the one 4th-level slot on Greater Invisibility, Phantasmal Killer or Fire Shield. A 3rd-level slot is enough for Shadow Blade."
+  }
+ ],
+
+ "scrolls": {
+  "intro": "Steal or collect one copy of every Wizard scroll. Scribe each spell level as soon as she can, and keep duplicates to cast straight from the scroll.",
+  "tiers": [
+   {
+    "spell_level": 1,
+    "from_level": 6,
+    "scribe": ["Ice Knife", "Burning Hands"],
+    "hold": ["Chromatic Orb", "Fog Cloud"],
+    "note": "Scribe every useful level 1 scroll you find; these two are the guide's picks for her flex slots. She already learns Find Familiar, Enhance Leap, Protection from Evil and Good, Mage Armour, Feather Fall and Grease at level 6. Hold back two to learn free at level 7."
+   },
+   {
+    "spell_level": 2,
+    "from_level": 7,
+    "scribe": ["Misty Step", "Mirror Image", "Hold Person", "Blindness", "Invisibility (spell)", "See Invisibility"],
+    "hold": ["Blur", "Web"],
+    "note": "Hold back two level 1–2 spells to learn free at level 9. If you want Web sooner, scribe it and hold back a different spell."
+   },
+   {
+    "spell_level": 3,
+    "from_level": 9,
+    "scribe": ["Glyph of Warding", "Fear", "Slow", "Haste", "Hypnotic Pattern", "Fireball"],
+    "hold": ["Remove Curse"],
+    "note": "Scribe these as soon as she reaches level 9. Leave one level 3 spell unscribed for level 12's free pick."
+   },
+   {
+    "spell_level": 4,
+    "from_level": 12,
+    "scribe": ["Greater Invisibility", "Phantasmal Killer", "Fire Shield", "Dimension Door"],
+    "hold": [],
+    "note": "Her one 4th-level slot makes these worth carrying."
+   }
+  ],
+  "no_scroll": [
+   {"level": 3, "abilities": ["Booming Blade", "Shield (spell)"]},
+   {"level": 6, "abilities": ["Friends", "Toll the Dead", "Blade Ward", "Find Familiar", "Enhance Leap"]},
+   {"level": 8, "abilities": ["Shadow Blade", "Phantasmal Force"]},
+   {"level": 9, "abilities": ["Bursting Sinew"]},
+   {"level": 12, "abilities": ["Counterspell"]}
+  ],
+  "cannot_learn": {
+   "abilities": ["Otiluke's Resilient Sphere"],
+   "note": "It has no scroll, and a level 5 Wizard can't learn it, so this split never gets it."
+  }
+ },
+
+ "illithid": {
+  "intro": "Optional. The build works without the tadpole. These are the picks that fit if you want the extra power.",
+  "warning": "Awakened turns illithid powers into bonus actions, but Vesper already uses her bonus action for Cunning Action.",
+  "powers": [
+   {"when": "Crèche Y'llek", "abilities": ["Awakened"], "why": "Illithid powers cost a bonus action instead of an action. You get it by succeeding at the Zaith'isk."},
+   {"when": "Early", "abilities": ["Psionic Overload"], "why": "Adds psychic damage, which fits her mental-debuff plan."},
+   {"when": "Early", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies and can chain through a group."},
+   {"when": "Early", "abilities": ["Shield of Thralls"], "why": "Temporary HP for her, and it can stun nearby enemies."},
+   {"when": "Partial illithid", "abilities": ["Black Hole"], "why": "Pulls enemies together for control spells and bombs."},
+   {"when": "Partial illithid", "abilities": ["Mind Blast"], "why": "Psychic area damage that can stun."},
+   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "Weakens mental saves, which suits her control spells."}
+  ]
+ },
+
+ "gear": [
+  {"item": "Shapeshifter's Boon Ring", "priority": "swap", "note": "+1d4 to ability checks while disguised. Share with the Druid.", "claim": "Shared: swap with whoever is shapeshifting."},
+  {"item": "Silver Pendant", "priority": "swap", "note": "Guidance when the Druid isn't nearby."},
+  {"item": "Gloves of Thievery", "priority": "swap", "note": "Advantage on Sleight of Hand. Theft kit, not combat gloves."},
+  {"item": "Smuggler's Ring", "priority": "swap", "note": "+2 Stealth and Sleight of Hand for stealing, locks and traps."},
+  {"item": "Mask of the Shapeshifter", "priority": "swap", "note": "Cast the disguise, then put her real helmet back on. Replaces learning Disguise Self."},
+  {"item": "The Speedy Lightfeet", "priority": "core", "note": "Cunning Dash gives 3 Lightning Charges once per turn. Needs medium armour proficiency."},
+  {"item": "The Oak Father's Embrace", "priority": "matchup", "note": "Undead that hit her take radiant damage. Swap it out against beasts."},
+  {"item": "Adamantine Shield", "priority": "core", "note": "Her first choice for Mithral: +2 AC, crit immunity, and melee attackers that miss become Reeling."},
+  {"item": "Adamantine Scale Mail", "priority": "optional", "note": "Great interim armour, but only if there's Mithral left after the shield."},
+  {"item": "Dark Justiciar Mail", "priority": "optional", "note": "Fun hit-back effect, but survival comes first."},
+  {"item": "Bow of the Banshee", "act": "one", "priority": "high", "note": "While held, its +1d4 against Frightened targets applies to her melee attacks too."},
+  {"item": "Holy Lance Helm", "priority": "high", "note": "Enemies that miss her take radiant damage. Pairs with the Adamantine Shield."},
+  {"item": "Periapt of Wound Closure", "priority": "high", "note": "Healing she receives is maximised. Great with potions thrown by Mage Hand."},
+  {"item": "Ring of Arcane Synergy", "priority": "high", "note": "Booming Blade turns it on, adding INT to weapon damage."},
+  {"item": "Ring of Elemental Infusion", "priority": "optional", "note": "On Tactician, Booming Blade thunder triggers it. Competes for her ring slot."},
+  {"item": "Vital Conduit Boots", "priority": "swap", "note": "8 temporary HP when she casts a concentration spell. Test the swap trick in your patch."},
+  {"item": "Defender Flail", "priority": "optional", "note": "+1 AC and less physical damage, but she prefers a real shield."},
+  {"item": "Loviatar's Scourge", "priority": "optional", "note": "Original guide's off-hand trick. Not needed with a shield."},
+  {"item": "Rupturing Blade", "priority": "optional", "note": "Original guide's bomb trick. Not needed for normal play."},
+  {"item": "Gloves of Battlemage's Power", "priority": "core", "note": "Booming Blade gives Arcane Acuity: +1 spell attack and save DC per stack."},
+  {"item": "Ring of Mental Inhibition", "priority": "core", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves."},
+  {"item": "Braindrain Gloves", "priority": "core", "note": "Psychic hits apply Mental Fatigue. With Shadow Blade, every hit counts. Swap with the Battlemage gloves."},
+  {"item": "Shadow-Cloaked Ring", "priority": "high", "note": "+1d4 weapon damage against obscured targets, which Shadow Blade already wants."},
+  {"item": "Cloak of Protection", "priority": "high", "note": "+1 AC and +1 to all saves. Her default cloak through the endgame."},
+  {"item": "Fleshmelter Cloak", "priority": "optional", "note": "Burns melee attackers that hit her. Fun swap, not core."},
+  {"name": "Resonance Stone", "act": "two", "priority": "matchup", "where": "Mind Flayer Colony, near the Mind-Archive interface.", "note": "Its aura gives psychic vulnerability and mental-save Disadvantage to everyone nearby, friends included. Carry it only when the party is clear."},
+  {"item": "Ketheric's Shield", "priority": "party", "note": "+2 AC, +1 spell DC and attack, Advantage on DEX saves.", "claim": "Stars Druid may have the stronger claim. The Adamantine Shield is her fallback."},
+  {"item": "Mask of Soul Perception", "priority": "high", "note": "+2 attack, initiative and Perception."},
+  {"item": "Helldusk Armour", "priority": "core", "note": "21 AC, 3 less damage from every hit, proficiency and Fly.", "claim": "Vesper by default, unless the Warlock goes melee in armour."},
+  {"item": "Armour of Agility", "priority": "party", "note": "17 + full DEX AC and +2 to all saves.", "claim": "Gloom Stalker by default. Helldusk is Vesper's pick."},
+  {"item": "Boots of Persistence", "priority": "high", "note": "Freedom of Movement and Longstrider: the passive survival boots."},
+  {"item": "Helldusk Boots", "priority": "matchup", "note": "Can't be pushed, and can turn a failed save into a success. Uses her reaction."},
+  {"item": "Amulet of Greater Health", "priority": "party", "note": "23 CON and Advantage on CON saves.", "claim": "Strong claim for Vesper. The Druid likely wants Amulet of the Devout instead."},
+  {"item": "Viconia's Walking Fortress", "priority": "core", "note": "+3 AC, Advantage on saves against spells, and enemy spell attacks get Disadvantage. Her final shield.", "claim": "Vesper."},
+  {"item": "Ring of Protection", "priority": "optional", "note": "Pure defence option for the second ring."},
+  {"item": "Bonespike Garb", "priority": "optional", "note": "Only for the no-shield clothing variant."},
+  {"item": "Bonespike Boots", "priority": "optional", "note": "Only for the no-shield variant."},
+  {"item": "Bonespike Helmet", "priority": "optional", "note": "Its attack costs her action, which competes with Booming Blade."},
+  {"item": "Cold Snap", "priority": "optional", "note": "Off-hand for the no-shield variant."},
+  {"item": "Knife of the Undermountain King", "priority": "yield", "claim": "Gloom Stalker or Warlock: crit range pays off across many attacks."},
+  {"item": "Risky Ring", "priority": "yield", "claim": "Gloom Stalker or Warlock. Shadow Blade already gives Vesper Advantage on obscured targets."},
+  {"item": "The Dead Shot", "priority": "yield", "claim": "Gloom Stalker."},
+  {"item": "Caustic Band", "priority": "yield", "claim": "Gloom Stalker: +2 acid on every one of many attacks."},
+  {"item": "Rhapsody", "priority": "yield", "claim": "Druid or Warlock."}
+ ],
+
+ "loadout": {
+  "slots": [
+   {"slot": "Head", "items": ["Mask of Soul Perception"], "alternates": ["Holy Lance Helm"]},
+   {"slot": "Cloak", "items": ["Cloak of Protection"], "alternates": ["Fleshmelter Cloak"]},
+   {"slot": "Chest", "items": ["Helldusk Armour"], "alternates": ["Armour of Agility"]},
+   {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power"], "note": "Mental Fatigue or Arcane Acuity: swap by fight."},
+   {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": ["Boots of Persistence", "Helldusk Boots"]},
+   {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure"]},
+   {"slot": "Ring", "items": ["Ring of Mental Inhibition"], "alternates": []},
+   {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Shadow-Cloaked Ring", "Ring of Protection"]},
+   {"slot": "Main hand", "abilities": ["Shadow Blade"], "note": "Cast with a 3rd-level slot for 3d8 psychic."},
+   {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield"]},
+   {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
+  ],
+  "armour_class": "Helldusk Armour 21 + Viconia's Walking Fortress 3 = 24 AC. Cloak of Protection makes 25, and Ring of Protection 26. Shield adds +5 when needed. Hits that land lose up to 10 to the Arcane Ward and 3 more to Helldusk."
+ },
+
+ "playbook": {
+  "turn": [
+   "Hold the front or a chokepoint, without inviting hits on purpose.",
+   "Cunning Action: Dash when Speedy Lightfeet charges or position matter.",
+   "Booming Blade with Shadow Blade, and add Sneak Attack on the hit.",
+   "Reposition so enemies choose between staying next to her or moving and taking Booming Blade damage.",
+   "Let AC, Shield, Arcane Ward, Uncanny Dodge, saves and damage reduction soak what gets through.",
+   "Later, psychic hits pile on Mental Fatigue so control spells land."
+  ],
+  "start_of_day": [
+   "Ask the Gloom Stalker for Longstrider.",
+   "Prepare the Wizard spells for her level, then swap freely out of combat.",
+   "From level 8, cast Shadow Blade. From level 9, use a 3rd-level slot.",
+   "Before a theft: Boon ring, Mask disguise, real helmet back on, then theft ring and gloves.",
+   "Decide whether the Resonance Stone is safe to carry today."
+  ],
+  "theft": [
+   "Put on Shapeshifter's Boon Ring, use the Mask of the Shapeshifter's disguise, then put her real helmet back on.",
+   "Put on Smuggler's Ring and Gloves of Thievery. If she might need Friends, get Guidance from the Druid; she can't concentrate on both.",
+   "Split from the group and Hide. Keep your friends out of the crime scene.",
+   "Steal at least one copy of every Wizard scroll you find.",
+   "After a successful pickpocket, leave before the victim notices.",
+   "If caught and given a dialogue check, pick Deception and cast Friends on that person for Advantage.",
+   "On Tactician, Friends can anger its target when it ends. Leave, camp or fast-travel before the 10 turns run out. Never use Friends on companions.",
+   "If you keep getting caught, slip away instead of escalating."
+  ],
+  "reactions": [
+   {"name": "Sneak Attack", "setting": "Ask", "why": "Put it on the Booming Blade hit, not a weak one."},
+   {"name": "Shield", "setting": "Ask", "why": "Spend the slot only when +5 AC changes the result."},
+   {"name": "Counterspell", "setting": "Ask", "why": "Skip harmless casts. It also charges the Arcane Ward."},
+   {"name": "Hellish Rebuke", "setting": "Ask", "why": "Low priority: weak with her Charisma."},
+   {"name": "Uncanny Dodge", "setting": "On", "why": "Its ordinary half-damage use is enough."},
+   {"name": "Rebuke of the Mighty (Viconia's)", "setting": "Ask", "why": "Never let it take the reaction you need for Shield or Counterspell."},
+   {"name": "Infernal Evasion (Helldusk Boots)", "setting": "Ask", "why": "Only when the failed save is truly dangerous."}
+  ],
+  "mage_hand": [
+   "Scout dangerous rooms while it's invisible. It turns visible when it acts and goes invisible again on a short rest.",
+   "Drop a potion for the Hand to throw to an ally.",
+   "Stand it next to an enemy to count as the ally Sneak Attack needs."
+  ]
+ }
+}

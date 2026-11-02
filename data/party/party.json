@@ -1,0 +1,8 @@
+{
+ "members": [
+  {"profile": "vesper"},
+  {"name": "Circle of the Stars Druid", "role": "Primary caster: raw spell save DC and Wisdom gear"},
+  {"name": "Gloom Stalker Ranger", "role": "Sharpshooter: crit range, multi-hit riders, reliable Advantage"},
+  {"name": "Warlock", "role": "Charisma caster: spell attack and leftover crit or Advantage gear"}
+ ]
+}
