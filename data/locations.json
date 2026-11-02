@@ -1,0 +1,2057 @@
+[
+ {
+  "name": "Abandoned Cistern",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Abandoned Cistern"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Abandoned_Cistern"
+ },
+ {
+  "name": "Abandoned Refuge",
+  "act": "one",
+  "parent": "Grymforge",
+  "path": [
+   "Grymforge",
+   "Abandoned Refuge"
+  ],
+  "summary": "It is south of and adjacent to Grymforge, and home to the Adamantine Forge and serves as a connecting landmass between the former and the latter, and overlooks Ancient Temple.",
+  "wiki_url": "https://bg3.wiki/wiki/Abandoned_Refuge"
+ },
+ {
+  "name": "Abandoned Windmill",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Abandoned Windmill"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Abandoned_Windmill"
+ },
+ {
+  "name": "Adamantine Forge",
+  "act": "one",
+  "parent": "Grymforge",
+  "path": [
+   "Grymforge",
+   "Adamantine Forge"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Adamantine_Forge_(location)"
+ },
+ {
+  "name": "Ancient Lair",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Ancient Lair"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Ancient_Lair"
+ },
+ {
+  "name": "Ancient Mausoleum",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Ancient Mausoleum"
+  ],
+  "summary": "It can be accessed through the mausoleum labelled as Grand Mausoluem in the Graveyard of the Lower City, not to be confused with the Grand Mausoleum which is a completely different location.",
+  "wiki_url": "https://bg3.wiki/wiki/Ancient_Mausoleum"
+ },
+ {
+  "name": "Ancient Temple",
+  "act": "one",
+  "parent": "Grymforge",
+  "path": [
+   "Grymforge",
+   "Ancient Temple"
+  ],
+  "summary": "A location discoverable in Act One, but without immediate access beyond some overlooking cliffs.",
+  "wiki_url": "https://bg3.wiki/wiki/Ancient_Temple"
+ },
+ {
+  "name": "Angleiron's Cellar",
+  "act": "three",
+  "parent": "Rivington General",
+  "path": [
+   "Rivington",
+   "Rivington General",
+   "Angleiron's Cellar"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Rivington_General"
+ },
+ {
+  "name": "Apothecary's Cellar",
+  "act": "one",
+  "parent": "Blighted Village",
+  "path": [
+   "Wilderness",
+   "Blighted Village",
+   "Apothecary's Cellar"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Apothecary's_Cellar"
+ },
+ {
+  "name": "Arcane Tower",
+  "act": "one",
+  "parent": "Underdark",
+  "path": [
+   "Underdark",
+   "Arcane Tower"
+  ],
+  "summary": "The tower overlooks the Ebonlake, and belongs to Lenore De Hurst. However, she has not returned home in over a decade.",
+  "wiki_url": "https://bg3.wiki/wiki/Arcane_Tower"
+ },
+ {
+  "name": "Arfur's Mansion",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Arfur's Mansion"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Arfur's_Mansion"
+ },
+ {
+  "name": "Armbrust's Home",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Armbrust's Home"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Armbrust's_Home"
+ },
+ {
+  "name": "Astral Plane",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Astral Plane"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Astral_Plane"
+ },
+ {
+  "name": "Avernus",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Avernus"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Avernus"
+ },
+ {
+  "name": "Baldur's Mouth",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Baldur's Mouth"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Baldur's_Mouth"
+ },
+ {
+  "name": "Barren's Coop",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Barren's Coop"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Barren's_Coop"
+ },
+ {
+  "name": "Basilisk Gate Barracks",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Basilisk Gate Barracks"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Basilisk_Gate_Barracks"
+ },
+ {
+  "name": "Beehive General Goods",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Beehive General Goods"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Beehive_General_Goods"
+ },
+ {
+  "name": "Bhaal Temple",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Bhaal Temple"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Bhaal_Temple"
+ },
+ {
+  "name": "Bibliophile",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Bibliophile"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Bibliophile"
+ },
+ {
+  "name": "Blighted Village",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Blighted Village"
+  ],
+  "summary": "The village is situated roughly midway between the Druid Grove and the Goblin Camp.",
+  "wiki_url": "https://bg3.wiki/wiki/Blighted_Village"
+ },
+ {
+  "name": "Bloodied Shrine",
+  "act": "one",
+  "parent": "Shattered Sanctum",
+  "path": [
+   "Wilderness",
+   "Shattered Sanctum",
+   "Bloodied Shrine"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Bloodied_Shrine"
+ },
+ {
+  "name": "Bloomridge Park",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Bloomridge Park"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Bloomridge_Park"
+ },
+ {
+  "name": "Blushing Mermaid",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Blushing Mermaid"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Blushing_Mermaid"
+ },
+ {
+  "name": "Bonecloak's Apothecary",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Bonecloak's Apothecary"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Bonecloak's_Apothecary"
+ },
+ {
+  "name": "Bruc and Pishe's Emporium",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Bruc and Pishe's Emporium"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Bruc_and_Pishe's_Emporium"
+ },
+ {
+  "name": "Campsite (Act One)",
+  "act": "one",
+  "parent": null,
+  "path": [
+   "Campsite (Act One)"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Campsite"
+ },
+ {
+  "name": "Campsite (Act Three)",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Campsite (Act Three)"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Campsite"
+ },
+ {
+  "name": "Campsite (Act Two)",
+  "act": "two",
+  "parent": null,
+  "path": [
+   "Campsite (Act Two)"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Campsite"
+ },
+ {
+  "name": "Candulhallow's Tombstones",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Candulhallow's Tombstones"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Candulhallow's_Tombstones"
+ },
+ {
+  "name": "Carm's Garms",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Carm's Garms"
+  ],
+  "summary": "It is a clothing store selling various camp clothing items, as well as dyes to diversify them.",
+  "wiki_url": "https://bg3.wiki/wiki/Carm's_Garms"
+ },
+ {
+  "name": "Cazador's Dungeon",
+  "act": "three",
+  "parent": "Szarr Palace",
+  "path": [
+   "Upper City",
+   "Szarr Palace",
+   "Cazador's Dungeon"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Cazador's_Dungeon"
+ },
+ {
+  "name": "Central Watch Tower",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Central Watch Tower"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Central_Watch_Tower"
+ },
+ {
+  "name": "Chromatic Scale",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Chromatic Scale"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Chromatic_Scale"
+ },
+ {
+  "name": "Circus of the Last Days",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Circus of the Last Days"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Circus_of_the_Last_Days"
+ },
+ {
+  "name": "Cloister of Sombre Embrace",
+  "act": "three",
+  "parent": "House of Grief",
+  "path": [
+   "Lower City",
+   "House of Grief",
+   "Cloister of Sombre Embrace"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Cloister_of_Sombre_Embrace"
+ },
+ {
+  "name": "Counting House",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Counting House"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Counting_House"
+ },
+ {
+  "name": "Crimson Draughts",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Crimson Draughts"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Crimson_Draughts"
+ },
+ {
+  "name": "Crèche Y'llek",
+  "act": "one",
+  "parent": "Rosymorn Monastery Trail",
+  "path": [
+   "Rosymorn Monastery Trail",
+   "Crèche Y'llek"
+  ],
+  "summary": "It is a Githyanki base located directly under Rosymorn Monastery and can be reached through one of two entrances.",
+  "wiki_url": "https://bg3.wiki/wiki/Cr%C3%A8che_Y'llek"
+ },
+ {
+  "name": "Dank Crypt",
+  "act": "one",
+  "parent": "Overgrown Ruins",
+  "path": [
+   "Wilderness",
+   "Overgrown Ruins",
+   "Dank Crypt"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Overgrown_Ruins"
+ },
+ {
+  "name": "Danthelon's Dancing Axe",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Danthelon's Dancing Axe"
+  ],
+  "summary": "It is also mentioned by Jaheira as a safehouse for the Harpers, if she is alive and has been recruited by the player character.",
+  "wiki_url": "https://bg3.wiki/wiki/Danthelon's_Dancing_Axe"
+ },
+ {
+  "name": "Decrepit Sanctuary",
+  "act": "one",
+  "parent": "Sunlit Wetlands",
+  "path": [
+   "Wilderness",
+   "Sunlit Wetlands",
+   "Decrepit Sanctuary"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sunlit_Wetlands"
+ },
+ {
+  "name": "Decrepit Village",
+  "act": "one",
+  "parent": "Underdark",
+  "path": [
+   "Underdark",
+   "Decrepit Village"
+  ],
+  "summary": "It is located adjacent to the Ebonlake. This area also serves as the access point to the Grymforge via the skiff at the dock.",
+  "wiki_url": "https://bg3.wiki/wiki/Decrepit_Village"
+ },
+ {
+  "name": "Defiled Temple",
+  "act": "one",
+  "parent": "Shattered Sanctum",
+  "path": [
+   "Wilderness",
+   "Shattered Sanctum",
+   "Defiled Temple"
+  ],
+  "summary": "It serves as one of the entrances to the Underdark.",
+  "wiki_url": "https://bg3.wiki/wiki/Defiled_Temple"
+ },
+ {
+  "name": "Devil's Den",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Devil's Den"
+  ],
+  "summary": "It is located in one of Sharess' Caress' private rooms, and is currently in use by Raphael.",
+  "wiki_url": "https://bg3.wiki/wiki/Devil's_Den"
+ },
+ {
+  "name": "Devil's Fee",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Devil's Fee"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Devil's_Fee"
+ },
+ {
+  "name": "Dragon's Sanctum",
+  "act": "three",
+  "parent": "Wyrm's Rock Fortress",
+  "path": [
+   "Wyrm's Rock Fortress",
+   "Dragon's Sanctum"
+  ],
+  "summary": "This vast cave deep beneath the Wyrm's Rock isle is described in legends as the hiding place of Ansur, protector of Baldur's Gate.",
+  "wiki_url": "https://bg3.wiki/wiki/The_Dragon's_Sanctum"
+ },
+ {
+  "name": "Dread Hollow",
+  "act": "one",
+  "parent": "Underdark",
+  "path": [
+   "Underdark",
+   "Dread Hollow"
+  ],
+  "summary": "A major landmark of this location is a large and wide-spreading Sussur Tree.",
+  "wiki_url": "https://bg3.wiki/wiki/Dread_Hollow"
+ },
+ {
+  "name": "Druids' Chambers",
+  "act": "one",
+  "parent": "Inner Sanctum",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Inner Sanctum",
+   "Druids' Chambers"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Inner_Sanctum"
+ },
+ {
+  "name": "Durinbold Mausoleum",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Durinbold Mausoleum"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Durinbold_Mausoleum"
+ },
+ {
+  "name": "Ebonlake Grotto",
+  "act": "one",
+  "parent": "Underdark",
+  "path": [
+   "Underdark",
+   "Ebonlake Grotto"
+  ],
+  "summary": "It is the home of the Myconid Circle, a group of mushroom-like telepaths led by Sovereign Spaw.",
+  "wiki_url": "https://bg3.wiki/wiki/Ebonlake_Grotto"
+ },
+ {
+  "name": "Elerrathin's Home",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Elerrathin's Home"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Elerrathin's_Home"
+ },
+ {
+  "name": "Elfsong Tavern",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Elfsong Tavern"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Elfsong_Tavern"
+ },
+ {
+  "name": "Elminster's Library",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Elminster's Library"
+  ],
+  "summary": "It is one of thematic parlours on the Upper Floor of Sharess' Caress.",
+  "wiki_url": "https://bg3.wiki/wiki/Elminster's_Library"
+ },
+ {
+  "name": "Emerald Grove",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Emerald Grove"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Emerald_Grove"
+ },
+ {
+  "name": "Enclave Library",
+  "act": "one",
+  "parent": "Inner Sanctum",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Inner Sanctum",
+   "Enclave Library"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Inner_Sanctum"
+ },
+ {
+  "name": "Facemaker's Boutique",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Facemaker's Boutique"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Facemaker's_Boutique"
+ },
+ {
+  "name": "Felogyr's Fireworks",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Felogyr's Fireworks"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Felogyr's_Fireworks"
+ },
+ {
+  "name": "Festering Cove",
+  "act": "one",
+  "parent": "Underdark",
+  "path": [
+   "Underdark",
+   "Festering Cove"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Festering_Cove"
+ },
+ {
+  "name": "Flymm Cargo",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Flymm Cargo"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Flymm_Cargo"
+ },
+ {
+  "name": "Flymm's Cobblers",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Flymm's Cobblers"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Flymm's_Cobblers"
+ },
+ {
+  "name": "Forest",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Forest"
+  ],
+  "summary": "It is found west of the Emerald Grove and encompasses the entirety of the Blighted Village.",
+  "wiki_url": "https://bg3.wiki/wiki/Forest"
+ },
+ {
+  "name": "Forge of the Nine",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Forge of the Nine"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Forge_of_the_Nine"
+ },
+ {
+  "name": "Fraygo's Flophouse",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Fraygo's Flophouse"
+  ],
+  "summary": "It is a three-storied building on the western side of the Wyrm's Crossing, just north from the ramparts of South Span Checkpoint.",
+  "wiki_url": "https://bg3.wiki/wiki/Fraygo's_Flophouse"
+ },
+ {
+  "name": "Gauntlet of Shar",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Gauntlet of Shar"
+  ],
+  "summary": "It is only accessible through the Grand Mausoleum in the Shadow-Cursed Lands. It is the major dungeon of Act Two, featuring many puzzles and combat encounters, and its completion leads to pivotal developments in multiple questlines. This location also plays a central role in Shadowheart's personal quest ⁠Daughter of Darkness.",
+  "wiki_url": "https://bg3.wiki/wiki/Gauntlet_of_Shar"
+ },
+ {
+  "name": "Glitter Gala",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Glitter Gala"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Glitter_Gala"
+ },
+ {
+  "name": "Goblin Camp",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Goblin Camp"
+  ],
+  "summary": "It is the exterior area of the former temple of Selûne, adjacent to the Shattered Sanctum.",
+  "wiki_url": "https://bg3.wiki/wiki/Goblin_Camp"
+ },
+ {
+  "name": "Golbraith's Cellar",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Golbraith's Cellar"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Golbraith's_Cellar"
+ },
+ {
+  "name": "Gorion Mausoleum",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Gorion Mausoleum"
+  ],
+  "summary": "It can be accessed through the Graveyard of the Lower City.",
+  "wiki_url": "https://bg3.wiki/wiki/Gorion_Mausoleum"
+ },
+ {
+  "name": "Grand Mausoleum",
+  "act": "two",
+  "parent": "Reithwin Town",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "Grand Mausoleum"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Grand_Mausoleum"
+ },
+ {
+  "name": "Graveyard (Lower City)",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Graveyard (Lower City)"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Graveyard_(Lower_City)"
+ },
+ {
+  "name": "Grey Harbour Docks",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Grey Harbour Docks"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Grey_Harbour_Docks"
+ },
+ {
+  "name": "Grymforge",
+  "act": "one",
+  "parent": null,
+  "path": [
+   "Grymforge"
+  ],
+  "summary": "The remains of an ancient underground fortress built around the legendary Adamantine Forge. It can be accessed by traversing the Ebonlake using a skiff at the Underdark beach.",
+  "wiki_url": "https://bg3.wiki/wiki/Grymforge"
+ },
+ {
+  "name": "Guildhall",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Guildhall"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Guildhall"
+ },
+ {
+  "name": "Gur Camp",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Gur Camp"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Gur_Camp"
+ },
+ {
+  "name": "Heapside Prison",
+  "act": "three",
+  "parent": "Basilisk Gate Barracks",
+  "path": [
+   "Lower City",
+   "Basilisk Gate Barracks",
+   "Heapside Prison"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Basilisk_Gate_Barracks"
+ },
+ {
+  "name": "Hhune Mausoleum",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Hhune Mausoleum"
+  ],
+  "summary": "It can be accessed through the Graveyard of the Lower City. The aboveground entrance is on the northern side of the mortuary.",
+  "wiki_url": "https://bg3.wiki/wiki/Hhune_Mausoleum"
+ },
+ {
+  "name": "Hidden Vault",
+  "act": "one",
+  "parent": "Inner Sanctum",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Inner Sanctum",
+   "Hidden Vault"
+  ],
+  "summary": "It is a locked chamber in the Inner Sanctum accessed with the Rune of the Wolf.",
+  "wiki_url": "https://bg3.wiki/wiki/Inner_Sanctum"
+ },
+ {
+  "name": "High Hall",
+  "act": "three",
+  "parent": "Upper City",
+  "path": [
+   "Upper City",
+   "High Hall"
+  ],
+  "summary": "This area is accessible only after travelling to the Morphic Pool to begin the final quest of Baldur's Gate 3.",
+  "wiki_url": "https://bg3.wiki/wiki/High_Hall"
+ },
+ {
+  "name": "Highberry's Home",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Highberry's Home"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Highberry's_Home"
+ },
+ {
+  "name": "Hollow",
+  "act": "one",
+  "parent": "Emerald Grove",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Hollow"
+  ],
+  "summary": "It is the section of the Emerald Grove where most of the tiefling refugees reside.",
+  "wiki_url": "https://bg3.wiki/wiki/The_Hollow"
+ },
+ {
+  "name": "House in Deep Shadows",
+  "act": "two",
+  "parent": "Ruined Battlefield",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Ruined Battlefield",
+   "House in Deep Shadows"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/House_in_Deep_Shadows"
+ },
+ {
+  "name": "House of Grief",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "House of Grief"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/House_of_Grief"
+ },
+ {
+  "name": "House of Healing",
+  "act": "two",
+  "parent": "Reithwin Town",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "House of Healing"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/House_of_Healing"
+ },
+ {
+  "name": "House of Healing Morgue",
+  "act": "two",
+  "parent": "House of Healing",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "House of Healing",
+   "House of Healing Morgue"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/House_of_Healing"
+ },
+ {
+  "name": "House of Hope",
+  "act": "three",
+  "parent": "Avernus",
+  "path": [
+   "Avernus",
+   "House of Hope"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/House_of_Hope"
+ },
+ {
+  "name": "Inner Sanctum",
+  "act": "one",
+  "parent": "Emerald Grove",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Inner Sanctum"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Inner_Sanctum"
+ },
+ {
+  "name": "Iron Throne",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Iron Throne"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Iron_Throne"
+ },
+ {
+  "name": "Jungle",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Jungle"
+  ],
+  "summary": "It is accessible only through Akabi at the Circus of the Last Days in Rivington. A single party member can be teleported here if they win the jackpot in Akabi's spin the wheel game.",
+  "wiki_url": "https://bg3.wiki/wiki/Jungle"
+ },
+ {
+  "name": "Knights of the Shield Hideout",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Knights of the Shield Hideout"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Knights_of_the_Shield_Hideout"
+ },
+ {
+  "name": "Lady Jannath's Estate",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Lady Jannath's Estate"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Lady_Jannath's_Estate"
+ },
+ {
+  "name": "Last Light Inn",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Last Light Inn"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Last_Light_Inn"
+ },
+ {
+  "name": "Last Light Inn Cellar",
+  "act": "two",
+  "parent": "Last Light Inn",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Last Light Inn",
+   "Last Light Inn Cellar"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Last_Light_Inn"
+ },
+ {
+  "name": "Lavernica's Home",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Lavernica's Home"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Lavernica's_Home"
+ },
+ {
+  "name": "Lodge",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Lodge"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Lodge"
+ },
+ {
+  "name": "Lodge Basement Docks",
+  "act": "three",
+  "parent": "Lodge",
+  "path": [
+   "Lower City",
+   "Lodge",
+   "Lodge Basement Docks"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Lodge"
+ },
+ {
+  "name": "Lora's House",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Lora's House"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Lora's_House"
+ },
+ {
+  "name": "Lower City",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Lower City"
+  ],
+  "summary": "The Lower City is accessed after passing through Wyrm's Rock Fortress and exiting via the North Span.",
+  "wiki_url": "https://bg3.wiki/wiki/Lower_City"
+ },
+ {
+  "name": "Lower City Sewers",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Lower City Sewers"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Lower_City_Sewers"
+ },
+ {
+  "name": "Lustrous Lass",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Lustrous Lass"
+  ],
+  "summary": "It is a ship docked at the Grey Harbour Docks in the Lower City at X: -181 Y: -231. The crew is dead and the air is thick with Sea Plague.",
+  "wiki_url": "https://bg3.wiki/wiki/Lustrous_Lass"
+ },
+ {
+  "name": "Mason's Guild",
+  "act": "two",
+  "parent": "Reithwin Town",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "Mason's Guild"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Mason's_Guild"
+ },
+ {
+  "name": "Mind Flayer Colony",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Mind Flayer Colony"
+  ],
+  "summary": "It is located under the Moonrise Towers Prison in the Shadow-Cursed Lands.",
+  "wiki_url": "https://bg3.wiki/wiki/Mind_Flayer_Colony"
+ },
+ {
+  "name": "Moonrise Towers",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Moonrise Towers"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Moonrise_Towers"
+ },
+ {
+  "name": "Moonrise Towers Prison",
+  "act": "two",
+  "parent": "Moonrise Towers",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Moonrise Towers",
+   "Moonrise Towers Prison"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Moonrise_Towers_Prison"
+ },
+ {
+  "name": "Moonrise Towers Rooftop",
+  "act": "two",
+  "parent": "Moonrise Towers",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Moonrise Towers",
+   "Moonrise Towers Rooftop"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Moonrise_Towers_Rooftop"
+ },
+ {
+  "name": "Morphic Pool",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Morphic Pool"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Morphic_Pool"
+ },
+ {
+  "name": "Mortuary",
+  "act": "three",
+  "parent": "Graveyard (Lower City)",
+  "path": [
+   "Lower City",
+   "Graveyard (Lower City)",
+   "Mortuary"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Graveyard_(Lower_City)"
+ },
+ {
+  "name": "Mountain Pass",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Mountain Pass"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Mountain_Pass"
+ },
+ {
+  "name": "Murder Tribunal",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Murder Tribunal"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Murder_Tribunal"
+ },
+ {
+  "name": "Nautiloid",
+  "act": "prologue",
+  "parent": null,
+  "path": [
+   "Nautiloid"
+  ],
+  "summary": "It is the first area in the game.",
+  "wiki_url": "https://bg3.wiki/wiki/Nautiloid"
+ },
+ {
+  "name": "Necrotic Laboratory",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Necrotic Laboratory"
+  ],
+  "summary": "It is part of the Mind Flayer Colony located in the south-east (entrance X: 715 Y: -50) and connected directly to its other part, Morgue.",
+  "wiki_url": "https://bg3.wiki/wiki/Necrotic_Laboratory"
+ },
+ {
+  "name": "Nortale's Hostel",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Nortale's Hostel"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Nortale's_Hostel"
+ },
+ {
+  "name": "Nymph's Grotto",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Nymph's Grotto"
+  ],
+  "summary": "It is one of Sharess' Caress' private rooms, currently in use by Naoise Nallinto.",
+  "wiki_url": "https://bg3.wiki/wiki/Nymph's_Grotto"
+ },
+ {
+  "name": "Old Garlow's Place",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Old Garlow's Place"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Old_Garlow's_Place"
+ },
+ {
+  "name": "Old Jol's",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Old Jol's"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Old_Jol's"
+ },
+ {
+  "name": "Open Hand Temple",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Open Hand Temple"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Open_Hand_Temple"
+ },
+ {
+  "name": "Open Hand Temple Cellar",
+  "act": "three",
+  "parent": "Open Hand Temple Underground Area",
+  "path": [
+   "Rivington",
+   "Open Hand Temple Underground Area",
+   "Open Hand Temple Cellar"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Open_Hand_Temple_Underground_Area"
+ },
+ {
+  "name": "Open Hand Temple Underground Area",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Open Hand Temple Underground Area"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Open_Hand_Temple_Underground_Area"
+ },
+ {
+  "name": "Oubliette",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Oubliette"
+  ],
+  "summary": "Shrouded in shadow and covered in bloody viscera, it houses prisoners of the Cult of the Absolute, both living and dead.",
+  "wiki_url": "https://bg3.wiki/wiki/Oubliette"
+ },
+ {
+  "name": "Overgrown Ruins",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Overgrown Ruins"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Overgrown_Ruins"
+ },
+ {
+  "name": "Overgrown Tunnel",
+  "act": "one",
+  "parent": "Sunlit Wetlands",
+  "path": [
+   "Wilderness",
+   "Sunlit Wetlands",
+   "Overgrown Tunnel"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Overgrown_Tunnel"
+ },
+ {
+  "name": "Owlbear Nest",
+  "act": "one",
+  "parent": "Forest",
+  "path": [
+   "Wilderness",
+   "Forest",
+   "Owlbear Nest"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Owlbear_Nest"
+ },
+ {
+  "name": "Peartree House",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Peartree House"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Peartree_House"
+ },
+ {
+  "name": "Philgrave's Mansion",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Philgrave's Mansion"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Philgrave's_Mansion"
+ },
+ {
+  "name": "Rainforest's Home",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Rainforest's Home"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Rainforest's_Home"
+ },
+ {
+  "name": "Ramazith's Tower",
+  "act": "three",
+  "parent": "Upper City",
+  "path": [
+   "Upper City",
+   "Ramazith's Tower"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Ramazith's_Tower"
+ },
+ {
+  "name": "Ravaged Beach",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Ravaged Beach"
+  ],
+  "summary": "This is the location the player character finds themselves immediately after the events of the Prologue.",
+  "wiki_url": "https://bg3.wiki/wiki/Ravaged_Beach"
+ },
+ {
+  "name": "Reithwin Graveyard",
+  "act": "two",
+  "parent": "House of Healing",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "House of Healing",
+   "Reithwin Graveyard"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/House_of_Healing"
+ },
+ {
+  "name": "Reithwin Tollhouse",
+  "act": "two",
+  "parent": "Reithwin Town",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "Reithwin Tollhouse"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Reithwin_Tollhouse"
+ },
+ {
+  "name": "Reithwin Town",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Reithwin_Town"
+ },
+ {
+  "name": "Risen Road",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Risen Road"
+  ],
+  "summary": "It runs parallel to the River Chionthar, and serves as an alternate route of trade.",
+  "wiki_url": "https://bg3.wiki/wiki/The_Risen_Road"
+ },
+ {
+  "name": "Risen Road Toll House",
+  "act": "one",
+  "parent": "Risen Road",
+  "path": [
+   "Wilderness",
+   "Risen Road",
+   "Risen Road Toll House"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Risen_Road"
+ },
+ {
+  "name": "Riverside Teahouse",
+  "act": "one",
+  "parent": "Sunlit Wetlands",
+  "path": [
+   "Wilderness",
+   "Sunlit Wetlands",
+   "Riverside Teahouse"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sunlit_Wetlands"
+ },
+ {
+  "name": "Rivington",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Rivington"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Rivington"
+ },
+ {
+  "name": "Rivington General",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Rivington General"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Rivington_General"
+ },
+ {
+  "name": "Rosymorn Monastery",
+  "act": "one",
+  "parent": "Rosymorn Monastery Trail",
+  "path": [
+   "Rosymorn Monastery Trail",
+   "Rosymorn Monastery"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Rosymorn_Monastery"
+ },
+ {
+  "name": "Rosymorn Monastery Trail",
+  "act": "one",
+  "parent": null,
+  "path": [
+   "Rosymorn Monastery Trail"
+  ],
+  "summary": "The Trail is a part of Act One, but is not a part of the Wilderness.",
+  "wiki_url": "https://bg3.wiki/wiki/Rosymorn_Monastery_Trail"
+ },
+ {
+  "name": "Ruined Battlefield",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Ruined Battlefield"
+  ],
+  "summary": "This is the location the party first arrive in when progressing from Act One.",
+  "wiki_url": "https://bg3.wiki/wiki/Ruined_Battlefield"
+ },
+ {
+  "name": "Sacred Pool",
+  "act": "one",
+  "parent": "Emerald Grove",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Sacred Pool"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sacred_Pool"
+ },
+ {
+  "name": "Secluded Chamber",
+  "act": "one",
+  "parent": "Hollow",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Hollow",
+   "Secluded Chamber"
+  ],
+  "summary": "It is a small cavern accessible from The Hollow where Zevlor is found.",
+  "wiki_url": "https://bg3.wiki/wiki/The_Hollow"
+ },
+ {
+  "name": "Secluded Cove",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Secluded Cove"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Secluded_Cove"
+ },
+ {
+  "name": "Secret Chamber",
+  "act": "one",
+  "parent": "Crèche Y'llek",
+  "path": [
+   "Rosymorn Monastery Trail",
+   "Crèche Y'llek",
+   "Secret Chamber"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Secret_Chamber"
+ },
+ {
+  "name": "Selûnite Outpost",
+  "act": "one",
+  "parent": "Underdark",
+  "path": [
+   "Underdark",
+   "Selûnite Outpost"
+  ],
+  "summary": "It is located in the south eastern part of the Underdark and can also be reached from the Defiled Temple.",
+  "wiki_url": "https://bg3.wiki/wiki/Sel%C3%BBnite_Outpost"
+ },
+ {
+  "name": "Servants' Quarters",
+  "act": "one",
+  "parent": "Inner Sanctum",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Inner Sanctum",
+   "Servants' Quarters"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Inner_Sanctum"
+ },
+ {
+  "name": "Shadow-Cursed Lands",
+  "act": "two",
+  "parent": null,
+  "path": [
+   "Shadow-Cursed Lands"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Shadow-Cursed_Lands"
+ },
+ {
+  "name": "Shadowfell",
+  "act": "two",
+  "parent": null,
+  "path": [
+   "Shadowfell"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Shadowfell"
+ },
+ {
+  "name": "Sharess' Caress",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Sharess' Caress"
+  ],
+  "summary": "It is a huge pleasure house run by Mamzell Amira and Kira the Cat.",
+  "wiki_url": "https://bg3.wiki/wiki/Sharess'_Caress"
+ },
+ {
+  "name": "Sharran Sanctuary",
+  "act": "two",
+  "parent": "Reithwin Town",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "Sharran Sanctuary"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sharran_Sanctuary"
+ },
+ {
+  "name": "Shattered Sanctum",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Shattered Sanctum"
+  ],
+  "summary": "It is the interior area of the Goblin Camp, and leads to the Defiled Temple and Worg Pens.",
+  "wiki_url": "https://bg3.wiki/wiki/Shattered_Sanctum"
+ },
+ {
+  "name": "Singing Lute",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Singing Lute"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Singing_Lute"
+ },
+ {
+  "name": "Sorcerous Sundries",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Sorcerous Sundries"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sorcerous_Sundries"
+ },
+ {
+  "name": "Sorcerous Vault",
+  "act": "three",
+  "parent": "Sorcerous Sundries",
+  "path": [
+   "Lower City",
+   "Sorcerous Sundries",
+   "Sorcerous Vault"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sorcerous_Vault"
+ },
+ {
+  "name": "South Span Checkpoint",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "South Span Checkpoint"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/South_Span_Checkpoint"
+ },
+ {
+  "name": "Steel Watch Foundry",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Steel Watch Foundry"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Steel_Watch_Foundry"
+ },
+ {
+  "name": "Storehouse",
+  "act": "one",
+  "parent": "Underdark",
+  "path": [
+   "Underdark",
+   "Storehouse"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Storehouse"
+ },
+ {
+  "name": "Stormshore Armoury",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Stormshore Armoury"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Stormshore_Armoury"
+ },
+ {
+  "name": "Stormshore Tabernacle",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Stormshore Tabernacle"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Stormshore_Tabernacle"
+ },
+ {
+  "name": "Submersible",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Submersible"
+  ],
+  "summary": "It can be accessed from the basement of Flymm Cargo, and provides access to the Iron Throne.",
+  "wiki_url": "https://bg3.wiki/wiki/Submersible"
+ },
+ {
+  "name": "Sunlit Wetlands",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Sunlit Wetlands"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sunlit_Wetlands"
+ },
+ {
+  "name": "Sword Coast Couriers",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Sword Coast Couriers"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Sword_Coast_Couriers"
+ },
+ {
+  "name": "Szarr Palace",
+  "act": "three",
+  "parent": "Upper City",
+  "path": [
+   "Upper City",
+   "Szarr Palace"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Szarr_Palace"
+ },
+ {
+  "name": "Tadpoling Centre",
+  "act": "two",
+  "parent": "Shadow-Cursed Lands",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Tadpoling Centre"
+  ],
+  "summary": "It is where captives of the Cult of the Absolute deemed worthy of further 'usage' are kept, tadpoled and sometimes turned into mind flayers. It can be reached (as the rest of the colony) only within Act Two of the game and only after the initial fight with Ketheric Thorm.",
+  "wiki_url": "https://bg3.wiki/wiki/Tadpoling_Centre"
+ },
+ {
+  "name": "Tiefling Hideout",
+  "act": "one",
+  "parent": "Emerald Grove",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Tiefling Hideout"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Tiefling_Hideout"
+ },
+ {
+  "name": "Undercity",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Undercity"
+  ],
+  "summary": "It is located beneath the Lower City.",
+  "wiki_url": "https://bg3.wiki/wiki/Undercity"
+ },
+ {
+  "name": "Undercity Ruins",
+  "act": "three",
+  "parent": "Undercity",
+  "path": [
+   "Undercity",
+   "Undercity Ruins"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Undercity_Ruins"
+ },
+ {
+  "name": "Underdark",
+  "act": "one",
+  "parent": null,
+  "path": [
+   "Underdark"
+  ],
+  "summary": "It is a vast series of caverns and tunnels devoid of sunlight but full of dangerous creatures and even more dangerous mushrooms. It also contains a multitude of alchemical ingredients that are hard to find elsewhere.",
+  "wiki_url": "https://bg3.wiki/wiki/Underdark"
+ },
+ {
+  "name": "Underdark Pleasures",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Underdark Pleasures"
+  ],
+  "summary": "It is one of Sharess' Caress' thematic parlours, in use by Nym and Sorn Orlith.",
+  "wiki_url": "https://bg3.wiki/wiki/Underdark_Pleasures"
+ },
+ {
+  "name": "Underground Passage",
+  "act": "one",
+  "parent": "Emerald Grove",
+  "path": [
+   "Wilderness",
+   "Emerald Grove",
+   "Underground Passage"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Underground_Passage"
+ },
+ {
+  "name": "Upper City",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Upper City"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Upper_City"
+ },
+ {
+  "name": "Upper City Gate Checkpoint",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Upper City Gate Checkpoint"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Upper_City_Gate_Checkpoint"
+ },
+ {
+  "name": "Velveteen Elixir",
+  "act": "three",
+  "parent": "Wyrm's Crossing",
+  "path": [
+   "Wyrm's Crossing",
+   "Velveteen Elixir"
+  ],
+  "summary": "It is an establishment trading in various elixirs, potions and alchemical ingredients, including quite rare ones.",
+  "wiki_url": "https://bg3.wiki/wiki/The_Velveteen_Elixir"
+ },
+ {
+  "name": "Vonayn's Home",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Vonayn's Home"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Vonayn's_Home"
+ },
+ {
+  "name": "Waning Moon",
+  "act": "two",
+  "parent": "Reithwin Town",
+  "path": [
+   "Shadow-Cursed Lands",
+   "Reithwin Town",
+   "Waning Moon"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Waning_Moon"
+ },
+ {
+  "name": "Water Queen's House",
+  "act": "three",
+  "parent": "Lower City",
+  "path": [
+   "Lower City",
+   "Water Queen's House"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Water_Queen's_House"
+ },
+ {
+  "name": "Waukeen's Rest",
+  "act": "one",
+  "parent": "Wilderness",
+  "path": [
+   "Wilderness",
+   "Waukeen's Rest"
+  ],
+  "summary": "It is an inn that serves passing travellers but has recently been sacked by goblins and drow.",
+  "wiki_url": "https://bg3.wiki/wiki/Waukeen's_Rest"
+ },
+ {
+  "name": "Western Beach",
+  "act": "three",
+  "parent": "Rivington",
+  "path": [
+   "Rivington",
+   "Western Beach"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Western_Beach"
+ },
+ {
+  "name": "Whispering Depths",
+  "act": "one",
+  "parent": "Blighted Village",
+  "path": [
+   "Wilderness",
+   "Blighted Village",
+   "Whispering Depths"
+  ],
+  "summary": "It is situated below the village.",
+  "wiki_url": "https://bg3.wiki/wiki/Whispering_Depths"
+ },
+ {
+  "name": "Wilderness",
+  "act": "one",
+  "parent": null,
+  "path": [
+   "Wilderness"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Wilderness"
+ },
+ {
+  "name": "Worg Pens",
+  "act": "one",
+  "parent": "Shattered Sanctum",
+  "path": [
+   "Wilderness",
+   "Shattered Sanctum",
+   "Worg Pens"
+  ],
+  "summary": "It is a separate sub-area which can be reached only from the Sanctum.",
+  "wiki_url": "https://bg3.wiki/wiki/Worg_Pens"
+ },
+ {
+  "name": "Wyrm's Crossing",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Wyrm's Crossing"
+  ],
+  "summary": "Hemmed in between Rivington and the Wyrm's Rock Fortress, it must be crossed to enter the Lower City.",
+  "wiki_url": "https://bg3.wiki/wiki/Wyrm's_Crossing"
+ },
+ {
+  "name": "Wyrm's Rock Fortress",
+  "act": "three",
+  "parent": null,
+  "path": [
+   "Wyrm's Rock Fortress"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Wyrm's_Rock_Fortress"
+ },
+ {
+  "name": "Wyrm's Rock Prison",
+  "act": "three",
+  "parent": "Wyrm's Rock Fortress",
+  "path": [
+   "Wyrm's Rock Fortress",
+   "Wyrm's Rock Prison"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Wyrm's_Rock_Prison"
+ },
+ {
+  "name": "Wyrmway",
+  "act": "three",
+  "parent": "Wyrm's Rock Fortress",
+  "path": [
+   "Wyrm's Rock Fortress",
+   "Wyrmway"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/The_Wyrmway"
+ },
+ {
+  "name": "Zhentarim Basement",
+  "act": "one",
+  "parent": "Waukeen's Rest",
+  "path": [
+   "Wilderness",
+   "Waukeen's Rest",
+   "Zhentarim Basement"
+  ],
+  "summary": null,
+  "wiki_url": "https://bg3.wiki/wiki/Zhentarim_Basement"
+ }
+]

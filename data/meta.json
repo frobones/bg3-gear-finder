@@ -1,0 +1,24 @@
+{
+ "snapshot_utc": "2026-11-02T19:11:29+00:00",
+ "source": "https://bg3.wiki",
+ "source_tables": [
+  "equipment",
+  "weapons",
+  "item_locations",
+  "locations"
+ ],
+ "license": "Content from bg3.wiki, CC BY-NC-SA 4.0 or CC BY-SA 4.0",
+ "license_url": "https://bg3.wiki/wiki/bg3wiki:Copyrights",
+ "counts": {
+  "items": 1256,
+  "items_by_kind": {
+   "equipment": 828,
+   "weapon": 428
+  },
+  "items_without_location_data": 206,
+  "acquisitions": 1317,
+  "acquisitions_without_place": 434,
+  "item_location_rows_skipped_non_gear": 0,
+  "locations": 184
+ }
+}

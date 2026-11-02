@@ -1,0 +1,52 @@
+{
+ "acts": ["prologue", "one", "two", "three"],
+ "zones": {
+  "prologue": ["Nautiloid"],
+  "one": [
+   "Campsite (Act One)",
+   "Ravaged Beach",
+   "Wilderness",
+   "Overgrown Ruins",
+   "Emerald Grove",
+   "Forest",
+   "Blighted Village",
+   "Sunlit Wetlands",
+   "Risen Road",
+   "Waukeen's Rest",
+   "Secluded Cove",
+   "Goblin Camp",
+   "Shattered Sanctum",
+   "Underdark",
+   "Grymforge",
+   "Mountain Pass",
+   "Rosymorn Monastery Trail",
+   "Crèche Y'llek"
+  ],
+  "two": [
+   "Campsite (Act Two)",
+   "Shadow-Cursed Lands",
+   "Last Light Inn",
+   "Reithwin Town",
+   "Ruined Battlefield",
+   "Moonrise Towers",
+   "Oubliette",
+   "Necrotic Laboratory",
+   "Gauntlet of Shar",
+   "Shadowfell",
+   "Tadpoling Centre",
+   "Mind Flayer Colony"
+  ],
+  "three": [
+   "Campsite (Act Three)",
+   "Rivington",
+   "Wyrm's Crossing",
+   "Wyrm's Rock Fortress",
+   "Lower City",
+   "Undercity",
+   "Upper City",
+   "Avernus",
+   "Jungle",
+   "Astral Plane"
+  ]
+ }
+}
