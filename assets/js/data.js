@@ -2,7 +2,7 @@
 
 import { RARITIES } from "./html.js";
 
-const FILES = ["items", "acquisitions", "region_order", "meta", "abilities"];
+const FILES = ["items", "acquisitions", "region_order", "meta", "abilities", "party/party"];
 
 async function loadJson(name) {
   const response = await fetch(`data/${name}.json`);
@@ -24,8 +24,24 @@ export function averageDamage(damage) {
 
 const byOrder = (a, b) => (a.order ?? Infinity) - (b.order ?? Infinity);
 
+/** Map each item to the party members whose profile mentions it in their gear plan. */
+export function wantedByItem(profiles) {
+  const wanted = new Map();
+  for (const profile of profiles) {
+    for (const entry of profile.gear) {
+      if (!entry.item) continue;
+      if (!wanted.has(entry.item)) wanted.set(entry.item, []);
+      wanted.get(entry.item).push({ profile, entry });
+    }
+  }
+  return wanted;
+}
+
 export async function loadData() {
-  const [items, acquisitions, regionOrder, meta, abilities] = await Promise.all(FILES.map(loadJson));
+  const [items, acquisitions, regionOrder, meta, abilities, roster] = await Promise.all(FILES.map(loadJson));
+  const profiles = await Promise.all(
+    roster.members.filter((m) => m.profile).map((m) => loadJson(`party/${m.profile}`)),
+  );
 
   const acquisitionsByItem = new Map();
   for (const acquisition of acquisitions) {
@@ -59,5 +75,10 @@ export async function loadData() {
     regionOrder,
     meta,
     abilities: new Map(abilities.map((a) => [a.id, a])),
+    party: {
+      members: roster.members,
+      profiles: new Map(profiles.map((p) => [p.id, p])),
+      wantedBy: wantedByItem(profiles),
+    },
   };
 }

@@ -1,4 +1,4 @@
-// Pop-outs that explain an item's passives and weapon actions.
+// Pop-outs that explain passives, weapon actions and spells, in the item panel and on party profiles.
 //
 // Hovering (mouse) or focusing (keyboard) a name previews it; clicking or tapping pins it open until you
 // click elsewhere, press Escape, or click the name again. The pop-out is inserted right after its name so
@@ -11,20 +11,36 @@ const HOVER_CLOSE_MS = 200;
 const EDGE_MARGIN_PX = 8;
 const GAP_PX = 6;
 
+/** An ability's name as a pop-out trigger, or plain text when the snapshot has no data for it. */
+export function abilityName(name, abilities) {
+  const ability = abilities.get(name);
+  if (!ability) return esc(name);
+  return `<button type="button" class="ability-trigger" data-ability="${esc(name)}" aria-expanded="false">${esc(ability.name)}</button>`;
+}
+
 /** A titled list of ability names; names with wiki data become pop-out triggers. */
 export function abilityList(title, names, abilities) {
   const shown = (names ?? []).filter(Boolean);
   if (!shown.length) return "";
-  const rows = shown.map((name) => {
-    const ability = abilities.get(name);
-    if (!ability) return `<li>${esc(name)}</li>`;
-    return `<li><button type="button" class="ability-trigger" data-ability="${esc(name)}" aria-expanded="false">${esc(ability.name)}</button></li>`;
-  });
+  const rows = shown.map((name) => `<li>${abilityName(name, abilities)}</li>`);
   return `<h3>${title}</h3><ul class="plain-list ability-list">${rows.join("")}</ul>`;
+}
+
+const ACTION_TYPES = { action: "Action", bonus: "Bonus action", reaction: "Reaction" };
+
+function spellFacts(spell) {
+  const facts = [spell.spell_level === 0 ? "Cantrip" : `Level ${spell.spell_level} spell`];
+  if (spell.school) facts.push(spell.school);
+  if (spell.action_type) facts.push(ACTION_TYPES[spell.action_type] ?? capitalize(spell.action_type));
+  if (spell.concentration) facts.push("Concentration");
+  if (spell.ritual) facts.push("Ritual");
+  if (spell.recharge) facts.push(`Recharges on ${spell.recharge.toLowerCase()}`);
+  return facts;
 }
 
 /** Short facts shown as tags: what kind of ability it is, what it costs, when it recharges. */
 export function abilityFacts(ability) {
+  if (ability.kind === "spell") return spellFacts(ability);
   const facts = [capitalize(ability.kind === "action" ? (ability.type ?? "action") : "passive")];
   if (ability.cost) facts.push(capitalize(ability.cost));
   if (ability.recharge) facts.push(`Recharges on ${ability.recharge.toLowerCase()}`);

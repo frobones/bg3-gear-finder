@@ -1,7 +1,17 @@
 // Item detail panel: stats, effects, and every way to get the item.
 
 import { abilityList } from "./abilities.js";
-import { ACT_LABELS, capitalize, esc, formatNumber, itemIcon, linkify, rarityClass, safeWikiUrl } from "./html.js";
+import {
+  ACT_LABELS,
+  capitalize,
+  esc,
+  formatNumber,
+  itemIcon,
+  linkify,
+  priorityTag,
+  rarityClass,
+  safeWikiUrl,
+} from "./html.js";
 
 const WEAPON_PROPERTIES = ["finesse", "light", "heavy", "reach", "thrown", "dippable"];
 
@@ -47,7 +57,21 @@ function whereToGet(item) {
     .join("")}</ol>`;
 }
 
-export function renderDetail(panel, item, abilities) {
+/** Which party members plan around this item, and who gets it when it's contested. */
+export function partyPlans(wanted) {
+  if (!wanted.length) return "";
+  const rows = wanted.map(
+    ({ profile, entry }) => `
+      <li>
+        <p><a href="#party/${esc(profile.id)}/gear" data-close>${esc(profile.name)}</a> ${priorityTag(entry.priority)}</p>
+        ${entry.note ? `<p class="prose">${esc(entry.note)}</p>` : ""}
+        ${entry.claim ? `<p class="plan-claim">Who gets it: ${esc(entry.claim)}</p>` : ""}
+      </li>`,
+  );
+  return `<h3>Party plans</h3><ul class="ways wanted">${rows.join("")}</ul>`;
+}
+
+export function renderDetail(panel, item, abilities, wanted) {
   const wiki = safeWikiUrl(item.wiki_url);
   const variants = item.variants?.length
     ? `<p class="muted small">The game has ${item.variants.length + 1} versions of this item; stats shown are the first.</p>`
@@ -63,6 +87,7 @@ export function renderDetail(panel, item, abilities) {
         </div>
       </header>
       <dl class="stats">${stats(item)}</dl>
+      ${partyPlans(wanted)}
       <h3>Where to get it</h3>
       ${whereToGet(item)}
       ${item.notes ? `<h3>Notes</h3><p class="prose">${linkify(item.notes, item.notes_links)}</p>` : ""}

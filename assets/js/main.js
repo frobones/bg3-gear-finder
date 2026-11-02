@@ -6,10 +6,11 @@ import { renderDetail } from "./detail.js";
 import { isFiltering, matchesItem, populateControls, readFilters } from "./filters.js";
 import { esc } from "./html.js";
 import { renderJourney } from "./journey.js";
+import { initParty, parsePartyRoute, renderParty } from "./party.js";
 import { nextSort, renderTable } from "./table.js";
 
 const SEARCH_DELAY_MS = 150;
-const VIEWS = ["journey", "items"];
+const VIEWS = ["journey", "items", "party"];
 
 const form = document.getElementById("controls");
 const view = document.getElementById("view");
@@ -22,17 +23,26 @@ let lastOpener = null;
 let collapsingZone = null;
 let popovers = null;
 
-const currentView = () => (VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "journey");
+const currentView = () => {
+  const name = location.hash.slice(1).split("/")[0];
+  return VIEWS.includes(name) ? name : "journey";
+};
 
 function render() {
-  const filters = readFilters(form);
-  const items = data.items.filter((item) => matchesItem(item, filters));
   const name = currentView();
+  popovers.hide();
 
   for (const link of document.querySelectorAll("[data-view]")) {
     if (link.dataset.view === name) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   }
+  // The gear filters don't apply to party profiles, so they step aside there.
+  form.hidden = name === "party";
+  resultCount.hidden = name === "party";
+  if (name === "party") return renderParty(view, data, parsePartyRoute(location.hash));
+
+  const filters = readFilters(form);
+  const items = data.items.filter((item) => matchesItem(item, filters));
   resultCount.textContent = isFiltering(filters)
     ? `${items.length.toLocaleString("en-US")} of ${data.items.length.toLocaleString("en-US")} items`
     : `${data.items.length.toLocaleString("en-US")} items`;
@@ -46,7 +56,7 @@ function openDetail(id, opener) {
   if (!item) return;
   lastOpener = opener;
   popovers.hide();
-  renderDetail(detail, item, data.abilities);
+  renderDetail(detail, item, data.abilities, data.party.wantedBy.get(item.id) ?? []);
   document.body.classList.add("detail-open");
   detail.querySelector("[data-close]").focus({ preventScroll: true });
 }
@@ -68,7 +78,12 @@ function wireEvents() {
   form.addEventListener("submit", (event) => event.preventDefault());
   form.addEventListener("reset", () => setTimeout(render)); // runs after the browser clears the fields
 
-  window.addEventListener("hashchange", render);
+  window.addEventListener("hashchange", () => {
+    render();
+    // Switching profile tabs from far down a long tab would otherwise land mid-page.
+    const tabs = view.querySelector(".profile-tabs");
+    if (tabs && tabs.getBoundingClientRect().top < 0) tabs.scrollIntoView({ block: "start" });
+  });
 
   document.addEventListener("click", (event) => {
     const itemLink = event.target.closest("[data-item]");
@@ -141,7 +156,8 @@ async function start() {
       `<code>python3 -m http.server</code>, then reload the page.</p>`;
     throw error; // keeps the technical detail in the browser console
   }
-  popovers = initAbilityPopovers(detail, data.abilities);
+  popovers = initAbilityPopovers(document.body, data.abilities);
+  initParty(view, render);
   populateControls(form, data);
   wireEvents();
   renderColophon();

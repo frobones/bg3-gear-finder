@@ -1,0 +1,176 @@
+// The Party view: the roster of characters, and each filled-in character's profile with its tabs.
+//
+// Routes: #party (roster), #party/<profile> (last tab used), #party/<profile>/<tab>.
+
+import { renderGearTab } from "./gearplan.js";
+import { renderIllithidTab, renderPlaybookTab, renderScrollsTab } from "./guides.js";
+import { esc } from "./html.js";
+import { MAX_LEVEL, renderLevelTab } from "./levelup.js";
+import { PROFILE_TABS, loadProgress, saveProgress, toggleInList } from "./progress.js";
+
+const TAB_LABELS = { level: "Level up", gear: "Gear plan", scrolls: "Scrolls", illithid: "Illithid", playbook: "Playbook" };
+
+/** Split "#party/vesper/gear" into its parts; unknown tabs are dropped so the saved tab is used. */
+export function parsePartyRoute(hash) {
+  const [view, profileId, tab] = hash.replace(/^#/, "").split("/");
+  if (view !== "party") return null;
+  return { profileId: profileId || null, tab: PROFILE_TABS.includes(tab) ? tab : null };
+}
+
+const progressById = new Map();
+const viewingById = new Map();
+let hideGot = false;
+
+function progressFor(profileId) {
+  if (!progressById.has(profileId)) progressById.set(profileId, loadProgress(profileId));
+  return progressById.get(profileId);
+}
+
+function updateProgress(profileId, next) {
+  progressById.set(profileId, next);
+  saveProgress(profileId, next);
+}
+
+const viewingFor = (profileId) => viewingById.get(profileId) ?? Math.min(progressFor(profileId).level + 1, MAX_LEVEL);
+
+function levelLabel(level) {
+  return level === 0 ? "Not created yet" : `Level ${level} of ${MAX_LEVEL}`;
+}
+
+function renderRoster(data) {
+  const cards = data.party.members
+    .map((member) => {
+      const profile = member.profile ? data.party.profiles.get(member.profile) : null;
+      if (!profile) {
+        return `
+          <li class="member member-empty">
+            <div class="member-portrait member-portrait-empty" aria-hidden="true"></div>
+            <div>
+              <h2 class="member-name">${esc(member.name)}</h2>
+              <p class="muted">${esc(member.role)}</p>
+              <p class="small muted">Profile not written yet.</p>
+            </div>
+          </li>`;
+      }
+      return `
+        <li class="member">
+          <img class="member-portrait" src="${esc(profile.portrait)}" alt="" width="96" height="114" />
+          <div>
+            <h2 class="member-name"><a href="#party/${esc(profile.id)}">${esc(profile.name)}</a></h2>
+            <p class="member-title">${esc(profile.title)}</p>
+            <p class="muted">${esc(profile.classes)}</p>
+            <p class="small">${levelLabel(progressFor(profile.id).level)}</p>
+          </div>
+        </li>`;
+    })
+    .join("");
+  return `<ul class="roster">${cards}</ul>`;
+}
+
+function profileHeader(profile) {
+  return `
+    <a class="back-link" href="#party">All party members</a>
+    <header class="profile-head">
+      <img class="profile-portrait" src="${esc(profile.portrait)}" alt="Portrait of ${esc(profile.name)}" width="160" height="190" />
+      <div>
+        <h2 class="profile-name">${esc(profile.name)}</h2>
+        <p class="profile-title">${esc(profile.title)}</p>
+        <p class="profile-classes">${esc(profile.classes)}</p>
+        <dl class="profile-facts">
+          <div><dt>Race</dt><dd>${esc(profile.race)}</dd></div>
+          <div><dt>Background</dt><dd>${esc(profile.background)}</dd></div>
+          <div><dt>Difficulty</dt><dd>${esc(profile.difficulty)}</dd></div>
+        </dl>
+        <p class="profile-role">${esc(profile.role)}</p>
+      </div>
+      <blockquote class="profile-arc">
+        <p><span class="muted">Before the Nautiloid:</span> “${esc(profile.arc.before)}”</p>
+        <p><span class="muted">After:</span> “${esc(profile.arc.after)}”</p>
+      </blockquote>
+    </header>`;
+}
+
+function tabNav(profile, tab) {
+  const links = PROFILE_TABS.map(
+    (t) => `<a href="#party/${esc(profile.id)}/${t}"${t === tab ? ' aria-current="page"' : ""}>${TAB_LABELS[t]}</a>`,
+  ).join("");
+  return `<nav class="profile-tabs" aria-label="${esc(profile.name)}'s profile">${links}</nav>`;
+}
+
+function tabBody(profile, data, tab) {
+  const progress = progressFor(profile.id);
+  if (tab === "gear") return renderGearTab(profile, data, progress, hideGot);
+  if (tab === "scrolls") return renderScrollsTab(profile, data.abilities, progress);
+  if (tab === "illithid") return renderIllithidTab(profile, data.abilities, progress);
+  if (tab === "playbook") return renderPlaybookTab(profile);
+  return renderLevelTab(profile, data.abilities, progress.level, viewingFor(profile.id));
+}
+
+export function renderParty(view, data, route) {
+  const profile = route.profileId ? data.party.profiles.get(route.profileId) : null;
+  if (!profile) {
+    view.innerHTML = `
+      ${route.profileId ? `<p class="status status-error">There's no profile called “${esc(route.profileId)}”. Pick a party member below.</p>` : ""}
+      ${renderRoster(data)}`;
+    return;
+  }
+  const progress = progressFor(profile.id);
+  const tab = route.tab ?? progress.tab;
+  if (tab !== progress.tab) updateProgress(profile.id, { ...progress, tab });
+  view.innerHTML = `
+    <article class="profile" data-profile="${esc(profile.id)}">
+      ${profileHeader(profile)}
+      ${tabNav(profile, tab)}
+      <div class="profile-body">${tabBody(profile, data, tab)}</div>
+    </article>`;
+}
+
+/** Wire the profile controls. `rerender` redraws the current view; focus is restored afterwards. */
+export function initParty(view, rerender) {
+  const profileId = () => view.querySelector("[data-profile]")?.dataset.profile;
+
+  const showLevel = (level) => {
+    viewingById.set(profileId(), Math.min(Math.max(level, 1), MAX_LEVEL));
+    rerender();
+    view.querySelector("#level-heading")?.focus();
+  };
+
+  const setReached = (level) => {
+    const id = profileId();
+    updateProgress(id, { ...progressFor(id), level });
+    viewingById.set(id, Math.min(level + 1, MAX_LEVEL));
+  };
+
+  view.addEventListener("click", (event) => {
+    const step = event.target.closest("[data-level-view]");
+    if (step) return showLevel(Number(step.dataset.levelView));
+    const reached = event.target.closest("[data-level-reached]");
+    if (reached) {
+      setReached(Number(reached.dataset.levelReached));
+      rerender();
+      view.querySelector("#level-heading")?.focus();
+    }
+  });
+
+  view.addEventListener("change", (event) => {
+    const { target } = event;
+    if (target.matches("[data-level-select]")) {
+      setReached(Number(target.value));
+      rerender();
+      return view.querySelector("[data-level-select]")?.focus();
+    }
+    if (target.matches("[data-hide-got]")) {
+      hideGot = target.checked;
+      rerender();
+      return view.querySelector("[data-hide-got]")?.focus();
+    }
+    if (target.matches("[data-progress]")) {
+      const id = profileId();
+      const { progress: list } = target.dataset;
+      updateProgress(id, toggleInList(progressFor(id), list, target.value, target.checked));
+      rerender();
+      const again = view.querySelector(`[data-progress="${list}"][value="${CSS.escape(target.value)}"]`);
+      (again ?? view.querySelector(".plan-count"))?.focus({ preventScroll: true });
+    }
+  });
+}

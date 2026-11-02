@@ -131,6 +131,11 @@ select {
   padding: 0 var(--gutter);
 }
 
+/* The filters step aside on the Party view; display: flex would otherwise override [hidden]. */
+.controls[hidden] {
+  display: none;
+}
+
 .field {
   display: flex;
   flex-direction: column;
@@ -730,7 +735,9 @@ th[aria-sort="descending"] .sort-button::after {
   border-top: 2px solid var(--brass);
   border-radius: 6px;
   box-shadow: 0 10px 28px rgb(0 0 0 / 0.35);
-  font-size: var(--step-0);
+  /* Set in full: the pop-out sits inside whatever holds its trigger and must not inherit a heading's font. */
+  font: 400 var(--step-0) / 1.5 var(--sans);
+  text-align: left;
 }
 
 .ability-pop .prose + .prose {

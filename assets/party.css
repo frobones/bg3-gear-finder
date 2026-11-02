@@ -1,0 +1,713 @@
+/* Party roster, character profiles and the level-up card. Uses the tokens in styles.css. */
+
+/* Party ---------------------------------------------------------------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.member p {
+  margin: 0.15rem 0 0;
+}
+
+.member-empty {
+  border-style: dashed;
+  background: none;
+}
+
+.member-portrait {
+  flex: none;
+  width: 96px;
+  height: 114px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: var(--raised);
+}
+
+.member-portrait-empty {
+  background: repeating-linear-gradient(135deg, var(--raised) 0 6px, transparent 6px 12px);
+  opacity: 0.6;
+}
+
+.member-name {
+  margin: 0;
+  font: 600 var(--step-2) / 1.15 var(--serif);
+}
+
+.member-name a {
+  color: var(--brass-strong);
+}
+
+.member-title {
+  font: italic var(--step-0) / 1.4 var(--serif);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.back-link::before {
+  content: "‹";
+  margin-right: 0.35rem;
+}
+
+.profile-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.5rem 1.5rem;
+  align-items: start;
+}
+
+.profile-portrait {
+  width: 160px;
+  height: 190px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  object-fit: cover;
+}
+
+.profile-name {
+  margin: 0;
+  font: 600 var(--step-3) / 1.05 var(--serif);
+  color: var(--brass-strong);
+}
+
+.profile-title {
+  margin: 0.2rem 0 0;
+  font: italic var(--step-1) / 1.3 var(--serif);
+}
+
+.profile-classes {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+.profile-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin: 0.6rem 0 0;
+}
+
+.profile-facts dt {
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.profile-facts dd {
+  margin: 0;
+}
+
+.profile-role {
+  margin: 0.75rem 0 0;
+  max-width: 60ch;
+}
+
+.profile-arc {
+  grid-column: 1 / -1;
+  margin: 0.75rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--brass);
+  font: italic var(--step-0) / 1.6 var(--serif);
+}
+
+.profile-arc p {
+  margin: 0;
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 0.25rem 1.25rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-tabs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.profile-tabs a[aria-current="page"] {
+  color: var(--text);
+  border-bottom-color: var(--brass);
+}
+
+.profile-body {
+  max-width: 52rem;
+  padding-top: 1.25rem;
+}
+
+.profile-body h3 {
+  margin: 1.5rem 0 0.5rem;
+  font: 600 var(--step-1) / 1.3 var(--serif);
+  color: var(--brass-strong);
+}
+
+.profile-body h4 {
+  margin: 0 0 0.35rem;
+  font-size: var(--step-0);
+}
+
+/* Level-up card: the one thing to read mid-game, so it gets the strongest frame on the page. */
+.level-card {
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--brass);
+  border-radius: 6px;
+}
+
+.level-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.profile-body .level-head h3 {
+  margin: 0;
+  font-size: var(--step-2);
+  color: var(--text);
+}
+
+.level-head h3:focus {
+  outline: none;
+}
+
+.level-status {
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: var(--step--1);
+  white-space: nowrap;
+}
+
+.level-next {
+  border-color: var(--brass);
+  color: var(--brass-strong);
+}
+
+.level-done {
+  border-color: var(--r-uncommon);
+  color: var(--r-uncommon);
+}
+
+.choices {
+  margin: 1rem 0 0;
+}
+
+.choices > div {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.35rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.choices dt {
+  color: var(--muted);
+}
+
+.choices dd {
+  margin: 0;
+  font: 600 var(--step-1) / 1.4 var(--serif);
+}
+
+.choices .muted {
+  font: var(--step--1) / 1.4 var(--sans);
+}
+
+.no-choices {
+  margin: 1rem 0 0;
+  font: italic var(--step-1) / 1.4 var(--serif);
+}
+
+.callouts {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.callouts li {
+  padding: 0.55rem 0.8rem;
+  border-left: 3px solid var(--r-story);
+  background: color-mix(in srgb, var(--r-story) 10%, transparent);
+  border-radius: 0 4px 4px 0;
+}
+
+.callouts li + li {
+  margin-top: 0.4rem;
+}
+
+.after-block + .after-block {
+  margin-top: 1rem;
+}
+
+.after-block p {
+  margin: 0.25rem 0 0;
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.level-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.step-button,
+.primary-button {
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.step-button {
+  background: var(--raised);
+  border: 1px solid var(--line);
+}
+
+.step-button::before {
+  content: "‹ ";
+}
+
+.step-next {
+  margin-left: auto;
+}
+
+.step-next::before {
+  content: none;
+}
+
+.step-next::after {
+  content: " ›";
+}
+
+.step-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.primary-button {
+  background: var(--brass);
+  border: 1px solid var(--brass);
+  color: var(--page);
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  background: var(--brass-strong);
+}
+
+.level-reached {
+  margin-top: 1.25rem;
+}
+
+.timeline {
+  margin-top: 1.25rem;
+}
+
+.timeline summary {
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.timeline summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline summary::before {
+  content: "▸";
+  color: var(--brass);
+}
+
+.timeline[open] summary::before {
+  content: "▾";
+}
+
+.timeline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-list li {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-list li.is-viewing {
+  background: color-mix(in srgb, var(--brass) 10%, transparent);
+}
+
+.timeline-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--link);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.timeline-number {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-right: 0.5rem;
+  border: 1px solid var(--brass);
+  border-radius: 50%;
+  color: var(--brass-strong);
+  font: 600 var(--step--1) / 1 var(--sans);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-level .timeline-number {
+  margin-right: 0;
+}
+
+.timeline-summary {
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font: 600 var(--step--1) / 1.5 var(--sans);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.tag-core {
+  border-color: var(--brass);
+  color: var(--brass-strong);
+}
+
+.tag-high {
+  border-color: var(--r-rare);
+  color: var(--r-rare);
+}
+
+.tag-party,
+.tag-yield {
+  border-color: var(--r-story);
+  color: var(--r-story);
+}
+
+.plan-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.plan-count {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose + .plan-count {
+  margin-top: 0.75rem;
+}
+
+.plan-count:focus {
+  outline: none;
+}
+
+.plan-list,
+.check-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-row,
+.check-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.plan-row input,
+.check-row input {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.75rem 0 0;
+  accent-color: var(--brass);
+  cursor: pointer;
+}
+
+.check-row input {
+  margin-top: 0.8rem;
+}
+
+.check-row > span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.75rem;
+}
+
+.plan-body {
+  min-width: 0;
+}
+
+.plan-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.plan-row p,
+.power-row p {
+  margin: 0.1rem 0 0;
+}
+
+.plan-where,
+.plan-claim {
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.plan-claim {
+  font-style: italic;
+}
+
+.plain-item {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font: 600 var(--step-0) / 1.25 var(--serif);
+}
+
+.is-got .item-name,
+.is-got .plain-item,
+.is-done .ability-trigger {
+  text-decoration: line-through;
+  text-decoration-color: var(--muted);
+  opacity: 0.65;
+}
+
+.hold-row {
+  padding-left: 2rem;
+}
+
+.loadout-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.loadout-table th,
+.loadout-table td {
+  padding: 0.35rem 0.75rem 0.35rem 0;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.loadout-table thead th {
+  color: var(--muted);
+  font-size: var(--step--1);
+  font-weight: 400;
+  border-top: 0;
+}
+
+.loadout-table tbody th {
+  padding-top: 0.85rem;
+  white-space: nowrap;
+}
+
+.loadout-table td .item-link {
+  display: flex;
+}
+
+.loadout-table p {
+  margin: 0;
+}
+
+.scroll-tier + .scroll-tier {
+  margin-top: 1.5rem;
+}
+
+.scroll-tier.is-locked h3 {
+  color: var(--muted);
+}
+
+.tier-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+}
+
+.profile-body .tier-head h3 {
+  margin-bottom: 0;
+}
+
+.no-scroll-list {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.no-scroll-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.75rem;
+}
+
+.power-name {
+  font-weight: 600;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.steps li + li {
+  margin-top: 0.35rem;
+}
+
+.wanted p {
+  margin: 0;
+}
+
+.wanted .tag {
+  margin-left: 0.35rem;
+}
+
+@media (max-width: 720px) {
+  /* On a phone the level card should be close to the top: small portrait beside the name, no story quote. */
+  .profile-head {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 0.25rem 0.9rem;
+  }
+
+  .profile-portrait {
+    width: 72px;
+    height: 86px;
+  }
+
+  .profile-head > div {
+    display: contents;
+  }
+
+  .profile-name,
+  .profile-title {
+    grid-column: 2;
+  }
+
+  .profile-name {
+    align-self: end;
+    font-size: var(--step-2);
+  }
+
+  .profile-portrait {
+    grid-row: 1 / span 2;
+  }
+
+  .profile-classes,
+  .profile-facts,
+  .profile-role {
+    grid-column: 1 / -1;
+  }
+
+  .profile-arc {
+    display: none;
+  }
+
+  .profile-tabs {
+    gap: 0 1rem;
+  }
+
+  .level-card {
+    padding: 1rem;
+  }
+
+  .choices > div,
+  .timeline-list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .step-next {
+    margin-left: 0;
+  }
+
+  .primary-button {
+    order: -1;
+    flex: 1 1 100%;
+  }
+}

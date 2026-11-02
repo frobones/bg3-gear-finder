@@ -59,3 +59,17 @@ export function whenLabel(item) {
 }
 
 export const formatNumber = (n) => (n == null ? "" : Number(n).toLocaleString("en-US"));
+
+/** How strongly a party member wants an item, as written in their profile. */
+export const PRIORITY_LABELS = {
+  core: "Core",
+  high: "High",
+  swap: "Swap",
+  matchup: "Matchup",
+  optional: "Optional",
+  party: "Party decision",
+  yield: "Leave for party",
+};
+
+export const priorityTag = (priority) =>
+  `<span class="tag tag-${esc(priority)}">${esc(PRIORITY_LABELS[priority] ?? priority)}</span>`;
