@@ -1,5 +1,6 @@
 // Entry point: loads the snapshot, wires the controls, and renders the chosen view.
 
+import { initAbilityPopovers } from "./abilities.js";
 import { loadData } from "./data.js";
 import { renderDetail } from "./detail.js";
 import { isFiltering, matchesItem, populateControls, readFilters } from "./filters.js";
@@ -19,6 +20,7 @@ let data = null;
 let sort = { key: "when", descending: false };
 let lastOpener = null;
 let collapsingZone = null;
+let popovers = null;
 
 const currentView = () => (VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "journey");
 
@@ -43,12 +45,14 @@ function openDetail(id, opener) {
   const item = data.byId.get(id);
   if (!item) return;
   lastOpener = opener;
-  renderDetail(detail, item);
+  popovers.hide();
+  renderDetail(detail, item, data.abilities);
   document.body.classList.add("detail-open");
   detail.querySelector("[data-close]").focus({ preventScroll: true });
 }
 
 function closeDetail() {
+  popovers.hide();
   detail.hidden = true;
   document.body.classList.remove("detail-open");
   lastOpener?.focus({ preventScroll: true });
@@ -137,6 +141,7 @@ async function start() {
       `<code>python3 -m http.server</code>, then reload the page.</p>`;
     throw error; // keeps the technical detail in the browser console
   }
+  popovers = initAbilityPopovers(detail, data.abilities);
   populateControls(form, data);
   wireEvents();
   renderColophon();

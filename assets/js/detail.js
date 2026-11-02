@@ -1,5 +1,6 @@
 // Item detail panel: stats, effects, and every way to get the item.
 
+import { abilityList } from "./abilities.js";
 import { ACT_LABELS, capitalize, esc, formatNumber, itemIcon, linkify, rarityClass, safeWikiUrl } from "./html.js";
 
 const WEAPON_PROPERTIES = ["finesse", "light", "heavy", "reach", "thrown", "dippable"];
@@ -28,12 +29,6 @@ function stats(item) {
     .join("");
 }
 
-function list(title, values) {
-  const shown = (values ?? []).filter(Boolean);
-  if (!shown.length) return "";
-  return `<h3>${title}</h3><ul class="plain-list">${shown.map((v) => `<li>${esc(v)}</li>`).join("")}</ul>`;
-}
-
 function textBlock(title, text) {
   return text ? `<h3>${title}</h3><p class="prose">${esc(text)}</p>` : "";
 }
@@ -52,7 +47,7 @@ function whereToGet(item) {
     .join("")}</ol>`;
 }
 
-export function renderDetail(panel, item) {
+export function renderDetail(panel, item, abilities) {
   const wiki = safeWikiUrl(item.wiki_url);
   const variants = item.variants?.length
     ? `<p class="muted small">The game has ${item.variants.length + 1} versions of this item; stats shown are the first.</p>`
@@ -70,11 +65,11 @@ export function renderDetail(panel, item) {
       <dl class="stats">${stats(item)}</dl>
       <h3>Where to get it</h3>
       ${whereToGet(item)}
-      ${list("Passives", item.passives)}
-      ${list("Weapon passives", item.weapon_passives)}
-      ${list("Main-hand passives", item.passives_main_hand)}
-      ${list("Off-hand passives", item.passives_off_hand)}
-      ${list("Weapon actions", [...(item.weapon_actions ?? []), ...(item.special_weapon_actions ?? [])])}
+      ${abilityList("Passives", item.passives, abilities)}
+      ${abilityList("Weapon passives", item.weapon_passives, abilities)}
+      ${abilityList("Main-hand passives", item.passives_main_hand, abilities)}
+      ${abilityList("Off-hand passives", item.passives_off_hand, abilities)}
+      ${abilityList("Weapon actions", [...(item.weapon_actions ?? []), ...(item.special_weapon_actions ?? [])], abilities)}
       ${textBlock("Special", item.special)}
       ${textBlock("About", item.description)}
       ${item.quote ? `<blockquote class="quote">${esc(item.quote)}</blockquote>` : ""}

@@ -11,6 +11,8 @@ where and when you can pick it up.
   merchant's name. Filter by slot, act, rarity, or items with a known place.
 - Select any item to see its stats, passives, actions, and every way to get
   it, with links back to bg3.wiki.
+- Hover over or focus a passive or weapon action to see what it does; click
+  or tap to keep it open. Escape closes it.
 
 ## Run it
 
@@ -26,15 +28,16 @@ Then open <http://localhost:8642>.
 ## Data
 
 All item data comes from [bg3.wiki](https://bg3.wiki/)'s Cargo tables
-(`equipment`, `weapons`, `item_locations`, `locations`) via
-`Special:CargoExport`. The page never contacts the wiki for data; item icons
-load from the wiki's image server.
+(`equipment`, `weapons`, `item_locations`, `locations`, `passives`,
+`actions`) via `Special:CargoExport`. The page never contacts the wiki for
+data; item icons load from the wiki's image server.
 
 | File | Contents |
 | --- | --- |
 | `data/items.json` | Every item, all wiki fields, game `variants` |
 | `data/acquisitions.json` | Each way to get an item, with place and act |
 | `data/locations.json` | Every place with its act and parent places |
+| `data/abilities.json` | Passives and weapon actions that items grant |
 | `data/region_order.json` | Hand-kept play order of areas in each act |
 | `data/meta.json` | Snapshot time, source, license, and counts |
 

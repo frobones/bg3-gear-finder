@@ -701,6 +701,81 @@ th[aria-sort="descending"] .sort-button::after {
   padding-left: 1.1rem;
 }
 
+/* Passive and action names: a dotted underline says "there's more here". */
+.ability-trigger {
+  min-height: 2.75rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  text-decoration: underline dotted var(--brass);
+  text-underline-offset: 0.25em;
+  cursor: help;
+}
+
+.ability-trigger:hover,
+.ability-trigger[aria-expanded="true"] {
+  color: var(--brass-strong);
+}
+
+.ability-pop {
+  position: fixed;
+  z-index: 20;
+  width: min(22rem, calc(100vw - 16px));
+  max-height: min(24rem, calc(100vh - 16px));
+  overflow-y: auto;
+  padding: 0.85rem 1rem 0.9rem;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--brass);
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 0.35);
+  font-size: var(--step-0);
+}
+
+.ability-pop .prose + .prose {
+  margin-top: 0.5rem;
+}
+
+.pop-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pop-head .item-icon {
+  --size: 32px;
+}
+
+.pop-name {
+  margin: 0;
+  font: 600 var(--step-1) / 1.25 var(--serif);
+  color: var(--brass-strong);
+}
+
+.pop-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.5rem 0 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.pop-facts li {
+  padding: 0.05rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.pop-wiki {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+
 .prose {
   margin: 0;
   white-space: pre-line;
@@ -772,9 +847,10 @@ th[aria-sort="descending"] .sort-button::after {
   }
 }
 
+/* Opacity only: a transform here would make the sheet the containing block for the fixed-position
+   ability pop-out and throw off its placement while the animation runs. */
 @keyframes sheet-in {
   from {
-    transform: translateY(16px);
     opacity: 0;
   }
 }

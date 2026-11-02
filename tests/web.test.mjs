@@ -2,6 +2,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
+import { abilityFacts, abilityList, popContent } from "../assets/js/abilities.js";
 import { averageDamage } from "../assets/js/data.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
@@ -53,4 +54,38 @@ test("nextSort flips the active column and starts value columns high", () => {
   assert.deepEqual(nextSort({ key: "price", descending: true }, "price"), { key: "price", descending: false });
   assert.deepEqual(nextSort({ key: "when", descending: false }, "price"), { key: "price", descending: true });
   assert.deepEqual(nextSort({ key: "price", descending: true }, "name"), { key: "name", descending: false });
+});
+
+const lacerate = {
+  id: "Lacerate",
+  kind: "action",
+  name: "Lacerate",
+  type: "weapon action",
+  description: "Slash at your target's vital points to make it Bleed.",
+  extra_description: "Undead and constructs can't bleed.",
+  recharge: "Short Rest",
+  cost: "action",
+  icon_url: null,
+  links: [{ text: "Bleed", url: "https://bg3.wiki/wiki/Bleeding_(condition)" }],
+  wiki_url: "https://bg3.wiki/wiki/Lacerate",
+};
+
+test("abilityList makes known names pop-out triggers and leaves unknown ones as text", () => {
+  const html = abilityList("Weapon actions", ["Lacerate", "<Mystery>"], new Map([["Lacerate", lacerate]]));
+  assert.match(html, /<button type="button" class="ability-trigger" data-ability="Lacerate"/);
+  assert.match(html, /<li>&lt;Mystery&gt;<\/li>/);
+  assert.equal(abilityList("Passives", [], new Map()), "");
+});
+
+test("abilityFacts describes kind, cost and recharge", () => {
+  assert.deepEqual(abilityFacts(lacerate), ["Weapon action", "Action", "Recharges on short rest"]);
+  assert.deepEqual(abilityFacts({ kind: "passive" }), ["Passive"]);
+});
+
+test("popContent links to the wiki and escapes ability text", () => {
+  const html = popContent({ ...lacerate, name: "<b>Lacerate</b>" });
+  assert.match(html, /&lt;b&gt;Lacerate&lt;\/b&gt;/);
+  assert.match(html, /<a href="https:\/\/bg3.wiki\/wiki\/Bleeding_\(condition\)"[^>]*>Bleed<\/a>/);
+  assert.match(html, /href="https:\/\/bg3.wiki\/wiki\/Lacerate"[^>]*>Open on bg3.wiki</);
+  assert.doesNotMatch(popContent({ ...lacerate, wiki_url: "javascript:alert(1)" }), /Open on bg3.wiki/);
 });

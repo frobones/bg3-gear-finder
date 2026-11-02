@@ -2,7 +2,7 @@
 
 import { RARITIES } from "./html.js";
 
-const FILES = ["items", "acquisitions", "region_order", "meta"];
+const FILES = ["items", "acquisitions", "region_order", "meta", "abilities"];
 
 async function loadJson(name) {
   const response = await fetch(`data/${name}.json`);
@@ -25,7 +25,7 @@ export function averageDamage(damage) {
 const byOrder = (a, b) => (a.order ?? Infinity) - (b.order ?? Infinity);
 
 export async function loadData() {
-  const [items, acquisitions, regionOrder, meta] = await Promise.all(FILES.map(loadJson));
+  const [items, acquisitions, regionOrder, meta, abilities] = await Promise.all(FILES.map(loadJson));
 
   const acquisitionsByItem = new Map();
   for (const acquisition of acquisitions) {
@@ -51,5 +51,12 @@ export async function loadData() {
       .toLowerCase();
   }
 
-  return { items, byId: new Map(items.map((i) => [i.id, i])), acquisitions, regionOrder, meta };
+  return {
+    items,
+    byId: new Map(items.map((i) => [i.id, i])),
+    acquisitions,
+    regionOrder,
+    meta,
+    abilities: new Map(abilities.map((a) => [a.id, a])),
+  };
 }
