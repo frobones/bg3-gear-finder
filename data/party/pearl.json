@@ -58,9 +58,7 @@
   {"item": "Sharpened Snare Cuirass", "tags": ["survival", "control"], "note": "14 + full DEX and no Stealth Disadvantage: her Act 2 armour."},
   {"item": "Dark Justiciar Gauntlets (Uncommon)", "tags": ["damage"], "note": "+1d4 necrotic on weapon attacks: the same job as Flawed Helldusk Gloves without Infernal Iron. In the Gauntlet of Shar."},
   {"item": "Cloak of Elemental Absorption", "tags": ["survival"], "note": "Once per short rest, take half damage from the next elemental attack and add 1d6 of that element to your next attack. A minor pick: Cloak of Protection is Alene's in Act 2. In an opulent chest in Ketheric Thorm's chambers at Moonrise Towers."},
-  {"item": "Fleshmelter Cloak", "tags": ["survival"], "note": "Melee attackers that damage you take 1d4 acid. Always on, but it only matters when enemies reach you: wear it if they keep doing so. In a gilded chest above the pit in Reithwin."},
-  {"item": "Duellist's Prerogative", "tags": ["melee", "crit"], "note": "For a melee Pearl: crits on 19 with the off hand empty, and an extra Reaction each turn. Lora's reward for Save Vanra in Act 3. Zetharis's melee option too."},
-  {"item": "Bhaalist Armour", "tags": ["melee", "initiative"], "note": "For a melee Pearl: enemies within 3 m are Vulnerable to Piercing, and +2 initiative. Sold by the Echo of Abazigal in Act 3."}
+  {"item": "Fleshmelter Cloak", "tags": ["survival"], "note": "Melee attackers that damage you take 1d4 acid. Always on, but it only matters when enemies reach you: wear it if they keep doing so. In a gilded chest above the pit in Reithwin."}
  ],
 
  "loadouts": [
@@ -104,12 +102,12 @@
    "slots": [
     {"slot": "Head", "items": ["Mask of Soul Perception"]},
     {"slot": "Cloak", "items": ["Shade-Slayer Cloak"]},
-    {"slot": "Body", "items": ["Unwanted Masterwork Scalemail", "Elegant Studded Leather", "Bhaalist Armour"]},
+    {"slot": "Body", "items": ["Unwanted Masterwork Scalemail", "Elegant Studded Leather"]},
     {"slot": "Gloves", "items": ["Gauntlets of Hill Giant Strength", "Legacy of the Masters"]},
     {"slot": "Boots", "items": ["Evasive Shoes"]},
     {"slot": "Amulet", "items": ["Broodmother's Revenge"]},
     {"slot": "Rings", "items": ["Risky Ring", "Caustic Band"]},
-    {"slot": "Main hand", "items": ["Club of Hill Giant Strength", "Duellist's Prerogative"]},
+    {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
     {"slot": "Off hand", "items": ["Rhapsody", "Sentinel Shield"]},
     {"slot": "Ranged", "items": ["Titanstring Bow", "The Dead Shot", "Gontr Mael"]}
    ]
