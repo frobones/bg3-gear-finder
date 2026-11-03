@@ -1,9 +1,17 @@
-# BG3 gear finder
+# Our Baldur's Gate 3 party
 
-A local webpage for finding Baldur's Gate 3 gear: what each item does, and
-where and when you can pick it up.
+A webpage for our co-op Baldur's Gate 3 run: who's in the party, how each
+character levels, the story so far in screenshots, and a finder for every
+piece of gear. A switch at the top of every page moves between its two
+sections, **Our party** and **Gear finder**.
 
-- **Party** opens first and shows each character in the co-op party.
+## Our party
+
+- **Home** opens first. The party name sits over a banner that fades
+  between album shots every few seconds; **Pause** stops it, and it holds
+  still while you point at it. Below come the last session's newest
+  screenshots and the party roster.
+- **Party** shows each character in the co-op party.
   **Party gear by act** puts everyone's picks for each slot side by side, one
   act at a time, so you can see where every piece of gear is going. A
   filled-in profile has tabs for:
@@ -20,21 +28,27 @@ where and when you can pick it up.
   spells** grouped by spell level, then **Good picks by level** (feats and
   class choices). Select a spell, feat or class choice to read it in the side
   panel, like an item.
-- An item's panel opens with **Party plans**: who plans around it, what it
-  does for their build, which act and slot it fills in their loadout, and who
-  gets it when it's contested.
+- **Album** shows screenshots from our sessions, newest session first, each
+  with a caption. Select one to see it full size; use the arrow keys or swipe
+  to move between shots, and Escape to close.
+
+The party's name goes in `"name"` in `data/party/party.json`. Until it's
+set, the page shows a "Party name" placeholder.
+
+## Gear finder
+
 - **Journey** lists every find in play order: Prologue, then Acts 1 to 3,
   each split into areas you can expand.
 - **All items** is a sortable table: name, slot, rarity, first place found,
   AC or damage, value, and weight.
-- **Album** shows screenshots from our sessions, newest session first, each
-  with a caption. Select one to see it full size; use the arrow keys or swipe
-  to move between shots, and Escape to close.
 - Search matches item names, places, how-to-get text, and the wiki's notes,
   such as a merchant's name. Filter by slot, act, rarity, or items with a
   known place.
 - Select any item to see its stats, passives, actions, every way to get it,
-  and the wiki's notes on it, with links back to bg3.wiki.
+  and the wiki's notes on it, with links back to bg3.wiki. The panel opens
+  with **Party plans**: who plans around it, what it does for their build,
+  which act and slot it fills in their loadout, and who gets it when it's
+  contested.
 - An item's passives are written out in its panel. Hover over or focus a
   weapon action or spell to see what it does; click or tap to keep it open.
   Escape closes it.
@@ -85,8 +99,10 @@ python3 scripts/build_album.py
 The script uses `sips`, which comes with macOS. It writes a 1600 px copy of
 each shot to `assets/album/` and a thumbnail to `assets/album/thumbs/`, and
 lists the shots in `data/album.json`. New shots get an empty `caption`;
-write one there, and rebuilds keep it. Removing a screenshot from `album/`
-removes it from the site the next time the script runs.
+write one there, and rebuilds keep it. Set `"banner": true` on the shots
+Home's banner should rotate through; with none set, it uses every shot.
+Removing a screenshot from `album/` removes it from the site the next time
+the script runs.
 
 Each shot adds about 0.37 MB to the site. GitHub Pages allows a 1 GB site, so
 there is room for roughly 2,500 shots, and git keeps removed shots in the
@@ -110,9 +126,9 @@ data; item and spell icons load from the wiki's image server.
 | `data/abilities.json` | Passives, weapon actions and spells for pop-outs |
 | `data/region_order.json` | Hand-kept play order of areas in each act |
 | `data/meta.json` | Snapshot time, source, license, and counts |
-| `data/party/party.json` | Hand-kept party roster |
+| `data/party/party.json` | Hand-kept party name and roster |
 | `data/party/<name>.json` | Hand-kept character profile |
-| `data/album.json` | Album shots, with hand-written captions |
+| `data/album.json` | Album shots, with hand-written captions and banner picks |
 
 Each acquisition holds the how-to-get text, the wiki pages it mentions, the
 place and its parent places, the act, the Journey area, and map coordinates.

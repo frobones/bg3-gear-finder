@@ -76,6 +76,8 @@ export async function loadData() {
     meta,
     abilities: new Map(abilities.map((a) => [a.id, a])),
     party: {
+      // null until the party picks a name; the page shows a placeholder.
+      name: roster.name,
       members: roster.members,
       profiles: new Map(profiles.map((p) => [p.id, p])),
       wantedBy: wantedByItem(profiles),

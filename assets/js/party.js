@@ -47,7 +47,8 @@ function levelLabel(level) {
   return level === 0 ? "Not created yet" : `Level ${level} of ${MAX_LEVEL}`;
 }
 
-function renderRoster(data) {
+/** A card for each party member, linking to their profile; Home and the Party tab both show it. */
+export function rosterCards(data) {
   const cards = data.party.members
     .map((member) => {
       const profile = member.profile ? data.party.profiles.get(member.profile) : null;
@@ -74,12 +75,16 @@ function renderRoster(data) {
         </li>`;
     })
     .join("");
+  return `<ul class="roster">${cards}</ul>`;
+}
+
+function renderRoster(data) {
   const overview = `
     <a class="party-gear-card" href="#party/${PARTY_GEAR_ROUTE}">
       <span class="party-gear-card-title">Party gear by act</span>
       <span class="muted">Every character's picks for each slot, side by side, one act at a time.</span>
     </a>`;
-  return `${overview}<ul class="roster">${cards}</ul>`;
+  return `${overview}${rosterCards(data)}`;
 }
 
 function profileHeader(profile) {

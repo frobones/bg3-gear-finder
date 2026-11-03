@@ -1,15 +1,17 @@
 // Entry point: loads the snapshot, wires the controls, and renders the chosen view.
 
 import { initAbilityPopovers } from "./abilities.js";
-import { initAlbum, renderAlbum } from "./album.js";
+import { initAlbum, loadAlbum, renderAlbum } from "./album.js";
+import { initBanner } from "./banner.js";
 import { loadData } from "./data.js";
 import { renderAbilityDetail, renderDetail } from "./detail.js";
 import { isFiltering, matchesItem, populateControls, readFilters } from "./filters.js";
+import { pageTitle, partyNameHtml, renderHome } from "./home.js";
 import { esc } from "./html.js";
 import { renderJourney } from "./journey.js";
 import { initParty, parsePartyRoute, renderParty } from "./party.js";
 import { nextSort, renderTable } from "./table.js";
-import { viewFromHash } from "./views.js";
+import { sectionOf, viewFromHash } from "./views.js";
 
 const SEARCH_DELAY_MS = 150;
 
@@ -26,19 +28,30 @@ let popovers = null;
 
 const currentView = () => viewFromHash(location.hash);
 
-function render() {
-  const name = currentView();
-  popovers.hide();
-
+/** Show the section switch, headers and tabs that belong to `name`, and mark where we are. */
+function showChrome(name) {
+  const section = sectionOf(name);
+  document.body.dataset.view = name;
+  for (const el of document.querySelectorAll("[data-views]")) el.hidden = !el.dataset.views.split(" ").includes(name);
   for (const link of document.querySelectorAll("[data-view]")) {
     if (link.dataset.view === name) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   }
-  // The gear filters don't apply to party profiles or the album, so they step aside there.
-  const gearView = name === "journey" || name === "items";
-  form.hidden = !gearView;
-  resultCount.hidden = !gearView;
-  // An empty or unknown hash opens the party roster.
+  for (const link of document.querySelectorAll("[data-section]")) {
+    link.setAttribute("aria-current", String(link.dataset.section === section));
+    // Switching back to the gear finder returns to whichever of its views was open last.
+    if (section === "gear" && link.dataset.section === "gear") link.href = `#${name}`;
+  }
+  form.hidden = section !== "gear";
+}
+
+function render() {
+  const name = currentView();
+  popovers.hide();
+  showChrome(name);
+
+  // An empty or unknown hash opens Home.
+  if (name === "home") return renderHome(view, data);
   if (name === "party") return renderParty(view, data, parsePartyRoute(location.hash) ?? { profileId: null, tab: null });
   if (name === "album") return renderAlbum(view);
 
@@ -172,6 +185,15 @@ async function start() {
   popovers = initAbilityPopovers(document.body, data.abilities);
   initParty(view, render);
   initAlbum(view);
+  for (const el of document.querySelectorAll("[data-party-name]")) el.innerHTML = partyNameHtml(data.party.name);
+  document.title = pageTitle(data.party.name);
+  const hero = document.querySelector(".hero");
+  loadAlbum()
+    .then((shots) => initBanner(hero, shots))
+    .catch((error) => {
+      hero.classList.add("hero-empty");
+      throw error; // keeps the technical detail in the browser console
+    });
   populateControls(form, data);
   wireEvents();
   renderColophon();

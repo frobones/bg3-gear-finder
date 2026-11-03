@@ -131,7 +131,7 @@ select {
   padding: 0 var(--gutter);
 }
 
-/* The filters step aside on the Party view; display: flex would otherwise override [hidden]. */
+/* The filters only show in the gear finder; display: flex would otherwise override [hidden]. */
 .controls[hidden] {
   display: none;
 }

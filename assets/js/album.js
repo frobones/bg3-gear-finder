@@ -8,7 +8,7 @@ import { viewFromHash } from "./views.js";
 
 const SWIPE_MIN_PX = 40;
 
-let shots = null;
+let loading = null;
 let order = [];
 
 /** Shots grouped by the day they were taken, newest day first; shots within a day stay in time order. */
@@ -27,26 +27,30 @@ export function dayLabel(day) {
   return new Date(`${day}T12:00:00`).toLocaleDateString("en-US", { dateStyle: "long" });
 }
 
-const altText = (shot) => shot.caption || `Screenshot from ${dayLabel(shot.taken.slice(0, 10))}`;
+export const altText = (shot) => shot.caption || `Screenshot from ${dayLabel(shot.taken.slice(0, 10))}`;
+
+/** Every shot in the order the album shows them and the viewer steps through them. */
+export const viewerOrder = (list) => groupByDay(list).flatMap((session) => session.shots);
+
+/** One thumbnail with its caption; `index` is the shot's place in viewerOrder, which the viewer opens at. */
+export function shotCard(shot, index) {
+  return `
+    <li>
+      <figure class="album-card">
+        <button type="button" class="album-shot" data-shot="${index}">
+          <img src="assets/album/thumbs/${esc(shot.file)}.jpg" alt="${esc(altText(shot))}" width="640" height="360" loading="lazy" decoding="async" />
+        </button>
+        ${shot.caption ? `<figcaption>${esc(shot.caption)}</figcaption>` : ""}
+      </figure>
+    </li>`;
+}
 
 /** The album page: a heading and a grid of thumbnails for each play session. */
 export function albumHtml(list) {
   if (!list.length) return `<p class="status">No screenshots yet. Add some to album/ and run <code>python3 scripts/build_album.py</code>.</p>`;
   let index = 0;
   const sessions = groupByDay(list).map(({ day, shots: dayShots }) => {
-    const cards = dayShots.map((shot) => {
-      const card = `
-        <li>
-          <figure class="album-card">
-            <button type="button" class="album-shot" data-shot="${index}">
-              <img src="assets/album/thumbs/${esc(shot.file)}.jpg" alt="${esc(altText(shot))}" width="640" height="360" loading="lazy" decoding="async" />
-            </button>
-            ${shot.caption ? `<figcaption>${esc(shot.caption)}</figcaption>` : ""}
-          </figure>
-        </li>`;
-      index += 1;
-      return card;
-    });
+    const cards = dayShots.map((shot) => shotCard(shot, index++));
     const count = `${dayShots.length} screenshot${dayShots.length === 1 ? "" : "s"}`;
     return `
       <section class="album-session" aria-labelledby="session-${day}">
@@ -126,21 +130,41 @@ export function initAlbum(root) {
   dialog.addEventListener("close", () => opener?.focus({ preventScroll: true }));
 }
 
-/** Render the album into `view`, loading data/album.json the first time it's shown. */
-export async function renderAlbum(view) {
-  if (!shots) {
-    view.innerHTML = `<p class="status">Loading the album…</p>`;
-    try {
-      const response = await fetch("data/album.json");
-      if (!response.ok) throw new Error(`data/album.json returned ${response.status}`);
-      shots = (await response.json()).shots;
-    } catch (error) {
-      view.innerHTML = `<p class="status status-error">The album didn't load. Reload the page to try again.</p>`;
-      throw error; // keeps the technical detail in the browser console
-    }
-    // Someone may have switched views while the album loaded.
-    if (viewFromHash(location.hash) !== "album") return;
+async function fetchAlbum() {
+  const response = await fetch("data/album.json");
+  if (!response.ok) throw new Error(`data/album.json returned ${response.status}`);
+  const { shots } = await response.json();
+  order = viewerOrder(shots);
+  return shots;
+}
+
+/** The album's shots, fetched once and shared by Home, the banner and the Album tab. */
+export function loadAlbum() {
+  loading ??= fetchAlbum().catch((error) => {
+    loading = null; // a later view can try again
+    throw error;
+  });
+  return loading;
+}
+
+/**
+ * Load the album, then draw `html(shots)` into `view` if `viewName` is still the open view.
+ * Shows a loading line first and a plain error if the album can't load.
+ */
+export async function renderWithAlbum(view, viewName, html) {
+  view.innerHTML = `<p class="status">Loading the album…</p>`;
+  let shots;
+  try {
+    shots = await loadAlbum();
+  } catch (error) {
+    view.innerHTML = `<p class="status status-error">The album didn't load. Reload the page to try again.</p>`;
+    throw error; // keeps the technical detail in the browser console
   }
-  order = groupByDay(shots).flatMap((session) => session.shots);
-  view.innerHTML = albumHtml(shots);
+  // Someone may have switched views while the album loaded.
+  if (viewFromHash(location.hash) === viewName) view.innerHTML = html(shots);
+}
+
+/** Render the Album tab into `view`. */
+export function renderAlbum(view) {
+  return renderWithAlbum(view, "album", albumHtml);
 }

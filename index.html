@@ -3,16 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BG3 gear finder</title>
-    <meta name="description" content="Every piece of Baldur's Gate 3 gear on bg3.wiki, and where along the journey you can pick it up." />
+    <title>Our Baldur's Gate 3 party</title>
+    <meta name="description" content="Our Baldur's Gate 3 party: who we are, how we level, the story so far, and a finder for every piece of gear." />
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/party.css" />
     <link rel="stylesheet" href="assets/album.css" />
+    <link rel="stylesheet" href="assets/home.css" />
     <script type="module" src="assets/js/main.js"></script>
   </head>
   <body>
-    <header class="masthead">
-      <h1>Baldur's Gate 3 gear finder</h1>
+    <nav class="section-switch" aria-label="Section">
+      <span class="section-switch-inner">
+        <a href="#home" data-section="party">Our party</a>
+        <a href="#journey" data-section="gear">Gear finder</a>
+      </span>
+    </nav>
+
+    <header class="hero" data-views="home">
+      <img class="hero-image" alt="" />
+      <img class="hero-image" alt="" />
+      <div class="hero-controls">
+        <p class="hero-caption"></p>
+        <button type="button" class="hero-pause" aria-pressed="false" hidden>Pause</button>
+      </div>
+      <div class="hero-text">
+        <h1 class="party-name" data-party-name></h1>
+        <p class="lede">Our Baldur's Gate 3 run, from the nautiloid onward.</p>
+      </div>
+    </header>
+
+    <header class="masthead" data-views="party album" hidden>
+      <h1 class="party-name" data-party-name></h1>
+    </header>
+
+    <header class="masthead" data-views="journey items" hidden>
+      <h1>Gear finder</h1>
       <p class="lede">Every piece of gear on bg3.wiki, and where along the journey you can pick it up.</p>
     </header>
 
@@ -40,11 +65,15 @@
       <button type="reset" class="text-button">Clear filters</button>
     </form>
 
-    <nav class="view-switch" aria-label="View">
+    <nav class="view-switch" data-views="home party album" aria-label="Party views">
+      <a href="#home" data-view="home">Home</a>
       <a href="#party" data-view="party">Party</a>
+      <a href="#album" data-view="album">Album</a>
+    </nav>
+
+    <nav class="view-switch" data-views="journey items" aria-label="Gear views" hidden>
       <a href="#journey" data-view="journey">Journey</a>
       <a href="#items" data-view="items">All items</a>
-      <a href="#album" data-view="album">Album</a>
       <p class="result-count" id="result-count" aria-live="polite"></p>
     </nav>
 

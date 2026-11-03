@@ -6,16 +6,23 @@ import { abilityEntries, abilityFacts, abilityList, popContent, rechargeFact } f
 import { averageDamage } from "../assets/js/data.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
-import { VIEWS, viewFromHash } from "../assets/js/views.js";
+import { SECTIONS, VIEWS, sectionOf, viewFromHash } from "../assets/js/views.js";
 
-test("viewFromHash opens Party first and by default", () => {
-  assert.equal(VIEWS[0], "party");
-  assert.equal(viewFromHash(""), "party");
-  assert.equal(viewFromHash("#nonsense"), "party");
+test("viewFromHash opens Home first and by default", () => {
+  assert.equal(VIEWS[0], "home");
+  assert.equal(viewFromHash(""), "home");
+  assert.equal(viewFromHash("#nonsense"), "home");
   assert.equal(viewFromHash("#party/vesper/gear"), "party");
+  assert.equal(viewFromHash("#album"), "album");
   assert.equal(viewFromHash("#journey"), "journey");
   assert.equal(viewFromHash("#items"), "items");
-  assert.equal(viewFromHash("#album"), "album");
+});
+
+test("sectionOf splits the views into the party section and the gear finder", () => {
+  assert.deepEqual(SECTIONS, { party: ["home", "party", "album"], gear: ["journey", "items"] });
+  assert.equal(sectionOf("home"), "party");
+  assert.equal(sectionOf("album"), "party");
+  assert.equal(sectionOf("items"), "gear");
 });
 
 test("esc neutralises HTML", () => {
