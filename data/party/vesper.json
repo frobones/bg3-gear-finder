@@ -237,14 +237,14 @@
  },
 
  "gear": [
-  {"item": "Shapeshifter's Boon Ring", "priority": "swap", "note": "+1d4 to ability checks while disguised. Share with the Druid.", "claim": "Shared: swap with whoever is shapeshifting."},
-  {"item": "Silver Pendant", "priority": "swap", "note": "Guidance when the Druid isn't nearby."},
+  {"item": "Shapeshifter's Boon Ring", "priority": "swap", "note": "+1d4 to ability checks while disguised. Share with Alene.", "claim": "Shared: swap with whoever is shapeshifting."},
+  {"item": "Silver Pendant", "priority": "swap", "note": "Guidance when Alene isn't nearby."},
   {"item": "Gloves of Thievery", "priority": "swap", "note": "Advantage on Sleight of Hand. Theft kit, not combat gloves."},
   {"item": "Cloak of Cunning Brume", "priority": "swap", "note": "Disengage makes a 2 m fog cloud for 1 turn: a reusable place to Hide and pickpocket from Act 2 on, instead of a Darkness arrow. Sold by Mattis at Last Light Inn."},
   {"item": "Smuggler's Ring", "priority": "swap", "note": "+2 Stealth and Sleight of Hand for stealing, locks and traps, but −1 Charisma: take it off before a Deception check."},
   {"item": "Mask of the Shapeshifter", "priority": "optional", "note": "In reserve: she learns Disguise Self. Use the Mask if you replace Disguise Self at level 11."},
   {"item": "The Speedy Lightfeet", "priority": "core", "note": "Cunning Dash gives 3 Lightning Charges every turn of her hit-and-run loop. Needs medium armour proficiency."},
-  {"item": "Knife of the Undermountain King", "priority": "core", "note": "Her Act 1 weapon: crits on 19–20, rerolls low damage, Advantage on obscured targets.", "claim": "Vesper until Shadow Blade at level 8, then the Warlock if they fight in melee. The Ranger's melee slot holds the Club of Hill Giant Strength."},
+  {"item": "Knife of the Undermountain King", "priority": "core", "note": "Her Act 1 weapon: crits on 19–20, rerolls low damage, Advantage on obscured targets.", "claim": "Vesper until Shadow Blade at level 8, then Zetharis if they fight in melee. Pearl's melee slot holds the Club of Hill Giant Strength."},
   {"item": "Phalar Aluve", "priority": "optional", "note": "Finesse longsword fallback. Any teammate can pull it from the stone (DC 15 Strength or Religion) and hand it over."},
   {"item": "Sussur Dagger", "priority": "optional", "note": "Silences a caster it hits if they fail a Constitution save."},
   {"item": "Rupturing Blade", "priority": "optional", "note": "+1 finesse rapier, so Sneak Attack works. Searing Blood (short rest) is the original guide's bomb trick: each damage type it carries sets off the bomb again, and she takes 1d6 slashing. Bombs are her last resort. Sold by Brem after Find the Missing Shipment."},
@@ -310,7 +310,7 @@
     {"slot": "Chest", "items": ["Breastplate +1"], "alternates": ["The Jolty Vest", "The Oak Father's Embrace"], "note": "Until Yuan-Ti Scale Mail early in Act 2. Adamantine Scale Mail is skipped: the second Mithral ore makes Zetharis a shield."},
     {"slot": "Gloves", "items": ["Wondrous Gloves"], "alternates": ["Gloves of Thievery"], "note": "Swap to Thievery for stealing."},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
-    {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure", "Silver Pendant"], "note": "The Necklace is in the Crèche, late in the act: wear the Periapt until then. Silver Pendant gives Guidance when the Druid isn't nearby."},
+    {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure", "Silver Pendant"], "note": "The Necklace is in the Crèche, late in the act: wear the Periapt until then. Silver Pendant gives Guidance when Alene isn't nearby."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring"], "note": "Swap to the Boon ring while disguised."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Smuggler's Ring"], "note": "Swap to Smuggler's for stealing, locks and traps."},
     {"slot": "Main hand", "items": ["Knife of the Undermountain King"], "alternates": ["Phalar Aluve", "Sussur Dagger", "Rupturing Blade"], "note": "Finesse, so Sneak Attack works. Hand the Knife on when Shadow Blade arrives at level 8."},
@@ -378,7 +378,7 @@
    ]
   },
   "start_of_day": [
-   "Ask the Gloom Stalker for Longstrider: more movement for running in and back out.",
+   "Ask Pearl for Longstrider: more movement for running in and back out.",
    "Prepare the Wizard spells for her level, then swap freely out of combat.",
    "From level 8, cast Shadow Blade. From level 9, use a 3rd-level slot.",
    "Before a theft: Boon ring, cast Disguise Self, then theft ring and gloves.",
@@ -389,7 +389,7 @@
     "title": "Get ready",
     "steps": [
      "Put on Shapeshifter's Boon Ring, then cast Disguise Self (or use Mask of the Shapeshifter if you swapped at level 11).",
-     "Put on Smuggler's Ring and Gloves of Thievery, and from Act 2 Cloak of Cunning Brume. Get Guidance from the Druid, or cast it with the Silver Pendant."
+     "Put on Smuggler's Ring and Gloves of Thievery, and from Act 2 Cloak of Cunning Brume. Get Guidance from Alene, or cast it with the Silver Pendant."
     ]
    },
    {
