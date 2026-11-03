@@ -45,10 +45,11 @@ The page loads its data with `fetch`, so serve the folder rather than opening
 `index.html` directly:
 
 ```bash
-python3 -m http.server 8642 --bind 127.0.0.1
+python3 scripts/serve.py
 ```
 
-Then open <http://localhost:8642>.
+Then open <http://localhost:8642>. The script tells the browser not to cache
+anything, so a normal reload always shows the latest data and code.
 
 ## Data
 
