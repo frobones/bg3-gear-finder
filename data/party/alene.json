@@ -101,7 +101,7 @@
   {
    "act": "three",
    "label": "Act 3",
-   "intro": "The spell DC capstones arrive. Stacking the DC pieces reaches about DC 27, if the +1 DC pieces stack: check the number in game.",
+   "intro": "The spell DC capstones arrive. Stacking the DC pieces reaches DC 27.",
    "slots": [
     {"slot": "Head", "items": ["Hood of the Weave", "Shapeshifter Hat"]},
     {"slot": "Cloak", "items": ["Cloak of the Weave"]},
