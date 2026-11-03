@@ -326,6 +326,7 @@
   {"item": "Unwanted Masterwork Scalemail", "priority": "yield", "claim": "Pearl: her Act 3 armour."},
   {"item": "Mask of Soul Perception", "priority": "yield", "claim": "Pearl: +2 to hit pays off across her 2–3 Sharpshooter attacks a turn."},
   {"item": "Sarevok's Horned Helmet", "priority": "core", "note": "Crit range −1: a crit doubles her Sneak Attack and Shadow Blade dice. Also immune to Frightened."},
+  {"item": "Bloodthirst", "priority": "matchup", "note": "Off hand for boss burn-downs when she isn't the main target: crit range −1, stacking with Sarevok's helmet for 18–20, and +1 AC in the off hand. It replaces Viconia's shield, so she drops from 25 to 23 AC and loses its spell protection. Orin carries it."},
   {"item": "Helm of Balduran", "priority": "optional", "note": "+1 AC and saves, immunity to crits and stuns, 2 HP back each turn: the survival swap."},
   {"item": "Cloak of the Weave", "priority": "yield", "claim": "Alene, for her spell DC."},
   {"item": "Cloak of Displacement", "priority": "core", "note": "Attackers have Disadvantage until she takes damage, renewed each turn: covers the opportunity attacks she draws backing off."},
@@ -400,7 +401,7 @@
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Phantasmal Killer, Slow or Fear."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Band of the Mystic Scoundrel"]},
     {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic."},
-    {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield"]},
+    {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield", "Bloodthirst"]},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
    ],
    "armour_class": "Armour of Agility 22 (at DEX 20) + Viconia's Walking Fortress 3 = 25 AC, and Cloak of Displacement gives attackers Disadvantage until she's hit. Helm of Balduran adds 1 when survival matters more. Shield adds +5 when needed."
