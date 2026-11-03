@@ -274,7 +274,7 @@
   "extra_description": null,
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/3/3f/Perform_Whistle_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/c/cd/Perform_whistle_Icon.webp",
   "links": [
    {
     "text": "Charisma",
@@ -694,7 +694,7 @@
   "extra_description": "You need to toggle this feature on in order to activate this effect.",
   "recharge": "Long Rest",
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/a/aa/Arcane_Battery_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/a/ac/Arcane_Battery_Passive_Feature_Icon.webp",
   "links": [
    {
     "text": "spell slot",
@@ -2071,7 +2071,7 @@
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "movement m:6",
-  "icon_url": "https://bg3.wiki/w/images/f/f8/Brace__Melee.webp",
+  "icon_url": "https://bg3.wiki/w/images/f/fa/Brace_Melee.webp",
   "links": [
    {
     "text": "movement",
@@ -2091,7 +2091,7 @@
   "extra_description": null,
   "recharge": "Short Rest",
   "cost": "movement m:6",
-  "icon_url": "https://bg3.wiki/w/images/9/9f/Brace__Ranged.webp",
+  "icon_url": "https://bg3.wiki/w/images/3/3a/Brace_Ranged.webp",
   "links": [
    {
     "text": "movement",
@@ -3320,7 +3320,7 @@
   "extra_description": null,
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/f/fa/Dash_Bonus_Action_Unfaded_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/b/b8/Dash_bonus_action_Unfaded_Icon.webp",
   "links": [
    {
     "text": "movement speed",
@@ -3952,7 +3952,7 @@
   "extra_description": null,
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/b/b6/Demonspirit_Aura_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/3/36/Generic_Wild_Animal_Icon.webp",
   "links": [
    {
     "text": "resistance",
@@ -8438,7 +8438,7 @@
   "extra_description": "Invisibility ends early if the invisible entity attacks, casts another spell, interacts with an object, takes an action or bonus action, or is damaged.",
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/b/b9/Invisibility__spell_Unfaded_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/2/2d/Invisibility_spell_Unfaded_Icon.webp",
   "links": [
    {
     "text": "Invisible",
@@ -9678,7 +9678,7 @@
   "extra_description": null,
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/b/b1/Minions_of_Chaos_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/0/08/Conjure_Minor_Elemental_Azer_Icon.webp",
   "links": [
    {
     "text": "Conjure Elemental",
@@ -9723,7 +9723,7 @@
   "extra_description": null,
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/4/43/Mire_the_Mind_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/b/be/Slow_Icon.webp",
   "links": [
    {
     "text": "Slow",
@@ -13001,7 +13001,7 @@
   "extra_description": null,
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/7/77/Shield__spell_Unfaded_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/5/5e/Shield_spell_Unfaded_Icon.webp",
   "links": [
    {
     "text": "Reaction",

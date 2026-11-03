@@ -136,7 +136,7 @@ class BuildAbilitiesTest(unittest.TestCase):
         self.assertEqual(abilities["Remedial Rhymes"]["description"], "Gain Temp HP.")
         self.assertEqual(abilities["Remedial Rhymes"]["links"][0]["page"], "Temp HP")
         self.assertEqual(abilities["Lacerate"]["kind"], "action")
-        self.assertEqual(abilities["Lacerate"]["icon_url"], fetch_wiki.file_url("Lacerate.webp"))
+        self.assertEqual(abilities["Lacerate"]["icon_files"], ["Lacerate.webp"])
 
     def test_missing_ability_stops_the_build(self) -> None:
         wiki = FakeWiki({"passives": [], "actions": []})
@@ -302,13 +302,57 @@ class PartyDataTest(unittest.TestCase):
                 self.assertEqual(fetch_wiki.profile_names(profile, fetch_wiki.PROFILE_ABILITY_KEYS) - abilities, set())
 
 
+class FakeFileApi:
+    """Answers imageinfo queries the way bg3.wiki does: normalizing titles, following redirects, omitting misses."""
+
+    FILES = {"File:Slow Icon.webp": "https://bg3.wiki/w/images/b/be/Slow_Icon.webp"}
+    NORMALIZED = {"File:Shield  spell Icon.webp": "File:Shield spell Icon.webp"}
+    REDIRECTS = {"File:Mire the Mind Icon.webp": "File:Slow Icon.webp"}
+
+    def __init__(self) -> None:
+        self.files = {**self.FILES, "File:Shield spell Icon.webp": "https://bg3.wiki/w/images/5/5e/Shield.webp"}
+        self.calls = 0
+
+    def api(self, kind: str, form: dict) -> dict:
+        self.calls += 1
+        titles = form["titles"].split("|")
+        normalized = [{"from": t, "to": self.NORMALIZED[t]} for t in titles if t in self.NORMALIZED]
+        after = [self.NORMALIZED.get(t, t) for t in titles]
+        redirects = [{"from": t, "to": self.REDIRECTS[t]} for t in after if t in self.REDIRECTS]
+        final = {self.REDIRECTS.get(t, t) for t in after}
+        pages = [
+            {"title": t, "imageinfo": [{"url": self.files[t]}]} if t in self.files else {"title": t, "missing": True}
+            for t in final
+        ]
+        return {"query": {"normalized": normalized, "redirects": redirects, "pages": pages}}
+
+
 class FileUrlTest(unittest.TestCase):
-    def test_matches_mediawiki_hashed_path(self) -> None:
-        # Path observed on bg3.wiki for this file.
-        self.assertEqual(
-            fetch_wiki.file_url("File:Portrait Uktar.png"),
-            "https://bg3.wiki/w/images/4/44/Portrait_Uktar.png",
+    def test_follows_normalizing_and_redirects_and_reports_missing_files(self) -> None:
+        resolved = fetch_wiki.resolve_file_urls(
+            FakeFileApi(), {"Shield  spell Icon.webp", "Mire the Mind Icon.webp", "Performer Icon.webp"}
         )
+        self.assertEqual(
+            resolved,
+            {
+                "Shield  spell Icon.webp": "https://bg3.wiki/w/images/5/5e/Shield.webp",
+                "Mire the Mind Icon.webp": "https://bg3.wiki/w/images/b/be/Slow_Icon.webp",
+                "Performer Icon.webp": None,
+            },
+        )
+
+    def test_asks_in_batches(self) -> None:
+        wiki = FakeFileApi()
+        fetch_wiki.resolve_file_urls(wiki, {f"File {n}.webp" for n in range(fetch_wiki.PAGES_PER_QUERY + 1)})
+        self.assertEqual(wiki.calls, 2)
+
+    def test_attach_fills_item_urls_and_picks_the_first_existing_ability_icon(self) -> None:
+        item = {"icon": "Slow Icon.webp", "icon_url": None, "image": "Gone.webp", "image_url": None, "variants": []}
+        ability = {"icon_url": None, "icon_files": ["Gone.webp", "Mire the Mind Icon.webp"]}
+        fetch_wiki.attach_file_urls(FakeFileApi(), {"Ring": item}, {"Mire the Mind": ability})
+        self.assertEqual(item["icon_url"], "https://bg3.wiki/w/images/b/be/Slow_Icon.webp")
+        self.assertIsNone(item["image_url"])
+        self.assertEqual(ability, {"icon_url": "https://bg3.wiki/w/images/b/be/Slow_Icon.webp"})
 
 
 if __name__ == "__main__":

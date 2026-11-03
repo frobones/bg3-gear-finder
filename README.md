@@ -53,8 +53,9 @@ All item data comes from [bg3.wiki](https://bg3.wiki/)'s Cargo tables
 (`equipment`, `weapons`, `item_locations`, `locations`, `passives`,
 `actions`, `spells`) via `Special:CargoExport`. Item notes are not in
 Cargo, so they are read from each item page's source and expanded through
-`api.php`. The page never contacts the wiki for data; item and spell icons
-load from the wiki's image server.
+`api.php`. Image addresses are looked up through `api.php` as well, so files
+the wiki has renamed still resolve. The page never contacts the wiki for
+data; item and spell icons load from the wiki's image server.
 
 | File | Contents |
 | --- | --- |

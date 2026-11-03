@@ -200,11 +200,51 @@ def wiki_url(target: str) -> str:
     return f"{WIKI}/wiki/" + urllib.parse.quote(target.strip().replace(" ", "_"), safe="/#():',")
 
 
-def file_url(name: str) -> str:
-    """Direct image URL using MediaWiki's hashed upload path (MD5 is its path scheme, not security)."""
-    name = name.removeprefix("File:").strip().replace(" ", "_")
-    digest = hashlib.md5(name.encode()).hexdigest()
-    return f"{WIKI}/w/images/{digest[0]}/{digest[:2]}/{urllib.parse.quote(name)}"
+def resolve_file_urls(wiki: WikiClient, names: set[str]) -> dict[str, str | None]:
+    """Each image file's real URL, asked of the wiki so renamed files resolve; None where no such file exists.
+
+    Cargo rows name files as they were when the row was written. Files are often renamed since (leaving a
+    redirect) or never uploaded, so the address can't be worked out from the name alone.
+    """
+    resolved: dict[str, str | None] = {}
+    ordered = sorted(names)
+    for start in range(0, len(ordered), PAGES_PER_QUERY):
+        batch = ordered[start : start + PAGES_PER_QUERY]
+        form = {
+            "action": "query",
+            "prop": "imageinfo",
+            "iiprop": "url",
+            "redirects": "1",
+            "titles": "|".join(f"File:{name}" for name in batch),
+        }
+        query = wiki.api("files", form)["query"]
+        renamed = {entry["from"]: entry["to"] for entry in query.get("normalized", []) + query.get("redirects", [])}
+        urls = {page["title"]: page["imageinfo"][0]["url"] for page in query["pages"] if page.get("imageinfo")}
+        for name in batch:
+            title, seen = f"File:{name}", set()
+            while title in renamed and title not in seen:
+                seen.add(title)
+                title = renamed[title]
+            resolved[name] = urls.get(title)
+    return resolved
+
+
+def file_fields(record: dict) -> list[str]:
+    """The fields of a normalized record that name an image file (each has a matching "<field>_url")."""
+    return [key[:-4] for key in record if key.endswith("_url") and key[:-4] in record and record[key[:-4]]]
+
+
+def attach_file_urls(wiki: WikiClient, items: dict[str, dict], abilities: dict[str, dict]) -> None:
+    """Fill in every image URL from the wiki, and pick each ability's icon from the files that exist."""
+    records = [record for item in items.values() for record in (item, *item["variants"])]
+    names = {record[field] for record in records for field in file_fields(record)}
+    names |= {name for ability in abilities.values() for name in ability["icon_files"]}
+    resolved = resolve_file_urls(wiki, names)
+    for record in records:
+        for field in file_fields(record):
+            record[f"{field}_url"] = resolved[record[field]]
+    for ability in abilities.values():
+        ability["icon_url"] = next((resolved[name] for name in ability.pop("icon_files") if resolved[name]), None)
 
 
 def _clean_line(line: str) -> str:
@@ -278,7 +318,7 @@ def normalize_row(row: dict, schema: dict) -> dict:
                 value = value.strip() or None
         out[field] = value
         if spec["type"] == "File" and value:
-            out[f"{field}_url"] = file_url(value)
+            out[f"{field}_url"] = None  # filled in by attach_file_urls, which asks the wiki
     return out
 
 
@@ -398,7 +438,9 @@ def _ability(record: dict, kind: str, links: list[dict]) -> dict:
         "extra_description": record.get("extra_description"),
         "recharge": record.get("recharge"),
         "cost": record.get("cost"),
-        "icon_url": record.get("icon_url") or record.get("image_url") or record.get("hotbar_icon_url"),
+        # attach_file_urls fills icon_url with the first of icon_files (in order of preference) the wiki has.
+        "icon_url": None,
+        "icon_files": [record[field] for field in ("icon", "image", "hotbar_icon") if record.get(field)],
         "links": links,
         "wiki_url": wiki_url(record["page"]),
     }
@@ -610,6 +652,7 @@ def main() -> int:
     profiles = load_profiles()
     check_profile_items(profiles, items)
     add_profile_abilities(wiki, profiles, abilities)
+    attach_file_urls(wiki, items, abilities)
     add_notes(wiki, items)
 
     located = {a["item"] for a in acquisitions}
