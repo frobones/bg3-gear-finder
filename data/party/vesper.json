@@ -362,17 +362,21 @@
  ],
 
  "playbook": {
-  "turn": [
-   "Cunning Action: Dash toward the target. The Speedy Lightfeet give 3 Lightning Charges.",
-   "Booming Blade with Shadow Blade, and add Sneak Attack on the hit.",
-   "Use the rest of her movement to back away, so the target has to move to reach her and takes Booming Blade's thunder.",
-   "Backing away draws opportunity attacks. Uncanny Dodge halves each hit and, in the current patch, doesn't use up her reaction, so Shield (+5 AC for the round) and Counterspell stay free. The Arcane Ward soaks the rest. Misses trigger Holy Lance Helm and the Adamantine Shield.",
-   "An empty Arcane Ward refills to her Wizard level the next time she casts Booming Blade or gains Lightning Charges or Arcane Acuity. It only works at exactly 0 charges.",
-   "Can't reach a target? Cast Blade Ward and Dash past enemies instead: resistance plus Uncanny Dodge cuts their physical hits by 75%.",
-   "If an opportunity attack would be too dangerous, use Cunning Disengage instead of Dash.",
-   "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends. Before one, fill her Arcane Ward and boost her saves with Bless, Resistance or Heroism.",
-   "From level 11, Evasion means a passed DEX save takes no damage from Alene's Call Lightning or Ice Storm, Pearl's Conjure Barrage, Glyph of Warding, Fireball and most grenades, so friends can aim them at enemies around her. Smokepowder Arrows aren't covered, and the wiki doesn't list Spike Growth, Hunger of Hadar, Cone of Cold, Sunbeam, Insect Plague or Wall of Fire."
-  ],
+  "turn": {
+   "loop": [
+    {"title": "Dash in", "text": "Cunning Action: Dash toward the target. The Speedy Lightfeet give 3 Lightning Charges."},
+    {"title": "Strike", "text": "Booming Blade with Shadow Blade, and add Sneak Attack on the hit."},
+    {"title": "Back out", "text": "Use the rest of her movement to back away, so the target has to move to reach her and takes Booming Blade's thunder."}
+   ],
+   "situations": [
+    {"title": "Taking opportunity attacks", "text": "Backing away draws opportunity attacks. Uncanny Dodge halves each hit and, in the current patch, doesn't use up her reaction, so Shield (+5 AC for the round) and Counterspell stay free. The Arcane Ward soaks the rest. Misses trigger Holy Lance Helm and the Adamantine Shield."},
+    {"title": "Arcane Ward is empty", "text": "An empty Arcane Ward refills to her Wizard level the next time she casts Booming Blade or gains Lightning Charges or Arcane Acuity. It only works at exactly 0 charges."},
+    {"title": "Can't reach the target", "text": "Can't reach a target? Cast Blade Ward and Dash past enemies instead: resistance plus Uncanny Dodge cuts their physical hits by 75%."},
+    {"title": "Dash is too risky", "text": "If an opportunity attack would be too dangerous, use Cunning Disengage instead of Dash."},
+    {"title": "Bombs", "text": "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends. Before one, fill her Arcane Ward and boost her saves with Bless, Resistance or Heroism.", "from_level": 11},
+    {"title": "Friends' area spells", "text": "From level 11, Evasion means a passed DEX save takes no damage from Alene's Call Lightning or Ice Storm, Pearl's Conjure Barrage, Glyph of Warding, Fireball and most grenades, so friends can aim them at enemies around her. Smokepowder Arrows aren't covered, and the wiki doesn't list Spike Growth, Hunger of Hadar, Cone of Cold, Sunbeam, Insect Plague or Wall of Fire.", "from_level": 11}
+   ]
+  },
   "start_of_day": [
    "Ask the Gloom Stalker for Longstrider: more movement for running in and back out.",
    "Prepare the Wizard spells for her level, then swap freely out of combat.",
@@ -381,17 +385,32 @@
    "Decide whether the Resonance Stone is safe to carry today."
   ],
   "theft": [
-   "Put on Shapeshifter's Boon Ring, then cast Disguise Self (or use Mask of the Shapeshifter if you swapped at level 11).",
-   "Put on Smuggler's Ring and Gloves of Thievery, and from Act 2 Cloak of Cunning Brume. Get Guidance from the Druid, or cast it with the Silver Pendant.",
-   "Split from the group and Hide. Keep your friends out of the crime scene.",
-   "From Act 2: switch to turn-based mode, Disengage next to the target in Cloak of Cunning Brume, Hide in the fog and pickpocket before it fades after 1 turn. In Act 1, shoot a Darkness arrow next to the target instead.",
-   "Steal at least one copy of every Wizard scroll you find.",
-   "After a successful pickpocket, leave before the victim notices.",
-   "If caught and given a dialogue check, pick Deception. Use Friends after a failed pickpocket, once Guidance doesn't matter any more. On Tactician, casting Friends is itself a crime, so cast it out of sight.",
-   "On Tactician, Friends can anger its target when it ends. Leave, camp or fast-travel before the 10 turns run out. Never use Friends on companions.",
-   "Caught with no dialogue check: Disengage for fog, or shoot a Darkness arrow for a longer-lasting cloud, then Hide in it and get away.",
-   "Next time, use a different disguise: the victim won't recognise her.",
-   "If you keep getting caught, slip away instead of escalating."
+   {
+    "title": "Get ready",
+    "steps": [
+     "Put on Shapeshifter's Boon Ring, then cast Disguise Self (or use Mask of the Shapeshifter if you swapped at level 11).",
+     "Put on Smuggler's Ring and Gloves of Thievery, and from Act 2 Cloak of Cunning Brume. Get Guidance from the Druid, or cast it with the Silver Pendant."
+    ]
+   },
+   {
+    "title": "The lift",
+    "steps": [
+     "Split from the group and Hide. Keep your friends out of the crime scene.",
+     "From Act 2: switch to turn-based mode, Disengage next to the target in Cloak of Cunning Brume, Hide in the fog and pickpocket before it fades after 1 turn. In Act 1, shoot a Darkness arrow next to the target instead.",
+     "Steal at least one copy of every Wizard scroll you find.",
+     "After a successful pickpocket, leave before the victim notices."
+    ]
+   },
+   {
+    "title": "If it goes wrong",
+    "steps": [
+     "If caught and given a dialogue check, pick Deception. Use Friends after a failed pickpocket, once Guidance doesn't matter any more. On Tactician, casting Friends is itself a crime, so cast it out of sight.",
+     "On Tactician, Friends can anger its target when it ends. Leave, camp or fast-travel before the 10 turns run out. Never use Friends on companions.",
+     "Caught with no dialogue check: Disengage for fog, or shoot a Darkness arrow for a longer-lasting cloud, then Hide in it and get away.",
+     "Next time, use a different disguise: the victim won't recognise her.",
+     "If you keep getting caught, slip away instead of escalating."
+    ]
+   }
   ],
   "reactions": [
    {"name": "Sneak Attack", "setting": "Always", "why": "Booming Blade is her only attack on her own turn, so there's no better hit to save it for. It's once per turn, so an opportunity attack on an enemy's turn can still use it. Check in game that it leaves her reaction free."},
@@ -403,12 +422,12 @@
    {"name": "Rebuke of the Mighty (Viconia's)", "setting": "Ask", "why": "Never let it take the reaction you need for Shield or Counterspell."}
   ],
   "mage_hand": [
-   "Scout dangerous rooms while it's invisible. It turns visible when it acts and goes invisible again on a short rest.",
-   "Drop a potion for the Hand to throw to an ally.",
-   "Stand it next to an enemy to count as the ally Sneak Attack needs.",
-   "Turn off lights so targets are obscured, which gives her Shadow Blade Advantage.",
-   "Before combat, throw or shove enemies off ledges or into chasms. Give the Hand a Hill Giant Strength elixir first so the throw succeeds.",
-   "Cast Mage Armour and Longstrider on the Hand to keep it alive and moving."
+   {"title": "Scout", "text": "Scout dangerous rooms while it's invisible. It turns visible when it acts and goes invisible again on a short rest."},
+   {"title": "Potion courier", "text": "Drop a potion for the Hand to throw to an ally."},
+   {"title": "Flanking buddy", "text": "Stand it next to an enemy to count as the ally Sneak Attack needs."},
+   {"title": "Lights out", "text": "Turn off lights so targets are obscured, which gives her Shadow Blade Advantage."},
+   {"title": "Ledge shove", "text": "Before combat, throw or shove enemies off ledges or into chasms. Give the Hand a Hill Giant Strength elixir first so the throw succeeds."},
+   {"title": "Keep it alive", "text": "Cast Mage Armour and Longstrider on the Hand to keep it alive and moving."}
   ]
  }
 }

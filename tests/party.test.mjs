@@ -291,11 +291,42 @@ test("an options profile's act loadout is a bucket of picks with tags, not defau
   assert.equal(table.match(/tag-dc/g)?.length, 2);
 });
 
-test("renderPlaybookTab shows only the sections a profile has, in order", () => {
-  const html = renderPlaybookTab({ playbook: { mage_hand: ["Scout"], turn: ["Dash", "Strike"] } });
+test("renderPlaybookTab shows only the sections a profile has, in order, with a jump bar", () => {
+  const html = renderPlaybookTab({
+    playbook: {
+      mage_hand: [{ title: "Scout", text: "Look ahead." }],
+      turn: {
+        loop: [
+          { title: "Dash in", text: "Dash." },
+          { title: "Strike", text: "Hit <hard>." },
+        ],
+        situations: [{ title: "Bombs", text: "Last resort.", from_level: 11 }],
+      },
+    },
+  });
   assert.ok(html.indexOf("A turn in combat") < html.indexOf("Mage Hand jobs"));
-  assert.match(html, /A turn in combat<\/h3><ol/);
   assert.doesNotMatch(html, /Reaction settings|Stealing safely/);
+  assert.match(html, /<button type="button" class="pb-jump-link" data-jump="pb-turn">Combat<\/button><button type="button" class="pb-jump-link" data-jump="pb-mage_hand">Mage Hand<\/button>/);
+  assert.match(html, /<span class="pb-step-number" aria-hidden="true">2<\/span>\s*<p class="pb-card-title">Strike<\/p>\s*<p>Hit &lt;hard&gt;\.<\/p>/);
+  assert.match(html, /<p class="pb-card-title">Bombs<span class="tag">Level 11\+<\/span><\/p>/);
+});
+
+test("renderPlaybookTab numbers theft steps straight through its phases and puts Always reactions first", () => {
+  const html = renderPlaybookTab({
+    playbook: {
+      theft: [
+        { title: "Get ready", steps: ["Disguise.", "Ring."] },
+        { title: "The lift", steps: ["Hide."] },
+      ],
+      reactions: [
+        { name: "Shield", setting: "Ask", why: "Slots." },
+        { name: "Uncanny Dodge", setting: "Always", why: "Free." },
+      ],
+    },
+  });
+  assert.match(html, /The lift<\/h4>\s*<ol class="steps" start="3"><li>Hide\.<\/li>/);
+  assert.ok(html.indexOf("Uncanny Dodge") < html.indexOf(">Shield<"));
+  assert.match(html, /<span class="pb-setting pb-setting-ask">Ask<\/span>/);
 });
 
 test("a full plan's gear tab puts the loadout summary before the checklist and lists no hand-offs", () => {

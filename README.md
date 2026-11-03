@@ -23,7 +23,10 @@ sections, **Our party** and **Gear finder**.
     each act with alternates.
   - **Illithid**: suggested illithid powers, in order. Select a power to read
     it in the side panel.
-  - **Playbook**: a turn in combat, theft steps, and reaction settings.
+  - **Playbook**: a jump bar to each section; the combat loop as three
+    steps, then what to do when things change; a start-of-day checklist;
+    theft in phases; reaction settings marked Always or Ask; and Mage Hand
+    jobs.
   - **Backstory**: the character's story so far, when the profile has one.
 - Friends' profiles are suggestions rather than a plan, on one page: **Good
   picks by act** (gear per slot, tagged by what it's good for), **Good

@@ -185,6 +185,14 @@ export function initParty(view, rerender) {
   };
 
   view.addEventListener("click", (event) => {
+    // The playbook's jump bar scrolls within the page; a hash link would change the view instead.
+    const jump = event.target.closest("[data-jump]");
+    if (jump) {
+      const heading = document.getElementById(jump.dataset.jump);
+      heading.scrollIntoView({ block: "start" });
+      heading.focus({ preventScroll: true });
+      return;
+    }
     const step = event.target.closest("[data-level-view]");
     if (step) return showLevel(Number(step.dataset.levelView));
     const act = event.target.closest("[data-loadout-act]");
