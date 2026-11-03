@@ -1,0 +1,269 @@
+{
+ "id": "pearl",
+ "style": "options",
+ "name": "Pearl",
+ "title": "Gloom Stalker Ranger",
+ "classes": "Ranger 12 (Gloom Stalker)",
+ "role": "The party's archer: first to act, Titanstring Bow powered by Strength from gear, a shield on her back for AC.",
+ "level_order": "Ranger 1–12",
+ "shape": {
+  "name": "Titanstring archer",
+  "summary": "Titanstring Bow adds her Strength modifier to every arrow, and gear sets her Strength high: the Club of Hill Giant Strength from Act 1, then optionally the Gauntlets of Hill Giant Strength in Act 3. A shield in the melee slot keeps its AC while she shoots.",
+  "strong": ["Huge first turn: Dread Ambusher adds an extra attack, and she almost always goes first.", "Strength from gear means dumping STR costs nothing.", "Iron Mind (level 7) protects her from Hold Person and other mind control."],
+  "weak": ["Only 2 attacks on later turns until Stalker's Flurry at 11.", "Spells stop at 3rd level.", "Sharpshooter's −5 to hit needs offsets."]
+ },
+ "choices": [
+  {"label": "Strength source", "options": ["Club of Hill Giant Strength (Act 1, Arcane Tower): STR 19, +4 per arrow, in the melee slot with a shield", "Gauntlets of Hill Giant Strength (Act 3, House of Hope): STR 23, +6 per arrow, but they take the gloves slot"], "note": "Strength sources set your score rather than add to it, so the highest one wins. Dump STR to 8."},
+  {"label": "Ability scores", "options": ["DEX 17 · CON 16 · WIS 14 (+ STR 8, INT 8, CHA 10): sturdier", "DEX 16 · CON 14 · WIS 16: stronger Ensnaring Strike"], "note": "Auntie Ethel's hair can add +1 DEX."},
+  {"label": "Armour", "options": ["Medium armour that adds full DEX (Yuan-Ti, Armour of Agility, Unwanted Masterwork) and a shield", "Heavy armour through the Ranger Knight favoured enemy: the Club's STR 19 meets heavy armour's Strength needs, but it gives Disadvantage on Stealth"]}
+ ],
+
+ "levels": [
+  {
+   "level": 1,
+   "class": "Ranger",
+   "class_level": 1,
+   "choices": [
+    {"label": "Favoured Enemy", "pick": 1, "options": ["Bounty Hunter: Ensnaring Strike targets have Disadvantage on the save", "Ranger Knight: heavy armour proficiency", "Mage Breaker: True Strike cantrip", "Keeper of the Veil: Protection from Evil and Good", "Sanctified Stalker: Sacred Flame cantrip"]},
+    {"label": "Natural Explorer", "pick": 1, "options": ["Beast Tamer: Find Familiar (a raven can blind enemies)", "Wasteland Wanderer: resistance to Fire, Cold or Poison", "Urban Tracker: Sleight of Hand proficiency"]}
+   ],
+   "tips": ["You pick a Favoured Enemy and a Natural Explorer again at levels 6 and 10."],
+   "gains": "Favoured Enemy and Natural Explorer."
+  },
+  {
+   "level": 2,
+   "class": "Ranger",
+   "class_level": 2,
+   "choices": [
+    {"label": "Fighting style", "pick": 1, "options": ["Archery: +2 to ranged attack rolls, offsetting Sharpshooter", "Defence: +1 AC in armour"]},
+    {"label": "Spells", "pick": 2, "abilities": ["Hunter's Mark", "Ensnaring Strike", "Longstrider", "Hail of Thorns", "Fog Cloud", "Goodberry"]}
+   ],
+   "tips": ["Vesper's plan counts on your Longstrider each morning for her hit-and-run."],
+   "gains": "Fighting style and spellcasting."
+  },
+  {
+   "level": 3,
+   "class": "Ranger",
+   "class_level": 3,
+   "choices": [
+    {"label": "Subclass", "text": "Gloom Stalker"},
+    {"label": "Spell", "pick": 1, "abilities": ["Longstrider", "Fog Cloud", "Hail of Thorns", "Hunter's Mark", "Ensnaring Strike"]}
+   ],
+   "tips": ["Dread Ambusher: +3 initiative, and on the first turn of combat +3 m movement and a free extra attack with +1d8. Special arrows can't be used for that extra attack."],
+   "gains": "Dread Ambusher, Umbral Shroud and Disguise Self, always prepared.",
+   "abilities": ["Dread Ambusher", "Disguise Self"]
+  },
+  {
+   "level": 4,
+   "class": "Ranger",
+   "class_level": 4,
+   "choices": [
+    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: +2 DEX", "Sharpshooter: −5 to hit, +10 damage, toggled per attack", "Alert: +5 initiative, can't be surprised"]}
+   ],
+   "tips": ["Sharpshooter pays off once you have Archery and something else to hit with: Advantage, Guiding Bolt from Alene, or +1 attack gear."],
+   "gains": "First feat."
+  },
+  {
+   "level": 5,
+   "class": "Ranger",
+   "class_level": 5,
+   "choices": [
+    {"label": "Spell", "pick": 1, "abilities": ["Pass Without Trace", "Spike Growth", "Silence", "Lesser Restoration"]}
+   ],
+   "gains": "Extra Attack (3 attacks on your first turn) and Misty Step, always prepared.",
+   "abilities": ["Misty Step"]
+  },
+  {
+   "level": 6,
+   "class": "Ranger",
+   "class_level": 6,
+   "choices": [
+    {"label": "Favoured Enemy", "pick": 1, "options": ["Bounty Hunter", "Ranger Knight", "Mage Breaker", "Keeper of the Veil", "Sanctified Stalker"]},
+    {"label": "Natural Explorer", "pick": 1, "options": ["Beast Tamer", "Wasteland Wanderer", "Urban Tracker"]}
+   ],
+   "gains": "A second Favoured Enemy and Natural Explorer."
+  },
+  {
+   "level": 7,
+   "class": "Ranger",
+   "class_level": 7,
+   "choices": [
+    {"label": "Spell", "pick": 1, "abilities": ["Pass Without Trace", "Spike Growth", "Silence", "Lesser Restoration"]}
+   ],
+   "gains": "Iron Mind: proficiency in Wisdom and Intelligence saves."
+  },
+  {
+   "level": 8,
+   "class": "Ranger",
+   "class_level": 8,
+   "choices": [
+    {"label": "Feat", "pick": 1, "options": ["Sharpshooter", "Ability Improvement: +2 DEX", "Alert"]}
+   ],
+   "gains": "Feat, and difficult terrain no longer slows you."
+  },
+  {
+   "level": 9,
+   "class": "Ranger",
+   "class_level": 9,
+   "choices": [
+    {"label": "Spell", "pick": 1, "abilities": ["Lightning Arrow", "Conjure Barrage", "Plant Growth"]}
+   ],
+   "tips": ["Fear is an illusion spell: with Band of the Mystic Scoundrel you can cast it as a bonus action after a hit."],
+   "gains": "3rd-level spells, and Fear always prepared.",
+   "abilities": ["Fear"]
+  },
+  {
+   "level": 10,
+   "class": "Ranger",
+   "class_level": 10,
+   "choices": [
+    {"label": "Favoured Enemy", "pick": 1, "options": ["Bounty Hunter", "Ranger Knight", "Mage Breaker", "Keeper of the Veil", "Sanctified Stalker"]},
+    {"label": "Natural Explorer", "pick": 1, "options": ["Beast Tamer", "Wasteland Wanderer", "Urban Tracker"]}
+   ],
+   "gains": "Hide in Plain Sight, and a third Favoured Enemy and Natural Explorer."
+  },
+  {
+   "level": 11,
+   "class": "Ranger",
+   "class_level": 11,
+   "choices": [
+    {"label": "Spell", "pick": 1, "abilities": ["Conjure Barrage", "Lightning Arrow", "Plant Growth"]}
+   ],
+   "tips": ["Stalker's Flurry: when you miss with a weapon attack, you get a free extra attack. That makes Sharpshooter's −5 much less painful."],
+   "gains": "Stalker's Flurry.",
+   "abilities": ["Stalker's Flurry"]
+  },
+  {
+   "level": 12,
+   "class": "Ranger",
+   "class_level": 12,
+   "choices": [
+    {"label": "Feat", "pick": 1, "options": ["Alert", "Ability Improvement: +2 DEX", "Sharpshooter"]}
+   ],
+   "gains": "Final feat."
+  }
+ ],
+
+ "gear": [
+  {"item": "Titanstring Bow", "tags": ["damage", "strength"], "note": "Adds your Strength modifier to damage. The heart of this build."},
+  {"item": "Club of Hill Giant Strength", "tags": ["strength"], "note": "STR 19 from the melee slot while you shoot. Check your STR on the character sheet with the bow drawn."},
+  {"item": "Hunting Shortbow", "tags": ["damage"], "note": "Free Hunter's Mark once a day, and Advantage against monstrosities."},
+  {"item": "The Joltshooter", "tags": ["damage"], "note": "Hits give you Lightning Charges."},
+  {"item": "Bow of Awareness", "tags": ["initiative"], "note": "+1 initiative."},
+  {"item": "Gloves of Archery", "tags": ["damage"], "note": "+2 damage on ranged weapon attacks."},
+  {"item": "Gloves of Dexterity", "tags": ["accuracy"], "note": "+1 to attack rolls (and DEX 18 if yours is lower)."},
+  {"item": "Wondrous Gloves", "tags": ["survival"], "note": "+1 AC."},
+  {"item": "Gloves of Belligerent Skies", "tags": ["control"], "note": "Thunder, lightning or radiant damage adds Reverberation. Pairs with Lightning Arrow."},
+  {"item": "Gloves of Missile Snaring", "tags": ["survival"], "note": "Reaction to cut ranged damage."},
+  {"item": "Caustic Band", "tags": ["damage"], "note": "+2 acid on every weapon hit, including each Arrow of Many Targets hit."},
+  {"item": "Strange Conduit Ring", "tags": ["damage"], "note": "+1d4 psychic on weapon hits while you concentrate (Hunter's Mark)."},
+  {"item": "Ring of Protection", "tags": ["survival"], "note": "+1 AC and saves."},
+  {"item": "Broodmother's Revenge", "tags": ["damage"], "note": "+1d6 poison on your weapon after you're healed."},
+  {"item": "Haste Helm", "tags": ["utility"], "note": "Momentum (extra movement) for 3 turns at the start of combat."},
+  {"item": "Disintegrating Night Walkers", "tags": ["utility"], "note": "Bonus-action Misty Step each short rest; immune to webs, grease and ice."},
+  {"item": "Boots of Stormy Clamour", "tags": ["control"], "note": "Inflicting a condition (Ensnaring Strike) also adds Reverberation."},
+  {"item": "Marksmanship Hat", "tags": ["accuracy"], "note": "+1 to ranged attack rolls."},
+  {"item": "Covert Cowl", "tags": ["crit"], "note": "Crit range −1 while you're obscured."},
+  {"item": "Risky Ring", "tags": ["accuracy"], "note": "Advantage on attacks, Disadvantage on saves: the strongest Sharpshooter fix."},
+  {"item": "Killer's Sweetheart", "tags": ["crit"], "note": "After a kill, your next attack is a crit, once a day."},
+  {"item": "Shadow-Cloaked Ring", "tags": ["damage"], "note": "+1d4 against obscured targets."},
+  {"item": "Eversight Ring", "tags": ["utility"], "note": "Can't be Blinded: shoot from inside your own Darkness (the video's trick; test it)."},
+  {"item": "Snowburst Ring", "tags": ["control"], "note": "Cold damage leaves ice around the target: pair with a cold-enchanted bow from a teammate's Drakethroat Glaive."},
+  {"item": "Least Expected", "tags": ["accuracy"], "note": "+1d4 to ranged attacks while in shadow."},
+  {"item": "Darkfire Shortbow", "tags": ["utility"], "note": "Haste once a day, plus fire and cold resistance."},
+  {"item": "Sentinel Shield", "tags": ["initiative"], "note": "+3 initiative and Advantage on Perception."},
+  {"item": "Yuan-Ti Scale Mail", "tags": ["survival", "initiative"], "note": "15 + full DEX, no Stealth Disadvantage, +1 initiative."},
+  {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves."},
+  {"item": "Flawed Helldusk Gloves", "tags": ["damage"], "note": "+1d4 fire on weapon hits."},
+  {"item": "Gloves of the Automaton", "tags": ["accuracy"], "note": "Bonus action for Advantage on weapon attacks, once per short rest."},
+  {"item": "Evasive Shoes", "tags": ["survival"], "note": "+1 AC."},
+  {"item": "The Dead Shot", "tags": ["crit", "accuracy"], "note": "Crit range −1 and double proficiency on attack rolls. Gives up Titanstring's Strength damage."},
+  {"item": "Gontr Mael", "tags": ["accuracy", "utility"], "note": "Guiding Bolt on hit (Advantage for everyone) and Haste once a day. Gives up Titanstring's Strength damage."},
+  {"item": "Hellrider Longbow", "tags": ["initiative", "control"], "note": "+3 initiative and Faerie Fire on hit."},
+  {"item": "Gauntlets of Hill Giant Strength", "tags": ["strength"], "note": "STR 23: +6 per arrow instead of the Club's +4, but in the gloves slot."},
+  {"item": "Legacy of the Masters", "tags": ["accuracy", "damage"], "note": "+2 to weapon attack and damage rolls."},
+  {"item": "Craterflesh Gloves", "tags": ["crit"], "note": "+1d6 force on every crit."},
+  {"item": "Helldusk Gloves", "tags": ["damage"], "note": "+1d6 fire on weapon hits."},
+  {"item": "Sarevok's Horned Helmet", "tags": ["crit"], "note": "Crit range −1, and immune to Frightened."},
+  {"item": "Mask of Soul Perception", "tags": ["accuracy", "initiative"], "note": "+2 to attack rolls, initiative and Perception."},
+  {"item": "Steelwatcher Helmet", "tags": ["utility"], "note": "Darkvision and can't be Blinded; Advantage on CON saves."},
+  {"item": "Assassin of Bhaal Cowl", "tags": ["initiative"], "note": "+2 initiative and See Invisibility."},
+  {"item": "Helm of Balduran", "tags": ["survival"], "note": "+1 AC and saves, can't be crit or stunned, heals 2 HP a turn."},
+  {"item": "Shade-Slayer Cloak", "tags": ["crit"], "note": "Crit range −1 while hiding."},
+  {"item": "Cloak of Displacement", "tags": ["survival"], "note": "Attacks against you have Disadvantage until you take damage."},
+  {"item": "Armour of Agility", "tags": ["survival"], "note": "17 + full DEX and +2 to all saves."},
+  {"item": "Unwanted Masterwork Scalemail", "tags": ["survival"], "note": "16 + full DEX."},
+  {"item": "Elven Chain", "tags": ["initiative"], "note": "+2 initiative and Advantage on DEX saves."},
+  {"item": "Band of the Mystic Scoundrel", "tags": ["control"], "note": "After a hit, cast an illusion or enchantment spell (Fear) as a bonus action."},
+  {"item": "Viconia's Walking Fortress", "tags": ["survival"], "note": "+3 AC: the best shield in the game."}
+ ],
+
+ "loadouts": [
+  {
+   "act": "one",
+   "label": "Act 1",
+   "intro": "Titanstring from Brem plus the Club gets the build going early.",
+   "slots": [
+    {"slot": "Head", "items": ["Haste Helm"]},
+    {"slot": "Gloves", "items": ["Gloves of Archery", "Gloves of Dexterity", "Wondrous Gloves", "Gloves of Belligerent Skies"]},
+    {"slot": "Boots", "items": ["Disintegrating Night Walkers", "Boots of Stormy Clamour"]},
+    {"slot": "Amulet", "items": ["Broodmother's Revenge"]},
+    {"slot": "Rings", "items": ["Caustic Band", "Strange Conduit Ring", "Ring of Protection"]},
+    {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
+    {"slot": "Ranged", "items": ["Titanstring Bow", "Hunting Shortbow", "The Joltshooter", "Bow of Awareness"]}
+   ]
+  },
+  {
+   "act": "two",
+   "label": "Act 2",
+   "intro": "Accuracy and crit pieces arrive to offset Sharpshooter.",
+   "slots": [
+    {"slot": "Head", "items": ["Marksmanship Hat", "Covert Cowl"]},
+    {"slot": "Cloak", "items": ["Cloak of Protection"]},
+    {"slot": "Body", "items": ["Yuan-Ti Scale Mail"]},
+    {"slot": "Gloves", "items": ["Flawed Helldusk Gloves", "Gloves of the Automaton", "Gloves of Archery"]},
+    {"slot": "Boots", "items": ["Evasive Shoes", "Disintegrating Night Walkers"]},
+    {"slot": "Rings", "items": ["Risky Ring", "Killer's Sweetheart", "Shadow-Cloaked Ring", "Caustic Band", "Eversight Ring"]},
+    {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
+    {"slot": "Off hand", "items": ["Sentinel Shield"]},
+    {"slot": "Ranged", "items": ["Titanstring Bow", "Least Expected", "Darkfire Shortbow"]}
+   ]
+  },
+  {
+   "act": "three",
+   "label": "Act 3",
+   "intro": "If you take the Gauntlets, the Club's slot frees up and your gloves slot is spoken for.",
+   "slots": [
+    {"slot": "Head", "items": ["Sarevok's Horned Helmet", "Mask of Soul Perception", "Helm of Balduran", "Steelwatcher Helmet", "Assassin of Bhaal Cowl"]},
+    {"slot": "Cloak", "items": ["Shade-Slayer Cloak", "Cloak of Displacement", "Cloak of Protection"]},
+    {"slot": "Body", "items": ["Armour of Agility", "Unwanted Masterwork Scalemail", "Elven Chain"]},
+    {"slot": "Gloves", "items": ["Gauntlets of Hill Giant Strength", "Legacy of the Masters", "Craterflesh Gloves", "Helldusk Gloves"]},
+    {"slot": "Boots", "items": ["Evasive Shoes"]},
+    {"slot": "Rings", "items": ["Band of the Mystic Scoundrel", "Caustic Band", "Killer's Sweetheart", "Risky Ring"]},
+    {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
+    {"slot": "Off hand", "items": ["Viconia's Walking Fortress", "Sentinel Shield"]},
+    {"slot": "Ranged", "items": ["Titanstring Bow", "The Dead Shot", "Gontr Mael", "Hellrider Longbow"]}
+   ]
+  }
+ ],
+
+ "playbook": {
+  "turn": [
+   "First turn: Hunter's Mark on the biggest threat (bonus action), then spend Dread Ambusher's free extra attack on it.",
+   "Ensnaring Strike instead of Hunter's Mark when one enemy needs holding in place.",
+   "Toggle Sharpshooter on when your hit chance is high: Advantage, Guiding Bolt from Alene, Faerie Fire.",
+   "Arrow of Many Targets spreads every on-hit rider (Caustic Band acid, Reverberation) across several enemies."
+  ],
+  "start_of_day": [
+   "Club in the main hand and a shield in the off hand: the Strength and the AC both apply while you shoot.",
+   "Cast Longstrider on the party; Vesper's hit-and-run counts on it.",
+   "With Beast Tamer, summon your familiar; a raven can blind enemies."
+  ],
+  "tips": [
+   "Special arrows can't be used with Dread Ambusher's free extra attack.",
+   "Pass Without Trace gives the party +10 Stealth: easy surprise rounds.",
+   "Plant Growth (level 9+) quarters enemy speed with no concentration.",
+   "A teammate's Drakethroat Glaive can make your bow deal elemental damage, which feeds Belligerent Skies or the Snowburst Ring (the video's trick; test it)."
+  ]
+ }
+}

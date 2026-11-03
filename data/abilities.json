@@ -2609,6 +2609,26 @@
   "range": "ranged"
  },
  {
+  "id": "Conjure Barrage",
+  "kind": "spell",
+  "name": "Conjure Barrage",
+  "type": null,
+  "brief": null,
+  "description": "Channel your weapon's essence into a destructive, widespread volley.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/e0/Conjure_Barrage_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Conjure_Barrage",
+  "spell_level": 3,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Conjure Elemental",
   "kind": "spell",
   "name": "Conjure Elemental",
@@ -3940,6 +3960,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Dragonfire_Fists"
  },
  {
+  "id": "Dread Ambusher",
+  "kind": "passive",
+  "name": "Dread Ambusher",
+  "type": null,
+  "brief": "+3 Initiative. On the first turn of combat, make an extra weapon attack that deals an extra 1d8 Physical damage.",
+  "description": "You specialise in taking out foes swiftly and ruthlessly.\nYou gain a +3 bonus to Initiative.\nOn the first turn of combat, your Movement Speed increases by 3 m (10 ft), and you can also make an extra weapon attack that deals an additional 1d8 damage",
+  "extra_description": null,
+  "recharge": "Per combat",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/5/50/Dread_Ambusher_Melee_Icon.webp",
+  "links": [
+   {
+    "text": "Movement Speed",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Dread_Ambusher"
+ },
+ {
   "id": "Dread Iron Ambush",
   "kind": "passive",
   "name": "Dread Iron Ambush",
@@ -4587,6 +4627,32 @@
   "ritual": true,
   "action_type": "action",
   "range": "melee"
+ },
+ {
+  "id": "Ensnaring Strike",
+  "kind": "spell",
+  "name": "Ensnaring Strike",
+  "type": null,
+  "brief": null,
+  "description": "Your attack summons thorny vines that possibly Ensnare your target.",
+  "extra_description": "Ensnared creatures cannot move and take 1d6 Piercing damage at the start of each turn. An ally can use their Help action to try and tear away the vines.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/c3/Ensnaring_Strike_Ranged_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Ensnare",
+    "page": "Ensnared (Ensnaring Strike) (condition)",
+    "url": "https://bg3.wiki/wiki/Ensnared_(Ensnaring_Strike)_(condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Ensnaring_Strike",
+  "spell_level": 1,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": null
  },
  {
   "id": "Entangle",
@@ -6269,6 +6335,47 @@
   "wiki_url": "https://bg3.wiki/wiki/Gontr_Mael:_Glowing"
  },
  {
+  "id": "Goodberry",
+  "kind": "spell",
+  "name": "Goodberry",
+  "type": null,
+  "brief": null,
+  "description": "Conjure four magical berries for yourself or a companion. Creatures who eat a berry regain 1d4hit points.\nEach berry counts as one Camp Supplies.\nThe berries appear in the targeted creature's inventory and disappear after a Long Rest.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/15/Goodberry_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "hit points",
+    "page": "Healing",
+    "url": "https://bg3.wiki/wiki/Healing"
+   },
+   {
+    "text": "Camp Supplies",
+    "page": "Camp Supplies",
+    "url": "https://bg3.wiki/wiki/Camp_Supplies"
+   },
+   {
+    "text": "berries",
+    "page": "Goodberry (Item)",
+    "url": "https://bg3.wiki/wiki/Goodberry_(Item)"
+   },
+   {
+    "text": "Long Rest",
+    "page": "Long Rest",
+    "url": "https://bg3.wiki/wiki/Long_Rest"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Goodberry",
+  "spell_level": 1,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
   "id": "Grand Slam",
   "kind": "action",
   "name": "Grand Slam",
@@ -6612,6 +6719,32 @@
   "ritual": null,
   "action_type": "action",
   "range": "18 / 60"
+ },
+ {
+  "id": "Hail of Thorns",
+  "kind": "spell",
+  "name": "Hail of Thorns",
+  "type": null,
+  "brief": null,
+  "description": "Shoot a volley of thorns. The thorns deal weapon damage to the target and then explode. The explosion deals an additional 1d10 Piercing damage to the target and surrounding creatures. On miss, the thorns still explode. On save, targets still take half damage from the explosion.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/72/Hail_of_Thorns_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Piercing",
+    "page": "Piercing",
+    "url": "https://bg3.wiki/wiki/Piercing"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Hail_of_Thorns",
+  "spell_level": 1,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "ranged"
  },
  {
   "id": "Hamstring Shot",
@@ -7334,6 +7467,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Hunter's_Eye"
+ },
+ {
+  "id": "Hunter's Mark",
+  "kind": "spell",
+  "name": "Hunter's Mark",
+  "type": null,
+  "brief": null,
+  "description": "Mark a creature as your quarry to deal an additional 1d6 Weapon damage whenever you hit it with a weapon attack.",
+  "extra_description": "If the target dies before the spell ends, you can use Reapply Hunter's Mark to mark a new creature.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/1b/Hunter%27s_Mark_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Weapon",
+    "page": "Weapon",
+    "url": "https://bg3.wiki/wiki/Weapon"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Hunter's_Mark",
+  "spell_level": 1,
+  "school": "Divination",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "ranged"
  },
  {
   "id": "Hush You!",
@@ -8742,6 +8901,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Lifecharger"
  },
  {
+  "id": "Lightning Arrow",
+  "kind": "spell",
+  "name": "Lightning Arrow",
+  "type": null,
+  "brief": null,
+  "description": "After the arrow hits, smaller bolts snake out from the target towards nearby creatures.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/9/94/Lightning_Arrow_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Lightning_Arrow",
+  "spell_level": 3,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Lightning Strikes",
   "kind": "passive",
   "name": "Lightning Strikes",
@@ -8774,6 +8953,32 @@
   "icon_url": null,
   "links": [],
   "wiki_url": "https://bg3.wiki/wiki/Lofty_Sorcery"
+ },
+ {
+  "id": "Longstrider",
+  "kind": "spell",
+  "name": "Longstrider",
+  "type": null,
+  "brief": null,
+  "description": "Increase a creature's Movement Speed by 3 m (10 ft).",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/09/Longstrider_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Movement Speed",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Longstrider",
+  "spell_level": 1,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": true,
+  "action_type": "action",
+  "range": "melee"
  },
  {
   "id": "Loving Protection",
@@ -12728,6 +12933,42 @@
   "wiki_url": "https://bg3.wiki/wiki/Shoe_Slinger"
  },
  {
+  "id": "Silence",
+  "kind": "spell",
+  "name": "Silence",
+  "type": null,
+  "brief": null,
+  "description": "Create a sound-proof sphere. All within are Silenced and Immune to Thunder damage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/07/Silence_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Silenced",
+    "page": "Silenced (Condition)",
+    "url": "https://bg3.wiki/wiki/Silenced_(Condition)"
+   },
+   {
+    "text": "Immune",
+    "page": "Damage Types",
+    "url": "https://bg3.wiki/wiki/Damage_Types#Immunity"
+   },
+   {
+    "text": "Thunder",
+    "page": "Thunder",
+    "url": "https://bg3.wiki/wiki/Thunder"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Silence",
+  "spell_level": 2,
+  "school": "Illusion",
+  "concentration": true,
+  "ritual": true,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Skinburster Force",
   "kind": "passive",
   "name": "Skinburster Force",
@@ -13628,6 +13869,20 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Staff_of_the_Ram_(passive_feature)"
+ },
+ {
+  "id": "Stalker's Flurry",
+  "kind": "passive",
+  "name": "Stalker's Flurry",
+  "type": null,
+  "brief": null,
+  "description": "When you miss with a weapon attack, you can make another one for free.",
+  "extra_description": null,
+  "recharge": "Per turn",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/e0/Stalker%27s_Flurry_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Stalker's_Flurry"
  },
  {
   "id": "Starry Form: Archer",

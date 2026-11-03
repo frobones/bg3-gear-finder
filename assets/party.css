@@ -476,6 +476,18 @@
   color: var(--r-rare);
 }
 
+.tag-damage,
+.tag-crit {
+  border-color: var(--r-story);
+  color: var(--r-story);
+}
+
+.tag-accuracy,
+.tag-strength {
+  border-color: var(--r-very-rare);
+  color: var(--r-very-rare);
+}
+
 .tag-survival {
   border-color: var(--r-uncommon);
   color: var(--r-uncommon);

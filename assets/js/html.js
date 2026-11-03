@@ -82,6 +82,11 @@ export const TAG_LABELS = {
   survival: "Survival",
   healing: "Healing",
   damage: "Damage",
+  accuracy: "Accuracy",
+  crit: "Crit",
+  initiative: "Initiative",
+  control: "Control",
+  strength: "Strength",
   utility: "Utility",
 };
 

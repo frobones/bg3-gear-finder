@@ -2,7 +2,7 @@
  "members": [
   {"profile": "vesper"},
   {"profile": "alene"},
-  {"name": "Pearl", "role": "Gloom Stalker Ranger: Titanstring Bow with Strength from the Club or the Act 3 gauntlets"},
+  {"profile": "pearl"},
   {"name": "Zetharis", "role": "Hexblade Warlock: Eldritch Blast turret in the Potent Robe"}
  ]
 }
