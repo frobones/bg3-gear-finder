@@ -55,7 +55,7 @@
    "warnings": [
     "Tasha's Hideous Laughter is a placeholder. You replace it at level 4.",
     "Disguise Self is her disguise for theft. Keep Mask of the Shapeshifter in reserve.",
-    "Set the Sneak Attack reaction to Ask, so it lands on a Booming Blade hit."
+    "Set the Sneak Attack reaction to Always: Booming Blade is her only attack on her own turn, so there's no better hit to save it for."
    ],
    "gains": "Mage Hand Legerdemain, Sneak Attack 2d6, and spellcasting.",
    "play": "Booming Blade becomes the default melee attack.",
