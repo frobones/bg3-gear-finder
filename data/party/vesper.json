@@ -272,9 +272,9 @@
    {"when": "Early", "abilities": ["Psionic Overload"], "why": "Adds 1d4 psychic damage to her attacks, but she takes 1d4 psychic damage every turn."},
    {"when": "Early", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies, and each kill deals 1–4 psychic damage to every creature nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
    {"when": "Early", "abilities": ["Shield of Thralls"], "why": "Temporary HP for her, and it can stun nearby enemies."},
-   {"when": "Partial illithid", "abilities": ["Black Hole"], "why": "Pulls enemies together for control spells and bombs."},
-   {"when": "Partial illithid", "abilities": ["Mind Blast"], "why": "Psychic area damage that can stun."},
-   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "−1 AC and −1 to all saving throws on the target, which suits her control spells."},
+   {"when": "Partial illithid", "abilities": ["Black Hole"], "why": "Pulls enemies together for control spells and bombs. With Ring of Mental Inhibition, each enemy that fails its save gets 2 turns of Mental Fatigue."},
+   {"when": "Partial illithid", "abilities": ["Mind Blast"], "why": "4d8 psychic in a 14 m cone, and an INT save or Stunned. Braindrain adds 2 turns of Mental Fatigue to each target, and Ring of Mental Inhibition 2 more on a failed save. Stunned enemies automatically fail STR and DEX saves, so follow with a bomb or Black Hole. Recharges on a long rest."},
+   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "−1 AC and −1 to all saving throws on the target for 5 turns, which suits her control spells. It calls for an INT save, which Mental Fatigue lowers, and with Ring of Mental Inhibition a failed save adds 2 turns of Mental Fatigue."},
    {"when": "After Concentrated Blast", "abilities": ["Psionic Backlash"], "why": "A reaction when an enemy within 9 m casts a spell: 1d4 psychic per spell level, which adds Mental Fatigue and can break their concentration. It uses the reaction she'd spend on Uncanny Dodge or Shield, so save it for fights against casters."}
   ]
  },
@@ -397,7 +397,7 @@
     {"slot": "Chest", "items": ["Armour of Agility"], "alternates": ["Yuan-Ti Scale Mail"]},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power", "Stalker Gloves"]},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
-    {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure", "Necklace of Elemental Augmentation"]},
+    {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure", "Necklace of Elemental Augmentation"], "note": "Optional: once the amulet never comes off, respec at Withers from CON 14 / WIS 10 to CON 8 / WIS 15 for +2 WIS saves against Hold, Fear and Dominate. Without the amulet she's then on CON 8 HP."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Phantasmal Killer, Slow or Fear."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Band of the Mystic Scoundrel"]},
     {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic."},
