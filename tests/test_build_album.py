@@ -27,6 +27,7 @@ class MergeShotsTest(unittest.TestCase):
                 "file": "20261101202756_1",
                 "taken": "2026-11-01T20:27:56",
                 "caption": "Alene",
+                "banner": True,
             }
         ]
         shots = build_album.merge_shots(
@@ -37,6 +38,7 @@ class MergeShotsTest(unittest.TestCase):
             ["20261025200356_1", "20261101202756_1", "20261101231925_1"],
         )
         self.assertEqual([s["caption"] for s in shots], ["", "Alene", ""])
+        self.assertEqual([s["banner"] for s in shots], [False, True, False])
 
     def test_drops_shots_no_longer_in_the_folder(self) -> None:
         previous = [
@@ -44,6 +46,7 @@ class MergeShotsTest(unittest.TestCase):
                 "file": "20261025200356_1",
                 "taken": "2026-10-25T20:03:56",
                 "caption": "Gone",
+                "banner": False,
             }
         ]
         self.assertEqual(build_album.merge_shots([], previous), [])

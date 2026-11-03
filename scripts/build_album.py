@@ -6,8 +6,8 @@ Run by hand after adding screenshots:
 
 For each Steam screenshot in album/ (named like 20261101202756_1.jpg), writes a display copy
 to assets/album/ and a thumbnail to assets/album/thumbs/, then updates data/album.json.
-Captions in data/album.json are hand-written and kept across rebuilds; new shots get an empty
-caption to fill in. album/ holds the full-size originals and stays out of git.
+Captions and banner picks in data/album.json are hand-written and kept across rebuilds; new
+shots get an empty caption to fill in and stay out of the Home banner until marked. album/ holds the full-size originals and stays out of git.
 
 Resizing uses sips, which comes with macOS.
 """
@@ -48,10 +48,15 @@ def taken_at(stem: str) -> str:
 def merge_shots(
     stems: list[str], previous: list[dict[str, Any]]
 ) -> list[dict[str, Any]]:
-    """One entry per screenshot in time order, keeping the caption already written for each."""
-    captions = {shot["file"]: shot["caption"] for shot in previous}
+    """One entry per screenshot in time order, keeping the caption and banner pick already set for each."""
+    kept = {shot["file"]: shot for shot in previous}
     shots = [
-        {"file": stem, "taken": taken_at(stem), "caption": captions.get(stem, "")}
+        {
+            "file": stem,
+            "taken": taken_at(stem),
+            "caption": kept[stem]["caption"] if stem in kept else "",
+            "banner": kept[stem]["banner"] if stem in kept else False,
+        }
         for stem in stems
     ]
     return sorted(shots, key=lambda shot: (shot["taken"], shot["file"]))
