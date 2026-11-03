@@ -384,7 +384,8 @@
    "If you keep getting caught, slip away instead of escalating."
   ],
   "reactions": [
-   {"name": "Sneak Attack", "setting": "Ask", "why": "Put it on the Booming Blade hit, not a weak one."},
+   {"name": "Sneak Attack", "setting": "Always", "why": "Booming Blade is her only attack on her own turn, so there's no better hit to save it for. It's once per turn, so an opportunity attack on an enemy's turn can still use it. Check in game that it leaves her reaction free."},
+   {"name": "Sneak Attack (Critical Hit)", "setting": "Always", "why": "The same on a crit, with the dice doubled. Sarevok's helmet makes her crit on 19–20."},
    {"name": "Shield", "setting": "Ask", "why": "Spend the slot only when +5 AC changes the result. It gives no Arcane Ward charges."},
    {"name": "Counterspell", "setting": "Ask", "why": "Skip harmless casts. It always gives 3 Arcane Ward charges."},
    {"name": "Hellish Rebuke", "setting": "Ask", "why": "Low priority: weak with her Charisma."},
