@@ -391,7 +391,7 @@
    "label": "Act 3",
    "intro": "Damage and debuffs first, in medium armour and a shield. The survival swaps sit in each slot's alternates.",
    "slots": [
-    {"slot": "Head", "items": ["Sarevok's Horned Helmet"], "alternates": ["Helm of Balduran", "Holy Lance Helm"]},
+    {"slot": "Head", "items": ["Sarevok's Horned Helmet"], "alternates": ["Helm of Balduran", "Holy Lance Helm"], "note": "Close call. Sarevok's for single targets and Fear-heavy fights. Balduran when hard hitters, Mind Flayers or stuns focus her: Viconia's shield doesn't stop crits. Holy Lance against crowds of weaker attackers."},
     {"slot": "Cloak", "items": ["Cloak of Displacement"], "alternates": ["Vivacious Cloak"]},
     {"slot": "Chest", "items": ["Armour of Agility"], "alternates": ["Yuan-Ti Scale Mail"]},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power", "Stalker Gloves", "Wondrous Gloves"]},
