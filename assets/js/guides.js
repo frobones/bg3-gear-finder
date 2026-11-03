@@ -92,7 +92,6 @@ const PLAYBOOK_SECTIONS = [
   ["turn", "A turn in combat"],
   ["start_of_day", "Start of each day"],
   ["theft", "Stealing safely"],
-  ["tips", "Tips"],
   ["reactions", "Reaction settings"],
   ["mage_hand", "Mage Hand jobs"],
 ];
@@ -112,40 +111,12 @@ function reactionTable(reactions) {
 
 export function renderPlaybookTab(profile) {
   const { playbook } = profile;
-  // A plan's combat turn and theft steps are sequences; an options profile's turn is a set of tips.
-  const ordered = (key) => key === "theft" || (key === "turn" && profile.style !== "options");
+  // The combat turn and theft steps are sequences; the rest are lists of independent tips.
+  const ordered = (key) => key === "turn" || key === "theft";
   return PLAYBOOK_SECTIONS.filter(([key]) => playbook[key]?.length)
     .map(([key, title]) => {
       const body = key === "reactions" ? reactionTable(playbook.reactions) : list(ordered(key) ? "ol" : "ul", playbook[key]);
       return `<section class="guide-block"><h3>${title}</h3>${body}</section>`;
     })
     .join("");
-}
-
-/** An options profile's overview: the build shape the player chose, and the choices made at creation. */
-export function renderBuildTab(profile) {
-  const { shape } = profile;
-  const bullets = (items) => `<ul class="steps">${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>`;
-  const choices = profile.choices
-    .map(
-      (c) => `
-      <div class="build-choice">
-        <h4>${esc(c.label)}</h4>
-        <ul class="option-list">${c.options.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>
-        ${c.note ? `<p class="muted small">${esc(c.note)}</p>` : ""}
-      </div>`,
-    )
-    .join("");
-  return `
-    <section class="level-card shape-card">
-      <h3>${esc(shape.name)}</h3>
-      <p>${esc(shape.summary)}</p>
-      <div class="shape-columns">
-        <div><h4>Strong at</h4>${bullets(shape.strong)}</div>
-        <div><h4>Weak at</h4>${bullets(shape.weak)}</div>
-      </div>
-    </section>
-    <h3>Choose at character creation</h3>
-    <p class="muted">These are options, not answers. Pick what suits how you want to play.</p>
-    ${choices}`;
 }

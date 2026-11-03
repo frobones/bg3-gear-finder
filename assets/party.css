@@ -497,36 +497,32 @@
   margin-left: 0.35rem;
 }
 
-.pick-count {
-  display: block;
-  margin-bottom: 0.1rem;
+/* Good picks by level: what a level gives, then each group of picks under a small heading. */
+.level-gains {
+  margin: 0.4rem 0 0;
+}
+
+.pick-group {
+  margin-top: 0.6rem;
+}
+
+.profile-body .pick-group h4 {
+  margin: 0;
   color: var(--muted);
   font: 400 var(--step--1) / 1.4 var(--sans);
 }
 
-.choices .pill-list,
-.choices .option-list {
+.pick-group .pill-list,
+.pick-group .option-list {
   font: 600 var(--step-0) / 1.5 var(--serif);
 }
 
-.callouts-tip li {
-  border-left-color: var(--brass);
-  background: color-mix(in srgb, var(--brass) 10%, transparent);
+.level-picks tbody th {
+  width: 4rem;
 }
 
-.shape-card h3 {
-  margin-top: 0;
-}
-
-.shape-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-  gap: 1rem;
-  margin-top: 0.75rem;
-}
-
-.build-choice + .build-choice {
-  margin-top: 1rem;
+.checklist-heading {
+  margin-top: 2rem;
 }
 
 .option-list {

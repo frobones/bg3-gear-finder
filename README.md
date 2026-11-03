@@ -19,16 +19,14 @@ where and when you can pick it up.
   - **Level up**: what to pick at the next level, in the order the game asks,
     then which Wizard spells to prepare and which scrolls to scribe.
   - **Gear plan**: the items the character wants, in play order, with
-    checkboxes for what's been picked up, plus a loadout for the end of
+    checkboxes for what's been picked up, after a loadout for the end of
     each act with alternates.
   - **Scrolls**: which spell scrolls to scribe, hold back, or skip.
   - **Illithid**: suggested illithid powers, in order.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
-- Friends' profiles are menus rather than plans. They have a **Build
-  options** tab (the build shape they chose and the choices at character
-  creation), level-ups that list good picks, gear tagged by what it's good
-  for (spell DC, radiant, survival and so on), and buckets of good picks per
-  act instead of a default loadout.
+- Friends' profiles show options rather than a plan, on one page: **Good
+  picks by level** (feats, spells and class choices), **Good picks by act**
+  (gear per slot, tagged by what it's good for), then the item checklist.
 - An item's panel shows which party members plan around it, and who gets it
   when it's contested.
 
@@ -88,10 +86,10 @@ one, copy `data/party/vesper.json`, put the portrait in `assets/portraits/`,
 and point the roster entry in `data/party/party.json` at it with
 `"profile": "<file name without .json>"`.
 
-A profile with `"style": "options"` is a friend's menu (see
-`data/party/alene.json`): choices carry `pick` and `options`, gear entries
-carry `tags` instead of a `priority`, and each act's slots list their `items`
-as a bucket of good picks.
+A profile with `"style": "options"` is a friend's page of good picks (see
+`data/party/alene.json`): each level lists `picks` groups of `abilities` or
+written `options`, gear entries carry `tags` instead of a `priority`, and each
+act's slots list their `items` as a bucket of good picks.
 
 In a profile, names under `item`, `items` and `alternates` are bg3.wiki item
 pages. Names under `abilities`, `replace`, `scribe` and `hold` are bg3.wiki

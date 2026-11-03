@@ -3,20 +3,13 @@
 // Routes: #party (roster), #party/<profile> (last tab used), #party/<profile>/<tab>.
 
 import { renderGearTab } from "./gearplan.js";
-import { renderBuildTab, renderIllithidTab, renderPlaybookTab, renderScrollsTab } from "./guides.js";
+import { renderIllithidTab, renderPlaybookTab, renderScrollsTab } from "./guides.js";
 import { esc } from "./html.js";
 import { MAX_LEVEL, renderLevelTab } from "./levelup.js";
-import { PROFILE_TABS, loadProgress, saveProgress, tabsFor, toggleInList } from "./progress.js";
+import { renderPicksPage } from "./picks.js";
+import { PROFILE_TABS, loadProgress, saveProgress, toggleInList } from "./progress.js";
 
-const TAB_LABELS = {
-  build: "Build options",
-  level: "Level up",
-  gear: "Gear plan",
-  scrolls: "Scrolls",
-  illithid: "Illithid",
-  playbook: "Playbook",
-};
-const tabLabel = (profile, tab) => (tab === "gear" && profile.style === "options" ? "Gear options" : TAB_LABELS[tab]);
+const TAB_LABELS = { level: "Level up", gear: "Gear plan", scrolls: "Scrolls", illithid: "Illithid", playbook: "Playbook" };
 
 /** A portrait, or an empty frame for a friend who hasn't sent one yet. */
 const portrait = (profile, className, width, height, alt) =>
@@ -113,9 +106,9 @@ function profileHeader(profile) {
 }
 
 function tabNav(profile, tab) {
-  const links = tabsFor(profile)
-    .map((t) => `<a href="#party/${esc(profile.id)}/${t}"${t === tab ? ' aria-current="page"' : ""}>${tabLabel(profile, t)}</a>`)
-    .join("");
+  const links = PROFILE_TABS.map(
+    (t) => `<a href="#party/${esc(profile.id)}/${t}"${t === tab ? ' aria-current="page"' : ""}>${TAB_LABELS[t]}</a>`,
+  ).join("");
   return `<nav class="profile-tabs" aria-label="${esc(profile.name)}'s profile">${links}</nav>`;
 }
 
@@ -125,7 +118,6 @@ function tabBody(profile, data, tab) {
   if (tab === "scrolls") return renderScrollsTab(profile, data.abilities, progress);
   if (tab === "illithid") return renderIllithidTab(profile, data.abilities, progress);
   if (tab === "playbook") return renderPlaybookTab(profile);
-  if (tab === "build") return renderBuildTab(profile);
   return renderLevelTab(profile, data.abilities, progress.level, viewingFor(profile.id));
 }
 
@@ -138,9 +130,16 @@ export function renderParty(view, data, route) {
     return;
   }
   const progress = progressFor(profile.id);
-  const tabs = tabsFor(profile);
-  const wanted = route.tab ?? progress.tab;
-  const tab = tabs.includes(wanted) ? wanted : tabs[0];
+  // A friend's profile is one page of good picks; only a full build plan has tabs.
+  if (profile.style === "options") {
+    view.innerHTML = `
+      <article class="profile" data-profile="${esc(profile.id)}">
+        ${profileHeader(profile)}
+        <div class="profile-body">${renderPicksPage(profile, data, progress, hideGot, loadoutAct)}</div>
+      </article>`;
+    return;
+  }
+  const tab = route.tab ?? progress.tab;
   if (tab !== progress.tab) updateProgress(profile.id, { ...progress, tab });
   view.innerHTML = `
     <article class="profile" data-profile="${esc(profile.id)}">

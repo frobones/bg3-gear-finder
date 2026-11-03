@@ -5,143 +5,20 @@
  "title": "Gloom Stalker Ranger",
  "classes": "Ranger 12 (Gloom Stalker)",
  "role": "The party's archer: first to act, Titanstring Bow powered by Strength from gear, a shield on her back for AC.",
- "level_order": "Ranger 1–12",
- "shape": {
-  "name": "Titanstring archer",
-  "summary": "Titanstring Bow adds her Strength modifier to every arrow, and gear sets her Strength high: the Club of Hill Giant Strength from Act 1, then optionally the Gauntlets of Hill Giant Strength in Act 3. A shield in the melee slot keeps its AC while she shoots.",
-  "strong": ["Huge first turn: Dread Ambusher adds an extra attack, and she almost always goes first.", "Strength from gear means dumping STR costs nothing.", "Iron Mind (level 7) protects her from Hold Person and other mind control."],
-  "weak": ["Only 2 attacks on later turns until Stalker's Flurry at 11.", "Spells stop at 3rd level.", "Sharpshooter's −5 to hit needs offsets."]
- },
- "choices": [
-  {"label": "Strength source", "options": ["Club of Hill Giant Strength (Act 1, Arcane Tower): STR 19, +4 per arrow, in the melee slot with a shield", "Gauntlets of Hill Giant Strength (Act 3, House of Hope): STR 23, +6 per arrow, but they take the gloves slot"], "note": "Strength sources set your score rather than add to it, so the highest one wins. Dump STR to 8."},
-  {"label": "Ability scores", "options": ["DEX 17 · CON 16 · WIS 14 (+ STR 8, INT 8, CHA 10): sturdier", "DEX 16 · CON 14 · WIS 16: stronger Ensnaring Strike"], "note": "Auntie Ethel's hair can add +1 DEX."},
-  {"label": "Armour", "options": ["Medium armour that adds full DEX (Yuan-Ti, Armour of Agility, Unwanted Masterwork) and a shield", "Heavy armour through the Ranger Knight favoured enemy: the Club's STR 19 meets heavy armour's Strength needs, but it gives Disadvantage on Stealth"]}
- ],
 
  "levels": [
-  {
-   "level": 1,
-   "class": "Ranger",
-   "class_level": 1,
-   "choices": [
-    {"label": "Favoured Enemy", "pick": 1, "options": ["Bounty Hunter: Ensnaring Strike targets have Disadvantage on the save", "Ranger Knight: heavy armour proficiency", "Mage Breaker: True Strike cantrip", "Keeper of the Veil: Protection from Evil and Good", "Sanctified Stalker: Sacred Flame cantrip"]},
-    {"label": "Natural Explorer", "pick": 1, "options": ["Beast Tamer: Find Familiar (a raven can blind enemies)", "Wasteland Wanderer: resistance to Fire, Cold or Poison", "Urban Tracker: Sleight of Hand proficiency"]}
-   ],
-   "tips": ["You pick a Favoured Enemy and a Natural Explorer again at levels 6 and 10."],
-   "gains": "Favoured Enemy and Natural Explorer."
-  },
-  {
-   "level": 2,
-   "class": "Ranger",
-   "class_level": 2,
-   "choices": [
-    {"label": "Fighting style", "pick": 1, "options": ["Archery: +2 to ranged attack rolls, offsetting Sharpshooter", "Defence: +1 AC in armour"]},
-    {"label": "Spells", "pick": 2, "abilities": ["Hunter's Mark", "Ensnaring Strike", "Longstrider", "Hail of Thorns", "Fog Cloud", "Goodberry"]}
-   ],
-   "tips": ["Vesper's plan counts on your Longstrider each morning for her hit-and-run."],
-   "gains": "Fighting style and spellcasting."
-  },
-  {
-   "level": 3,
-   "class": "Ranger",
-   "class_level": 3,
-   "choices": [
-    {"label": "Subclass", "text": "Gloom Stalker"},
-    {"label": "Spell", "pick": 1, "abilities": ["Longstrider", "Fog Cloud", "Hail of Thorns", "Hunter's Mark", "Ensnaring Strike"]}
-   ],
-   "tips": ["Dread Ambusher: +3 initiative, and on the first turn of combat +3 m movement and a free extra attack with +1d8. Special arrows can't be used for that extra attack."],
-   "gains": "Dread Ambusher, Umbral Shroud and Disguise Self, always prepared.",
-   "abilities": ["Dread Ambusher", "Disguise Self"]
-  },
-  {
-   "level": 4,
-   "class": "Ranger",
-   "class_level": 4,
-   "choices": [
-    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: +2 DEX", "Sharpshooter: −5 to hit, +10 damage, toggled per attack", "Alert: +5 initiative, can't be surprised"]}
-   ],
-   "tips": ["Sharpshooter pays off once you have Archery and something else to hit with: Advantage, Guiding Bolt from Alene, or +1 attack gear."],
-   "gains": "First feat."
-  },
-  {
-   "level": 5,
-   "class": "Ranger",
-   "class_level": 5,
-   "choices": [
-    {"label": "Spell", "pick": 1, "abilities": ["Pass Without Trace", "Spike Growth", "Silence", "Lesser Restoration"]}
-   ],
-   "gains": "Extra Attack (3 attacks on your first turn) and Misty Step, always prepared.",
-   "abilities": ["Misty Step"]
-  },
-  {
-   "level": 6,
-   "class": "Ranger",
-   "class_level": 6,
-   "choices": [
-    {"label": "Favoured Enemy", "pick": 1, "options": ["Bounty Hunter", "Ranger Knight", "Mage Breaker", "Keeper of the Veil", "Sanctified Stalker"]},
-    {"label": "Natural Explorer", "pick": 1, "options": ["Beast Tamer", "Wasteland Wanderer", "Urban Tracker"]}
-   ],
-   "gains": "A second Favoured Enemy and Natural Explorer."
-  },
-  {
-   "level": 7,
-   "class": "Ranger",
-   "class_level": 7,
-   "choices": [
-    {"label": "Spell", "pick": 1, "abilities": ["Pass Without Trace", "Spike Growth", "Silence", "Lesser Restoration"]}
-   ],
-   "gains": "Iron Mind: proficiency in Wisdom and Intelligence saves."
-  },
-  {
-   "level": 8,
-   "class": "Ranger",
-   "class_level": 8,
-   "choices": [
-    {"label": "Feat", "pick": 1, "options": ["Sharpshooter", "Ability Improvement: +2 DEX", "Alert"]}
-   ],
-   "gains": "Feat, and difficult terrain no longer slows you."
-  },
-  {
-   "level": 9,
-   "class": "Ranger",
-   "class_level": 9,
-   "choices": [
-    {"label": "Spell", "pick": 1, "abilities": ["Lightning Arrow", "Conjure Barrage", "Plant Growth"]}
-   ],
-   "tips": ["Fear is an illusion spell: with Band of the Mystic Scoundrel you can cast it as a bonus action after a hit."],
-   "gains": "3rd-level spells, and Fear always prepared.",
-   "abilities": ["Fear"]
-  },
-  {
-   "level": 10,
-   "class": "Ranger",
-   "class_level": 10,
-   "choices": [
-    {"label": "Favoured Enemy", "pick": 1, "options": ["Bounty Hunter", "Ranger Knight", "Mage Breaker", "Keeper of the Veil", "Sanctified Stalker"]},
-    {"label": "Natural Explorer", "pick": 1, "options": ["Beast Tamer", "Wasteland Wanderer", "Urban Tracker"]}
-   ],
-   "gains": "Hide in Plain Sight, and a third Favoured Enemy and Natural Explorer."
-  },
-  {
-   "level": 11,
-   "class": "Ranger",
-   "class_level": 11,
-   "choices": [
-    {"label": "Spell", "pick": 1, "abilities": ["Conjure Barrage", "Lightning Arrow", "Plant Growth"]}
-   ],
-   "tips": ["Stalker's Flurry: when you miss with a weapon attack, you get a free extra attack. That makes Sharpshooter's −5 much less painful."],
-   "gains": "Stalker's Flurry.",
-   "abilities": ["Stalker's Flurry"]
-  },
-  {
-   "level": 12,
-   "class": "Ranger",
-   "class_level": 12,
-   "choices": [
-    {"label": "Feat", "pick": 1, "options": ["Alert", "Ability Improvement: +2 DEX", "Sharpshooter"]}
-   ],
-   "gains": "Final feat."
-  }
+  {"level": 1, "gains": "Favoured Enemy and Natural Explorer.", "picks": [{"label": "Favoured Enemy", "options": ["Bounty Hunter: Ensnaring Strike targets have Disadvantage on the save", "Ranger Knight: heavy armour proficiency", "Mage Breaker: True Strike cantrip", "Keeper of the Veil: Protection from Evil and Good", "Sanctified Stalker: Sacred Flame cantrip"]}, {"label": "Natural Explorer", "options": ["Beast Tamer: Find Familiar (a raven can blind enemies)", "Wasteland Wanderer: resistance to Fire, Cold or Poison", "Urban Tracker: Sleight of Hand proficiency"]}]},
+  {"level": 2, "gains": "Fighting style and spellcasting.", "picks": [{"label": "Fighting style", "options": ["Archery: +2 to ranged attack rolls, offsetting Sharpshooter", "Defence: +1 AC in armour"]}, {"label": "Spells", "abilities": ["Hunter's Mark", "Ensnaring Strike", "Longstrider", "Hail of Thorns", "Fog Cloud", "Goodberry"]}]},
+  {"level": 3, "gains": "Gloom Stalker: Dread Ambusher, Umbral Shroud and Disguise Self, always prepared.", "abilities": ["Dread Ambusher", "Disguise Self"], "picks": [{"label": "Spell", "abilities": ["Longstrider", "Fog Cloud", "Hail of Thorns", "Hunter's Mark", "Ensnaring Strike"]}]},
+  {"level": 4, "gains": "First feat.", "picks": [{"label": "Feat", "options": ["Ability Improvement: +2 DEX", "Sharpshooter: −5 to hit, +10 damage, toggled per attack", "Alert: +5 initiative, can't be surprised"]}]},
+  {"level": 5, "gains": "Extra Attack (3 attacks on your first turn) and Misty Step, always prepared.", "abilities": ["Misty Step"], "picks": [{"label": "Spell", "abilities": ["Pass Without Trace", "Spike Growth", "Silence", "Lesser Restoration"]}]},
+  {"level": 6, "gains": "A second Favoured Enemy and Natural Explorer.", "picks": [{"label": "Favoured Enemy", "options": ["Bounty Hunter", "Ranger Knight", "Mage Breaker", "Keeper of the Veil", "Sanctified Stalker"]}, {"label": "Natural Explorer", "options": ["Beast Tamer", "Wasteland Wanderer", "Urban Tracker"]}]},
+  {"level": 7, "gains": "Iron Mind: proficiency in Wisdom and Intelligence saves.", "picks": [{"label": "Spell", "abilities": ["Pass Without Trace", "Spike Growth", "Silence", "Lesser Restoration"]}]},
+  {"level": 8, "gains": "Feat, and difficult terrain no longer slows you.", "picks": [{"label": "Feat", "options": ["Sharpshooter", "Ability Improvement: +2 DEX", "Alert"]}]},
+  {"level": 9, "gains": "3rd-level spells, and Fear always prepared.", "abilities": ["Fear"], "picks": [{"label": "Spell", "abilities": ["Lightning Arrow", "Conjure Barrage", "Plant Growth"]}]},
+  {"level": 10, "gains": "Hide in Plain Sight, and a third Favoured Enemy and Natural Explorer.", "picks": [{"label": "Favoured Enemy", "options": ["Bounty Hunter", "Ranger Knight", "Mage Breaker", "Keeper of the Veil", "Sanctified Stalker"]}, {"label": "Natural Explorer", "options": ["Beast Tamer", "Wasteland Wanderer", "Urban Tracker"]}]},
+  {"level": 11, "gains": "Stalker's Flurry.", "abilities": ["Stalker's Flurry"], "picks": [{"label": "Spell", "abilities": ["Conjure Barrage", "Lightning Arrow", "Plant Growth"]}]},
+  {"level": 12, "gains": "Final feat.", "picks": [{"label": "Feat", "options": ["Alert", "Ability Improvement: +2 DEX", "Sharpshooter"]}]}
  ],
 
  "gear": [
@@ -245,25 +122,5 @@
     {"slot": "Ranged", "items": ["Titanstring Bow", "The Dead Shot", "Gontr Mael", "Hellrider Longbow"]}
    ]
   }
- ],
-
- "playbook": {
-  "turn": [
-   "First turn: Hunter's Mark on the biggest threat (bonus action), then spend Dread Ambusher's free extra attack on it.",
-   "Ensnaring Strike instead of Hunter's Mark when one enemy needs holding in place.",
-   "Toggle Sharpshooter on when your hit chance is high: Advantage, Guiding Bolt from Alene, Faerie Fire.",
-   "Arrow of Many Targets spreads every on-hit rider (Caustic Band acid, Reverberation) across several enemies."
-  ],
-  "start_of_day": [
-   "Club in the main hand and a shield in the off hand: the Strength and the AC both apply while you shoot.",
-   "Cast Longstrider on the party; Vesper's hit-and-run counts on it.",
-   "With Beast Tamer, summon your familiar; a raven can blind enemies."
-  ],
-  "tips": [
-   "Special arrows can't be used with Dread Ambusher's free extra attack.",
-   "Pass Without Trace gives the party +10 Stealth: easy surprise rounds.",
-   "Plant Growth (level 9+) quarters enemy speed with no concentration.",
-   "A teammate's Drakethroat Glaive can make your bow deal elemental damage, which feeds Belligerent Skies or the Snowburst Ring (the video's trick; test it)."
-  ]
- }
+ ]
 }

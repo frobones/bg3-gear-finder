@@ -5,141 +5,20 @@
  "title": "Circle of the Stars Druid",
  "classes": "Druid 12 (Circle of the Stars)",
  "role": "The party's spell save DC caster and only healer: control spells under a Starry Form, radiant debuffs on the side.",
- "level_order": "Druid 1–12",
- "shape": {
-  "name": "Level-10 swapper",
-  "summary": "Dragon form until level 10 to keep concentration on control spells. From level 10, switch forms for free once per turn: Archer for a radiant bonus-action arrow, Chalice when healing, back to Dragon when holding something big.",
-  "strong": ["Concentration almost never breaks in Dragon form.", "Strongest Stars Druid from level 10, when every form is one free swap away.", "Covers the party's healing without giving up control."],
-  "weak": ["Low single-target damage before level 10.", "Leaving Dragon form gives up its concentration floor.", "No Constitution save proficiency."]
- },
- "choices": [
-  {"label": "Ability scores", "options": ["DEX 14 · CON 16 · WIS 17 (+ STR 8, INT 8, CHA 10): safest concentration", "DEX 16 · CON 14 · WIS 16: more AC and initiative"], "note": "Either way, Wisdom goes up first with feats."},
-  {"label": "Race", "options": ["Gnome: Advantage on INT, WIS and CHA saves", "Half-Elf or Wood Elf: darkvision and extra speed", "Halfling: Lucky rerolls natural 1s"], "note": "Druid already has medium armour and shields, so armour from race adds nothing."},
-  {"label": "Armour", "options": ["Medium armour and a shield: about 17–19 AC", "A spell-DC robe or light armour: less AC, more DC"]}
- ],
 
  "levels": [
-  {
-   "level": 1,
-   "class": "Druid",
-   "class_level": 1,
-   "choices": [
-    {"label": "Cantrips", "pick": 2, "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Shillelagh", "Resistance (Cantrip)", "Poison Spray"]},
-    {"label": "Skills", "pick": 2, "options": ["Perception", "Insight", "Medicine", "Nature", "Arcana", "Animal Handling", "Religion", "Survival"]}
-   ],
-   "tips": [
-    "Vesper's theft plan counts on your Guidance when she's about to cast Friends.",
-    "Produce Flame makes you a light source, which the Act 2 Coruscation Ring needs."
-   ],
-   "prepare": {"abilities": ["Healing Word", "Faerie Fire", "Entangle", "Thunderwave", "Ice Knife", "Fog Cloud", "Create or Destroy Water"], "note": "You prepare Druid level + WIS modifier spells and can swap them outside combat."},
-   "gains": "Spellcasting from the whole Druid list."
-  },
-  {
-   "level": 2,
-   "class": "Druid",
-   "class_level": 2,
-   "choices": [
-    {"label": "Subclass", "text": "Circle of the Stars"}
-   ],
-   "tips": [
-    "Take Dragon form before fights: a bonus action and a Wild Shape charge, lasting until a long rest. You have 2 charges, back on a short rest.",
-    "Use Dazzling Breath as your bonus action every turn."
-   ],
-   "gains": "Wild Shape, Starry Form and the Star Map's free Guiding Bolts.",
-   "abilities": ["Starry Form: Dragon", "Starry Form: Archer", "Starry Form: Chalice", "Guiding Bolt"]
-  },
-  {
-   "level": 3,
-   "class": "Druid",
-   "class_level": 3,
-   "choices": [],
-   "prepare": {"abilities": ["Spike Growth", "Hold Person", "Moonbeam", "Pass Without Trace", "Lesser Restoration", "Heat Metal"], "note": "Spike Growth and Hold Person are the control picks; Pass Without Trace sets up the Ranger's surprise rounds."},
-   "gains": "2nd-level spells."
-  },
-  {
-   "level": 4,
-   "class": "Druid",
-   "class_level": 4,
-   "choices": [
-    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: +2 WIS", "Alert: go first and can't be surprised", "War Caster: Advantage on concentration saves", "Resilient: +1 CON and CON save proficiency"]},
-    {"label": "Cantrip", "pick": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}
-   ],
-   "tips": ["War Caster matters least for this shape: Dragon form already covers concentration until level 10."],
-   "gains": "Feat, third cantrip, more Wild Shape forms."
-  },
-  {
-   "level": 5,
-   "class": "Druid",
-   "class_level": 5,
-   "choices": [],
-   "prepare": {"abilities": ["Call Lightning", "Plant Growth", "Sleet Storm"], "note": "Plant Growth needs no concentration: quarter speed, no save. Pair it with Spike Growth."},
-   "gains": "3rd-level spells; Dazzling Breath reaches 3d6."
-  },
-  {
-   "level": 6,
-   "class": "Druid",
-   "class_level": 6,
-   "choices": [],
-   "tips": ["Cosmic Omen is a reaction 3 times a day. Woe subtracts 1d6 from an enemy's save after the roll; save it for your big control spell."],
-   "gains": "Cosmic Omen (Weal or Woe, decided each long rest).",
-   "abilities": ["Cosmic Omen"]
-  },
-  {
-   "level": 7,
-   "class": "Druid",
-   "class_level": 7,
-   "choices": [],
-   "prepare": {"abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire", "Confusion", "Polymorph", "Blight", "Conjure Minor Elemental"], "note": "The Dryad lasts until a long rest and casts her own Spike Growth and Entangle, keeping your concentration free."},
-   "gains": "4th-level spells: Druid's biggest jump."
-  },
-  {
-   "level": 8,
-   "class": "Druid",
-   "class_level": 8,
-   "choices": [
-    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: +2 WIS, or +1 WIS and +1 CON", "Alert", "War Caster: worth it now if you'll leave Dragon form from level 10", "Resilient: +1 CON and CON save proficiency"]}
-   ],
-   "gains": "Feat and more Wild Shape forms."
-  },
-  {
-   "level": 9,
-   "class": "Druid",
-   "class_level": 9,
-   "choices": [],
-   "prepare": {"abilities": ["Insect Plague", "Wall of Stone", "Conjure Elemental", "Mass Cure Wounds", "Greater Restoration"]},
-   "gains": "5th-level spells; Cosmic Omen uses rise to 4."
-  },
-  {
-   "level": 10,
-   "class": "Druid",
-   "class_level": 10,
-   "choices": [
-    {"label": "Cantrip", "pick": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}
-   ],
-   "tips": [
-    "Switch Starry Form once per turn for free: Archer for Luminous Arrow on a quiet turn, Chalice when you heal, Dragon whenever you're holding concentration.",
-    "Leaving Dragon form gives up its concentration floor. Swap back before the enemy's turn if your spell matters."
-   ],
-   "gains": "Twinkling Constellations: forms improve to 2d8, Dragon can fly, and you can swap forms for free once per turn.",
-   "abilities": ["Twinkling Constellations"]
-  },
-  {
-   "level": 11,
-   "class": "Druid",
-   "class_level": 11,
-   "choices": [],
-   "prepare": {"abilities": ["Sunbeam", "Heal", "Heroes' Feast", "Wall of Thorns"], "note": "Cast Heroes' Feast with a staff's free spell before big fights; it buffs the whole party."},
-   "gains": "One 6th-level slot."
-  },
-  {
-   "level": 12,
-   "class": "Druid",
-   "class_level": 12,
-   "choices": [
-    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: WIS to 20", "Alert", "War Caster", "Resilient", "Tough: +2 HP per level"]}
-   ],
-   "gains": "Final feat."
-  }
+  {"level": 1, "gains": "Spellcasting from the whole Druid list.", "picks": [{"label": "Cantrips", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Shillelagh", "Resistance (Cantrip)", "Poison Spray"]}, {"label": "Spells worth preparing", "abilities": ["Healing Word", "Faerie Fire", "Entangle", "Thunderwave", "Ice Knife", "Fog Cloud", "Create or Destroy Water"]}]},
+  {"level": 2, "gains": "Circle of the Stars: Wild Shape, Starry Form and the Star Map's free Guiding Bolts.", "abilities": ["Starry Form: Dragon", "Starry Form: Archer", "Starry Form: Chalice", "Guiding Bolt"]},
+  {"level": 3, "gains": "2nd-level spells.", "picks": [{"label": "Spells worth preparing", "abilities": ["Spike Growth", "Hold Person", "Moonbeam", "Pass Without Trace", "Lesser Restoration", "Heat Metal"]}]},
+  {"level": 4, "gains": "Feat, third cantrip, more Wild Shape forms.", "picks": [{"label": "Feat", "options": ["Ability Improvement: +2 WIS", "Alert: go first and can't be surprised", "War Caster: Advantage on concentration saves", "Resilient: +1 CON and CON save proficiency"]}, {"label": "Cantrip", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}]},
+  {"level": 5, "gains": "3rd-level spells; Dazzling Breath reaches 3d6.", "picks": [{"label": "Spells worth preparing", "abilities": ["Call Lightning", "Plant Growth", "Sleet Storm"]}]},
+  {"level": 6, "gains": "Cosmic Omen (Weal or Woe, decided each long rest).", "abilities": ["Cosmic Omen"]},
+  {"level": 7, "gains": "4th-level spells: Druid's biggest jump.", "picks": [{"label": "Spells worth preparing", "abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire", "Confusion", "Polymorph", "Blight", "Conjure Minor Elemental"]}]},
+  {"level": 8, "gains": "Feat and more Wild Shape forms.", "picks": [{"label": "Feat", "options": ["Ability Improvement: +2 WIS, or +1 WIS and +1 CON", "Alert", "War Caster: worth it now if you'll leave Dragon form from level 10", "Resilient: +1 CON and CON save proficiency"]}]},
+  {"level": 9, "gains": "5th-level spells; Cosmic Omen uses rise to 4.", "picks": [{"label": "Spells worth preparing", "abilities": ["Insect Plague", "Wall of Stone", "Conjure Elemental", "Mass Cure Wounds", "Greater Restoration"]}]},
+  {"level": 10, "gains": "Twinkling Constellations: forms improve to 2d8, Dragon can fly, and you can swap forms for free once per turn.", "abilities": ["Twinkling Constellations"], "picks": [{"label": "Cantrip", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}]},
+  {"level": 11, "gains": "One 6th-level slot.", "picks": [{"label": "Spells worth preparing", "abilities": ["Sunbeam", "Heal", "Heroes' Feast", "Wall of Thorns"]}]},
+  {"level": 12, "gains": "Final feat.", "picks": [{"label": "Feat", "options": ["Ability Improvement: WIS to 20", "Alert", "War Caster", "Resilient", "Tough: +2 HP per level"]}]}
  ],
 
  "gear": [
@@ -238,25 +117,5 @@
     {"slot": "Ranged", "items": ["Hellrider Longbow"]}
    ]
   }
- ],
-
- "playbook": {
-  "turn": [
-   "Before level 10: be in Dragon form. Action for a control spell, bonus action for Dazzling Breath.",
-   "From level 10: swap form once per turn for free. Archer's Luminous Arrow or Chalice's extra heal, then back to Dragon if you're holding concentration.",
-   "Save Cosmic Omen (Woe) for the save that decides the fight.",
-   "Spend Star Map charges on Guiding Bolt: the next attack on that target has Advantage, which helps Pearl and Zetharis."
-  ],
-  "start_of_day": [
-   "Prepare control, one heal and one utility spell; swap freely outside combat.",
-   "From level 7, summon the Dryad: she lasts until a long rest and holds her own Spike Growth.",
-   "From level 11, cast Heroes' Feast with a staff's free spell before a big fight."
-  ],
-  "tips": [
-   "Plant Growth plus Spike Growth: quarter speed and damage per step, and only Spike Growth needs concentration.",
-   "In any Starry Form you can't use some reactions, such as Absorb Elements.",
-   "The radiant kit (Luminous Armour or Gloves, Coruscation, Callous Glow) stacks Radiating Orb: −1 to the target's attack rolls per turn, up to −10.",
-   "Give Vesper Guidance before her pickpocketing: she can't hold Friends and Guidance herself."
-  ]
- }
+ ]
 }

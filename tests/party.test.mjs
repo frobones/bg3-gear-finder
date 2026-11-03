@@ -6,11 +6,12 @@ import { abilityFacts, abilityName } from "../assets/js/abilities.js";
 import { wantedByItem } from "../assets/js/data.js";
 import { partyPlans } from "../assets/js/detail.js";
 import { entryTags } from "../assets/js/html.js";
-import { planGroups, renderGearTab } from "../assets/js/gearplan.js";
-import { levelLearning, renderBuildTab, renderPlaybookTab } from "../assets/js/guides.js";
+import { planGroups, renderGearTab, renderLoadouts } from "../assets/js/gearplan.js";
+import { levelLearning, renderPlaybookTab } from "../assets/js/guides.js";
 import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
 import { parsePartyRoute } from "../assets/js/party.js";
-import { emptyProgress, sanitizeProgress, tabsFor, toggleInList } from "../assets/js/progress.js";
+import { renderLevelPicks, renderPicksPage } from "../assets/js/picks.js";
+import { emptyProgress, sanitizeProgress, toggleInList } from "../assets/js/progress.js";
 
 const abilities = new Map([
   ["Shield (spell)", { id: "Shield (spell)", kind: "spell", name: "Shield", spell_level: 1, action_type: "reaction" }],
@@ -146,22 +147,6 @@ test("renderGearTab shows the chosen act's loadout with its default and alternat
   assert.match(actThree.slice(actThree.indexOf("loadout-table")), /Late Helm/);
 });
 
-test("an options profile shows its own tabs and falls back to the first one", () => {
-  assert.deepEqual(tabsFor({ style: "options" }), ["build", "level", "gear", "playbook"]);
-  assert.deepEqual(tabsFor({}), ["level", "gear", "scrolls", "illithid", "playbook"]);
-});
-
-test("a pick choice lists spells as pills and written options as a list, with none marked as the answer", () => {
-  const html = choiceValue(
-    { label: "Feat", pick: 1, abilities: ["Sleep"], options: ["Alert: go first"] },
-    abilities,
-  );
-  assert.match(html, /Pick 1/);
-  assert.match(html, /<ul class="pill-list"><li><button[^>]*data-ability="Sleep"/);
-  assert.match(html, /<ul class="option-list"><li>Alert: go first<\/li><\/ul>/);
-  assert.equal(choiceSummary({ choices: [{ label: "Feat", pick: 1, options: ["A", "B", "C"] }] }, abilities), "Feat: pick 1 of 3");
-});
-
 test("entryTags shows a plan's priority or an options profile's tags", () => {
   assert.match(entryTags({ priority: "core" }), /tag-core">Core</);
   assert.equal(
@@ -179,26 +164,58 @@ test("an options profile's act loadout is a bucket of picks with tags, not defau
     gear: [{ item: "Hood", tags: ["dc"] }, { item: "Staff", tags: ["dc"] }],
     loadouts: [{ act: "three", label: "Act 3", intro: "", slots: [{ slot: "Head", items: ["Hood", "Staff"] }] }],
   };
-  const html = renderGearTab(profile, data, emptyProgress(), false, null);
-  const table = html.slice(html.indexOf("bucket-table"));
+  const table = renderLoadouts(profile, data.byId, abilities, null);
+  assert.match(table, /bucket-table/);
   assert.match(table, /Good picks/);
   assert.doesNotMatch(table, /Alternates/);
   assert.equal(table.match(/tag-dc/g)?.length, 2);
 });
 
-test("renderBuildTab shows the chosen shape and each creation choice's options", () => {
-  const html = renderBuildTab({
-    shape: { name: "Swapper", summary: "Swap forms.", strong: ["Late game"], weak: ["Early damage"] },
-    choices: [{ label: "Race", options: ["Gnome", "Halfling"], note: "Either works." }],
-  });
-  assert.match(html, /<h3>Swapper<\/h3>/);
-  assert.match(html, /<li>Late game<\/li>/);
-  assert.match(html, /<h4>Race<\/h4>\s*<ul class="option-list"><li>Gnome<\/li><li>Halfling<\/li><\/ul>/);
+test("renderPlaybookTab shows only the sections a profile has, in order", () => {
+  const html = renderPlaybookTab({ playbook: { mage_hand: ["Scout"], turn: ["Dash", "Strike"] } });
+  assert.ok(html.indexOf("A turn in combat") < html.indexOf("Mage Hand jobs"));
+  assert.match(html, /A turn in combat<\/h3><ol/);
+  assert.doesNotMatch(html, /Reaction settings|Stealing safely/);
 });
 
-test("renderPlaybookTab shows only the sections a profile has, in order", () => {
-  const html = renderPlaybookTab({ style: "options", playbook: { tips: ["Tip"], turn: ["Swap forms"] } });
-  assert.ok(html.indexOf("A turn in combat") < html.indexOf("Tips"));
-  assert.match(html, /A turn in combat<\/h3><ul/);
-  assert.doesNotMatch(html, /Reaction settings|Stealing safely/);
+test("a full plan's gear tab puts the loadout summary before the checklist", () => {
+  const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
+  const data = { byId: new Map([["Mail", item("Mail")]]), abilities };
+  const profile = {
+    gear: [{ item: "Mail", priority: "core" }],
+    loadouts: [{ act: "one", label: "Act 1", intro: "", slots: [{ slot: "Chest", items: ["Mail"], alternates: [] }] }],
+  };
+  const html = renderGearTab(profile, data, emptyProgress(), false, null);
+  assert.ok(html.indexOf("End-of-act loadout") < html.indexOf("Item checklist"));
+});
+
+test("renderLevelPicks lists what each level gives and its good picks, spells as pop-outs", () => {
+  const html = renderLevelPicks(
+    {
+      levels: [
+        { level: 1, gains: "Spellcasting.", picks: [{ label: "Cantrips", abilities: ["Sleep"] }] },
+        { level: 4, gains: "Feat.", picks: [{ label: "Feat", options: ["Alert: go first"] }] },
+      ],
+    },
+    abilities,
+  );
+  assert.match(html, /Good picks by level/);
+  assert.match(html, /<h4>Cantrips<\/h4><ul class="pill-list"><li><button[^>]*data-ability="Sleep"/);
+  assert.match(html, /<h4>Feat<\/h4><ul class="option-list"><li>Alert: go first<\/li>/);
+  assert.ok(html.indexOf("Spellcasting.") < html.indexOf("Feat."));
+});
+
+test("a friend's page shows picks by level, then by act, then the checklist", () => {
+  const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
+  const data = { byId: new Map([["Hood", item("Hood")]]), abilities };
+  const profile = {
+    style: "options",
+    levels: [{ level: 1, gains: "Spellcasting." }],
+    gear: [{ item: "Hood", tags: ["dc"] }],
+    loadouts: [{ act: "one", label: "Act 1", intro: "", slots: [{ slot: "Head", items: ["Hood"] }] }],
+  };
+  const html = renderPicksPage(profile, data, emptyProgress(), false, null);
+  const order = ["Good picks by level", "Good picks by act", "Item checklist"].map((h) => html.indexOf(h));
+  assert.ok(order.every((at) => at >= 0));
+  assert.deepEqual(order, [...order].sort((a, b) => a - b));
 });

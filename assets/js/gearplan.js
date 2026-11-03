@@ -103,7 +103,7 @@ function loadoutTable(loadout, byId, abilities) {
 }
 
 /** Loadouts for the end of each act, one shown at a time behind act buttons. */
-function loadouts(profile, byId, abilities, act) {
+export function renderLoadouts(profile, byId, abilities, act) {
   const shown = profile.loadouts.find((l) => l.act === act) ?? profile.loadouts[0];
   const buttons = profile.loadouts
     .map(
@@ -118,7 +118,8 @@ function loadouts(profile, byId, abilities, act) {
     ${options ? bucketTable(shown, byId, profile.gear) : loadoutTable(shown, byId, abilities)}`;
 }
 
-export function renderGearTab(profile, data, progress, hideGot, loadoutAct) {
+/** The checklist of wanted items in play order, with "picked up" checkboxes. */
+export function renderGearChecklist(profile, data, progress, hideGot) {
   const got = new Set(progress.got);
   const groups = planGroups(profile.gear, data.byId);
   const total = groups.reduce((n, [, rows]) => n + rows.length, 0);
@@ -149,11 +150,16 @@ export function renderGearTab(profile, data, progress, hideGot, loadoutAct) {
     : "";
 
   return `
+    <h3 class="checklist-heading">Item checklist</h3>
     <div class="plan-tools">
       <p class="plan-count" tabindex="-1" aria-live="polite">${done} of ${total} picked up</p>
       <label class="toggle"><input type="checkbox" data-hide-got${hideGot ? " checked" : ""} /><span>Hide picked-up items</span></label>
     </div>
     ${sections}
-    ${leave}
-    ${loadouts(profile, data.byId, data.abilities, loadoutAct)}`;
+    ${leave}`;
+}
+
+/** Vesper's gear tab: the loadout summary first, then the checklist. */
+export function renderGearTab(profile, data, progress, hideGot, loadoutAct) {
+  return `${renderLoadouts(profile, data.byId, data.abilities, loadoutAct)}${renderGearChecklist(profile, data, progress, hideGot)}`;
 }
