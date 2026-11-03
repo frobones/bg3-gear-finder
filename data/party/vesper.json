@@ -220,16 +220,14 @@
  ],
 
  "illithid": {
-  "intro": "Optional. The build works without the tadpole. These are the picks that fit if you want the extra power.",
+  "intro": "Optional. The build works without the tadpole. She stays off the Astral-Touched Tadpole, so no partial-illithid powers or appearance change: these are the regular powers that fit.",
   "warning": "Awakened turns illithid powers into bonus actions, but her bonus action already goes to Cunning Dash in her hit-and-run turn.",
   "powers": [
    {"when": "Crèche Y'llek", "abilities": ["Awakened"], "why": "Illithid powers cost a bonus action instead of an action. You get it by succeeding at the Zaith'isk."},
    {"when": "Early", "abilities": ["Psionic Overload"], "why": "Adds 1d4 psychic damage to her attacks, but she takes 1d4 psychic damage every turn."},
-   {"when": "Early", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies, and each kill deals 1–4 psychic damage to every creature nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
-   {"when": "Early", "abilities": ["Shield of Thralls"], "why": "Temporary HP for her, and it can stun nearby enemies."},
-   {"when": "Partial illithid", "abilities": ["Black Hole"], "why": "Pulls enemies together for control spells and bombs. With Ring of Mental Inhibition, each enemy that fails its save gets 2 turns of Mental Fatigue."},
-   {"when": "Partial illithid", "abilities": ["Mind Blast"], "why": "4d8 psychic in a 14 m cone, and an INT save or Stunned. Braindrain adds 2 turns of Mental Fatigue to each target, and Ring of Mental Inhibition 2 more on a failed save. Stunned enemies automatically fail STR and DEX saves, so follow with a bomb or Black Hole. Recharges on a long rest."},
-   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "−1 AC and −1 to all saving throws on the target for 5 turns, which suits her control spells. It calls for an INT save, which Mental Fatigue lowers, and with Ring of Mental Inhibition a failed save adds 2 turns of Mental Fatigue."},
+   {"when": "Early", "abilities": ["Concentrated Blast"], "why": "Taken to unlock Cull the Weak and Psionic Backlash."},
+   {"when": "After Concentrated Blast", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies, and each kill deals 1–4 psychic damage to every creature nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
+   {"when": "After Transfuse Health", "abilities": ["Shield of Thralls"], "why": "Temporary HP for her, and it can stun nearby enemies."},
    {"when": "After Concentrated Blast", "abilities": ["Psionic Backlash"], "why": "A reaction when an enemy within 9 m casts a spell: 1d4 psychic per spell level, which adds Mental Fatigue and can break their concentration. It uses the reaction she'd spend on Uncanny Dodge or Shield, so save it for fights against casters."}
   ]
  },
@@ -265,8 +263,8 @@
   {"item": "Bow of the Banshee", "act": "one", "priority": "high", "note": "Its +1d4 to hit and damage against Frightened targets covers all her weapon attacks. Check in game that it works from the ranged slot."},
   {"item": "Gloves of Battlemage's Power", "priority": "high", "note": "Booming Blade hits give Arcane Acuity, raising her spell attack and save DC. Wear until Braindrain."},
   {"item": "Flawed Helldusk Gloves", "priority": "yield", "claim": "Pearl: +1d4 fire on every arrow."},
-  {"item": "Ring of Mental Inhibition", "priority": "matchup", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves. Booming Blade forces no save, so it needs her save spells, Bow of the Banshee's DC 12 WIS save to resist Frightened on a hit, bombs, Mind Blast or Black Hole."},
-  {"item": "Braindrain Gloves", "priority": "core", "note": "Every instance of psychic damage she deals adds 2 turns of Mental Fatigue: every Shadow Blade hit, Psionic Overload on bow shots, Cull the Weak's splash on every nearby enemy, Mind Blast and Psionic Backlash."},
+  {"item": "Ring of Mental Inhibition", "priority": "matchup", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves. Booming Blade forces no save, so it needs her save spells, Bow of the Banshee's DC 12 WIS save to resist Frightened on a hit, or bombs."},
+  {"item": "Braindrain Gloves", "priority": "core", "note": "Every instance of psychic damage she deals adds 2 turns of Mental Fatigue: every Shadow Blade hit, Psionic Overload on bow shots, Cull the Weak's splash on every nearby enemy and Psionic Backlash."},
   {"item": "Vivacious Cloak", "priority": "core", "note": "8 temporary HP each time she casts a spell while in melee, Booming Blade included, which soaks the opportunity attacks she draws backing off."},
   {"item": "Cloak of Protection", "priority": "yield", "claim": "Alene in Act 2, then Zetharis in Act 3."},
   {"item": "Evasive Shoes", "priority": "yield", "claim": "Pearl."},

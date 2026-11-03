@@ -1412,32 +1412,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Become_the_Bulwark"
  },
  {
-  "id": "Black Hole",
-  "kind": "spell",
-  "name": "Black Hole",
-  "type": null,
-  "brief": null,
-  "description": "Create a point of intense gravity that pulls in all nearby enemies and possibly Slows them.",
-  "extra_description": "Five more black holes can be summoned after this spell's initial casting. Afterwards, you must Short Rest before casting it again.",
-  "recharge": "Short rest",
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/4/42/Black_Hole_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Slows",
-    "page": "Slowed (Condition)",
-    "url": "https://bg3.wiki/wiki/Slowed_(Condition)"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Black_Hole",
-  "spell_level": null,
-  "school": null,
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "ranged"
- },
- {
   "id": "Blade Ward",
   "kind": "spell",
   "name": "Blade Ward",
@@ -2823,6 +2797,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Combat_Regeneration"
+ },
+ {
+  "id": "Concentrated Blast",
+  "kind": "spell",
+  "name": "Concentrated Blast",
+  "type": null,
+  "brief": null,
+  "description": "You must be concentrating on another spell to cast this. If the target was concentrating, you heal as much as the damage that was dealt to it.",
+  "extra_description": "The spell you were concentrating on will end.",
+  "recharge": "Per Turn",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/f/fc/Concentrated_Blast_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "concentrating",
+    "page": "Concentration",
+    "url": "https://bg3.wiki/wiki/Concentration"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Concentrated_Blast",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
  },
  {
   "id": "Concussive Smash",
@@ -6013,37 +6013,6 @@
   "icon_url": null,
   "links": [],
   "wiki_url": "https://bg3.wiki/wiki/Formless_Slaughter"
- },
- {
-  "id": "Fracture Psyche",
-  "kind": "spell",
-  "name": "Fracture Psyche",
-  "type": null,
-  "brief": null,
-  "description": "Invade a target's mind and disrupt its defences. The target's Armour Class and Saving Throws are reduced by 1.",
-  "extra_description": "If the target dies while its psyche is fractured, you can cast Shatter Psyche on another target.",
-  "recharge": "Short Rest",
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/c/cf/Fracture_Psyche_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Armour Class",
-    "page": "Armour Class",
-    "url": "https://bg3.wiki/wiki/Armour_Class"
-   },
-   {
-    "text": "Saving Throw",
-    "page": "Saving Throw",
-    "url": "https://bg3.wiki/wiki/Saving_Throw"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Fracture_Psyche",
-  "spell_level": null,
-  "school": null,
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "9 / 30"
  },
  {
   "id": "Frantic Urgency",
@@ -9527,32 +9496,6 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Mental_Interference"
- },
- {
-  "id": "Mind Blast",
-  "kind": "spell",
-  "name": "Mind Blast",
-  "type": null,
-  "brief": null,
-  "description": "Spew forth a conical wave of psychic energy and possibly Stun targets within.",
-  "extra_description": null,
-  "recharge": "long rest",
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/8/8e/Mind_Blast_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Stun",
-    "page": "Stunned (condition)",
-    "url": "https://bg3.wiki/wiki/Stunned_(condition)"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Mind_Blast",
-  "spell_level": null,
-  "school": null,
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": null
  },
  {
   "id": "Minions of Chaos",
