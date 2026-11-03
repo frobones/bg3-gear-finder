@@ -4,6 +4,7 @@
  "name": "Alene",
  "title": "Circle of the Stars Druid",
  "classes": "Druid 12 (Circle of the Stars)",
+ "portrait": "assets/portraits/alene.jpg",
  "role": "The party's controller and only healer. She opens with a concentration spell such as Spike Growth, Hold Person, Moonbeam or Call Lightning, then spends her bonus action in a Starry Form: Archer for radiant shots that pile on Reverberation and Radiating Orb, or Chalice to heal as she casts.",
 
  "spells": [
