@@ -270,11 +270,12 @@
   "powers": [
    {"when": "Crèche Y'llek", "abilities": ["Awakened"], "why": "Illithid powers cost a bonus action instead of an action. You get it by succeeding at the Zaith'isk."},
    {"when": "Early", "abilities": ["Psionic Overload"], "why": "Adds 1d4 psychic damage to her attacks, but she takes 1d4 psychic damage every turn."},
-   {"when": "Early", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies and can chain through a group."},
+   {"when": "Early", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies, and each kill deals 1–4 psychic damage to every creature nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
    {"when": "Early", "abilities": ["Shield of Thralls"], "why": "Temporary HP for her, and it can stun nearby enemies."},
    {"when": "Partial illithid", "abilities": ["Black Hole"], "why": "Pulls enemies together for control spells and bombs."},
    {"when": "Partial illithid", "abilities": ["Mind Blast"], "why": "Psychic area damage that can stun."},
-   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "−1 AC and −1 to all saving throws on the target, which suits her control spells."}
+   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "−1 AC and −1 to all saving throws on the target, which suits her control spells."},
+   {"when": "After Concentrated Blast", "abilities": ["Psionic Backlash"], "why": "A reaction when an enemy within 9 m casts a spell: 1d4 psychic per spell level, which adds Mental Fatigue and can break their concentration. It uses the reaction she'd spend on Uncanny Dodge or Shield, so save it for fights against casters."}
   ]
  },
 
@@ -312,8 +313,8 @@
   {"item": "Rupturing Blade", "priority": "optional", "note": "The Reddit build's bomb trick. Bombs are her last resort."},
   {"item": "Gloves of Battlemage's Power", "priority": "high", "note": "Booming Blade hits give Arcane Acuity, raising her spell attack and save DC. Wear until Braindrain."},
   {"item": "Flawed Helldusk Gloves", "priority": "yield", "claim": "Pearl: +1d4 fire on every arrow."},
-  {"item": "Ring of Mental Inhibition", "priority": "matchup", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves. Only her save spells and illithid powers set it off: Booming Blade forces no save."},
-  {"item": "Braindrain Gloves", "priority": "core", "note": "Psychic hits apply Mental Fatigue. With Shadow Blade, every hit counts."},
+  {"item": "Ring of Mental Inhibition", "priority": "matchup", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves. Booming Blade forces no save, so it needs her save spells, Bow of the Banshee's DC 12 WIS save to resist Frightened on a hit, bombs, Mind Blast or Black Hole."},
+  {"item": "Braindrain Gloves", "priority": "core", "note": "Every instance of psychic damage she deals adds 2 turns of Mental Fatigue: every Shadow Blade hit, Psionic Overload on bow shots, Cull the Weak's splash on every nearby enemy, Mind Blast and Psionic Backlash."},
   {"item": "Shadow-Cloaked Ring", "priority": "optional", "note": "+1d4 weapon damage against obscured targets, which Shadow Blade already wants."},
   {"item": "Vivacious Cloak", "priority": "core", "note": "8 temporary HP each time she casts a spell while in melee, Booming Blade included, which soaks the opportunity attacks she draws backing off."},
   {"item": "Cloak of Protection", "priority": "yield", "claim": "Alene in Act 2, then Zetharis in Act 3."},

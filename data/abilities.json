@@ -11195,6 +11195,20 @@
   "range": "melee"
  },
  {
+  "id": "Psionic Backlash",
+  "kind": "passive",
+  "name": "Psionic Backlash",
+  "type": null,
+  "brief": "When an enemy casts a spell, can use a reaction to deal 1d4 Psychic per spell level.",
+  "description": "When an enemy within 9 m (30 ft) casts a spell, you can use your reaction to inflict 1d4 Psychic damage to the caster per the spell's level.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/77/Psionic_Backlash_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Psionic_Backlash"
+ },
+ {
   "id": "Psionic Overload",
   "kind": "spell",
   "name": "Psionic Overload",
