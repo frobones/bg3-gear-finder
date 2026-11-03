@@ -204,6 +204,29 @@
   object-fit: cover;
 }
 
+/* The profile portrait opens the full painting: a plain wrapper that brightens its frame on hover. */
+.portrait-zoom {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  cursor: zoom-in;
+}
+
+.portrait-zoom .profile-portrait {
+  display: block;
+}
+
+.portrait-zoom:hover .profile-portrait {
+  border-color: var(--brass);
+}
+
+.portrait-zoom:focus-visible {
+  outline: 2px solid var(--brass-strong);
+  outline-offset: 2px;
+}
+
 .profile-name {
   margin: 0;
   font: 600 var(--step-3) / 1.05 var(--serif);
@@ -914,7 +937,8 @@
     font-size: var(--step-2);
   }
 
-  .profile-portrait {
+  .profile-portrait,
+  .portrait-zoom {
     grid-row: 1 / span 2;
   }
 

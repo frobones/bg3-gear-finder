@@ -1,7 +1,8 @@
 // Album: screenshots from the party's sessions, grouped by the day they were played, with a full-size viewer.
 //
 // Shots and captions come from data/album.json, which scripts/build_album.py writes. Selecting a thumbnail
-// opens the viewer; arrow keys or a swipe move between shots and Escape closes it.
+// opens the viewer; arrow keys or a swipe move between shots and Escape closes it. The same viewer shows a
+// single image, such as a character's full portrait, for anything marked data-full-image.
 
 import { esc } from "./html.js";
 import { viewFromHash } from "./views.js";
@@ -88,7 +89,11 @@ export function initAlbum(root) {
   let opener = null;
   let swipeStart = null;
 
+  let single = false;
+
   function show(index) {
+    single = false;
+    dialog.classList.remove("is-single");
     current = (index + order.length) % order.length;
     const shot = order[current];
     image.src = `assets/album/${shot.file}.jpg`;
@@ -97,11 +102,23 @@ export function initAlbum(root) {
     dialog.querySelector(".viewer-count").textContent = `${current + 1} of ${order.length}`;
   }
 
+  // One image on its own: no count, and nothing to step to.
+  function showSingle(src, caption) {
+    single = true;
+    dialog.classList.add("is-single");
+    image.src = src;
+    image.alt = caption;
+    dialog.querySelector(".viewer-caption").textContent = caption;
+    dialog.querySelector(".viewer-count").textContent = "";
+  }
+
   root.addEventListener("click", (event) => {
     const thumb = event.target.closest("[data-shot]");
-    if (!thumb) return;
-    opener = thumb;
-    show(Number(thumb.dataset.shot));
+    const full = event.target.closest("[data-full-image]");
+    if (!thumb && !full) return;
+    opener = thumb ?? full;
+    if (thumb) show(Number(thumb.dataset.shot));
+    else showSingle(full.dataset.fullImage, full.dataset.caption);
     dialog.showModal();
   });
 
@@ -113,6 +130,7 @@ export function initAlbum(root) {
   });
 
   dialog.addEventListener("keydown", (event) => {
+    if (single) return;
     if (event.key === "ArrowLeft") show(current - 1);
     else if (event.key === "ArrowRight") show(current + 1);
   });
@@ -121,7 +139,7 @@ export function initAlbum(root) {
     swipeStart = event.clientX;
   });
   image.addEventListener("pointerup", (event) => {
-    if (swipeStart === null) return;
+    if (swipeStart === null || single) return;
     const moved = event.clientX - swipeStart;
     swipeStart = null;
     if (Math.abs(moved) >= SWIPE_MIN_PX) show(current + (moved < 0 ? 1 : -1));

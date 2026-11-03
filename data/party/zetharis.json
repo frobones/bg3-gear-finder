@@ -5,6 +5,7 @@
  "title": "Hexblade Warlock",
  "classes": "Warlock 12 (The Hexblade)",
  "portrait": "assets/portraits/zetharis.jpg",
+ "portrait_full": "assets/portraits/full/zetharis.jpg",
  "role": "The party's ranged turret. In the Potent Robe, Agonising Blast adds his Charisma to every Eldritch Blast beam twice, and Hex adds more. From Act 2, Spineshudder and Ring of Spiteful Thunder turn the beams into control: Reverberation lowers CON saves, then Dazes or knocks targets Prone.",
 
  "spells": [

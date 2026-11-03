@@ -90,6 +90,12 @@ export function backstory(profile) {
 /** The tabs this profile has: Backstory only when the profile has a bio. */
 export const profileTabs = (profile) => PROFILE_TABS.filter((t) => t !== "backstory" || profile.bio?.length);
 
+/** The profile portrait as a button that opens the full-size painting, when the profile has one. */
+export function fullPortraitLink(profile, img) {
+  if (!profile.portrait_full) return img;
+  return `<button type="button" class="portrait-zoom" data-full-image="${esc(profile.portrait_full)}" data-caption="${esc(profile.name)}" aria-label="View ${esc(profile.name)}'s portrait full size">${img}</button>`;
+}
+
 function profileHeader(profile) {
   const facts = [
     ["Race", profile.race],
@@ -101,7 +107,7 @@ function profileHeader(profile) {
   return `
     <a class="back-link" href="#party">All party members</a>
     <header class="profile-head">
-      ${portrait(profile, "profile-portrait", 160, 190, `Portrait of ${profile.name}`)}
+      ${fullPortraitLink(profile, portrait(profile, "profile-portrait", 160, 190, `Portrait of ${profile.name}`))}
       <div>
         <h2 class="profile-name">${esc(profile.name)}</h2>
         <p class="profile-title">${esc(profile.title)}</p>

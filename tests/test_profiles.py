@@ -4,7 +4,8 @@ import json
 import unittest
 from pathlib import Path
 
-PARTY_DIR = Path(__file__).resolve().parent.parent / "data" / "party"
+ROOT = Path(__file__).resolve().parent.parent
+PARTY_DIR = ROOT / "data" / "party"
 
 
 def full_plans() -> list[dict]:
@@ -41,6 +42,20 @@ class ChecklistCoverageTest(unittest.TestCase):
             }
             with self.subTest(profile=profile["id"]):
                 self.assertEqual(sorted(wanted - listed), [])
+
+
+class PortraitFilesTest(unittest.TestCase):
+    def test_every_portrait_a_profile_names_exists(self) -> None:
+        profiles = [
+            json.loads(path.read_text())
+            for path in PARTY_DIR.glob("*.json")
+            if path.name != "party.json"
+        ]
+        for profile in profiles:
+            for key in ("portrait", "portrait_full"):
+                if key in profile:
+                    with self.subTest(profile=profile["id"], key=key):
+                        self.assertTrue((ROOT / profile[key]).is_file(), profile[key])
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ import test from "node:test";
 
 import { bannerShots } from "../assets/js/banner.js";
 import { homeHtml, latestSession, pageTitle, partyNameHtml } from "../assets/js/home.js";
-import { backstory } from "../assets/js/party.js";
+import { backstory, fullPortraitLink } from "../assets/js/party.js";
 
 const shot = (file, taken, banner = false) => ({ file, taken, caption: file, banner });
 const shots = [
@@ -70,4 +70,13 @@ test("roster cards show each member's name, title and classes, but not their cur
 test("backstory writes each paragraph of the bio, escaped", () => {
   const html = backstory({ bio: ["First <night>.", "Second."] });
   assert.equal(html, '<div class="profile-bio"><p>First &lt;night&gt;.</p><p>Second.</p></div>');
+});
+
+test("fullPortraitLink wraps the portrait in a button that opens the full painting", () => {
+  const html = fullPortraitLink({ name: "Vesper", portrait_full: "assets/portraits/full/vesper.jpg" }, "<img>");
+  assert.equal(
+    html,
+    '<button type="button" class="portrait-zoom" data-full-image="assets/portraits/full/vesper.jpg" data-caption="Vesper" aria-label="View Vesper\'s portrait full size"><img></button>',
+  );
+  assert.equal(fullPortraitLink({ name: "Pearl" }, "<img>"), "<img>");
 });

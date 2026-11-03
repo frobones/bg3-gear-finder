@@ -11,9 +11,10 @@ sections, **Our party** and **Gear finder**.
   between album shots every few seconds; **Pause** stops it, and it holds
   still while you point at it. Below come the last session's newest
   screenshots and the party roster.
-- **Party** shows each character in the co-op party.
-  **Party gear by act** puts everyone's picks for each slot side by side, one
-  act at a time, so you can see where every piece of gear is going. A
+- **Party** shows each character in the co-op party. Select a character's
+  portrait on their page to see the full painting. **Party gear by act**
+  puts everyone's picks for each slot side by side, one act at a time, so
+  you can see where every piece of gear is going. A
   filled-in profile has tabs for:
   - **Level up**: what to pick at the next level, in the order the game asks,
     then which Wizard spells to prepare.
@@ -151,6 +152,10 @@ Profiles are written by hand and are never overwritten by a rebuild. To add
 one, copy `data/party/vesper.json`, put the portrait in `assets/portraits/`,
 and point the roster entry in `data/party/party.json` at it with
 `"profile": "<file name without .json>"`.
+
+`portrait` is a 405×480 crop shown on cards and profile pages;
+`portrait_full`, in `assets/portraits/full/`, is the whole painting that opens
+when you select it. The tests check that both files exist.
 
 A profile can also carry a `bio`, a list of paragraphs that a full build
 plan shows in a **Backstory** tab. It's optional; see
