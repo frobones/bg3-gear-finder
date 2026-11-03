@@ -26,6 +26,37 @@ export function abilityList(title, names, abilities) {
   return `<h3>${title}</h3><ul class="plain-list ability-list">${rows.join("")}</ul>`;
 }
 
+/** One ability written out in full: its name, any cost or recharge as tags, then what it does. */
+function abilityEntry(name, abilities) {
+  const ability = abilities.get(name);
+  if (!ability) return `<li><p class="grant-name">${esc(name)}</p></li>`;
+  const tags = abilityFacts(ability).slice(1);
+  return `
+    <li>
+      <p class="grant-name">${esc(ability.name)}</p>
+      ${tags.length ? `<ul class="pop-facts">${tags.map((tag) => `<li>${esc(tag)}</li>`).join("")}</ul>` : ""}
+      ${ability.description ? `<p class="prose">${linkify(ability.description, ability.links)}</p>` : ""}
+      ${ability.extra_description ? `<p class="prose muted small">${esc(ability.extra_description)}</p>` : ""}
+    </li>`;
+}
+
+/** A titled list of abilities with each one's description shown in place, for passives in the item panel. */
+export function abilityEntries(title, names, abilities) {
+  const shown = (names ?? []).filter(Boolean);
+  if (!shown.length) return "";
+  return `
+    <section class="effect-card" aria-label="${title}">
+      <h3>${title}</h3>
+      <ul class="special-grants">${shown.map((name) => abilityEntry(name, abilities)).join("")}</ul>
+    </section>`;
+}
+
+/** "Recharges on short rest", or "Once per turn" for the wiki's per-attack and per-turn limits. */
+export function rechargeFact(recharge) {
+  const when = recharge.toLowerCase();
+  return when.startsWith("per ") ? `Once ${when}` : `Recharges on ${when}`;
+}
+
 const ACTION_TYPES = { action: "Action", bonus: "Bonus action", reaction: "Reaction" };
 
 /** "Cantrip", "Level 3 spell", or just "Spell" when the wiki gives no level (illithid powers). */
@@ -40,7 +71,7 @@ function spellFacts(spell) {
   if (spell.action_type) facts.push(ACTION_TYPES[spell.action_type] ?? capitalize(spell.action_type));
   if (spell.concentration) facts.push("Concentration");
   if (spell.ritual) facts.push("Ritual");
-  if (spell.recharge) facts.push(`Recharges on ${spell.recharge.toLowerCase()}`);
+  if (spell.recharge) facts.push(rechargeFact(spell.recharge));
   return facts;
 }
 
@@ -49,7 +80,7 @@ export function abilityFacts(ability) {
   if (ability.kind === "spell") return spellFacts(ability);
   const facts = [capitalize(ability.kind === "action" ? (ability.type ?? "action") : "passive")];
   if (ability.cost) facts.push(capitalize(ability.cost));
-  if (ability.recharge) facts.push(`Recharges on ${ability.recharge.toLowerCase()}`);
+  if (ability.recharge) facts.push(rechargeFact(ability.recharge));
   return facts;
 }
 

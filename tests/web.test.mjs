@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { abilityFacts, abilityList, popContent } from "../assets/js/abilities.js";
+import { abilityEntries, abilityFacts, abilityList, popContent, rechargeFact } from "../assets/js/abilities.js";
 import { averageDamage } from "../assets/js/data.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
@@ -85,6 +85,24 @@ test("abilityList makes known names pop-out triggers and leaves unknown ones as 
   assert.match(html, /<button type="button" class="ability-trigger" data-ability="Lacerate"/);
   assert.match(html, /<li>&lt;Mystery&gt;<\/li>/);
   assert.equal(abilityList("Passives", [], new Map()), "");
+});
+
+test("abilityEntries writes each description in place, with no pop-out trigger", () => {
+  const html = abilityEntries("Passives", ["Lacerate", "<Mystery>"], new Map([["Lacerate", lacerate]]));
+  assert.match(html, /<section class="effect-card" aria-label="Passives">\s*<h3>Passives<\/h3>/);
+  assert.doesNotMatch(html, /ability-trigger/);
+  assert.match(html, /<p class="grant-name">Lacerate<\/p>/);
+  assert.match(html, /<li>Action<\/li><li>Recharges on short rest<\/li>/);
+  assert.match(html, /<a href="https:\/\/bg3.wiki\/wiki\/Bleeding_\(condition\)"[^>]*>Bleed<\/a>/);
+  assert.match(html, /Undead and constructs can&#39;t bleed\./);
+  assert.match(html, /<p class="grant-name">&lt;Mystery&gt;<\/p>/);
+  assert.equal(abilityEntries("Passives", [], new Map()), "");
+});
+
+test("rechargeFact reads naturally for rests and per-attack limits", () => {
+  assert.equal(rechargeFact("Short Rest"), "Recharges on short rest");
+  assert.equal(rechargeFact("Per attack"), "Once per attack");
+  assert.equal(rechargeFact("Per Turn"), "Once per turn");
 });
 
 test("abilityFacts describes kind, cost and recharge", () => {

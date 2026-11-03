@@ -806,20 +806,6 @@
   margin-top: 0.35rem;
 }
 
-/* The build role leads the item panel: a framed callout above the stats. */
-.party-plans {
-  margin-top: 1.1rem;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--brass);
-  border-radius: 6px;
-  background: var(--raised);
-}
-
-.detail .party-plans h3 {
-  margin-top: 0;
-}
-
 .wanted p {
   margin: 0;
 }

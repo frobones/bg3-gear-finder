@@ -41,6 +41,8 @@ test("parseSpecial handles empty text", () => {
 test("renderSpecial lists facts, then each grant with tags and a pop-out when the ability is known", () => {
   const abilities = new Map([["Plant Growth", { name: "Plant Growth" }]]);
   const html = renderSpecial("• Fire resistance.\nPlant Growth (Action)\nCast as a level 3 spell ( Recharge: Short rest.)", abilities);
+  assert.match(html, /^<section class="effect-card" aria-label="Special"><h3>Special<\/h3>/);
+  assert.match(html, /<\/section>$/);
   assert.match(html, /<ul class="plain-list special-facts"><li>Fire resistance\.<\/li><\/ul>/);
   assert.match(html, /data-ability="Plant Growth"/);
   assert.match(html, /<li>Level 3 spell<\/li>/);

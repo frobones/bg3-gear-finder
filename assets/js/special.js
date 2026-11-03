@@ -3,7 +3,7 @@
 // The wiki flattens each grant into lines: a header such as "Plant Growth (Action)", then optional
 // "Cast as a level 3 spell", a description that may wrap across lines, and "( Recharge: Short rest.)".
 
-import { abilityName } from "./abilities.js";
+import { abilityName, rechargeFact } from "./abilities.js";
 import { esc } from "./html.js";
 
 const GRANT_HEADER = /^(.+?) \(([^()]*\b(?:Action|Reaction)\b[^()]*)\)$/;
@@ -80,7 +80,7 @@ export function parseSpecial(text) {
 }
 
 function grantItem(grant, abilities) {
-  const tags = [...grant.costs, grant.cast, grant.recharge ? `Recharges on ${grant.recharge.toLowerCase()}` : null].filter(
+  const tags = [...grant.costs, grant.cast, grant.recharge ? rechargeFact(grant.recharge) : null].filter(
     Boolean,
   );
   return `
@@ -92,11 +92,11 @@ function grantItem(grant, abilities) {
     </li>`;
 }
 
-/** The Special section of the item panel: facts as a list, then each granted action with its cost and recharge. */
+/** The Special card in the item panel: facts as a list, then each granted action with its cost and recharge. */
 export function renderSpecial(text, abilities) {
   const { facts, grants } = parseSpecial(text);
   if (!facts.length && !grants.length) return "";
   const factList = facts.length ? `<ul class="plain-list special-facts">${facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : "";
   const grantList = grants.length ? `<ul class="special-grants">${grants.map((g) => grantItem(g, abilities)).join("")}</ul>` : "";
-  return `<h3>Special</h3>${factList}${grantList}`;
+  return `<section class="effect-card" aria-label="Special"><h3>Special</h3>${factList}${grantList}</section>`;
 }

@@ -706,7 +706,23 @@ th[aria-sort="descending"] .sort-button::after {
   padding-left: 1.1rem;
 }
 
-/* Special: what the item grants, each action with its cost and recharge as tags. */
+/* Callouts in the item panel: Party plans leads, and Special and passives stand out from the plain sections. */
+.party-plans,
+.effect-card {
+  margin-top: 1.1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--brass);
+  border-radius: 6px;
+  background: var(--raised);
+}
+
+.detail .party-plans h3,
+.detail .effect-card h3 {
+  margin-top: 0;
+}
+
+/* Special and passives: each entry's name, its cost and recharge as tags, then what it does. */
 .special-facts + .special-grants {
   margin-top: 0.75rem;
 }

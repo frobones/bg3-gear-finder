@@ -32,8 +32,9 @@ where and when you can pick it up.
   known place.
 - Select any item to see its stats, passives, actions, every way to get it,
   and the wiki's notes on it, with links back to bg3.wiki.
-- Hover over or focus a passive, weapon action or spell to see what it does;
-  click or tap to keep it open. Escape closes it.
+- An item's passives are written out in its panel. Hover over or focus a
+  weapon action or spell to see what it does; click or tap to keep it open.
+  Escape closes it.
 
 Current level, picked-up items and taken powers are saved in
 the browser you use. They aren't shared between browsers or devices, and

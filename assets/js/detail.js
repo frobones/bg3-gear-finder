@@ -1,6 +1,6 @@
 // Item detail panel: stats, effects, and every way to get the item.
 
-import { abilityFacts, abilityList } from "./abilities.js";
+import { abilityEntries, abilityFacts, abilityList } from "./abilities.js";
 import {
   ACT_LABELS,
   capitalize,
@@ -126,10 +126,10 @@ export function renderDetail(panel, item, abilities, wanted) {
       <h3>Where to get it</h3>
       ${whereToGet(item)}
       ${item.notes ? `<h3>Notes</h3><p class="prose">${linkify(item.notes, item.notes_links)}</p>` : ""}
-      ${abilityList("Passives", item.passives, abilities)}
-      ${abilityList("Weapon passives", item.weapon_passives, abilities)}
-      ${abilityList("Main-hand passives", item.passives_main_hand, abilities)}
-      ${abilityList("Off-hand passives", item.passives_off_hand, abilities)}
+      ${abilityEntries("Passives", item.passives, abilities)}
+      ${abilityEntries("Weapon passives", item.weapon_passives, abilities)}
+      ${abilityEntries("Main-hand passives", item.passives_main_hand, abilities)}
+      ${abilityEntries("Off-hand passives", item.passives_off_hand, abilities)}
       ${abilityList("Weapon actions", [...(item.weapon_actions ?? []), ...(item.special_weapon_actions ?? [])], abilities)}
       ${renderSpecial(item.special, abilities)}
       ${textBlock("About", item.description)}
