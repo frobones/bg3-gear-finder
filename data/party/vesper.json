@@ -331,7 +331,7 @@
   {"item": "Cloak of the Weave", "priority": "yield", "claim": "Alene, for her spell DC."},
   {"item": "Cloak of Displacement", "priority": "core", "note": "Attackers have Disadvantage until she takes damage, renewed each turn: covers the opportunity attacks she draws backing off."},
   {"item": "Helldusk Gloves", "priority": "yield", "claim": "Alene: +1 spell DC and spell attack."},
-  {"item": "Stalker Gloves", "priority": "optional", "note": "+1d4 force on Sneak Attack and +1 initiative. Early in Act 3."},
+  {"item": "Stalker Gloves", "priority": "optional", "note": "+1d4 force on Sneak Attack and +1 initiative. Outside Honour mode the force damage counts as its own damage source, so Lightning Charges apply to it again; whether Arcane Synergy does is unconfirmed, so check in game. Wear them over Braindrain when no one is casting WIS-save control spells. Sold by Exxvikyap in Rivington, early in Act 3."},
   {"item": "Helldusk Boots", "priority": "yield", "claim": "Zetharis."},
   {"item": "Amulet of Greater Health", "priority": "high", "note": "23 CON and Advantage on CON saves.", "claim": "Vesper (decided)."},
   {"item": "Fey Semblance Amulet", "priority": "yield", "claim": "Zetharis, as his amulet swap for mind-control fights."},
