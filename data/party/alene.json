@@ -43,7 +43,6 @@
   {"item": "Spellcrux Amulet", "tags": ["utility"], "note": "Restore one spell slot of any level, once per long rest."},
   {"item": "Luminous Gloves", "tags": ["radiant"], "note": "Your radiant damage adds 2 turns of Radiating Orb (−1 to the target's attack rolls per turn)."},
   {"item": "Coruscation Ring", "tags": ["radiant"], "note": "Spell damage while you're lit adds Radiating Orb. Produce Flame keeps you lit."},
-  {"item": "Ring of Spiteful Thunder", "tags": ["radiant"], "note": "Damaging a Reverberating enemy can Daze it."},
   {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves. Pass it to Zetharis once you have Cloak of the Weave."},
   {"item": "Hood of the Weave", "tags": ["dc"], "note": "+2 spell DC and spell attack."},
   {"item": "Amulet of the Devout", "tags": ["dc"], "note": "+2 spell DC. Looting it from the offering chest curses you: falling unconscious kills you until it's removed, so cast Greater Restoration on yourself right away."},
@@ -87,7 +86,7 @@
     {"slot": "Gloves", "items": ["Luminous Gloves", "Gloves of Belligerent Skies"]},
     {"slot": "Boots", "items": ["Boots of Stormy Clamour"]},
     {"slot": "Amulet", "items": ["Spellcrux Amulet"]},
-    {"slot": "Rings", "items": ["Coruscation Ring", "Ring of Spiteful Thunder", "Ring of Protection"]},
+    {"slot": "Rings", "items": ["Coruscation Ring", "Ring of Protection"]},
     {"slot": "Main hand", "items": ["Melf's First Staff"]},
     {"slot": "Off hand", "items": ["Ketheric's Shield"]}
    ]

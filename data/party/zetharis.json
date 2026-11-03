@@ -38,9 +38,10 @@
   {"item": "Dark Justiciar Helmet", "tags": ["crit"], "note": "Crit range −1 while you're obscured (stacks), and +1 CON saves for concentration. Better than the Covert Cowl."},
   {"item": "Covert Cowl", "tags": ["crit"], "note": "Crit range −1 while you're obscured: blast from inside your Darkness (that turn you're concentrating on Darkness, not Hex)."},
   {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves. Alene passes it on once she has Cloak of the Weave."},
-  {"item": "Spineshudder Amulet", "tags": ["control"], "note": "Ranged spell attacks add Reverberation, so every beam stacks it."},
+  {"item": "Spineshudder Amulet", "tags": ["control"], "note": "Each beam that hits adds 2 turns of Reverberation (−1 to STR, DEX and CON saves per turn). At 5 turns the target takes 1d4 thunder and must pass a CON save or fall Prone. Prone helps melee allies, but ranged attacks against it have Disadvantage. Keep it on in Act 3."},
   {"item": "Callous Glow Ring", "tags": ["damage"], "note": "+2 radiant damage per beam against lit targets."},
-  {"item": "Killer's Sweetheart", "tags": ["crit"], "note": "After a kill, your next attack is a crit, once a day."},
+  {"item": "Ring of Spiteful Thunder", "tags": ["control"], "note": "Damaging a Reverberating enemy Dazes it unless it passes a CON save. With Spineshudder, your second and third beams each force that save, and Reverberation has already lowered it. Moonrise Towers, from Roah Moonglow."},
+  {"item": "Killer's Sweetheart", "tags": ["crit"], "note": "After a kill, your next attack is a crit, once a day. Once it's spent, swap to Ring of Spiteful Thunder."},
   {"item": "Incandescent Staff", "tags": ["accuracy"], "note": "+1 to ranged spell attacks, plus Fireball once a day."},
   {"item": "Shield of Devotion", "tags": ["utility"], "note": "An extra 1st-level spell slot and a self-Aid."},
   {"item": "Birthright", "tags": ["damage"], "note": "+2 CHA (up to 22): +2 on every beam, twice over in the robe."},
@@ -48,7 +49,7 @@
   {"item": "Spellmight Gloves", "tags": ["damage"], "note": "−5 to hit for +1d8 damage on spell attacks, toggled."},
   {"item": "Craterflesh Gloves", "tags": ["crit"], "note": "+1d6 force on every crit. Bhaal path only: Vesper can buy it from the Echo of Abazigal."},
   {"item": "Helldusk Boots", "tags": ["survival"], "note": "Can't be pushed, and can turn a failed save into a success."},
-  {"item": "Fey Semblance Amulet", "tags": ["survival"], "note": "Advantage on INT, WIS and CHA saves."},
+  {"item": "Fey Semblance Amulet", "tags": ["survival"], "note": "Advantage on INT, WIS and CHA saves: the swap for fights full of Hold, Dominate or Banishment."},
   {"item": "Markoheshkir", "tags": ["damage", "utility"], "note": "+1 spell attack and DC. Its lightning buff gives 2 Lightning Charges whenever you deal spell damage, and a free Chain Lightning and Lightning Bolt each short rest."},
   {"item": "Shield of the Undevout", "tags": ["utility", "control"], "note": "An extra 1st-level spell slot, and enemies have Disadvantage on saves against your Fear. No curse."},
   {"item": "Helldusk Helmet", "tags": ["survival"], "note": "Can't be Blinded or crit, sees in magical Darkness, and +2 to saves against spells. In the Avernus vault."},
@@ -83,7 +84,7 @@
     {"slot": "Gloves", "items": ["Daredevil Gloves"]},
     {"slot": "Boots", "items": ["Boots of Striding"]},
     {"slot": "Amulet", "items": ["Spineshudder Amulet", "Amulet of the Harpers"]},
-    {"slot": "Rings", "items": ["Callous Glow Ring", "Killer's Sweetheart"]},
+    {"slot": "Rings", "items": ["Callous Glow Ring", "Killer's Sweetheart", "Ring of Spiteful Thunder"]},
     {"slot": "Main hand", "items": ["Incandescent Staff", "The Spellsparkler"]},
     {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of Devotion"]}
    ]
@@ -98,8 +99,8 @@
     {"slot": "Body", "items": ["Potent Robe"]},
     {"slot": "Gloves", "items": ["Quickspell Gloves", "Spellmight Gloves", "Craterflesh Gloves"]},
     {"slot": "Boots", "items": ["Helldusk Boots", "Boots of Striding"]},
-    {"slot": "Amulet", "items": ["Fey Semblance Amulet"]},
-    {"slot": "Rings", "items": ["Callous Glow Ring", "Killer's Sweetheart"]},
+    {"slot": "Amulet", "items": ["Spineshudder Amulet", "Fey Semblance Amulet"]},
+    {"slot": "Rings", "items": ["Callous Glow Ring", "Killer's Sweetheart", "Ring of Spiteful Thunder"]},
     {"slot": "Main hand", "items": ["Markoheshkir"]},
     {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of the Undevout", "Shield of Shielding"]}
    ]

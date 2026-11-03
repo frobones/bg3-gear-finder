@@ -335,7 +335,7 @@
   {"item": "Boots of Persistence", "priority": "optional", "note": "Freedom of Movement and Longstrider, at the cost of Lightning Charges."},
   {"item": "Helldusk Boots", "priority": "yield", "claim": "Zetharis."},
   {"item": "Amulet of Greater Health", "priority": "high", "note": "23 CON and Advantage on CON saves.", "claim": "Vesper (decided)."},
-  {"item": "Fey Semblance Amulet", "priority": "yield", "claim": "Zetharis, to keep the robe turret standing."},
+  {"item": "Fey Semblance Amulet", "priority": "yield", "claim": "Zetharis, as his amulet swap for mind-control fights."},
   {"item": "Band of the Mystic Scoundrel", "priority": "optional", "note": "After a weapon hit, cast an illusion or enchantment spell as a bonus action, but that bonus action is the one her Dash uses."},
   {"item": "Viconia's Walking Fortress", "priority": "core", "note": "+3 AC, Advantage on saves against spells, and enemy spell attacks get Disadvantage. Her final shield.", "claim": "Vesper."},
   {"item": "Helldusk Armour", "priority": "optional", "note": "Heavy armour (21 AC). She stays in medium armour.", "claim": "Free for the Warlock if they want it."},
