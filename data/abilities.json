@@ -15385,16 +15385,16 @@
   "wiki_url": "https://bg3.wiki/wiki/Wasteland_Wanderer:_Cold"
  },
  {
-  "id": "Wasteland Wanderer: Fire",
+  "id": "Wasteland Wanderer: Poison",
   "kind": "passive",
-  "name": "Wasteland Wanderer: Fire",
+  "name": "Wasteland Wanderer: Poison",
   "type": null,
   "brief": null,
-  "description": "You have spent endless days surviving forbidding deserts. Gain resistance to Fire, taking only half damage from it.",
+  "description": "You have spent endless days surviving fetid swamps. Gain resistance to Poison, taking only half damage from it.",
   "extra_description": null,
   "recharge": null,
   "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/e/e2/Wasteland_Wanderer_Fire_Icon.webp",
+  "icon_url": "https://bg3.wiki/w/images/d/de/Wasteland_Wanderer_Poison_Icon.webp",
   "links": [
    {
     "text": "resistance",
@@ -15402,12 +15402,12 @@
     "url": "https://bg3.wiki/wiki/Resistance"
    },
    {
-    "text": "Fire",
-    "page": "Fire",
-    "url": "https://bg3.wiki/wiki/Fire"
+    "text": "Poison",
+    "page": "Poison",
+    "url": "https://bg3.wiki/wiki/Poison"
    }
   ],
-  "wiki_url": "https://bg3.wiki/wiki/Wasteland_Wanderer:_Fire"
+  "wiki_url": "https://bg3.wiki/wiki/Wasteland_Wanderer:_Poison"
  },
  {
   "id": "Watersparks",
