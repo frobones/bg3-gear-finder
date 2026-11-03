@@ -172,18 +172,6 @@
   max-width: 60ch;
 }
 
-.profile-arc {
-  grid-column: 1 / -1;
-  margin: 0.75rem 0 0;
-  padding-left: 0.9rem;
-  border-left: 2px solid var(--brass);
-  font: italic var(--step-0) / 1.6 var(--serif);
-}
-
-.profile-arc p {
-  margin: 0;
-}
-
 .profile-tabs {
   display: flex;
   gap: 0.25rem 1.25rem;
@@ -795,7 +783,7 @@
 }
 
 @media (max-width: 720px) {
-  /* On a phone the level card should be close to the top: small portrait beside the name, no story quote. */
+  /* On a phone the level card should be close to the top: small portrait beside the name. */
   .profile-head {
     grid-template-columns: 72px minmax(0, 1fr);
     gap: 0.25rem 0.9rem;
@@ -828,10 +816,6 @@
   .profile-facts,
   .profile-role {
     grid-column: 1 / -1;
-  }
-
-  .profile-arc {
-    display: none;
   }
 
   .profile-tabs {

@@ -4,7 +4,7 @@
  "name": "Pearl",
  "title": "Gloom Stalker Ranger",
  "classes": "Ranger 12 (Gloom Stalker)",
- "role": "The party's archer: first to act, Titanstring Bow powered by Strength from gear, a shield on her back for AC.",
+ "role": "The party's archer and opening striker. Gloom Stalker initiative and her extra first-round attack let her shoot first. Titanstring Bow adds the Strength her Club gives her, and Hunter's Mark plus Sharpshooter, offset by Archery and accuracy gear, carry the rest of the fight.",
 
  "spells": [
   {"label": "Level 1 spells", "from": 2, "abilities": ["Hunter's Mark", "Ensnaring Strike", "Longstrider"]},

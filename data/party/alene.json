@@ -4,7 +4,7 @@
  "name": "Alene",
  "title": "Circle of the Stars Druid",
  "classes": "Druid 12 (Circle of the Stars)",
- "role": "The party's spell save DC caster and only healer: control spells under a Starry Form, radiant debuffs on the side.",
+ "role": "The party's controller and only healer. She opens with a concentration spell such as Spike Growth, Hold Person, Moonbeam or Call Lightning, then spends her bonus action in a Starry Form: Archer for radiant shots that pile on Reverberation and Radiating Orb, or Chalice to heal as she casts.",
 
  "spells": [
   {"label": "Cantrips", "from": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip"]},

@@ -101,14 +101,6 @@ function profileHeader(profile) {
         ${facts.length ? `<dl class="profile-facts">${facts.join("")}</dl>` : ""}
         <p class="profile-role">${esc(profile.role)}</p>
       </div>
-      ${
-        profile.arc
-          ? `<blockquote class="profile-arc">
-        <p><span class="muted">Before the Nautiloid:</span> “${esc(profile.arc.before)}”</p>
-        <p><span class="muted">After:</span> “${esc(profile.arc.after)}”</p>
-      </blockquote>`
-          : ""
-      }
     </header>`;
 }
 

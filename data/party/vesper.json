@@ -8,11 +8,7 @@
  "background": "Urchin",
  "difficulty": "Tactician",
  "portrait": "assets/portraits/vesper.jpg",
- "role": "Hit-and-run striker in medium armour and a shield: Dash in, Booming Blade, back off so enemies take thunder chasing her. Also thief, scout and control enabler.",
- "arc": {
-  "before": "How do I get in, take what I need, and get out?",
-  "after": "How do I make sure nobody ever gets into me again?"
- },
+ "role": "The party's front-line tank and thief. In medium armour and a shield she Dashes in, Booming Blades with her Shadow Blade and steps back, so enemies take thunder chasing her. Her psychic hits stack Mental Fatigue, setting up her own Phantasmal Killer and Fear and Alene's Hold Person.",
  "level_order": "Rogue 1–5, then Wizard 1–4, then Rogue 6–7, then Wizard 5",
 
  "levels": [
