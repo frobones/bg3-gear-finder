@@ -64,6 +64,14 @@ export function partyActs(profiles) {
   return ACT_ORDER.filter((act) => labels.has(act)).map((act) => ({ act, label: labels.get(act) }));
 }
 
+/** Who a cell belongs to. Hidden on wide screens, where the column headings say it; shown on phones. */
+function gearWho(profile) {
+  const face = profile.portrait
+    ? `<img class="gear-who-portrait" src="${esc(profile.portrait)}" alt="" width="32" height="38" loading="lazy" />`
+    : `<span class="gear-who-portrait member-portrait-empty"></span>`;
+  return `<p class="gear-who">${face}<span>${esc(profile.name)}</span></p>`;
+}
+
 function gearCell(cell, byId) {
   if (!cell || (!cell.picks.length && !cell.others.length && !cell.swaps.length)) {
     return `<span class="muted">Nothing planned</span>`;
@@ -93,7 +101,7 @@ export function renderPartyGear(data, act) {
       (slot) => `
       <tr>
         <th scope="row">${esc(slot)}</th>
-        ${profiles.map((p, i) => `<td data-label="${esc(p.name)}">${gearCell(picks[i].get(slot), data.byId)}</td>`).join("")}
+        ${profiles.map((p, i) => `<td>${gearWho(p)}${gearCell(picks[i].get(slot), data.byId)}</td>`).join("")}
       </tr>`,
     )
     .join("");

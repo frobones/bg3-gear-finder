@@ -73,6 +73,7 @@ test("renderPartyGear shows each character as a column for the chosen act", () =
   assert.match(html, /<th scope="row">Rings<\/th>/);
   assert.match(html, /data-item="Ring C"/);
   assert.match(html, /Nothing planned/);
+  assert.match(html, /<td><p class="gear-who"><span class="gear-who-portrait member-portrait-empty"><\/span><span>Vesper<\/span><\/p>/);
   assert.doesNotMatch(html, /Guest/);
   const actTwo = renderPartyGear(data, "two");
   assert.match(actTwo, /data-item="Cuirass"/);
@@ -107,4 +108,12 @@ test("renderPartyGear labels swap-ins apart from alternates", () => {
   const html = renderPartyGear({ ...data, party: { members: [{ profile: "zed" }], profiles: new Map([["zed", swapper]]) } }, "one");
   assert.match(html, /Swap in when needed<\/span><div class="loadout-item"><button[^>]*data-item="Ring C"/);
   assert.doesNotMatch(html, />Or</);
+});
+
+test("renderPartyGear puts each character's portrait and name in their cells for phones", () => {
+  const face = { id: "zed", name: "Zed <Jr>", title: "Warlock", portrait: "assets/portraits/zed.jpg", loadouts: [] };
+  face.loadouts = [{ act: "one", label: "Act 1", slots: [{ slot: "Head", items: ["Band"] }] }];
+  const html = renderPartyGear({ ...data, party: { members: [{ profile: "zed" }], profiles: new Map([["zed", face]]) } }, "one");
+  assert.match(html, /<p class="gear-who"><img class="gear-who-portrait" src="assets\/portraits\/zed.jpg" alt=""/);
+  assert.match(html, /<span>Zed &lt;Jr&gt;<\/span><\/p>/);
 });
