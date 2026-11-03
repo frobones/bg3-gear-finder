@@ -247,15 +247,19 @@ test("renderPlaybookTab shows only the sections a profile has, in order", () => 
   assert.doesNotMatch(html, /Reaction settings|Stealing safely/);
 });
 
-test("a full plan's gear tab puts the loadout summary before the checklist", () => {
+test("a full plan's gear tab puts the loadout summary before the checklist and lists no hand-offs", () => {
   const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
-  const data = { byId: new Map([["Mail", item("Mail")]]), abilities };
+  const data = { byId: new Map([["Mail", item("Mail")], ["Ring", item("Ring")]]), abilities };
   const profile = {
-    gear: [{ item: "Mail", priority: "core" }],
+    gear: [
+      { item: "Mail", priority: "core" },
+      { item: "Ring", priority: "yield", claim: "Pearl." },
+    ],
     loadouts: [{ act: "one", label: "Act 1", intro: "", slots: [{ slot: "Chest", items: ["Mail"], alternates: [] }] }],
   };
   const html = renderGearTab(profile, data, emptyProgress(), false, null);
   assert.ok(html.indexOf("End-of-act loadout") < html.indexOf("Item checklist"));
+  assert.doesNotMatch(html, /Leave for the party|data-item="Ring"/);
 });
 
 test("abilityLink falls back to plain text for names the snapshot doesn't have", () => {
