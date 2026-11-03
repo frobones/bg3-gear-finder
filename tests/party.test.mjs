@@ -7,7 +7,7 @@ import { wantedByItem } from "../assets/js/data.js";
 import { loadoutUses, partyPlans, renderAbilityDetail, renderDetail } from "../assets/js/detail.js";
 import { entryTags } from "../assets/js/html.js";
 import { planGroups, renderGearTab, renderLoadouts } from "../assets/js/gearplan.js";
-import { levelLearning, renderPlaybookTab } from "../assets/js/guides.js";
+import { levelLearning, renderIllithidTab, renderPlaybookTab } from "../assets/js/guides.js";
 import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
 import { parsePartyRoute } from "../assets/js/party.js";
 import { abilityLink, renderLevelPicks, renderPicksPage, renderSpellPicks } from "../assets/js/picks.js";
@@ -70,6 +70,11 @@ test("choiceSummary uses display names, not wiki page names", () => {
 test("abilityFacts describes a spell by level, school and action", () => {
   assert.deepEqual(abilityFacts(abilities.get("Shield (spell)")), ["Level 1 spell", "Reaction"]);
   assert.deepEqual(abilityFacts({ kind: "spell", spell_level: 0, concentration: true }), ["Cantrip", "Concentration"]);
+  assert.deepEqual(abilityFacts({ kind: "spell", spell_level: null, action_type: "action", recharge: "Long rest" }), [
+    "Spell",
+    "Action",
+    "Recharges on long rest",
+  ]);
 });
 
 const byId = new Map([
@@ -104,6 +109,24 @@ test("levelLearning finds the level whose choices learn a held-back spell", () =
   const profile = { levels: [{ level: 6, choices: [] }, { level: 7, choices: [{ abilities: ["Fog Cloud"] }] }] };
   assert.equal(levelLearning(profile, "Fog Cloud"), 7);
   assert.equal(levelLearning(profile, "Web"), null);
+});
+
+test("the illithid tab opens each known power in the side panel and marks taken ones", () => {
+  const profile = {
+    illithid: {
+      intro: "Optional.",
+      warning: "Bonus actions.",
+      powers: [
+        { when: "Early", abilities: ["Sleep"], why: "Sleepy." },
+        { when: "Late", abilities: ["Unknown Power"], why: "Not in the snapshot." },
+      ],
+    },
+  };
+  const html = renderIllithidTab(profile, abilities, { ...emptyProgress(), taken: ["Sleep"] });
+  assert.match(html, /data-ability-detail="Sleep"/);
+  assert.doesNotMatch(html, /data-ability="Sleep"/);
+  assert.match(html, /<span class="plain-item">Unknown Power<\/span>/);
+  assert.match(html, /power-row is-done[\s\S]*value="Sleep" checked/);
 });
 
 test("wantedByItem and partyPlans show who plans around an item", () => {

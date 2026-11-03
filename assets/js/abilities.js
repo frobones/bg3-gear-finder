@@ -28,8 +28,14 @@ export function abilityList(title, names, abilities) {
 
 const ACTION_TYPES = { action: "Action", bonus: "Bonus action", reaction: "Reaction" };
 
+/** "Cantrip", "Level 3 spell", or just "Spell" when the wiki gives no level (illithid powers). */
+function spellKind(level) {
+  if (level === 0) return "Cantrip";
+  return level == null ? "Spell" : `Level ${level} spell`;
+}
+
 function spellFacts(spell) {
-  const facts = [spell.spell_level === 0 ? "Cantrip" : `Level ${spell.spell_level} spell`];
+  const facts = [spellKind(spell.spell_level)];
   if (spell.school) facts.push(spell.school);
   if (spell.action_type) facts.push(ACTION_TYPES[spell.action_type] ?? capitalize(spell.action_type));
   if (spell.concentration) facts.push("Concentration");

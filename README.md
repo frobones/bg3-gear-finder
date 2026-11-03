@@ -24,7 +24,8 @@ where and when you can pick it up.
     checkboxes for what's been picked up, after a loadout for the end of
     each act with alternates.
   - **Scrolls**: which spell scrolls to scribe, hold back, or skip.
-  - **Illithid**: suggested illithid powers, in order.
+  - **Illithid**: suggested illithid powers, in order. Select a power to read
+    it in the side panel.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
 - Friends' profiles are suggestions rather than a plan, on one page: **Good
   picks by act** (gear per slot, tagged by what it's good for), **Good

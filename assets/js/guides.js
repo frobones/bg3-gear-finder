@@ -2,6 +2,7 @@
 
 import { abilityName } from "./abilities.js";
 import { esc } from "./html.js";
+import { abilityLink } from "./picks.js";
 
 const names = (list, abilities) => list.map((name) => abilityName(name, abilities)).join(", ");
 
@@ -62,6 +63,7 @@ export function renderScrollsTab(profile, abilities, progress) {
     </section>`;
 }
 
+/** Suggested illithid powers in order; each opens in the side panel like a spell. */
 export function renderIllithidTab(profile, abilities, progress) {
   const { illithid } = profile;
   const taken = new Set(progress.taken);
@@ -73,7 +75,7 @@ export function renderIllithidTab(profile, abilities, progress) {
           <input type="checkbox" data-progress="taken" value="${esc(name)}"${taken.has(name) ? " checked" : ""}
             aria-label="Taken ${esc(abilities.get(name)?.name ?? name)}" />
           <div>
-            <p class="power-name">${names(power.abilities, abilities)} <span class="muted small">${esc(power.when)}</span></p>
+            <p class="power-name">${power.abilities.map((n) => abilityLink(n, abilities)).join("")} <span class="muted small">${esc(power.when)}</span></p>
             <p class="small">${esc(power.why)}</p>
           </div>
         </li>`;
