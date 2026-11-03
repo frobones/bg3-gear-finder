@@ -298,7 +298,7 @@
   {"item": "Wondrous Gloves", "priority": "high", "note": "+1 AC: her Act 1 gloves."},
   {"item": "Holy Lance Helm", "priority": "high", "note": "Enemies that miss her take radiant damage."},
   {"item": "Necklace of Elemental Augmentation", "act": "one", "priority": "high", "note": "Adds her INT modifier to cantrip thunder damage: every Booming Blade hit from level 5. Her Act 1–2 amulet once she reaches the Crèche."},
-  {"item": "The Lifebringer", "priority": "optional", "note": "3 temporary HP whenever she gains Lightning Charges, so every Dash in Speedy Lightfeet."},
+  {"item": "The Lifebringer", "priority": "yield", "claim": "Zetharis: his Spellsparkler gives Lightning Charges on every Eldritch Blast hit, so he keeps the 3 temporary HP up."},
   {"item": "Diadem of Arcane Synergy", "priority": "optional", "note": "Arcane Synergy whenever she inflicts a condition, and Booming Blade's condition triggers it (confirmed in game). Wearing it frees her Synergy ring slot for another ring."},
   {"item": "Periapt of Wound Closure", "priority": "high", "note": "Healing she receives is maximised. Her amulet until the Necklace, then its alternate; great with potions thrown by Mage Hand."},
   {"item": "Ring of Arcane Synergy", "priority": "core", "note": "Booming Blade turns it on every turn: +3 damage (her INT modifier) on weapon hits."},
@@ -355,7 +355,7 @@
    "label": "Act 1",
    "intro": "From level 4, once Moderately Armoured gives her medium armour and shields. Take the theft pieces off after shopping.",
    "slots": [
-    {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": ["The Lifebringer", "Diadem of Arcane Synergy"], "note": "Enemies that miss her take radiant damage. Lifebringer adds temporary HP on every Dash; the Diadem frees her Synergy ring slot."},
+    {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": ["Diadem of Arcane Synergy"], "note": "Enemies that miss her take radiant damage. The Diadem frees her Synergy ring slot."},
     {"slot": "Cloak", "note": "Nothing worth the slot in Act 1."},
     {"slot": "Chest", "items": ["Breastplate +1"], "alternates": ["The Jolty Vest", "The Oak Father's Embrace"], "note": "Until Yuan-Ti Scale Mail early in Act 2. Adamantine Scale Mail is skipped: the second Mithral ore makes Zetharis a shield."},
     {"slot": "Gloves", "items": ["Wondrous Gloves"], "alternates": ["Gloves of Thievery"], "note": "Swap to Thievery for stealing."},

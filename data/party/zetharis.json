@@ -28,6 +28,7 @@
  ],
 
  "gear": [
+  {"item": "The Lifebringer", "tags": ["survival"], "note": "3 temporary HP whenever you gain Lightning Charges. With The Spellsparkler that's every Eldritch Blast hit. They vanish if your charges run out. From Act 2, the Potent Robe's temporary HP take over. In the Underdark's Ebonlake Grotto."},
   {"item": "Circlet of Blasting", "tags": ["damage"], "note": "Scorching Ray once a day."},
   {"item": "Daredevil Gloves", "tags": ["accuracy"], "note": "+1 to spell attack rolls, which every beam uses."},
   {"item": "Boots of Striding", "tags": ["concentration"], "note": "While concentrating on Hex, you can't be knocked Prone or moved."},
@@ -68,7 +69,7 @@
    "label": "Act 1",
    "intro": "Medium armour and a shield until the robe; one beam until level 5.",
    "slots": [
-    {"slot": "Head", "items": ["Circlet of Blasting"]},
+    {"slot": "Head", "items": ["The Lifebringer", "Circlet of Blasting"]},
     {"slot": "Body", "items": ["Breastplate +1"]},
     {"slot": "Gloves", "items": ["Daredevil Gloves"]},
     {"slot": "Boots", "items": ["Boots of Striding"]},
