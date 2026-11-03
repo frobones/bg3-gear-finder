@@ -17,9 +17,9 @@
  ],
 
  "levels": [
-  {"level": 4, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS"}, {"ability": "Alert", "note": "go first and can't be surprised"}]}]},
-  {"level": 8, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS"}, {"ability": "War Caster: Concentration", "note": "worth it if you'll leave Dragon form from level 10"}]}]},
-  {"level": 12, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "WIS to 20"}, {"ability": "Alert", "note": "go first and can't be surprised"}]}]}
+  {"level": 4, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS for 20, with Auntie Ethel's hair (Act 1) on WIS"}, {"text": "Ability Improvement", "note": "+1 WIS and +1 CON for WIS 18, if you skip the hair"}]}]},
+  {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "War Caster: Concentration", "note": "if you took the hair (WIS is already 20); keeps concentration after level 10"}, {"text": "Ability Improvement", "note": "+2 WIS for 20, if you skipped the hair"}]}]},
+  {"level": 12, "picks": [{"label": "Feat", "entries": [{"ability": "Alert", "note": "go first and can't be surprised"}, {"ability": "War Caster: Concentration", "note": "if you didn't take it at level 8"}]}]}
  ],
 
  "gear": [

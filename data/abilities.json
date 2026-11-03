@@ -930,6 +930,31 @@
   "wiki_url": "https://bg3.wiki/wiki/Artificial_Sight"
  },
  {
+  "id": "Athlete: Standing Up",
+  "kind": "passive",
+  "name": "Athlete: Standing Up",
+  "type": null,
+  "brief": null,
+  "description": "When you are Prone, standing up uses only 1.5 m (5 ft) of your movement speed.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/15/Athlete_Standing_Up_Icon.webp",
+  "links": [
+   {
+    "text": "Prone",
+    "page": "Prone (condition)",
+    "url": "https://bg3.wiki/wiki/Prone_(condition)"
+   },
+   {
+    "text": "movement speed",
+    "page": "movement speed",
+    "url": "https://bg3.wiki/wiki/movement_speed"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Athlete:_Standing_Up"
+ },
+ {
   "id": "Aura of Murder (passive feature)",
   "kind": "passive",
   "name": "Aura of Murder",
