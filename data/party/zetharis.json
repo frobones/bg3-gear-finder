@@ -38,7 +38,7 @@
   {"item": "Dark Justiciar Helmet", "tags": ["crit"], "note": "Crit range −1 while you're obscured (stacks), and +1 CON saves for concentration. Better than the Covert Cowl."},
   {"item": "Covert Cowl", "tags": ["crit"], "note": "Crit range −1 while you're obscured: blast from inside your Darkness (that turn you're concentrating on Darkness, not Hex)."},
   {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves. Alene passes it on once she has Cloak of the Weave."},
-  {"item": "Spineshudder Amulet", "tags": ["control"], "note": "Each beam that hits adds 2 turns of Reverberation (−1 to STR, DEX and CON saves per turn). At 5 turns the target takes 1d4 thunder and must pass a CON save or fall Prone. Prone helps melee allies, but ranged attacks against it have Disadvantage. Keep it on in Act 3."},
+  {"item": "Spineshudder Amulet", "tags": ["control"], "note": "Each beam that hits adds 2 turns of Reverberation (−1 to STR, DEX and CON saves per turn). At 5 turns the target takes 1d4 thunder and must pass a CON save or fall Prone. Attacks from within 3 m of a Prone target have Advantage; ranged attacks from farther away aren't affected. Keep it on in Act 3."},
   {"item": "Callous Glow Ring", "tags": ["damage"], "note": "+2 radiant damage per beam against lit targets."},
   {"item": "Ring of Spiteful Thunder", "tags": ["control"], "note": "Damaging a Reverberating enemy Dazes it unless it passes a CON save. With Spineshudder, your second and third beams each force that save, and Reverberation has already lowered it. Moonrise Towers, from Roah Moonglow."},
   {"item": "Killer's Sweetheart", "tags": ["crit"], "note": "After a kill, your next attack is a crit, once a day. Once it's spent, swap to Ring of Spiteful Thunder."},
