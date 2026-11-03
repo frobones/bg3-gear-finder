@@ -7,19 +7,19 @@
  "role": "The party's spell save DC caster and only healer: control spells under a Starry Form, radiant debuffs on the side.",
 
  "spells": [
-  {"label": "Cantrips", "from": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Shillelagh", "Resistance (Cantrip)", "Poison Spray"]},
-  {"label": "Level 1 spells", "from": 1, "abilities": ["Healing Word", "Faerie Fire", "Entangle", "Thunderwave", "Ice Knife", "Fog Cloud", "Create or Destroy Water"]},
-  {"label": "Level 2 spells", "from": 3, "abilities": ["Spike Growth", "Hold Person", "Moonbeam", "Pass Without Trace", "Lesser Restoration", "Heat Metal"]},
-  {"label": "Level 3 spells", "from": 5, "abilities": ["Call Lightning", "Plant Growth", "Sleet Storm"]},
-  {"label": "Level 4 spells", "from": 7, "abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire", "Confusion", "Polymorph", "Blight", "Conjure Minor Elemental"]},
-  {"label": "Level 5 spells", "from": 9, "abilities": ["Insect Plague", "Wall of Stone", "Conjure Elemental", "Mass Cure Wounds", "Greater Restoration"]},
-  {"label": "Level 6 spells", "from": 11, "abilities": ["Sunbeam", "Heal", "Heroes' Feast", "Wall of Thorns"]}
+  {"label": "Cantrips", "from": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip"]},
+  {"label": "Level 1 spells", "from": 1, "abilities": ["Healing Word", "Faerie Fire", "Entangle"]},
+  {"label": "Level 2 spells", "from": 3, "abilities": ["Spike Growth", "Hold Person", "Moonbeam"]},
+  {"label": "Level 3 spells", "from": 5, "abilities": ["Plant Growth", "Call Lightning"]},
+  {"label": "Level 4 spells", "from": 7, "abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire"]},
+  {"label": "Level 5 spells", "from": 9, "abilities": ["Insect Plague", "Wall of Stone", "Mass Cure Wounds"]},
+  {"label": "Level 6 spells", "from": 11, "abilities": ["Sunbeam", "Heroes' Feast"]}
  ],
 
  "levels": [
-  {"level": 4, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS"}, {"ability": "Alert", "note": "go first and can't be surprised"}, {"ability": "War Caster: Concentration", "note": "Advantage on concentration saves"}, {"ability": "Resilient: Constitution", "note": "+1 CON and CON save proficiency"}]}]},
-  {"level": 8, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS, or +1 WIS and +1 CON"}, {"ability": "Alert"}, {"ability": "War Caster: Concentration", "note": "worth it now if you'll leave Dragon form from level 10"}, {"ability": "Resilient: Constitution", "note": "+1 CON and CON save proficiency"}]}]},
-  {"level": 12, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "WIS to 20"}, {"ability": "Alert"}, {"ability": "War Caster: Concentration"}, {"ability": "Resilient: Constitution"}, {"ability": "Tough", "note": "+2 HP per level"}]}]}
+  {"level": 4, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS"}, {"ability": "Alert", "note": "go first and can't be surprised"}]}]},
+  {"level": 8, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS"}, {"ability": "War Caster: Concentration", "note": "worth it if you'll leave Dragon form from level 10"}]}]},
+  {"level": 12, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "WIS to 20"}, {"ability": "Alert", "note": "go first and can't be surprised"}]}]}
  ],
 
  "gear": [
