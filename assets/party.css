@@ -418,7 +418,8 @@
 }
 
 .tag-accuracy,
-.tag-strength {
+.tag-strength,
+.tag-melee {
   border-color: var(--r-very-rare);
   color: var(--r-very-rare);
 }

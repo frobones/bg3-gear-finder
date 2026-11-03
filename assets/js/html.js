@@ -87,6 +87,7 @@ export const TAG_LABELS = {
   initiative: "Initiative",
   control: "Control",
   strength: "Strength",
+  melee: "Melee",
   utility: "Utility",
   swap: "Swap in",
 };
