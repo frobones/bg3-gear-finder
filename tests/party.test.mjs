@@ -8,7 +8,7 @@ import { loadoutUses, partyPlans, renderAbilityDetail, renderDetail } from "../a
 import { entryTags } from "../assets/js/html.js";
 import { planGroups, renderGearTab, renderLoadouts } from "../assets/js/gearplan.js";
 import { renderIllithidTab, renderPlaybookTab } from "../assets/js/guides.js";
-import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
+import { choiceSummary, choiceValue, renderLevelTab } from "../assets/js/levelup.js";
 import { parsePartyRoute, profileTabs } from "../assets/js/party.js";
 import { abilityLink, renderLevelPicks, renderPicksPage, renderSpellPicks } from "../assets/js/picks.js";
 import { emptyProgress, sanitizeProgress, toggleInList } from "../assets/js/progress.js";
@@ -48,11 +48,12 @@ test("toggleInList adds once and removes", () => {
   assert.deepEqual(toggleInList(added, "got", "Ring", false).got, []);
 });
 
-test("choiceValue shows a replacement with both spells as pop-out triggers", () => {
+test("choiceValue shows a replacement with both spells as side-panel links", () => {
   const html = choiceValue({ label: "Replace spell", replace: ["Sleep", "Magic Missile"] }, abilities);
-  assert.match(html, /data-ability="Sleep"/);
+  assert.match(html, /data-ability-detail="Sleep"/);
   assert.match(html, /→/);
-  assert.match(html, /data-ability="Magic Missile"/);
+  assert.match(html, /data-ability-detail="Magic Missile"/);
+  assert.doesNotMatch(html, /ability-trigger/);
   const optional = choiceValue({ label: "Replace", replace: ["Sleep", "Magic Missile"], text: "only if wanted" }, abilities);
   assert.match(optional, /<span class="muted">only if wanted<\/span>$/);
 });
@@ -60,6 +61,30 @@ test("choiceValue shows a replacement with both spells as pop-out triggers", () 
 test("choiceValue escapes plain text and keeps names without wiki data as text", () => {
   assert.equal(choiceValue({ label: "Race", text: "<b>Tiefling</b>" }, abilities), "&lt;b&gt;Tiefling&lt;/b&gt;");
   assert.equal(abilityName("Unknown Spell", abilities), "Unknown Spell");
+  assert.match(choiceValue({ label: "Spells", abilities: ["Unknown <Spell>"] }, abilities), /<span class="plain-item">Unknown &lt;Spell&gt;<\/span>/);
+});
+
+test("the level card links its spells, prepared spells and new features to the side panel", () => {
+  const profile = {
+    name: "Vesper",
+    level_order: "Rogue first",
+    levels: [
+      {
+        level: 1,
+        class: "Rogue",
+        class_level: 1,
+        choices: [{ label: "Cantrips", abilities: ["Sleep", "Shield (spell)"] }],
+        gains: "Sneak Attack.",
+        abilities: ["Magic Missile"],
+        prepare: { count: 1, abilities: ["Sleep"] },
+      },
+    ],
+  };
+  const html = renderLevelTab(profile, abilities, 0, 1);
+  assert.equal(html.match(/data-ability-detail="Sleep"/g).length, 2);
+  assert.match(html, /data-ability-detail="Shield \(spell\)"/);
+  assert.match(html, /<div class="level-new"><span class="muted">New<\/span><span class="ability-links">[^]*data-ability-detail="Magic Missile"/);
+  assert.doesNotMatch(html, /ability-trigger/);
 });
 
 test("choiceSummary uses display names, not wiki page names", () => {

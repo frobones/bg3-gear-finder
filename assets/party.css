@@ -363,6 +363,33 @@
   font: var(--step--1) / 1.4 var(--sans);
 }
 
+/* Spells and features on the level card: icon links that open the side panel, wrapping as a row. */
+.ability-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  vertical-align: middle;
+}
+
+.choices .item-link {
+  font-size: var(--step-1);
+}
+
+.replace {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.6rem;
+}
+
+.level-new {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 1rem;
+  margin-top: 0.5rem;
+}
+
 .no-choices {
   margin: 1rem 0 0;
   font: italic var(--step-1) / 1.4 var(--serif);

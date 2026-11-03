@@ -1,11 +1,13 @@
 // The level-up card: exactly what to pick at one level, in the order the game asks, then what to prepare.
+// Each spell or feature is a link that opens it in the side panel, like items and friends' picks.
 
-import { abilityName } from "./abilities.js";
 import { esc } from "./html.js";
+import { abilityLink } from "./picks.js";
 
 export const MAX_LEVEL = 12;
 
-const names = (list, abilities) => list.map((name) => abilityName(name, abilities)).join(", ");
+const names = (list, abilities) =>
+  `<span class="ability-links">${list.map((name) => abilityLink(name, abilities)).join("")}</span>`;
 
 /** One choice's answer: plain text, ability names, or "old → new" for a spell replacement. */
 export function choiceValue(choice, abilities) {
@@ -13,7 +15,7 @@ export function choiceValue(choice, abilities) {
   if (choice.replace) {
     const [from, to] = choice.replace;
     parts.push(
-      `<span class="replace">${abilityName(from, abilities)} <span aria-hidden="true">→</span><span class="visually-hidden">becomes</span> ${abilityName(to, abilities)}</span>`,
+      `<span class="replace">${abilityLink(from, abilities)} <span aria-hidden="true">→</span><span class="visually-hidden">becomes</span> ${abilityLink(to, abilities)}</span>`,
     );
   }
   if (choice.abilities) parts.push(names(choice.abilities, abilities));
@@ -50,7 +52,7 @@ function afterLevel(level, previous, abilities) {
     blocks.push(`
       <div class="after-block">
         <h4>Prepare ${level.prepare.count} Wizard spells</h4>
-        <ul class="pill-list">${level.prepare.abilities.map((n) => `<li>${abilityName(n, abilities)}</li>`).join("")}</ul>
+        <ul class="pill-list">${level.prepare.abilities.map((n) => `<li>${abilityLink(n, abilities)}</li>`).join("")}</ul>
         ${level.prepare.note ? `<p class="muted small">${esc(level.prepare.note)}</p>` : ""}
       </div>`);
   }
@@ -81,7 +83,7 @@ export function renderLevelTab(profile, abilities, reached, viewing) {
     : "";
 
 
-  const gained = level.abilities?.length ? `<p class="small">New: ${names(level.abilities, abilities)}</p>` : "";
+  const gained = level.abilities?.length ? `<div class="level-new"><span class="muted">New</span>${names(level.abilities, abilities)}</div>` : "";
 
   const isNext = viewing === reached + 1;
   const confirm = isNext
