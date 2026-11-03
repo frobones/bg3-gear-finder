@@ -281,9 +281,9 @@
   {"item": "Armour of Agility", "priority": "core", "note": "17 + her full DEX (22 at DEX 20) and +2 to all saves. Her endgame armour.", "claim": "Vesper. Unwanted Masterwork Scalemail is the fallback for anyone else."},
   {"item": "Unwanted Masterwork Scalemail", "priority": "yield", "claim": "Pearl: her Act 3 armour."},
   {"item": "Mask of Soul Perception", "priority": "yield", "claim": "Pearl: +2 to hit pays off across her 2–3 Sharpshooter attacks a turn."},
-  {"item": "Sarevok's Horned Helmet", "priority": "core", "note": "Crit range −1: a crit doubles her Sneak Attack and Shadow Blade dice. Also immune to Frightened."},
-  {"item": "Bloodthirst", "priority": "matchup", "note": "Off hand for boss burn-downs when she isn't the main target: crit range −1, stacking with Sarevok's helmet for 18–20, and +1 AC in the off hand. It replaces Viconia's shield, so she drops from 25 to 23 AC and loses its spell protection. Orin carries it."},
-  {"item": "Helm of Balduran", "priority": "optional", "note": "+1 AC and saves, immunity to crits and stuns, 2 HP back each turn: the survival swap."},
+  {"item": "Sarevok's Horned Helmet", "priority": "matchup", "note": "Crit range −1: a crit doubles her Sneak Attack and Shadow Blade dice. Also immune to Frightened. Swap it in when someone else is tanking, or for Fear-heavy fights."},
+  {"item": "Bloodthirst", "priority": "matchup", "note": "Off hand for boss burn-downs when she isn't the main target: crit range −1, 18–20 with Sarevok's helmet swapped in, and +1 AC in the off hand. It replaces Viconia's shield, so with both swaps she drops from 26 to 23 AC and loses its spell protection. Orin carries it."},
+  {"item": "Helm of Balduran", "priority": "core", "note": "Her Act 3 helmet: +1 AC and saves, immunity to crits and stuns, 2 HP back each turn. Viconia's shield doesn't stop crits, so this keeps the crit protection the Adamantine Shield gave her in Act 2."},
   {"item": "Cloak of the Weave", "priority": "yield", "claim": "Alene, for her spell DC."},
   {"item": "Cloak of Displacement", "priority": "core", "note": "Attackers have Disadvantage until she takes damage, renewed each turn: covers the opportunity attacks she draws backing off."},
   {"item": "Helldusk Gloves", "priority": "yield", "claim": "Alene: +1 spell DC and spell attack."},
@@ -344,7 +344,7 @@
    "label": "Act 3",
    "intro": "Damage and debuffs first, in medium armour and a shield. The survival swaps sit in each slot's alternates.",
    "slots": [
-    {"slot": "Head", "items": ["Sarevok's Horned Helmet"], "alternates": ["Helm of Balduran", "Holy Lance Helm", "Mask of the Shapeshifter"], "note": "Close call. Sarevok's for single targets and Fear-heavy fights. Balduran when hard hitters, Mind Flayers or stuns focus her: Viconia's shield doesn't stop crits. Holy Lance against crowds of weaker attackers. The Mask waits in the camp's Traveller's Chest, for if she drops Disguise Self at level 11."},
+    {"slot": "Head", "items": ["Helm of Balduran"], "alternates": ["Sarevok's Horned Helmet", "Holy Lance Helm", "Mask of the Shapeshifter"], "note": "Balduran for most fights: as the tank she can't afford crits or stuns, and Viconia's shield doesn't stop crits. Sarevok's when someone else is tanking and she's free to burn down a boss (18–20 with Bloodthirst), or for Fear-heavy fights. Holy Lance against crowds of weaker attackers. The Mask waits in the camp's Traveller's Chest, for if she drops Disguise Self at level 11."},
     {"slot": "Cloak", "items": ["Cloak of Displacement"], "alternates": ["Vivacious Cloak", "Cloak of Cunning Brume"]},
     {"slot": "Chest", "items": ["Armour of Agility"], "alternates": ["Yuan-Ti Scale Mail"]},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power", "Stalker Gloves", "Wondrous Gloves", "Gloves of Thievery"]},
@@ -357,7 +357,7 @@
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
     {"slot": "Carried", "items": ["Drakethroat Glaive", "Resonance Stone"], "note": "An ally wields the Glaive and casts Draconic Elemental Weapon on her Shadow Blade. Carry the Stone only when the party is clear of its aura. Check in game that the Stone still works in Act 3."}
    ],
-   "armour_class": "Armour of Agility 22 (at DEX 20) + Viconia's Walking Fortress 3 = 25 AC, and Cloak of Displacement gives attackers Disadvantage until she's hit. Helm of Balduran adds 1 when survival matters more. Shield adds +5 when needed."
+   "armour_class": "Armour of Agility 22 (at DEX 20) + Viconia's Walking Fortress 3 + Helm of Balduran 1 = 26 AC, and Cloak of Displacement gives attackers Disadvantage until she's hit. Shield adds +5 when needed."
   }
  ],
 
@@ -414,7 +414,7 @@
   ],
   "reactions": [
    {"name": "Sneak Attack", "setting": "Always", "why": "Booming Blade is her only attack on her own turn, so there's no better hit to save it for. It's once per turn, so an opportunity attack on an enemy's turn can still use it. Check in game that it leaves her reaction free."},
-   {"name": "Sneak Attack (Critical Hit)", "setting": "Always", "why": "The same on a crit, with the dice doubled. Sarevok's helmet makes her crit on 19–20."},
+   {"name": "Sneak Attack (Critical Hit)", "setting": "Always", "why": "The same on a crit, with the dice doubled. With Sarevok's helmet swapped in, she crits on 19–20."},
    {"name": "Shield", "setting": "Ask", "why": "Spend the slot only when +5 AC changes the result. It gives no Arcane Ward charges."},
    {"name": "Counterspell", "setting": "Ask", "why": "Skip harmless casts. It always gives 3 Arcane Ward charges."},
    {"name": "Hellish Rebuke", "setting": "Ask", "why": "Low priority: weak with her Charisma."},
