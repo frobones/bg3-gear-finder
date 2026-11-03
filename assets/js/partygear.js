@@ -11,6 +11,8 @@ const SLOT_ORDER = ["Head", "Cloak", "Body", "Gloves", "Boots", "Amulet", "Rings
 // Vesper's plan says "Chest" and lists each ring on its own row.
 const SLOT_ALIASES = { Chest: "Body", Ring: "Rings" };
 const ACT_ORDER = ["one", "two", "three"];
+// A character wears two rings, so a friend's Rings bucket has two picks before its options.
+const WORN = { Rings: 2 };
 
 /** One profile's picks for an act, by slot: `picks` lead, `others` are alternates or further options. */
 export function slotPicks(profile, act) {
@@ -25,8 +27,9 @@ export function slotPicks(profile, act) {
       cell.picks.push(...items);
       cell.others.push(...slot.alternates);
     } else {
-      cell.picks.push(...items.slice(0, 1));
-      cell.others.push(...items.slice(1));
+      const worn = WORN[slot.slot] ?? 1;
+      cell.picks.push(...items.slice(0, worn));
+      cell.others.push(...items.slice(worn));
     }
   }
   for (const cell of bySlot.values()) {

@@ -50,8 +50,11 @@ test("slotPicks merges Vesper's ring rows, maps Chest to Body, and keeps alterna
   assert.deepEqual(picks.get("Cloak"), { picks: [], others: [] });
 });
 
-test("slotPicks treats a friend's first item as the pick and the rest as options", () => {
-  assert.deepEqual(slotPicks(pearl, "one").get("Rings"), { picks: ["Band"], others: ["Ring C"] });
+test("slotPicks treats a friend's first item as the pick, or the first two for rings", () => {
+  assert.deepEqual(slotPicks(pearl, "one").get("Rings"), { picks: ["Band", "Ring C"], others: [] });
+  const three = { loadouts: [{ act: "one", slots: [{ slot: "Rings", items: ["A", "B", "C"] }, { slot: "Head", items: ["H", "I"] }] }] };
+  assert.deepEqual(slotPicks(three, "one").get("Rings"), { picks: ["A", "B"], others: ["C"] });
+  assert.deepEqual(slotPicks(three, "one").get("Head"), { picks: ["H"], others: ["I"] });
   assert.equal(slotPicks(pearl, "three").size, 0);
 });
 
