@@ -224,7 +224,7 @@
    {"when": "Early", "abilities": ["Concentrated Blast"], "why": "Taken to unlock Cull the Weak and Psionic Backlash."},
    {"when": "After Concentrated Blast", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies, and each kill deals 1–4 psychic damage to every creature nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
    {"when": "After Transfuse Health", "abilities": ["Shield of Thralls"], "why": "Cast it before the fight: 10 temporary HP that last until a long rest. When opportunity attacks break it, it bursts, and nearby enemies make a DC 15 INT save or are Stunned for a turn. Mental Fatigue lowers that save, and stunned enemies give her Advantage for Sneak Attack. She can only hold temporary HP from one source, so Vivacious Cloak's would replace it."},
-   {"when": "After Concentrated Blast", "abilities": ["Psionic Backlash"], "why": "A reaction when an enemy within 9 m casts a spell: 1d4 psychic per spell level, which adds Mental Fatigue and can break their concentration. It uses the reaction she'd spend on Uncanny Dodge or Shield, so save it for fights against casters."}
+   {"when": "After Concentrated Blast", "abilities": ["Psionic Backlash"], "why": "A reaction when an enemy within 9 m casts a spell: 1d4 psychic per spell level, which adds Mental Fatigue and can break their concentration. It uses the reaction she'd spend on Shield or Counterspell, so save it for fights against casters."}
   ]
  },
 
@@ -354,9 +354,12 @@
    "Cunning Action: Dash toward the target. The Speedy Lightfeet give 3 Lightning Charges.",
    "Booming Blade with Shadow Blade, and add Sneak Attack on the hit.",
    "Use the rest of her movement to back away, so the target has to move to reach her and takes Booming Blade's thunder.",
-   "Backing away draws opportunity attacks: Uncanny Dodge or Shield takes her one reaction (Shield's +5 AC lasts the round), and the Arcane Ward soaks the rest. Misses trigger Holy Lance Helm and the Adamantine Shield.",
+   "Backing away draws opportunity attacks. Uncanny Dodge halves each hit and, in the current patch, doesn't use up her reaction, so Shield (+5 AC for the round) and Counterspell stay free. The Arcane Ward soaks the rest. Misses trigger Holy Lance Helm and the Adamantine Shield.",
+   "An empty Arcane Ward refills to her Wizard level the next time she casts Booming Blade or gains Lightning Charges or Arcane Acuity. It only works at exactly 0 charges.",
+   "Can't reach a target? Cast Blade Ward and Dash past enemies instead: resistance plus Uncanny Dodge cuts their physical hits by 75%.",
    "If an opportunity attack would be too dangerous, use Cunning Disengage instead of Dash.",
-   "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends."
+   "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends. Before one, fill her Arcane Ward and boost her saves with Bless, Resistance or Heroism.",
+   "From level 11, Evasion means a passed DEX save takes no damage from Alene's Call Lightning or Ice Storm, Pearl's Conjure Barrage, Glyph of Warding, Fireball and most grenades, so friends can aim them at enemies around her. Smokepowder Arrows aren't covered, and the wiki doesn't list Spike Growth, Hunger of Hadar, Cone of Cold, Sunbeam, Insect Plague or Wall of Fire."
   ],
   "start_of_day": [
    "Ask the Gloom Stalker for Longstrider: more movement for running in and back out.",
@@ -383,13 +386,16 @@
    {"name": "Shield", "setting": "Ask", "why": "Spend the slot only when +5 AC changes the result. It gives no Arcane Ward charges."},
    {"name": "Counterspell", "setting": "Ask", "why": "Skip harmless casts. It always gives 3 Arcane Ward charges."},
    {"name": "Hellish Rebuke", "setting": "Ask", "why": "Low priority: weak with her Charisma."},
-   {"name": "Uncanny Dodge", "setting": "Ask", "why": "Halves one hit, but takes the reaction Shield or Counterspell needs. Take Shield when +5 AC turns the hit (and the rest of the round's attacks) into misses."},
+   {"name": "Uncanny Dodge", "setting": "Always", "why": "Halves each hit from a different attacker. In the current patch it needs her reaction free but doesn't use it up, so Shield and Counterspell stay available."},
    {"name": "Rebuke of the Mighty (Viconia's)", "setting": "Ask", "why": "Never let it take the reaction you need for Shield or Counterspell."}
   ],
   "mage_hand": [
    "Scout dangerous rooms while it's invisible. It turns visible when it acts and goes invisible again on a short rest.",
    "Drop a potion for the Hand to throw to an ally.",
-   "Stand it next to an enemy to count as the ally Sneak Attack needs."
+   "Stand it next to an enemy to count as the ally Sneak Attack needs.",
+   "Turn off lights so targets are obscured, which gives her Shadow Blade Advantage.",
+   "Before combat, throw or shove enemies off ledges or into chasms. Give the Hand a Hill Giant Strength elixir first so the throw succeeds.",
+   "Cast Mage Armour and Longstrider on the Hand to keep it alive and moving."
   ]
  }
 }
