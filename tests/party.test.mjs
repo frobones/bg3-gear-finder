@@ -281,11 +281,47 @@ test("a full plan's gear tab puts the loadout summary before the checklist and l
       { item: "Mail", priority: "core" },
       { item: "Ring", priority: "yield", claim: "Pearl." },
     ],
-    loadouts: [{ act: "one", label: "Act 1", intro: "", slots: [{ slot: "Chest", items: ["Mail"], alternates: [] }] }],
+    loadouts: [
+      {
+        act: "one",
+        label: "Act 1",
+        intro: "From level 4.",
+        armour_class: "Mail 17 = 17 AC.",
+        slots: [{ slot: "Chest", items: ["Mail"], alternates: [], note: "Until something better." }],
+      },
+    ],
   };
   const html = renderGearTab(profile, data, emptyProgress(), false, null);
   assert.ok(html.indexOf("End-of-act loadout") < html.indexOf("Item checklist"));
+  assert.match(html, /<p class="loadout-callout">From level 4\.<\/p>\s*<div class="table-wrap">/);
+  assert.match(html, /<\/table>\s*<\/div>\s*<p class="loadout-callout">Mail 17 = 17 AC\.<\/p>/);
+  assert.match(html, /<p class="slot-note">Until something better\.<\/p>/);
   assert.doesNotMatch(html, /Leave for the party|data-item="Ring"/);
+});
+
+test("a Carried row lists its items with no Alternates column", () => {
+  const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
+  const profile = {
+    loadouts: [
+      {
+        act: "two",
+        label: "Act 2",
+        intro: "Later.",
+        slots: [
+          { slot: "Cloak", alternates: [], note: "Nothing yet." },
+          { slot: "Carried", items: ["Glaive", "Stone"], note: "An ally wields the Glaive." },
+        ],
+      },
+    ],
+  };
+  const html = renderLoadouts(profile, new Map([["Glaive", item("Glaive")], ["Stone", item("Stone")]]), abilities, "two");
+  const carried = html.slice(html.indexOf(">Carried<"));
+  assert.match(carried, /data-item="Glaive"/);
+  assert.match(carried, /data-item="Stone"/);
+  assert.match(carried, /<td class="alternates"><\/td>/);
+  assert.doesNotMatch(carried, /No pick yet|>None</);
+  const cloak = html.slice(html.indexOf(">Cloak<"), html.indexOf(">Carried<"));
+  assert.match(cloak, /<td class="alternates" data-label="Alternates"><span class="muted">None<\/span><\/td>/);
 });
 
 test("abilityLink falls back to plain text for names the snapshot doesn't have", () => {

@@ -63,7 +63,7 @@ function bucketTable(loadout, byId, gear) {
     )
     .join("");
   return `
-    <p class="prose">${esc(loadout.intro)}</p>
+    <p class="loadout-callout">${esc(loadout.intro)}</p>
     <div class="table-wrap">
       <table class="loadout-table bucket-table">
         <caption class="visually-hidden">Good picks for ${esc(loadout.label)}</caption>
@@ -78,6 +78,11 @@ function loadoutTable(loadout, byId, abilities) {
     ids
       .map((id) => `<div class="loadout-item">${itemButton(byId.get(id), 24)}</div>`)
       .join("");
+  // A worn slot with no alternates says so; a row like Carried has no alternates column to speak of.
+  const alternatesCell = (alternates) => {
+    if (!alternates) return "";
+    return alternates.length ? cell(alternates) : `<span class="muted">None</span>`;
+  };
   const rows = loadout.slots
     .map(
       (slot) => `
@@ -85,13 +90,13 @@ function loadoutTable(loadout, byId, abilities) {
         <th scope="row">${esc(slot.slot)}</th>
         <td>${slot.items ? cell(slot.items) : ""}${slot.abilities ? slot.abilities.map((n) => abilityName(n, abilities)).join(", ") : ""}
           ${!slot.items && !slot.abilities ? `<span class="muted">No pick yet</span>` : ""}
-          ${slot.note ? `<p class="muted small">${esc(slot.note)}</p>` : ""}</td>
-        <td class="alternates" data-label="Alternates">${slot.alternates?.length ? cell(slot.alternates) : `<span class="muted">None</span>`}</td>
+          ${slot.note ? `<p class="slot-note">${esc(slot.note)}</p>` : ""}</td>
+        <td class="alternates"${slot.alternates ? ' data-label="Alternates"' : ""}>${alternatesCell(slot.alternates)}</td>
       </tr>`,
     )
     .join("");
   return `
-    <p class="prose">${esc(loadout.intro)}</p>
+    <p class="loadout-callout">${esc(loadout.intro)}</p>
     <div class="table-wrap">
       <table class="loadout-table">
         <caption class="visually-hidden">End of ${esc(loadout.label)} loadout</caption>
@@ -99,7 +104,7 @@ function loadoutTable(loadout, byId, abilities) {
         <tbody>${rows}</tbody>
       </table>
     </div>
-    ${loadout.armour_class ? `<p class="prose">${esc(loadout.armour_class)}</p>` : ""}`;
+    ${loadout.armour_class ? `<p class="loadout-callout">${esc(loadout.armour_class)}</p>` : ""}`;
 }
 
 /** Loadouts for the end of each act, one shown at a time behind act buttons. */

@@ -706,9 +706,10 @@ th[aria-sort="descending"] .sort-button::after {
   padding-left: 1.1rem;
 }
 
-/* Callouts in the item panel: Party plans leads, and Special and passives stand out from the plain sections. */
+/* Callouts: Party plans, Special and passives in the item panel, and a loadout's notes on the gear plan. */
 .party-plans,
-.effect-card {
+.effect-card,
+.loadout-callout {
   margin-top: 1.1rem;
   padding: 0.85rem 1rem;
   border: 1px solid var(--line);

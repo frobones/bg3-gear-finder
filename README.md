@@ -170,6 +170,13 @@ passive pages, so use the page title (for example
 `data/abilities.json` and stops with a list of any name the wiki doesn't
 have.
 
+Items can be gear or miscellaneous items such as the Resonance Stone: the
+script pulls in any miscellaneous item a profile names from the wiki's
+`misc_items` table, so it gets an icon, places and a panel like gear. A full
+build plan's tests check that every checklist item appears in at least one
+act's loadout, so nothing on the list gets forgotten. A `Carried` slot holds
+things that matter to the character but aren't worn.
+
 To change the Journey order, edit `data/region_order.json` and rebuild. If the
 script stops with "Places missing from region_order.json", add each listed
 area to the right act and run it again.

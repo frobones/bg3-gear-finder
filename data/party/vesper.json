@@ -305,7 +305,7 @@
    "intro": "From level 4, once Moderately Armoured gives her medium armour and shields. Take the theft pieces off after shopping.",
    "slots": [
     {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": ["Diadem of Arcane Synergy"], "note": "Enemies that miss her take radiant damage. The Diadem frees her Synergy ring slot."},
-    {"slot": "Cloak", "note": "Nothing worth the slot in Act 1."},
+    {"slot": "Cloak", "alternates": [], "note": "Nothing worth the slot in Act 1."},
     {"slot": "Chest", "items": ["Breastplate +1"], "alternates": ["The Jolty Vest", "The Oak Father's Embrace"], "note": "Until Yuan-Ti Scale Mail early in Act 2. Adamantine Scale Mail is skipped: the second Mithral ore makes Zetharis a shield."},
     {"slot": "Gloves", "items": ["Wondrous Gloves"], "alternates": ["Gloves of Thievery"], "note": "Swap to Thievery for stealing."},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
@@ -333,7 +333,8 @@
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring"]},
     {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King"], "note": "Summoned by her Shadow Blade spell from level 8: keep the Knife until then. From level 9, cast it with a 3rd-level slot for 3d8. Have an ally enchant it with the Drakethroat Glaive."},
     {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": []},
-    {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
+    {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
+    {"slot": "Carried", "items": ["Drakethroat Glaive", "Resonance Stone"], "note": "An ally wields the Glaive and casts Draconic Elemental Weapon on her Shadow Blade. Carry the Stone only when the party is clear of its aura. Both are Act 2 finds: the Glaive from Roah Moonglow at Moonrise Towers, the Stone in the Mind Flayer Colony."}
    ],
    "armour_class": "Yuan-Ti Scale Mail 19 + Adamantine Shield 2 = 21 AC, 22 once DEX reaches 20 at level 9. Shield adds +5 when needed."
   },
@@ -342,7 +343,7 @@
    "label": "Act 3",
    "intro": "Damage and debuffs first, in medium armour and a shield. The survival swaps sit in each slot's alternates.",
    "slots": [
-    {"slot": "Head", "items": ["Sarevok's Horned Helmet"], "alternates": ["Helm of Balduran", "Holy Lance Helm"], "note": "Close call. Sarevok's for single targets and Fear-heavy fights. Balduran when hard hitters, Mind Flayers or stuns focus her: Viconia's shield doesn't stop crits. Holy Lance against crowds of weaker attackers."},
+    {"slot": "Head", "items": ["Sarevok's Horned Helmet"], "alternates": ["Helm of Balduran", "Holy Lance Helm", "Mask of the Shapeshifter"], "note": "Close call. Sarevok's for single targets and Fear-heavy fights. Balduran when hard hitters, Mind Flayers or stuns focus her: Viconia's shield doesn't stop crits. Holy Lance against crowds of weaker attackers. The Mask waits in the camp's Traveller's Chest, for if she drops Disguise Self at level 11."},
     {"slot": "Cloak", "items": ["Cloak of Displacement"], "alternates": ["Vivacious Cloak", "Cloak of Cunning Brume"]},
     {"slot": "Chest", "items": ["Armour of Agility"], "alternates": ["Yuan-Ti Scale Mail"]},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power", "Stalker Gloves", "Wondrous Gloves", "Gloves of Thievery"]},
@@ -352,7 +353,8 @@
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Band of the Mystic Scoundrel", "Shapeshifter's Boon Ring"]},
     {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic. Have an ally enchant it with the Drakethroat Glaive."},
     {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield", "Bloodthirst"]},
-    {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
+    {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
+    {"slot": "Carried", "items": ["Drakethroat Glaive", "Resonance Stone"], "note": "An ally wields the Glaive and casts Draconic Elemental Weapon on her Shadow Blade. Carry the Stone only when the party is clear of its aura. Check in game that the Stone still works in Act 3."}
    ],
    "armour_class": "Armour of Agility 22 (at DEX 20) + Viconia's Walking Fortress 3 = 25 AC, and Cloak of Displacement gives attackers Disadvantage until she's hit. Helm of Balduran adds 1 when survival matters more. Shield adds +5 when needed."
   }
