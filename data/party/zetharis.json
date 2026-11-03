@@ -32,8 +32,8 @@
  "gear": [
   {"item": "The Lifebringer", "tags": ["survival"], "note": "3 temporary HP whenever you gain Lightning Charges. With The Spellsparkler that's every Eldritch Blast hit. They vanish if your charges run out. From Act 2, the Potent Robe's temporary HP take over. In the Underdark's Ebonlake Grotto."},
   {"item": "Circlet of Blasting", "tags": ["damage"], "note": "Scorching Ray once a day."},
-  {"item": "Daredevil Gloves", "tags": ["accuracy"], "note": "+1 to spell attack rolls, which every beam uses."},
-  {"item": "Boots of Striding", "tags": ["concentration"], "note": "While concentrating on Hex, you can't be knocked Prone or moved."},
+  {"item": "Daredevil Gloves", "tags": ["accuracy"], "note": "+1 to spell attack rolls, which every beam uses. Next to an enemy it turns your beams into melee spell attacks, which Spineshudder and the Incandescent Staff don't count, so toggle Daredevil Proximity off from Act 2."},
+  {"item": "Boots of Striding", "tags": ["survival"], "note": "While concentrating on Hex, you can't be knocked Prone or moved."},
   {"item": "Pearl of Power Amulet", "tags": ["utility", "swap"], "note": "Restore a spell slot up to 3rd level once a day. It's a swap-in: put it on after a fight, restore the slot, and switch back to Misty Step. Warlock slots go above 3rd level at Warlock 7, so it stops working for you then."},
   {"item": "Amulet of Misty Step", "tags": ["utility"], "note": "Bonus-action Misty Step each short rest. Your worn amulet in Act 1, so it's ready when a fight starts."},
   {"item": "The Spellsparkler", "tags": ["damage"], "note": "Spell and cantrip damage gives Lightning Charges, every beam included."},
@@ -55,12 +55,19 @@
   {"item": "Spellmight Gloves", "tags": ["damage"], "note": "−5 to hit for +1d8 damage on spell attacks, toggled."},
   {"item": "Craterflesh Gloves", "tags": ["crit"], "note": "+1d6 force on every crit. Bhaal path only: Vesper can buy it from the Echo of Abazigal."},
   {"item": "Helldusk Boots", "tags": ["survival"], "note": "Can't be pushed, and can turn a failed save into a success."},
-  {"item": "Fey Semblance Amulet", "tags": ["survival", "swap"], "note": "Advantage on INT, WIS and CHA saves. Not a rival to Spineshudder: swap it in for fights full of Hold, Dominate or Banishment."},
-  {"item": "Markoheshkir", "tags": ["damage", "utility"], "note": "+1 spell attack and DC. Its lightning buff gives 2 Lightning Charges whenever you deal spell damage, and a free Chain Lightning and Lightning Bolt each short rest."},
+  {"item": "Markoheshkir", "tags": ["damage", "utility"], "note": "+1 spell attack and DC. Its lightning buff gives 2 Lightning Charges whenever you deal spell damage, and a free Chain Lightning and Lightning Bolt each short rest. Arcane Battery also casts one spell without a slot, once per long rest."},
   {"item": "Shield of the Undevout", "tags": ["utility", "control"], "note": "An extra 1st-level spell slot, and enemies have Disadvantage on saves against your Fear. No curse."},
   {"item": "Amulet of the Harpers", "tags": ["survival"], "note": "Cast Shield once per long rest without a slot, and Advantage on WIS saves."},
   {"item": "Adamantine Shield", "tags": ["survival"], "note": "+2 AC, and crits can't land on you. Forged from the party's second Mithral ore."},
-  {"item": "Breastplate +1", "tags": ["survival"], "note": "Act 1 armour until the robe: AC 15, no Stealth Disadvantage. Your copy comes from traders between levels 6 and 8."}
+  {"item": "Breastplate +1", "tags": ["survival"], "note": "Act 1 armour until the robe: AC 15, no Stealth Disadvantage. Pearl has the Hollow's copy, so wear Breastplate +1 or Scale Mail +1, whichever a trader stocks first (from level 6), or The Jolty Vest before then."},
+  {"item": "Scale Mail +1", "tags": ["survival"], "note": "The same AC as Breastplate +1 (15 + 2 DEX), with Stealth Disadvantage."},
+  {"item": "The Jolty Vest", "tags": ["survival", "control"], "note": "AC 14 + DEX (max 2). With Spellsparkler's Lightning Charges, anyone who damages you must save or be Shocked. Sold by Brem at Waukeen's Rest after Find the Missing Shipment."},
+  {"item": "Thunderskin Cloak", "tags": ["control", "survival"], "note": "Reverberating enemies that damage you must make a DC 13 CON save or be Dazed. It fills the Act 2 cloak slot. Sold by Araj Oblodra at Moonrise Towers."},
+  {"item": "Caitiff Staff", "tags": ["accuracy", "utility"], "note": "+1 spell DC and spell attack, and it refills one Warlock slot once per long rest. A fallback if Markoheshkir's globe won't open. Sold by Helsik at the Devil's Fee."},
+  {"item": "The Baneful", "tags": ["melee", "control"], "note": "For a Pact of the Blade Zetharis from Act 1: bound or Hexed, it's effectively +2 and can Bane the target on a hit. Its magic only works while bound. Sold by Blurg in the Underdark."},
+  {"item": "Charge-Bound Warhammer", "tags": ["melee"], "note": "For a Pact of the Blade Zetharis: +1 to hit and damage and +1d6 lightning, but only as a pact or Hexed weapon. Sold by Dammon."},
+  {"item": "Helmet of Arcane Acuity", "tags": ["melee"], "note": "For a melee Zetharis: weapon hits give Arcane Acuity, raising your spell DC for Hold Person and other saves. In a secret basement in Reithwin."},
+  {"item": "Duellist's Prerogative", "tags": ["melee", "crit"], "note": "For a melee Zetharis: crits on 19 with the off hand empty, and an extra Reaction each turn. Lora's reward for Save Vanra in Act 3. Pearl's melee option too."}
  ],
 
  "loadouts": [
@@ -70,12 +77,12 @@
    "intro": "Medium armour and a shield until the robe; one beam until level 5.",
    "slots": [
     {"slot": "Head", "items": ["The Lifebringer", "Circlet of Blasting"]},
-    {"slot": "Body", "items": ["Breastplate +1"]},
+    {"slot": "Body", "items": ["Breastplate +1", "Scale Mail +1", "The Jolty Vest"]},
     {"slot": "Gloves", "items": ["Daredevil Gloves"]},
     {"slot": "Boots", "items": ["Boots of Striding"]},
     {"slot": "Amulet", "items": ["Amulet of Misty Step", "Pearl of Power Amulet"]},
     {"slot": "Rings", "items": ["Crusher's Ring", "Ring of Poison Resistance", "Fetish of Callarduran Smoothhands"]},
-    {"slot": "Main hand", "items": ["The Spellsparkler"]},
+    {"slot": "Main hand", "items": ["The Spellsparkler", "The Baneful"]},
     {"slot": "Off hand", "items": ["Adamantine Shield"]}
    ]
   },
@@ -84,13 +91,14 @@
    "label": "Act 2",
    "intro": "The Potent Robe arrives: each beam adds your CHA twice from here on.",
    "slots": [
-    {"slot": "Head", "items": ["Dark Justiciar Helmet", "Covert Cowl"]},
+    {"slot": "Head", "items": ["Dark Justiciar Helmet", "Covert Cowl", "Helmet of Arcane Acuity"]},
+    {"slot": "Cloak", "items": ["Thunderskin Cloak"]},
     {"slot": "Body", "items": ["Potent Robe"]},
     {"slot": "Gloves", "items": ["Daredevil Gloves"]},
     {"slot": "Boots", "items": ["Boots of Striding"]},
     {"slot": "Amulet", "items": ["Spineshudder Amulet", "Amulet of the Harpers"]},
     {"slot": "Rings", "items": ["Callous Glow Ring", "Ring of Spiteful Thunder"]},
-    {"slot": "Main hand", "items": ["The Spellsparkler", "Incandescent Staff"]},
+    {"slot": "Main hand", "items": ["The Spellsparkler", "Incandescent Staff", "Charge-Bound Warhammer"]},
     {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of Devotion"]},
     {"slot": "Ranged", "items": ["Darkfire Shortbow"]}
    ]
@@ -101,13 +109,13 @@
    "intro": "Three beams from level 10: stack Charisma, crit range or a second blast a turn.",
    "slots": [
     {"slot": "Head", "items": ["Birthright"]},
-    {"slot": "Cloak", "items": ["Cloak of Protection"]},
+    {"slot": "Cloak", "items": ["Cloak of Protection", "Thunderskin Cloak"]},
     {"slot": "Body", "items": ["Potent Robe"]},
     {"slot": "Gloves", "items": ["Quickspell Gloves", "Spellmight Gloves", "Craterflesh Gloves"]},
     {"slot": "Boots", "items": ["Helldusk Boots"]},
-    {"slot": "Amulet", "items": ["Spineshudder Amulet", "Fey Semblance Amulet"]},
+    {"slot": "Amulet", "items": ["Spineshudder Amulet"]},
     {"slot": "Rings", "items": ["Callous Glow Ring", "Ring of Spiteful Thunder"]},
-    {"slot": "Main hand", "items": ["Markoheshkir"]},
+    {"slot": "Main hand", "items": ["Markoheshkir", "Caitiff Staff", "Duellist's Prerogative"]},
     {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of the Undevout"]},
     {"slot": "Ranged", "items": ["Darkfire Shortbow"]}
    ]
