@@ -220,10 +220,10 @@
   "warning": "Awakened turns illithid powers into bonus actions, but her bonus action already goes to Cunning Dash in her hit-and-run turn.",
   "powers": [
    {"when": "Crèche Y'llek", "abilities": ["Awakened"], "why": "Illithid powers cost a bonus action instead of an action. You get it by succeeding at the Zaith'isk."},
-   {"when": "Early", "abilities": ["Psionic Overload"], "why": "Adds 1d4 psychic damage to her attacks, but she takes 1d4 psychic damage every turn."},
+   {"when": "Early", "abilities": ["Psionic Overload"], "why": "+1d4 psychic on every attack for 10 turns or until combat ends, so each hit adds Mental Fatigue through Braindrain. Turning it on costs her bonus action, even with Awakened, so she skips that turn's Cunning Dash. She takes 1d4 psychic every turn, which forces a concentration check: best when she isn't holding Phantasmal Killer, Fear or Slow."},
    {"when": "Early", "abilities": ["Concentrated Blast"], "why": "Taken to unlock Cull the Weak and Psionic Backlash."},
    {"when": "After Concentrated Blast", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies, and each kill deals 1–4 psychic damage to every creature nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
-   {"when": "After Transfuse Health", "abilities": ["Shield of Thralls"], "why": "Temporary HP for her, and it can stun nearby enemies."},
+   {"when": "After Transfuse Health", "abilities": ["Shield of Thralls"], "why": "Cast it before the fight: 10 temporary HP that last until a long rest. When opportunity attacks break it, it bursts, and nearby enemies make a DC 15 INT save or are Stunned for a turn. Mental Fatigue lowers that save, and stunned enemies give her Advantage for Sneak Attack. She can only hold temporary HP from one source, so Vivacious Cloak's would replace it."},
    {"when": "After Concentrated Blast", "abilities": ["Psionic Backlash"], "why": "A reaction when an enemy within 9 m casts a spell: 1d4 psychic per spell level, which adds Mental Fatigue and can break their concentration. It uses the reaction she'd spend on Uncanny Dodge or Shield, so save it for fights against casters."}
   ]
  },
