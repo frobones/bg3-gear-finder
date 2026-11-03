@@ -1257,6 +1257,42 @@
   "wiki_url": "https://bg3.wiki/wiki/Blessed_Mercy"
  },
  {
+  "id": "Blight",
+  "kind": "spell",
+  "name": "Blight",
+  "type": null,
+  "brief": null,
+  "description": "Deals 8d8 Necrotic damage to a target. Plants take maximum damage from this spell, and have Disadvantage on the Saving Throw against it.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/dc/Blight_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Necrotic",
+    "page": "Necrotic",
+    "url": "https://bg3.wiki/wiki/Necrotic"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Blight",
+  "spell_level": 4,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
+ },
+ {
   "id": "Blightbringer (passive feature)",
   "kind": "passive",
   "name": "Blightbringer",
@@ -2035,6 +2071,32 @@
   "range": "ranged"
  },
  {
+  "id": "Call Lightning",
+  "kind": "spell",
+  "name": "Call Lightning",
+  "type": null,
+  "brief": null,
+  "description": "Lightning strikes all targets within the area of effect for 3d10 Lightning damage. Then for 10 turns, you can call down lightning again without expending a spell slot.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/71/Call_Lightning_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Lightning",
+    "page": "Lightning",
+    "url": "https://bg3.wiki/wiki/Lightning"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Call_Lightning",
+  "spell_level": 3,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Callous Glow",
   "kind": "passive",
   "name": "Callous Glow",
@@ -2521,6 +2583,113 @@
   "wiki_url": "https://bg3.wiki/wiki/Conductive_Strikes"
  },
  {
+  "id": "Confusion",
+  "kind": "spell",
+  "name": "Confusion",
+  "type": null,
+  "brief": null,
+  "description": "Confuse a group of creatures, causing them to attack at random, wander around aimlessly, and occasionally skip turns in the stupor.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/9/9e/Confusion_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Confuse",
+    "page": "Confused (Condition)",
+    "url": "https://bg3.wiki/wiki/Confused_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Confusion",
+  "spell_level": 4,
+  "school": "Enchantment",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
+  "id": "Conjure Elemental",
+  "kind": "spell",
+  "name": "Conjure Elemental",
+  "type": null,
+  "brief": null,
+  "description": "Bend the barrier between the Planes until they disgorge an elemental ally to follow and fight for you.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/6/6d/Conjure_Elemental_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Conjure_Elemental",
+  "spell_level": 5,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
+  "id": "Conjure Minor Elemental",
+  "kind": "spell",
+  "name": "Conjure Minor Elemental",
+  "type": null,
+  "brief": null,
+  "description": "Conjure a minor elemental to fight alongside you.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/e7/Conjure_Minor_Elemental_Azer_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Conjure_Minor_Elemental",
+  "spell_level": 4,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
+  "id": "Conjure Woodland Being",
+  "kind": "spell",
+  "name": "Conjure Woodland Being",
+  "type": null,
+  "brief": null,
+  "description": "Conjure a dryad to fight alongside you. She can use Nature's Step, Entangle enemies, and Summon a wood woad.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/44/Conjure_Woodland_Being_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "dryad",
+    "page": "dryad",
+    "url": "https://bg3.wiki/wiki/dryad"
+   },
+   {
+    "text": "Nature's Step",
+    "page": "Nature's Step",
+    "url": "https://bg3.wiki/wiki/Nature's_Step"
+   },
+   {
+    "text": "Entangle",
+    "page": "Entangle",
+    "url": "https://bg3.wiki/wiki/Entangle"
+   },
+   {
+    "text": "Summon",
+    "page": "Fallen Lover",
+    "url": "https://bg3.wiki/wiki/Fallen_Lover"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Conjure_Woodland_Being",
+  "spell_level": 4,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Corellon's Guiding Hand",
   "kind": "passive",
   "name": "Corellon's Guiding Hand",
@@ -2579,6 +2748,41 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Corrosive_Strike"
+ },
+ {
+  "id": "Cosmic Omen",
+  "kind": "passive",
+  "name": "Cosmic Omen",
+  "type": null,
+  "brief": null,
+  "description": "Whenever you Long Rest, you consult the stars for a Cosmic Omen of Weal or of Woe. The omen grants you the ability to increase (Weal) or decrease (Woe) Attack Rolls or Saving Throws, or (Weal only) to increase your allies' Ability Checks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/33/Cosmic_Omen_Icon.webp",
+  "links": [
+   {
+    "text": "Long Rest",
+    "page": "Long Rest",
+    "url": "https://bg3.wiki/wiki/Long_Rest"
+   },
+   {
+    "text": "Attack Roll",
+    "page": "Attack Roll",
+    "url": "https://bg3.wiki/wiki/Attack_Roll"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   },
+   {
+    "text": "Ability Checks",
+    "page": "Ability Checks",
+    "url": "https://bg3.wiki/wiki/Ability_Checks"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Cosmic_Omen"
  },
  {
   "id": "Countershock",
@@ -2709,6 +2913,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Craterous_Wounds"
+ },
+ {
+  "id": "Create or Destroy Water",
+  "kind": "spell",
+  "name": "Create or Destroy Water",
+  "type": null,
+  "brief": null,
+  "description": "Choose to call forth rain or destroy a water-based surface.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/7f/Create_Water_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Create_or_Destroy_Water",
+  "spell_level": 1,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
  },
  {
   "id": "Crimson Weapon",
@@ -4365,6 +4589,37 @@
   "range": "melee"
  },
  {
+  "id": "Entangle",
+  "kind": "spell",
+  "name": "Entangle",
+  "type": null,
+  "brief": null,
+  "description": "Vines sprout from the ground, turning it into Difficult Terrain and possibly Entangling creatures within.",
+  "extra_description": "Entangled creatures cannot move. An ally can use its help action to try and tear away the vines.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/6/63/Entangle_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Difficult Terrain",
+    "page": "Difficult Terrain (Condition)",
+    "url": "https://bg3.wiki/wiki/Difficult_Terrain_(Condition)"
+   },
+   {
+    "text": "Entangling",
+    "page": "Entangled (Condition)",
+    "url": "https://bg3.wiki/wiki/Entangled_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Entangle",
+  "spell_level": 1,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Envenom",
   "kind": "passive",
   "name": "Envenom",
@@ -4753,6 +5008,37 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Faceless_Masquerade"
+ },
+ {
+  "id": "Faerie Fire",
+  "kind": "spell",
+  "name": "Faerie Fire",
+  "type": null,
+  "brief": null,
+  "description": "All targets within the light turn visible, and Attack Rolls against them have Advantage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/a/a1/Faerie_Fire_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Attack Roll",
+    "page": "Attack Roll",
+    "url": "https://bg3.wiki/wiki/Attack_Roll"
+   },
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Faerie_Fire",
+  "spell_level": 1,
+  "school": "Evocation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
  },
  {
   "id": "Faithwarden's Stride",
@@ -6095,6 +6381,47 @@
   "wiki_url": "https://bg3.wiki/wiki/Greater_Kushigo_Counter"
  },
  {
+  "id": "Greater Restoration",
+  "kind": "spell",
+  "name": "Greater Restoration",
+  "type": null,
+  "brief": null,
+  "description": "Touch a creature and negate any Charm, Petrification, Stun, or Curse.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/75/Greater_Restoration_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Charm",
+    "page": "Charmed (status group)",
+    "url": "https://bg3.wiki/wiki/Charmed_(status_group)"
+   },
+   {
+    "text": "Petrification",
+    "page": "Petrified (status group)",
+    "url": "https://bg3.wiki/wiki/Petrified_(status_group)"
+   },
+   {
+    "text": "Stun",
+    "page": "Stunned (status group)",
+    "url": "https://bg3.wiki/wiki/Stunned_(status_group)"
+   },
+   {
+    "text": "Curse",
+    "page": "Cursed (status group)",
+    "url": "https://bg3.wiki/wiki/Cursed_(status_group)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Greater_Restoration",
+  "spell_level": 5,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
   "id": "Green Bed Regeneration",
   "kind": "passive",
   "name": "Green Bed Regeneration",
@@ -6235,6 +6562,58 @@
   "wiki_url": "https://bg3.wiki/wiki/Grit"
  },
  {
+  "id": "Guidance",
+  "kind": "spell",
+  "name": "Guidance",
+  "type": null,
+  "brief": null,
+  "description": "The target gains +1d4 bonus to Ability Checks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/b/ba/Guidance_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Ability Check",
+    "page": "Ability Check",
+    "url": "https://bg3.wiki/wiki/Ability_Check"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Guidance",
+  "spell_level": 0,
+  "school": "Divination",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
+ },
+ {
+  "id": "Guiding Bolt",
+  "kind": "spell",
+  "name": "Guiding Bolt",
+  "type": null,
+  "brief": null,
+  "description": "The next attack roll against this target has Advantage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/82/Guiding_Bolt_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Guiding_Bolt",
+  "spell_level": 1,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Hamstring Shot",
   "kind": "action",
   "name": "Hamstring Shot",
@@ -6356,6 +6735,46 @@
   "wiki_url": "https://bg3.wiki/wiki/Headcrack"
  },
  {
+  "id": "Heal",
+  "kind": "spell",
+  "name": "Heal",
+  "type": null,
+  "brief": null,
+  "description": "Heals a target's wounds and remove Blindness and any diseases.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/10/Heal_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Heal",
+  "spell_level": 6,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
+  "id": "Healing Word",
+  "kind": "spell",
+  "name": "Healing Word",
+  "type": null,
+  "brief": null,
+  "description": "Heal a creature you can see.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/15/Healing_Word_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Healing_Word",
+  "spell_level": 1,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "18 / 60"
+ },
+ {
   "id": "Heart of Ice",
   "kind": "passive",
   "name": "Heart of Ice",
@@ -6394,6 +6813,42 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Heartstopper"
+ },
+ {
+  "id": "Heat Metal",
+  "kind": "spell",
+  "name": "Heat Metal",
+  "type": null,
+  "brief": null,
+  "description": "Cause a metal weapon or armour to glow red-hot and force the wearer to let go or receive Disadvantage on Attack Rolls and Ability Checks.",
+  "extra_description": "If the creature is only wearing metal armour, it always receives Disadvantage.\nIf the creature is still touching the metal, you can use a bonus action on subsequent turns to deal another 2d8 Fire and force the creature to let go or receive Disadvantage.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/87/Heat_Metal_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Attack Roll",
+    "page": "Attack Roll",
+    "url": "https://bg3.wiki/wiki/Attack_Roll"
+   },
+   {
+    "text": "Ability Checks",
+    "page": "Ability Check",
+    "url": "https://bg3.wiki/wiki/Ability_Check"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Heat_Metal",
+  "spell_level": 2,
+  "school": "Transmutation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Heavy Hitter",
@@ -6613,6 +7068,62 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Helm's_Protection"
+ },
+ {
+  "id": "Heroes' Feast",
+  "kind": "spell",
+  "name": "Heroes' Feast",
+  "type": null,
+  "brief": null,
+  "description": "You and everyone around can't be Poisoned, Diseased, or Frightened (status group). Everyone's maximum Hit Points increases by 12, and they make Wisdom Saving Throws with Advantage.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/d4/Heroes%27_Feast_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Poisoned",
+    "page": "Poisoned (status group)",
+    "url": "https://bg3.wiki/wiki/Poisoned_(status_group)"
+   },
+   {
+    "text": "Diseased",
+    "page": "Diseased (status group)",
+    "url": "https://bg3.wiki/wiki/Diseased_(status_group)"
+   },
+   {
+    "text": "Frightened (status group)",
+    "page": "Frightened (status group)",
+    "url": "https://bg3.wiki/wiki/Frightened_(status_group)"
+   },
+   {
+    "text": "Hit Points",
+    "page": "Hit Points",
+    "url": "https://bg3.wiki/wiki/Hit_Points"
+   },
+   {
+    "text": "Wisdom",
+    "page": "Wisdom",
+    "url": "https://bg3.wiki/wiki/Wisdom"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   },
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Heroes'_Feast",
+  "spell_level": 6,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
  },
  {
   "id": "Hiemal Strike",
@@ -6901,6 +7412,42 @@
   "wiki_url": "https://bg3.wiki/wiki/Ice_Knife",
   "spell_level": 1,
   "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
+  "id": "Ice Storm",
+  "kind": "spell",
+  "name": "Ice Storm",
+  "type": null,
+  "brief": null,
+  "description": "Impel a storm of hail and ice to crash from the sky, covering the ground and striking all objects and creatures within range, dealing Bludgeoning and Cold damage. It also creates an Ice surface that lasts 2 turns.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/5/52/Ice_Storm_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Bludgeoning",
+    "page": "Bludgeoning",
+    "url": "https://bg3.wiki/wiki/Bludgeoning"
+   },
+   {
+    "text": "Cold",
+    "page": "Cold",
+    "url": "https://bg3.wiki/wiki/Cold"
+   },
+   {
+    "text": "Ice",
+    "page": "Ice (surface)",
+    "url": "https://bg3.wiki/wiki/Ice_(surface)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Ice_Storm",
+  "spell_level": 4,
+  "school": "Evocation",
   "concentration": null,
   "ritual": null,
   "action_type": "action",
@@ -7380,6 +7927,47 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Innate_Fortitude"
+ },
+ {
+  "id": "Insect Plague",
+  "kind": "spell",
+  "name": "Insect Plague",
+  "type": null,
+  "brief": null,
+  "description": "Locusts attack everyone within range, make the area Difficult Terrain, and impose Disadvantage on Perception Checks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/11/Insect_Plague_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Difficult Terrain",
+    "page": "Difficult Terrain",
+    "url": "https://bg3.wiki/wiki/Difficult_Terrain"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Perception",
+    "page": "Perception",
+    "url": "https://bg3.wiki/wiki/Perception"
+   },
+   {
+    "text": "Checks",
+    "page": "Ability Check",
+    "url": "https://bg3.wiki/wiki/Ability_Check"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Insect_Plague",
+  "spell_level": 5,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Insidious Cold",
@@ -7901,6 +8489,47 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Lesser_Infernal_Touch"
+ },
+ {
+  "id": "Lesser Restoration",
+  "kind": "spell",
+  "name": "Lesser Restoration",
+  "type": null,
+  "brief": null,
+  "description": "Cure a creature from Diseased, Poisoned, Paralysis, or Blinded.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/c6/Lesser_Restoration_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Diseased",
+    "page": "Diseased (status group)",
+    "url": "https://bg3.wiki/wiki/Diseased_(status_group)"
+   },
+   {
+    "text": "Poisoned",
+    "page": "Poisoned (status group)",
+    "url": "https://bg3.wiki/wiki/Poisoned_(status_group)"
+   },
+   {
+    "text": "Paralysis",
+    "page": "Paralysed (Condition)",
+    "url": "https://bg3.wiki/wiki/Paralysed_(Condition)"
+   },
+   {
+    "text": "Blinded",
+    "page": "Blinded (status group)",
+    "url": "https://bg3.wiki/wiki/Blinded_(status_group)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Lesser_Restoration",
+  "spell_level": 2,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
  },
  {
   "id": "Let The Undead Blanch With Fear",
@@ -8480,6 +9109,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Martial_Bravery"
  },
  {
+  "id": "Mass Cure Wounds",
+  "kind": "spell",
+  "name": "Mass Cure Wounds",
+  "type": null,
+  "brief": null,
+  "description": "Unleash a soothing hum of energy that heals you and nearby allies.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/4a/Mass_Cure_Wounds_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Mass_Cure_Wounds",
+  "spell_level": 5,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Melee Caster",
   "kind": "passive",
   "name": "Melee Caster",
@@ -8805,6 +9454,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Monsterslayer"
+ },
+ {
+  "id": "Moonbeam",
+  "kind": "spell",
+  "name": "Moonbeam",
+  "type": null,
+  "brief": null,
+  "description": "Call down a beam of light that damages any creatures that enters the beam or starts its turn in the light. You can use an Action to move the beam 18 m (60 ft).",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/74/Moonbeam_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Action",
+    "page": "Action",
+    "url": "https://bg3.wiki/wiki/Action"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Moonbeam",
+  "spell_level": 2,
+  "school": "Evocation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Moonlight Butterflies",
@@ -9421,6 +10096,37 @@
   "wiki_url": "https://bg3.wiki/wiki/Part_the_Flesh"
  },
  {
+  "id": "Pass Without Trace",
+  "kind": "spell",
+  "name": "Pass Without Trace",
+  "type": null,
+  "brief": null,
+  "description": "Call forth a veil of shadow and silence that gives you and nearby allies a +10 bonus to Stealth Checks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/40/Pass_Without_Trace_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Stealth",
+    "page": "Stealth",
+    "url": "https://bg3.wiki/wiki/Stealth"
+   },
+   {
+    "text": "Check",
+    "page": "Ability check",
+    "url": "https://bg3.wiki/wiki/Ability_check"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Pass_Without_Trace",
+  "spell_level": 2,
+  "school": "Abjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Perfectly Balanced Strike",
   "kind": "action",
   "name": "Perfectly Balanced Strike",
@@ -9587,6 +10293,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Piercing_Strike"
  },
  {
+  "id": "Plant Growth",
+  "kind": "spell",
+  "name": "Plant Growth",
+  "type": null,
+  "brief": null,
+  "description": "Make weeds burst from the ground and smother the area. Creatures moving through the weeds have their Movement Speed quartered.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/29/Plant_Growth_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Movement Speed",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Plant_Growth",
+  "spell_level": 3,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Poison Mist",
   "kind": "action",
   "name": "Poison Mist",
@@ -9620,6 +10352,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Poison_Mist"
+ },
+ {
+  "id": "Poison Spray",
+  "kind": "spell",
+  "name": "Poison Spray",
+  "type": null,
+  "brief": null,
+  "description": "Project a puff of noxious gas, dealing 1d12 Poison to a target.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/5/53/Poison_Spray_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Poison",
+    "page": "Poison",
+    "url": "https://bg3.wiki/wiki/Poison"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Poison_Spray",
+  "spell_level": 0,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "3 / 10"
  },
  {
   "id": "Poison Trails",
@@ -9665,6 +10423,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Poisonous_Synergy"
+ },
+ {
+  "id": "Polymorph",
+  "kind": "spell",
+  "name": "Polymorph",
+  "type": null,
+  "brief": null,
+  "description": "Transform a creature into a harmless sheep.",
+  "extra_description": "If the sheep's Hit Points drop to 0, the target reverts to its original form with its original Hit Points.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/5/53/Polymorph_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Polymorph",
+  "spell_level": 4,
+  "school": "Transmutation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
  },
  {
   "id": "Pommel Strike",
@@ -9835,6 +10613,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Prime_Aegis_of_Fire"
+ },
+ {
+  "id": "Produce Flame",
+  "kind": "spell",
+  "name": "Produce Flame",
+  "type": null,
+  "brief": null,
+  "description": "A flame in your hand sheds a light in a 9 m (30 ft) radius and deals 1d8 Fire damage when thrown.",
+  "extra_description": "Throwing the flame immediately after you conjure it does not cost an Action. Extinguishing or throwing it on subsequent turns costs an action. The throw has a range of 9 m (30 ft).",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/8b/Produce_Flame_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Fire",
+    "page": "Fire",
+    "url": "https://bg3.wiki/wiki/Fire"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Produce_Flame",
+  "spell_level": 0,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
  },
  {
   "id": "Profane Scourge",
@@ -10595,6 +11399,32 @@
   "icon_url": "https://bg3.wiki/w/images/f/f1/Reposition_Malefactor.webp",
   "links": [],
   "wiki_url": "https://bg3.wiki/wiki/Reposition_Malefactor"
+ },
+ {
+  "id": "Resistance (Cantrip)",
+  "kind": "spell",
+  "name": "Resistance",
+  "type": null,
+  "brief": null,
+  "description": "Make a target more resistant to spell effects and conditions: it receives a +1d4 bonus to Saving Throws.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/87/Resistance_Cantrip_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Resistance_(Cantrip)",
+  "spell_level": 0,
+  "school": "Abjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "melee"
  },
  {
   "id": "Revenant Scourge",
@@ -11782,6 +12612,57 @@
   "range": "9 / 30"
  },
  {
+  "id": "Shillelagh",
+  "kind": "spell",
+  "name": "Shillelagh",
+  "type": null,
+  "brief": null,
+  "description": "Quarterstaff or Club Required.\nYour staff or club becomes magical: it deals 1d8 + Spellcasting modifier Bludgeoning damage, and uses your Spellcasting Ability for Attack Rolls.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/9/90/Shillelagh_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "staff",
+    "page": "Quarterstaves",
+    "url": "https://bg3.wiki/wiki/Quarterstaves"
+   },
+   {
+    "text": "club",
+    "page": "Clubs",
+    "url": "https://bg3.wiki/wiki/Clubs"
+   },
+   {
+    "text": "Spellcasting modifier",
+    "page": "Spellcasting modifier",
+    "url": "https://bg3.wiki/wiki/Spellcasting_modifier"
+   },
+   {
+    "text": "Bludgeoning",
+    "page": "Bludgeoning",
+    "url": "https://bg3.wiki/wiki/Bludgeoning"
+   },
+   {
+    "text": "Spellcasting Ability",
+    "page": "Spellcasting modifier",
+    "url": "https://bg3.wiki/wiki/Spellcasting_modifier"
+   },
+   {
+    "text": "Attack Roll",
+    "page": "Attack Roll",
+    "url": "https://bg3.wiki/wiki/Attack_Roll"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Shillelagh",
+  "spell_level": 0,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
+ },
+ {
   "id": "Shocking Sting",
   "kind": "passive",
   "name": "Shocking Sting",
@@ -11975,6 +12856,62 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Slay_the_Wicked_(Slashing)"
+ },
+ {
+  "id": "Sleet Storm",
+  "kind": "spell",
+  "name": "Sleet Storm",
+  "type": null,
+  "brief": null,
+  "description": "Call forth a storm that douses fire, creates an Ice surface, and forces spellcasters to succeed at a Concentration Saving Throw in order to maintain Concentration.\nIce is a surface that is considered Difficult Terrain. Creatures moving through it have their Movement Speed halved, and will fall Prone on a failed Dexterity Saving Throw.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/47/Sleet_Storm_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Ice",
+    "page": "Ice",
+    "url": "https://bg3.wiki/wiki/Ice"
+   },
+   {
+    "text": "Concentration",
+    "page": "Concentration",
+    "url": "https://bg3.wiki/wiki/Concentration"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   },
+   {
+    "text": "Difficult Terrain",
+    "page": "Difficult Terrain",
+    "url": "https://bg3.wiki/wiki/Difficult_Terrain"
+   },
+   {
+    "text": "Movement Speed",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   },
+   {
+    "text": "Prone",
+    "page": "Prone (condition)",
+    "url": "https://bg3.wiki/wiki/Prone_(condition)"
+   },
+   {
+    "text": "Dexterity",
+    "page": "Dexterity",
+    "url": "https://bg3.wiki/wiki/Dexterity"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Sleet_Storm",
+  "spell_level": 3,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
  },
  {
   "id": "Slippery Slapsticky",
@@ -12522,6 +13459,42 @@
   "wiki_url": "https://bg3.wiki/wiki/Spider_Step"
  },
  {
+  "id": "Spike Growth",
+  "kind": "spell",
+  "name": "Spike Growth",
+  "type": null,
+  "brief": null,
+  "description": "Shape a piece of ground into hard spikes. A creature walking on the spikes takes 2d4 Piercing damage for every 1.5 m (5 ft) it moves.\nThe spikes are Difficult Terrain, halving a creature's Movement Speed.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/b/b0/Spike_Growth_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Piercing",
+    "page": "Piercing",
+    "url": "https://bg3.wiki/wiki/Piercing"
+   },
+   {
+    "text": "Difficult Terrain",
+    "page": "Difficult Terrain",
+    "url": "https://bg3.wiki/wiki/Difficult_Terrain"
+   },
+   {
+    "text": "Movement Speed",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Spike_Growth",
+  "spell_level": 2,
+  "school": "Transmutation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Spiteful Thunder",
   "kind": "passive",
   "name": "Spiteful Thunder",
@@ -12655,6 +13628,104 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Staff_of_the_Ram_(passive_feature)"
+ },
+ {
+  "id": "Starry Form: Archer",
+  "kind": "spell",
+  "name": "Starry Form: Archer",
+  "type": null,
+  "brief": null,
+  "description": "A constellation of an archer appears on you. As a Bonus Action while in this Starry Form, you can cast Luminous Arrow.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/24/Starry_Form_Archer_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Bonus Action",
+    "page": "Resources",
+    "url": "https://bg3.wiki/wiki/Resources#Bonus_Action"
+   },
+   {
+    "text": "Luminous Arrow",
+    "page": "Luminous Arrow",
+    "url": "https://bg3.wiki/wiki/Luminous_Arrow"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Starry_Form:_Archer",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
+ },
+ {
+  "id": "Starry Form: Chalice",
+  "kind": "spell",
+  "name": "Starry Form: Chalice",
+  "type": null,
+  "brief": null,
+  "description": "A constellation of a life-giving chalice appears on you. Whenever you cast a healing spell that consumes a spell slot, you can cast Chalice Healing.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/7/74/Starry_Form_Chalice_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Chalice Healing",
+    "page": "Chalice Healing",
+    "url": "https://bg3.wiki/wiki/Chalice_Healing"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Starry_Form:_Chalice",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
+ },
+ {
+  "id": "Starry Form: Dragon",
+  "kind": "spell",
+  "name": "Starry Form: Dragon",
+  "type": null,
+  "brief": null,
+  "description": "A constellation of a wise dragon appears on you. When you make a Saving Throw to maintain Concentration on a spell, a roll result of 9 or lower is considered a 10.\nAs a Bonus Action while in this Starry Form, you can cast Dazzling Breath.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/9/9f/Starry_Form_Dragon_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   },
+   {
+    "text": "Concentration",
+    "page": "Concentration",
+    "url": "https://bg3.wiki/wiki/Concentration"
+   },
+   {
+    "text": "Bonus Action",
+    "page": "Resources",
+    "url": "https://bg3.wiki/wiki/Resources#Bonus_Action"
+   },
+   {
+    "text": "Dazzling Breath",
+    "page": "Dazzling Breath",
+    "url": "https://bg3.wiki/wiki/Dazzling_Breath"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Starry_Form:_Dragon",
+  "spell_level": null,
+  "school": null,
+  "concentration": null,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "self"
  },
  {
   "id": "Staunch Blessing",
@@ -12994,6 +14065,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Subtle_Swap"
+ },
+ {
+  "id": "Sunbeam",
+  "kind": "spell",
+  "name": "Sunbeam",
+  "type": null,
+  "brief": null,
+  "description": "A beam of brilliant light sears and Blinds all creatures in its path.",
+  "extra_description": "Until the spell ends, you can recast Sunbeam without expending a spell slot.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/ef/Sunbeam_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Blinds",
+    "page": "Blinded (Condition)",
+    "url": "https://bg3.wiki/wiki/Blinded_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Sunbeam",
+  "spell_level": 6,
+  "school": "Evocation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": null
  },
  {
   "id": "Sunwalker's Gift (passive feature)",
@@ -13571,6 +14668,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Thermodynamo"
  },
  {
+  "id": "Thorn Whip",
+  "kind": "spell",
+  "name": "Thorn Whip",
+  "type": null,
+  "brief": null,
+  "description": "Pulls the creature 3 m (10 ft) closer to you.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/81/Thorn_Whip_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Thorn_Whip",
+  "spell_level": 0,
+  "school": "Transmutation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
+ },
+ {
   "id": "Throwing Boost",
   "kind": "passive",
   "name": "Throwing Boost",
@@ -13976,6 +15093,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/True_Strike_Riposte"
+ },
+ {
+  "id": "Twinkling Constellations",
+  "kind": "passive",
+  "name": "Twinkling Constellations",
+  "type": null,
+  "brief": null,
+  "description": "Your Starry Forms are improved. The Archer's damage and the Chalice's healing are each increased by 1d8, and the Dragon gains the ability to hover and to Fly at a movement speed of 6 m (20 ft).\nOnce per turn, you can switch to a different Starry Form as a free action.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/14/Twinkling_Constellations_Icon.webp",
+  "links": [
+   {
+    "text": "Fly",
+    "page": "Fly (Starry Form)",
+    "url": "https://bg3.wiki/wiki/Fly_(Starry_Form)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Twinkling_Constellations"
  },
  {
   "id": "Twist of Fortune (passive feature)",
@@ -14399,6 +15536,99 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Wakefulness"
+ },
+ {
+  "id": "Wall of Fire",
+  "kind": "spell",
+  "name": "Wall of Fire",
+  "type": null,
+  "brief": null,
+  "description": "Create a blazing wall of fire, Burning anyone who dares stand too close. Deals Fire to anything that moves into or ends its turn in the area.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/6/60/Wall_of_Fire_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Burning",
+    "page": "Burning (Condition)",
+    "url": "https://bg3.wiki/wiki/Burning_(Condition)"
+   },
+   {
+    "text": "Fire",
+    "page": "Fire",
+    "url": "https://bg3.wiki/wiki/Fire"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Wall_of_Fire",
+  "spell_level": 4,
+  "school": "Evocation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
+  "id": "Wall of Stone",
+  "kind": "spell",
+  "name": "Wall of Stone",
+  "type": null,
+  "brief": null,
+  "description": "Raise a wall of non-magical, solid stone.\nThe wall can be created between any two points within range as long as there is a clear path between them. It is made up of Stone Pillars with 30 HP each, immune to Psychic and vulnerable to Force and Thunder damage. Pillars block movement and line of sight.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/a/ab/Wall_of_Stone_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Psychic",
+    "page": "Psychic",
+    "url": "https://bg3.wiki/wiki/Psychic"
+   },
+   {
+    "text": "Force",
+    "page": "Force",
+    "url": "https://bg3.wiki/wiki/Force"
+   },
+   {
+    "text": "Thunder",
+    "page": "Thunder",
+    "url": "https://bg3.wiki/wiki/Thunder"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Wall_of_Stone",
+  "spell_level": 5,
+  "school": "Evocation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
+  "id": "Wall of Thorns",
+  "kind": "spell",
+  "name": "Wall of Thorns",
+  "type": null,
+  "brief": null,
+  "description": "Create a wall of pliable, twisting thorns surrounded by Entangling vines.",
+  "extra_description": "Creatures can move through the wall, but take 7d8 Piercing damage per turn, their Movement Speed is quartered.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/8/82/Wall_of_Thorns_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Entangling",
+    "page": "Entangled (Condition)",
+    "url": "https://bg3.wiki/wiki/Entangled_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Wall_of_Thorns",
+  "spell_level": 6,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Warding Hands",

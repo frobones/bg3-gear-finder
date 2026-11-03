@@ -1,0 +1,262 @@
+{
+ "id": "alene",
+ "style": "options",
+ "name": "Alene",
+ "title": "Circle of the Stars Druid",
+ "classes": "Druid 12 (Circle of the Stars)",
+ "role": "The party's spell save DC caster and only healer: control spells under a Starry Form, radiant debuffs on the side.",
+ "level_order": "Druid 1–12",
+ "shape": {
+  "name": "Level-10 swapper",
+  "summary": "Dragon form until level 10 to keep concentration on control spells. From level 10, switch forms for free once per turn: Archer for a radiant bonus-action arrow, Chalice when healing, back to Dragon when holding something big.",
+  "strong": ["Concentration almost never breaks in Dragon form.", "Strongest Stars Druid from level 10, when every form is one free swap away.", "Covers the party's healing without giving up control."],
+  "weak": ["Low single-target damage before level 10.", "Leaving Dragon form gives up its concentration floor.", "No Constitution save proficiency."]
+ },
+ "choices": [
+  {"label": "Ability scores", "options": ["DEX 14 · CON 16 · WIS 17 (+ STR 8, INT 8, CHA 10): safest concentration", "DEX 16 · CON 14 · WIS 16: more AC and initiative"], "note": "Either way, Wisdom goes up first with feats."},
+  {"label": "Race", "options": ["Gnome: Advantage on INT, WIS and CHA saves", "Half-Elf or Wood Elf: darkvision and extra speed", "Halfling: Lucky rerolls natural 1s"], "note": "Druid already has medium armour and shields, so armour from race adds nothing."},
+  {"label": "Armour", "options": ["Medium armour and a shield: about 17–19 AC", "A spell-DC robe or light armour: less AC, more DC"]}
+ ],
+
+ "levels": [
+  {
+   "level": 1,
+   "class": "Druid",
+   "class_level": 1,
+   "choices": [
+    {"label": "Cantrips", "pick": 2, "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Shillelagh", "Resistance (Cantrip)", "Poison Spray"]},
+    {"label": "Skills", "pick": 2, "options": ["Perception", "Insight", "Medicine", "Nature", "Arcana", "Animal Handling", "Religion", "Survival"]}
+   ],
+   "tips": [
+    "Vesper's theft plan counts on your Guidance when she's about to cast Friends.",
+    "Produce Flame makes you a light source, which the Act 2 Coruscation Ring needs."
+   ],
+   "prepare": {"abilities": ["Healing Word", "Faerie Fire", "Entangle", "Thunderwave", "Ice Knife", "Fog Cloud", "Create or Destroy Water"], "note": "You prepare Druid level + WIS modifier spells and can swap them outside combat."},
+   "gains": "Spellcasting from the whole Druid list."
+  },
+  {
+   "level": 2,
+   "class": "Druid",
+   "class_level": 2,
+   "choices": [
+    {"label": "Subclass", "text": "Circle of the Stars"}
+   ],
+   "tips": [
+    "Take Dragon form before fights: a bonus action and a Wild Shape charge, lasting until a long rest. You have 2 charges, back on a short rest.",
+    "Use Dazzling Breath as your bonus action every turn."
+   ],
+   "gains": "Wild Shape, Starry Form and the Star Map's free Guiding Bolts.",
+   "abilities": ["Starry Form: Dragon", "Starry Form: Archer", "Starry Form: Chalice", "Guiding Bolt"]
+  },
+  {
+   "level": 3,
+   "class": "Druid",
+   "class_level": 3,
+   "choices": [],
+   "prepare": {"abilities": ["Spike Growth", "Hold Person", "Moonbeam", "Pass Without Trace", "Lesser Restoration", "Heat Metal"], "note": "Spike Growth and Hold Person are the control picks; Pass Without Trace sets up the Ranger's surprise rounds."},
+   "gains": "2nd-level spells."
+  },
+  {
+   "level": 4,
+   "class": "Druid",
+   "class_level": 4,
+   "choices": [
+    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: +2 WIS", "Alert: go first and can't be surprised", "War Caster: Advantage on concentration saves", "Resilient: +1 CON and CON save proficiency"]},
+    {"label": "Cantrip", "pick": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}
+   ],
+   "tips": ["War Caster matters least for this shape: Dragon form already covers concentration until level 10."],
+   "gains": "Feat, third cantrip, more Wild Shape forms."
+  },
+  {
+   "level": 5,
+   "class": "Druid",
+   "class_level": 5,
+   "choices": [],
+   "prepare": {"abilities": ["Call Lightning", "Plant Growth", "Sleet Storm"], "note": "Plant Growth needs no concentration: quarter speed, no save. Pair it with Spike Growth."},
+   "gains": "3rd-level spells; Dazzling Breath reaches 3d6."
+  },
+  {
+   "level": 6,
+   "class": "Druid",
+   "class_level": 6,
+   "choices": [],
+   "tips": ["Cosmic Omen is a reaction 3 times a day. Woe subtracts 1d6 from an enemy's save after the roll; save it for your big control spell."],
+   "gains": "Cosmic Omen (Weal or Woe, decided each long rest).",
+   "abilities": ["Cosmic Omen"]
+  },
+  {
+   "level": 7,
+   "class": "Druid",
+   "class_level": 7,
+   "choices": [],
+   "prepare": {"abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire", "Confusion", "Polymorph", "Blight", "Conjure Minor Elemental"], "note": "The Dryad lasts until a long rest and casts her own Spike Growth and Entangle, keeping your concentration free."},
+   "gains": "4th-level spells: Druid's biggest jump."
+  },
+  {
+   "level": 8,
+   "class": "Druid",
+   "class_level": 8,
+   "choices": [
+    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: +2 WIS, or +1 WIS and +1 CON", "Alert", "War Caster: worth it now if you'll leave Dragon form from level 10", "Resilient: +1 CON and CON save proficiency"]}
+   ],
+   "gains": "Feat and more Wild Shape forms."
+  },
+  {
+   "level": 9,
+   "class": "Druid",
+   "class_level": 9,
+   "choices": [],
+   "prepare": {"abilities": ["Insect Plague", "Wall of Stone", "Conjure Elemental", "Mass Cure Wounds", "Greater Restoration"]},
+   "gains": "5th-level spells; Cosmic Omen uses rise to 4."
+  },
+  {
+   "level": 10,
+   "class": "Druid",
+   "class_level": 10,
+   "choices": [
+    {"label": "Cantrip", "pick": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}
+   ],
+   "tips": [
+    "Switch Starry Form once per turn for free: Archer for Luminous Arrow on a quiet turn, Chalice when you heal, Dragon whenever you're holding concentration.",
+    "Leaving Dragon form gives up its concentration floor. Swap back before the enemy's turn if your spell matters."
+   ],
+   "gains": "Twinkling Constellations: forms improve to 2d8, Dragon can fly, and you can swap forms for free once per turn.",
+   "abilities": ["Twinkling Constellations"]
+  },
+  {
+   "level": 11,
+   "class": "Druid",
+   "class_level": 11,
+   "choices": [],
+   "prepare": {"abilities": ["Sunbeam", "Heal", "Heroes' Feast", "Wall of Thorns"], "note": "Cast Heroes' Feast with a staff's free spell before big fights; it buffs the whole party."},
+   "gains": "One 6th-level slot."
+  },
+  {
+   "level": 12,
+   "class": "Druid",
+   "class_level": 12,
+   "choices": [
+    {"label": "Feat", "pick": 1, "options": ["Ability Improvement: WIS to 20", "Alert", "War Caster", "Resilient", "Tough: +2 HP per level"]}
+   ],
+   "gains": "Final feat."
+  }
+ ],
+
+ "gear": [
+  {"item": "Melf's First Staff", "tags": ["dc"], "note": "+1 spell DC and spell attack; Melf's Acid Arrow once a day."},
+  {"item": "The Protecty Sparkswall", "tags": ["dc"], "note": "Clothing: +1 spell DC, and +1 AC and saves while you have Lightning Charges."},
+  {"item": "The Shadespell Circlet", "tags": ["dc"], "note": "+1 spell DC while you're obscured in shadow."},
+  {"item": "Luminous Armour", "tags": ["radiant"], "note": "Medium armour: your radiant damage sets off a shockwave that adds Radiating Orb."},
+  {"item": "Gloves of Belligerent Skies", "tags": ["radiant"], "note": "Radiant, thunder and lightning damage add Reverberation (−1 to STR, DEX and CON saves per turn).", "claim": "Vesper's Act 1 gloves."},
+  {"item": "Boots of Stormy Clamour", "tags": ["radiant"], "note": "Inflicting a condition also adds Reverberation."},
+  {"item": "Holy Lance Helm", "tags": ["radiant", "survival"], "note": "Enemies that miss you take radiant damage.", "claim": "Vesper's Act 1–2 helmet."},
+  {"item": "Spidersilk Armour", "tags": ["concentration"], "note": "Light armour with Advantage on CON saves."},
+  {"item": "Boots of Striding", "tags": ["concentration"], "note": "While concentrating, you can't be knocked Prone or moved."},
+  {"item": "Vital Conduit Boots", "tags": ["concentration"], "note": "8 temporary HP whenever you cast a concentration spell.", "claim": "Vesper keeps these as a swap."},
+  {"item": "Ring of Protection", "tags": ["survival"], "note": "+1 AC and saves.", "claim": "Vesper lists it as a swap."},
+  {"item": "Hellrider's Pride", "tags": ["healing"], "note": "Your heals give resistance to weapon damage for 2 turns."},
+  {"item": "The Whispering Promise", "tags": ["healing"], "note": "Your heals give +1d4 to attacks and saves for 2 turns."},
+  {"item": "Mourning Frost", "tags": ["damage"], "note": "+1 cold damage and Chilled on cold spells: for an Ice Knife and Ice Storm habit."},
+  {"item": "Robe of Exquisite Focus", "tags": ["dc"], "note": "Clothing: +1 spell DC."},
+  {"item": "Fistbreaker Helm", "tags": ["dc"], "note": "+1 spell DC and +1 initiative."},
+  {"item": "Browbeaten Circlet", "tags": ["dc"], "note": "+1 spell DC while you're Threatened."},
+  {"item": "Ketheric's Shield", "tags": ["dc"], "note": "+1 spell DC and spell attack, Advantage on DEX saves.", "claim": "Contested: Vesper uses it if you pass; Zetharis may want it."},
+  {"item": "Infernal Rapier", "tags": ["dc"], "note": "+1 spell DC; a Wyll quest reward.", "claim": "Zetharis may want it."},
+  {"item": "Spellcrux Amulet", "tags": ["dc"], "note": "Restore one spell slot of any level, once per long rest.", "claim": "Vesper's Act 2 amulet; Zetharis may want it too."},
+  {"item": "Luminous Gloves", "tags": ["radiant"], "note": "Your radiant damage adds 2 turns of Radiating Orb (−1 to the target's attack rolls per turn)."},
+  {"item": "Coruscation Ring", "tags": ["radiant"], "note": "Spell damage while you're lit adds Radiating Orb. Produce Flame keeps you lit."},
+  {"item": "Callous Glow Ring", "tags": ["radiant"], "note": "+2 radiant damage against lit targets, and Radiating Orb lights them."},
+  {"item": "Spineshudder Amulet", "tags": ["radiant"], "note": "Ranged spell attacks (Guiding Bolt, Luminous Arrow) add Reverberation."},
+  {"item": "Ring of Spiteful Thunder", "tags": ["radiant"], "note": "Damaging a Reverberating enemy can Daze it."},
+  {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves."},
+  {"item": "Shield of Devotion", "tags": ["survival"], "note": "An extra 1st-level spell slot and a self-Aid."},
+  {"item": "Sentinel Shield", "tags": ["survival"], "note": "+3 initiative and Advantage on Perception."},
+  {"item": "Hood of the Weave", "tags": ["dc"], "note": "+2 spell DC and spell attack.", "claim": "Zetharis may want it."},
+  {"item": "Amulet of the Devout", "tags": ["dc"], "note": "+2 spell DC."},
+  {"item": "Markoheshkir", "tags": ["dc"], "note": "+1 spell DC and spell attack, and your next spell is free once a day."},
+  {"item": "Staff of Spellpower", "tags": ["dc"], "note": "+1 spell DC and spell attack, and your next spell is free once a day."},
+  {"item": "Woe", "tags": ["dc"], "note": "+1 spell DC and spell attack; you heal 1d4 when enemies fail your saves."},
+  {"item": "Armour of Landfall", "tags": ["dc", "concentration"], "note": "Light armour: +1 spell DC, Advantage on CON saves, and Plant Growth."},
+  {"item": "Robe of the Weave", "tags": ["dc"], "note": "+2 AC, +1 spell DC and spell attack.", "claim": "Zetharis may want it."},
+  {"item": "Armour of the Sporekeeper", "tags": ["dc"], "note": "Light armour: +1 spell DC."},
+  {"item": "Robe of Supreme Defences", "tags": ["concentration", "survival"], "note": "While concentrating, add your WIS modifier to all saves and +1 AC."},
+  {"item": "Helldusk Gloves", "tags": ["dc"], "note": "+1 spell DC and spell attack.", "claim": "Zetharis and Vesper may want them."},
+  {"item": "Gauntlet of the Tyrant", "tags": ["dc"], "note": "+1 spell DC; Command once a day."},
+  {"item": "Ring of Feywild Sparks", "tags": ["dc"], "note": "+1 spell DC for any caster."},
+  {"item": "Gibus of the Worshipful Servant", "tags": ["concentration"], "note": "Advantage on concentration saves."},
+  {"item": "Shapeshifter Hat", "tags": ["utility"], "note": "One more Wild Shape charge: one more Starry Form a day."},
+  {"item": "Fey Semblance Amulet", "tags": ["survival"], "note": "Advantage on INT, WIS and CHA saves."},
+  {"item": "Cloak of Displacement", "tags": ["survival"], "note": "Attacks against you have Disadvantage until you take damage."},
+  {"item": "Amulet of Greater Health", "tags": ["survival", "concentration"], "note": "CON 23 and Advantage on CON saves.", "claim": "Contested with Vesper."},
+  {"item": "Hellrider Longbow", "tags": ["utility"], "note": "Ranged slot: +3 initiative and Faerie Fire on hit."}
+ ],
+
+ "loadouts": [
+  {
+   "act": "one",
+   "label": "Act 1",
+   "intro": "Good picks per slot. Mix to taste: Spell DC, Radiant debuffs, or Concentration to hold your spells.",
+   "slots": [
+    {"slot": "Head", "items": ["The Shadespell Circlet", "Holy Lance Helm"]},
+    {"slot": "Body", "items": ["Luminous Armour", "The Protecty Sparkswall", "Spidersilk Armour"]},
+    {"slot": "Gloves", "items": ["Gloves of Belligerent Skies", "Hellrider's Pride"]},
+    {"slot": "Boots", "items": ["Boots of Stormy Clamour", "Boots of Striding", "Vital Conduit Boots"]},
+    {"slot": "Rings", "items": ["Ring of Protection", "The Whispering Promise"]},
+    {"slot": "Main hand", "items": ["Melf's First Staff", "Mourning Frost"]}
+   ]
+  },
+  {
+   "act": "two",
+   "label": "Act 2",
+   "intro": "The radiant debuff kit comes together here, alongside the first +1 DC pieces.",
+   "slots": [
+    {"slot": "Head", "items": ["Fistbreaker Helm", "Browbeaten Circlet", "Holy Lance Helm"]},
+    {"slot": "Cloak", "items": ["Cloak of Protection"]},
+    {"slot": "Body", "items": ["Robe of Exquisite Focus", "Luminous Armour"]},
+    {"slot": "Gloves", "items": ["Luminous Gloves", "Gloves of Belligerent Skies"]},
+    {"slot": "Boots", "items": ["Boots of Stormy Clamour", "Boots of Striding"]},
+    {"slot": "Amulet", "items": ["Spineshudder Amulet", "Spellcrux Amulet"]},
+    {"slot": "Rings", "items": ["Coruscation Ring", "Callous Glow Ring", "Ring of Spiteful Thunder", "Ring of Protection"]},
+    {"slot": "Main hand", "items": ["Melf's First Staff", "Infernal Rapier"]},
+    {"slot": "Off hand", "items": ["Ketheric's Shield", "Shield of Devotion", "Sentinel Shield"]}
+   ]
+  },
+  {
+   "act": "three",
+   "label": "Act 3",
+   "intro": "The spell DC capstones arrive. Stacking the DC pieces reaches about DC 25.",
+   "slots": [
+    {"slot": "Head", "items": ["Hood of the Weave", "Gibus of the Worshipful Servant", "Shapeshifter Hat"]},
+    {"slot": "Cloak", "items": ["Cloak of Displacement", "Cloak of Protection"]},
+    {"slot": "Body", "items": ["Armour of Landfall", "Robe of the Weave", "Robe of Supreme Defences", "Armour of the Sporekeeper"]},
+    {"slot": "Gloves", "items": ["Helldusk Gloves", "Gauntlet of the Tyrant", "Luminous Gloves"]},
+    {"slot": "Boots", "items": ["Boots of Stormy Clamour", "Boots of Striding"]},
+    {"slot": "Amulet", "items": ["Amulet of the Devout", "Fey Semblance Amulet", "Amulet of Greater Health"]},
+    {"slot": "Rings", "items": ["Ring of Feywild Sparks", "Callous Glow Ring", "Coruscation Ring", "Ring of Protection"]},
+    {"slot": "Main hand", "items": ["Markoheshkir", "Staff of Spellpower", "Woe"]},
+    {"slot": "Off hand", "items": ["Ketheric's Shield", "Sentinel Shield"]},
+    {"slot": "Ranged", "items": ["Hellrider Longbow"]}
+   ]
+  }
+ ],
+
+ "playbook": {
+  "turn": [
+   "Before level 10: be in Dragon form. Action for a control spell, bonus action for Dazzling Breath.",
+   "From level 10: swap form once per turn for free. Archer's Luminous Arrow or Chalice's extra heal, then back to Dragon if you're holding concentration.",
+   "Save Cosmic Omen (Woe) for the save that decides the fight.",
+   "Spend Star Map charges on Guiding Bolt: the next attack on that target has Advantage, which helps Pearl and Zetharis."
+  ],
+  "start_of_day": [
+   "Prepare control, one heal and one utility spell; swap freely outside combat.",
+   "From level 7, summon the Dryad: she lasts until a long rest and holds her own Spike Growth.",
+   "From level 11, cast Heroes' Feast with a staff's free spell before a big fight."
+  ],
+  "tips": [
+   "Plant Growth plus Spike Growth: quarter speed and damage per step, and only Spike Growth needs concentration.",
+   "In any Starry Form you can't use some reactions, such as Absorb Elements.",
+   "The radiant kit (Luminous Armour or Gloves, Coruscation, Callous Glow) stacks Radiating Orb: −1 to the target's attack rolls per turn, up to −10.",
+   "Give Vesper Guidance before her pickpocketing: she can't hold Friends and Guidance herself."
+  ]
+ }
+}

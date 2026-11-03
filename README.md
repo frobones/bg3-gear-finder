@@ -24,6 +24,11 @@ where and when you can pick it up.
   - **Scrolls**: which spell scrolls to scribe, hold back, or skip.
   - **Illithid**: suggested illithid powers, in order.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
+- Friends' profiles are menus rather than plans. They have a **Build
+  options** tab (the build shape they chose and the choices at character
+  creation), level-ups that list good picks, gear tagged by what it's good
+  for (spell DC, radiant, survival and so on), and buckets of good picks per
+  act instead of a default loadout.
 - An item's panel shows which party members plan around it, and who gets it
   when it's contested.
 
@@ -82,6 +87,11 @@ Profiles are written by hand and are never overwritten by a rebuild. To add
 one, copy `data/party/vesper.json`, put the portrait in `assets/portraits/`,
 and point the roster entry in `data/party/party.json` at it with
 `"profile": "<file name without .json>"`.
+
+A profile with `"style": "options"` is a friend's menu (see
+`data/party/alene.json`): choices carry `pick` and `options`, gear entries
+carry `tags` instead of a `priority`, and each act's slots list their `items`
+as a bucket of good picks.
 
 In a profile, names under `item`, `items` and `alternates` are bg3.wiki item
 pages. Names under `abilities`, `replace`, `scribe` and `hold` are bg3.wiki

@@ -1,8 +1,8 @@
 {
  "members": [
   {"profile": "vesper"},
-  {"name": "Circle of the Stars Druid", "role": "Primary caster: raw spell save DC and Wisdom gear"},
-  {"name": "Gloom Stalker Ranger", "role": "Sharpshooter: crit range, multi-hit riders, reliable Advantage"},
-  {"name": "Warlock", "role": "Charisma caster: spell attack and leftover crit or Advantage gear"}
+  {"profile": "alene"},
+  {"name": "Pearl", "role": "Gloom Stalker Ranger: Titanstring Bow with Strength from the Club or the Act 3 gauntlets"},
+  {"name": "Zetharis", "role": "Hexblade Warlock: Eldritch Blast turret in the Potent Robe"}
  ]
 }
