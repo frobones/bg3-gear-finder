@@ -5,10 +5,16 @@
 
 const KEY_PREFIX = "bg3-gear-finder:profile:";
 const MAX_LEVEL = 12;
-export const PROFILE_TABS = ["level", "gear", "scrolls", "illithid", "playbook"];
+export const PROFILE_TABS = ["build", "level", "gear", "scrolls", "illithid", "playbook"];
+// A full build plan (Vesper) and an options menu for a friend to choose from show different tabs.
+export const TABS_BY_STYLE = {
+  plan: ["level", "gear", "scrolls", "illithid", "playbook"],
+  options: ["build", "level", "gear", "playbook"],
+};
+export const tabsFor = (profile) => TABS_BY_STYLE[profile.style ?? "plan"];
 const LISTS = ["got", "scribed", "taken"];
 
-export const emptyProgress = () => ({ level: 0, tab: "level", got: [], scribed: [], taken: [] });
+export const emptyProgress = () => ({ level: 0, tab: null, got: [], scribed: [], taken: [] });
 
 /** Keep only well-formed fields from stored JSON; anything else falls back to the empty value. */
 export function sanitizeProgress(stored) {

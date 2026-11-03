@@ -1,7 +1,7 @@
 // A profile's gear plan: wanted items in play order with pick-up checkboxes, then the endgame loadout.
 
 import { abilityName } from "./abilities.js";
-import { ACT_LABELS, esc, itemButton, linkify, priorityTag } from "./html.js";
+import { ACT_LABELS, entryTags, esc, itemButton, linkify } from "./html.js";
 
 const ACT_ORDER = ["prologue", "one", "two", "three", "anywhere"];
 const GROUP_LABELS = { ...ACT_LABELS, anywhere: "Anywhere or not recorded" };
@@ -40,12 +40,37 @@ function planRow({ entry, item }, got) {
       <input type="checkbox" class="plan-check" data-progress="got" value="${esc(id)}"${got ? " checked" : ""}
         aria-label="Picked up ${esc(label)}" />
       <div class="plan-body">
-        <div class="plan-title">${name}${priorityTag(entry.priority)}</div>
+        <div class="plan-title">${name}${entryTags(entry)}</div>
         ${entry.note ? `<p class="plan-note">${esc(entry.note)}</p>` : ""}
         ${entry.claim ? `<p class="plan-claim">Who gets it: ${esc(entry.claim)}</p>` : ""}
         <p class="plan-where">${where(item, entry)}</p>
       </div>
     </li>`;
+}
+
+/** An options profile's slot: a bucket of good picks, each with what it's good for. */
+function bucketTable(loadout, byId, gear) {
+  const tagsOf = new Map(gear.map((e) => [e.item, e]));
+  const rows = loadout.slots
+    .map(
+      (slot) => `
+      <tr>
+        <th scope="row">${esc(slot.slot)}</th>
+        <td>${slot.items
+          .map((id) => `<div class="loadout-item">${itemButton(byId.get(id), 24)}${tagsOf.has(id) ? entryTags(tagsOf.get(id)) : ""}</div>`)
+          .join("")}</td>
+      </tr>`,
+    )
+    .join("");
+  return `
+    <p class="prose">${esc(loadout.intro)}</p>
+    <div class="table-wrap">
+      <table class="loadout-table bucket-table">
+        <caption class="visually-hidden">Good picks for ${esc(loadout.label)}</caption>
+        <thead><tr><th scope="col">Slot</th><th scope="col">Good picks</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
 }
 
 function loadoutTable(loadout, byId, abilities) {
@@ -74,7 +99,7 @@ function loadoutTable(loadout, byId, abilities) {
         <tbody>${rows}</tbody>
       </table>
     </div>
-    <p class="prose">${esc(loadout.armour_class)}</p>`;
+    ${loadout.armour_class ? `<p class="prose">${esc(loadout.armour_class)}</p>` : ""}`;
 }
 
 /** Loadouts for the end of each act, one shown at a time behind act buttons. */
@@ -86,10 +111,11 @@ function loadouts(profile, byId, abilities, act) {
         `<button type="button" class="segment" data-loadout-act="${esc(l.act)}" aria-pressed="${l === shown}">${esc(l.label)}</button>`,
     )
     .join("");
+  const options = profile.style === "options";
   return `
-    <h3 id="loadout-heading">End-of-act loadout</h3>
+    <h3 id="loadout-heading">${options ? "Good picks by act" : "End-of-act loadout"}</h3>
     <div class="segments" role="group" aria-labelledby="loadout-heading">${buttons}</div>
-    ${loadoutTable(shown, byId, abilities)}`;
+    ${options ? bucketTable(shown, byId, profile.gear) : loadoutTable(shown, byId, abilities)}`;
 }
 
 export function renderGearTab(profile, data, progress, hideGot, loadoutAct) {

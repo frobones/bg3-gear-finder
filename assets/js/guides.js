@@ -87,24 +87,65 @@ export function renderIllithidTab(profile, abilities, progress) {
 
 const list = (tag, items) => `<${tag} class="steps">${items.map((s) => `<li>${esc(s)}</li>`).join("")}</${tag}>`;
 
-export function renderPlaybookTab(profile) {
-  const { playbook } = profile;
-  const reactions = playbook.reactions
+// Sections in display order; a profile shows only the ones it has.
+const PLAYBOOK_SECTIONS = [
+  ["turn", "A turn in combat"],
+  ["start_of_day", "Start of each day"],
+  ["theft", "Stealing safely"],
+  ["tips", "Tips"],
+  ["reactions", "Reaction settings"],
+  ["mage_hand", "Mage Hand jobs"],
+];
+
+function reactionTable(reactions) {
+  const rows = reactions
     .map(
       (r) =>
         `<tr><th scope="row">${esc(r.name)}</th><td><span class="tag">${esc(r.setting)}</span></td><td>${esc(r.why)}</td></tr>`,
     )
     .join("");
+  return `<div class="table-wrap"><table class="loadout-table">
+      <thead><tr><th scope="col">Reaction</th><th scope="col">Setting</th><th scope="col">Why</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+export function renderPlaybookTab(profile) {
+  const { playbook } = profile;
+  // A plan's combat turn and theft steps are sequences; an options profile's turn is a set of tips.
+  const ordered = (key) => key === "theft" || (key === "turn" && profile.style !== "options");
+  return PLAYBOOK_SECTIONS.filter(([key]) => playbook[key]?.length)
+    .map(([key, title]) => {
+      const body = key === "reactions" ? reactionTable(playbook.reactions) : list(ordered(key) ? "ol" : "ul", playbook[key]);
+      return `<section class="guide-block"><h3>${title}</h3>${body}</section>`;
+    })
+    .join("");
+}
+
+/** An options profile's overview: the build shape the player chose, and the choices made at creation. */
+export function renderBuildTab(profile) {
+  const { shape } = profile;
+  const bullets = (items) => `<ul class="steps">${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>`;
+  const choices = profile.choices
+    .map(
+      (c) => `
+      <div class="build-choice">
+        <h4>${esc(c.label)}</h4>
+        <ul class="option-list">${c.options.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>
+        ${c.note ? `<p class="muted small">${esc(c.note)}</p>` : ""}
+      </div>`,
+    )
+    .join("");
   return `
-    <section class="guide-block"><h3>A turn in combat</h3>${list("ol", playbook.turn)}</section>
-    <section class="guide-block"><h3>Start of each day</h3>${list("ul", playbook.start_of_day)}</section>
-    <section class="guide-block"><h3>Stealing safely</h3>${list("ol", playbook.theft)}</section>
-    <section class="guide-block">
-      <h3>Reaction settings</h3>
-      <div class="table-wrap"><table class="loadout-table">
-        <thead><tr><th scope="col">Reaction</th><th scope="col">Setting</th><th scope="col">Why</th></tr></thead>
-        <tbody>${reactions}</tbody>
-      </table></div>
+    <section class="level-card shape-card">
+      <h3>${esc(shape.name)}</h3>
+      <p>${esc(shape.summary)}</p>
+      <div class="shape-columns">
+        <div><h4>Strong at</h4>${bullets(shape.strong)}</div>
+        <div><h4>Weak at</h4>${bullets(shape.weak)}</div>
+      </div>
     </section>
-    <section class="guide-block"><h3>Mage Hand jobs</h3>${list("ul", playbook.mage_hand)}</section>`;
+    <h3>Choose at character creation</h3>
+    <p class="muted">These are options, not answers. Pick what suits how you want to play.</p>
+    ${choices}`;
 }

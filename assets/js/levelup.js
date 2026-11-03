@@ -7,8 +7,21 @@ export const MAX_LEVEL = 12;
 
 const names = (list, abilities) => list.map((name) => abilityName(name, abilities)).join(", ");
 
+/** A friend's choice: "Pick N" from a list of spells or written options, none marked as the answer. */
+function pickList(choice, abilities) {
+  // Spell names are short and sit in a row; written options are sentences and stack.
+  const spells = choice.abilities?.length
+    ? `<ul class="pill-list">${choice.abilities.map((n) => `<li>${abilityName(n, abilities)}</li>`).join("")}</ul>`
+    : "";
+  const written = choice.options?.length
+    ? `<ul class="option-list">${choice.options.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>`
+    : "";
+  return `<span class="pick-count">Pick ${choice.pick}</span>${spells}${written}`;
+}
+
 /** One choice's answer: plain text, ability names, or "old → new" for a spell replacement. */
 export function choiceValue(choice, abilities) {
+  if (choice.pick) return pickList(choice, abilities);
   const parts = [];
   if (choice.replace) {
     const [from, to] = choice.replace;
@@ -30,7 +43,9 @@ export function choiceSummary(level, abilities) {
     .map((c) => {
       const value = c.replace
         ? `${label(c.replace[0])} → ${label(c.replace[1])}`
-        : [...(c.abilities ?? []).map(label), ...(c.abilities ? [] : [c.text])].filter(Boolean).join(", ");
+        : c.pick
+          ? `pick ${c.pick} of ${(c.abilities?.length ?? 0) + (c.options?.length ?? 0)}`
+          : [...(c.abilities ?? []).map(label), ...(c.abilities ? [] : [c.text])].filter(Boolean).join(", ");
       return `${c.label}: ${value}`;
     })
     .join("; ");
@@ -47,9 +62,10 @@ function status(levelNumber, reached) {
 function afterLevel(level, previous, profileId, abilities) {
   const blocks = [];
   if (level.prepare) {
+    const heading = level.prepare.count ? `Prepare ${level.prepare.count} Wizard spells` : "Spells worth preparing";
     blocks.push(`
       <div class="after-block">
-        <h4>Prepare ${level.prepare.count} Wizard spells</h4>
+        <h4>${heading}</h4>
         <ul class="pill-list">${level.prepare.abilities.map((n) => `<li>${abilityName(n, abilities)}</li>`).join("")}</ul>
         ${level.prepare.note ? `<p class="muted small">${esc(level.prepare.note)}</p>` : ""}
       </div>`);
@@ -79,6 +95,9 @@ export function renderLevelTab(profile, abilities, reached, viewing) {
 
   const warnings = level.warnings?.length
     ? `<ul class="callouts">${level.warnings.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>`
+    : "";
+  const tips = level.tips?.length
+    ? `<ul class="callouts callouts-tip">${level.tips.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`
     : "";
 
   const gained = level.abilities?.length ? `<p class="small">New: ${names(level.abilities, abilities)}</p>` : "";
@@ -114,6 +133,7 @@ export function renderLevelTab(profile, abilities, reached, viewing) {
       </header>
       ${choices}
       ${warnings}
+      ${tips}
       <h3>What changes</h3>
       <p>${esc(level.gains)}</p>
       ${level.play ? `<p class="muted">${esc(level.play)}</p>` : ""}

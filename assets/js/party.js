@@ -3,12 +3,26 @@
 // Routes: #party (roster), #party/<profile> (last tab used), #party/<profile>/<tab>.
 
 import { renderGearTab } from "./gearplan.js";
-import { renderIllithidTab, renderPlaybookTab, renderScrollsTab } from "./guides.js";
+import { renderBuildTab, renderIllithidTab, renderPlaybookTab, renderScrollsTab } from "./guides.js";
 import { esc } from "./html.js";
 import { MAX_LEVEL, renderLevelTab } from "./levelup.js";
-import { PROFILE_TABS, loadProgress, saveProgress, toggleInList } from "./progress.js";
+import { PROFILE_TABS, loadProgress, saveProgress, tabsFor, toggleInList } from "./progress.js";
 
-const TAB_LABELS = { level: "Level up", gear: "Gear plan", scrolls: "Scrolls", illithid: "Illithid", playbook: "Playbook" };
+const TAB_LABELS = {
+  build: "Build options",
+  level: "Level up",
+  gear: "Gear plan",
+  scrolls: "Scrolls",
+  illithid: "Illithid",
+  playbook: "Playbook",
+};
+const tabLabel = (profile, tab) => (tab === "gear" && profile.style === "options" ? "Gear options" : TAB_LABELS[tab]);
+
+/** A portrait, or an empty frame for a friend who hasn't sent one yet. */
+const portrait = (profile, className, width, height, alt) =>
+  profile.portrait
+    ? `<img class="${className}" src="${esc(profile.portrait)}" alt="${esc(alt)}" width="${width}" height="${height}" />`
+    : `<div class="${className} member-portrait-empty" aria-hidden="true"></div>`;
 
 /** Split "#party/vesper/gear" into its parts; unknown tabs are dropped so the saved tab is used. */
 export function parsePartyRoute(hash) {
@@ -55,7 +69,7 @@ function renderRoster(data) {
       }
       return `
         <li class="member">
-          <img class="member-portrait" src="${esc(profile.portrait)}" alt="" width="96" height="114" />
+          ${portrait(profile, "member-portrait", 96, 114, "")}
           <div>
             <h2 class="member-name"><a href="#party/${esc(profile.id)}">${esc(profile.name)}</a></h2>
             <p class="member-title">${esc(profile.title)}</p>
@@ -69,32 +83,39 @@ function renderRoster(data) {
 }
 
 function profileHeader(profile) {
+  const facts = [
+    ["Race", profile.race],
+    ["Background", profile.background],
+    ["Difficulty", profile.difficulty],
+  ]
+    .filter(([, value]) => value)
+    .map(([label, value]) => `<div><dt>${label}</dt><dd>${esc(value)}</dd></div>`);
   return `
     <a class="back-link" href="#party">All party members</a>
     <header class="profile-head">
-      <img class="profile-portrait" src="${esc(profile.portrait)}" alt="Portrait of ${esc(profile.name)}" width="160" height="190" />
+      ${portrait(profile, "profile-portrait", 160, 190, `Portrait of ${profile.name}`)}
       <div>
         <h2 class="profile-name">${esc(profile.name)}</h2>
         <p class="profile-title">${esc(profile.title)}</p>
         <p class="profile-classes">${esc(profile.classes)}</p>
-        <dl class="profile-facts">
-          <div><dt>Race</dt><dd>${esc(profile.race)}</dd></div>
-          <div><dt>Background</dt><dd>${esc(profile.background)}</dd></div>
-          <div><dt>Difficulty</dt><dd>${esc(profile.difficulty)}</dd></div>
-        </dl>
+        ${facts.length ? `<dl class="profile-facts">${facts.join("")}</dl>` : ""}
         <p class="profile-role">${esc(profile.role)}</p>
       </div>
-      <blockquote class="profile-arc">
+      ${
+        profile.arc
+          ? `<blockquote class="profile-arc">
         <p><span class="muted">Before the Nautiloid:</span> “${esc(profile.arc.before)}”</p>
         <p><span class="muted">After:</span> “${esc(profile.arc.after)}”</p>
-      </blockquote>
+      </blockquote>`
+          : ""
+      }
     </header>`;
 }
 
 function tabNav(profile, tab) {
-  const links = PROFILE_TABS.map(
-    (t) => `<a href="#party/${esc(profile.id)}/${t}"${t === tab ? ' aria-current="page"' : ""}>${TAB_LABELS[t]}</a>`,
-  ).join("");
+  const links = tabsFor(profile)
+    .map((t) => `<a href="#party/${esc(profile.id)}/${t}"${t === tab ? ' aria-current="page"' : ""}>${tabLabel(profile, t)}</a>`)
+    .join("");
   return `<nav class="profile-tabs" aria-label="${esc(profile.name)}'s profile">${links}</nav>`;
 }
 
@@ -104,6 +125,7 @@ function tabBody(profile, data, tab) {
   if (tab === "scrolls") return renderScrollsTab(profile, data.abilities, progress);
   if (tab === "illithid") return renderIllithidTab(profile, data.abilities, progress);
   if (tab === "playbook") return renderPlaybookTab(profile);
+  if (tab === "build") return renderBuildTab(profile);
   return renderLevelTab(profile, data.abilities, progress.level, viewingFor(profile.id));
 }
 
@@ -116,7 +138,9 @@ export function renderParty(view, data, route) {
     return;
   }
   const progress = progressFor(profile.id);
-  const tab = route.tab ?? progress.tab;
+  const tabs = tabsFor(profile);
+  const wanted = route.tab ?? progress.tab;
+  const tab = tabs.includes(wanted) ? wanted : tabs[0];
   if (tab !== progress.tab) updateProgress(profile.id, { ...progress, tab });
   view.innerHTML = `
     <article class="profile" data-profile="${esc(profile.id)}">

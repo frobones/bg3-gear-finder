@@ -73,3 +73,20 @@ export const PRIORITY_LABELS = {
 
 export const priorityTag = (priority) =>
   `<span class="tag tag-${esc(priority)}">${esc(PRIORITY_LABELS[priority] ?? priority)}</span>`;
+
+/** What an item is good for, on an options profile where nothing is ranked. */
+export const TAG_LABELS = {
+  dc: "Spell DC",
+  radiant: "Radiant",
+  concentration: "Concentration",
+  survival: "Survival",
+  healing: "Healing",
+  damage: "Damage",
+  utility: "Utility",
+};
+
+/** A gear entry's tags: its priority on a plan profile, or what it's good for on an options profile. */
+export const entryTags = (entry) =>
+  entry.priority
+    ? priorityTag(entry.priority)
+    : (entry.tags ?? []).map((t) => `<span class="tag tag-${esc(t)}">${esc(TAG_LABELS[t] ?? t)}</span>`).join("");

@@ -5,11 +5,12 @@ import { test } from "node:test";
 import { abilityFacts, abilityName } from "../assets/js/abilities.js";
 import { wantedByItem } from "../assets/js/data.js";
 import { partyPlans } from "../assets/js/detail.js";
+import { entryTags } from "../assets/js/html.js";
 import { planGroups, renderGearTab } from "../assets/js/gearplan.js";
-import { levelLearning } from "../assets/js/guides.js";
+import { levelLearning, renderBuildTab, renderPlaybookTab } from "../assets/js/guides.js";
 import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
 import { parsePartyRoute } from "../assets/js/party.js";
-import { emptyProgress, sanitizeProgress, toggleInList } from "../assets/js/progress.js";
+import { emptyProgress, sanitizeProgress, tabsFor, toggleInList } from "../assets/js/progress.js";
 
 const abilities = new Map([
   ["Shield (spell)", { id: "Shield (spell)", kind: "spell", name: "Shield", spell_level: 1, action_type: "reaction" }],
@@ -143,4 +144,61 @@ test("renderGearTab shows the chosen act's loadout with its default and alternat
   const actThree = renderGearTab(profile, data, emptyProgress(), false, "three");
   assert.match(actThree, /data-loadout-act="three" aria-pressed="true"/);
   assert.match(actThree.slice(actThree.indexOf("loadout-table")), /Late Helm/);
+});
+
+test("an options profile shows its own tabs and falls back to the first one", () => {
+  assert.deepEqual(tabsFor({ style: "options" }), ["build", "level", "gear", "playbook"]);
+  assert.deepEqual(tabsFor({}), ["level", "gear", "scrolls", "illithid", "playbook"]);
+});
+
+test("a pick choice lists spells as pills and written options as a list, with none marked as the answer", () => {
+  const html = choiceValue(
+    { label: "Feat", pick: 1, abilities: ["Sleep"], options: ["Alert: go first"] },
+    abilities,
+  );
+  assert.match(html, /Pick 1/);
+  assert.match(html, /<ul class="pill-list"><li><button[^>]*data-ability="Sleep"/);
+  assert.match(html, /<ul class="option-list"><li>Alert: go first<\/li><\/ul>/);
+  assert.equal(choiceSummary({ choices: [{ label: "Feat", pick: 1, options: ["A", "B", "C"] }] }, abilities), "Feat: pick 1 of 3");
+});
+
+test("entryTags shows a plan's priority or an options profile's tags", () => {
+  assert.match(entryTags({ priority: "core" }), /tag-core">Core</);
+  assert.equal(
+    entryTags({ tags: ["dc", "radiant"] }),
+    '<span class="tag tag-dc">Spell DC</span><span class="tag tag-radiant">Radiant</span>',
+  );
+  assert.equal(entryTags({}), "");
+});
+
+test("an options profile's act loadout is a bucket of picks with tags, not default and alternates", () => {
+  const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
+  const data = { byId: new Map(["Hood", "Staff"].map((id) => [id, item(id)])), abilities };
+  const profile = {
+    style: "options",
+    gear: [{ item: "Hood", tags: ["dc"] }, { item: "Staff", tags: ["dc"] }],
+    loadouts: [{ act: "three", label: "Act 3", intro: "", slots: [{ slot: "Head", items: ["Hood", "Staff"] }] }],
+  };
+  const html = renderGearTab(profile, data, emptyProgress(), false, null);
+  const table = html.slice(html.indexOf("bucket-table"));
+  assert.match(table, /Good picks/);
+  assert.doesNotMatch(table, /Alternates/);
+  assert.equal(table.match(/tag-dc/g)?.length, 2);
+});
+
+test("renderBuildTab shows the chosen shape and each creation choice's options", () => {
+  const html = renderBuildTab({
+    shape: { name: "Swapper", summary: "Swap forms.", strong: ["Late game"], weak: ["Early damage"] },
+    choices: [{ label: "Race", options: ["Gnome", "Halfling"], note: "Either works." }],
+  });
+  assert.match(html, /<h3>Swapper<\/h3>/);
+  assert.match(html, /<li>Late game<\/li>/);
+  assert.match(html, /<h4>Race<\/h4>\s*<ul class="option-list"><li>Gnome<\/li><li>Halfling<\/li><\/ul>/);
+});
+
+test("renderPlaybookTab shows only the sections a profile has, in order", () => {
+  const html = renderPlaybookTab({ style: "options", playbook: { tips: ["Tip"], turn: ["Swap forms"] } });
+  assert.ok(html.indexOf("A turn in combat") < html.indexOf("Tips"));
+  assert.match(html, /A turn in combat<\/h3><ul/);
+  assert.doesNotMatch(html, /Reaction settings|Stealing safely/);
 });

@@ -4,11 +4,11 @@ import { abilityList } from "./abilities.js";
 import {
   ACT_LABELS,
   capitalize,
+  entryTags,
   esc,
   formatNumber,
   itemIcon,
   linkify,
-  priorityTag,
   rarityClass,
   safeWikiUrl,
 } from "./html.js";
@@ -63,7 +63,7 @@ export function partyPlans(wanted) {
   const rows = wanted.map(
     ({ profile, entry }) => `
       <li>
-        <p><a href="#party/${esc(profile.id)}/gear" data-close>${esc(profile.name)}</a> ${priorityTag(entry.priority)}</p>
+        <p><a href="#party/${esc(profile.id)}/gear" data-close>${esc(profile.name)}</a> ${entryTags(entry)}</p>
         ${entry.note ? `<p class="prose">${esc(entry.note)}</p>` : ""}
         ${entry.claim ? `<p class="plan-claim">Who gets it: ${esc(entry.claim)}</p>` : ""}
       </li>`,

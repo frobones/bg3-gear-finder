@@ -459,6 +459,73 @@
   color: var(--r-story);
 }
 
+/* Options profiles: tags say what an item is good for, not how much the player wants it. */
+.tag-dc {
+  border-color: var(--brass);
+  color: var(--brass-strong);
+}
+
+.tag-radiant {
+  border-color: var(--r-legendary);
+  color: var(--r-legendary);
+}
+
+.tag-concentration,
+.tag-healing {
+  border-color: var(--r-rare);
+  color: var(--r-rare);
+}
+
+.tag-survival {
+  border-color: var(--r-uncommon);
+  color: var(--r-uncommon);
+}
+
+.loadout-item .tag {
+  margin-left: 0.35rem;
+}
+
+.pick-count {
+  display: block;
+  margin-bottom: 0.1rem;
+  color: var(--muted);
+  font: 400 var(--step--1) / 1.4 var(--sans);
+}
+
+.choices .pill-list,
+.choices .option-list {
+  font: 600 var(--step-0) / 1.5 var(--serif);
+}
+
+.callouts-tip li {
+  border-left-color: var(--brass);
+  background: color-mix(in srgb, var(--brass) 10%, transparent);
+}
+
+.shape-card h3 {
+  margin-top: 0;
+}
+
+.shape-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.build-choice + .build-choice {
+  margin-top: 1rem;
+}
+
+.option-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.option-list li + li {
+  margin-top: 0.2rem;
+}
+
 .plan-tools {
   display: flex;
   flex-wrap: wrap;
