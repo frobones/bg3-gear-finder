@@ -250,7 +250,7 @@
   {"item": "Phalar Aluve", "priority": "optional", "note": "Finesse longsword fallback. Any teammate can pull it from the stone (DC 15 Strength or Religion) and hand it over."},
   {"item": "Sussur Dagger", "priority": "optional", "note": "Silences a caster it hits if they fail a Constitution save."},
   {"item": "Rupturing Blade", "priority": "optional", "note": "+1 finesse rapier, so Sneak Attack works. Searing Blood (short rest) is the original guide's bomb trick: each damage type it carries sets off the bomb again, and she takes 1d6 slashing. Bombs are her last resort. Sold by Brem after Find the Missing Shipment."},
-  {"item": "Drakethroat Glaive", "priority": "high", "note": "Not for her to wield: an ally equips it and casts Draconic Elemental Weapon on her Shadow Blade, for +1 to hit and +1d4 damage of a chosen element, once per long rest. Sold by Roah Moonglow at Moonrise Towers. The wiki notes that a Shadow Blade Ring blade can be dropped and enchanted with it."},
+  {"item": "Drakethroat Glaive", "priority": "yield", "claim": "Pearl: the enchant adds +1 to hit and +1d4 to every arrow, which pays off far more over her many shots than on one Booming Blade."},
   {"item": "Shadow Blade Ring", "priority": "core", "note": "Arabella's reward at camp for Find Arabella's Parents. It casts Shadow Blade once per short rest, and the blade lasts until a long rest without Concentration, so her Act 2 weapon arrives long before level 8. Cast it, then swap the ring back out."},
   {"item": "Adamantine Shield", "priority": "core", "note": "Her first Mithral craft: +2 AC, crit immunity, and melee attackers that miss become Reeling.", "claim": "The forge only has Mithral for two items in the whole game."},
   {"item": "Adamantine Scale Mail", "priority": "yield", "claim": "Skipped: Yuan-Ti Scale Mail is better for her, and the second Mithral ore makes Zetharis an Adamantine Shield."},
@@ -337,10 +337,10 @@
     {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure", "Silver Pendant"]},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition", "Smuggler's Ring", "Ring of Free Action"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Hold Person, Fear or Slow. Free Action against Hold Person casters and webs."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring", "Shadow Blade Ring"], "note": "Wear the Shadow Blade Ring just long enough to cast its blade, then swap back."},
-    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King"], "note": "From the Shadow Blade Ring early in the act, then her own spell from level 8. From level 9, cast it with a 3rd-level slot for 3d8. Have an ally enchant it with the Drakethroat Glaive."},
+    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King"], "note": "From the Shadow Blade Ring early in the act, then her own spell from level 8. From level 9, cast it with a 3rd-level slot for 3d8."},
     {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": []},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
-    {"slot": "Carried", "items": ["Drakethroat Glaive", "Resonance Stone"], "note": "An ally wields the Glaive and casts Draconic Elemental Weapon on her Shadow Blade. Carry the Stone only when the party is clear of its aura. Both are Act 2 finds: the Glaive from Roah Moonglow at Moonrise Towers, the Stone in the Mind Flayer Colony."}
+    {"slot": "Carried", "items": ["Resonance Stone"], "note": "Carry the Stone only when the party is clear of its aura. An Act 2 find in the Mind Flayer Colony."}
    ],
    "armour_class": "Yuan-Ti Scale Mail 19 + Adamantine Shield 2 = 21 AC. Shield adds +5 when needed."
   },
@@ -357,10 +357,10 @@
     {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure", "Necklace of Elemental Augmentation", "Silver Pendant"], "note": "Optional: once the amulet never comes off, respec at Withers from CON 14 / WIS 10 to CON 8 / WIS 15 for +2 WIS saves against Hold, Fear and Dominate. Without the amulet she's then on CON 8 HP."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition", "Smuggler's Ring", "Ring of Free Action"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Phantasmal Killer, Slow or Fear."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Band of the Mystic Scoundrel", "Shapeshifter's Boon Ring"]},
-    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic. Have an ally enchant it with the Drakethroat Glaive."},
+    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic."},
     {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield", "Bloodthirst"]},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
-    {"slot": "Carried", "items": ["Drakethroat Glaive", "Resonance Stone"], "note": "An ally wields the Glaive and casts Draconic Elemental Weapon on her Shadow Blade. Carry the Stone only when the party is clear of its aura. Check in game that the Stone still works in Act 3."}
+    {"slot": "Carried", "items": ["Resonance Stone"], "note": "Carry the Stone only when the party is clear of its aura. Check in game that it still works in Act 3."}
    ],
    "armour_class": "Armour of Agility 21 (at DEX 18) + Viconia's Walking Fortress 3 + Helm of Balduran 1 = 25 AC, and Cloak of Displacement gives attackers Disadvantage until she's hit. Shield adds +5 when needed."
   }
