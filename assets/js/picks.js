@@ -1,7 +1,7 @@
-// A friend's profile: good gear by act, good spells by spell level, feats and class choices by level, then the
-// item checklist. Suggestions, not a plan.
+// A friend's profile: good gear by act, good spells by spell level, then feats and class choices by level.
+// Suggestions, not a plan.
 
-import { renderGearChecklist, renderLoadouts } from "./gearplan.js";
+import { renderLoadouts } from "./gearplan.js";
 import { esc } from "./html.js";
 
 /** A spell, feat or feature as an item-style link that opens the side panel; plain text without wiki data. */
@@ -64,10 +64,9 @@ export function renderLevelPicks(profile, abilities) {
   return `<h3>Good picks by level</h3>${bucketTable("Good feats and class choices by level", "Level", rows)}`;
 }
 
-export function renderPicksPage(profile, data, progress, { hideGot, loadoutAct }) {
+export function renderPicksPage(profile, data, loadoutAct) {
   return `
     ${renderLoadouts(profile, data.byId, data.abilities, loadoutAct)}
     ${renderSpellPicks(profile, data.abilities)}
-    ${renderLevelPicks(profile, data.abilities)}
-    ${renderGearChecklist(profile, data, progress, hideGot)}`;
+    ${renderLevelPicks(profile, data.abilities)}`;
 }

@@ -26,9 +26,9 @@ where and when you can pick it up.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
 - Friends' profiles are suggestions rather than a plan, on one page: **Good
   picks by act** (gear per slot, tagged by what it's good for), **Good
-  spells** grouped by spell level, **Good picks by level** (feats and class
-  choices), then the item checklist. Select a spell, feat or class choice to
-  read it in the side panel, like an item.
+  spells** grouped by spell level, then **Good picks by level** (feats and
+  class choices). Select a spell, feat or class choice to read it in the side
+  panel, like an item.
 - An item's panel shows which party members plan around it, and who gets it
   when it's contested.
 

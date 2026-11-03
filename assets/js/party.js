@@ -67,7 +67,7 @@ function renderRoster(data) {
             <h2 class="member-name"><a href="#party/${esc(profile.id)}">${esc(profile.name)}</a></h2>
             <p class="member-title">${esc(profile.title)}</p>
             <p class="muted">${esc(profile.classes)}</p>
-            <p class="small">${levelLabel(progressFor(profile.id).level)}</p>
+            ${profile.style === "options" ? "" : `<p class="small">${levelLabel(progressFor(profile.id).level)}</p>`}
           </div>
         </li>`;
     })
@@ -129,16 +129,16 @@ export function renderParty(view, data, route) {
       ${renderRoster(data)}`;
     return;
   }
-  const progress = progressFor(profile.id);
-  // A friend's profile is one page of good picks; only a full build plan has tabs.
+  // A friend's profile is one page of good picks; only a full build plan has tabs and tracked progress.
   if (profile.style === "options") {
     view.innerHTML = `
       <article class="profile" data-profile="${esc(profile.id)}">
         ${profileHeader(profile)}
-        <div class="profile-body">${renderPicksPage(profile, data, progress, { hideGot, loadoutAct })}</div>
+        <div class="profile-body">${renderPicksPage(profile, data, loadoutAct)}</div>
       </article>`;
     return;
   }
+  const progress = progressFor(profile.id);
   const tab = route.tab ?? progress.tab;
   if (tab !== progress.tab) updateProgress(profile.id, { ...progress, tab });
   view.innerHTML = `

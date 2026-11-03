@@ -240,7 +240,7 @@ test("renderLevelPicks links feats and class choices to their wiki entry, with a
   assert.match(html, /<span class="pick-name">Ability Improvement<\/span><\/div>/);
 });
 
-test("a friend's page shows gear by act, spells, picks by level, then the checklist", () => {
+test("a friend's page shows gear by act, spells, then picks by level, with no checklist", () => {
   const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
   const data = { byId: new Map([["Hood", item("Hood")]]), abilities };
   const profile = {
@@ -250,8 +250,9 @@ test("a friend's page shows gear by act, spells, picks by level, then the checkl
     gear: [{ item: "Hood", tags: ["dc"] }],
     loadouts: [{ act: "one", label: "Act 1", intro: "", slots: [{ slot: "Head", items: ["Hood"] }] }],
   };
-  const html = renderPicksPage(profile, data, emptyProgress(), { hideGot: false, loadoutAct: null });
-  const order = ["Good picks by act", "Good spells", "Good picks by level", "Item checklist"].map((h) => html.indexOf(h));
+  const html = renderPicksPage(profile, data, null);
+  const order = ["Good picks by act", "Good spells", "Good picks by level"].map((h) => html.indexOf(h));
   assert.ok(order.every((at) => at >= 0));
   assert.deepEqual(order, [...order].sort((a, b) => a - b));
+  assert.doesNotMatch(html, /Item checklist|data-progress/);
 });
