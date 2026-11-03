@@ -312,7 +312,7 @@
   {"item": "Ring of Mental Inhibition", "priority": "core", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves."},
   {"item": "Braindrain Gloves", "priority": "core", "note": "Psychic hits apply Mental Fatigue. With Shadow Blade, every hit counts."},
   {"item": "Shadow-Cloaked Ring", "priority": "optional", "note": "+1d4 weapon damage against obscured targets, which Shadow Blade already wants."},
-  {"item": "Vivacious Cloak", "priority": "core", "note": "8 temporary HP each time she casts a spell while in melee, which soaks the opportunity attacks she draws backing off. Check in game that Booming Blade triggers it."},
+  {"item": "Vivacious Cloak", "priority": "core", "note": "8 temporary HP each time she casts a spell while in melee, Booming Blade included, which soaks the opportunity attacks she draws backing off."},
   {"item": "Fleshmelter Cloak", "priority": "optional", "note": "Melee attackers who hit her take acid damage. The alternate to Vivacious Cloak."},
   {"item": "Cloak of Protection", "priority": "yield", "claim": "Alene in Act 2, then Zetharis in Act 3."},
   {"item": "Evasive Shoes", "priority": "yield", "claim": "Pearl."},
