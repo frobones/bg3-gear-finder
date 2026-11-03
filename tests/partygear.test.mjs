@@ -67,13 +67,13 @@ test("partyActs lists every act any profile plans, in play order", () => {
 
 test("renderPartyGear shows each character as a column for the chosen act", () => {
   const html = renderPartyGear(data, "one");
-  assert.match(html, /href="#party\/vesper">Vesper/);
-  assert.match(html, /href="#party\/pearl">Pearl/);
+  assert.match(html, /<th scope="col"><a class="gear-head" href="#party\/vesper"><span class="gear-who-portrait member-portrait-empty"><\/span><span><span class="gear-head-name">Vesper</);
+  assert.match(html, /href="#party\/pearl"><span class="gear-who-portrait[^>]*><\/span><span><span class="gear-head-name">Pearl</);
   assert.match(html, /data-loadout-act="one" aria-pressed="true"/);
   assert.match(html, /<th scope="row">Rings<\/th>/);
   assert.match(html, /data-item="Ring C"/);
   assert.match(html, /Nothing planned/);
-  assert.match(html, /<td><p class="gear-who"><span class="gear-who-portrait member-portrait-empty"><\/span><span>Vesper<\/span><\/p>/);
+  assert.match(html, /<td><a class="gear-who" href="#party\/vesper"><span class="gear-who-portrait member-portrait-empty"><\/span><span>Vesper<\/span><\/a>/);
   assert.doesNotMatch(html, /Guest/);
   const actTwo = renderPartyGear(data, "two");
   assert.match(actTwo, /data-item="Cuirass"/);
@@ -114,6 +114,7 @@ test("renderPartyGear puts each character's portrait and name in their cells for
   const face = { id: "zed", name: "Zed <Jr>", title: "Warlock", portrait: "assets/portraits/zed.jpg", loadouts: [] };
   face.loadouts = [{ act: "one", label: "Act 1", slots: [{ slot: "Head", items: ["Band"] }] }];
   const html = renderPartyGear({ ...data, party: { members: [{ profile: "zed" }], profiles: new Map([["zed", face]]) } }, "one");
-  assert.match(html, /<p class="gear-who"><img class="gear-who-portrait" src="assets\/portraits\/zed.jpg" alt=""/);
-  assert.match(html, /<span>Zed &lt;Jr&gt;<\/span><\/p>/);
+  assert.match(html, /<a class="gear-who" href="#party\/zed"><img class="gear-who-portrait" src="assets\/portraits\/zed.jpg" alt=""/);
+  assert.match(html, /<span>Zed &lt;Jr&gt;<\/span><\/a>/);
+  assert.match(html, /<a class="gear-head" href="#party\/zed"><img class="gear-who-portrait" src="assets\/portraits\/zed.jpg"/);
 });

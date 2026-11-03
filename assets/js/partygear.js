@@ -64,12 +64,16 @@ export function partyActs(profiles) {
   return ACT_ORDER.filter((act) => labels.has(act)).map((act) => ({ act, label: labels.get(act) }));
 }
 
-/** Who a cell belongs to. Hidden on wide screens, where the column headings say it; shown on phones. */
-function gearWho(profile) {
-  const face = profile.portrait
+/** A small portrait beside a character's name, or an empty frame until they have one. */
+function face(profile) {
+  return profile.portrait
     ? `<img class="gear-who-portrait" src="${esc(profile.portrait)}" alt="" width="32" height="38" loading="lazy" />`
     : `<span class="gear-who-portrait member-portrait-empty"></span>`;
-  return `<p class="gear-who">${face}<span>${esc(profile.name)}</span></p>`;
+}
+
+/** Who a cell belongs to, linking to their profile. Hidden on wide screens, where the column headings say it. */
+function gearWho(profile) {
+  return `<a class="gear-who" href="#party/${esc(profile.id)}">${face(profile)}<span>${esc(profile.name)}</span></a>`;
 }
 
 function gearCell(cell, byId) {
@@ -94,7 +98,10 @@ export function renderPartyGear(data, act) {
   const picks = profiles.map((p) => slotPicks(p, shown?.act));
   const slots = SLOT_ORDER.filter((slot) => picks.some((bySlot) => bySlot.has(slot)));
   const head = profiles
-    .map((p) => `<th scope="col"><a href="#party/${esc(p.id)}">${esc(p.name)}</a><span class="row-sub">${esc(p.title)}</span></th>`)
+    .map(
+      (p) =>
+        `<th scope="col"><a class="gear-head" href="#party/${esc(p.id)}">${face(p)}<span><span class="gear-head-name">${esc(p.name)}</span><span class="row-sub">${esc(p.title)}</span></span></a></th>`,
+    )
     .join("");
   const rows = slots
     .map(

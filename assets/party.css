@@ -21,6 +21,7 @@
 }
 
 .member {
+  position: relative;
   display: flex;
   gap: 1rem;
   padding: 1rem;
@@ -63,9 +64,28 @@
   font: 600 var(--step-2) / 1.15 var(--serif);
 }
 
-.party-gear-table thead th a {
+/* Column headings: each character's portrait beside their name and title, all one link. */
+.gear-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  text-decoration: none;
+}
+
+.gear-head-name {
+  display: block;
   color: var(--brass-strong);
   font: 600 var(--step-0) / 1.3 var(--serif);
+}
+
+.gear-head:hover .gear-head-name,
+.gear-head:focus-visible .gear-head-name {
+  text-decoration: underline;
+}
+
+.gear-head .row-sub {
+  color: var(--muted);
 }
 
 .party-gear-table td {
@@ -79,6 +99,14 @@
 /* A cell's owner: the column heading says it on wide screens, so this only shows on phones. */
 .gear-who {
   display: none;
+}
+
+.gear-who-portrait {
+  flex: none;
+  width: 32px;
+  height: 38px;
+  border-radius: 4px;
+  object-fit: cover;
 }
 
 .gear-others-label {
@@ -108,6 +136,27 @@
 
 .member-name a {
   color: var(--brass-strong);
+}
+
+/* The name link stretches over the whole card, so the portrait and blurb open the profile too. */
+.member-name a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+}
+
+.member:has(.member-name a:hover) {
+  border-color: var(--brass);
+}
+
+.member-name a:focus-visible {
+  outline: none;
+}
+
+.member-name a:focus-visible::after {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
 }
 
 .member-title {
@@ -926,6 +975,7 @@
 
   .party-gear-table .gear-who {
     display: flex;
+    text-decoration: none;
     align-items: center;
     gap: 0.6rem;
     margin: 0 0 0.45rem;
@@ -935,11 +985,4 @@
     font: 600 var(--step-1) / 1.2 var(--serif);
   }
 
-  .gear-who-portrait {
-    flex: none;
-    width: 32px;
-    height: 38px;
-    border-radius: 4px;
-    object-fit: cover;
-  }
 }
