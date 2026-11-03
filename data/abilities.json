@@ -265,6 +265,36 @@
   "wiki_url": "https://bg3.wiki/wiki/Accretion"
  },
  {
+  "id": "Actor",
+  "kind": "passive",
+  "name": "Actor",
+  "type": null,
+  "brief": null,
+  "description": "You have become a true thespian. Your Charisma increases by 1, to a maximum of 20. Your Proficiency Bonus is doubled for Deception and Performance checks.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/3f/Perform_Whistle_Icon.webp",
+  "links": [
+   {
+    "text": "Charisma",
+    "page": "Charisma",
+    "url": "https://bg3.wiki/wiki/Charisma"
+   },
+   {
+    "text": "Proficiency Bonus",
+    "page": "Proficiency Bonus",
+    "url": "https://bg3.wiki/wiki/Proficiency_Bonus"
+   },
+   {
+    "text": "checks",
+    "page": "Ability Check",
+    "url": "https://bg3.wiki/wiki/Ability_Check"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Actor"
+ },
+ {
   "id": "Adamantine Backlash",
   "kind": "passive",
   "name": "Adamantine Backlash",
@@ -458,6 +488,31 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/After_Death_Do_Us_Part_(passive_feature)"
+ },
+ {
+  "id": "Agonising Blast",
+  "kind": "passive",
+  "name": "Agonising Blast",
+  "type": null,
+  "brief": "Charisma modifier added to Eldritch Blast damage.",
+  "description": "When you cast Eldritch Blast, add your Charisma Modifier to the damage it deals, unless it is negative.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/9/9d/Agonising_Blast_Icon.webp",
+  "links": [
+   {
+    "text": "Eldritch Blast",
+    "page": "Eldritch Blast",
+    "url": "https://bg3.wiki/wiki/Eldritch_Blast"
+   },
+   {
+    "text": "Charisma",
+    "page": "Charisma",
+    "url": "https://bg3.wiki/wiki/Charisma"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Agonising_Blast"
  },
  {
   "id": "Alert",
@@ -910,6 +965,67 @@
   "wiki_url": "https://bg3.wiki/wiki/Arming_Enhancement"
  },
  {
+  "id": "Armour of Agathys",
+  "kind": "spell",
+  "name": "Armour of Agathys",
+  "type": null,
+  "brief": null,
+  "description": "Gain 5 temporary hit points and deal 5 Cold damage to any creature that hits you with a melee attack.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/2d/Armour_of_Agathys_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "temporary hit points",
+    "page": "temporary Hit Points",
+    "url": "https://bg3.wiki/wiki/temporary_Hit_Points"
+   },
+   {
+    "text": "Cold",
+    "page": "Cold",
+    "url": "https://bg3.wiki/wiki/Cold"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Armour_of_Agathys",
+  "spell_level": 1,
+  "school": "Abjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
+  "id": "Armour of Shadows",
+  "kind": "passive",
+  "name": "Armour of Shadows",
+  "type": null,
+  "brief": null,
+  "description": "You can cast Mage Armour on yourself at will, without expending a Spell Slot. Mage Armour increases your Armour Class when you are not wearing armour.",
+  "extra_description": "Mage Armour increases your Armour Class when you aren't wearing armour.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/0d/Mage_Armour_Icon.webp",
+  "links": [
+   {
+    "text": "Mage Armour",
+    "page": "Mage Armour",
+    "url": "https://bg3.wiki/wiki/Mage_Armour"
+   },
+   {
+    "text": "Spell Slot",
+    "page": "Spells",
+    "url": "https://bg3.wiki/wiki/Spells#Spell_Slots"
+   },
+   {
+    "text": "Armour Class",
+    "page": "Armour Class",
+    "url": "https://bg3.wiki/wiki/Armour_Class"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Armour_of_Shadows"
+ },
+ {
   "id": "Artificial Sight",
   "kind": "passive",
   "name": "Artificial Sight",
@@ -1175,6 +1291,32 @@
   "wiki_url": "https://bg3.wiki/wiki/Baneful_Strike"
  },
  {
+  "id": "Banishment",
+  "kind": "spell",
+  "name": "Banishment",
+  "type": null,
+  "brief": null,
+  "description": "Temporarily Banish your target to another plane of existence.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/e2/Banishment_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Banish",
+    "page": "Banished (Condition)",
+    "url": "https://bg3.wiki/wiki/Banished_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Banishment",
+  "spell_level": 4,
+  "school": "Abjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Battle Acuity",
   "kind": "passive",
   "name": "Battle Acuity",
@@ -1355,6 +1497,42 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Blessed_Mercy"
+ },
+ {
+  "id": "Blight",
+  "kind": "spell",
+  "name": "Blight",
+  "type": null,
+  "brief": null,
+  "description": "Deals 8d8 Necrotic damage to a target. Plants take maximum damage from this spell, and have Disadvantage on the Saving Throw against it.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/d/dc/Blight_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Necrotic",
+    "page": "Necrotic",
+    "url": "https://bg3.wiki/wiki/Necrotic"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Saving Throw",
+    "page": "Saving Throw",
+    "url": "https://bg3.wiki/wiki/Saving_Throw"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Blight",
+  "spell_level": 4,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "9 / 30"
  },
  {
   "id": "Blightbringer (passive feature)",
@@ -2687,6 +2865,26 @@
   "wiki_url": "https://bg3.wiki/wiki/Conductive_Strikes"
  },
  {
+  "id": "Cone of Cold",
+  "kind": "spell",
+  "name": "Cone of Cold",
+  "type": null,
+  "brief": null,
+  "description": "Make a flurry of frost, crisp air, and condensed snow crystals erupt from your hands.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/ee/Cone_of_Cold_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Cone_of_Cold",
+  "spell_level": 5,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "self"
+ },
+ {
   "id": "Conjure Barrage",
   "kind": "spell",
   "name": "Conjure Barrage",
@@ -2936,6 +3134,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Craterous_Wounds"
+ },
+ {
+  "id": "Create Undead",
+  "kind": "spell",
+  "name": "Create Undead",
+  "type": null,
+  "brief": null,
+  "description": "Create a corpse as a heinous mummy that fights by your side.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/f/fa/Create_Undead_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Create_Undead",
+  "spell_level": 6,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "3 / 10"
  },
  {
   "id": "Crimson Weapon",
@@ -3254,6 +3472,37 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Daredevil_Proximity"
+ },
+ {
+  "id": "Darkness",
+  "kind": "spell",
+  "name": "Darkness",
+  "type": null,
+  "brief": null,
+  "description": "Create a cloud of magical darkness that Heavily Obscures and inflicts Blind to creatures within. Creatures cannot make ranged attacks into or out of it.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/1d/Darkness_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Heavily Obscures",
+    "page": "Heavily Obscured (Condition)",
+    "url": "https://bg3.wiki/wiki/Heavily_Obscured_(Condition)"
+   },
+   {
+    "text": "Blind",
+    "page": "Blinded (Condition)",
+    "url": "https://bg3.wiki/wiki/Blinded_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Darkness",
+  "spell_level": 2,
+  "school": "Evocation",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Darkveil Precision",
@@ -3734,6 +3983,20 @@
   "wiki_url": "https://bg3.wiki/wiki/Demonspirit_Aura"
  },
  {
+  "id": "Devil's Sight",
+  "kind": "passive",
+  "name": "Devil's Sight",
+  "type": null,
+  "brief": "Can see in the dark, including magical darkness, up to 24 m (80 ft).",
+  "description": "You can see normally in darkness, both magical and non-magical, to a distance of 24 m (80 ft).",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/c0/Devils_Sight_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Devil's_Sight"
+ },
+ {
   "id": "Dextrous Evasion",
   "kind": "passive",
   "name": "Dextrous Evasion",
@@ -4124,6 +4387,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Effective_Transmitter"
+ },
+ {
+  "id": "Eldritch Blast",
+  "kind": "spell",
+  "name": "Eldritch Blast",
+  "type": null,
+  "brief": null,
+  "description": "Conjure a beam of crackling energy. Deals 1d10 Force damage to a target.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/3b/Eldritch_Blast_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Force",
+    "page": "Force",
+    "url": "https://bg3.wiki/wiki/Force"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Eldritch_Blast",
+  "spell_level": 0,
+  "school": "Evocation",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Electric Blood",
@@ -5002,6 +5291,26 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Exquisite_Focus"
+ },
+ {
+  "id": "Eyebite",
+  "kind": "spell",
+  "name": "Eyebite",
+  "type": null,
+  "brief": null,
+  "description": "Your eyes become black corridors walled in teeth, your gaze capable of inflicting dread, sickness, or putting creatures to sleep.",
+  "extra_description": "While Concentrating, you may cast Eyebite without expending a spell slot.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/ef/Eyebite_Panicked_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Eyebite",
+  "spell_level": 6,
+  "school": "Necromancy",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
  },
  {
   "id": "Faceless Masquerade",
@@ -7032,6 +7341,42 @@
   "range": "self"
  },
  {
+  "id": "Hex",
+  "kind": "spell",
+  "name": "Hex",
+  "type": null,
+  "brief": null,
+  "description": "Make your attacks deal an additional 1d6 Necrotic damage to the target and give it Disadvantage on an Ability of your choosing.",
+  "extra_description": "If the target dies before the spell ends, you can Reapply Hex to a new creature without expending a Spell Slot.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/a/ad/Hex_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Necrotic",
+    "page": "Necrotic",
+    "url": "https://bg3.wiki/wiki/Necrotic"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Ability",
+    "page": "Ability Scores",
+    "url": "https://bg3.wiki/wiki/Ability_Scores"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Hex",
+  "spell_level": 1,
+  "school": "Enchantment",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "bonus",
+  "range": "ranged"
+ },
+ {
   "id": "Hiemal Strike",
   "kind": "action",
   "name": "Hiemal Strike",
@@ -7117,6 +7462,52 @@
   "wiki_url": "https://bg3.wiki/wiki/Hoarfrost_Balance"
  },
  {
+  "id": "Hold Monster",
+  "kind": "spell",
+  "name": "Hold Monster",
+  "type": null,
+  "brief": null,
+  "description": "Paralyse a creature. It can't move, act, or react. Attacks from within 3 m (10 ft) are always critical hits.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/10/Hold_Monster_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Paralyse",
+    "page": "Hold Monster (Condition)",
+    "url": "https://bg3.wiki/wiki/Hold_Monster_(Condition)"
+   },
+   {
+    "text": "move",
+    "page": "Movement Speed",
+    "url": "https://bg3.wiki/wiki/Movement_Speed"
+   },
+   {
+    "text": "act",
+    "page": "Action",
+    "url": "https://bg3.wiki/wiki/Action"
+   },
+   {
+    "text": "react",
+    "page": "Reactions",
+    "url": "https://bg3.wiki/wiki/Reactions"
+   },
+   {
+    "text": "critical hit",
+    "page": "critical hit",
+    "url": "https://bg3.wiki/wiki/critical_hit"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Hold_Monster",
+  "spell_level": 5,
+  "school": "Enchantment",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
+ },
+ {
   "id": "Hold Person",
   "kind": "spell",
   "name": "Hold Person",
@@ -7200,6 +7591,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Hot_Little_Hands"
+ },
+ {
+  "id": "Hunger of Hadar",
+  "kind": "spell",
+  "name": "Hunger of Hadar",
+  "type": null,
+  "brief": null,
+  "description": "Creatures within this black sphere are Blinded and take damage at the end of their turn and the start of their turn.",
+  "extra_description": "Creatures starting their turn in the area take 2d6 Cold damage. Creatures ending their turn in the area possibly take 2d6 Acid damage.\nThe area is Difficult Terrain.",
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/1/19/Hunger_of_Hadar_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Blinded",
+    "page": "Blinded (Condition)",
+    "url": "https://bg3.wiki/wiki/Blinded_(Condition)"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Hunger_of_Hadar",
+  "spell_level": 3,
+  "school": "Conjuration",
+  "concentration": true,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Hunter's Eye",
@@ -8839,6 +9256,26 @@
   "range": "melee"
  },
  {
+  "id": "Mage Hand",
+  "kind": "spell",
+  "name": "Mage Hand",
+  "type": null,
+  "brief": null,
+  "description": "Create a spectral hand that can manipulate and interact with objects.",
+  "extra_description": null,
+  "recharge": "Short Rest",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/03/Mage_Hand_Unfaded_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Mage_Hand",
+  "spell_level": 0,
+  "school": "Conjuration",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Mage Hand Legerdemain",
   "kind": "passive",
   "name": "Mage Hand Legerdemain",
@@ -9232,6 +9669,31 @@
   "range": null
  },
  {
+  "id": "Minions of Chaos",
+  "kind": "passive",
+  "name": "Minions of Chaos",
+  "type": null,
+  "brief": null,
+  "description": "You can cast Conjure Elemental with a Warlock spell slot.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/b/b1/Minions_of_Chaos_Icon.webp",
+  "links": [
+   {
+    "text": "Conjure Elemental",
+    "page": "Conjure Elemental",
+    "url": "https://bg3.wiki/wiki/Conjure_Elemental"
+   },
+   {
+    "text": "spell slot",
+    "page": "Spell Slot",
+    "url": "https://bg3.wiki/wiki/Spell_Slot"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Minions_of_Chaos"
+ },
+ {
   "id": "Minor Illusion",
   "kind": "spell",
   "name": "Minor Illusion",
@@ -9250,6 +9712,31 @@
   "ritual": null,
   "action_type": "action",
   "range": "18 / 60"
+ },
+ {
+  "id": "Mire the Mind",
+  "kind": "passive",
+  "name": "Mire the Mind",
+  "type": null,
+  "brief": null,
+  "description": "You can cast Slow with a Warlock spell slot.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/4/43/Mire_the_Mind_Icon.webp",
+  "links": [
+   {
+    "text": "Slow",
+    "page": "Slow",
+    "url": "https://bg3.wiki/wiki/Slow"
+   },
+   {
+    "text": "spell slot",
+    "page": "Spell Slot",
+    "url": "https://bg3.wiki/wiki/Spell_Slot"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Mire_the_Mind"
  },
  {
   "id": "Mirror Image",
@@ -9975,6 +10462,36 @@
   "wiki_url": "https://bg3.wiki/wiki/Overheat"
  },
  {
+  "id": "Pact of the Tome",
+  "kind": "passive",
+  "name": "Pact of the Tome",
+  "type": null,
+  "brief": null,
+  "description": "Your patron grants you a grimoire called \"The Book of Shadows\", which allows you to cast Guidance, Vicious Mockery, and Thorn Whip.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/3/3e/Pact_of_the_Tome_Icon.webp",
+  "links": [
+   {
+    "text": "Guidance",
+    "page": "Guidance",
+    "url": "https://bg3.wiki/wiki/Guidance"
+   },
+   {
+    "text": "Vicious Mockery",
+    "page": "Vicious Mockery",
+    "url": "https://bg3.wiki/wiki/Vicious_Mockery"
+   },
+   {
+    "text": "Thorn Whip",
+    "page": "Thorn Whip",
+    "url": "https://bg3.wiki/wiki/Thorn_Whip"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Pact_of_the_Tome"
+ },
+ {
   "id": "Paralysing Critical",
   "kind": "passive",
   "name": "Paralysing Critical",
@@ -10081,6 +10598,36 @@
   "icon_url": "https://bg3.wiki/w/images/b/b6/Dueller%27s_Enthusiasm.webp",
   "links": [],
   "wiki_url": "https://bg3.wiki/wiki/Perfectly_Balanced_Strike"
+ },
+ {
+  "id": "Performer",
+  "kind": "passive",
+  "name": "Performer",
+  "type": null,
+  "brief": null,
+  "description": "You gain Instruments proficiency, and your Charisma increases by 1, to a maximum of 20.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": null,
+  "links": [
+   {
+    "text": "Instruments",
+    "page": "Instruments",
+    "url": "https://bg3.wiki/wiki/Instruments"
+   },
+   {
+    "text": "proficiency",
+    "page": "proficiency",
+    "url": "https://bg3.wiki/wiki/proficiency"
+   },
+   {
+    "text": "Charisma",
+    "page": "Charisma",
+    "url": "https://bg3.wiki/wiki/Charisma"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Performer"
  },
  {
   "id": "Personal Space",
@@ -11311,6 +11858,26 @@
   "ritual": null,
   "action_type": "action",
   "range": "melee"
+ },
+ {
+  "id": "Repelling Blast",
+  "kind": "passive",
+  "name": "Repelling Blast",
+  "type": null,
+  "brief": "Eldritch Blast can push away a creature up to 4.5 m (15 ft).",
+  "description": "When you hit a creature with Eldritch Blast, you can push the creature up to 4.5 m (15 ft) away from you.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/6/65/Repelling_Blast_Icon.webp",
+  "links": [
+   {
+    "text": "Eldritch Blast",
+    "page": "Eldritch Blast",
+    "url": "https://bg3.wiki/wiki/Eldritch_Blast"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Repelling_Blast"
  },
  {
   "id": "Reposition Malefactor",
@@ -13190,6 +13757,31 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Spell_Resistance"
+ },
+ {
+  "id": "Spell Sniper",
+  "kind": "passive",
+  "name": "Spell Sniper",
+  "type": null,
+  "brief": null,
+  "description": "The number you need to roll a Critical Hit while attacking with a Spell is reduced by 1. This effect can stack.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/b/b0/Spell_Sniper_Icon.webp",
+  "links": [
+   {
+    "text": "Critical Hit",
+    "page": "Critical Hit",
+    "url": "https://bg3.wiki/wiki/Critical_Hit"
+   },
+   {
+    "text": "Spell",
+    "page": "Spells",
+    "url": "https://bg3.wiki/wiki/Spells"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Spell_Sniper"
  },
  {
   "id": "Spellguard",

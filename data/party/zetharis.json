@@ -1,0 +1,119 @@
+{
+ "id": "zetharis",
+ "style": "options",
+ "name": "Zetharis",
+ "title": "Hexblade Warlock",
+ "classes": "Warlock 12 (The Hexblade)",
+ "role": "The party's Eldritch Blast turret: Charisma added to every beam twice in the Potent Robe, with a shield and the Shield spell to stay standing.",
+
+ "spells": [
+  {"label": "Cantrips", "from": 1, "abilities": ["Eldritch Blast", "Minor Illusion", "Mage Hand"]},
+  {"label": "Level 1 spells", "from": 1, "abilities": ["Hex", "Shield (spell)", "Armour of Agathys"]},
+  {"label": "Level 2 spells", "from": 3, "abilities": ["Misty Step", "Hold Person", "Darkness"]},
+  {"label": "Level 3 spells", "from": 5, "abilities": ["Hunger of Hadar", "Counterspell", "Fear"]},
+  {"label": "Level 4 spells", "from": 7, "abilities": ["Banishment", "Blight"]},
+  {"label": "Level 5 spells", "from": 9, "abilities": ["Cone of Cold", "Hold Monster"]},
+  {"label": "Level 6 spells", "from": 11, "abilities": ["Create Undead", "Eyebite"]}
+ ],
+
+ "levels": [
+  {"level": 2, "picks": [{"label": "Invocations", "entries": [{"ability": "Agonising Blast", "note": "adds your CHA to every Eldritch Blast beam"}, {"ability": "Repelling Blast", "note": "each beam can push its target, off ledges and into hazards"}]}]},
+  {"level": 3, "picks": [{"label": "Pact boon", "entries": [{"ability": "Pact of the Tome", "note": "extra cantrips; from level 5 also Haste (an extra action: another Eldritch Blast), Call Lightning and Animate Dead"}]}]},
+  {"level": 4, "picks": [{"label": "Feat", "entries": [{"ability": "Actor", "note": "+1 CHA for 18, and double proficiency on Deception and Performance"}, {"ability": "Performer", "note": "+1 CHA for 18, and instrument proficiency"}]}]},
+  {"level": 5, "picks": [{"label": "Invocation", "entries": [{"ability": "Devil's Sight", "note": "see in magical Darkness: blast from inside your own Darkness spell"}, {"ability": "Armour of Shadows", "note": "Mage Armour at will, for AC in the robe"}]}]},
+  {"level": 7, "picks": [{"label": "Invocation", "entries": [{"ability": "Devil's Sight", "note": "if you skipped it at level 5"}, {"ability": "Armour of Shadows", "note": "if you skipped it at level 5"}]}]},
+  {"level": 8, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 CHA for 20"}]}]},
+  {"level": 9, "picks": [{"label": "Invocation", "entries": [{"ability": "Mire the Mind", "note": "cast Slow with a Warlock spell slot"}, {"ability": "Minions of Chaos", "note": "cast Conjure Elemental with a Warlock spell slot"}]}]},
+  {"level": 12, "picks": [{"label": "Feat", "entries": [{"ability": "Spell Sniper", "note": "crit range −1 on spell attacks, so every beam crits more often"}, {"ability": "Alert", "note": "+5 initiative, can't be surprised"}]}, {"label": "Invocation", "entries": [{"ability": "Mire the Mind", "note": "if you skipped it at level 9"}, {"ability": "Minions of Chaos", "note": "if you skipped it at level 9"}]}]}
+ ],
+
+ "gear": [
+  {"item": "Circlet of Blasting", "tags": ["damage"], "note": "Scorching Ray once a day."},
+  {"item": "Haste Helm", "tags": ["utility"], "note": "Extra movement for 3 turns at the start of combat."},
+  {"item": "Adamantine Scale Mail", "tags": ["survival"], "note": "Medium armour: crits can't land on you. For before you have the robe."},
+  {"item": "Daredevil Gloves", "tags": ["accuracy"], "note": "+1 to spell attack rolls, which every beam uses."},
+  {"item": "Gloves of Dexterity", "tags": ["accuracy"], "note": "+1 to attack rolls, spells included."},
+  {"item": "Boots of Striding", "tags": ["concentration"], "note": "While concentrating on Hex, you can't be knocked Prone or moved."},
+  {"item": "Disintegrating Night Walkers", "tags": ["utility"], "note": "Bonus-action Misty Step each short rest; immune to webs, grease and ice."},
+  {"item": "Pearl of Power Amulet", "tags": ["utility"], "note": "Restore a spell slot up to 3rd level once a day: big for a Warlock's two slots."},
+  {"item": "Amulet of Misty Step", "tags": ["utility"], "note": "Bonus-action Misty Step each short rest."},
+  {"item": "Ring of Protection", "tags": ["survival"], "note": "+1 AC and saves."},
+  {"item": "The Spellsparkler", "tags": ["damage"], "note": "Spell and cantrip damage gives Lightning Charges, every beam included."},
+  {"item": "Potent Robe", "tags": ["damage", "survival"], "note": "Adds your CHA to cantrip damage, so each beam gets it twice with Agonising Blast; temporary HP every turn."},
+  {"item": "Yuan-Ti Scale Mail", "tags": ["survival"], "note": "Medium armour that adds full DEX, for before you have the robe."},
+  {"item": "Covert Cowl", "tags": ["crit"], "note": "Crit range −1 while you're obscured: blast from inside your Darkness."},
+  {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves."},
+  {"item": "Spineshudder Amulet", "tags": ["control"], "note": "Ranged spell attacks add Reverberation, so every beam stacks it."},
+  {"item": "Spellcrux Amulet", "tags": ["utility"], "note": "Restore one spell slot of any level once a day."},
+  {"item": "Callous Glow Ring", "tags": ["damage"], "note": "+2 radiant damage per beam against lit targets."},
+  {"item": "Coruscation Ring", "tags": ["control"], "note": "Spell damage while you're lit adds Radiating Orb, which also lights the target for Callous Glow."},
+  {"item": "Risky Ring", "tags": ["accuracy"], "note": "Advantage on attack rolls, Disadvantage on saves."},
+  {"item": "Killer's Sweetheart", "tags": ["crit"], "note": "After a kill, your next attack is a crit, once a day."},
+  {"item": "Incandescent Staff", "tags": ["accuracy"], "note": "+1 to ranged spell attacks, plus Fireball once a day."},
+  {"item": "Shield of Devotion", "tags": ["utility"], "note": "An extra 1st-level spell slot and a self-Aid."},
+  {"item": "Birthright", "tags": ["damage"], "note": "+2 CHA (up to 22): +2 on every beam, twice over in the robe."},
+  {"item": "Hood of the Weave", "tags": ["accuracy"], "note": "+2 to spell attack rolls and save DC."},
+  {"item": "Sarevok's Horned Helmet", "tags": ["crit"], "note": "Crit range −1."},
+  {"item": "Hat of the Sharp Caster", "tags": ["damage"], "note": "Rerolls 1s and 2s on spell attack damage dice."},
+  {"item": "Cloak of Displacement", "tags": ["survival"], "note": "Attacks against you have Disadvantage until you take damage."},
+  {"item": "Quickspell Gloves", "tags": ["damage"], "note": "Once per short rest, a cantrip costs a bonus action: a second Eldritch Blast that turn."},
+  {"item": "Spellmight Gloves", "tags": ["damage"], "note": "−5 to hit for +1d8 damage on spell attacks, toggled."},
+  {"item": "Craterflesh Gloves", "tags": ["crit"], "note": "+1d6 force on every crit."},
+  {"item": "Helldusk Gloves", "tags": ["accuracy"], "note": "+1 to spell attack rolls and save DC."},
+  {"item": "Helldusk Boots", "tags": ["survival"], "note": "Can't be pushed, and can turn a failed save into a success."},
+  {"item": "Fey Semblance Amulet", "tags": ["survival"], "note": "Advantage on INT, WIS and CHA saves."},
+  {"item": "Markoheshkir", "tags": ["accuracy", "utility"], "note": "+1 spell attack and save DC, and one free spell a day."},
+  {"item": "Staff of Spellpower", "tags": ["accuracy", "utility"], "note": "+1 spell attack and save DC, and one free spell a day."},
+  {"item": "Shield of Shielding", "tags": ["survival"], "note": "Cast Shield once a day without a slot."},
+  {"item": "Viconia's Walking Fortress", "tags": ["survival"], "note": "+3 AC, and enemy spell attacks have Disadvantage."}
+ ],
+
+ "loadouts": [
+  {
+   "act": "one",
+   "label": "Act 1",
+   "intro": "Medium armour and a shield until the robe; one beam until level 5.",
+   "slots": [
+    {"slot": "Head", "items": ["Circlet of Blasting", "Haste Helm"]},
+    {"slot": "Body", "items": ["Adamantine Scale Mail"]},
+    {"slot": "Gloves", "items": ["Daredevil Gloves", "Gloves of Dexterity"]},
+    {"slot": "Boots", "items": ["Boots of Striding", "Disintegrating Night Walkers"]},
+    {"slot": "Amulet", "items": ["Pearl of Power Amulet", "Amulet of Misty Step"]},
+    {"slot": "Rings", "items": ["Ring of Protection"]},
+    {"slot": "Main hand", "items": ["The Spellsparkler"]}
+   ]
+  },
+  {
+   "act": "two",
+   "label": "Act 2",
+   "intro": "The Potent Robe arrives: each beam adds your CHA twice from here on.",
+   "slots": [
+    {"slot": "Head", "items": ["Covert Cowl"]},
+    {"slot": "Cloak", "items": ["Cloak of Protection"]},
+    {"slot": "Body", "items": ["Potent Robe", "Yuan-Ti Scale Mail"]},
+    {"slot": "Gloves", "items": ["Daredevil Gloves"]},
+    {"slot": "Boots", "items": ["Boots of Striding"]},
+    {"slot": "Amulet", "items": ["Spineshudder Amulet", "Spellcrux Amulet"]},
+    {"slot": "Rings", "items": ["Callous Glow Ring", "Coruscation Ring", "Risky Ring", "Killer's Sweetheart"]},
+    {"slot": "Main hand", "items": ["Incandescent Staff", "The Spellsparkler"]},
+    {"slot": "Off hand", "items": ["Shield of Devotion"]}
+   ]
+  },
+  {
+   "act": "three",
+   "label": "Act 3",
+   "intro": "Three beams from level 10: stack Charisma, crit range or a second blast a turn.",
+   "slots": [
+    {"slot": "Head", "items": ["Birthright", "Hood of the Weave", "Sarevok's Horned Helmet", "Hat of the Sharp Caster"]},
+    {"slot": "Cloak", "items": ["Cloak of Displacement", "Cloak of Protection"]},
+    {"slot": "Body", "items": ["Potent Robe"]},
+    {"slot": "Gloves", "items": ["Quickspell Gloves", "Spellmight Gloves", "Craterflesh Gloves", "Helldusk Gloves"]},
+    {"slot": "Boots", "items": ["Helldusk Boots", "Boots of Striding"]},
+    {"slot": "Amulet", "items": ["Fey Semblance Amulet", "Spellcrux Amulet"]},
+    {"slot": "Rings", "items": ["Callous Glow Ring", "Killer's Sweetheart", "Risky Ring"]},
+    {"slot": "Main hand", "items": ["Markoheshkir", "Staff of Spellpower"]},
+    {"slot": "Off hand", "items": ["Viconia's Walking Fortress", "Shield of Shielding"]}
+   ]
+  }
+ ]
+}
