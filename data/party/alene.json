@@ -7,18 +7,16 @@
  "role": "The party's spell save DC caster and only healer: control spells under a Starry Form, radiant debuffs on the side.",
 
  "levels": [
-  {"level": 1, "gains": "Spellcasting from the whole Druid list.", "picks": [{"label": "Cantrips", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Shillelagh", "Resistance (Cantrip)", "Poison Spray"]}, {"label": "Spells worth preparing", "abilities": ["Healing Word", "Faerie Fire", "Entangle", "Thunderwave", "Ice Knife", "Fog Cloud", "Create or Destroy Water"]}]},
-  {"level": 2, "gains": "Circle of the Stars: Wild Shape, Starry Form and the Star Map's free Guiding Bolts.", "abilities": ["Starry Form: Dragon", "Starry Form: Archer", "Starry Form: Chalice", "Guiding Bolt"]},
-  {"level": 3, "gains": "2nd-level spells.", "picks": [{"label": "Spells worth preparing", "abilities": ["Spike Growth", "Hold Person", "Moonbeam", "Pass Without Trace", "Lesser Restoration", "Heat Metal"]}]},
-  {"level": 4, "gains": "Feat, third cantrip, more Wild Shape forms.", "picks": [{"label": "Feat", "options": ["Ability Improvement: +2 WIS", "Alert: go first and can't be surprised", "War Caster: Advantage on concentration saves", "Resilient: +1 CON and CON save proficiency"]}, {"label": "Cantrip", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}]},
-  {"level": 5, "gains": "3rd-level spells; Dazzling Breath reaches 3d6.", "picks": [{"label": "Spells worth preparing", "abilities": ["Call Lightning", "Plant Growth", "Sleet Storm"]}]},
-  {"level": 6, "gains": "Cosmic Omen (Weal or Woe, decided each long rest).", "abilities": ["Cosmic Omen"]},
-  {"level": 7, "gains": "4th-level spells: Druid's biggest jump.", "picks": [{"label": "Spells worth preparing", "abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire", "Confusion", "Polymorph", "Blight", "Conjure Minor Elemental"]}]},
-  {"level": 8, "gains": "Feat and more Wild Shape forms.", "picks": [{"label": "Feat", "options": ["Ability Improvement: +2 WIS, or +1 WIS and +1 CON", "Alert", "War Caster: worth it now if you'll leave Dragon form from level 10", "Resilient: +1 CON and CON save proficiency"]}]},
-  {"level": 9, "gains": "5th-level spells; Cosmic Omen uses rise to 4.", "picks": [{"label": "Spells worth preparing", "abilities": ["Insect Plague", "Wall of Stone", "Conjure Elemental", "Mass Cure Wounds", "Greater Restoration"]}]},
-  {"level": 10, "gains": "Twinkling Constellations: forms improve to 2d8, Dragon can fly, and you can swap forms for free once per turn.", "abilities": ["Twinkling Constellations"], "picks": [{"label": "Cantrip", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}]},
-  {"level": 11, "gains": "One 6th-level slot.", "picks": [{"label": "Spells worth preparing", "abilities": ["Sunbeam", "Heal", "Heroes' Feast", "Wall of Thorns"]}]},
-  {"level": 12, "gains": "Final feat.", "picks": [{"label": "Feat", "options": ["Ability Improvement: WIS to 20", "Alert", "War Caster", "Resilient", "Tough: +2 HP per level"]}]}
+  {"level": 1, "picks": [{"label": "Cantrips", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Shillelagh", "Resistance (Cantrip)", "Poison Spray"]}, {"label": "Spells worth preparing", "abilities": ["Healing Word", "Faerie Fire", "Entangle", "Thunderwave", "Ice Knife", "Fog Cloud", "Create or Destroy Water"]}]},
+  {"level": 3, "picks": [{"label": "Spells worth preparing", "abilities": ["Spike Growth", "Hold Person", "Moonbeam", "Pass Without Trace", "Lesser Restoration", "Heat Metal"]}]},
+  {"level": 4, "picks": [{"label": "Feat", "options": ["Ability Improvement: +2 WIS", "Alert: go first and can't be surprised", "War Caster: Advantage on concentration saves", "Resilient: +1 CON and CON save proficiency"]}, {"label": "Cantrip", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}]},
+  {"level": 5, "picks": [{"label": "Spells worth preparing", "abilities": ["Call Lightning", "Plant Growth", "Sleet Storm"]}]},
+  {"level": 7, "picks": [{"label": "Spells worth preparing", "abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire", "Confusion", "Polymorph", "Blight", "Conjure Minor Elemental"]}]},
+  {"level": 8, "picks": [{"label": "Feat", "options": ["Ability Improvement: +2 WIS, or +1 WIS and +1 CON", "Alert", "War Caster: worth it now if you'll leave Dragon form from level 10", "Resilient: +1 CON and CON save proficiency"]}]},
+  {"level": 9, "picks": [{"label": "Spells worth preparing", "abilities": ["Insect Plague", "Wall of Stone", "Conjure Elemental", "Mass Cure Wounds", "Greater Restoration"]}]},
+  {"level": 10, "picks": [{"label": "Cantrip", "abilities": ["Guidance", "Produce Flame", "Thorn Whip", "Resistance (Cantrip)", "Shillelagh"]}]},
+  {"level": 11, "picks": [{"label": "Spells worth preparing", "abilities": ["Sunbeam", "Heal", "Heroes' Feast", "Wall of Thorns"]}]},
+  {"level": 12, "picks": [{"label": "Feat", "options": ["Ability Improvement: WIS to 20", "Alert", "War Caster", "Resilient", "Tough: +2 HP per level"]}]}
  ],
 
  "gear": [

@@ -28,6 +28,7 @@ const progressById = new Map();
 const viewingById = new Map();
 let hideGot = false;
 let loadoutAct = null;
+let levelTier = null;
 
 function progressFor(profileId) {
   if (!progressById.has(profileId)) progressById.set(profileId, loadProgress(profileId));
@@ -135,7 +136,7 @@ export function renderParty(view, data, route) {
     view.innerHTML = `
       <article class="profile" data-profile="${esc(profile.id)}">
         ${profileHeader(profile)}
-        <div class="profile-body">${renderPicksPage(profile, data, progress, hideGot, loadoutAct)}</div>
+        <div class="profile-body">${renderPicksPage(profile, data, progress, { hideGot, loadoutAct, levelTier })}</div>
       </article>`;
     return;
   }
@@ -173,6 +174,12 @@ export function initParty(view, rerender) {
       loadoutAct = act.dataset.loadoutAct;
       rerender();
       return view.querySelector(`[data-loadout-act="${CSS.escape(loadoutAct)}"]`)?.focus({ preventScroll: true });
+    }
+    const tier = event.target.closest("[data-level-tier]");
+    if (tier) {
+      levelTier = tier.dataset.levelTier;
+      rerender();
+      return view.querySelector(`[data-level-tier="${CSS.escape(levelTier)}"]`)?.focus({ preventScroll: true });
     }
     const reached = event.target.closest("[data-level-reached]");
     if (reached) {

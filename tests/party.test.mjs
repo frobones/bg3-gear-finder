@@ -4,13 +4,13 @@ import { test } from "node:test";
 
 import { abilityFacts, abilityName } from "../assets/js/abilities.js";
 import { wantedByItem } from "../assets/js/data.js";
-import { partyPlans } from "../assets/js/detail.js";
+import { partyPlans, renderAbilityDetail } from "../assets/js/detail.js";
 import { entryTags } from "../assets/js/html.js";
 import { planGroups, renderGearTab, renderLoadouts } from "../assets/js/gearplan.js";
 import { levelLearning, renderPlaybookTab } from "../assets/js/guides.js";
 import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
 import { parsePartyRoute } from "../assets/js/party.js";
-import { renderLevelPicks, renderPicksPage } from "../assets/js/picks.js";
+import { renderLevelPicks, renderPicksPage, spellLink } from "../assets/js/picks.js";
 import { emptyProgress, sanitizeProgress, toggleInList } from "../assets/js/progress.js";
 
 const abilities = new Map([
@@ -189,33 +189,57 @@ test("a full plan's gear tab puts the loadout summary before the checklist", () 
   assert.ok(html.indexOf("End-of-act loadout") < html.indexOf("Item checklist"));
 });
 
-test("renderLevelPicks lists what each level gives and its good picks, spells as pop-outs", () => {
-  const html = renderLevelPicks(
-    {
-      levels: [
-        { level: 1, gains: "Spellcasting.", picks: [{ label: "Cantrips", abilities: ["Sleep"] }] },
-        { level: 4, gains: "Feat.", picks: [{ label: "Feat", options: ["Alert: go first"] }] },
-      ],
-    },
-    abilities,
-  );
-  assert.match(html, /Good picks by level/);
-  assert.match(html, /<h4>Cantrips<\/h4><ul class="pill-list"><li><button[^>]*data-ability="Sleep"/);
-  assert.match(html, /<h4>Feat<\/h4><ul class="option-list"><li>Alert: go first<\/li>/);
-  assert.ok(html.indexOf("Spellcasting.") < html.indexOf("Feat."));
+test("renderLevelPicks shows one level range, spells as item-style links and written picks as name + note", () => {
+  const profile = {
+    levels: [
+      { level: 1, picks: [{ label: "Cantrips", abilities: ["Sleep", "Unknown Spell"] }] },
+      { level: 4, picks: [{ label: "Feat", options: ["Alert: go first"] }] },
+      { level: 5, picks: [{ label: "Spells", abilities: ["Magic Missile"] }] },
+    ],
+  };
+  const early = renderLevelPicks(profile, abilities, "1-4");
+  assert.match(early, /data-level-tier="1-4" aria-pressed="true"/);
+  assert.match(early, /Level 1<span class="row-sub">Cantrips<\/span>/);
+  assert.match(early, /<button type="button" class="item-link spell-link" data-spell="Sleep">/);
+  assert.match(early, /<span class="plain-item">Unknown Spell<\/span>/);
+  assert.match(early, /<span class="pick-name">Alert<\/span> <span class="pick-note">go first<\/span>/);
+  assert.doesNotMatch(early, /Magic Missile/);
+  assert.match(renderLevelPicks(profile, abilities, "5-8"), /data-spell="Magic Missile"/);
 });
 
-test("a friend's page shows picks by level, then by act, then the checklist", () => {
+test("spellLink falls back to plain text for names the snapshot doesn't have", () => {
+  assert.equal(spellLink("Made Up", abilities), '<span class="plain-item">Made Up</span>');
+});
+
+test("a friend's page shows picks by act, then by level, then the checklist", () => {
   const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
   const data = { byId: new Map([["Hood", item("Hood")]]), abilities };
   const profile = {
     style: "options",
-    levels: [{ level: 1, gains: "Spellcasting." }],
+    levels: [{ level: 1, picks: [{ label: "Cantrips", abilities: ["Sleep"] }] }],
     gear: [{ item: "Hood", tags: ["dc"] }],
     loadouts: [{ act: "one", label: "Act 1", intro: "", slots: [{ slot: "Head", items: ["Hood"] }] }],
   };
-  const html = renderPicksPage(profile, data, emptyProgress(), false, null);
-  const order = ["Good picks by level", "Good picks by act", "Item checklist"].map((h) => html.indexOf(h));
+  const html = renderPicksPage(profile, data, emptyProgress(), { hideGot: false, loadoutAct: null, levelTier: null });
+  const order = ["Good picks by act", "Good picks by level", "Item checklist"].map((h) => html.indexOf(h));
   assert.ok(order.every((at) => at >= 0));
   assert.deepEqual(order, [...order].sort((a, b) => a - b));
+});
+
+test("renderAbilityDetail fills the side panel with the spell's facts and description", () => {
+  const panel = { innerHTML: "", hidden: true, scrollTop: 5 };
+  renderAbilityDetail(panel, {
+    name: "Hold <Person>",
+    kind: "spell",
+    spell_level: 2,
+    school: "Enchantment",
+    description: "Hold a humanoid.",
+    wiki_url: "https://bg3.wiki/wiki/Hold_Person",
+  });
+  assert.equal(panel.hidden, false);
+  assert.equal(panel.scrollTop, 0);
+  assert.match(panel.innerHTML, /Hold &lt;Person&gt;/);
+  assert.match(panel.innerHTML, /Level 2 spell/);
+  assert.match(panel.innerHTML, /<li>Enchantment<\/li>/);
+  assert.match(panel.innerHTML, /href="https:\/\/bg3.wiki\/wiki\/Hold_Person"/);
 });

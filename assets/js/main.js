@@ -2,7 +2,7 @@
 
 import { initAbilityPopovers } from "./abilities.js";
 import { loadData } from "./data.js";
-import { renderDetail } from "./detail.js";
+import { renderAbilityDetail, renderDetail } from "./detail.js";
 import { isFiltering, matchesItem, populateControls, readFilters } from "./filters.js";
 import { esc } from "./html.js";
 import { renderJourney } from "./journey.js";
@@ -61,6 +61,16 @@ function openDetail(id, opener) {
   detail.querySelector("[data-close]").focus({ preventScroll: true });
 }
 
+function openSpell(name, opener) {
+  const ability = data.abilities.get(name);
+  if (!ability) return;
+  lastOpener = opener;
+  popovers.hide();
+  renderAbilityDetail(detail, ability);
+  document.body.classList.add("detail-open");
+  detail.querySelector("[data-close]").focus({ preventScroll: true });
+}
+
 function closeDetail() {
   popovers.hide();
   detail.hidden = true;
@@ -88,6 +98,8 @@ function wireEvents() {
   document.addEventListener("click", (event) => {
     const itemLink = event.target.closest("[data-item]");
     if (itemLink) return openDetail(itemLink.dataset.item, itemLink);
+    const spellLink = event.target.closest("[data-spell]");
+    if (spellLink) return openSpell(spellLink.dataset.spell, spellLink);
     if (event.target.closest("[data-close]")) return closeDetail();
     const sortButton = event.target.closest("[data-sort]");
     if (sortButton) {

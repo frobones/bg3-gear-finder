@@ -497,41 +497,36 @@
   margin-left: 0.35rem;
 }
 
-/* Good picks by level: what a level gives, then each group of picks under a small heading. */
-.level-gains {
-  margin: 0.4rem 0 0;
-}
-
-.pick-group {
-  margin-top: 0.6rem;
-}
-
-.profile-body .pick-group h4 {
-  margin: 0;
+/* Good picks by level, laid out like the gear buckets: spells read as items, written picks as name + note. */
+.row-sub {
+  display: block;
   color: var(--muted);
   font: 400 var(--step--1) / 1.4 var(--sans);
 }
 
-.pick-group .pill-list,
-.pick-group .option-list {
-  font: 600 var(--step-0) / 1.5 var(--serif);
+.spell-link {
+  color: var(--brass-strong);
 }
 
-.level-picks tbody th {
-  width: 4rem;
+.spell-name {
+  color: var(--brass-strong);
+}
+
+.pick-name {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  font: 600 var(--step-0) / 1.25 var(--serif);
+}
+
+.pick-note {
+  margin-left: 0.4rem;
+  color: var(--muted);
+  font-size: var(--step--1);
 }
 
 .checklist-heading {
   margin-top: 2rem;
-}
-
-.option-list {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.option-list li + li {
-  margin-top: 0.2rem;
 }
 
 .plan-tools {

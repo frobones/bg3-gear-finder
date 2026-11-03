@@ -2770,41 +2770,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Corrosive_Strike"
  },
  {
-  "id": "Cosmic Omen",
-  "kind": "passive",
-  "name": "Cosmic Omen",
-  "type": null,
-  "brief": null,
-  "description": "Whenever you Long Rest, you consult the stars for a Cosmic Omen of Weal or of Woe. The omen grants you the ability to increase (Weal) or decrease (Woe) Attack Rolls or Saving Throws, or (Weal only) to increase your allies' Ability Checks.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/3/33/Cosmic_Omen_Icon.webp",
-  "links": [
-   {
-    "text": "Long Rest",
-    "page": "Long Rest",
-    "url": "https://bg3.wiki/wiki/Long_Rest"
-   },
-   {
-    "text": "Attack Roll",
-    "page": "Attack Roll",
-    "url": "https://bg3.wiki/wiki/Attack_Roll"
-   },
-   {
-    "text": "Saving Throw",
-    "page": "Saving Throw",
-    "url": "https://bg3.wiki/wiki/Saving_Throw"
-   },
-   {
-    "text": "Ability Checks",
-    "page": "Ability Checks",
-    "url": "https://bg3.wiki/wiki/Ability_Checks"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Cosmic_Omen"
- },
- {
   "id": "Countershock",
   "kind": "passive",
   "name": "Countershock",
@@ -3958,26 +3923,6 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Dragonfire_Fists"
- },
- {
-  "id": "Dread Ambusher",
-  "kind": "passive",
-  "name": "Dread Ambusher",
-  "type": null,
-  "brief": "+3 Initiative. On the first turn of combat, make an extra weapon attack that deals an extra 1d8 Physical damage.",
-  "description": "You specialise in taking out foes swiftly and ruthlessly.\nYou gain a +3 bonus to Initiative.\nOn the first turn of combat, your Movement Speed increases by 3 m (10 ft), and you can also make an extra weapon attack that deals an additional 1d8 damage",
-  "extra_description": null,
-  "recharge": "Per combat",
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/5/50/Dread_Ambusher_Melee_Icon.webp",
-  "links": [
-   {
-    "text": "Movement Speed",
-    "page": "Movement Speed",
-    "url": "https://bg3.wiki/wiki/Movement_Speed"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Dread_Ambusher"
  },
  {
   "id": "Dread Iron Ambush",
@@ -6693,32 +6638,6 @@
   "ritual": null,
   "action_type": "action",
   "range": "melee"
- },
- {
-  "id": "Guiding Bolt",
-  "kind": "spell",
-  "name": "Guiding Bolt",
-  "type": null,
-  "brief": null,
-  "description": "The next attack roll against this target has Advantage.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/8/82/Guiding_Bolt_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Advantage",
-    "page": "Advantage",
-    "url": "https://bg3.wiki/wiki/Advantage"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Guiding_Bolt",
-  "spell_level": 1,
-  "school": "Evocation",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "18 / 60"
  },
  {
   "id": "Hail of Thorns",
@@ -13871,118 +13790,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Staff_of_the_Ram_(passive_feature)"
  },
  {
-  "id": "Stalker's Flurry",
-  "kind": "passive",
-  "name": "Stalker's Flurry",
-  "type": null,
-  "brief": null,
-  "description": "When you miss with a weapon attack, you can make another one for free.",
-  "extra_description": null,
-  "recharge": "Per turn",
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/e/e0/Stalker%27s_Flurry_Icon.webp",
-  "links": [],
-  "wiki_url": "https://bg3.wiki/wiki/Stalker's_Flurry"
- },
- {
-  "id": "Starry Form: Archer",
-  "kind": "spell",
-  "name": "Starry Form: Archer",
-  "type": null,
-  "brief": null,
-  "description": "A constellation of an archer appears on you. As a Bonus Action while in this Starry Form, you can cast Luminous Arrow.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/2/24/Starry_Form_Archer_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Bonus Action",
-    "page": "Resources",
-    "url": "https://bg3.wiki/wiki/Resources#Bonus_Action"
-   },
-   {
-    "text": "Luminous Arrow",
-    "page": "Luminous Arrow",
-    "url": "https://bg3.wiki/wiki/Luminous_Arrow"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Starry_Form:_Archer",
-  "spell_level": null,
-  "school": null,
-  "concentration": null,
-  "ritual": null,
-  "action_type": "bonus",
-  "range": "self"
- },
- {
-  "id": "Starry Form: Chalice",
-  "kind": "spell",
-  "name": "Starry Form: Chalice",
-  "type": null,
-  "brief": null,
-  "description": "A constellation of a life-giving chalice appears on you. Whenever you cast a healing spell that consumes a spell slot, you can cast Chalice Healing.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/7/74/Starry_Form_Chalice_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Chalice Healing",
-    "page": "Chalice Healing",
-    "url": "https://bg3.wiki/wiki/Chalice_Healing"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Starry_Form:_Chalice",
-  "spell_level": null,
-  "school": null,
-  "concentration": null,
-  "ritual": null,
-  "action_type": "bonus",
-  "range": "self"
- },
- {
-  "id": "Starry Form: Dragon",
-  "kind": "spell",
-  "name": "Starry Form: Dragon",
-  "type": null,
-  "brief": null,
-  "description": "A constellation of a wise dragon appears on you. When you make a Saving Throw to maintain Concentration on a spell, a roll result of 9 or lower is considered a 10.\nAs a Bonus Action while in this Starry Form, you can cast Dazzling Breath.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/9/9f/Starry_Form_Dragon_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Saving Throw",
-    "page": "Saving Throw",
-    "url": "https://bg3.wiki/wiki/Saving_Throw"
-   },
-   {
-    "text": "Concentration",
-    "page": "Concentration",
-    "url": "https://bg3.wiki/wiki/Concentration"
-   },
-   {
-    "text": "Bonus Action",
-    "page": "Resources",
-    "url": "https://bg3.wiki/wiki/Resources#Bonus_Action"
-   },
-   {
-    "text": "Dazzling Breath",
-    "page": "Dazzling Breath",
-    "url": "https://bg3.wiki/wiki/Dazzling_Breath"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Starry_Form:_Dragon",
-  "spell_level": null,
-  "school": null,
-  "concentration": null,
-  "ritual": null,
-  "action_type": "bonus",
-  "range": "self"
- },
- {
   "id": "Staunch Blessing",
   "kind": "passive",
   "name": "Staunch Blessing",
@@ -15348,26 +15155,6 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/True_Strike_Riposte"
- },
- {
-  "id": "Twinkling Constellations",
-  "kind": "passive",
-  "name": "Twinkling Constellations",
-  "type": null,
-  "brief": null,
-  "description": "Your Starry Forms are improved. The Archer's damage and the Chalice's healing are each increased by 1d8, and the Dragon gains the ability to hover and to Fly at a movement speed of 6 m (20 ft).\nOnce per turn, you can switch to a different Starry Form as a free action.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/1/14/Twinkling_Constellations_Icon.webp",
-  "links": [
-   {
-    "text": "Fly",
-    "page": "Fly (Starry Form)",
-    "url": "https://bg3.wiki/wiki/Fly_(Starry_Form)"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Twinkling_Constellations"
  },
  {
   "id": "Twist of Fortune (passive feature)",

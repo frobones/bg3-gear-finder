@@ -24,9 +24,11 @@ where and when you can pick it up.
   - **Scrolls**: which spell scrolls to scribe, hold back, or skip.
   - **Illithid**: suggested illithid powers, in order.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
-- Friends' profiles show options rather than a plan, on one page: **Good
-  picks by level** (feats, spells and class choices), **Good picks by act**
-  (gear per slot, tagged by what it's good for), then the item checklist.
+- Friends' profiles are suggestions rather than a plan, on one page: **Good
+  picks by act** (gear per slot, tagged by what it's good for), **Good picks
+  by level** (only the choices a level offers: feats, spells, class options),
+  then the item checklist. Select a spell to read it in the side panel, like
+  an item.
 - An item's panel shows which party members plan around it, and who gets it
   when it's contested.
 
@@ -87,8 +89,9 @@ and point the roster entry in `data/party/party.json` at it with
 `"profile": "<file name without .json>"`.
 
 A profile with `"style": "options"` is a friend's page of good picks (see
-`data/party/alene.json`): each level lists `picks` groups of `abilities` or
-written `options`, gear entries carry `tags` instead of a `priority`, and each
+`data/party/alene.json`): each level lists only its `picks`, as groups of
+`abilities` or written `options` ("Name: short note"), gear entries carry
+`tags` instead of a `priority`, and each
 act's slots list their `items` as a bucket of good picks.
 
 In a profile, names under `item`, `items` and `alternates` are bg3.wiki item

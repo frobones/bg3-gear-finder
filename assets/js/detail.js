@@ -1,6 +1,6 @@
 // Item detail panel: stats, effects, and every way to get the item.
 
-import { abilityList } from "./abilities.js";
+import { abilityFacts, abilityList } from "./abilities.js";
 import {
   ACT_LABELS,
   capitalize,
@@ -101,6 +101,34 @@ export function renderDetail(panel, item, abilities, wanted) {
       ${item.quote ? `<blockquote class="quote">${esc(item.quote)}</blockquote>` : ""}
       ${item.bugs ? `<details class="bugs"><summary>Known bugs</summary><p class="prose">${esc(item.bugs)}</p></details>` : ""}
       ${variants}
+      ${wiki ? `<p><a class="wiki-link" href="${esc(wiki)}" target="_blank" rel="noopener">Open on bg3.wiki</a></p>` : ""}
+    </div>`;
+  panel.hidden = false;
+  panel.scrollTop = 0;
+}
+
+/** A spell or feature in the same side panel as items, for the picks on friends' pages. */
+export function renderAbilityDetail(panel, ability) {
+  const wiki = safeWikiUrl(ability.wiki_url);
+  const icon = ability.icon_url
+    ? `<img class="item-icon" src="${esc(ability.icon_url)}" alt="" width="64" height="64" decoding="async" />`
+    : `<span class="item-icon item-icon-empty" style="--size:64px"></span>`;
+  panel.innerHTML = `
+    <div class="detail-inner">
+      <button type="button" class="close-button" data-close aria-label="Close spell details">Close</button>
+      <header class="detail-head">
+        ${icon}
+        <div>
+          <h2 class="detail-name spell-name">${esc(ability.name)}</h2>
+          <p class="detail-kind">${esc(abilityFacts(ability)[0])}</p>
+        </div>
+      </header>
+      <ul class="pop-facts">${abilityFacts(ability)
+        .slice(1)
+        .map((fact) => `<li>${esc(fact)}</li>`)
+        .join("")}</ul>
+      <p class="prose">${linkify(ability.description ?? "bg3.wiki has no description for this.", ability.links)}</p>
+      ${ability.extra_description ? `<p class="prose muted">${esc(ability.extra_description)}</p>` : ""}
       ${wiki ? `<p><a class="wiki-link" href="${esc(wiki)}" target="_blank" rel="noopener">Open on bg3.wiki</a></p>` : ""}
     </div>`;
   panel.hidden = false;
