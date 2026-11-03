@@ -82,9 +82,23 @@ function renderRoster(data) {
   return `${overview}${rosterCards(data)}`;
 }
 
-/** The Backstory tab: the character's bio, one paragraph after another. */
+/**
+ * The Backstory tab, set like a page from a storybook: the full painting beside the story, a drop cap,
+ * and the last paragraph (where the game picks up) set apart under an ornament.
+ */
 export function backstory(profile) {
-  return `<div class="profile-bio">${profile.bio.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}</div>`;
+  const paragraphs = profile.bio.map((paragraph) => `<p>${esc(paragraph)}</p>`);
+  if (paragraphs.length > 1) {
+    const last = paragraphs.pop().replace("<p>", '<p class="bio-now">');
+    paragraphs.push(`<p class="bio-ornament" aria-hidden="true">◆ ◆ ◆</p>`, last);
+  }
+  const painting = profile.portrait_full
+    ? `<figure class="bio-painting">${fullPortraitLink(
+        profile,
+        `<img src="${esc(profile.portrait_full)}" alt="Portrait of ${esc(profile.name)}" decoding="async" />`,
+      )}</figure>`
+    : "";
+  return `<article class="profile-bio${painting ? " has-painting" : ""}">${painting}<div class="bio-text">${paragraphs.join("")}</div></article>`;
 }
 
 /** The tabs this profile has: Backstory only when the profile has a bio. */

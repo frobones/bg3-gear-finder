@@ -265,14 +265,65 @@
 }
 
 /* Backstory tab: a short read in the page's serif. */
-/* Backstory tab: a short read in the page's serif. */
+/* Backstory tab: a storybook page. The painting stays beside the story as you read; the story opens on a drop
+   cap and ends on the present, set apart under an ornament. */
 .profile-bio {
   max-width: 62ch;
+  margin-top: 1.5rem;
 }
 
-.profile-bio p {
-  margin: 0 0 1rem;
-  font: var(--step-1) / 1.65 var(--serif);
+.profile-bio.has-painting {
+  display: grid;
+  grid-template-columns: minmax(0, 17rem) minmax(0, 62ch);
+  gap: 2.5rem;
+  align-items: start;
+  max-width: none;
+}
+
+.bio-painting {
+  position: sticky;
+  top: 1rem;
+  margin: 0;
+}
+
+.bio-painting .portrait-zoom,
+.bio-painting img {
+  display: block;
+  width: 100%;
+}
+
+.bio-painting img {
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
+}
+
+.bio-text p {
+  margin: 0 0 1.1rem;
+  font: var(--step-1) / 1.7 var(--serif);
+}
+
+.bio-text p:first-child::first-letter {
+  float: left;
+  margin: 0.1rem 0.6rem 0 0;
+  color: var(--brass-strong);
+  font: 600 3.6rem / 0.85 var(--serif);
+}
+
+.bio-ornament {
+  text-align: center;
+  color: var(--brass);
+  letter-spacing: 0.6em;
+}
+
+.bio-text .bio-ornament {
+  margin: 1.75rem 0;
+  font-size: var(--step--1);
+}
+
+.bio-text .bio-now {
+  color: var(--brass-strong);
+  font-style: italic;
 }
 
 .profile-tabs {
@@ -673,6 +724,18 @@
 
   .profile-tabs {
     gap: 0 1rem;
+  }
+
+  /* On a phone the painting sits above the story, at a size that leaves the text in view. */
+  .profile-bio.has-painting {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .bio-painting {
+    position: static;
+    justify-self: center;
+    width: min(100%, 15rem);
   }
 
   /* Three columns don't fit a phone: stack each row as slot, default, then labelled alternates. */

@@ -67,9 +67,15 @@ test("roster cards show each member's name, title and classes, but not their cur
   assert.doesNotMatch(html, /Level \d+ of|Not created yet/);
 });
 
-test("backstory writes each paragraph of the bio, escaped", () => {
-  const html = backstory({ bio: ["First <night>.", "Second."] });
-  assert.equal(html, '<div class="profile-bio"><p>First &lt;night&gt;.</p><p>Second.</p></div>');
+test("backstory sets the story beside the painting and the last paragraph under an ornament", () => {
+  const html = backstory({ name: "Vesper", portrait_full: "full/vesper.jpg", bio: ["First <night>.", "Then.", "Now."] });
+  assert.match(html, /^<article class="profile-bio has-painting"><figure class="bio-painting"><button type="button" class="portrait-zoom" data-full-image="full\/vesper.jpg"/);
+  assert.match(html, /<img src="full\/vesper.jpg" alt="Portrait of Vesper"/);
+  assert.match(html, /<div class="bio-text"><p>First &lt;night&gt;\.<\/p><p>Then\.<\/p><p class="bio-ornament" aria-hidden="true">◆ ◆ ◆<\/p><p class="bio-now">Now\.<\/p><\/div>/);
+});
+
+test("backstory without a painting or with one paragraph keeps to the plain story", () => {
+  assert.equal(backstory({ name: "Pearl", bio: ["Only."] }), '<article class="profile-bio"><div class="bio-text"><p>Only.</p></div></article>');
 });
 
 test("fullPortraitLink wraps the portrait in a button that opens the full painting", () => {
