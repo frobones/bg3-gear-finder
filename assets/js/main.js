@@ -8,9 +8,9 @@ import { esc } from "./html.js";
 import { renderJourney } from "./journey.js";
 import { initParty, parsePartyRoute, renderParty } from "./party.js";
 import { nextSort, renderTable } from "./table.js";
+import { viewFromHash } from "./views.js";
 
 const SEARCH_DELAY_MS = 150;
-const VIEWS = ["journey", "items", "party"];
 
 const form = document.getElementById("controls");
 const view = document.getElementById("view");
@@ -23,10 +23,7 @@ let lastOpener = null;
 let collapsingZone = null;
 let popovers = null;
 
-const currentView = () => {
-  const name = location.hash.slice(1).split("/")[0];
-  return VIEWS.includes(name) ? name : "journey";
-};
+const currentView = () => viewFromHash(location.hash);
 
 function render() {
   const name = currentView();
@@ -39,7 +36,8 @@ function render() {
   // The gear filters don't apply to party profiles, so they step aside there.
   form.hidden = name === "party";
   resultCount.hidden = name === "party";
-  if (name === "party") return renderParty(view, data, parsePartyRoute(location.hash));
+  // An empty or unknown hash opens the party roster.
+  if (name === "party") return renderParty(view, data, parsePartyRoute(location.hash) ?? { profileId: null, tab: null });
 
   const filters = readFilters(form);
   const items = data.items.filter((item) => matchesItem(item, filters));

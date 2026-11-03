@@ -6,6 +6,16 @@ import { abilityFacts, abilityList, popContent } from "../assets/js/abilities.js
 import { averageDamage } from "../assets/js/data.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
+import { VIEWS, viewFromHash } from "../assets/js/views.js";
+
+test("viewFromHash opens Party first and by default", () => {
+  assert.equal(VIEWS[0], "party");
+  assert.equal(viewFromHash(""), "party");
+  assert.equal(viewFromHash("#nonsense"), "party");
+  assert.equal(viewFromHash("#party/vesper/gear"), "party");
+  assert.equal(viewFromHash("#journey"), "journey");
+  assert.equal(viewFromHash("#items"), "items");
+});
 
 test("esc neutralises HTML", () => {
   assert.equal(esc(`<img src=x onerror="a('b')">&`), "&lt;img src=x onerror=&quot;a(&#39;b&#39;)&quot;&gt;&amp;");

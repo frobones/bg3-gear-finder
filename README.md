@@ -3,21 +3,10 @@
 A local webpage for finding Baldur's Gate 3 gear: what each item does, and
 where and when you can pick it up.
 
-- **Journey** lists every find in play order: Prologue, then Acts 1 to 3,
-  each split into areas you can expand.
-- **All items** is a sortable table: name, slot, rarity, first place found,
-  AC or damage, value, and weight.
-- Search matches item names, places, how-to-get text, and the wiki's notes,
-  such as a merchant's name. Filter by slot, act, rarity, or items with a
-  known place.
-- Select any item to see its stats, passives, actions, every way to get it,
-  and the wiki's notes on it, with links back to bg3.wiki.
-- Hover over or focus a passive, weapon action or spell to see what it does;
-  click or tap to keep it open. Escape closes it.
-- **Party** shows each character in the co-op party. **Party gear by act**
-  puts everyone's picks for each slot side by side, one act at a time, so you
-  can see where every piece of gear is going. A filled-in profile has tabs
-  for:
+- **Party** opens first and shows each character in the co-op party.
+  **Party gear by act** puts everyone's picks for each slot side by side, one
+  act at a time, so you can see where every piece of gear is going. A
+  filled-in profile has tabs for:
   - **Level up**: what to pick at the next level, in the order the game asks,
     then which Wizard spells to prepare.
   - **Gear plan**: the items the character wants, in play order, with
@@ -34,6 +23,17 @@ where and when you can pick it up.
 - An item's panel opens with **Party plans**: who plans around it, what it
   does for their build, which act and slot it fills in their loadout, and who
   gets it when it's contested.
+- **Journey** lists every find in play order: Prologue, then Acts 1 to 3,
+  each split into areas you can expand.
+- **All items** is a sortable table: name, slot, rarity, first place found,
+  AC or damage, value, and weight.
+- Search matches item names, places, how-to-get text, and the wiki's notes,
+  such as a merchant's name. Filter by slot, act, rarity, or items with a
+  known place.
+- Select any item to see its stats, passives, actions, every way to get it,
+  and the wiki's notes on it, with links back to bg3.wiki.
+- Hover over or focus a passive, weapon action or spell to see what it does;
+  click or tap to keep it open. Escape closes it.
 
 Current level, picked-up items and taken powers are saved in
 the browser you use. They aren't shared between browsers or devices, and
