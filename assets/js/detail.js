@@ -107,7 +107,7 @@ export function renderDetail(panel, item, abilities, wanted) {
   panel.scrollTop = 0;
 }
 
-/** A spell or feature in the same side panel as items, for the picks on friends' pages. */
+/** A spell, feat or feature in the same side panel as items, for the picks on friends' pages. */
 export function renderAbilityDetail(panel, ability) {
   const wiki = safeWikiUrl(ability.wiki_url);
   const icon = ability.icon_url
@@ -115,7 +115,7 @@ export function renderAbilityDetail(panel, ability) {
     : `<span class="item-icon item-icon-empty" style="--size:64px"></span>`;
   panel.innerHTML = `
     <div class="detail-inner">
-      <button type="button" class="close-button" data-close aria-label="Close spell details">Close</button>
+      <button type="button" class="close-button" data-close aria-label="Close details">Close</button>
       <header class="detail-head">
         ${icon}
         <div>

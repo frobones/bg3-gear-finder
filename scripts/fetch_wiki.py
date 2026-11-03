@@ -70,7 +70,7 @@ ABILITY_FIELDS = (
 
 # Party profiles are hand-written (data/party/); these keys name wiki pages the page shows as pop-outs or items.
 PARTY_DIR = DATA_DIR / "party"
-PROFILE_ABILITY_KEYS = ("abilities", "replace", "scribe", "hold")
+PROFILE_ABILITY_KEYS = ("abilities", "ability", "replace", "scribe", "hold")
 PROFILE_ITEM_KEYS = ("item", "items", "alternates")
 # Tables searched for a profile's ability names, in order, and the kind recorded for each.
 PROFILE_ABILITY_TABLES = {"spells": "spell", "passives": "passive"}

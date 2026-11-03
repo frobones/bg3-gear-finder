@@ -61,7 +61,7 @@ function openDetail(id, opener) {
   detail.querySelector("[data-close]").focus({ preventScroll: true });
 }
 
-function openSpell(name, opener) {
+function openAbility(name, opener) {
   const ability = data.abilities.get(name);
   if (!ability) return;
   lastOpener = opener;
@@ -98,8 +98,8 @@ function wireEvents() {
   document.addEventListener("click", (event) => {
     const itemLink = event.target.closest("[data-item]");
     if (itemLink) return openDetail(itemLink.dataset.item, itemLink);
-    const spellLink = event.target.closest("[data-spell]");
-    if (spellLink) return openSpell(spellLink.dataset.spell, spellLink);
+    const abilityLink = event.target.closest("[data-ability-detail]");
+    if (abilityLink) return openAbility(abilityLink.dataset.abilityDetail, abilityLink);
     if (event.target.closest("[data-close]")) return closeDetail();
     const sortButton = event.target.closest("[data-sort]");
     if (sortButton) {

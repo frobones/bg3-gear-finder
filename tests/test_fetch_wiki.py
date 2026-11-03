@@ -238,7 +238,12 @@ class TableFakeWiki(FakeWiki):
 class ProfileTest(unittest.TestCase):
     PROFILE = {
         "id": "rogue",
-        "levels": [{"choices": [{"abilities": ["Shield (spell)"]}, {"replace": ["Sleep", "Magic Missile"]}]}],
+        "levels": [
+            {
+                "choices": [{"abilities": ["Shield (spell)"]}, {"replace": ["Sleep", "Magic Missile"]}],
+                "picks": [{"entries": [{"ability": "Bounty Hunter", "note": "x"}, {"text": "Ability Improvement"}]}],
+            }
+        ],
         "scrolls": {"tiers": [{"scribe": ["Web"], "hold": []}], "no_scroll": [{"level": 3, "abilities": []}]},
         "gear": [{"item": "Ring", "priority": "core"}],
         "loadout": {"slots": [{"items": ["Ring"], "alternates": ["Boots"]}]},
@@ -248,7 +253,7 @@ class ProfileTest(unittest.TestCase):
     def test_profile_names_collects_every_listed_name(self) -> None:
         self.assertEqual(
             fetch_wiki.profile_names(self.PROFILE, fetch_wiki.PROFILE_ABILITY_KEYS),
-            {"Shield (spell)", "Sleep", "Magic Missile", "Web", "Cull the Weak"},
+            {"Shield (spell)", "Sleep", "Magic Missile", "Web", "Cull the Weak", "Bounty Hunter"},
         )
         self.assertEqual(fetch_wiki.profile_names(self.PROFILE, fetch_wiki.PROFILE_ITEM_KEYS), {"Ring", "Boots"})
 
@@ -264,7 +269,10 @@ class ProfileTest(unittest.TestCase):
                     {"_pageName": name, "name": name.replace(" (spell)", ""), "spell_level": 1}
                     for name in ("Shield (spell)", "Sleep", "Magic Missile", "Web")
                 ],
-                "passives": [{"_pageName": "Cull the Weak", "name": "Cull the Weak", "description": "Execute."}],
+                "passives": [
+                    {"_pageName": "Cull the Weak", "name": "Cull the Weak", "description": "Execute."},
+                    {"_pageName": "Bounty Hunter", "name": "Bounty Hunter", "description": "Ensnare."},
+                ],
             }
         )
         abilities = {"Web": {"id": "Web", "kind": "action"}}

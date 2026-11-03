@@ -25,10 +25,10 @@ where and when you can pick it up.
   - **Illithid**: suggested illithid powers, in order.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
 - Friends' profiles are suggestions rather than a plan, on one page: **Good
-  picks by act** (gear per slot, tagged by what it's good for), **Good picks
-  by level** (only the choices a level offers: feats, spells, class options),
-  then the item checklist. Select a spell to read it in the side panel, like
-  an item.
+  picks by act** (gear per slot, tagged by what it's good for), **Good
+  spells** grouped by spell level, **Good picks by level** (feats and class
+  choices), then the item checklist. Select a spell, feat or class choice to
+  read it in the side panel, like an item.
 - An item's panel shows which party members plan around it, and who gets it
   when it's contested.
 
@@ -89,14 +89,15 @@ and point the roster entry in `data/party/party.json` at it with
 `"profile": "<file name without .json>"`.
 
 A profile with `"style": "options"` is a friend's page of good picks (see
-`data/party/alene.json`): each level lists only its `picks`, as groups of
-`abilities` or written `options` ("Name: short note"), gear entries carry
-`tags` instead of a `priority`, and each
+`data/party/alene.json`): `spells` lists good spells per spell level (with
+the character level it opens at), each level lists its feat and class
+`picks` as `entries` (an `ability` wiki page or plain `text`, plus a short
+`note`), gear entries carry `tags` instead of a `priority`, and each
 act's slots list their `items` as a bucket of good picks.
 
 In a profile, names under `item`, `items` and `alternates` are bg3.wiki item
-pages. Names under `abilities`, `replace`, `scribe` and `hold` are bg3.wiki
-spell or passive pages, so use the page title (for example
+pages. Names under `abilities`, `ability`, `replace`, `scribe` and `hold`
+are bg3.wiki spell or passive pages, so use the page title (for example
 `Shield (spell)`). Then rebuild: the script adds those spells to
 `data/abilities.json` and stops with a list of any name the wiki doesn't
 have.
