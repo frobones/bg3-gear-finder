@@ -151,7 +151,9 @@
    "class": "Wizard",
    "class_level": 4,
    "choices": [
-    {"label": "Feat", "text": "Ability Improvement: +2 Dexterity (DEX becomes 20)"},
+    {"label": "Feat", "abilities": ["Savage Attacker"], "text": "her melee weapon and Sneak Attack dice each roll twice and keep the higher: about +5 to +8 damage per attack by level 12."},
+    {"label": "Or", "text": "Ability Improvement: +2 Dexterity (DEX becomes 20): +1 AC, to hit, damage, initiative and Sleight of Hand, but about a third of Savage Attacker's damage."},
+    {"label": "Or", "abilities": ["Mobile"], "text": "the enemy she just hit can't make an opportunity attack as she steps back, and +3 m movement."},
     {"label": "Cantrip", "abilities": ["Bursting Sinew"]},
     {"label": "Spells", "abilities": ["Blur", "Web"], "text": "or any two level 1–2 spells you held back"}
    ],
@@ -165,7 +167,7 @@
     "note": "Swap in Hold Person, Haste, Hypnotic Pattern, Web or Fireball when the fight calls for it."
    },
    "scribe_up_to": 3,
-   "gains": "DEX 20: +1 AC in her full-DEX armour, +1 to hit, damage and initiative. Level 3 scroll scribing. Shadow Blade reaches 3d8 from a 3rd-level slot.",
+   "gains": "Savage Attacker: her Shadow Blade and Sneak Attack dice roll twice and keep the higher. Level 3 scroll scribing. Shadow Blade reaches 3d8 from a 3rd-level slot.",
    "play": "Cast Shadow Blade with a 3rd-level slot."
   },
   {
@@ -279,14 +281,14 @@
   {"item": "Cloak of Protection", "priority": "yield", "claim": "Alene in Act 2, then Zetharis in Act 3."},
   {"item": "Evasive Shoes", "priority": "yield", "claim": "Pearl."},
   {"item": "Spellcrux Amulet", "priority": "yield", "claim": "Alene: she has the highest spell slots to restore."},
-  {"item": "Yuan-Ti Scale Mail", "priority": "high", "note": "Act 2 armour: 15 + her full DEX (19, then 20 at DEX 20), no Stealth Disadvantage, +1 initiative."},
+  {"item": "Yuan-Ti Scale Mail", "priority": "high", "note": "Act 2 armour: 15 + her full DEX (19 at DEX 18), no Stealth Disadvantage, +1 initiative."},
   {"item": "Resonance Stone", "act": "two", "priority": "matchup", "where": "Mind Flayer Colony, near the Mind-Archive interface.", "note": "Its aura gives psychic vulnerability and mental-save Disadvantage to everyone nearby, friends included. Carry it only when the party is clear. The wiki says it sometimes stops working after Act 2: check in Act 3."},
   {"item": "Ketheric's Shield", "priority": "yield", "claim": "Alene: +1 spell DC is her whole job."},
-  {"item": "Armour of Agility", "priority": "core", "note": "17 + her full DEX (22 at DEX 20) and +2 to all saves. Her endgame armour.", "claim": "Vesper. Unwanted Masterwork Scalemail is the fallback for anyone else."},
+  {"item": "Armour of Agility", "priority": "core", "note": "17 + her full DEX (21 at DEX 18) and +2 to all saves. Her endgame armour.", "claim": "Vesper. Unwanted Masterwork Scalemail is the fallback for anyone else."},
   {"item": "Unwanted Masterwork Scalemail", "priority": "yield", "claim": "Pearl: her Act 3 armour."},
   {"item": "Mask of Soul Perception", "priority": "yield", "claim": "Pearl: +2 to hit pays off across her 2–3 Sharpshooter attacks a turn."},
   {"item": "Sarevok's Horned Helmet", "priority": "matchup", "note": "Crit range −1: a crit doubles her Sneak Attack and Shadow Blade dice. Also immune to Frightened. Swap it in when someone else is tanking, or for Fear-heavy fights."},
-  {"item": "Bloodthirst", "priority": "matchup", "note": "Off hand for boss burn-downs when she isn't the main target: crit range −1, 18–20 with Sarevok's helmet swapped in, and +1 AC in the off hand. It replaces Viconia's shield, so with both swaps she drops from 26 to 23 AC and loses its spell protection. Orin carries it."},
+  {"item": "Bloodthirst", "priority": "matchup", "note": "Off hand for boss burn-downs when she isn't the main target: crit range −1, 18–20 with Sarevok's helmet swapped in, and +1 AC in the off hand. It replaces Viconia's shield, so with both swaps she drops from 25 to 22 AC and loses its spell protection. Orin carries it."},
   {"item": "Helm of Balduran", "priority": "core", "note": "Her Act 3 helmet: +1 AC and saves, immunity to crits and stuns, 2 HP back each turn. Viconia's shield doesn't stop crits, so this keeps the crit protection the Adamantine Shield gave her in Act 2."},
   {"item": "Cloak of the Weave", "priority": "yield", "claim": "Alene, for her spell DC."},
   {"item": "Cloak of Displacement", "priority": "core", "note": "Attackers have Disadvantage until she takes damage, renewed each turn: covers the opportunity attacks she draws backing off."},
@@ -329,7 +331,7 @@
    "slots": [
     {"slot": "Head", "items": ["Hat of Storm Scion's Power"], "alternates": ["Holy Lance Helm"], "note": "Storm Scion's hat raises her spell DC by 2 after each Booming Blade hit, if she isn't hit before her next turn. Holy Lance Helm for long fights where she's holding concentration: +1 CON saves, and attackers that miss must make a DC 14 DEX save or take 1d4 radiant."},
     {"slot": "Cloak", "items": ["Vivacious Cloak"], "alternates": ["Cloak of Cunning Brume"]},
-    {"slot": "Chest", "items": ["Yuan-Ti Scale Mail"], "alternates": [], "note": "15 + her full DEX, no Stealth Disadvantage, +1 initiative. Adamantine Scale Mail (16 + max 2 DEX) trades 1–2 AC and adds Stealth Disadvantage; her Adamantine Shield already covers crits."},
+    {"slot": "Chest", "items": ["Yuan-Ti Scale Mail"], "alternates": [], "note": "15 + her full DEX, no Stealth Disadvantage, +1 initiative. Adamantine Scale Mail (16 + max 2 DEX) trades 1 AC and adds Stealth Disadvantage; her Adamantine Shield already covers crits."},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power", "Wondrous Gloves", "Gloves of Thievery"], "note": "Braindrain comes at the very end of the act. Until then, wear Battlemage's Power."},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
     {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure", "Silver Pendant"]},
@@ -340,7 +342,7 @@
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
     {"slot": "Carried", "items": ["Drakethroat Glaive", "Resonance Stone"], "note": "An ally wields the Glaive and casts Draconic Elemental Weapon on her Shadow Blade. Carry the Stone only when the party is clear of its aura. Both are Act 2 finds: the Glaive from Roah Moonglow at Moonrise Towers, the Stone in the Mind Flayer Colony."}
    ],
-   "armour_class": "Yuan-Ti Scale Mail 19 + Adamantine Shield 2 = 21 AC, 22 once DEX reaches 20 at level 9. Shield adds +5 when needed."
+   "armour_class": "Yuan-Ti Scale Mail 19 + Adamantine Shield 2 = 21 AC. Shield adds +5 when needed."
   },
   {
    "act": "three",
@@ -360,7 +362,7 @@
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
     {"slot": "Carried", "items": ["Drakethroat Glaive", "Resonance Stone"], "note": "An ally wields the Glaive and casts Draconic Elemental Weapon on her Shadow Blade. Carry the Stone only when the party is clear of its aura. Check in game that the Stone still works in Act 3."}
    ],
-   "armour_class": "Armour of Agility 22 (at DEX 20) + Viconia's Walking Fortress 3 + Helm of Balduran 1 = 26 AC, and Cloak of Displacement gives attackers Disadvantage until she's hit. Shield adds +5 when needed."
+   "armour_class": "Armour of Agility 21 (at DEX 18) + Viconia's Walking Fortress 3 + Helm of Balduran 1 = 25 AC, and Cloak of Displacement gives attackers Disadvantage until she's hit. Shield adds +5 when needed."
   }
  ],
 

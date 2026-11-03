@@ -9639,6 +9639,26 @@
   "range": "18 / 60"
  },
  {
+  "id": "Mobile",
+  "kind": "passive",
+  "name": "Mobile",
+  "type": null,
+  "brief": null,
+  "description": "Your movement speed increases by 3 m (10 ft).",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/c/cc/Dash_Icon.webp",
+  "links": [
+   {
+    "text": "movement speed",
+    "page": "movement speed",
+    "url": "https://bg3.wiki/wiki/movement_speed"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Mobile"
+ },
+ {
   "id": "Mobile Shot",
   "kind": "action",
   "name": "Mobile Shot",
@@ -11943,6 +11963,20 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Sanctified_Weapon"
+ },
+ {
+  "id": "Savage Attacker",
+  "kind": "passive",
+  "name": "Savage Attacker",
+  "type": null,
+  "brief": null,
+  "description": "When making melee weapon attacks, you roll your damage dice twice and use the highest result.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/2/24/Savage_Attacker_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Savage_Attacker"
  },
  {
   "id": "Saviour's Allure",
