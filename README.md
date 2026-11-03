@@ -51,6 +51,22 @@ python3 scripts/serve.py
 Then open <http://localhost:8642>. The script tells the browser not to cache
 anything, so a normal reload always shows the latest data and code.
 
+## Publish on GitHub Pages
+
+The site is static and loads everything with relative paths, so GitHub Pages
+can serve it from the repository root of any branch:
+
+1. Push the branch to GitHub.
+2. In the repository's **Settings › Pages**, set **Source** to **Deploy from a
+   branch**, pick the branch and `/ (root)`, and save.
+3. The site appears at `https://<user>.github.io/<repository>/` after the
+   first deploy, usually within a minute or two.
+
+`.nojekyll` tells Pages to serve the files as they are, without a Jekyll
+build. Pages lets browsers cache files for up to 10 minutes, so a change can
+take that long to show after a push. A free GitHub account can only publish
+Pages from a public repository.
+
 ## Data
 
 All item data comes from [bg3.wiki](https://bg3.wiki/)'s Cargo tables
