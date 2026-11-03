@@ -219,51 +219,6 @@
   }
  ],
 
- "scrolls": {
-  "intro": "Steal or collect one copy of every Wizard scroll. Scribe each spell level as soon as she can, and keep duplicates to cast straight from the scroll.",
-  "tiers": [
-   {
-    "spell_level": 1,
-    "from_level": 6,
-    "scribe": ["Ice Knife", "Burning Hands"],
-    "hold": ["Chromatic Orb", "Fog Cloud"],
-    "note": "Scribe every useful level 1 scroll you find; these two are her flex picks. She already learns Find Familiar, Enhance Leap, Protection from Evil and Good, Mage Armour, Feather Fall and Grease at level 6. Hold back two to learn free at level 7."
-   },
-   {
-    "spell_level": 2,
-    "from_level": 7,
-    "scribe": ["Misty Step", "Mirror Image", "Hold Person", "Blindness", "Invisibility (spell)", "See Invisibility"],
-    "hold": ["Blur", "Web"],
-    "note": "Hold back two level 1–2 spells to learn free at level 9. If you want Web sooner, scribe it and hold back a different spell."
-   },
-   {
-    "spell_level": 3,
-    "from_level": 9,
-    "scribe": ["Glyph of Warding", "Fear", "Slow", "Haste", "Hypnotic Pattern", "Fireball"],
-    "hold": ["Remove Curse"],
-    "note": "Scribe these as soon as she reaches level 9. Leave one level 3 spell unscribed for level 12's free pick."
-   },
-   {
-    "spell_level": 4,
-    "from_level": 12,
-    "scribe": ["Greater Invisibility", "Phantasmal Killer", "Fire Shield", "Dimension Door"],
-    "hold": [],
-    "note": "Her one 4th-level slot makes these worth carrying."
-   }
-  ],
-  "no_scroll": [
-   {"level": 3, "abilities": ["Booming Blade", "Shield (spell)"]},
-   {"level": 6, "abilities": ["Friends", "Toll the Dead", "Blade Ward", "Find Familiar", "Enhance Leap"]},
-   {"level": 8, "abilities": ["Shadow Blade", "Phantasmal Force"]},
-   {"level": 9, "abilities": ["Bursting Sinew"]},
-   {"level": 12, "abilities": ["Counterspell"]}
-  ],
-  "cannot_learn": {
-   "abilities": ["Otiluke's Resilient Sphere"],
-   "note": "It has no scroll, and a level 5 Wizard can't learn it, so this split never gets it."
-  }
- },
-
  "illithid": {
   "intro": "Optional. The build works without the tadpole. These are the picks that fit if you want the extra power.",
   "warning": "Awakened turns illithid powers into bonus actions, but her bonus action already goes to Cunning Dash in her hit-and-run turn.",

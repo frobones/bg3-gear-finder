@@ -19,11 +19,10 @@ where and when you can pick it up.
   can see where every piece of gear is going. A filled-in profile has tabs
   for:
   - **Level up**: what to pick at the next level, in the order the game asks,
-    then which Wizard spells to prepare and which scrolls to scribe.
+    then which Wizard spells to prepare.
   - **Gear plan**: the items the character wants, in play order, with
     checkboxes for what's been picked up, after a loadout for the end of
     each act with alternates.
-  - **Scrolls**: which spell scrolls to scribe, hold back, or skip.
   - **Illithid**: suggested illithid powers, in order. Select a power to read
     it in the side panel.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
@@ -36,7 +35,7 @@ where and when you can pick it up.
   does for their build, which act and slot it fills in their loadout, and who
   gets it when it's contested.
 
-Current level, picked-up items, scribed scrolls and taken powers are saved in
+Current level, picked-up items and taken powers are saved in
 the browser you use. They aren't shared between browsers or devices, and
 clearing the site's data resets them.
 
@@ -101,8 +100,8 @@ the character level it opens at), each level lists its feat and class
 act's slots list their `items` as a bucket of good picks.
 
 In a profile, names under `item`, `items` and `alternates` are bg3.wiki item
-pages. Names under `abilities`, `ability`, `replace`, `scribe` and `hold`
-are bg3.wiki spell or passive pages, so use the page title (for example
+pages. Names under `abilities`, `ability` and `replace` are bg3.wiki spell or
+passive pages, so use the page title (for example
 `Shield (spell)`). Then rebuild: the script adds those spells to
 `data/abilities.json` and stops with a list of any name the wiki doesn't
 have.

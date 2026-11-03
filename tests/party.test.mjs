@@ -7,7 +7,7 @@ import { wantedByItem } from "../assets/js/data.js";
 import { loadoutUses, partyPlans, renderAbilityDetail, renderDetail } from "../assets/js/detail.js";
 import { entryTags } from "../assets/js/html.js";
 import { planGroups, renderGearTab, renderLoadouts } from "../assets/js/gearplan.js";
-import { levelLearning, renderIllithidTab, renderPlaybookTab } from "../assets/js/guides.js";
+import { renderIllithidTab, renderPlaybookTab } from "../assets/js/guides.js";
 import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
 import { parsePartyRoute } from "../assets/js/party.js";
 import { abilityLink, renderLevelPicks, renderPicksPage, renderSpellPicks } from "../assets/js/picks.js";
@@ -28,11 +28,11 @@ test("parsePartyRoute reads the profile and tab, and drops unknown tabs", () => 
 
 test("sanitizeProgress keeps well-formed fields and rejects the rest", () => {
   assert.deepEqual(sanitizeProgress(null), emptyProgress());
-  assert.deepEqual(sanitizeProgress({ level: 13, tab: "<script>", got: ["Ring", 4], scribed: "Web" }), {
+  assert.deepEqual(sanitizeProgress({ level: 13, tab: "<script>", got: ["Ring", 4], taken: "Web" }), {
     ...emptyProgress(),
     got: ["Ring"],
   });
-  assert.equal(sanitizeProgress({ level: 7, tab: "scrolls" }).level, 7);
+  assert.deepEqual(sanitizeProgress({ level: 7, tab: "scrolls" }), { ...emptyProgress(), level: 7 });
   assert.equal(sanitizeProgress({ level: 2.5 }).level, 0);
 });
 
@@ -103,12 +103,6 @@ test("planGroups orders by where the wiki places each item and leaves yielded it
       ["anywhere", ["Camp Mask"]],
     ],
   );
-});
-
-test("levelLearning finds the level whose choices learn a held-back spell", () => {
-  const profile = { levels: [{ level: 6, choices: [] }, { level: 7, choices: [{ abilities: ["Fog Cloud"] }] }] };
-  assert.equal(levelLearning(profile, "Fog Cloud"), 7);
-  assert.equal(levelLearning(profile, "Web"), null);
 });
 
 test("the illithid tab opens each known power in the side panel and marks taken ones", () => {

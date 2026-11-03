@@ -4061,32 +4061,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Dig_Deep"
  },
  {
-  "id": "Dimension Door",
-  "kind": "spell",
-  "name": "Dimension Door",
-  "type": null,
-  "brief": null,
-  "description": "Teleport yourself and up to one adjacent ally to a place you can see. The ally cannot be larger than Medium.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/e/e5/Dimension_Door_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Medium",
-    "page": "Creature Size",
-    "url": "https://bg3.wiki/wiki/Creature_Size"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Dimension_Door",
-  "spell_level": 4,
-  "school": "Conjuration",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "50 / 167"
- },
- {
   "id": "Disarming Strike",
   "kind": "action",
   "name": "Disarming Strike",
@@ -5715,32 +5689,6 @@
   "ritual": null,
   "action_type": "action",
   "range": "self"
- },
- {
-  "id": "Fireball",
-  "kind": "spell",
-  "name": "Fireball",
-  "type": null,
-  "brief": null,
-  "description": "Shoot a bright flame from your fingers that explodes upon contact, torching everything in the vicinity for 8d6 Fire damage.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/2/29/Fireball_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Fire",
-    "page": "Fire",
-    "url": "https://bg3.wiki/wiki/Fire"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Fireball",
-  "spell_level": 3,
-  "school": "Evocation",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "18 / 60"
  },
  {
   "id": "First Blood",
@@ -7705,32 +7653,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Hush_You%21"
  },
  {
-  "id": "Hypnotic Pattern",
-  "kind": "spell",
-  "name": "Hypnotic Pattern",
-  "type": null,
-  "brief": null,
-  "description": "Hypnotise creatures that can see the pattern. They cannot attack you. They cannot move nor act.",
-  "extra_description": "This spell can be cast while you are Silenced.",
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/e/ed/Hypnotic_Pattern_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Hypnotise",
-    "page": "Hypnotised (Condition)",
-    "url": "https://bg3.wiki/wiki/Hypnotised_(Condition)"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Hypnotic_Pattern",
-  "spell_level": 3,
-  "school": "Illusion",
-  "concentration": true,
-  "ritual": null,
-  "action_type": "action",
-  "range": "ranged"
- },
- {
   "id": "Ice Knife",
   "kind": "spell",
   "name": "Ice Knife",
@@ -8427,42 +8349,6 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Intimate_Embrace"
- },
- {
-  "id": "Invisibility (spell)",
-  "kind": "spell",
-  "name": "Invisibility",
-  "type": null,
-  "brief": null,
-  "description": "Touch a creature to turn it Invisible. Attacks against it have Disadvantage. It attacks with Advantage.",
-  "extra_description": "Invisibility ends early if the invisible entity attacks, casts another spell, interacts with an object, takes an action or bonus action, or is damaged.",
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/2/2d/Invisibility_spell_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Invisible",
-    "page": "Invisible (condition)",
-    "url": "https://bg3.wiki/wiki/Invisible_(condition)"
-   },
-   {
-    "text": "Disadvantage",
-    "page": "Disadvantage",
-    "url": "https://bg3.wiki/wiki/Disadvantage"
-   },
-   {
-    "text": "Advantage",
-    "page": "Advantage",
-    "url": "https://bg3.wiki/wiki/Advantage"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Invisibility_(spell)",
-  "spell_level": 2,
-  "school": "Illusion",
-  "concentration": true,
-  "ritual": null,
-  "action_type": "action",
-  "range": "melee"
  },
  {
   "id": "Invisible Weapon",
@@ -10377,26 +10263,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Organ_Rearranger"
  },
  {
-  "id": "Otiluke's Resilient Sphere",
-  "kind": "spell",
-  "name": "Otiluke's Resilient Sphere",
-  "type": null,
-  "brief": null,
-  "description": "Enclose a target in a sphere of shimmering force, reducing its movement speed by half, and blocking all incoming and spell effects.",
-  "extra_description": "The sphere reduces the target's movement speed by half, and also prevents it from casting spells or dealing damage.",
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/3/33/Otiluke%27s_Resilient_Sphere_Unfaded_Icon.webp",
-  "links": [],
-  "wiki_url": "https://bg3.wiki/wiki/Otiluke's_Resilient_Sphere",
-  "spell_level": 4,
-  "school": "Evocation",
-  "concentration": true,
-  "ritual": null,
-  "action_type": "action",
-  "range": "9 / 30"
- },
- {
   "id": "Outer-Entity Slayer",
   "kind": "passive",
   "name": "Outer-Entity Slayer",
@@ -12299,32 +12165,6 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Searing_Blood"
- },
- {
-  "id": "See Invisibility",
-  "kind": "spell",
-  "name": "See Invisibility",
-  "type": null,
-  "brief": null,
-  "description": "Become able to see Invisible creatures, and possibly reveal them to others.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/7/7e/See_Invisibility_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Invisible",
-    "page": "Invisible (Condition)",
-    "url": "https://bg3.wiki/wiki/Invisible_(Condition)"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/See_Invisibility",
-  "spell_level": 2,
-  "school": "Divination",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "self"
  },
  {
   "id": "Seeking Blood",

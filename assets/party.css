@@ -625,13 +625,6 @@
   margin-top: 0.8rem;
 }
 
-.check-row > span {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0 0.75rem;
-}
-
 .plan-body {
   min-width: 0;
 }
@@ -666,14 +659,10 @@
 
 .is-got .item-name,
 .is-got .plain-item,
-.is-done .ability-trigger {
+.is-done .item-name {
   text-decoration: line-through;
   text-decoration-color: var(--muted);
   opacity: 0.65;
-}
-
-.hold-row {
-  padding-left: 2rem;
 }
 
 /* Act picker for the end-of-act loadouts: one joined row of buttons, the chosen act filled in. */
@@ -745,38 +734,6 @@
 
 .loadout-table p {
   margin: 0;
-}
-
-.scroll-tier + .scroll-tier {
-  margin-top: 1.5rem;
-}
-
-.scroll-tier.is-locked h3 {
-  color: var(--muted);
-}
-
-.tier-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.5rem 1rem;
-}
-
-.profile-body .tier-head h3 {
-  margin-bottom: 0;
-}
-
-.no-scroll-list {
-  margin: 0 0 0.75rem;
-  padding: 0;
-  list-style: none;
-}
-
-.no-scroll-list li {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0 0.75rem;
 }
 
 .power-name {

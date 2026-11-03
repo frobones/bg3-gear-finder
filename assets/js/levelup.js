@@ -44,7 +44,7 @@ function status(levelNumber, reached) {
   return `<span class="level-status">Later</span>`;
 }
 
-function afterLevel(level, previous, profileId, abilities) {
+function afterLevel(level, previous, abilities) {
   const blocks = [];
   if (level.prepare) {
     blocks.push(`
@@ -58,8 +58,7 @@ function afterLevel(level, previous, profileId, abilities) {
     blocks.push(`
       <div class="after-block">
         <h4>Scribe level ${level.scribe_up_to} scrolls</h4>
-        <p>You can now copy level ${level.scribe_up_to} Wizard scrolls into the spellbook.
-          <a href="#party/${esc(profileId)}/scrolls">See which ones</a></p>
+        <p>You can now copy level ${level.scribe_up_to} Wizard scrolls into the spellbook.</p>
       </div>`);
   }
   return blocks.length ? `<h3>After you level up</h3>${blocks.join("")}` : "";
@@ -119,7 +118,7 @@ export function renderLevelTab(profile, abilities, reached, viewing) {
       <p>${esc(level.gains)}</p>
       ${level.play ? `<p class="muted">${esc(level.play)}</p>` : ""}
       ${gained}
-      ${afterLevel(level, previous, profile.id, abilities)}
+      ${afterLevel(level, previous, abilities)}
       <div class="level-actions">
         <button type="button" class="step-button" data-level-view="${viewing - 1}"${viewing <= 1 ? " disabled" : ""}>Level ${Math.max(1, viewing - 1)}</button>
         ${confirm}

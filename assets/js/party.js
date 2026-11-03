@@ -4,14 +4,14 @@
 // #party/<profile>/<tab>.
 
 import { renderGearTab } from "./gearplan.js";
-import { renderIllithidTab, renderPlaybookTab, renderScrollsTab } from "./guides.js";
+import { renderIllithidTab, renderPlaybookTab } from "./guides.js";
 import { esc } from "./html.js";
 import { MAX_LEVEL, renderLevelTab } from "./levelup.js";
 import { PARTY_GEAR_ROUTE, renderPartyGear } from "./partygear.js";
 import { renderPicksPage } from "./picks.js";
 import { PROFILE_TABS, loadProgress, saveProgress, toggleInList } from "./progress.js";
 
-const TAB_LABELS = { level: "Level up", gear: "Gear plan", scrolls: "Scrolls", illithid: "Illithid", playbook: "Playbook" };
+const TAB_LABELS = { level: "Level up", gear: "Gear plan", illithid: "Illithid", playbook: "Playbook" };
 
 /** A portrait, or an empty frame for a friend who hasn't sent one yet. */
 const portrait = (profile, className, width, height, alt) =>
@@ -122,7 +122,6 @@ function tabNav(profile, tab) {
 function tabBody(profile, data, tab) {
   const progress = progressFor(profile.id);
   if (tab === "gear") return renderGearTab(profile, data, progress, hideGot, loadoutAct);
-  if (tab === "scrolls") return renderScrollsTab(profile, data.abilities, progress);
   if (tab === "illithid") return renderIllithidTab(profile, data.abilities, progress);
   if (tab === "playbook") return renderPlaybookTab(profile);
   return renderLevelTab(profile, data.abilities, progress.level, viewingFor(profile.id));

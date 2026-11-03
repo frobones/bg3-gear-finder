@@ -1,14 +1,14 @@
-// Per-character progress (level reached, items picked up, scrolls scribed, powers taken), kept in this browser.
+// Per-character progress (level reached, items picked up, powers taken), kept in this browser.
 //
 // Storage can be missing or blocked (private windows, cleared site data); the page then works without it and
 // nothing is remembered.
 
 const KEY_PREFIX = "bg3-gear-finder:profile:";
 const MAX_LEVEL = 12;
-export const PROFILE_TABS = ["level", "gear", "scrolls", "illithid", "playbook"];
-const LISTS = ["got", "scribed", "taken"];
+export const PROFILE_TABS = ["level", "gear", "illithid", "playbook"];
+const LISTS = ["got", "taken"];
 
-export const emptyProgress = () => ({ level: 0, tab: "level", got: [], scribed: [], taken: [] });
+export const emptyProgress = () => ({ level: 0, tab: "level", got: [], taken: [] });
 
 /** Keep only well-formed fields from stored JSON; anything else falls back to the empty value. */
 export function sanitizeProgress(stored) {

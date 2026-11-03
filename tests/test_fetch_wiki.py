@@ -244,7 +244,6 @@ class ProfileTest(unittest.TestCase):
                 "picks": [{"entries": [{"ability": "Bounty Hunter", "note": "x"}, {"text": "Ability Improvement"}]}],
             }
         ],
-        "scrolls": {"tiers": [{"scribe": ["Web"], "hold": []}], "no_scroll": [{"level": 3, "abilities": []}]},
         "gear": [{"item": "Ring", "priority": "core"}],
         "loadout": {"slots": [{"items": ["Ring"], "alternates": ["Boots"]}]},
         "illithid": {"powers": [{"abilities": ["Cull the Weak"]}]},
@@ -253,7 +252,7 @@ class ProfileTest(unittest.TestCase):
     def test_profile_names_collects_every_listed_name(self) -> None:
         self.assertEqual(
             fetch_wiki.profile_names(self.PROFILE, fetch_wiki.PROFILE_ABILITY_KEYS),
-            {"Shield (spell)", "Sleep", "Magic Missile", "Web", "Cull the Weak", "Bounty Hunter"},
+            {"Shield (spell)", "Sleep", "Magic Missile", "Cull the Weak", "Bounty Hunter"},
         )
         self.assertEqual(fetch_wiki.profile_names(self.PROFILE, fetch_wiki.PROFILE_ITEM_KEYS), {"Ring", "Boots"})
 
