@@ -25,7 +25,6 @@
  "gear": [
   {"item": "Titanstring Bow", "tags": ["damage", "strength"], "note": "Adds your Strength modifier to damage. The heart of this build. Confirmed in game: it adds the Club's Strength."},
   {"item": "Club of Hill Giant Strength", "tags": ["strength"], "note": "STR 19 from the melee slot while you shoot. Check your STR on the character sheet with the bow drawn."},
-  {"item": "Hunting Shortbow", "tags": ["damage"], "note": "Free Hunter's Mark once a day, and Advantage against monstrosities."},
   {"item": "Heavy Crossbow +1", "tags": ["damage"], "note": "1d10 + 1 and +1 to hit: the hardest-hitting bow until Titanstring."},
   {"item": "Gloves of Archery", "tags": ["damage"], "note": "+2 damage on ranged weapon attacks."},
   {"item": "Gloves of Dexterity", "tags": ["accuracy"], "note": "+1 to attack rolls (and DEX 18 if yours is lower)."},
@@ -36,9 +35,6 @@
   {"item": "Disintegrating Night Walkers", "tags": ["utility"], "note": "Bonus-action Misty Step each short rest; immune to webs, grease and ice."},
   {"item": "Marksmanship Hat", "tags": ["accuracy"], "note": "+1 to ranged attack rolls."},
   {"item": "Risky Ring", "tags": ["accuracy"], "note": "Advantage on attacks, Disadvantage on saves: the strongest Sharpshooter fix."},
-  {"item": "Eversight Ring", "tags": ["utility"], "note": "Can't be Blinded. Note: magical Darkness blocks ranged attacks into and out of it, so it doesn't let you shoot from inside Darkness."},
-  {"item": "Least Expected", "tags": ["accuracy"], "note": "+1d4 to ranged attacks while in shadow."},
-  {"item": "Darkfire Shortbow", "tags": ["utility"], "note": "Haste once a day, plus cold resistance (you already resist fire)."},
   {"item": "Rhapsody", "tags": ["damage", "accuracy"], "note": "Off hand with the Club (both are Light): each kill gives +1 to attack and damage rolls, up to +3, which offsets Sharpshooter's −5. Costs the shield's +2 AC and +3 initiative. Check in game that bow kills build the stacks and that arrows get the bonus. Drops from Cazador."},
   {"item": "Sentinel Shield", "tags": ["initiative"], "note": "+3 initiative and Advantage on Perception."},
   {"item": "Flawed Helldusk Gloves", "tags": ["damage"], "note": "+1d4 fire on weapon hits."},
@@ -77,7 +73,7 @@
     {"slot": "Rings", "items": ["Caustic Band", "Strange Conduit Ring"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
     {"slot": "Off hand", "items": ["Glowing Shield"]},
-    {"slot": "Ranged", "items": ["Titanstring Bow", "Heavy Crossbow +1", "Hunting Shortbow"]}
+    {"slot": "Ranged", "items": ["Titanstring Bow", "Heavy Crossbow +1"]}
    ]
   },
   {
@@ -85,15 +81,15 @@
    "label": "Act 2",
    "intro": "Accuracy and crit pieces arrive to offset Sharpshooter.",
    "slots": [
-    {"slot": "Head", "items": ["Circlet of Hunting", "Marksmanship Hat"]},
+    {"slot": "Head", "items": ["Marksmanship Hat", "Circlet of Hunting"]},
     {"slot": "Body", "items": ["Sharpened Snare Cuirass"]},
-    {"slot": "Gloves", "items": ["Flawed Helldusk Gloves", "Gloves of the Automaton", "Gloves of Archery"]},
+    {"slot": "Gloves", "items": ["Flawed Helldusk Gloves", "Gloves of the Automaton", "Gloves of Dexterity", "Gloves of Archery"]},
     {"slot": "Boots", "items": ["Evasive Shoes", "Disintegrating Night Walkers"]},
     {"slot": "Amulet", "items": ["Surgeon's Subjugation Amulet", "Broodmother's Revenge"]},
-    {"slot": "Rings", "items": ["Risky Ring", "Caustic Band", "Eversight Ring"]},
+    {"slot": "Rings", "items": ["Risky Ring", "Caustic Band"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
     {"slot": "Off hand", "items": ["Sentinel Shield"]},
-    {"slot": "Ranged", "items": ["Titanstring Bow", "Least Expected", "Darkfire Shortbow"]}
+    {"slot": "Ranged", "items": ["Titanstring Bow"]}
    ]
   },
   {
