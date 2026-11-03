@@ -283,6 +283,7 @@
   {"item": "Shapeshifter's Boon Ring", "priority": "swap", "note": "+1d4 to ability checks while disguised. Share with the Druid.", "claim": "Shared: swap with whoever is shapeshifting."},
   {"item": "Silver Pendant", "priority": "swap", "note": "Guidance when the Druid isn't nearby."},
   {"item": "Gloves of Thievery", "priority": "swap", "note": "Advantage on Sleight of Hand. Theft kit, not combat gloves."},
+  {"item": "Cloak of Cunning Brume", "priority": "swap", "note": "Disengage makes a 2 m fog cloud for 1 turn: a reusable place to Hide and pickpocket from Act 2 on, instead of a Darkness arrow. Sold by Mattis at Last Light Inn."},
   {"item": "Smuggler's Ring", "priority": "swap", "note": "+2 Stealth and Sleight of Hand for stealing, locks and traps, but −1 Charisma: take it off before a Deception check."},
   {"item": "Mask of the Shapeshifter", "priority": "optional", "note": "In reserve: she learns Disguise Self. Use the Mask if you replace Disguise Self at level 11."},
   {"item": "The Speedy Lightfeet", "priority": "core", "note": "Cunning Dash gives 3 Lightning Charges every turn of her hit-and-run loop. Needs medium armour proficiency."},
@@ -365,7 +366,7 @@
    "intro": "Shadow Blade arrives at level 8. Until then, keep the Act 1 weapon.",
    "slots": [
     {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": []},
-    {"slot": "Cloak", "items": ["Vivacious Cloak"], "alternates": []},
+    {"slot": "Cloak", "items": ["Vivacious Cloak"], "alternates": ["Cloak of Cunning Brume"]},
     {"slot": "Chest", "items": ["Yuan-Ti Scale Mail"], "alternates": [], "note": "15 + her full DEX, no Stealth Disadvantage, +1 initiative. Adamantine Scale Mail (16 + max 2 DEX) trades 1–2 AC and adds Stealth Disadvantage; her Adamantine Shield already covers crits."},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power", "Wondrous Gloves", "Gloves of Thievery"], "note": "Braindrain comes at the very end of the act. Until then, wear Battlemage's Power."},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
@@ -384,7 +385,7 @@
    "intro": "Damage and debuffs first, in medium armour and a shield. The survival swaps sit in each slot's alternates.",
    "slots": [
     {"slot": "Head", "items": ["Sarevok's Horned Helmet"], "alternates": ["Helm of Balduran", "Holy Lance Helm"], "note": "Close call. Sarevok's for single targets and Fear-heavy fights. Balduran when hard hitters, Mind Flayers or stuns focus her: Viconia's shield doesn't stop crits. Holy Lance against crowds of weaker attackers."},
-    {"slot": "Cloak", "items": ["Cloak of Displacement"], "alternates": ["Vivacious Cloak"]},
+    {"slot": "Cloak", "items": ["Cloak of Displacement"], "alternates": ["Vivacious Cloak", "Cloak of Cunning Brume"]},
     {"slot": "Chest", "items": ["Armour of Agility"], "alternates": ["Yuan-Ti Scale Mail"]},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power", "Stalker Gloves", "Wondrous Gloves", "Gloves of Thievery"]},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
@@ -417,14 +418,14 @@
   ],
   "theft": [
    "Put on Shapeshifter's Boon Ring, then cast Disguise Self (or use Mask of the Shapeshifter if you swapped at level 11).",
-   "Put on Smuggler's Ring and Gloves of Thievery. If she might need Friends, get Guidance from the Druid; she can't concentrate on both.",
+   "Put on Smuggler's Ring and Gloves of Thievery, and from Act 2 Cloak of Cunning Brume. If she might need Friends, get Guidance from the Druid; she can't concentrate on both.",
    "Split from the group and Hide. Keep your friends out of the crime scene.",
-   "Shoot a Darkness arrow next to the target, Hide inside the Darkness, then pickpocket.",
+   "From Act 2: switch to turn-based mode, Disengage next to the target in Cloak of Cunning Brume, Hide in the fog and pickpocket before it fades after 1 turn. In Act 1, shoot a Darkness arrow next to the target instead.",
    "Steal at least one copy of every Wizard scroll you find.",
    "After a successful pickpocket, leave before the victim notices.",
    "If caught and given a dialogue check, pick Deception. On Tactician, casting Friends is itself a crime, so cast it before the theft, out of sight, or not at all.",
    "On Tactician, Friends can anger its target when it ends. Leave, camp or fast-travel before the 10 turns run out. Never use Friends on companions.",
-   "Caught with no dialogue check: use Cunning Action to Hide in the Darkness, then get away.",
+   "Caught with no dialogue check: Disengage for fog, or shoot a Darkness arrow for a longer-lasting cloud, then Hide in it and get away.",
    "Next time, use a different disguise: the victim won't recognise her.",
    "If you keep getting caught, slip away instead of escalating."
   ],
