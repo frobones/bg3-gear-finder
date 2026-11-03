@@ -1,0 +1,131 @@
+/* Album: screenshots grouped by play session, and the full-size viewer. */
+
+.album-session + .album-session {
+  margin-top: 2rem;
+}
+
+.album-session h2 {
+  margin: 0 0 0.75rem;
+  font: 600 var(--step-2) / 1.2 var(--serif);
+  color: var(--brass-strong);
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.album-card {
+  margin: 0;
+}
+
+.album-shot {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--raised);
+  cursor: zoom-in;
+}
+
+.album-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.album-shot:hover,
+.album-shot:focus-visible {
+  border-color: var(--brass);
+}
+
+.album-shot:focus-visible {
+  outline: 2px solid var(--brass-strong);
+  outline-offset: 2px;
+}
+
+.album-card figcaption {
+  margin-top: 0.4rem;
+  font: italic var(--step-0) / 1.4 var(--serif);
+}
+
+/* The viewer fills the screen so the shot can be as large as it fits. */
+.album-viewer {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0.75rem var(--gutter);
+  border: 0;
+  background: var(--page);
+  color: var(--text);
+}
+
+.album-viewer[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.75rem;
+}
+
+.album-viewer::backdrop {
+  background: var(--page);
+}
+
+.viewer-bar,
+.viewer-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.viewer-count {
+  margin: 0;
+  color: var(--muted);
+}
+
+.viewer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.viewer-caption {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font: italic var(--step-1) / 1.4 var(--serif);
+}
+
+.viewer-button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--raised);
+  color: var(--text);
+  font: 600 var(--step-0) / 1 var(--sans);
+  cursor: pointer;
+}
+
+.viewer-button:hover {
+  border-color: var(--brass);
+  color: var(--brass-strong);
+}
+
+.viewer-button:focus-visible {
+  outline: 2px solid var(--brass-strong);
+  outline-offset: 2px;
+}

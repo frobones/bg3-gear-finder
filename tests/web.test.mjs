@@ -15,6 +15,7 @@ test("viewFromHash opens Party first and by default", () => {
   assert.equal(viewFromHash("#party/vesper/gear"), "party");
   assert.equal(viewFromHash("#journey"), "journey");
   assert.equal(viewFromHash("#items"), "items");
+  assert.equal(viewFromHash("#album"), "album");
 });
 
 test("esc neutralises HTML", () => {

@@ -27,6 +27,9 @@ where and when you can pick it up.
   each split into areas you can expand.
 - **All items** is a sortable table: name, slot, rarity, first place found,
   AC or damage, value, and weight.
+- **Album** shows screenshots from our sessions, newest session first, each
+  with a caption. Select one to see it full size; use the arrow keys or swipe
+  to move between shots, and Escape to close.
 - Search matches item names, places, how-to-get text, and the wiki's notes,
   such as a merchant's name. Filter by slot, act, rarity, or items with a
   known place.
@@ -68,6 +71,27 @@ build. Pages lets browsers cache files for up to 10 minutes, so a change can
 take that long to show after a push. A free GitHub account can only publish
 Pages from a public repository.
 
+## Album
+
+Screenshots go in `album/`, using Steam's file names (such as
+`20261101202756_1.jpg`), which give the date and time each shot was taken.
+`album/` holds the full-size originals and is kept out of git, so back it up
+yourself. After adding screenshots, run:
+
+```bash
+python3 scripts/build_album.py
+```
+
+The script uses `sips`, which comes with macOS. It writes a 1600 px copy of
+each shot to `assets/album/` and a thumbnail to `assets/album/thumbs/`, and
+lists the shots in `data/album.json`. New shots get an empty `caption`;
+write one there, and rebuilds keep it. Removing a screenshot from `album/`
+removes it from the site the next time the script runs.
+
+Each shot adds about 0.37 MB to the site. GitHub Pages allows a 1 GB site, so
+there is room for roughly 2,500 shots, and git keeps removed shots in the
+repository's history.
+
 ## Data
 
 All item data comes from [bg3.wiki](https://bg3.wiki/)'s Cargo tables
@@ -88,6 +112,7 @@ data; item and spell icons load from the wiki's image server.
 | `data/meta.json` | Snapshot time, source, license, and counts |
 | `data/party/party.json` | Hand-kept party roster |
 | `data/party/<name>.json` | Hand-kept character profile |
+| `data/album.json` | Album shots, with hand-written captions |
 
 Each acquisition holds the how-to-get text, the wiki pages it mentions, the
 place and its parent places, the act, the Journey area, and map coordinates.

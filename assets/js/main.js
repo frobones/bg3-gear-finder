@@ -1,6 +1,7 @@
 // Entry point: loads the snapshot, wires the controls, and renders the chosen view.
 
 import { initAbilityPopovers } from "./abilities.js";
+import { initAlbum, renderAlbum } from "./album.js";
 import { loadData } from "./data.js";
 import { renderAbilityDetail, renderDetail } from "./detail.js";
 import { isFiltering, matchesItem, populateControls, readFilters } from "./filters.js";
@@ -33,11 +34,13 @@ function render() {
     if (link.dataset.view === name) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   }
-  // The gear filters don't apply to party profiles, so they step aside there.
-  form.hidden = name === "party";
-  resultCount.hidden = name === "party";
+  // The gear filters don't apply to party profiles or the album, so they step aside there.
+  const gearView = name === "journey" || name === "items";
+  form.hidden = !gearView;
+  resultCount.hidden = !gearView;
   // An empty or unknown hash opens the party roster.
   if (name === "party") return renderParty(view, data, parsePartyRoute(location.hash) ?? { profileId: null, tab: null });
+  if (name === "album") return renderAlbum(view);
 
   const filters = readFilters(form);
   const items = data.items.filter((item) => matchesItem(item, filters));
@@ -168,6 +171,7 @@ async function start() {
   }
   popovers = initAbilityPopovers(document.body, data.abilities);
   initParty(view, render);
+  initAlbum(view);
   populateControls(form, data);
   wireEvents();
   renderColophon();
