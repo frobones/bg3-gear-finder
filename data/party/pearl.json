@@ -40,6 +40,7 @@
   {"item": "Eversight Ring", "tags": ["utility"], "note": "Can't be Blinded. Note: magical Darkness blocks ranged attacks into and out of it, so it doesn't let you shoot from inside Darkness."},
   {"item": "Least Expected", "tags": ["accuracy"], "note": "+1d4 to ranged attacks while in shadow."},
   {"item": "Darkfire Shortbow", "tags": ["utility"], "note": "Haste once a day, plus cold resistance (you already resist fire)."},
+  {"item": "Rhapsody", "tags": ["damage", "accuracy"], "note": "Off hand with the Club (both are Light): each kill gives +1 to attack and damage rolls, up to +3, which offsets Sharpshooter's −5. Costs the shield's +2 AC and +3 initiative. Check in game that bow kills build the stacks and that arrows get the bonus. Drops from Cazador."},
   {"item": "Sentinel Shield", "tags": ["initiative"], "note": "+3 initiative and Advantage on Perception."},
   {"item": "Flawed Helldusk Gloves", "tags": ["damage"], "note": "+1d4 fire on weapon hits."},
   {"item": "Gloves of the Automaton", "tags": ["accuracy"], "note": "Bonus action for Advantage on weapon attacks, once per short rest. While it's active, healing spells can't target you (potions still work)."},
@@ -107,7 +108,7 @@
     {"slot": "Amulet", "items": ["Surgeon's Subjugation Amulet", "Broodmother's Revenge"]},
     {"slot": "Rings", "items": ["Risky Ring", "Caustic Band"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
-    {"slot": "Off hand", "items": ["Sentinel Shield"]},
+    {"slot": "Off hand", "items": ["Rhapsody", "Sentinel Shield"]},
     {"slot": "Ranged", "items": ["Titanstring Bow", "The Dead Shot", "Gontr Mael"]}
    ]
   }
