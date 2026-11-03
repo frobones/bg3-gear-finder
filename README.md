@@ -23,6 +23,7 @@ sections, **Our party** and **Gear finder**.
   - **Illithid**: suggested illithid powers, in order. Select a power to read
     it in the side panel.
   - **Playbook**: a turn in combat, theft steps, and reaction settings.
+  - **Backstory**: the character's story so far, when the profile has one.
 - Friends' profiles are suggestions rather than a plan, on one page: **Good
   picks by act** (gear per slot, tagged by what it's good for), **Good
   spells** grouped by spell level, then **Good picks by level** (feats and
@@ -150,6 +151,10 @@ Profiles are written by hand and are never overwritten by a rebuild. To add
 one, copy `data/party/vesper.json`, put the portrait in `assets/portraits/`,
 and point the roster entry in `data/party/party.json` at it with
 `"profile": "<file name without .json>"`.
+
+A profile can also carry a `bio`, a list of paragraphs that a full build
+plan shows in a **Backstory** tab. It's optional; see
+`data/party/vesper.json`.
 
 A profile with `"style": "options"` is a friend's page of good picks (see
 `data/party/alene.json`): `spells` lists good spells per spell level (with

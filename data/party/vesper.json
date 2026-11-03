@@ -9,6 +9,13 @@
  "difficulty": "Tactician",
  "portrait": "assets/portraits/vesper.jpg",
  "role": "The party's front-line tank and thief. In medium armour and a shield she Dashes in, Booming Blades with her Shadow Blade and steps back, so enemies take thunder chasing her. Her psychic hits stack Mental Fatigue, setting up her own Phantasmal Killer and Fear and Alene's Hold Person.",
+ "bio": [
+  "Vesper never knew her parents. The Lower City of Baldur's Gate raised her: its alleys, its rooftops, and the lessons of being a horned girl in a city that crosses the street when it sees one.",
+  "By sixteen she was the eldest of the Rats, a handful of orphans who slept in the loft of a burned-out chandlery above the docks. She fed them the way urchins do: lifted purses, emptied lockboxes, and a light touch that never left a trace.",
+  "The wards came from a fence's stall. She stole a waterlogged spellbook for the price it would fetch, found it full of abjuration, and kept it instead. Night by night she taught herself to read it: an alarm glyph on the loft's door, a shimmer of force to turn a Flaming Fist cudgel, a blade of shadow for when turning wasn't enough. The kids started calling her their warden. She pretended to hate it.",
+  "On the last night, she was on the roof keeping watch when the clouds over the harbour split and something vast slid through them. Tentacles came down into the streets. She remembers shouting for the kids to stay inside, then nothing.",
+  "Now she wakes with a worm behind her eyes, on a ship that should not exist, and the Rats are alone in the city. Whatever this is, she's getting back to them."
+ ],
  "level_order": "Rogue 1–5, then Wizard 1–4, then Rogue 6–7, then Wizard 5",
 
  "levels": [

@@ -11,7 +11,7 @@ import { PARTY_GEAR_ROUTE, renderPartyGear } from "./partygear.js";
 import { renderPicksPage } from "./picks.js";
 import { PROFILE_TABS, loadProgress, saveProgress, toggleInList } from "./progress.js";
 
-const TAB_LABELS = { level: "Level up", gear: "Gear plan", illithid: "Illithid", playbook: "Playbook" };
+const TAB_LABELS = { level: "Level up", gear: "Gear plan", illithid: "Illithid", playbook: "Playbook", backstory: "Backstory" };
 
 /** A portrait, or an empty frame for a friend who hasn't sent one yet. */
 const portrait = (profile, className, width, height, alt) =>
@@ -43,10 +43,6 @@ function updateProgress(profileId, next) {
 
 const viewingFor = (profileId) => viewingById.get(profileId) ?? Math.min(progressFor(profileId).level + 1, MAX_LEVEL);
 
-function levelLabel(level) {
-  return level === 0 ? "Not created yet" : `Level ${level} of ${MAX_LEVEL}`;
-}
-
 /** A card for each party member, linking to their profile; Home and the Party tab both show it. */
 export function rosterCards(data) {
   const cards = data.party.members
@@ -70,7 +66,6 @@ export function rosterCards(data) {
             <h2 class="member-name"><a href="#party/${esc(profile.id)}">${esc(profile.name)}</a></h2>
             <p class="member-title">${esc(profile.title)}</p>
             <p class="muted">${esc(profile.classes)}</p>
-            ${profile.style === "options" ? "" : `<p class="small">${levelLabel(progressFor(profile.id).level)}</p>`}
           </div>
         </li>`;
     })
@@ -86,6 +81,14 @@ function renderRoster(data) {
     </a>`;
   return `${overview}${rosterCards(data)}`;
 }
+
+/** The Backstory tab: the character's bio, one paragraph after another. */
+export function backstory(profile) {
+  return `<div class="profile-bio">${profile.bio.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("")}</div>`;
+}
+
+/** The tabs this profile has: Backstory only when the profile has a bio. */
+export const profileTabs = (profile) => PROFILE_TABS.filter((t) => t !== "backstory" || profile.bio?.length);
 
 function profileHeader(profile) {
   const facts = [
@@ -110,7 +113,7 @@ function profileHeader(profile) {
 }
 
 function tabNav(profile, tab) {
-  const links = PROFILE_TABS.map(
+  const links = profileTabs(profile).map(
     (t) => `<a href="#party/${esc(profile.id)}/${t}"${t === tab ? ' aria-current="page"' : ""}>${TAB_LABELS[t]}</a>`,
   ).join("");
   return `<nav class="profile-tabs" aria-label="${esc(profile.name)}'s profile">${links}</nav>`;
@@ -121,6 +124,7 @@ function tabBody(profile, data, tab) {
   if (tab === "gear") return renderGearTab(profile, data, progress, hideGot, loadoutAct);
   if (tab === "illithid") return renderIllithidTab(profile, data.abilities, progress);
   if (tab === "playbook") return renderPlaybookTab(profile);
+  if (tab === "backstory") return backstory(profile);
   return renderLevelTab(profile, data.abilities, progress.level, viewingFor(profile.id));
 }
 
@@ -146,7 +150,9 @@ export function renderParty(view, data, route) {
     return;
   }
   const progress = progressFor(profile.id);
-  const tab = route.tab ?? progress.tab;
+  // A Backstory link for a character with no bio opens Level up instead.
+  const asked = route.tab ?? progress.tab;
+  const tab = profileTabs(profile).includes(asked) ? asked : "level";
   if (tab !== progress.tab) updateProgress(profile.id, { ...progress, tab });
   view.innerHTML = `
     <article class="profile" data-profile="${esc(profile.id)}">

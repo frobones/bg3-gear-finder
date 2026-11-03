@@ -5,6 +5,7 @@ import test from "node:test";
 
 import { bannerShots } from "../assets/js/banner.js";
 import { homeHtml, latestSession, pageTitle, partyNameHtml } from "../assets/js/home.js";
+import { backstory } from "../assets/js/party.js";
 
 const shot = (file, taken, banner = false) => ({ file, taken, caption: file, banner });
 const shots = [
@@ -56,4 +57,17 @@ test("bannerShots uses the marked shots, newest session first, or every shot whe
     bannerShots(shots.map((s) => ({ ...s, banner: false }))).map((s) => s.file),
     ["b", "c", "d", "e", "f", "a"],
   );
+});
+
+test("roster cards show each member's name, title and classes, but not their current level", () => {
+  const vesper = { id: "vesper", name: "Vesper", title: "Shadow Warden", classes: "Rogue 7 / Wizard 5", portrait: null };
+  const html = homeHtml([], { party: { members: [{ profile: "vesper" }], profiles: new Map([["vesper", vesper]]) } });
+  assert.match(html, /<a href="#party\/vesper">Vesper<\/a>/);
+  assert.match(html, /Shadow Warden/);
+  assert.doesNotMatch(html, /Level \d+ of|Not created yet/);
+});
+
+test("backstory writes each paragraph of the bio, escaped", () => {
+  const html = backstory({ bio: ["First <night>.", "Second."] });
+  assert.equal(html, '<div class="profile-bio"><p>First &lt;night&gt;.</p><p>Second.</p></div>');
 });

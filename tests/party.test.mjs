@@ -9,7 +9,7 @@ import { entryTags } from "../assets/js/html.js";
 import { planGroups, renderGearTab, renderLoadouts } from "../assets/js/gearplan.js";
 import { renderIllithidTab, renderPlaybookTab } from "../assets/js/guides.js";
 import { choiceSummary, choiceValue } from "../assets/js/levelup.js";
-import { parsePartyRoute } from "../assets/js/party.js";
+import { parsePartyRoute, profileTabs } from "../assets/js/party.js";
 import { abilityLink, renderLevelPicks, renderPicksPage, renderSpellPicks } from "../assets/js/picks.js";
 import { emptyProgress, sanitizeProgress, toggleInList } from "../assets/js/progress.js";
 
@@ -24,6 +24,12 @@ test("parsePartyRoute reads the profile and tab, and drops unknown tabs", () => 
   assert.deepEqual(parsePartyRoute("#party/vesper/gear"), { profileId: "vesper", tab: "gear" });
   assert.deepEqual(parsePartyRoute("#party/vesper/nonsense"), { profileId: "vesper", tab: null });
   assert.equal(parsePartyRoute("#items"), null);
+  assert.deepEqual(parsePartyRoute("#party/vesper/backstory"), { profileId: "vesper", tab: "backstory" });
+});
+
+test("profileTabs adds Backstory only for a profile with a bio", () => {
+  assert.deepEqual(profileTabs({ bio: ["Once."] }), ["level", "gear", "illithid", "playbook", "backstory"]);
+  assert.deepEqual(profileTabs({}), ["level", "gear", "illithid", "playbook"]);
 });
 
 test("sanitizeProgress keeps well-formed fields and rejects the rest", () => {

@@ -5,7 +5,7 @@
 
 const KEY_PREFIX = "bg3-gear-finder:profile:";
 const MAX_LEVEL = 12;
-export const PROFILE_TABS = ["level", "gear", "illithid", "playbook"];
+export const PROFILE_TABS = ["level", "gear", "illithid", "playbook", "backstory"];
 const LISTS = ["got", "taken"];
 
 export const emptyProgress = () => ({ level: 0, tab: "level", got: [], taken: [] });

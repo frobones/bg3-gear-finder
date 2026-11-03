@@ -241,6 +241,16 @@
   max-width: 60ch;
 }
 
+/* Backstory tab: a short read in the page's serif. */
+.profile-bio {
+  max-width: 62ch;
+}
+
+.profile-bio p {
+  margin: 0 0 1rem;
+  font: var(--step-1) / 1.65 var(--serif);
+}
+
 .profile-tabs {
   display: flex;
   gap: 0.25rem 1.25rem;
