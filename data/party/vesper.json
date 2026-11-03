@@ -315,7 +315,6 @@
   {"item": "Flawed Helldusk Gloves", "priority": "yield", "claim": "Pearl: +1d4 fire on every arrow."},
   {"item": "Ring of Mental Inhibition", "priority": "matchup", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves. Booming Blade forces no save, so it needs her save spells, Bow of the Banshee's DC 12 WIS save to resist Frightened on a hit, bombs, Mind Blast or Black Hole."},
   {"item": "Braindrain Gloves", "priority": "core", "note": "Every instance of psychic damage she deals adds 2 turns of Mental Fatigue: every Shadow Blade hit, Psionic Overload on bow shots, Cull the Weak's splash on every nearby enemy, Mind Blast and Psionic Backlash."},
-  {"item": "Shadow-Cloaked Ring", "priority": "optional", "note": "+1d4 weapon damage against obscured targets, which Shadow Blade already wants."},
   {"item": "Vivacious Cloak", "priority": "core", "note": "8 temporary HP each time she casts a spell while in melee, Booming Blade included, which soaks the opportunity attacks she draws backing off."},
   {"item": "Cloak of Protection", "priority": "yield", "claim": "Alene in Act 2, then Zetharis in Act 3."},
   {"item": "Evasive Shoes", "priority": "yield", "claim": "Pearl."},
@@ -380,7 +379,7 @@
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
     {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure"]},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Hold Person, Fear or Slow."},
-    {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shadow-Cloaked Ring"]},
+    {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": []},
     {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King"], "note": "Summoned by her Shadow Blade spell from level 8: keep the Knife until then. From level 9, cast it with a 3rd-level slot for 3d8."},
     {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": []},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
