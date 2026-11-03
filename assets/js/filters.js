@@ -2,19 +2,30 @@
 
 import { ACT_LABELS, RARITIES, capitalize, esc, rarityClass } from "./html.js";
 
+// The slot filter's groups, one per kind of item, in the order they're listed.
+const SLOT_GROUPS = { equipment: "Equipment", weapon: "Weapons", misc: "Other items" };
+
+/** The slot filter's options: each kind of item, then each type within it. Kinds with no items are left out. */
+export function slotOptions(items) {
+  const typesByKind = Object.fromEntries(Object.keys(SLOT_GROUPS).map((kind) => [kind, new Set()]));
+  for (const item of items) typesByKind[item.kind].add(item.type);
+  return Object.entries(SLOT_GROUPS)
+    .filter(([kind]) => typesByKind[kind].size)
+    .map(
+      ([kind, label]) =>
+        `<optgroup label="${label}"><option value="kind:${kind}">All ${label.toLowerCase()}</option>` +
+        [...typesByKind[kind]]
+          .sort()
+          .map((type) => `<option value="type:${esc(type)}">${esc(type)}</option>`)
+          .join("") +
+        "</optgroup>",
+    )
+    .join("");
+}
+
 /** Fill the slot, act and rarity controls from the data. */
 export function populateControls(form, data) {
-  const typesByKind = { equipment: new Set(), weapon: new Set() };
-  for (const item of data.items) typesByKind[item.kind].add(item.type);
-
-  const group = (kind, label) =>
-    `<optgroup label="${label}"><option value="kind:${kind}">All ${label.toLowerCase()}</option>` +
-    [...typesByKind[kind]]
-      .sort()
-      .map((type) => `<option value="type:${esc(type)}">${esc(type)}</option>`)
-      .join("") +
-    "</optgroup>";
-  form.slot.insertAdjacentHTML("beforeend", group("equipment", "Equipment") + group("weapon", "Weapons"));
+  form.slot.insertAdjacentHTML("beforeend", slotOptions(data.items));
 
   form.act.insertAdjacentHTML(
     "beforeend",

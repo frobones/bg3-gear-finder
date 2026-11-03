@@ -4,6 +4,7 @@
  "source_tables": [
   "equipment",
   "weapons",
+  "misc_items",
   "item_locations",
   "locations",
   "passives",
@@ -14,17 +15,18 @@
  "license": "Content from bg3.wiki, CC BY-NC-SA 4.0 or CC BY-SA 4.0",
  "license_url": "https://bg3.wiki/wiki/bg3wiki:Copyrights",
  "counts": {
-  "items": 1256,
+  "items": 1257,
   "items_by_kind": {
    "equipment": 828,
-   "weapon": 428
+   "weapon": 428,
+   "misc": 1
   },
-  "items_without_location_data": 206,
+  "items_without_location_data": 207,
   "acquisitions": 1317,
   "acquisitions_without_place": 434,
   "item_location_rows_skipped_non_gear": 0,
   "locations": 184,
-  "items_with_notes": 454,
+  "items_with_notes": 455,
   "abilities_by_kind": {
    "action": 70,
    "passive": 487,

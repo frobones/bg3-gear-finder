@@ -256,6 +256,28 @@ class ProfileTest(unittest.TestCase):
         )
         self.assertEqual(fetch_wiki.profile_names(self.PROFILE, fetch_wiki.PROFILE_ITEM_KEYS), {"Ring", "Boots"})
 
+    def test_misc_items_a_profile_names_join_the_items(self) -> None:
+        profile = {"id": "rogue", "gear": [{"item": "Stone"}, {"item": "Ring"}], "loadouts": []}
+        wiki = FakeWiki(
+            {
+                "misc_items": [
+                    {"_pageName": "Stone", "name": "Stone", "description": "An [[Aura]].", "image": None},
+                    {"_pageName": "Pebble", "name": "Pebble", "description": "Unused.", "image": None},
+                ]
+            }
+        )
+        items = {"Ring": {"id": "Ring", "kind": "equipment", "variants": []}}
+        fetch_wiki.add_profile_misc_items(wiki, [profile], items)
+        self.assertEqual(sorted(items), ["Ring", "Stone"])
+        self.assertEqual(items["Stone"]["kind"], "misc")
+        self.assertEqual(items["Stone"]["description"], "An Aura.")
+        self.assertEqual(items["Stone"]["wiki_url"], "https://bg3.wiki/wiki/Stone")
+        self.assertEqual(items["Ring"]["kind"], "equipment")
+
+    def test_misc_items_are_not_fetched_when_profiles_name_only_gear(self) -> None:
+        profile = {"id": "rogue", "gear": [{"item": "Ring"}]}
+        fetch_wiki.add_profile_misc_items(FakeWiki({}), [profile], {"Ring": {"variants": []}})
+
     def test_unknown_item_stops_the_build(self) -> None:
         with self.assertRaisesRegex(RuntimeError, "Boots"):
             fetch_wiki.check_profile_items([self.PROFILE], {"Ring": {}})

@@ -15,10 +15,12 @@ import {
 import { renderSpecial } from "./special.js";
 
 const WEAPON_PROPERTIES = ["finesse", "light", "heavy", "reach", "thrown", "dippable"];
+// What the panel calls each kind of item under its name: "Rare weapon", "Rare miscellaneous item".
+const KIND_LABELS = { weapon: "weapon", equipment: "equipment", misc: "miscellaneous item" };
 
 function stats(item) {
   const rows = [
-    ["Slot", [item.type, item.kind === "weapon" && item.handedness ? `${item.handedness}` : null]],
+    [item.kind === "misc" ? "Type" : "Slot", [item.type, item.kind === "weapon" && item.handedness ? `${item.handedness}` : null]],
     ["Proficiency", item.proficiency ?? (item.category ? capitalize(`${item.category} weapons`) : null)],
     ["Armour class", item.armour_class != null ? `${item.armour_class}` : null],
     ["AC bonus", item.armour_class_bonus],
@@ -44,11 +46,23 @@ function textBlock(title, text) {
   return text ? `<h3>${title}</h3><p class="prose">${esc(text)}</p>` : "";
 }
 
-function whereToGet(item) {
+/** A place a party profile wrote down for this item, used when the wiki records none. */
+function profilePlace(wanted) {
+  const found = wanted.find(({ entry }) => entry.where);
+  if (!found) return null;
+  const { profile, entry } = found;
+  return `
+    <ol class="ways"><li>
+      <p class="way-where">${esc(entry.act ? ACT_LABELS[entry.act] : "Anywhere")}</p>
+      <p class="way-how">${esc(entry.where)}</p>
+    </li></ol>
+    <p class="muted small">From ${esc(profile.name)}'s plan: bg3.wiki doesn't record a place for this item.</p>`;
+}
+
+function whereToGet(item, wanted) {
   if (!item.acquisitions.length) {
-    return item.where_to_find
-      ? `<p class="prose">${linkify(item.where_to_find, item.where_to_find_links)}</p>`
-      : `<p class="prose muted">bg3.wiki doesn't record where to find this item.</p>`;
+    if (item.where_to_find) return `<p class="prose">${linkify(item.where_to_find, item.where_to_find_links)}</p>`;
+    return profilePlace(wanted) ?? `<p class="prose muted">bg3.wiki doesn't record where to find this item.</p>`;
   }
   return `<ol class="ways">${item.acquisitions
     .map((a) => {
@@ -118,13 +132,13 @@ export function renderDetail(panel, item, abilities, wanted) {
         ${itemIcon(item, 64, false)}
         <div>
           <h2 class="detail-name ${rarityClass(item.rarity)}">${esc(item.label)}</h2>
-          <p class="detail-kind">${esc(capitalize(item.rarity))} ${item.kind === "weapon" ? "weapon" : "equipment"}</p>
+          <p class="detail-kind">${esc(capitalize(item.rarity))} ${KIND_LABELS[item.kind]}</p>
         </div>
       </header>
       ${partyPlans(wanted)}
       <dl class="stats">${stats(item)}</dl>
       <h3>Where to get it</h3>
-      ${whereToGet(item)}
+      ${whereToGet(item, wanted)}
       ${item.notes ? `<h3>Notes</h3><p class="prose">${linkify(item.notes, item.notes_links)}</p>` : ""}
       ${abilityEntries("Passives", item.passives, abilities)}
       ${abilityEntries("Weapon passives", item.weapon_passives, abilities)}
@@ -132,6 +146,7 @@ export function renderDetail(panel, item, abilities, wanted) {
       ${abilityEntries("Off-hand passives", item.passives_off_hand, abilities)}
       ${abilityList("Weapon actions", [...(item.weapon_actions ?? []), ...(item.special_weapon_actions ?? [])], abilities)}
       ${renderSpecial(item.special, abilities)}
+      ${textBlock("Effect", item.effect)}
       ${textBlock("About", item.description)}
       ${item.quote ? `<blockquote class="quote">${esc(item.quote)}</blockquote>` : ""}
       ${item.bugs ? `<details class="bugs"><summary>Known bugs</summary><p class="prose">${esc(item.bugs)}</p></details>` : ""}

@@ -199,6 +199,26 @@ test("renderDetail puts Party plans above the stats", () => {
   assert.equal(panel.hidden, false);
 });
 
+test("renderDetail names a miscellaneous item as such and shows its effect", () => {
+  const panel = { innerHTML: "", hidden: true, scrollTop: 0 };
+  const stone = { id: "Stone", label: "Stone", rarity: "rare", kind: "misc", type: "Miscellaneous", effect: "Aura of <dread>.", acquisitions: [] };
+  renderDetail(panel, stone, new Map(), []);
+  assert.match(panel.innerHTML, /<p class="detail-kind">Rare miscellaneous item<\/p>/);
+  assert.match(panel.innerHTML, /<h3>Effect<\/h3><p class="prose">Aura of &lt;dread&gt;\.<\/p>/);
+  assert.match(panel.innerHTML, /<dt>Type<\/dt><dd>Miscellaneous<\/dd>/);
+  assert.match(panel.innerHTML, /bg3.wiki doesn't record where to find this item\./);
+});
+
+test("renderDetail uses a profile's place when the wiki records none", () => {
+  const panel = { innerHTML: "", hidden: true, scrollTop: 0 };
+  const stone = { id: "Stone", label: "Stone", rarity: "rare", kind: "misc", type: "Misc", acquisitions: [] };
+  const wanted = wantedByItem([{ id: "vesper", name: "Vesper", gear: [{ item: "Stone", act: "two", where: "The <Colony>." }] }]);
+  renderDetail(panel, stone, new Map(), wanted.get("Stone"));
+  assert.match(panel.innerHTML, /<p class="way-where">Act 2<\/p>\s*<p class="way-how">The &lt;Colony&gt;\.<\/p>/);
+  assert.match(panel.innerHTML, /From Vesper's plan: bg3.wiki doesn't record a place for this item\./);
+  assert.doesNotMatch(panel.innerHTML, /doesn't record where to find this item/);
+});
+
 test("renderGearTab shows the chosen act's loadout with its default and alternates", () => {
   const item = (id) => ({ id, label: id, rarity: "rare", earliest: null, acquisitions: [] });
   const data = { byId: new Map(["Guide Mail", "Wiki Vest", "Late Helm"].map((id) => [id, item(id)])), abilities };

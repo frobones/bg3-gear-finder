@@ -40,6 +40,9 @@ DATA_DIR = ROOT / "data"
 CACHE_DIR = ROOT / "cache" / "wiki"
 
 GEAR_TABLES = {"equipment": "equipment", "weapons": "weapon"}
+# Miscellaneous items (not gear) come in only when a profile names one, such as the Resonance Stone.
+MISC_TABLE = "misc_items"
+MISC_KIND = "misc"
 
 # item_locations / locations.region values that differ from a location's name.
 LOCATION_ALIASES = {
@@ -341,6 +344,29 @@ def build_items(wiki: WikiClient) -> dict[str, dict]:
             else:
                 existing["variants"].append(record)
     return items
+
+
+def add_profile_misc_items(wiki: WikiClient, profiles: list[dict], items: dict[str, dict]) -> None:
+    """Add the miscellaneous items profiles name that aren't gear, so they get icons, places and panels too.
+
+    Names the table doesn't have are left for check_profile_items to report.
+    """
+    wanted = set().union(*(profile_names(p, PROFILE_ITEM_KEYS) for p in profiles)) - items.keys()
+    if not wanted:
+        return
+    schema = wiki.schema(MISC_TABLE)
+    for row in wiki.export(MISC_TABLE, schema):
+        record = normalize_row(row, schema)
+        page = record["page"]
+        if page not in wanted:
+            continue
+        if page in items:
+            items[page]["variants"].append(record)
+            continue
+        added = {"id": page, "kind": MISC_KIND, "wiki_url": wiki_url(page), "variants": []}
+        if clash := added.keys() & record.keys():
+            raise RuntimeError(f"{MISC_TABLE} has fields that clash with added keys: {sorted(clash)}")
+        items[page] = {**added, **record}
 
 
 def build_locations(wiki: WikiClient) -> dict[str, dict]:
@@ -646,11 +672,12 @@ def main() -> int:
     wiki = WikiClient(CACHE_DIR, refresh=args.refresh)
     region_order = json.loads((DATA_DIR / "region_order.json").read_text(encoding="utf-8"))
     items = build_items(wiki)
+    profiles = load_profiles()
+    add_profile_misc_items(wiki, profiles, items)
+    check_profile_items(profiles, items)
     locations = build_locations(wiki)
     acquisitions, skipped = build_acquisitions(wiki, items, locations, region_order)
     abilities = build_abilities(wiki, items)
-    profiles = load_profiles()
-    check_profile_items(profiles, items)
     add_profile_abilities(wiki, profiles, abilities)
     attach_file_urls(wiki, items, abilities)
     add_notes(wiki, items)
@@ -668,12 +695,14 @@ def main() -> int:
         {
             "snapshot_utc": wiki.oldest_fetch.isoformat(timespec="seconds"),
             "source": WIKI,
-            "source_tables": [*GEAR_TABLES, "item_locations", "locations", *ABILITY_TABLES, *PROFILE_ABILITY_TABLES],
+            "source_tables": [*GEAR_TABLES, MISC_TABLE, "item_locations", "locations", *ABILITY_TABLES, *PROFILE_ABILITY_TABLES],
             "license": "Content from bg3.wiki, CC BY-NC-SA 4.0 or CC BY-SA 4.0",
             "license_url": f"{WIKI}/wiki/bg3wiki:Copyrights",
             "counts": {
                 "items": len(items),
-                "items_by_kind": {k: sum(1 for i in items.values() if i["kind"] == k) for k in GEAR_TABLES.values()},
+                "items_by_kind": {
+                    k: sum(1 for i in items.values() if i["kind"] == k) for k in (*GEAR_TABLES.values(), MISC_KIND)
+                },
                 "items_without_location_data": sum(1 for i in items.values() if not i["has_location_data"]),
                 "acquisitions": len(acquisitions),
                 "acquisitions_without_place": sum(1 for a in acquisitions if a["location"] is None),

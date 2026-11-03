@@ -275,7 +275,7 @@
   {"item": "Evasive Shoes", "priority": "yield", "claim": "Pearl."},
   {"item": "Spellcrux Amulet", "priority": "yield", "claim": "Alene: she has the highest spell slots to restore."},
   {"item": "Yuan-Ti Scale Mail", "priority": "high", "note": "Act 2 armour: 15 + her full DEX (19, then 20 at DEX 20), no Stealth Disadvantage, +1 initiative."},
-  {"name": "Resonance Stone", "act": "two", "priority": "matchup", "where": "Mind Flayer Colony, near the Mind-Archive interface.", "note": "Its aura gives psychic vulnerability and mental-save Disadvantage to everyone nearby, friends included. Carry it only when the party is clear. The wiki says it sometimes stops working after Act 2: check in Act 3."},
+  {"item": "Resonance Stone", "act": "two", "priority": "matchup", "where": "Mind Flayer Colony, near the Mind-Archive interface.", "note": "Its aura gives psychic vulnerability and mental-save Disadvantage to everyone nearby, friends included. Carry it only when the party is clear. The wiki says it sometimes stops working after Act 2: check in Act 3."},
   {"item": "Ketheric's Shield", "priority": "yield", "claim": "Alene: +1 spell DC is her whole job."},
   {"item": "Armour of Agility", "priority": "core", "note": "17 + her full DEX (22 at DEX 20) and +2 to all saves. Her endgame armour.", "claim": "Vesper. Unwanted Masterwork Scalemail is the fallback for anyone else."},
   {"item": "Unwanted Masterwork Scalemail", "priority": "yield", "claim": "Pearl: her Act 3 armour."},
