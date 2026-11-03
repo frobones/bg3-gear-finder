@@ -706,6 +706,42 @@ th[aria-sort="descending"] .sort-button::after {
   padding-left: 1.1rem;
 }
 
+/* Special: what the item grants, each action with its cost and recharge as tags. */
+.special-facts + .special-grants {
+  margin-top: 0.75rem;
+}
+
+.special-grants {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.special-grants > li + li {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.grant-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.special-grants .pop-facts {
+  margin: 0.2rem 0 0.4rem;
+}
+
+.grant-when {
+  margin: 0;
+  color: var(--muted);
+  font: italic var(--step--1) / 1.4 var(--serif);
+}
+
+.special-grants .prose {
+  margin: 0.2rem 0 0;
+}
+
 /* Passive and action names: a dotted underline says "there's more here". */
 .ability-trigger {
   min-height: 2.75rem;

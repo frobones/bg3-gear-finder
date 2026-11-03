@@ -12,6 +12,7 @@ import {
   rarityClass,
   safeWikiUrl,
 } from "./html.js";
+import { renderSpecial } from "./special.js";
 
 const WEAPON_PROPERTIES = ["finesse", "light", "heavy", "reach", "thrown", "dippable"];
 
@@ -130,7 +131,7 @@ export function renderDetail(panel, item, abilities, wanted) {
       ${abilityList("Main-hand passives", item.passives_main_hand, abilities)}
       ${abilityList("Off-hand passives", item.passives_off_hand, abilities)}
       ${abilityList("Weapon actions", [...(item.weapon_actions ?? []), ...(item.special_weapon_actions ?? [])], abilities)}
-      ${textBlock("Special", item.special)}
+      ${renderSpecial(item.special, abilities)}
       ${textBlock("About", item.description)}
       ${item.quote ? `<blockquote class="quote">${esc(item.quote)}</blockquote>` : ""}
       ${item.bugs ? `<details class="bugs"><summary>Known bugs</summary><p class="prose">${esc(item.bugs)}</p></details>` : ""}
