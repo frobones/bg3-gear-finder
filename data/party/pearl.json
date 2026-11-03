@@ -60,6 +60,8 @@
   {"item": "Safeguard Shield", "tags": ["survival"], "note": "+2 AC and +1 to saving throws."},
   {"item": "Circlet of Hunting", "tags": ["accuracy"], "note": "+1d4 to attack rolls against your Hunter's Mark target."},
   {"item": "Surgeon's Subjugation Amulet", "tags": ["crit", "control"], "note": "Once per long rest, a crit on a humanoid Paralyses it for 2 turns. Once it has fired, swap back to Broodmother's Revenge."},
+  {"item": "Drow Studded Leather Armour", "tags": ["survival"], "note": "Light armour: 12 + full DEX (16 at DEX 18) and +1 Stealth. Her Act 1 armour, from the Underdark."},
+  {"item": "Breastplate +1", "tags": ["survival"], "note": "15 + 2 DEX = 17 AC. Vesper takes the Hollow's copy, so this is only if a trader stocks another (from level 6)."},
   {"item": "Sharpened Snare Cuirass", "tags": ["survival"], "note": "14 + full DEX and no Stealth Disadvantage: her Act 2 armour."}
  ],
 
@@ -70,6 +72,7 @@
    "intro": "Titanstring from Brem plus the Club gets the build going early.",
    "slots": [
     {"slot": "Head", "items": ["Haste Helm"]},
+    {"slot": "Body", "items": ["Drow Studded Leather Armour", "Breastplate +1"]},
     {"slot": "Gloves", "items": ["Gloves of Archery", "Gloves of Dexterity"]},
     {"slot": "Boots", "items": ["Disintegrating Night Walkers"]},
     {"slot": "Amulet", "items": ["Broodmother's Revenge"]},
