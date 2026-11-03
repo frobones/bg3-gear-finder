@@ -312,7 +312,8 @@
   {"item": "Ring of Mental Inhibition", "priority": "core", "note": "Enemies that fail her saves get Mental Fatigue, weakening their mental saves."},
   {"item": "Braindrain Gloves", "priority": "core", "note": "Psychic hits apply Mental Fatigue. With Shadow Blade, every hit counts."},
   {"item": "Shadow-Cloaked Ring", "priority": "optional", "note": "+1d4 weapon damage against obscured targets, which Shadow Blade already wants."},
-  {"item": "Fleshmelter Cloak", "priority": "high", "note": "Melee attackers who hit her take acid damage. Her Act 2 cloak."},
+  {"item": "Vivacious Cloak", "priority": "core", "note": "8 temporary HP each time she casts a spell while in melee, which soaks the opportunity attacks she draws backing off. Check in game that Booming Blade triggers it."},
+  {"item": "Fleshmelter Cloak", "priority": "optional", "note": "Melee attackers who hit her take acid damage. The alternate to Vivacious Cloak."},
   {"item": "Cloak of Protection", "priority": "yield", "claim": "Alene in Act 2, then Zetharis in Act 3."},
   {"item": "Evasive Shoes", "priority": "yield", "claim": "Pearl."},
   {"item": "Spellcrux Amulet", "priority": "yield", "claim": "Alene: she has the highest spell slots to restore."},
@@ -371,7 +372,7 @@
    "intro": "Shadow Blade arrives at level 8. Until then, keep the Act 1 weapon.",
    "slots": [
     {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": []},
-    {"slot": "Cloak", "items": ["Fleshmelter Cloak"], "alternates": []},
+    {"slot": "Cloak", "items": ["Vivacious Cloak"], "alternates": ["Fleshmelter Cloak"]},
     {"slot": "Chest", "items": ["Yuan-Ti Scale Mail"], "alternates": [], "note": "15 + her full DEX, no Stealth Disadvantage, +1 initiative. Adamantine Scale Mail trades 1 AC for crit immunity and 1 less damage per hit."},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power"], "note": "Braindrain comes at the very end of the act. Until then, wear Battlemage's Power."},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
