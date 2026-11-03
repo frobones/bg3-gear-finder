@@ -57,7 +57,6 @@
   {"item": "Elegant Studded Leather", "tags": ["initiative", "survival"], "note": "14 + full DEX, +2 initiative, Shield once per short rest, and Advantage on Stealth. In vault nº9 at the Counting House; the key comes from Return Rakath's Gold."},
   {"item": "Elven Chain", "tags": ["initiative"], "note": "+2 initiative and Advantage on DEX saves."},
   {"item": "Glowing Shield", "tags": ["survival"], "note": "+2 AC, and 8 temporary HP once per short rest when you take damage below half HP."},
-  {"item": "Safeguard Shield", "tags": ["survival"], "note": "+2 AC and +1 to saving throws."},
   {"item": "Circlet of Hunting", "tags": ["accuracy"], "note": "+1d4 to attack rolls against your Hunter's Mark target."},
   {"item": "Surgeon's Subjugation Amulet", "tags": ["crit", "control"], "note": "Once per long rest, a crit on a humanoid Paralyses it for 2 turns. Once it has fired, swap back to Broodmother's Revenge."},
   {"item": "Drow Studded Leather Armour", "tags": ["survival"], "note": "Light armour: 12 + full DEX (16 at DEX 18) and +1 Stealth. Her Act 1 armour, from the Underdark."},
@@ -78,7 +77,7 @@
     {"slot": "Amulet", "items": ["Broodmother's Revenge"]},
     {"slot": "Rings", "items": ["Caustic Band", "Strange Conduit Ring"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
-    {"slot": "Off hand", "items": ["Glowing Shield", "Safeguard Shield"]},
+    {"slot": "Off hand", "items": ["Glowing Shield"]},
     {"slot": "Ranged", "items": ["Titanstring Bow", "Heavy Crossbow +1", "Hunting Shortbow", "Bow of Awareness"]}
    ]
   },
