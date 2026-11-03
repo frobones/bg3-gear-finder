@@ -269,12 +269,12 @@
   "warning": "Awakened turns illithid powers into bonus actions, but her bonus action already goes to Cunning Dash in her hit-and-run turn.",
   "powers": [
    {"when": "Crèche Y'llek", "abilities": ["Awakened"], "why": "Illithid powers cost a bonus action instead of an action. You get it by succeeding at the Zaith'isk."},
-   {"when": "Early", "abilities": ["Psionic Overload"], "why": "Adds psychic damage, which fits her mental-debuff plan."},
+   {"when": "Early", "abilities": ["Psionic Overload"], "why": "Adds 1d4 psychic damage to her attacks, but she takes 1d4 psychic damage every turn."},
    {"when": "Early", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies and can chain through a group."},
    {"when": "Early", "abilities": ["Shield of Thralls"], "why": "Temporary HP for her, and it can stun nearby enemies."},
    {"when": "Partial illithid", "abilities": ["Black Hole"], "why": "Pulls enemies together for control spells and bombs."},
    {"when": "Partial illithid", "abilities": ["Mind Blast"], "why": "Psychic area damage that can stun."},
-   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "Weakens mental saves, which suits her control spells."}
+   {"when": "Partial illithid", "abilities": ["Fracture Psyche"], "why": "−1 AC and −1 to all saving throws on the target, which suits her control spells."}
   ]
  },
 
@@ -282,7 +282,7 @@
   {"item": "Shapeshifter's Boon Ring", "priority": "swap", "note": "+1d4 to ability checks while disguised. Share with the Druid.", "claim": "Shared: swap with whoever is shapeshifting."},
   {"item": "Silver Pendant", "priority": "swap", "note": "Guidance when the Druid isn't nearby."},
   {"item": "Gloves of Thievery", "priority": "swap", "note": "Advantage on Sleight of Hand. Theft kit, not combat gloves."},
-  {"item": "Smuggler's Ring", "priority": "swap", "note": "+2 Stealth and Sleight of Hand for stealing, locks and traps."},
+  {"item": "Smuggler's Ring", "priority": "swap", "note": "+2 Stealth and Sleight of Hand for stealing, locks and traps, but −1 Charisma: take it off before a Deception check."},
   {"item": "Mask of the Shapeshifter", "priority": "optional", "note": "In reserve: she learns Disguise Self. Use the Mask if you replace Disguise Self at level 11."},
   {"item": "The Speedy Lightfeet", "priority": "core", "note": "Cunning Dash gives 3 Lightning Charges every turn of her hit-and-run loop. Needs medium armour proficiency."},
   {"item": "Knife of the Undermountain King", "priority": "core", "note": "Her Act 1 weapon: crits on 19–20, rerolls low damage, Advantage on obscured targets.", "claim": "Vesper until Shadow Blade at level 8, then the Warlock if they fight in melee. The Ranger's melee slot holds the Club of Hill Giant Strength."},
@@ -294,12 +294,15 @@
   {"item": "The Jolty Vest", "priority": "optional", "note": "With Lightning Charges from her Dash, attackers must save or be Shocked."},
   {"item": "The Oak Father's Embrace", "priority": "matchup", "note": "Undead that hit her take radiant damage. Swap it out against beasts."},
   {"item": "Dark Justiciar Mail", "priority": "optional", "note": "Necrotic hit-back while she's in shadow, but low AC."},
-  {"item": "Gloves of Belligerent Skies", "priority": "yield", "claim": "Alene: her star forms trigger it every turn, and it lowers the saves her spells use."},
+  {"item": "Gloves of Belligerent Skies", "priority": "yield", "claim": "Alene: her star forms trigger it every turn. Reverberation lowers STR, DEX and CON saves (not WIS)."},
   {"item": "Wondrous Gloves", "priority": "high", "note": "+1 AC: her Act 1 gloves."},
   {"item": "Holy Lance Helm", "priority": "high", "note": "Enemies that miss her take radiant damage."},
-  {"item": "Periapt of Wound Closure", "priority": "high", "note": "Healing she receives is maximised. Her Act 2 amulet; great with potions thrown by Mage Hand."},
+  {"item": "Necklace of Elemental Augmentation", "act": "one", "priority": "high", "note": "Adds her INT modifier to cantrip thunder damage: every Booming Blade hit from level 5. Her Act 1–2 amulet once she reaches the Crèche."},
+  {"item": "The Lifebringer", "priority": "optional", "note": "3 temporary HP whenever she gains Lightning Charges, so every Dash in Speedy Lightfeet."},
+  {"item": "Diadem of Arcane Synergy", "priority": "optional", "note": "Arcane Synergy whenever she inflicts a condition, and Booming Blade's condition triggers it (confirmed in game). Wearing it frees her Synergy ring slot for another ring."},
+  {"item": "Periapt of Wound Closure", "priority": "high", "note": "Healing she receives is maximised. Her amulet until the Necklace, then its alternate; great with potions thrown by Mage Hand."},
   {"item": "Ring of Arcane Synergy", "priority": "core", "note": "Booming Blade turns it on every turn: +3 damage (her INT modifier) on weapon hits."},
-  {"item": "Ring of Elemental Infusion", "priority": "high", "note": "On Tactician, Booming Blade's thunder adds +1d4 thunder to her next weapon hit."},
+  {"item": "Ring of Elemental Infusion", "priority": "high", "note": "From level 5, Booming Blade's thunder on a hit adds +1d4 thunder to her next weapon hit. Check level-4 behaviour in game."},
   {"item": "Ring of Protection", "priority": "yield", "claim": "Alene, for her concentration saves."},
   {"item": "Disintegrating Night Walkers", "priority": "yield", "claim": "Pearl."},
   {"item": "Vital Conduit Boots", "priority": "yield", "claim": "Alene: 8 temporary HP on every concentration spell."},
@@ -318,7 +321,7 @@
   {"item": "Evasive Shoes", "priority": "yield", "claim": "Pearl."},
   {"item": "Spellcrux Amulet", "priority": "yield", "claim": "Alene: she has the highest spell slots to restore."},
   {"item": "Yuan-Ti Scale Mail", "priority": "high", "note": "Act 2 armour: 15 + her full DEX (19, then 20 at DEX 20), no Stealth Disadvantage, +1 initiative."},
-  {"name": "Resonance Stone", "act": "two", "priority": "matchup", "where": "Mind Flayer Colony, near the Mind-Archive interface.", "note": "Its aura gives psychic vulnerability and mental-save Disadvantage to everyone nearby, friends included. Carry it only when the party is clear."},
+  {"name": "Resonance Stone", "act": "two", "priority": "matchup", "where": "Mind Flayer Colony, near the Mind-Archive interface.", "note": "Its aura gives psychic vulnerability and mental-save Disadvantage to everyone nearby, friends included. Carry it only when the party is clear. The wiki says it sometimes stops working after Act 2: check in Act 3."},
   {"item": "Ketheric's Shield", "priority": "yield", "claim": "Alene: +1 spell DC is her whole job."},
   {"item": "Armour of Agility", "priority": "core", "note": "17 + her full DEX (22 at DEX 20) and +2 to all saves. Her endgame armour.", "claim": "Vesper. Unwanted Masterwork Scalemail is the fallback for anyone else."},
   {"item": "Unwanted Masterwork Scalemail", "priority": "yield", "claim": "Pearl: her Act 3 armour."},
@@ -352,12 +355,12 @@
    "label": "Act 1",
    "intro": "From level 4, once Moderately Armoured gives her medium armour and shields. Take the theft pieces off after shopping.",
    "slots": [
-    {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": [], "note": "Enemies that miss her take radiant damage."},
+    {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": ["The Lifebringer", "Diadem of Arcane Synergy"], "note": "Enemies that miss her take radiant damage. Lifebringer adds temporary HP on every Dash; the Diadem frees her Synergy ring slot."},
     {"slot": "Cloak", "note": "Nothing worth the slot in Act 1."},
     {"slot": "Chest", "items": ["Breastplate +1"], "alternates": ["The Jolty Vest", "The Oak Father's Embrace"], "note": "Until Yuan-Ti Scale Mail early in Act 2. Adamantine Scale Mail is skipped: the second Mithral ore makes Zetharis a shield."},
     {"slot": "Gloves", "items": ["Wondrous Gloves"], "alternates": ["Gloves of Thievery"], "note": "Swap to Thievery for stealing."},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
-    {"slot": "Amulet", "items": ["Periapt of Wound Closure"], "alternates": ["Silver Pendant"], "note": "Silver Pendant gives Guidance when the Druid isn't nearby."},
+    {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure", "Silver Pendant"], "note": "The Necklace is in the Crèche, late in the act: wear the Periapt until then. Silver Pendant gives Guidance when the Druid isn't nearby."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring"], "note": "Swap to the Boon ring while disguised."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Smuggler's Ring"], "note": "Swap to Smuggler's for stealing, locks and traps."},
     {"slot": "Main hand", "items": ["Knife of the Undermountain King"], "alternates": ["Phalar Aluve", "Sussur Dagger"], "note": "Finesse, so Sneak Attack works. Hand the Knife on when Shadow Blade arrives at level 8."},
@@ -373,10 +376,10 @@
    "slots": [
     {"slot": "Head", "items": ["Holy Lance Helm"], "alternates": []},
     {"slot": "Cloak", "items": ["Vivacious Cloak"], "alternates": ["Fleshmelter Cloak"]},
-    {"slot": "Chest", "items": ["Yuan-Ti Scale Mail"], "alternates": [], "note": "15 + her full DEX, no Stealth Disadvantage, +1 initiative. Adamantine Scale Mail trades 1 AC for crit immunity and 1 less damage per hit."},
+    {"slot": "Chest", "items": ["Yuan-Ti Scale Mail"], "alternates": [], "note": "15 + her full DEX, no Stealth Disadvantage, +1 initiative. Adamantine Scale Mail (16 + max 2 DEX) trades 1–2 AC and adds Stealth Disadvantage; her Adamantine Shield already covers crits."},
     {"slot": "Gloves", "items": ["Braindrain Gloves"], "alternates": ["Gloves of Battlemage's Power"], "note": "Braindrain comes at the very end of the act. Until then, wear Battlemage's Power."},
     {"slot": "Boots", "items": ["The Speedy Lightfeet"], "alternates": []},
-    {"slot": "Amulet", "items": ["Periapt of Wound Closure"], "alternates": []},
+    {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure"]},
     {"slot": "Ring", "items": ["Ring of Mental Inhibition"], "alternates": []},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shadow-Cloaked Ring", "Ring of Elemental Infusion"]},
     {"slot": "Main hand", "abilities": ["Shadow Blade"], "note": "From level 9, cast it with a 3rd-level slot for 3d8."},
@@ -411,9 +414,9 @@
    "Cunning Action: Dash toward the target. The Speedy Lightfeet give 3 Lightning Charges.",
    "Booming Blade with Shadow Blade, and add Sneak Attack on the hit.",
    "Use the rest of her movement to back away, so the target has to move to reach her and takes Booming Blade's thunder.",
-   "Backing away draws opportunity attacks: Uncanny Dodge halves the first hit, and AC, Shield and the Arcane Ward soak the rest. Misses trigger Holy Lance Helm and the Adamantine Shield.",
+   "Backing away draws opportunity attacks: Uncanny Dodge or Shield takes her one reaction (Shield's +5 AC lasts the round), and the Arcane Ward soaks the rest. Misses trigger Holy Lance Helm and the Adamantine Shield.",
    "If an opportunity attack would be too dangerous, use Cunning Disengage instead of Dash.",
-   "Bombs are a last resort. From level 11, Evasion makes point-blank bombs safe for her, but not for her friends."
+   "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends."
   ],
   "start_of_day": [
    "Ask the Gloom Stalker for Longstrider: more movement for running in and back out.",
@@ -428,7 +431,7 @@
    "Split from the group and Hide. Keep your friends out of the crime scene.",
    "Steal at least one copy of every Wizard scroll you find.",
    "After a successful pickpocket, leave before the victim notices.",
-   "If caught and given a dialogue check, pick Deception and cast Friends on that person for Advantage.",
+   "If caught and given a dialogue check, pick Deception. On Tactician, casting Friends is itself a crime, so cast it before the theft, out of sight, or not at all.",
    "On Tactician, Friends can anger its target when it ends. Leave, camp or fast-travel before the 10 turns run out. Never use Friends on companions.",
    "If you keep getting caught, slip away instead of escalating."
   ],
@@ -437,9 +440,8 @@
    {"name": "Shield", "setting": "Ask", "why": "Spend the slot only when +5 AC changes the result. It gives no Arcane Ward charges."},
    {"name": "Counterspell", "setting": "Ask", "why": "Skip harmless casts. It always gives 3 Arcane Ward charges."},
    {"name": "Hellish Rebuke", "setting": "Ask", "why": "Low priority: weak with her Charisma."},
-   {"name": "Uncanny Dodge", "setting": "On", "why": "Halves the first hit each round, including the opportunity attacks she draws when backing off."},
-   {"name": "Rebuke of the Mighty (Viconia's)", "setting": "Ask", "why": "Never let it take the reaction you need for Shield or Counterspell."},
-   {"name": "Infernal Evasion (Helldusk Boots)", "setting": "Ask", "why": "Only when the failed save is truly dangerous."}
+   {"name": "Uncanny Dodge", "setting": "Ask", "why": "Halves one hit, but takes the reaction Shield or Counterspell needs. Take Shield when +5 AC turns the hit (and the rest of the round's attacks) into misses."},
+   {"name": "Rebuke of the Mighty (Viconia's)", "setting": "Ask", "why": "Never let it take the reaction you need for Shield or Counterspell."}
   ],
   "mage_hand": [
    "Scout dangerous rooms while it's invisible. It turns visible when it acts and goes invisible again on a short rest.",

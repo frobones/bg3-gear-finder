@@ -18,14 +18,15 @@
 
  "levels": [
   {"level": 4, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS for 20, if you got the one-time +1 WIS boost found in Act 1"}, {"text": "Ability Improvement", "note": "+1 WIS and +1 CON for WIS 18, without that boost"}]}]},
-  {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "War Caster: Concentration", "note": "if WIS is already 20; keeps concentration after level 10"}, {"text": "Ability Improvement", "note": "+2 WIS for 20, if you didn't get the Act 1 boost"}]}]},
+  {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "War Caster: Concentration", "note": "if WIS is already 20; Advantage on concentration saves"}, {"text": "Ability Improvement", "note": "+2 WIS for 20, if you didn't get the Act 1 boost"}]}]},
   {"level": 12, "picks": [{"label": "Feat", "entries": [{"ability": "Alert", "note": "go first and can't be surprised"}, {"ability": "War Caster: Concentration", "note": "if you didn't take it at level 8"}]}]}
  ],
 
  "gear": [
   {"item": "Melf's First Staff", "tags": ["dc"], "note": "+1 spell DC and spell attack; Melf's Acid Arrow once a day."},
-  {"item": "The Protecty Sparkswall", "tags": ["dc"], "note": "Clothing: +1 spell DC, and +1 AC and saves while you have Lightning Charges."},
-  {"item": "The Shadespell Circlet", "tags": ["dc"], "note": "+1 spell DC while you're obscured in shadow."},
+  {"item": "The Protecty Sparkswall", "tags": ["dc"], "note": "Clothing: +1 spell DC. Its +1 AC and saves need Lightning Charges, which nothing on this page gives you."},
+  {"item": "Wapira's Crown", "tags": ["healing"], "note": "You regain 1d6 HP whenever you heal someone else. A reward from Zevlor for helping the refugees."},
+  {"item": "Circlet of Psionic Revenge", "tags": ["damage"], "note": "When you succeed on a saving throw, the enemy that forced it takes 1d4 psychic damage. Late Act 1, in the Crèche."},
   {"item": "Luminous Armour", "tags": ["radiant"], "note": "Medium armour: your radiant damage sets off a shockwave that adds Radiating Orb."},
   {"item": "Gloves of Belligerent Skies", "tags": ["radiant"], "note": "Radiant, thunder and lightning damage add Reverberation (−1 to STR, DEX and CON saves per turn)."},
   {"item": "Boots of Stormy Clamour", "tags": ["radiant"], "note": "Inflicting a condition also adds Reverberation."},
@@ -39,16 +40,15 @@
   {"item": "Fistbreaker Helm", "tags": ["dc"], "note": "+1 spell DC and +1 initiative."},
   {"item": "Browbeaten Circlet", "tags": ["dc"], "note": "+1 spell DC while you're Threatened."},
   {"item": "Ketheric's Shield", "tags": ["dc"], "note": "+1 spell DC and spell attack, Advantage on DEX saves."},
-  {"item": "Infernal Rapier", "tags": ["dc"], "note": "+1 spell DC; a Wyll quest reward."},
-  {"item": "Spellcrux Amulet", "tags": ["dc"], "note": "Restore one spell slot of any level, once per long rest."},
+  {"item": "Spellcrux Amulet", "tags": ["utility"], "note": "Restore one spell slot of any level, once per long rest."},
   {"item": "Luminous Gloves", "tags": ["radiant"], "note": "Your radiant damage adds 2 turns of Radiating Orb (−1 to the target's attack rolls per turn)."},
   {"item": "Coruscation Ring", "tags": ["radiant"], "note": "Spell damage while you're lit adds Radiating Orb. Produce Flame keeps you lit."},
   {"item": "Ring of Spiteful Thunder", "tags": ["radiant"], "note": "Damaging a Reverberating enemy can Daze it."},
   {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves. Pass it to Zetharis once you have Cloak of the Weave."},
   {"item": "Hood of the Weave", "tags": ["dc"], "note": "+2 spell DC and spell attack."},
-  {"item": "Amulet of the Devout", "tags": ["dc"], "note": "+2 spell DC."},
+  {"item": "Amulet of the Devout", "tags": ["dc"], "note": "+2 spell DC. Looting it from the offering chest curses you: falling unconscious kills you until it's removed, so cast Greater Restoration on yourself right away."},
   {"item": "Staff of Spellpower", "tags": ["dc"], "note": "+1 spell DC and spell attack, and your next spell is free once a day."},
-  {"item": "Woe", "tags": ["dc"], "note": "+1 spell DC and spell attack; you heal 1d4 when enemies fail your saves."},
+  {"item": "Woe", "tags": ["dc"], "note": "+1 spell DC and spell attack; you heal 1d4 when enemies fail your saves. It's destroyed if you leave the spawn behind after the fight with Cazador."},
   {"item": "Armour of Landfall", "tags": ["dc", "concentration"], "note": "Light armour: +1 spell DC, Advantage on CON saves, and Plant Growth."},
   {"item": "Robe of the Weave", "tags": ["dc"], "note": "+2 AC, +1 spell DC and spell attack."},
   {"item": "Armour of the Sporekeeper", "tags": ["dc"], "note": "Light armour: +1 spell DC."},
@@ -56,10 +56,10 @@
   {"item": "Helldusk Gloves", "tags": ["dc"], "note": "+1 spell DC and spell attack."},
   {"item": "Gauntlet of the Tyrant", "tags": ["dc"], "note": "+1 spell DC; Command once a day."},
   {"item": "Ring of Feywild Sparks", "tags": ["dc"], "note": "+1 spell DC for any caster."},
-  {"item": "Gibus of the Worshipful Servant", "tags": ["concentration"], "note": "Advantage on concentration saves."},
   {"item": "Shapeshifter Hat", "tags": ["utility"], "note": "One more Wild Shape charge: one more Starry Form a day."},
-  {"item": "Hellrider Longbow", "tags": ["utility"], "note": "Ranged slot: +3 initiative and Faerie Fire on hit."},
-  {"item": "Cloak of the Weave", "tags": ["dc"], "note": "+1 spell DC and spell attack, plus Absorb Elements."}
+  {"item": "Hellrider Longbow", "tags": ["utility"], "note": "Ranged slot: +3 initiative. Druids aren't proficient with longbows, so its chance of Faerie Fire on a hit is a bonus, not a plan."},
+  {"item": "Armour of Moonbasking", "tags": ["survival"], "note": "Starry Form counts as Wild Shape: 22 temporary HP each time you take it, +2 AC and Advantage on saves against spells. Swapping constellations drops the temporary HP."},
+  {"item": "Cloak of the Weave", "tags": ["dc"], "note": "+1 spell DC and spell attack. Its Absorb Elements is bugged (per the wiki)."}
  ],
 
  "loadouts": [
@@ -68,7 +68,7 @@
    "label": "Act 1",
    "intro": "Good picks per slot. Mix to taste: Spell DC, Radiant debuffs, or Concentration to hold your spells.",
    "slots": [
-    {"slot": "Head", "items": ["The Shadespell Circlet"]},
+    {"slot": "Head", "items": ["Wapira's Crown", "Circlet of Psionic Revenge"]},
     {"slot": "Body", "items": ["Luminous Armour", "The Protecty Sparkswall", "Spidersilk Armour"]},
     {"slot": "Gloves", "items": ["Gloves of Belligerent Skies", "Hellrider's Pride"]},
     {"slot": "Boots", "items": ["Boots of Stormy Clamour", "Vital Conduit Boots"]},
@@ -88,18 +88,18 @@
     {"slot": "Boots", "items": ["Boots of Stormy Clamour"]},
     {"slot": "Amulet", "items": ["Spellcrux Amulet"]},
     {"slot": "Rings", "items": ["Coruscation Ring", "Ring of Spiteful Thunder", "Ring of Protection"]},
-    {"slot": "Main hand", "items": ["Melf's First Staff", "Infernal Rapier"]},
+    {"slot": "Main hand", "items": ["Melf's First Staff"]},
     {"slot": "Off hand", "items": ["Ketheric's Shield"]}
    ]
   },
   {
    "act": "three",
    "label": "Act 3",
-   "intro": "The spell DC capstones arrive. Stacking the DC pieces reaches about DC 25.",
+   "intro": "The spell DC capstones arrive. Stacking the DC pieces reaches about DC 27, if the +1 DC pieces stack: check the number in game.",
    "slots": [
-    {"slot": "Head", "items": ["Hood of the Weave", "Gibus of the Worshipful Servant", "Shapeshifter Hat"]},
+    {"slot": "Head", "items": ["Hood of the Weave", "Shapeshifter Hat"]},
     {"slot": "Cloak", "items": ["Cloak of the Weave"]},
-    {"slot": "Body", "items": ["Armour of Landfall", "Robe of the Weave", "Robe of Supreme Defences", "Armour of the Sporekeeper"]},
+    {"slot": "Body", "items": ["Armour of Moonbasking", "Armour of Landfall", "Robe of the Weave", "Robe of Supreme Defences", "Armour of the Sporekeeper"]},
     {"slot": "Gloves", "items": ["Helldusk Gloves", "Gauntlet of the Tyrant", "Luminous Gloves"]},
     {"slot": "Boots", "items": ["Boots of Stormy Clamour"]},
     {"slot": "Amulet", "items": ["Amulet of the Devout"]},
