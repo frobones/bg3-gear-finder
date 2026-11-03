@@ -1,11 +1,13 @@
 // The Party view: the roster of characters, and each filled-in character's profile with its tabs.
 //
-// Routes: #party (roster), #party/<profile> (last tab used), #party/<profile>/<tab>.
+// Routes: #party (roster), #party/gear (everyone's gear by act), #party/<profile> (last tab used),
+// #party/<profile>/<tab>.
 
 import { renderGearTab } from "./gearplan.js";
 import { renderIllithidTab, renderPlaybookTab, renderScrollsTab } from "./guides.js";
 import { esc } from "./html.js";
 import { MAX_LEVEL, renderLevelTab } from "./levelup.js";
+import { PARTY_GEAR_ROUTE, renderPartyGear } from "./partygear.js";
 import { renderPicksPage } from "./picks.js";
 import { PROFILE_TABS, loadProgress, saveProgress, toggleInList } from "./progress.js";
 
@@ -72,7 +74,12 @@ function renderRoster(data) {
         </li>`;
     })
     .join("");
-  return `<ul class="roster">${cards}</ul>`;
+  const overview = `
+    <a class="party-gear-card" href="#party/${PARTY_GEAR_ROUTE}">
+      <span class="party-gear-card-title">Party gear by act</span>
+      <span class="muted">Every character's picks for each slot, side by side, one act at a time.</span>
+    </a>`;
+  return `${overview}<ul class="roster">${cards}</ul>`;
 }
 
 function profileHeader(profile) {
@@ -122,6 +129,10 @@ function tabBody(profile, data, tab) {
 }
 
 export function renderParty(view, data, route) {
+  if (route.profileId === PARTY_GEAR_ROUTE) {
+    view.innerHTML = renderPartyGear(data, loadoutAct);
+    return;
+  }
   const profile = route.profileId ? data.party.profiles.get(route.profileId) : null;
   if (!profile) {
     view.innerHTML = `

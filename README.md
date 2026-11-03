@@ -14,8 +14,10 @@ where and when you can pick it up.
   and the wiki's notes on it, with links back to bg3.wiki.
 - Hover over or focus a passive, weapon action or spell to see what it does;
   click or tap to keep it open. Escape closes it.
-- **Party** shows each character in the co-op party. A filled-in profile has
-  tabs for:
+- **Party** shows each character in the co-op party. **Party gear by act**
+  puts everyone's picks for each slot side by side, one act at a time, so you
+  can see where every piece of gear is going. A filled-in profile has tabs
+  for:
   - **Level up**: what to pick at the next level, in the order the game asks,
     then which Wizard spells to prepare and which scrolls to scribe.
   - **Gear plan**: the items the character wants, in play order, with
