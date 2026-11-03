@@ -109,15 +109,30 @@
   font: italic var(--step-0) / 1.4 var(--serif);
 }
 
+/* A button-shaped link back to the roster, so it reads as a control rather than stray text. */
 .back-link {
   display: inline-flex;
   align-items: center;
+  gap: 0.45rem;
   min-height: 2.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0 1rem 0 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--raised);
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .back-link::before {
-  content: "‹";
-  margin-right: 0.35rem;
+  content: "←";
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  border-color: var(--brass);
+  text-decoration: underline;
 }
 
 .profile-head {
@@ -871,5 +886,30 @@
     margin-top: 0.4rem;
     color: var(--muted);
     font-size: var(--step--1);
+  }
+
+  /* Party gear by act: each slot is a heading, and each character's picks sit in their own card. */
+  .party-gear-table tr {
+    padding: 1rem 0 0.25rem;
+  }
+
+  .party-gear-table tbody th {
+    font: 600 var(--step-1) / 1.2 var(--serif);
+    color: var(--brass-strong);
+  }
+
+  .party-gear-table td {
+    min-width: 0;
+    margin-top: 0.6rem;
+    padding: 0.5rem 0.75rem 0.6rem;
+    border-left: 3px solid var(--brass);
+    border-radius: 6px;
+    background: var(--raised);
+  }
+
+  .party-gear-table td[data-label]::before {
+    margin: 0 0 0.15rem;
+    color: var(--text);
+    font: 600 var(--step-0) / 1.3 var(--sans);
   }
 }

@@ -13,6 +13,9 @@ const SLOT_ALIASES = { Chest: "Body", Ring: "Rings" };
 const ACT_ORDER = ["one", "two", "three"];
 // A character wears two rings, so a friend's Rings bucket has two picks before its options.
 const WORN = { Rings: 2 };
+// One line on purpose: .prose keeps line breaks, so a wrapped source string would break mid-sentence.
+const INTRO =
+  "Where each piece of gear is going at the end of each act. Each character's picks come first; items under “Or” are alternates or other good options, and items under “Swap in when needed” are put on only to use them.";
 
 /** Items put on only to use them (Vesper's "swap" priority, or a friend's "swap" tag), not worn all fight. */
 export function swapIns(profile) {
@@ -98,9 +101,7 @@ export function renderPartyGear(data, act) {
     <article class="party-gear">
       <a class="back-link" href="#party">All party members</a>
       <h2 class="profile-name">Party gear by act</h2>
-      <p class="prose">Where each piece of gear is going at the end of each act. Items at the top of a cell are the
-        picks; items under “Or” are alternates or other good options, and items under “Swap in when needed” are put
-        on only to use them.</p>
+      <p class="prose">${esc(INTRO)}</p>
       <div class="segments" role="group" aria-label="Act">${buttons}</div>
       <div class="table-wrap">
         <table class="loadout-table party-gear-table">
