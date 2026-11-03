@@ -14,13 +14,24 @@ const ACT_ORDER = ["one", "two", "three"];
 // A character wears two rings, so a friend's Rings bucket has two picks before its options.
 const WORN = { Rings: 2 };
 
-/** One profile's picks for an act, by slot: `picks` lead, `others` are alternates or further options. */
+/** Items put on only to use them (Vesper's "swap" priority, or a friend's "swap" tag), not worn all fight. */
+export function swapIns(profile) {
+  return new Set(
+    (profile.gear ?? []).filter((e) => e.priority === "swap" || e.tags?.includes("swap")).map((e) => e.item),
+  );
+}
+
+/**
+ * One profile's picks for an act, by slot: `picks` lead, `others` are alternates or further options,
+ * and `swaps` are put on only when needed. A swap-in never counts as one of a friend's worn picks.
+ */
 export function slotPicks(profile, act) {
+  const swaps = swapIns(profile);
   const bySlot = new Map();
   const loadout = (profile.loadouts ?? []).find((l) => l.act === act);
   for (const slot of loadout?.slots ?? []) {
     const name = SLOT_ALIASES[slot.slot] ?? slot.slot;
-    if (!bySlot.has(name)) bySlot.set(name, { picks: [], others: [] });
+    if (!bySlot.has(name)) bySlot.set(name, { picks: [], others: [], swaps: [] });
     const cell = bySlot.get(name);
     const items = slot.items ?? [];
     if (slot.alternates) {
@@ -28,13 +39,17 @@ export function slotPicks(profile, act) {
       cell.others.push(...slot.alternates);
     } else {
       const worn = WORN[slot.slot] ?? 1;
-      cell.picks.push(...items.slice(0, worn));
-      cell.others.push(...items.slice(worn));
+      const wearable = items.filter((id) => !swaps.has(id));
+      cell.picks.push(...wearable.slice(0, worn));
+      cell.others.push(...wearable.slice(worn));
+      cell.swaps.push(...items.filter((id) => swaps.has(id)));
     }
   }
   for (const cell of bySlot.values()) {
     cell.picks = [...new Set(cell.picks)];
-    cell.others = [...new Set(cell.others)].filter((id) => !cell.picks.includes(id));
+    const rest = [...new Set(cell.others)].filter((id) => !cell.picks.includes(id));
+    cell.swaps = [...new Set([...cell.swaps, ...rest.filter((id) => swaps.has(id))])];
+    cell.others = rest.filter((id) => !swaps.has(id));
   }
   return bySlot;
 }
@@ -47,10 +62,13 @@ export function partyActs(profiles) {
 }
 
 function gearCell(cell, byId) {
-  if (!cell || (!cell.picks.length && !cell.others.length)) return `<span class="muted">Nothing planned</span>`;
+  if (!cell || (!cell.picks.length && !cell.others.length && !cell.swaps.length)) {
+    return `<span class="muted">Nothing planned</span>`;
+  }
   const items = (ids) => ids.map((id) => `<div class="loadout-item">${itemButton(byId.get(id), 24)}</div>`).join("");
-  const others = cell.others.length ? `<div class="gear-others"><span class="gear-others-label">Or</span>${items(cell.others)}</div>` : "";
-  return `${items(cell.picks)}${others}`;
+  const group = (label, ids) =>
+    ids.length ? `<div class="gear-others"><span class="gear-others-label">${label}</span>${items(ids)}</div>` : "";
+  return `${items(cell.picks)}${group("Or", cell.others)}${group("Swap in when needed", cell.swaps)}`;
 }
 
 export function renderPartyGear(data, act) {
@@ -81,7 +99,8 @@ export function renderPartyGear(data, act) {
       <a class="back-link" href="#party">All party members</a>
       <h2 class="profile-name">Party gear by act</h2>
       <p class="prose">Where each piece of gear is going at the end of each act. Items at the top of a cell are the
-        picks; items under “Or” are alternates or other good options.</p>
+        picks; items under “Or” are alternates or other good options, and items under “Swap in when needed” are put
+        on only to use them.</p>
       <div class="segments" role="group" aria-label="Act">${buttons}</div>
       <div class="table-wrap">
         <table class="loadout-table party-gear-table">

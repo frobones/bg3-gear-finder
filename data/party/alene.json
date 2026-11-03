@@ -44,7 +44,7 @@
   {"item": "The Spectator Eyes", "tags": ["control"], "note": "Ray of Fear and Wounding Ray as 3rd-level spells, once per long rest each. Worn by the Spectator at the Underdark's Petrified Battlefield."},
   {"item": "Safeguard Shield", "tags": ["concentration", "survival"], "note": "+2 AC and +1 to every save, concentration included. Sold by Dammon at the Emerald Grove. Your staff works one-handed beside it."},
   {"item": "Absolute's Warboard", "tags": ["survival"], "note": "+2 AC and Heroism once per long rest. Its +1 to saves needs the Absolute's Brand. Carried by True Soul Gut in the Shattered Sanctum."},
-  {"item": "Spellcrux Amulet", "tags": ["utility"], "note": "Restore one spell slot of any level, once per long rest."},
+  {"item": "Spellcrux Amulet", "tags": ["utility", "swap"], "note": "Restore one spell slot of any level, once per long rest. A swap-in: put it on to use it (a bonus action), then switch back."},
   {"item": "Luminous Gloves", "tags": ["radiant"], "note": "Your radiant damage adds 2 turns of Radiating Orb (−1 to the target's attack rolls per turn)."},
   {"item": "Coruscation Ring", "tags": ["radiant"], "note": "Spell damage while you're lit adds Radiating Orb. Produce Flame keeps you lit."},
   {"item": "Cloak of Protection", "tags": ["survival"], "note": "+1 AC and saves. Pass it to Zetharis once you have Cloak of the Weave."},
@@ -89,7 +89,7 @@
     {"slot": "Body", "items": ["Robe of Exquisite Focus", "Luminous Armour"]},
     {"slot": "Gloves", "items": ["Luminous Gloves", "Gloves of Belligerent Skies"]},
     {"slot": "Boots", "items": ["Boots of Stormy Clamour"]},
-    {"slot": "Amulet", "items": ["Spellcrux Amulet"]},
+    {"slot": "Amulet", "items": ["Amulet of Restoration", "Spellcrux Amulet"]},
     {"slot": "Rings", "items": ["Coruscation Ring", "Ring of Protection"]},
     {"slot": "Main hand", "items": ["Melf's First Staff"]},
     {"slot": "Off hand", "items": ["Ketheric's Shield"]}

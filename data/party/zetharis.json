@@ -32,7 +32,7 @@
   {"item": "Circlet of Blasting", "tags": ["damage"], "note": "Scorching Ray once a day."},
   {"item": "Daredevil Gloves", "tags": ["accuracy"], "note": "+1 to spell attack rolls, which every beam uses."},
   {"item": "Boots of Striding", "tags": ["concentration"], "note": "While concentrating on Hex, you can't be knocked Prone or moved."},
-  {"item": "Pearl of Power Amulet", "tags": ["utility"], "note": "Restore a spell slot up to 3rd level once a day. It's a swap-in: put it on after a fight, restore the slot, and switch back to Misty Step. Warlock slots go above 3rd level at Warlock 7, so it stops working for you then."},
+  {"item": "Pearl of Power Amulet", "tags": ["utility", "swap"], "note": "Restore a spell slot up to 3rd level once a day. It's a swap-in: put it on after a fight, restore the slot, and switch back to Misty Step. Warlock slots go above 3rd level at Warlock 7, so it stops working for you then."},
   {"item": "Amulet of Misty Step", "tags": ["utility"], "note": "Bonus-action Misty Step each short rest. Your worn amulet in Act 1, so it's ready when a fight starts."},
   {"item": "The Spellsparkler", "tags": ["damage"], "note": "Spell and cantrip damage gives Lightning Charges, every beam included."},
   {"item": "Potent Robe", "tags": ["damage", "survival"], "note": "Adds your CHA to cantrip damage, so each beam gets it twice with Agonising Blast; temporary HP every turn."},

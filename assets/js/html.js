@@ -88,6 +88,7 @@ export const TAG_LABELS = {
   control: "Control",
   strength: "Strength",
   utility: "Utility",
+  swap: "Swap in",
 };
 
 /** A gear entry's tags: its priority on a plan profile, or what it's good for on an options profile. */
