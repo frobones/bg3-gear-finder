@@ -57,18 +57,52 @@ function whereToGet(item) {
     .join("")}</ol>`;
 }
 
-/** Which party members plan around this item, and who gets it when it's contested. */
+/**
+ * Where an item sits in a profile's act loadouts, for example "Act 2, gloves (first pick)".
+ * Vesper's plan names one pick per slot plus alternates; friends' slots are a bucket whose first item leads.
+ */
+export function loadoutUses(profile, name) {
+  return (profile.loadouts ?? []).flatMap((loadout) =>
+    loadout.slots.flatMap((slot) => {
+      const items = slot.items ?? [];
+      let role = null;
+      if ((slot.alternates ?? []).includes(name)) role = "alternate";
+      else if (items.includes(name)) {
+        if (slot.alternates || items.length === 1) role = "pick";
+        else role = items[0] === name ? "first pick" : "option";
+      }
+      return role ? [`${loadout.label}, ${slot.slot.toLowerCase()} (${role})`] : [];
+    }),
+  );
+}
+
+/**
+ * Which party members plan around this item and what it does for their build.
+ * A hand-off ("yield") row folds into a closing line when someone else's plan already explains the item.
+ */
 export function partyPlans(wanted) {
   if (!wanted.length) return "";
-  const rows = wanted.map(
-    ({ profile, entry }) => `
+  const keeps = wanted.filter(({ entry }) => entry.priority !== "yield");
+  const folded = keeps.length ? wanted.filter(({ entry }) => entry.priority === "yield") : [];
+  const rows = (keeps.length ? keeps : wanted).map(({ profile, entry }) => {
+    const uses = loadoutUses(profile, entry.item);
+    return `
       <li>
-        <p><a href="#party/${esc(profile.id)}/gear" data-close>${esc(profile.name)}</a> ${entryTags(entry)}</p>
-        ${entry.note ? `<p class="prose">${esc(entry.note)}</p>` : ""}
+        <p class="plan-who"><a href="#party/${esc(profile.id)}/gear" data-close>${esc(profile.name)}</a> ${entryTags(entry)}</p>
+        ${uses.length ? `<p class="plan-uses">${esc(uses.join("; "))}</p>` : ""}
+        ${entry.note ? `<p class="plan-note">${esc(entry.note)}</p>` : ""}
         ${entry.claim ? `<p class="plan-claim">Who gets it: ${esc(entry.claim)}</p>` : ""}
-      </li>`,
-  );
-  return `<h3>Party plans</h3><ul class="ways wanted">${rows.join("")}</ul>`;
+      </li>`;
+  });
+  const handOffs = folded
+    .map(({ profile, entry }) => `<p class="plan-handoff">${esc(profile.name)} passes this on: ${esc(entry.claim ?? "")}</p>`)
+    .join("");
+  return `
+    <section class="party-plans" aria-label="Party plans">
+      <h3>Party plans</h3>
+      <ul class="ways wanted">${rows.join("")}</ul>
+      ${handOffs}
+    </section>`;
 }
 
 export function renderDetail(panel, item, abilities, wanted) {
@@ -86,8 +120,8 @@ export function renderDetail(panel, item, abilities, wanted) {
           <p class="detail-kind">${esc(capitalize(item.rarity))} ${item.kind === "weapon" ? "weapon" : "equipment"}</p>
         </div>
       </header>
-      <dl class="stats">${stats(item)}</dl>
       ${partyPlans(wanted)}
+      <dl class="stats">${stats(item)}</dl>
       <h3>Where to get it</h3>
       ${whereToGet(item)}
       ${item.notes ? `<h3>Notes</h3><p class="prose">${linkify(item.notes, item.notes_links)}</p>` : ""}

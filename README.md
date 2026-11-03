@@ -29,8 +29,9 @@ where and when you can pick it up.
   spells** grouped by spell level, then **Good picks by level** (feats and
   class choices). Select a spell, feat or class choice to read it in the side
   panel, like an item.
-- An item's panel shows which party members plan around it, and who gets it
-  when it's contested.
+- An item's panel opens with **Party plans**: who plans around it, what it
+  does for their build, which act and slot it fills in their loadout, and who
+  gets it when it's contested.
 
 Current level, picked-up items, scribed scrolls and taken powers are saved in
 the browser you use. They aren't shared between browsers or devices, and

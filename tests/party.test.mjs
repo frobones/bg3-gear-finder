@@ -4,7 +4,7 @@ import { test } from "node:test";
 
 import { abilityFacts, abilityName } from "../assets/js/abilities.js";
 import { wantedByItem } from "../assets/js/data.js";
-import { partyPlans, renderAbilityDetail } from "../assets/js/detail.js";
+import { loadoutUses, partyPlans, renderAbilityDetail, renderDetail } from "../assets/js/detail.js";
 import { entryTags } from "../assets/js/html.js";
 import { planGroups, renderGearTab, renderLoadouts } from "../assets/js/gearplan.js";
 import { levelLearning, renderPlaybookTab } from "../assets/js/guides.js";
@@ -122,6 +122,58 @@ test("wantedByItem and partyPlans show who plans around an item", () => {
   assert.match(html, /Party decision/);
   assert.match(html, /Who gets it: Druid first\./);
   assert.equal(partyPlans([]), "");
+});
+
+test("loadoutUses names each act and slot an item fills, and its role there", () => {
+  const plan = {
+    loadouts: [
+      { label: "Act 1", slots: [{ slot: "Gloves", items: ["Grip"], alternates: [] }] },
+      { label: "Act 2", slots: [{ slot: "Gloves", items: ["Braindrain"], alternates: ["Grip"] }] },
+    ],
+  };
+  assert.deepEqual(loadoutUses(plan, "Grip"), ["Act 1, gloves (pick)", "Act 2, gloves (alternate)"]);
+  const options = {
+    loadouts: [{ label: "Act 3", slots: [{ slot: "Head", items: ["Mask", "Circlet"] }, { slot: "Ring", items: ["Band"] }] }],
+  };
+  assert.deepEqual(loadoutUses(options, "Mask"), ["Act 3, head (first pick)"]);
+  assert.deepEqual(loadoutUses(options, "Circlet"), ["Act 3, head (option)"]);
+  assert.deepEqual(loadoutUses(options, "Band"), ["Act 3, ring (pick)"]);
+  assert.deepEqual(loadoutUses(options, "Nothing"), []);
+  assert.deepEqual(loadoutUses({}, "Mask"), []);
+});
+
+test("partyPlans folds a hand-off into one line when the new owner explains the item", () => {
+  const vesper = { id: "vesper", name: "Vesper", gear: [{ item: "Risky Ring", priority: "yield", claim: "Pearl." }] };
+  const pearl = {
+    id: "pearl",
+    name: "Pearl",
+    gear: [{ item: "Risky Ring", tags: ["accuracy"], note: "Advantage on attacks." }],
+    loadouts: [{ label: "Act 2", slots: [{ slot: "Rings", items: ["Risky Ring", "Caustic Band"] }] }],
+  };
+  const html = partyPlans(wantedByItem([vesper, pearl]).get("Risky Ring"));
+  assert.match(html, /class="party-plans"/);
+  assert.match(html, /href="#party\/pearl\/gear"/);
+  assert.match(html, /Act 2, rings \(first pick\)/);
+  assert.match(html, /Advantage on attacks\./);
+  assert.match(html, /Vesper passes this on: Pearl\./);
+  assert.doesNotMatch(html, /href="#party\/vesper\/gear"/);
+});
+
+test("partyPlans keeps a hand-off row when nobody else plans around the item", () => {
+  const vesper = { id: "vesper", name: "Vesper", gear: [{ item: "Odd Mail", priority: "yield", claim: "Skipped." }] };
+  const html = partyPlans(wantedByItem([vesper]).get("Odd Mail"));
+  assert.match(html, /href="#party\/vesper\/gear"/);
+  assert.match(html, /Who gets it: Skipped\./);
+  assert.doesNotMatch(html, /passes this on/);
+});
+
+test("renderDetail puts Party plans above the stats", () => {
+  const panel = { innerHTML: "", hidden: true, scrollTop: 5 };
+  const item = { id: "Risky Ring", label: "Risky Ring", rarity: "rare", kind: "equipment", type: "Rings", acquisitions: [] };
+  const wanted = wantedByItem([{ id: "pearl", name: "Pearl", gear: [{ item: "Risky Ring", note: "Hits more." }] }]);
+  renderDetail(panel, item, new Map(), wanted.get("Risky Ring"));
+  assert.ok(panel.innerHTML.indexOf("party-plans") < panel.innerHTML.indexOf('class="stats"'));
+  assert.equal(panel.hidden, false);
 });
 
 test("renderGearTab shows the chosen act's loadout with its default and alternates", () => {
