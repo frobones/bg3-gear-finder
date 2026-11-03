@@ -239,6 +239,8 @@
   {"item": "Knife of the Undermountain King", "priority": "core", "note": "Her Act 1 weapon: crits on 19–20, rerolls low damage, Advantage on obscured targets.", "claim": "Vesper until Shadow Blade at level 8, then the Warlock if they fight in melee. The Ranger's melee slot holds the Club of Hill Giant Strength."},
   {"item": "Phalar Aluve", "priority": "optional", "note": "Finesse longsword fallback. Any teammate can pull it from the stone (DC 15 Strength or Religion) and hand it over."},
   {"item": "Sussur Dagger", "priority": "optional", "note": "Silences a caster it hits if they fail a Constitution save."},
+  {"item": "Rupturing Blade", "priority": "optional", "note": "+1 finesse rapier, so Sneak Attack works. Searing Blood (short rest) is the original guide's bomb trick: each damage type it carries sets off the bomb again, and she takes 1d6 slashing. Bombs are her last resort. Sold by Brem after Find the Missing Shipment."},
+  {"item": "Drakethroat Glaive", "priority": "high", "note": "Not for her to wield: an ally equips it and casts Draconic Elemental Weapon on her Shadow Blade, for +1 to hit and +1d4 damage of a chosen element, once per long rest. Sold by Roah Moonglow at Moonrise Towers. Check in game that it takes on the summoned blade, and how long it lasts."},
   {"item": "Adamantine Shield", "priority": "core", "note": "Her first Mithral craft: +2 AC, crit immunity, and melee attackers that miss become Reeling.", "claim": "The forge only has Mithral for two items in the whole game."},
   {"item": "Adamantine Scale Mail", "priority": "yield", "claim": "Skipped: Yuan-Ti Scale Mail is better for her, and the second Mithral ore makes Zetharis an Adamantine Shield."},
   {"item": "Breastplate +1", "priority": "high", "note": "Her Act 1 armour until Yuan-Ti Scale Mail early in Act 2: AC 15, no Stealth Disadvantage."},
@@ -303,7 +305,7 @@
     {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure", "Silver Pendant"], "note": "The Necklace is in the Crèche, late in the act: wear the Periapt until then. Silver Pendant gives Guidance when the Druid isn't nearby."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring"], "note": "Swap to the Boon ring while disguised."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Smuggler's Ring"], "note": "Swap to Smuggler's for stealing, locks and traps."},
-    {"slot": "Main hand", "items": ["Knife of the Undermountain King"], "alternates": ["Phalar Aluve", "Sussur Dagger"], "note": "Finesse, so Sneak Attack works. Hand the Knife on when Shadow Blade arrives at level 8."},
+    {"slot": "Main hand", "items": ["Knife of the Undermountain King"], "alternates": ["Phalar Aluve", "Sussur Dagger", "Rupturing Blade"], "note": "Finesse, so Sneak Attack works. Hand the Knife on when Shadow Blade arrives at level 8."},
     {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": []},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
    ],
@@ -322,7 +324,7 @@
     {"slot": "Amulet", "items": ["Necklace of Elemental Augmentation"], "alternates": ["Periapt of Wound Closure", "Silver Pendant"]},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition", "Smuggler's Ring"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Hold Person, Fear or Slow."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring"]},
-    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King"], "note": "Summoned by her Shadow Blade spell from level 8: keep the Knife until then. From level 9, cast it with a 3rd-level slot for 3d8."},
+    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King"], "note": "Summoned by her Shadow Blade spell from level 8: keep the Knife until then. From level 9, cast it with a 3rd-level slot for 3d8. Have an ally enchant it with the Drakethroat Glaive."},
     {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": []},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
    ],
@@ -341,7 +343,7 @@
     {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure", "Necklace of Elemental Augmentation", "Silver Pendant"], "note": "Optional: once the amulet never comes off, respec at Withers from CON 14 / WIS 10 to CON 8 / WIS 15 for +2 WIS saves against Hold, Fear and Dominate. Without the amulet she's then on CON 8 HP."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition", "Smuggler's Ring"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Phantasmal Killer, Slow or Fear."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Band of the Mystic Scoundrel", "Shapeshifter's Boon Ring"]},
-    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic."},
+    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic. Have an ally enchant it with the Drakethroat Glaive."},
     {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield", "Bloodthirst"]},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
    ],
