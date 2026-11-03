@@ -27,7 +27,6 @@
   {"item": "Club of Hill Giant Strength", "tags": ["strength"], "note": "STR 19 from the melee slot while you shoot. Check your STR on the character sheet with the bow drawn."},
   {"item": "Hunting Shortbow", "tags": ["damage"], "note": "Free Hunter's Mark once a day, and Advantage against monstrosities."},
   {"item": "Heavy Crossbow +1", "tags": ["damage"], "note": "1d10 + 1 and +1 to hit: the hardest-hitting bow until Titanstring."},
-  {"item": "Bow of Awareness", "tags": ["initiative"], "note": "+1 initiative."},
   {"item": "Gloves of Archery", "tags": ["damage"], "note": "+2 damage on ranged weapon attacks."},
   {"item": "Gloves of Dexterity", "tags": ["accuracy"], "note": "+1 to attack rolls (and DEX 18 if yours is lower)."},
   {"item": "Caustic Band", "tags": ["damage"], "note": "+2 acid on every weapon hit, possibly each Arrow of Many Targets hit (check in game)."},
@@ -78,7 +77,7 @@
     {"slot": "Rings", "items": ["Caustic Band", "Strange Conduit Ring"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
     {"slot": "Off hand", "items": ["Glowing Shield"]},
-    {"slot": "Ranged", "items": ["Titanstring Bow", "Heavy Crossbow +1", "Hunting Shortbow", "Bow of Awareness"]}
+    {"slot": "Ranged", "items": ["Titanstring Bow", "Heavy Crossbow +1", "Hunting Shortbow"]}
    ]
   },
   {
