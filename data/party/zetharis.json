@@ -65,8 +65,7 @@
   {"item": "Thunderskin Cloak", "tags": ["control", "survival"], "note": "Reverberating enemies that damage you must make a DC 13 CON save or be Dazed. It fills the Act 2 cloak slot. Sold by Araj Oblodra at Moonrise Towers."},
   {"item": "Caitiff Staff", "tags": ["accuracy", "utility"], "note": "+1 spell DC and spell attack, and it refills one Warlock slot once per long rest. A fallback if Markoheshkir's globe won't open. Sold by Helsik at the Devil's Fee."},
   {"item": "The Baneful", "tags": ["melee", "control"], "note": "For a Pact of the Blade Zetharis from Act 1: bound or Hexed, it's effectively +2 and can Bane the target on a hit. Its magic only works while bound. Sold by Blurg in the Underdark."},
-  {"item": "Charge-Bound Warhammer", "tags": ["melee"], "note": "For a Pact of the Blade Zetharis: +1 to hit and damage and +1d6 lightning, but only as a pact or Hexed weapon. Sold by Dammon."},
-  {"item": "Helmet of Arcane Acuity", "tags": ["melee"], "note": "For a melee Zetharis: weapon hits give Arcane Acuity, raising your spell DC for Hold Person and other saves. In a secret basement in Reithwin."}
+  {"item": "Charge-Bound Warhammer", "tags": ["melee"], "note": "For a Pact of the Blade Zetharis: +1 to hit and damage and +1d6 lightning, but only as a pact or Hexed weapon. Sold by Dammon."}
  ],
 
  "loadouts": [
@@ -90,7 +89,7 @@
    "label": "Act 2",
    "intro": "The Potent Robe arrives: each beam adds your CHA twice from here on.",
    "slots": [
-    {"slot": "Head", "items": ["Dark Justiciar Helmet", "Covert Cowl", "Helmet of Arcane Acuity"]},
+    {"slot": "Head", "items": ["Dark Justiciar Helmet", "Covert Cowl"]},
     {"slot": "Cloak", "items": ["Thunderskin Cloak"]},
     {"slot": "Body", "items": ["Potent Robe"]},
     {"slot": "Gloves", "items": ["Daredevil Gloves"]},
