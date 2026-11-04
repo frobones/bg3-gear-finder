@@ -44,9 +44,7 @@
   {"item": "Gloves of the Automaton", "tags": ["accuracy"], "note": "Bonus action for Advantage on weapon attacks, once per short rest. While it's active, healing spells can't target you (potions still work)."},
   {"item": "Evasive Shoes", "tags": ["survival"], "note": "+1 AC."},
   {"item": "The Dead Shot", "tags": ["crit", "accuracy"], "note": "Crit range −1 and double proficiency on attack rolls. Gives up Titanstring's Strength damage."},
-  {"item": "Gontr Mael", "tags": ["accuracy", "utility"], "note": "A chance of Guiding Bolt on hit (Advantage for everyone) and Haste once a day. Gives up Titanstring's Strength damage."},
-  {"item": "Gauntlets of Hill Giant Strength", "tags": ["strength"], "note": "STR 23: +6 per arrow instead of the Club's +4, but in the gloves slot."},
-  {"item": "Legacy of the Masters", "tags": ["accuracy", "damage"], "note": "+2 to weapon attack and damage rolls."},
+  {"item": "Legacy of the Masters", "tags": ["accuracy", "damage"], "note": "+2 to weapon attack and damage rolls. With the Club's +4, that's +6 damage per arrow and +2 to hit. Sold by Dammon at the Forge of the Nine."},
   {"item": "Mask of Soul Perception", "tags": ["accuracy", "initiative"], "note": "+2 to attack rolls, initiative and Perception."},
   {"item": "Shade-Slayer Cloak", "tags": ["crit"], "note": "Crit range −1 while Hiding, so mostly for an opening shot from hiding."},
   {"item": "Unwanted Masterwork Scalemail", "tags": ["survival"], "note": "16 + full DEX."},
@@ -105,13 +103,13 @@
     {"slot": "Head", "items": ["Mask of Soul Perception"]},
     {"slot": "Cloak", "items": ["Shade-Slayer Cloak"]},
     {"slot": "Body", "items": ["Unwanted Masterwork Scalemail", "Elegant Studded Leather"]},
-    {"slot": "Gloves", "items": ["Gauntlets of Hill Giant Strength", "Legacy of the Masters"]},
+    {"slot": "Gloves", "items": ["Legacy of the Masters"]},
     {"slot": "Boots", "items": ["Evasive Shoes"]},
     {"slot": "Amulet", "items": ["Broodmother's Revenge"]},
     {"slot": "Rings", "items": ["Risky Ring", "Caustic Band"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
     {"slot": "Off hand", "items": ["Rhapsody", "Sentinel Shield"]},
-    {"slot": "Ranged", "items": ["Titanstring Bow", "The Dead Shot", "Gontr Mael"]},
+    {"slot": "Ranged", "items": ["Titanstring Bow", "The Dead Shot"]},
     {"slot": "Carried", "items": ["Drakethroat Glaive"]}
    ]
   }

@@ -48,12 +48,12 @@
   {"item": "Callous Glow Ring", "tags": ["damage"], "note": "+2 radiant damage per beam against lit targets."},
   {"item": "Ring of Spiteful Thunder", "tags": ["control"], "note": "Damaging a Reverberating enemy Dazes it unless it passes a CON save. With Spineshudder, your second and third beams each force that save, and Reverberation has already lowered it. Moonrise Towers, from Roah Moonglow."},
   {"item": "Darkfire Shortbow", "tags": ["utility"], "note": "From the ranged slot: Haste once a day without spending a Pact slot, plus fire and cold resistance. Haste takes your concentration in place of Hex. Sold by Dammon at Last Light Inn."},
+  {"item": "Gontr Mael", "tags": ["utility"], "note": "An Act 3 alternative to the Darkfire Shortbow: Haste once a day with no Lethargic after it, and Hex Warrior gives you the proficiency. Haste takes your concentration in place of Hex, and you give up the Shortbow's fire and cold resistance. Check in game that it can be cast from the ranged slot with the bow put away. Carried by the Steel Watcher Titan in the Steel Watch Foundry."},
   {"item": "Incandescent Staff", "tags": ["accuracy"], "note": "+1 to ranged spell attacks, plus Fireball once a day."},
   {"item": "Shield of Devotion", "tags": ["utility"], "note": "An extra 1st-level spell slot and a self-Aid."},
   {"item": "Birthright", "tags": ["damage"], "note": "+2 CHA (up to 22): +1 on every beam, +2 in the robe."},
   {"item": "Quickspell Gloves", "tags": ["damage"], "note": "Once per short rest, a cantrip costs a bonus action: a second Eldritch Blast that turn."},
   {"item": "Spellmight Gloves", "tags": ["damage"], "note": "−5 to hit for +1d8 damage on spell attacks, toggled. It starts on, so turn it off when accuracy matters."},
-  {"item": "Craterflesh Gloves", "tags": ["crit"], "note": "+1d6 force on every crit. Bhaal path only: Vesper can buy it from the Echo of Abazigal."},
   {"item": "Helldusk Boots", "tags": ["survival"], "note": "Can't be pushed, and can turn a failed save into a success, though a bug can waste it on a save that already passed. Take them before Gortash's coronation: afterwards, it turns Gortash and that floor's Steel Watchers hostile."},
   {"item": "Markoheshkir", "tags": ["damage", "utility"], "note": "+1 spell attack and DC. Its lightning buff gives 2 Lightning Charges whenever you deal spell damage, and a free Chain Lightning and Lightning Bolt each short rest. Arcane Battery also casts one spell without a slot, once per long rest."},
   {"item": "Shield of the Undevout", "tags": ["utility", "control"], "note": "An extra 1st-level spell slot, and enemies have Disadvantage on saves against your Fear. No curse. Carried by the death knight That Which Guards at the Murder Tribunal."},
@@ -109,13 +109,13 @@
     {"slot": "Head", "items": ["Birthright"]},
     {"slot": "Cloak", "items": ["Cloak of Protection", "Thunderskin Cloak"]},
     {"slot": "Body", "items": ["Potent Robe"]},
-    {"slot": "Gloves", "items": ["Quickspell Gloves", "Spellmight Gloves", "Craterflesh Gloves"]},
+    {"slot": "Gloves", "items": ["Daredevil Gloves", "Quickspell Gloves", "Spellmight Gloves"]},
     {"slot": "Boots", "items": ["Helldusk Boots"]},
     {"slot": "Amulet", "items": ["Spineshudder Amulet"]},
     {"slot": "Rings", "items": ["Callous Glow Ring", "Ring of Spiteful Thunder"]},
     {"slot": "Main hand", "items": ["Markoheshkir", "Caitiff Staff"]},
     {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of the Undevout"]},
-    {"slot": "Ranged", "items": ["Darkfire Shortbow"]}
+    {"slot": "Ranged", "items": ["Darkfire Shortbow", "Gontr Mael"]}
    ]
   }
  ]
