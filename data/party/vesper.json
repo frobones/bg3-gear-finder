@@ -56,7 +56,7 @@
    "warnings": [
     "Tasha's Hideous Laughter is a placeholder. You replace it at level 4.",
     "Disguise Self is her disguise for theft. Keep Mask of the Shapeshifter in reserve.",
-    "Set the Sneak Attack reaction to Always: Booming Blade is her only attack on her own turn, so there's no better hit to save it for."
+    "Set the Sneak Attack reaction to Always: Booming Blade is her only attack on her own turn, so there's no better hit to save it for. A Sneak Attack on an opportunity attack can cost her next turn's."
    ],
    "gains": "Mage Hand Legerdemain, Sneak Attack 2d6, and spellcasting.",
    "play": "Booming Blade becomes the default melee attack.",
@@ -81,7 +81,7 @@
    "choices": [
     {"label": "Replace spell", "replace": ["Colour Spray", "Magic Missile"]}
    ],
-   "gains": "Uncanny Dodge, Sneak Attack 3d6, and Booming Blade adds 1d8 thunder.",
+   "gains": "Uncanny Dodge, Sneak Attack 3d6, and Booming Blade adds 1d8 thunder, and 2d8 when the target moves.",
    "play": "Big survival jump. Magic Missile is always prepared for ranged cleanup.",
    "abilities": ["Uncanny Dodge"]
   },
@@ -117,12 +117,12 @@
     {"label": "Spells", "abilities": ["Chromatic Orb", "Fog Cloud"], "text": "the two level 1 spells you held back"}
    ],
    "warnings": [
-    "Hold back two level 1–2 spells for level 9's free picks. The default is Blur and Web."
+    "Hold back two level 1–2 spells for level 9's free picks. The default is Blur and Web, unless you've scribed Web."
    ],
    "prepare": {
     "count": 5,
     "abilities": ["Mirror Image", "Misty Step", "Hold Person", "Blindness", "Protection from Evil and Good"],
-    "note": "Swap Hold Person for Web when the fight isn't against humanoids."
+    "note": "Once you've scribed Web, swap Hold Person for it when the fight isn't against humanoids."
    },
    "scribe_up_to": 2,
    "gains": "Arcane Ward and level 2 scroll scribing.",
@@ -136,29 +136,29 @@
    "choices": [
     {"label": "Spells", "abilities": ["Shadow Blade", "Phantasmal Force"]}
    ],
-   "warnings": ["Neither spell has a scroll. Take both now, or you can't get them."],
+   "warnings": ["Neither spell has a scroll, so they can only be learned at level-up. Shadow Blade is essential. Phantasmal Force is optional."],
    "prepare": {
     "count": 6,
     "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Hold Person", "Blindness", "Protection from Evil and Good"],
-    "note": "Swap Protection from Evil and Good for Web as needed. At this level you can cast Shadow Blade, then unprepare it."
+    "note": "Once you've scribed Web, swap Protection from Evil and Good for it as needed. At this level you can cast Shadow Blade, then unprepare it."
    },
    "scribe_up_to": 2,
    "gains": "Shadow Blade: her signature weapon, 2d8 psychic.",
-   "play": "Big breakpoint. Booming Blade with Shadow Blade, then Sneak Attack."
+   "play": "Big breakpoint. Booming Blade with Shadow Blade, then Sneak Attack, which needs Advantage or an ally next to the target."
   },
   {
    "level": 9,
    "class": "Wizard",
    "class_level": 4,
    "choices": [
-    {"label": "Feat", "abilities": ["Savage Attacker"], "text": "her melee weapon and Sneak Attack dice each roll twice and keep the higher: about +5 to +8 damage per attack by level 12."},
+    {"label": "Feat", "abilities": ["Savage Attacker"], "text": "her melee weapon and Sneak Attack dice each roll twice and keep the higher: about +8 damage per attack with Sneak Attack by level 12, or about +4 without."},
     {"label": "Or", "text": "Ability Improvement: +2 Dexterity (DEX becomes 20): +1 AC, to hit, damage, initiative and Sleight of Hand, but about a third of Savage Attacker's damage."},
     {"label": "Or", "abilities": ["Mobile"], "text": "the enemy she just hit can't make an opportunity attack as she steps back, and +3 m movement."},
     {"label": "Cantrip", "abilities": ["Bursting Sinew"]},
     {"label": "Spells", "abilities": ["Blur", "Web"], "text": "or any two level 1–2 spells you held back"}
    ],
    "warnings": [
-    "From now on, keep Shadow Blade prepared. Unpreparing it drops an upcast blade to 2d8.",
+    "From now on, keep Shadow Blade prepared. Unpreparing it drops an upcast blade to 2d8. Being knocked unconscious loses the blade, so keep a slot to recast it.",
     "Counterspell has no scroll. Take it at level 12."
    ],
    "prepare": {
@@ -202,7 +202,7 @@
     "note": "If you swapped Disguise Self for Misty Step, Misty Step is always prepared too: prepare Protection from Evil and Good in its place."
    },
    "scribe_up_to": 3,
-   "gains": "Evasion, Sneak Attack 4d6, and Booming Blade adds 2d8 thunder.",
+   "gains": "Evasion, Sneak Attack 4d6, and Booming Blade adds 2d8 thunder, and 3d8 when the target moves.",
    "play": "Evasion turns many Dexterity-save explosions into no damage.",
    "abilities": ["Evasion"]
   },
@@ -216,24 +216,24 @@
    "warnings": ["Counterspell has no scroll. Don't skip it."],
    "prepare": {
     "count": 8,
-    "abilities": ["Shadow Blade", "Counterspell", "Misty Step", "Glyph of Warding", "Fire Shield", "Greater Invisibility", "Phantasmal Killer", "Slow"],
-    "note": "If Misty Step is already an Arcane Trickster spell, prepare Fear instead. Swap Slow for Fear, Hold Person, Blindness or Haste by fight."
+    "abilities": ["Shadow Blade", "Counterspell", "Misty Step", "Glyph of Warding", "Phantasmal Killer", "Slow", "Fear", "Hold Person"],
+    "note": "If Misty Step is already an Arcane Trickster spell, prepare Blindness instead. She has one 4th-level slot, so prepare one 4th-level spell: out of combat, swap Phantasmal Killer for Greater Invisibility or Fire Shield if the next fight calls for it. Swap Slow, Fear or Hold Person for Blindness or Haste by fight."
    },
    "scribe_up_to": 4,
    "gains": "Counterspell, 8 Wizard preparations, and level 4 scroll scribing.",
-   "play": "Use the one 4th-level slot on Greater Invisibility, Phantasmal Killer or Fire Shield. A 3rd-level slot is enough for Shadow Blade."
+   "play": "Use the one 4th-level slot on Phantasmal Killer, which suits her psychic plan, or whichever 4th-level spell you prepared instead. A 3rd-level slot is enough for Shadow Blade."
   }
  ],
 
  "illithid": {
-  "intro": "Optional. The build works without the tadpole. She stays off the Astral-Touched Tadpole, so no partial-illithid powers or appearance change: these are the regular powers that fit.",
+  "intro": "Optional. The build works without the tadpole. She stays off the Astral-Touched Tadpole, so no partial-illithid powers or appearance change: these are the regular powers that fit. Using them means declining the Emperor's tadpole at the end of Act 2 is a DC 21 Wisdom check, and her WIS is 10. Have a party member who has never used a parasite lead that conversation, save first, and test what failing does.",
   "warning": "Awakened turns illithid powers into bonus actions, but her bonus action already goes to Cunning Dash in her hit-and-run turn.",
   "powers": [
-   {"when": "Crèche Y'llek", "abilities": ["Awakened"], "why": "Illithid powers cost a bonus action instead of an action. You get it by succeeding at the Zaith'isk."},
-   {"when": "Early", "abilities": ["Psionic Overload"], "why": "+1d4 psychic on every attack for 10 turns or until combat ends, so each hit adds Mental Fatigue through Braindrain. Turning it on costs her bonus action, even with Awakened, so she skips that turn's Cunning Dash. She takes 1d4 psychic every turn, which forces a concentration check: best when she isn't holding Phantasmal Killer, Fear or Slow. That damage also strips 2 turns of Arcane Acuity each turn, so it works against the Helmet of Arcane Acuity."},
+   {"when": "Crèche Y'llek", "abilities": ["Awakened"], "why": "Illithid powers cost a bonus action instead of an action. You get it by passing all three saves at the Zaith'isk. Afterwards she can't use illithid powers as actions."},
+   {"when": "Early", "abilities": ["Psionic Overload"], "why": "+1d4 psychic on every attack for 10 turns or until combat ends, so each hit adds Mental Fatigue through Braindrain. Turning it on costs her action until she's Awakened, then her bonus action, so she skips that turn's Booming Blade or Cunning Dash. She takes 1d4 psychic every turn, and Lightning Charges from her Dash can add damage to that hit. It forces a concentration check: best when she isn't holding Phantasmal Killer, Fear or Slow. That damage also strips 2 turns of Arcane Acuity each turn, so it works against the Helmet of Arcane Acuity."},
    {"when": "Early", "abilities": ["Concentrated Blast"], "why": "Taken to unlock Cull the Weak and Psionic Backlash."},
-   {"when": "After Concentrated Blast", "abilities": ["Cull the Weak"], "why": "Finishes off low-HP enemies, and each kill deals 1–4 psychic damage to every creature nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
-   {"when": "After Transfuse Health", "abilities": ["Shield of Thralls"], "why": "Cast it before the fight: 10 temporary HP that last until a long rest. When opportunity attacks break it, it bursts, and nearby enemies make a DC 15 INT save or are Stunned for a turn. Mental Fatigue lowers that save, and stunned enemies give her Advantage for Sneak Attack. She can only hold temporary HP from one source, and sources disagree on what Vivacious Cloak's 8 would do: it may replace the shield with no burst, or do nothing. Test this in game before relying on the Stun."},
+   {"when": "After Concentrated Blast", "abilities": ["Cull the Weak"], "why": "Finishes off enemies with fewer HP than her number of illithid powers (about 6 here), and each kill deals 1–4 psychic damage to every enemy nearby. With Braindrain Gloves, that spreads Mental Fatigue across the group."},
+   {"when": "After Transfuse Health", "abilities": ["Shield of Thralls"], "why": "Cast it before the fight: 10 temporary HP that last until a long rest. When opportunity attacks break it, it bursts, and enemies within 3 m make a DC 15 INT save or are Stunned for a turn. Mental Fatigue lowers that save. Stunned enemies lose their next turn and their concentration, and friends who act before then get Advantage, but the stun probably ends before her next attack: test the timing. She can only hold temporary HP from one source, and sources disagree on what Vivacious Cloak's 8 would do: it may replace the shield with no burst, or do nothing. Test this in game before relying on the Stun."},
    {"when": "After Concentrated Blast", "abilities": ["Psionic Backlash"], "why": "A reaction when an enemy within 9 m casts a spell: 1d4 psychic per spell level, which adds Mental Fatigue and can break their concentration. It uses the reaction she'd spend on Shield or Counterspell, so save it for fights against casters."}
   ]
  },
@@ -372,7 +372,7 @@
   "turn": {
    "loop": [
     {"title": "Dash in", "text": "Cunning Action: Dash toward the target. The Speedy Lightfeet give 3 Lightning Charges."},
-    {"title": "Strike", "text": "Booming Blade with Shadow Blade, and add Sneak Attack on the hit."},
+    {"title": "Strike", "text": "Booming Blade with Shadow Blade, and add Sneak Attack on the hit if she has Advantage or an ally, such as the Hand, is next to the target."},
     {"title": "Back out", "text": "Use the rest of her movement to back away, so the target has to move to reach her and takes Booming Blade's thunder."}
    ],
    "situations": [
@@ -380,7 +380,7 @@
     {"title": "Arcane Ward is empty", "text": "An empty Arcane Ward refills to her Wizard level the next time she casts Booming Blade or gains Lightning Charges or Arcane Acuity. It only works at exactly 0 charges. The wiki lists this refill as a bug, so a patch could remove it."},
     {"title": "Can't reach the target", "text": "Can't reach a target? Cast Blade Ward and Dash past enemies instead: resistance plus Uncanny Dodge cuts their physical hits by 75%."},
     {"title": "Dash is too risky", "text": "If an opportunity attack would be too dangerous, use Cunning Disengage instead of Dash."},
-    {"title": "Bombs", "text": "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends. Before one, fill her Arcane Ward and boost her saves with Bless, Resistance or Heroism.", "from_level": 11},
+    {"title": "Bombs", "text": "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends. Before one, fill her Arcane Ward and boost her saves with Bless or Resistance.", "from_level": 11},
     {"title": "Friends' area spells", "text": "From level 11, Evasion means a passed DEX save takes no damage from Alene's Call Lightning or Ice Storm, Pearl's Conjure Barrage, Glyph of Warding, Fireball and most grenades, so friends can aim them at enemies around her. Smokepowder Arrows aren't covered, and the wiki doesn't list Spike Growth, Hunger of Hadar, Cone of Cold, Sunbeam, Insect Plague or Wall of Fire.", "from_level": 11}
    ]
   },
@@ -411,30 +411,30 @@
    {
     "title": "If it goes wrong",
     "steps": [
-     "If caught and given a dialogue check, pick Deception. Use Friends after a failed pickpocket, once Guidance doesn't matter any more. On Tactician, casting Friends is itself a crime, so cast it out of sight.",
+     "If caught and given a dialogue check, pick Deception. Use Friends after a failed pickpocket, once Guidance doesn't matter any more (untested: the target may react before she can cast it). On Tactician, casting Friends is itself a crime, so cast it out of sight.",
      "On Tactician, Friends can anger its target when it ends. Leave, camp or fast-travel before the 10 turns run out. Never use Friends on companions.",
      "Caught with no dialogue check: Disengage for fog, or shoot a Darkness arrow for a longer-lasting cloud, then Hide in it and get away.",
-     "Next time, use a different disguise: the victim won't recognise her.",
+     "Next time, use a different disguise: the victim shouldn't recognise her (untested).",
      "If you keep getting caught, slip away instead of escalating."
     ]
    }
   ],
   "reactions": [
-   {"name": "Sneak Attack", "setting": "Always", "why": "Booming Blade is her only attack on her own turn, so there's no better hit to save it for. It's once per turn, so an opportunity attack on an enemy's turn can still use it. Check in game that it leaves her reaction free."},
+   {"name": "Sneak Attack", "setting": "Always", "why": "Booming Blade is her only attack on her own turn, so there's no better hit to save it for. It's once per round and refreshes after her turn, so an opportunity attack on an enemy's turn can use it, but then it won't be there on her next turn. Check in game that it leaves her reaction free."},
    {"name": "Sneak Attack (Critical Hit)", "setting": "Always", "why": "The same on a crit, with the dice doubled. With Sarevok's helmet swapped in, she crits on 19–20."},
    {"name": "Shield", "setting": "Ask", "why": "Spend the slot only when +5 AC changes the result. It gives no Arcane Ward charges."},
    {"name": "Counterspell", "setting": "Ask", "why": "Skip harmless casts. It always gives 3 Arcane Ward charges."},
    {"name": "Hellish Rebuke", "setting": "Ask", "why": "Low priority: weak with her Charisma."},
-   {"name": "Uncanny Dodge", "setting": "Always", "why": "Halves each hit from a different attacker. In the current patch it needs her reaction free but doesn't use it up, so Shield and Counterspell stay available."},
+   {"name": "Uncanny Dodge", "setting": "On", "why": "A toggled passive, on by default, not a Reactions tab setting. Halves each hit from a different attacker. In the current patch it needs her reaction unspent but doesn't use it up, so Shield and Counterspell stay available, though spending her reaction on them switches it off until it returns."},
    {"name": "Rebuke of the Mighty (Viconia's)", "setting": "Ask", "why": "Never let it take the reaction you need for Shield or Counterspell."}
   ],
   "mage_hand": [
    {"title": "Scout", "text": "Scout dangerous rooms while it's invisible. It turns visible when it acts and goes invisible again on a short rest."},
    {"title": "Potion courier", "text": "Drop a potion for the Hand to throw to an ally."},
    {"title": "Flanking buddy", "text": "Stand it next to an enemy to count as the ally Sneak Attack needs."},
-   {"title": "Lights out", "text": "Turn off lights so targets are obscured, which gives her Shadow Blade Advantage."},
+   {"title": "Lights out", "text": "Turn off lights so targets are obscured, which gives her Shadow Blade Advantage (untested: the wiki doesn't confirm the Hand can do this)."},
    {"title": "Ledge shove", "text": "Before combat, throw or shove enemies off ledges or into chasms. Give the Hand a Hill Giant Strength elixir first so the throw succeeds."},
-   {"title": "Keep it alive", "text": "Cast Mage Armour and Longstrider on the Hand to keep it alive and moving."}
+   {"title": "Keep it alive", "text": "Cast Mage Armour and Longstrider on the Hand to keep it alive and moving. Mage Armour must stay prepared, or come from a scroll."}
   ]
  }
 }

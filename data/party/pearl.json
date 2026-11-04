@@ -6,7 +6,7 @@
  "classes": "Ranger 12 (Gloom Stalker)",
  "portrait": "assets/portraits/pearl.jpg",
  "portrait_full": "assets/portraits/full/pearl.jpg",
- "role": "The party's archer and opening striker. Gloom Stalker initiative and her extra first-round attack let her shoot first. Titanstring Bow adds the Strength her Club gives her, and Hunter's Mark plus Sharpshooter, offset by Archery and accuracy gear, carry the rest of the fight.",
+ "role": "The party's archer and opening striker. Gloom Stalker initiative and her extra first-round attack let her shoot first. Titanstring Bow adds the Strength her Club gives her, and Hunter's Mark plus Sharpshooter, offset by Archery and accuracy gear, carry the rest of the fight. Ensnaring Strike, Pass Without Trace and Spike Growth all take her concentration, so they replace Hunter's Mark. The spell lists are a menu: she knows 2 spells at level 2, 4 at level 5 and 6 at level 9.",
 
  "spells": [
   {"label": "Level 1 spells", "from": 2, "abilities": ["Hunter's Mark", "Ensnaring Strike", "Longstrider"]},
@@ -15,11 +15,11 @@
  ],
 
  "levels": [
-  {"level": 1, "picks": [{"label": "Favoured Enemy", "entries": [{"ability": "Bounty Hunter", "note": "Ensnaring Strike targets have Disadvantage on the save"}, {"ability": "Ranger Knight", "note": "heavy armour proficiency, unused if you stay in medium armour"}]}, {"label": "Natural Explorer", "entries": [{"ability": "Beast Tamer", "note": "Find Familiar (a raven can blind enemies)"}, {"ability": "Wasteland Wanderer: Poison", "note": "resistance to Poison, common early (you already resist fire as a tiefling)"}]}]},
+  {"level": 1, "picks": [{"label": "Favoured Enemy", "entries": [{"ability": "Bounty Hunter", "note": "Ensnaring Strike targets have Disadvantage on the save"}, {"ability": "Ranger Knight", "note": "heavy armour proficiency, unused if you stay in medium armour"}]}, {"label": "Natural Explorer", "entries": [{"ability": "Beast Tamer", "note": "Find Familiar (a raven can blind enemies). It can't be cast in combat, so summon it first"}, {"ability": "Wasteland Wanderer: Poison", "note": "resistance to Poison, common early (you already resist fire as a tiefling)"}]}]},
   {"level": 2, "picks": [{"label": "Fighting style", "entries": [{"ability": "Archery", "note": "+2 to ranged attack rolls, offsetting Sharpshooter"}]}]},
   {"level": 4, "picks": [{"label": "Feat", "entries": [{"ability": "Athlete: Standing Up", "note": "+1 DEX for 18; stand up from Prone for less movement and jump further"}]}]},
   {"level": 6, "picks": [{"label": "Favoured Enemy", "entries": [{"ability": "Bounty Hunter", "note": "take whichever you skipped at level 1"}, {"ability": "Ranger Knight", "note": "take whichever you skipped at level 1"}]}, {"label": "Natural Explorer", "entries": [{"ability": "Beast Tamer", "note": "take whichever you skipped at level 1"}, {"ability": "Wasteland Wanderer: Poison", "note": "take whichever you skipped at level 1"}]}]},
-  {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "Sharpshooter: All In", "note": "−5 to hit, +10 damage, toggled per attack"}]}]},
+  {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "Sharpshooter: All In", "note": "−5 to hit, +10 damage, a toggle that starts on. On Tactician the +10 applies to each damage instance, so elemental arrows gain more"}]}]},
   {"level": 10, "picks": [{"label": "Favoured Enemy", "entries": [{"ability": "Keeper of the Veil", "note": "Protection from Evil and Good"}]}, {"label": "Natural Explorer", "entries": [{"ability": "Wasteland Wanderer: Cold", "note": "resistance to Cold, common late"}]}]},
   {"level": 12, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 DEX for 20"}, {"ability": "Alert", "note": "+5 initiative, can't be surprised"}]}]}
  ],

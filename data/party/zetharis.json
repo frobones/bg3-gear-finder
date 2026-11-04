@@ -6,7 +6,7 @@
  "classes": "Warlock 12 (The Hexblade)",
  "portrait": "assets/portraits/zetharis.jpg",
  "portrait_full": "assets/portraits/full/zetharis.jpg",
- "role": "The party's ranged turret. In the Potent Robe, Agonising Blast adds his Charisma to every Eldritch Blast beam twice, and Hex adds more. From Act 2, Spineshudder and Ring of Spiteful Thunder turn the beams into control: Reverberation lowers CON saves, then Dazes or knocks targets Prone.",
+ "role": "The party's ranged turret. In the Potent Robe, Agonising Blast adds his Charisma to every Eldritch Blast beam twice, and Hex adds more. From Act 2, Spineshudder and Ring of Spiteful Thunder turn the beams into control: Reverberation lowers CON saves, then Dazes or knocks targets Prone. Warlock slots always cast at top level, so Hex or Shield uses one of his best slots. Hexblade's Curse adds his Proficiency to damage and −1 crit range: check in game that it applies to Eldritch Blast. The spell lists are a menu: he knows 2 spells at level 1, 6 at level 5, 8 at 7, 10 at 9 and 12 at 11.",
 
  "spells": [
   {"label": "Cantrips", "from": 1, "abilities": ["Eldritch Blast", "Minor Illusion", "Mage Hand"]},
@@ -15,14 +15,14 @@
   {"label": "Level 3 spells", "from": 5, "abilities": ["Hunger of Hadar", "Counterspell", "Fear"]},
   {"label": "Level 4 spells", "from": 7, "abilities": ["Banishment", "Blight"]},
   {"label": "Level 5 spells", "from": 9, "abilities": ["Cone of Cold", "Hold Monster"]},
-  {"label": "Level 6 spells", "from": 11, "abilities": ["Create Undead", "Eyebite"]}
+  {"label": "Level 6 spell (pick one, once per long rest)", "from": 11, "abilities": ["Create Undead", "Eyebite"]}
  ],
 
  "levels": [
-  {"level": 2, "picks": [{"label": "Invocations", "entries": [{"ability": "Agonising Blast", "note": "adds your CHA to every Eldritch Blast beam"}, {"ability": "Repelling Blast", "note": "each beam can push its target, off ledges and into hazards"}]}]},
-  {"level": 3, "picks": [{"label": "Pact boon", "entries": [{"ability": "Pact of the Tome", "note": "extra cantrips; from level 5 also Haste (an extra action: another Eldritch Blast), Call Lightning and Animate Dead"}]}]},
-  {"level": 4, "picks": [{"label": "Feat", "entries": [{"ability": "Actor", "note": "+1 CHA for 18, and double proficiency on Deception and Performance"}, {"ability": "Performer", "note": "+1 CHA for 18, and instrument proficiency"}]}]},
-  {"level": 5, "picks": [{"label": "Invocation", "entries": [{"ability": "Devil's Sight", "note": "see in magical Darkness: blast from inside your own Darkness spell (it replaces Hex as your concentration)"}, {"ability": "Armour of Shadows", "note": "Mage Armour at will, for AC in the robe"}]}]},
+  {"level": 2, "picks": [{"label": "Invocations", "entries": [{"ability": "Agonising Blast", "note": "adds your CHA to every Eldritch Blast beam"}, {"ability": "Repelling Blast", "note": "pushes each target once per cast, off ledges and into hazards"}]}]},
+  {"level": 3, "picks": [{"label": "Pact boon", "entries": [{"ability": "Pact of the Tome", "note": "extra cantrips; from level 5 also Haste (an extra action: another Eldritch Blast), Call Lightning and Animate Dead, once per long rest each. Haste replaces Hex, and casting another concentration spell while Hasted ends it and makes you Lethargic"}]}]},
+  {"level": 4, "picks": [{"label": "Feat", "entries": [{"ability": "Actor", "note": "+1 CHA for 18, and double proficiency on Deception and Performance"}]}]},
+  {"level": 5, "picks": [{"label": "Invocation", "entries": [{"ability": "Devil's Sight", "note": "see in magical Darkness: blast from inside your own Darkness spell (it replaces Hex as your concentration). Friends' ranged attacks can't cross it, so place it away from Pearl's targets"}, {"ability": "Armour of Shadows", "note": "Mage Armour at will, for AC in the robe"}]}]},
   {"level": 7, "picks": [{"label": "Invocation", "entries": [{"ability": "Devil's Sight", "note": "if you skipped it at level 5"}, {"ability": "Armour of Shadows", "note": "if you skipped it at level 5"}]}]},
   {"level": 8, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 CHA for 20"}]}]},
   {"level": 9, "picks": [{"label": "Invocation", "entries": [{"ability": "Mire the Mind", "note": "cast Slow with a Warlock spell slot"}, {"ability": "Minions of Chaos", "note": "cast Conjure Elemental with a Warlock spell slot"}]}]},

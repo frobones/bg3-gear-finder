@@ -6,16 +6,16 @@
  "classes": "Druid 12 (Circle of the Stars)",
  "portrait": "assets/portraits/alene.jpg",
  "portrait_full": "assets/portraits/full/alene.jpg",
- "role": "The party's controller and only healer. She opens with a concentration spell such as Spike Growth, Hold Person, Moonbeam or Call Lightning, then spends her bonus action in a Starry Form: Archer for radiant shots that pile on Reverberation and Radiating Orb, or Chalice to heal as she casts healing spells.",
+ "role": "The party's controller and only healer. She opens with a concentration spell such as Spike Growth, Hold Person, Moonbeam or Call Lightning, then spends her bonus action in a Starry Form: Archer for radiant shots that pile on Reverberation and Radiating Orb, or Chalice to heal as she casts healing spells. Dragon suits fights where she's being hit: concentration save rolls of 9 or lower count as 10. Each form costs a Wild Shape charge, so pick one per fight until level 10, when she can swap free once a turn. On blighted ground in the Shadow-Cursed Lands, Moonbeam loses Concentration.",
 
  "spells": [
-  {"label": "Cantrips", "from": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip"]},
+  {"label": "Cantrips (Guidance arrives free at level 2)", "from": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip"]},
   {"label": "Level 1 spells", "from": 1, "abilities": ["Healing Word", "Faerie Fire", "Entangle"]},
   {"label": "Level 2 spells", "from": 3, "abilities": ["Spike Growth", "Hold Person", "Moonbeam"]},
   {"label": "Level 3 spells", "from": 5, "abilities": ["Plant Growth", "Call Lightning"]},
   {"label": "Level 4 spells", "from": 7, "abilities": ["Conjure Woodland Being", "Ice Storm", "Wall of Fire"]},
   {"label": "Level 5 spells", "from": 9, "abilities": ["Insect Plague", "Wall of Stone", "Mass Cure Wounds"]},
-  {"label": "Level 6 spells", "from": 11, "abilities": ["Sunbeam", "Heroes' Feast"]}
+  {"label": "Level 6 spells (one slot per long rest; Heroes' Feast's buff ends if unprepared)", "from": 11, "abilities": ["Sunbeam", "Heroes' Feast"]}
  ],
 
  "levels": [
@@ -103,7 +103,7 @@
   {
    "act": "three",
    "label": "Act 3",
-   "intro": "The spell DC capstones arrive. Stacking the DC pieces reaches DC 27.",
+   "intro": "The spell DC capstones arrive. Stacking the DC pieces reaches DC 27, though bugs keep Insect Plague's later ticks and Wall of Fire's end-of-turn damage from using it.",
    "slots": [
     {"slot": "Head", "items": ["Hood of the Weave", "Shapeshifter Hat"]},
     {"slot": "Cloak", "items": ["Cloak of the Weave"]},
