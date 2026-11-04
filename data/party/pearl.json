@@ -91,7 +91,7 @@
     {"slot": "Rings", "items": ["Risky Ring", "Caustic Band"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
     {"slot": "Off hand", "items": ["Sentinel Shield"]},
-    {"slot": "Ranged", "items": ["Titanstring Bow"]},
+    {"slot": "Ranged", "items": ["Titanstring Bow", "Harold"]},
     {"slot": "Carried", "items": ["Drakethroat Glaive"]}
    ]
   },
@@ -104,12 +104,12 @@
     {"slot": "Cloak", "items": ["Shade-Slayer Cloak"]},
     {"slot": "Body", "items": ["Unwanted Masterwork Scalemail", "Elegant Studded Leather"]},
     {"slot": "Gloves", "items": ["Legacy of the Masters"]},
-    {"slot": "Boots", "items": ["Evasive Shoes"]},
+    {"slot": "Boots", "items": ["Evasive Shoes", "Disintegrating Night Walkers"]},
     {"slot": "Amulet", "items": ["Broodmother's Revenge"]},
     {"slot": "Rings", "items": ["Risky Ring", "Caustic Band"]},
     {"slot": "Main hand", "items": ["Club of Hill Giant Strength"]},
     {"slot": "Off hand", "items": ["Rhapsody", "Sentinel Shield"]},
-    {"slot": "Ranged", "items": ["Titanstring Bow", "The Dead Shot"]},
+    {"slot": "Ranged", "items": ["Titanstring Bow", "Harold", "The Dead Shot"]},
     {"slot": "Carried", "items": ["Drakethroat Glaive"]}
    ]
   }

@@ -31,7 +31,6 @@
 
  "gear": [
   {"item": "The Lifebringer", "tags": ["survival"], "note": "3 temporary HP whenever you gain Lightning Charges. With The Spellsparkler that's every Eldritch Blast hit. They vanish if your charges run out. From Act 2, the Potent Robe's temporary HP take over. Neither stacks with Armour of Agathys. In the Underdark's Ebonlake Grotto."},
-  {"item": "Circlet of Blasting", "tags": ["damage"], "note": "Scorching Ray once a day."},
   {"item": "Daredevil Gloves", "tags": ["accuracy"], "note": "+1 to spell attack rolls, which every beam uses. Next to an enemy it turns your beams into melee spell attacks, which Spineshudder and the Incandescent Staff don't count. Daredevil Proximity starts on and can only be toggled while an enemy is next to you, and turning it off brings back Disadvantage there. From Act 2, step away first or choose each time."},
   {"item": "Boots of Striding", "tags": ["survival"], "note": "While concentrating on Hex, you can't be knocked Prone or moved."},
   {"item": "Pearl of Power Amulet", "tags": ["utility", "swap"], "note": "Restore a spell slot up to 3rd level once a day. It's a swap-in: put it on after a fight, restore the slot, and switch back to Misty Step. Warlock slots go above 3rd level at Warlock 7, so it stops working for you then."},
@@ -44,7 +43,6 @@
   {"item": "Spineshudder Amulet", "tags": ["control"], "note": "Each beam that hits adds 2 turns of Reverberation (−1 to STR, DEX and CON saves per turn). At 5 turns the target takes 1d4 thunder and must pass a CON save or fall Prone. Attacks from within 3 m of a Prone target have Advantage; ranged attacks from farther away aren't affected. Keep it on in Act 3."},
   {"item": "Crusher's Ring", "tags": ["utility"], "note": "+3 m movement to reach high ground and keep your distance. Worn by Crusher at the goblin camp."},
   {"item": "Ring of Poison Resistance", "tags": ["survival"], "note": "Resistance to poison damage, common in Act 1. On a skeleton in the Shattered Sanctum, before the Worg Pens."},
-  {"item": "Fetish of Callarduran Smoothhands", "tags": ["utility"], "note": "Invisibility once per long rest: an escape button. On a dead deep gnome at Grymforge."},
   {"item": "Callous Glow Ring", "tags": ["damage"], "note": "+2 radiant damage per beam against lit targets."},
   {"item": "Ring of Spiteful Thunder", "tags": ["control"], "note": "Damaging a Reverberating enemy Dazes it unless it passes a CON save. With Spineshudder, your second and third beams each force that save, and Reverberation has already lowered it. Moonrise Towers, from Roah Moonglow."},
   {"item": "Darkfire Shortbow", "tags": ["utility"], "note": "From the ranged slot: Haste once a day without spending a Pact slot, plus fire and cold resistance. Haste takes your concentration in place of Hex. Sold by Dammon at Last Light Inn."},
@@ -73,12 +71,12 @@
    "label": "Act 1",
    "intro": "Medium armour and a shield until the robe; one beam until level 5.",
    "slots": [
-    {"slot": "Head", "items": ["The Lifebringer", "Circlet of Blasting"]},
+    {"slot": "Head", "items": ["The Lifebringer"]},
     {"slot": "Body", "items": ["Breastplate +1", "Scale Mail +1", "The Jolty Vest"]},
     {"slot": "Gloves", "items": ["Daredevil Gloves"]},
     {"slot": "Boots", "items": ["Boots of Striding"]},
     {"slot": "Amulet", "items": ["Amulet of Misty Step", "Pearl of Power Amulet"]},
-    {"slot": "Rings", "items": ["Crusher's Ring", "Ring of Poison Resistance", "Fetish of Callarduran Smoothhands"]},
+    {"slot": "Rings", "items": ["Crusher's Ring", "Ring of Poison Resistance"]},
     {"slot": "Main hand", "items": ["The Spellsparkler", "The Baneful"]},
     {"slot": "Off hand", "items": ["Adamantine Shield"]}
    ]
@@ -95,7 +93,7 @@
     {"slot": "Boots", "items": ["Boots of Striding"]},
     {"slot": "Amulet", "items": ["Spineshudder Amulet"]},
     {"slot": "Rings", "items": ["Callous Glow Ring", "Ring of Spiteful Thunder"]},
-    {"slot": "Main hand", "items": ["The Spellsparkler", "Incandescent Staff", "Charge-Bound Warhammer"]},
+    {"slot": "Main hand", "items": ["The Spellsparkler", "The Baneful", "Incandescent Staff", "Charge-Bound Warhammer"]},
     {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of Devotion"]},
     {"slot": "Ranged", "items": ["Darkfire Shortbow"]}
    ]
@@ -113,7 +111,7 @@
     {"slot": "Amulet", "items": ["Spineshudder Amulet"]},
     {"slot": "Rings", "items": ["Callous Glow Ring", "Ring of Spiteful Thunder"]},
     {"slot": "Main hand", "items": ["Markoheshkir", "Caitiff Staff"]},
-    {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of the Undevout"]},
+    {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of Devotion", "Shield of the Undevout"]},
     {"slot": "Ranged", "items": ["Darkfire Shortbow", "Gontr Mael"]}
    ]
   }
