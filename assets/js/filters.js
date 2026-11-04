@@ -47,10 +47,11 @@ export function readFilters(form) {
     act: form.act.value,
     rarities: new Set([...form.querySelectorAll('input[name="rarity"]:checked')].map((input) => input.value)),
     knownOnly: form.knownOnly.checked,
+    partyOnly: form.partyOnly.checked,
   };
 }
 
-export const isFiltering = (f) => f.words.length > 0 || f.slot || f.act || f.rarities.size > 0 || f.knownOnly;
+export const isFiltering = (f) => f.words.length > 0 || f.slot || f.act || f.rarities.size > 0 || f.knownOnly || f.partyOnly;
 
 function matchesSlot(item, slot) {
   if (!slot) return true;
@@ -70,6 +71,7 @@ export function matchesItem(item, f) {
     matchesSlot(item, f.slot) &&
     matchesAct(item, f.act) &&
     (f.rarities.size === 0 || f.rarities.has(item.rarity)) &&
-    (!f.knownOnly || item.has_location_data)
+    (!f.knownOnly || item.has_location_data) &&
+    (!f.partyOnly || item.planners.length > 0)
   );
 }

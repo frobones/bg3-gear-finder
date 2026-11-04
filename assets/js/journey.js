@@ -16,7 +16,9 @@ function groupBy(list, key) {
 
 function renderFind(acquisition, item) {
   return `<li class="find ${rarityClass(item.rarity)}">
-    <div class="find-item">${itemButton(item)}<span class="find-slot">${esc(item.type)}</span></div>
+    <div class="find-item">${itemButton(item)}<span class="find-slot">${esc(item.type)}</span>${
+      item.planners.length ? `<span class="find-planners">For ${esc(item.planners.join(", "))}</span>` : ""
+    }</div>
     <p class="find-how">${linkify(acquisition.description ?? item.where_to_find ?? "No details recorded.", acquisition.links)}</p>
   </li>`;
 }
@@ -66,7 +68,7 @@ const plural = (n, word) => `${n.toLocaleString("en-US")} ${word}${n === 1 ? "" 
 export function renderJourney(container, data, items, filters) {
   const visible = new Set(items.map((i) => i.id));
   const shown = data.acquisitions.filter((a) => visible.has(a.item));
-  const open = Boolean(filters.words.length) || shown.length < OPEN_ALL_BELOW;
+  const open = Boolean(filters.words.length) || filters.partyOnly || shown.length < OPEN_ALL_BELOW;
   const stages = [];
 
   for (const act of data.regionOrder.acts) {

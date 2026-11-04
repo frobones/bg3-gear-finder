@@ -3,8 +3,8 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import { abilityEntries, abilityFacts, abilityList, popContent, rechargeFact } from "../assets/js/abilities.js";
-import { averageDamage } from "../assets/js/data.js";
-import { slotOptions } from "../assets/js/filters.js";
+import { averageDamage, plannersOf } from "../assets/js/data.js";
+import { isFiltering, matchesItem, slotOptions } from "../assets/js/filters.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
 import { SECTIONS, VIEWS, sectionOf, viewFromHash } from "../assets/js/views.js";
@@ -137,4 +137,22 @@ test("slotOptions groups types by kind, with miscellaneous items under Other ite
   assert.ok(html.indexOf('label="Weapons"') < html.indexOf('label="Other items"'));
   assert.match(html, /<optgroup label="Other items"><option value="kind:misc">All other items<\/option><option value="type:Misc">Misc<\/option><\/optgroup>/);
   assert.doesNotMatch(slotOptions([{ kind: "weapon", type: "Glaives" }]), /Other items|Equipment/);
+});
+
+test("the party filter keeps only items someone plans to use", () => {
+  const base = { searchText: "", acts: new Set(), rarity: "rare", has_location_data: true };
+  const filters = { words: [], slot: "", act: "", rarities: new Set(), knownOnly: false, partyOnly: true };
+  assert.equal(matchesItem({ ...base, planners: ["Vesper"] }, filters), true);
+  assert.equal(matchesItem({ ...base, planners: [] }, filters), false);
+  assert.equal(matchesItem({ ...base, planners: [] }, { ...filters, partyOnly: false }), true);
+  assert.ok(isFiltering({ ...filters, words: [] }));
+});
+
+test("plannersOf leaves out a profile that hands the item to someone else", () => {
+  const wanted = [
+    { profile: { name: "Vesper" }, entry: { priority: "yield" } },
+    { profile: { name: "Pearl" }, entry: { tags: ["damage"] } },
+  ];
+  assert.deepEqual(plannersOf(wanted), ["Pearl"]);
+  assert.deepEqual(plannersOf(undefined), []);
 });

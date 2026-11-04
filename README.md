@@ -43,12 +43,13 @@ set, the page shows a "Party name" placeholder.
 ## Gear finder
 
 - **Journey** lists every find in play order: Prologue, then Acts 1 to 3,
-  each split into areas you can expand.
+  each split into areas you can expand. Finds someone in the party plans to
+  use say who they're for.
 - **All items** is a sortable table: name, slot, rarity, first place found,
   AC or damage, value, and weight.
 - Search matches item names, places, how-to-get text, and the wiki's notes,
-  such as a merchant's name. Filter by slot, act, rarity, or items with a
-  known place.
+  such as a merchant's name. Filter by slot, act, rarity, items with a known
+  place, or only your party's picks.
 - Select any item to see its stats, passives, actions, every way to get it,
   and the wiki's notes on it, with links back to bg3.wiki. The panel opens
   with **Party plans**: who plans around it, what it does for their build,

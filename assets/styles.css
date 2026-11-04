@@ -524,6 +524,12 @@ img.item-icon {
   font-size: var(--step--1);
 }
 
+.find-planners {
+  padding-left: calc(28px + 0.55rem);
+  color: var(--brass-strong);
+  font-size: var(--step--1);
+}
+
 .find-how {
   margin: 0;
   max-width: 70ch;

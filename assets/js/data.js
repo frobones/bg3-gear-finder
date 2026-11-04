@@ -37,6 +37,10 @@ export function wantedByItem(profiles) {
   return wanted;
 }
 
+/** The names of everyone who plans to use an item. A hand-off ("yield") isn't a plan to use it. */
+export const plannersOf = (wanted = []) =>
+  wanted.filter(({ entry }) => entry.priority !== "yield").map(({ profile }) => profile.name);
+
 export async function loadData() {
   const [items, acquisitions, regionOrder, meta, abilities, roster] = await Promise.all(FILES.map(loadJson));
   const profiles = await Promise.all(
@@ -49,8 +53,11 @@ export async function loadData() {
     acquisitionsByItem.get(acquisition.item).push(acquisition);
   }
 
+  const wantedBy = wantedByItem(profiles);
+
   for (const item of items) {
     item.label = item.name ?? item.id;
+    item.planners = plannersOf(wantedBy.get(item.id));
     item.acquisitions = (acquisitionsByItem.get(item.id) ?? []).sort(byOrder);
     item.earliest = item.acquisitions.find((a) => a.order != null) ?? null;
     item.acts = new Set(item.acquisitions.map((a) => a.act ?? "anywhere"));
@@ -80,7 +87,7 @@ export async function loadData() {
       name: roster.name,
       members: roster.members,
       profiles: new Map(profiles.map((p) => [p.id, p])),
-      wantedBy: wantedByItem(profiles),
+      wantedBy,
     },
   };
 }
