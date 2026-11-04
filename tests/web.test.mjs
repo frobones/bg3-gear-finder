@@ -6,6 +6,7 @@ import { abilityEntries, abilityFacts, abilityList, popContent, rechargeFact } f
 import { averageDamage, plannersOf } from "../assets/js/data.js";
 import { isFiltering, matchesItem, slotOptions } from "../assets/js/filters.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
+import { dontMissBox } from "../assets/js/journey.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
 import { SECTIONS, VIEWS, sectionOf, viewFromHash } from "../assets/js/views.js";
 
@@ -155,4 +156,25 @@ test("plannersOf leaves out a profile that hands the item to someone else", () =
   ];
   assert.deepEqual(plannersOf(wanted), ["Pearl"]);
   assert.deepEqual(plannersOf(undefined), []);
+});
+
+test("dontMissBox only warns about items the filters still show", () => {
+  const byId = new Map([
+    ["Woe", { id: "Woe", label: "Woe", rarity: "rare" }],
+    ["Harold", { id: "Harold", label: "Harold", rarity: "rare" }],
+    ["Rhapsody", { id: "Rhapsody", label: "Rhapsody", rarity: "rare" }],
+  ]);
+  const entries = [
+    { items: ["Woe", "Rhapsody"], text: "Keep the spawn <safe>." },
+    { items: ["Harold"], text: "No deal." },
+  ];
+  const html = dontMissBox(entries, byId, new Set(["Woe"]), "Closes <soon>.");
+  assert.match(html, /Don't miss/);
+  assert.match(html, /Closes &lt;soon&gt;\./);
+  assert.match(html, /Keep the spawn &lt;safe&gt;\./);
+  assert.match(html, /Woe/);
+  assert.doesNotMatch(html, /Rhapsody/);
+  assert.doesNotMatch(html, /No deal/);
+  assert.equal(dontMissBox(entries, byId, new Set(), "Closes soon."), "");
+  assert.doesNotMatch(dontMissBox(entries, byId, new Set(["Woe"])), /undefined/);
 });

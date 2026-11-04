@@ -88,6 +88,8 @@ export async function loadData() {
       members: roster.members,
       profiles: new Map(profiles.map((p) => [p.id, p])),
       wantedBy,
+      dontMiss: roster.dont_miss,
+      dontMissCloses: roster.dont_miss_closes,
     },
   };
 }

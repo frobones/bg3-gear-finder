@@ -142,6 +142,17 @@ class CarryForwardTest(unittest.TestCase):
         self.assertEqual(ors_dropped(profile("Crown")), set())
 
 
+class DontMissTest(unittest.TestCase):
+    def test_warnings_name_a_planned_item_in_a_real_act(self) -> None:
+        roster = json.loads((PARTY_DIR / "party.json").read_text())
+        planned = set().union(*(owned_items(profile) for profile in all_profiles()))
+        for entry in roster["dont_miss"]:
+            with self.subTest(text=entry["text"]):
+                self.assertTrue(entry["items"])
+                self.assertLessEqual(set(entry["items"]), planned)
+                self.assertIn(entry["act"], {"one", "two", "three"})
+
+
 class PortraitFilesTest(unittest.TestCase):
     def test_every_portrait_a_profile_names_exists(self) -> None:
         profiles = [

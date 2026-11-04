@@ -44,7 +44,8 @@ set, the page shows a "Party name" placeholder.
 
 - **Journey** lists every find in play order: Prologue, then Acts 1 to 3,
   each split into areas you can expand. Finds someone in the party plans to
-  use say who they're for.
+  use say who they're for, and each act opens with a **Don't miss** box of
+  planned items a story choice can lose, and when that act's places close.
 - **All items** is a sortable table: name, slot, rarity, first place found,
   AC or damage, value, and weight.
 - Search matches item names, places, how-to-get text, and the wiki's notes,
@@ -132,7 +133,7 @@ data; item and spell icons load from the wiki's image server.
 | `data/abilities.json` | Passives, weapon actions and spells for pop-outs |
 | `data/region_order.json` | Hand-kept play order of areas in each act |
 | `data/meta.json` | Snapshot time, source, license, and counts |
-| `data/party/party.json` | Hand-kept party name and roster |
+| `data/party/party.json` | Hand-kept party name, roster and Don't miss list |
 | `data/party/<name>.json` | Hand-kept character profile |
 | `data/album.json` | Album shots, with hand-written captions and banner picks |
 
