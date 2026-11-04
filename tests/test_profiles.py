@@ -152,6 +152,16 @@ class DontMissTest(unittest.TestCase):
                 self.assertLessEqual(set(entry["items"]), planned)
                 self.assertIn(entry["act"], {"one", "two", "three"})
 
+    def test_warnings_follow_play_order(self) -> None:
+        roster = json.loads((PARTY_DIR / "party.json").read_text())
+        order = json.loads((PARTY_DIR.parent / "region_order.json").read_text())
+        places = [(act, zone) for act in ("one", "two", "three") for zone in order["zones"][act]]
+        for entry in roster["dont_miss"]:
+            with self.subTest(text=entry["text"]):
+                self.assertIn((entry["act"], entry["zone"]), places)
+        positions = [places.index((entry["act"], entry["zone"])) for entry in roster["dont_miss"]]
+        self.assertEqual(positions, sorted(positions))
+
 
 class PortraitFilesTest(unittest.TestCase):
     def test_every_portrait_a_profile_names_exists(self) -> None:
