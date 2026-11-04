@@ -61,6 +61,7 @@ ORS_NOT_CARRIED = {
     ("alene", "two", "Body", "Spidersilk Armour"),
     ("alene", "two", "Body", "The Oak Father's Embrace"),
     ("pearl", "two", "Ranged", "Heavy Crossbow +1"),
+    ("pearl", "three", "Rings", "Caustic Band"),
 }
 
 
