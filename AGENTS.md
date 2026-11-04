@@ -55,6 +55,9 @@ make obvious.
 - When a slot keeps the same main pick into the next act, its Or choices carry
   forward with it. Deliberate exceptions go in `ORS_NOT_CARRIED` in the same
   test file.
+- Claims nobody has tested in game, and advice that relies on a bug, are
+  tracked in `docs/in-game-tests.md`, not on the site. Update it when a result
+  comes in or a note changes.
 
 ## Checking changes
 
