@@ -44,6 +44,103 @@ class ChecklistCoverageTest(unittest.TestCase):
                 self.assertEqual(sorted(wanted - listed), [])
 
 
+# Items more than one person may list, and why: everything else has a single owner.
+SHARED_ITEMS = {
+    "Adamantine Shield": "the forge makes two Mithral items, and this is one of each",
+    "Breastplate +1": "the Hollow's copy, and traders sell more",
+    "Scale Mail +1": "traders sell it",
+    "Cloak of Protection": "Alene passes it to Zetharis",
+}
+
+# Or choices deliberately left behind when the main pick stays the same: (profile, act, slot, item).
+ORS_NOT_CARRIED = {
+    ("vesper", "two", "Off hand", "Absolute's Warboard"),
+    ("vesper", "three", "Ring", "Shadow Blade Ring"),
+    ("vesper", "three", "Main hand", "Knife of the Undermountain King"),
+    ("alene", "two", "Body", "The Protecty Sparkswall"),
+    ("alene", "two", "Body", "Spidersilk Armour"),
+    ("alene", "two", "Body", "The Oak Father's Embrace"),
+    ("pearl", "two", "Ranged", "Heavy Crossbow +1"),
+}
+
+
+def all_profiles() -> list[dict]:
+    """Every character profile, full plans and friends' pages alike."""
+    return [json.loads(path.read_text()) for path in PARTY_DIR.glob("*.json") if path.name != "party.json"]
+
+
+def owned_items(profile: dict) -> set[str]:
+    """What a profile plans to use: its loadouts and its gear, leaving out items it hands to someone else."""
+    wanted = {entry["item"] for entry in profile["gear"] if entry.get("item") and entry.get("priority") != "yield"}
+    return wanted | loadout_names(profile)
+
+
+def items_with_several_owners(profiles: list[dict]) -> dict[str, list[str]]:
+    """Each item more than one profile plans to use, with those profiles' ids."""
+    owners: dict[str, list[str]] = {}
+    for profile in profiles:
+        for item in owned_items(profile):
+            owners.setdefault(item, []).append(profile["id"])
+    return {item: sorted(ids) for item, ids in owners.items() if len(ids) > 1}
+
+
+def ors_dropped(profile: dict) -> set[tuple[str, str, str, str]]:
+    """Or choices that vanish into the next act although the slot's main pick stays the same."""
+    dropped = set()
+    for earlier, later in zip(profile["loadouts"], profile["loadouts"][1:]):
+        for slot in later["slots"]:
+            options = slot.get("items", []) + slot.get("alternates", [])
+            for previous in earlier["slots"]:
+                previous_options = previous.get("items", []) + previous.get("alternates", [])
+                if previous["slot"] == slot["slot"] and previous_options[:1] == options[:1]:
+                    dropped |= {
+                        (profile["id"], later["act"], slot["slot"], item)
+                        for item in previous_options[1:]
+                        if item not in options
+                    }
+    return dropped
+
+
+class OwnershipTest(unittest.TestCase):
+    def test_each_item_has_one_owner_unless_listed_as_shared(self) -> None:
+        self.assertEqual(sorted(set(items_with_several_owners(all_profiles())) - set(SHARED_ITEMS)), [])
+
+    def test_two_owners_are_detected(self) -> None:
+        profile = {"gear": [{"item": "Ring"}], "loadouts": []}
+        profiles = [{**profile, "id": "a"}, {**profile, "id": "b"}]
+        self.assertEqual(items_with_several_owners(profiles), {"Ring": ["a", "b"]})
+
+    def test_a_hand_off_is_not_ownership(self) -> None:
+        profiles = [
+            {"id": "a", "gear": [{"item": "Ring", "priority": "yield"}], "loadouts": []},
+            {"id": "b", "gear": [{"item": "Ring"}], "loadouts": []},
+        ]
+        self.assertEqual(items_with_several_owners(profiles), {})
+
+
+class CarryForwardTest(unittest.TestCase):
+    def test_or_choices_follow_a_main_pick_into_the_next_act(self) -> None:
+        dropped = set().union(*(ors_dropped(profile) for profile in all_profiles()))
+        self.assertEqual(sorted(dropped - ORS_NOT_CARRIED), [])
+
+    def test_every_listed_exception_is_still_needed(self) -> None:
+        dropped = set().union(*(ors_dropped(profile) for profile in all_profiles()))
+        self.assertEqual(sorted(ORS_NOT_CARRIED - dropped), [])
+
+    def test_a_dropped_or_is_detected_only_when_the_main_pick_stays(self) -> None:
+        def profile(later_main: str) -> dict:
+            return {
+                "id": "a",
+                "loadouts": [
+                    {"act": "one", "slots": [{"slot": "Head", "items": ["Hat", "Cap"]}]},
+                    {"act": "two", "slots": [{"slot": "Head", "items": [later_main]}]},
+                ],
+            }
+
+        self.assertEqual(ors_dropped(profile("Hat")), {("a", "two", "Head", "Cap")})
+        self.assertEqual(ors_dropped(profile("Crown")), set())
+
+
 class PortraitFilesTest(unittest.TestCase):
     def test_every_portrait_a_profile_names_exists(self) -> None:
         profiles = [

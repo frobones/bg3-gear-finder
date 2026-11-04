@@ -49,6 +49,12 @@ make obvious.
   things that matter but aren't worn.
 - When restructuring profile text (such as the playbook), keep each sentence
   as written unless the change is to the advice itself.
+- Each item has one owner across the profiles. Two people can only list the
+  same item if it's in `SHARED_ITEMS` in `tests/test_profiles.py`, with the
+  reason. Mark a hand-off with `"priority": "yield"` and a `claim`.
+- When a slot keeps the same main pick into the next act, its Or choices carry
+  forward with it. Deliberate exceptions go in `ORS_NOT_CARRIED` in the same
+  test file.
 
 ## Checking changes
 
