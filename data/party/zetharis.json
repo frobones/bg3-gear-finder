@@ -46,7 +46,7 @@
   {"item": "Callous Glow Ring", "tags": ["damage"], "note": "+2 radiant damage per beam against lit targets."},
   {"item": "Ring of Spiteful Thunder", "tags": ["control"], "note": "Damaging a Reverberating enemy Dazes it unless it passes a CON save. With Spineshudder, your second and third beams each force that save, and Reverberation has already lowered it. Moonrise Towers, from Roah Moonglow."},
   {"item": "Darkfire Shortbow", "tags": ["utility"], "note": "From the ranged slot: Haste once a day without spending a Pact slot, plus fire and cold resistance. Haste takes your concentration in place of Hex. Sold by Dammon at Last Light Inn."},
-  {"item": "Gontr Mael", "tags": ["utility"], "note": "An Act 3 alternative to the Darkfire Shortbow: Haste once a day with no Lethargic after it, and Hex Warrior gives you the proficiency. Haste takes your concentration in place of Hex, and you give up the Shortbow's fire and cold resistance. Check in game that it can be cast from the ranged slot with the bow put away. Carried by the Steel Watcher Titan in the Steel Watch Foundry."},
+  {"item": "Gontr Mael", "tags": ["utility"], "note": "Your Act 3 bow, replacing the Darkfire Shortbow: Haste once a day with no Lethargic after it, and Hex Warrior gives you the proficiency. Haste takes your concentration in place of Hex, and you give up the Shortbow's fire and cold resistance. Check in game that it can be cast from the ranged slot with the bow put away. Carried by the Steel Watcher Titan in the Steel Watch Foundry."},
   {"item": "Incandescent Staff", "tags": ["accuracy"], "note": "+1 to ranged spell attacks, plus Fireball once a day."},
   {"item": "Shield of Devotion", "tags": ["utility"], "note": "An extra 1st-level spell slot and a self-Aid."},
   {"item": "Birthright", "tags": ["damage"], "note": "+2 CHA (up to 22): +1 on every beam, +2 in the robe."},
@@ -112,7 +112,7 @@
     {"slot": "Rings", "items": ["Callous Glow Ring", "Ring of Spiteful Thunder"]},
     {"slot": "Main hand", "items": ["Markoheshkir", "Caitiff Staff"]},
     {"slot": "Off hand", "items": ["Adamantine Shield", "Shield of Devotion", "Shield of the Undevout"]},
-    {"slot": "Ranged", "items": ["Darkfire Shortbow", "Gontr Mael"]}
+    {"slot": "Ranged", "items": ["Gontr Mael"]}
    ]
   }
  ]

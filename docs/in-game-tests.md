@@ -72,7 +72,7 @@ The wiki was last checked against these notes on 2026-11-04.
 - **Hexblade's Curse on Eldritch Blast.** Curse a target and read the beam
   damage. Whether it belongs in the turn.
 - **Gontr Mael's Haste.** Try casting it with the bow in the ranged slot, not
-  drawn. Whether it's a real alternative to the Darkfire Shortbow.
+  drawn. Whether Zetharis has to draw it to get Haste.
 - **Armour of Agathys with temporary HP.** Cast it, then gain temporary HP
   from The Lifebringer or Potent Robe. Which one wins.
 - **Reverberation at 5 turns.** Fire three beams with Spineshudder and Ring of
