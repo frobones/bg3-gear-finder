@@ -1,4 +1,4 @@
-// Filter state read from the controls form, and the matching rules shared by both views.
+// Filter state read from the controls form, and the matching rules shared by the gear views.
 
 import { ACT_LABELS, RARITIES, capitalize, esc, rarityClass } from "./html.js";
 

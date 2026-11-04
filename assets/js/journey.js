@@ -52,7 +52,7 @@ function renderZone(zone, acquisitions, byId, open) {
   return zoneShell(zone, acquisitions.length, renderPlaces(acquisitions, byId, zone), open);
 }
 
-function renderStage({ id, marker, title, note, body }) {
+export function renderStage({ id, marker, title, note, body }) {
   return `<section class="stage" aria-labelledby="stage-${id}">
     <header class="stage-head">
       <span class="stage-marker" aria-hidden="true">${esc(marker)}</span>
@@ -63,25 +63,7 @@ function renderStage({ id, marker, title, note, body }) {
   </section>`;
 }
 
-/** An act's warnings about items a story choice can lose, limited to the items the filters still show. */
-export function dontMissBox(entries, byId, visible, closes = "") {
-  const shown = entries
-    .map((entry) => ({ ...entry, items: entry.items.filter((id) => visible.has(id)) }))
-    .filter((entry) => entry.items.length);
-  if (!shown.length) return "";
-  return `<details class="dont-miss" open>
-    <summary>Don't miss</summary>
-    ${closes ? `<p class="dont-miss-closes">${esc(closes)}</p>` : ""}
-    <ul>${shown
-      .map(
-        (entry) =>
-          `<li><span class="dont-miss-items">${entry.items.map((id) => itemButton(byId.get(id))).join("")}</span><p>${esc(entry.text)}</p></li>`,
-      )
-      .join("")}</ul>
-  </details>`;
-}
-
-const plural = (n, word) => `${n.toLocaleString("en-US")} ${word}${n === 1 ? "" : "s"}`;
+export const plural = (n, word) => `${n.toLocaleString("en-US")} ${word}${n === 1 ? "" : "s"}`;
 
 export function renderJourney(container, data, items, filters) {
   const visible = new Set(items.map((i) => i.id));
@@ -104,13 +86,7 @@ export function renderJourney(container, data, items, filters) {
         marker: ACT_MARKERS[act],
         title: ACT_LABELS[act],
         note: `${plural(count, "find")} across ${plural(zones.length, "area")}`,
-        body:
-          dontMissBox(
-            data.party.dontMiss.filter((entry) => entry.act === act),
-            data.byId,
-            visible,
-            data.party.dontMissCloses[act],
-          ) + zones.map((zone) => renderZone(zone, inAct.get(zone), data.byId, open)).join(""),
+        body: zones.map((zone) => renderZone(zone, inAct.get(zone), data.byId, open)).join(""),
       }),
     );
   }

@@ -8,6 +8,7 @@ import { renderAbilityDetail, renderDetail } from "./detail.js";
 import { isFiltering, matchesItem, populateControls, readFilters } from "./filters.js";
 import { pageTitle, partyNameHtml, renderHome } from "./home.js";
 import { esc } from "./html.js";
+import { renderDontMiss } from "./dontmiss.js";
 import { renderJourney } from "./journey.js";
 import { initParty, parsePartyRoute, renderParty } from "./party.js";
 import { nextSort, renderTable } from "./table.js";
@@ -61,7 +62,8 @@ function render() {
     ? `${items.length.toLocaleString("en-US")} of ${data.items.length.toLocaleString("en-US")} items`
     : `${data.items.length.toLocaleString("en-US")} items`;
 
-  if (name === "items") renderTable(view, items, sort);
+  if (name === "dont-miss") renderDontMiss(view, data, filters);
+  else if (name === "items") renderTable(view, items, sort);
   else renderJourney(view, data, items, filters);
 }
 

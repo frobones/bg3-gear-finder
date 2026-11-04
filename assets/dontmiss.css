@@ -1,0 +1,56 @@
+/* The gear finder's Don't miss tab. */
+
+.dont-miss-intro {
+  margin: 0 0 1.25rem;
+  max-width: 70ch;
+}
+
+.dont-miss-closes {
+  margin: 0 0 0.85rem;
+  padding-left: 0.75rem;
+  max-width: 70ch;
+  border-left: 3px solid var(--brass);
+}
+
+.dont-miss ul {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dont-miss li {
+  display: grid;
+  grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+  gap: 0.35rem 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--raised);
+}
+
+.dont-miss-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.dont-miss li p {
+  margin: 0;
+  max-width: 70ch;
+  align-self: center;
+}
+
+@media (max-width: 720px) {
+  .dont-miss li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dont-miss-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 0.75rem;
+  }
+}

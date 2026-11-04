@@ -42,10 +42,11 @@ set, the page shows a "Party name" placeholder.
 
 ## Gear finder
 
+- **Don't miss** opens first: by act, the planned items a story choice can
+  lose, and when that act's places close.
 - **Journey** lists every find in play order: Prologue, then Acts 1 to 3,
   each split into areas you can expand. Finds someone in the party plans to
-  use say who they're for, and each act opens with a **Don't miss** box of
-  planned items a story choice can lose, and when that act's places close.
+  use say who they're for.
 - **All items** is a sortable table: name, slot, rarity, first place found,
   AC or damage, value, and weight.
 - Search matches item names, places, how-to-get text, and the wiki's notes,

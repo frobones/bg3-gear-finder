@@ -3,10 +3,10 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import { abilityEntries, abilityFacts, abilityList, popContent, rechargeFact } from "../assets/js/abilities.js";
+import { renderDontMiss } from "../assets/js/dontmiss.js";
 import { averageDamage, plannersOf } from "../assets/js/data.js";
 import { isFiltering, matchesItem, slotOptions } from "../assets/js/filters.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
-import { dontMissBox } from "../assets/js/journey.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
 import { SECTIONS, VIEWS, sectionOf, viewFromHash } from "../assets/js/views.js";
 
@@ -16,15 +16,17 @@ test("viewFromHash opens Home first and by default", () => {
   assert.equal(viewFromHash("#nonsense"), "home");
   assert.equal(viewFromHash("#party/vesper/gear"), "party");
   assert.equal(viewFromHash("#album"), "album");
+  assert.equal(viewFromHash("#dont-miss"), "dont-miss");
   assert.equal(viewFromHash("#journey"), "journey");
   assert.equal(viewFromHash("#items"), "items");
 });
 
 test("sectionOf splits the views into the party section and the gear finder", () => {
-  assert.deepEqual(SECTIONS, { party: ["home", "party", "album"], gear: ["journey", "items"] });
+  assert.deepEqual(SECTIONS, { party: ["home", "party", "album"], gear: ["dont-miss", "journey", "items"] });
   assert.equal(sectionOf("home"), "party");
   assert.equal(sectionOf("album"), "party");
   assert.equal(sectionOf("items"), "gear");
+  assert.equal(sectionOf("dont-miss"), "gear");
 });
 
 test("esc neutralises HTML", () => {
@@ -158,23 +160,43 @@ test("plannersOf leaves out a profile that hands the item to someone else", () =
   assert.deepEqual(plannersOf(undefined), []);
 });
 
-test("dontMissBox only warns about items the filters still show", () => {
-  const byId = new Map([
-    ["Woe", { id: "Woe", label: "Woe", rarity: "rare" }],
-    ["Harold", { id: "Harold", label: "Harold", rarity: "rare" }],
-    ["Rhapsody", { id: "Rhapsody", label: "Rhapsody", rarity: "rare" }],
-  ]);
-  const entries = [
-    { items: ["Woe", "Rhapsody"], text: "Keep the spawn <safe>." },
-    { items: ["Harold"], text: "No deal." },
-  ];
-  const html = dontMissBox(entries, byId, new Set(["Woe"]), "Closes <soon>.");
-  assert.match(html, /Don't miss/);
-  assert.match(html, /Closes &lt;soon&gt;\./);
-  assert.match(html, /Keep the spawn &lt;safe&gt;\./);
-  assert.match(html, /Woe/);
-  assert.doesNotMatch(html, /Rhapsody/);
-  assert.doesNotMatch(html, /No deal/);
-  assert.equal(dontMissBox(entries, byId, new Set(), "Closes soon."), "");
-  assert.doesNotMatch(dontMissBox(entries, byId, new Set(["Woe"])), /undefined/);
+test("renderDontMiss groups warnings by act and hides items the filters exclude", () => {
+  const item = (id, rarity) => ({ id, label: id, rarity, searchText: id.toLowerCase(), acts: new Set(["two"]), has_location_data: true, planners: [] });
+  const items = [item("Woe", "rare"), item("Rhapsody", "uncommon"), item("Harold", "rare")];
+  const data = {
+    items,
+    byId: new Map(items.map((i) => [i.id, i])),
+    regionOrder: { acts: ["one", "two"] },
+    party: {
+      dontMiss: [
+        { act: "one", items: ["Woe", "Rhapsody"], text: "Keep the spawn <safe>." },
+        { act: "two", items: ["Harold"], text: "No deal." },
+      ],
+      dontMissCloses: { one: "Closes <soon>." },
+    },
+  };
+  const filters = { words: [], slot: "", act: "", rarities: new Set(), knownOnly: false, partyOnly: false };
+  const render = (f) => {
+    const container = {};
+    renderDontMiss(container, data, f);
+    return container.innerHTML;
+  };
+
+  const all = render(filters);
+  assert.match(all, /Act 1/);
+  assert.match(all, /Act 2/);
+  assert.match(all, /Closes &lt;soon&gt;\./);
+  assert.match(all, /Keep the spawn &lt;safe&gt;\./);
+  assert.doesNotMatch(all, /undefined/);
+
+  const uncommon = render({ ...filters, rarities: new Set(["uncommon"]) });
+  assert.match(uncommon, /Rhapsody/);
+  assert.doesNotMatch(uncommon, /Woe|Harold|No deal/);
+
+  // An act's warning can name gear found in a later act, so it stays under its act's filter.
+  const actOne = render({ ...filters, act: "one" });
+  assert.match(actOne, /Woe/);
+  assert.doesNotMatch(actOne, /No deal|Act 2/);
+
+  assert.match(render({ ...filters, words: ["nothing"] }), /Try removing a filter/);
 });

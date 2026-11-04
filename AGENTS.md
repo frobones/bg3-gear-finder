@@ -74,7 +74,8 @@ make obvious.
 - Look at user-facing changes in a browser through `python3 scripts/serve.py`,
   at desktop and phone widths and in both light and dark themes.
 - Keep each stylesheet under 1,000 lines by splitting along features
-  (`party.css`, `levelup.css`, `playbook.css`, `home.css`, `album.css`).
+  (`party.css`, `levelup.css`, `playbook.css`, `home.css`, `album.css`,
+  `dontmiss.css`).
 - Run `ruff check` on Python changes, but don't run `ruff format` on existing
   files: `scripts/fetch_wiki.py` and its tests use lines longer than ruff's
   default, and the formatter would rewrap them whole.

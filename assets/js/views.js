@@ -2,7 +2,7 @@
 
 export const SECTIONS = {
   party: ["home", "party", "album"],
-  gear: ["journey", "items"],
+  gear: ["dont-miss", "journey", "items"],
 };
 
 export const VIEWS = Object.values(SECTIONS).flat();
