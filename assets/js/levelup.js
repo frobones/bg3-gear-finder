@@ -109,6 +109,8 @@ export function renderLevelTab(profile, abilities, reached, viewing) {
     .join("");
 
   return `
+    <div class="level-stage">
+    <button type="button" class="step-button" data-level-view="${viewing - 1}"${viewing <= 1 ? " disabled" : ""}>Level ${Math.max(1, viewing - 1)}</button>
     <section class="level-card" aria-labelledby="level-heading">
       <header class="level-head">
         <h3 id="level-heading" tabindex="-1">${esc(heading)}</h3>
@@ -121,12 +123,10 @@ export function renderLevelTab(profile, abilities, reached, viewing) {
       ${level.play ? `<p class="muted">${esc(level.play)}</p>` : ""}
       ${gained}
       ${afterLevel(level, previous, abilities)}
-      <div class="level-actions">
-        <button type="button" class="step-button" data-level-view="${viewing - 1}"${viewing <= 1 ? " disabled" : ""}>Level ${Math.max(1, viewing - 1)}</button>
-        ${confirm}
-        <button type="button" class="step-button step-next" data-level-view="${viewing + 1}"${viewing >= MAX_LEVEL ? " disabled" : ""}>Level ${Math.min(MAX_LEVEL, viewing + 1)}</button>
-      </div>
+      ${confirm ? `<div class="level-actions">${confirm}</div>` : ""}
     </section>
+    <button type="button" class="step-button step-next" data-level-view="${viewing + 1}"${viewing >= MAX_LEVEL ? " disabled" : ""}>Level ${Math.min(MAX_LEVEL, viewing + 1)}</button>
+    </div>
     ${finished}
     <label class="field level-reached">
       <span class="field-label">${esc(profile.name)}'s current level</span>

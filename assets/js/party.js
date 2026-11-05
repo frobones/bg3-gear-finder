@@ -11,6 +11,7 @@ import { PARTY_GEAR_ROUTE, renderPartyGear } from "./partygear.js";
 import { renderPicksPage } from "./picks.js";
 import { PROFILE_TABS, loadProgress, saveProgress, toggleInList } from "./progress.js";
 
+const STICKY_TOP = 16; // px, matches .level-stage > .step-button in levelup.css
 const TAB_LABELS = { level: "Level up", gear: "Gear plan", illithid: "Illithid", playbook: "Playbook", backstory: "Backstory" };
 
 /** A portrait, or an empty frame for a friend who hasn't sent one yet. */
@@ -189,7 +190,11 @@ export function initParty(view, rerender) {
   const showLevel = (level) => {
     viewingById.set(profileId(), Math.min(Math.max(level, 1), MAX_LEVEL));
     rerender();
-    view.querySelector("#level-heading")?.focus();
+    view.querySelector("#level-heading")?.focus({ preventScroll: true });
+    // From partway down a long card, return to the new card's top without moving the sticky buttons.
+    const stage = view.querySelector(".level-stage");
+    const top = stage.getBoundingClientRect().top;
+    if (top < STICKY_TOP) window.scrollBy(0, top - STICKY_TOP);
   };
 
   const setReached = (level) => {

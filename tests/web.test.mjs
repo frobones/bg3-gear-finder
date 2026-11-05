@@ -7,6 +7,7 @@ import { renderDontMiss } from "../assets/js/dontmiss.js";
 import { averageDamage, plannersOf } from "../assets/js/data.js";
 import { isFiltering, matchesItem, slotOptions } from "../assets/js/filters.js";
 import { esc, linkify, safeWikiUrl } from "../assets/js/html.js";
+import { renderLevelTab } from "../assets/js/levelup.js";
 import { nextSort, sortItems } from "../assets/js/table.js";
 import { SECTIONS, VIEWS, sectionOf, viewFromHash } from "../assets/js/views.js";
 
@@ -199,4 +200,20 @@ test("renderDontMiss groups warnings by act and hides items the filters exclude"
   assert.doesNotMatch(actOne, /No deal|Act 2/);
 
   assert.match(render({ ...filters, words: ["nothing"] }), /Try removing a filter/);
+});
+
+test("the level buttons sit outside the card, one on each side", () => {
+  const level = (n) => ({ level: n, class: "Rogue", class_level: n, choices: [], gains: "Something." });
+  const profile = { name: "Test", level_order: "Rogue", levels: [level(1), level(2), level(3)] };
+  const html = renderLevelTab(profile, new Map(), 1, 2);
+  const [previous, card, cardEnd, next] = [
+    html.indexOf('data-level-view="1"'),
+    html.indexOf('<section class="level-card"'),
+    html.indexOf("</section>"),
+    html.indexOf('data-level-view="3"'),
+  ];
+  assert.ok(previous < card, "previous comes before the card");
+  assert.ok(cardEnd < next, "next comes after the card");
+  assert.match(html, /data-level-reached="2"/);
+  assert.ok(html.indexOf('data-level-reached="2"') < cardEnd, "confirming a level stays inside the card");
 });

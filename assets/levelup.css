@@ -139,6 +139,25 @@
   list-style: none;
 }
 
+/* The level buttons sit either side of the card at a fixed height, so they stay put for rapid clicking
+   however long each level's card is. */
+.level-stage {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: start;
+  /* A short card mustn't shorten the page, or the browser scrolls it and the buttons move on screen. */
+  min-height: 100vh;
+}
+
+.level-stage > .step-button {
+  position: sticky;
+  top: 1rem;
+  width: 6.5rem; /* the same for "Level 9" and "Level 10" */
+  padding: 0;
+  white-space: nowrap;
+}
+
 .level-actions {
   display: flex;
   flex-wrap: wrap;
@@ -162,10 +181,6 @@
 
 .step-button::before {
   content: "‹ ";
-}
-
-.step-next {
-  margin-left: auto;
 }
 
 .step-next::before {
@@ -279,6 +294,29 @@
   font-size: var(--step--1);
 }
 
+@media (max-width: 900px) {
+  /* Too narrow for side buttons: they share a row above the card, which stays just as still. */
+  .level-stage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+  }
+
+  .level-stage > .level-card {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .level-stage > .step-button {
+    position: static;
+    width: auto;
+  }
+
+  .level-stage > .step-next {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
 @media (max-width: 720px) {
   .level-card {
     padding: 1rem;
@@ -288,10 +326,6 @@
   .timeline-list li {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
-  }
-
-  .step-next {
-    margin-left: 0;
   }
 
   .primary-button {
