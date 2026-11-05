@@ -91,11 +91,10 @@
    "class_level": 1,
    "choices": [
     {"label": "Class", "text": "Wizard (multiclass)"},
-    {"label": "Cantrips", "abilities": ["Friends", "Toll the Dead", "Blade Ward"]},
+    {"label": "Cantrips", "abilities": ["Friends", "Bone Chill", "Blade Ward"]},
     {"label": "Spells", "abilities": ["Find Familiar", "Enhance Leap", "Protection from Evil and Good", "Mage Armour", "Feather Fall", "Grease"]}
    ],
    "warnings": [
-    "Don't scribe Chromatic Orb or Fog Cloud. You learn them free at level 7.",
     "Find Familiar: prepare it, summon, then unprepare it. The familiar stays."
    ],
    "prepare": {
@@ -114,10 +113,7 @@
    "class_level": 2,
    "choices": [
     {"label": "Subclass", "text": "Abjuration School"},
-    {"label": "Spells", "abilities": ["Chromatic Orb", "Fog Cloud"], "text": "the two level 1 spells you held back"}
-   ],
-   "warnings": [
-    "Hold back two level 1–2 spells for level 9's free picks. The default is Blur and Web, unless you've scribed Web."
+    {"label": "Spells", "abilities": ["Chromatic Orb", "Fog Cloud"], "text": "two level 1 spells"}
    ],
    "prepare": {
     "count": 5,
@@ -155,11 +151,11 @@
     {"label": "Or", "text": "Ability Improvement: +2 Dexterity (DEX becomes 20): +1 AC, to hit, damage, initiative and Sleight of Hand, but about a third of Savage Attacker's damage."},
     {"label": "Or", "abilities": ["Mobile"], "text": "the enemy she just hit can't make an opportunity attack as she steps back, and +3 m movement."},
     {"label": "Cantrip", "abilities": ["Bursting Sinew"]},
-    {"label": "Spells", "abilities": ["Blur", "Web"], "text": "or any two level 1–2 spells you held back"}
+    {"label": "Spells", "abilities": ["Blur", "Web"], "text": "or any two level 1–2 spells you don't know yet"}
    ],
    "warnings": [
     "From now on, keep Shadow Blade prepared. Unpreparing it drops an upcast blade to 2d8. Being knocked unconscious loses the blade, so keep a slot to recast it.",
-    "Counterspell has no scroll. Take it at level 12."
+    "Level 3 scribing opens now, but Counterspell's scroll can't be obtained, so it has to wait for level 12."
    ],
    "prepare": {
     "count": 7,
@@ -176,7 +172,7 @@
    "class_level": 6,
    "choices": [
     {"label": "Expertise", "text": "Perception, Deception"},
-    {"label": "Replace spell", "text": "Skip"}
+    {"label": "Replace spell", "text": "Skip, unless Misty Step is on the list. If it is, make the level 11 swap now."}
    ],
    "prepare": {
     "count": 7,

@@ -1895,6 +1895,42 @@
   "wiki_url": "https://bg3.wiki/wiki/Bolt_of_Celestial_Light"
  },
  {
+  "id": "Bone Chill",
+  "kind": "spell",
+  "name": "Bone Chill",
+  "type": null,
+  "brief": null,
+  "description": "Prevent the target from healing until your next turn. The target cannot help Downed characters. An undead target receives Disadvantage on Attack Rolls.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/5/5a/Bone_Chill_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Downed",
+    "page": "Downed (Condition)",
+    "url": "https://bg3.wiki/wiki/Downed_(Condition)"
+   },
+   {
+    "text": "Disadvantage",
+    "page": "Disadvantage",
+    "url": "https://bg3.wiki/wiki/Disadvantage"
+   },
+   {
+    "text": "Attack Roll",
+    "page": "Attack Roll",
+    "url": "https://bg3.wiki/wiki/Attack_Roll"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Bone_Chill",
+  "spell_level": 0,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "18 / 60"
+ },
+ {
   "id": "Booming Blade",
   "kind": "spell",
   "name": "Booming Blade",
@@ -15035,32 +15071,6 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Titan_Weapon"
- },
- {
-  "id": "Toll the Dead",
-  "kind": "spell",
-  "name": "Toll the Dead",
-  "type": null,
-  "brief": null,
-  "description": "Ring the bell of impending doom. If the target is at full health, you deal 1d8 Necrotic damage instead.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/0/0e/Toll_the_Dead_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Necrotic",
-    "page": "Necrotic",
-    "url": "https://bg3.wiki/wiki/Necrotic"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Toll_the_Dead",
-  "spell_level": 0,
-  "school": "Necromancy",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "ranged"
  },
  {
   "id": "Topple",
