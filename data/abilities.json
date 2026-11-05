@@ -2629,62 +2629,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Chilling_Strike"
  },
  {
-  "id": "Chromatic Orb",
-  "kind": "spell",
-  "name": "Chromatic Orb",
-  "type": null,
-  "brief": null,
-  "description": "Hurl a sphere of energy.\nIt deals 3d8 Thunder damage, or 2d8 Acid, Cold, Fire, Lightning or Poison damage and creates a surface.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/f/f2/Chromatic_Orb_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Thunder",
-    "page": "Thunder",
-    "url": "https://bg3.wiki/wiki/Thunder"
-   },
-   {
-    "text": "Acid",
-    "page": "Acid",
-    "url": "https://bg3.wiki/wiki/Acid"
-   },
-   {
-    "text": "Cold",
-    "page": "Cold",
-    "url": "https://bg3.wiki/wiki/Cold"
-   },
-   {
-    "text": "Fire",
-    "page": "Fire",
-    "url": "https://bg3.wiki/wiki/Fire"
-   },
-   {
-    "text": "Lightning",
-    "page": "Lightning",
-    "url": "https://bg3.wiki/wiki/Lightning"
-   },
-   {
-    "text": "Poison",
-    "page": "Poison",
-    "url": "https://bg3.wiki/wiki/Poison"
-   },
-   {
-    "text": "surface",
-    "page": "surfaces",
-    "url": "https://bg3.wiki/wiki/surfaces"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Chromatic_Orb",
-  "spell_level": 1,
-  "school": "Evocation",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "ranged"
- },
- {
   "id": "Cinders",
   "kind": "passive",
   "name": "Cinders",
@@ -15071,6 +15015,32 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Titan_Weapon"
+ },
+ {
+  "id": "Toll the Dead",
+  "kind": "spell",
+  "name": "Toll the Dead",
+  "type": null,
+  "brief": null,
+  "description": "Ring the bell of impending doom. If the target is at full health, you deal 1d8 Necrotic damage instead.",
+  "extra_description": null,
+  "recharge": null,
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/0/0e/Toll_the_Dead_Unfaded_Icon.webp",
+  "links": [
+   {
+    "text": "Necrotic",
+    "page": "Necrotic",
+    "url": "https://bg3.wiki/wiki/Necrotic"
+   }
+  ],
+  "wiki_url": "https://bg3.wiki/wiki/Toll_the_Dead",
+  "spell_level": 0,
+  "school": "Necromancy",
+  "concentration": null,
+  "ritual": null,
+  "action_type": "action",
+  "range": "ranged"
  },
  {
   "id": "Topple",

@@ -55,7 +55,7 @@
    ],
    "warnings": [
     "Tasha's Hideous Laughter is a placeholder. You replace it at level 4.",
-    "Disguise Self is her disguise for theft. Keep Mask of the Shapeshifter in reserve.",
+    "Disguise Self is her disguise for theft until level 11, when Mask of the Shapeshifter takes over.",
     "Set the Sneak Attack reaction to Always: Booming Blade is her only attack on her own turn, so there's no better hit to save it for. A Sneak Attack on an opportunity attack can cost her next turn's."
    ],
    "gains": "Mage Hand Legerdemain, Sneak Attack 2d6, and spellcasting.",
@@ -91,16 +91,17 @@
    "class_level": 1,
    "choices": [
     {"label": "Class", "text": "Wizard (multiclass)"},
-    {"label": "Cantrips", "abilities": ["Friends", "Bone Chill", "Blade Ward"]},
-    {"label": "Spells", "abilities": ["Find Familiar", "Enhance Leap", "Protection from Evil and Good", "Mage Armour", "Feather Fall", "Grease"]}
+    {"label": "Cantrips", "abilities": ["Friends", "Toll the Dead", "Blade Ward"]},
+    {"label": "Spells", "abilities": ["Find Familiar", "Enhance Leap", "Protection from Evil and Good", "Mage Armour", "Feather Fall", "Grease"]},
+    {"label": "Scribe", "abilities": ["Bone Chill"], "text": "from a Scroll of Bone Chill, sold by traders. It stops healing and weakens undead."}
    ],
    "warnings": [
     "Find Familiar: prepare it, summon, then unprepare it. The familiar stays."
    ],
    "prepare": {
     "count": 4,
-    "abilities": ["Protection from Evil and Good", "Grease", "Ice Knife", "Burning Hands"],
-    "note": "Ice Knife and Burning Hands are flex picks from scribed scrolls."
+    "abilities": ["Protection from Evil and Good", "Grease", "Ice Knife", "Enhance Leap"],
+    "note": "Ice Knife is a flex pick from a scribed scroll. Enhance Leap is a ritual: cast it out of combat for no slot to jump about 13.5 m into position, on her or an ally, for 10 turns."
    },
    "scribe_up_to": 1,
    "gains": "Spellbook, Arcane Recovery, and level 1 scroll scribing.",
@@ -113,12 +114,12 @@
    "class_level": 2,
    "choices": [
     {"label": "Subclass", "text": "Abjuration School"},
-    {"label": "Spells", "abilities": ["Chromatic Orb", "Fog Cloud"], "text": "two level 1 spells"}
+    {"label": "Spells", "abilities": ["Longstrider", "Fog Cloud"], "text": "two level 1 spells. Longstrider's scroll can't be obtained, so this is the time to learn it."}
    ],
    "prepare": {
     "count": 5,
-    "abilities": ["Mirror Image", "Misty Step", "Hold Person", "Blindness", "Protection from Evil and Good"],
-    "note": "Once you've scribed Web, swap Hold Person for it when the fight isn't against humanoids."
+    "abilities": ["Mirror Image", "Misty Step", "Hold Person", "Blindness", "Enhance Leap"],
+    "note": "Once you've scribed Web, swap Hold Person for it when the fight isn't against humanoids. Swap Enhance Leap for Protection from Evil and Good against its creature types. Longstrider is a ritual too: prepare it out of combat and cast it for no slot."
    },
    "scribe_up_to": 2,
    "gains": "Arcane Ward and level 2 scroll scribing.",
@@ -135,8 +136,8 @@
    "warnings": ["Neither spell has a scroll, so they can only be learned at level-up. Shadow Blade is essential. Phantasmal Force is optional."],
    "prepare": {
     "count": 6,
-    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Hold Person", "Blindness", "Protection from Evil and Good"],
-    "note": "Once you've scribed Web, swap Protection from Evil and Good for it as needed. At this level you can cast Shadow Blade, then unprepare it."
+    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Hold Person", "Blindness", "Enhance Leap"],
+    "note": "Once you've scribed Web, swap Hold Person for it as needed, or for Phantasmal Force against non-humanoids. At this level you can cast Shadow Blade, then unprepare it."
    },
    "scribe_up_to": 2,
    "gains": "Shadow Blade: her signature weapon, 2d8 psychic.",
@@ -159,8 +160,8 @@
    ],
    "prepare": {
     "count": 7,
-    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Glyph of Warding", "Fear", "Slow", "Blindness"],
-    "note": "Swap in Hold Person, Haste, Hypnotic Pattern, Web or Fireball when the fight calls for it."
+    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Enhance Leap", "Haste", "Glyph of Warding", "Blindness"],
+    "note": "Scribe Haste from a scroll, and prepare Fear until you have it. Casting another concentration spell while Hasted ends the new spell and makes her Lethargic. Swap in Fear, Slow, Hold Person, Hypnotic Pattern, Web or Fireball when the fight calls for it. Glyph of Warding is her area attack: cast on enemies it triggers at once, you pick the damage type, it adds 3 Arcane Ward charges, and it needs no concentration. It can hit her too until Evasion at level 11."
    },
    "scribe_up_to": 3,
    "gains": "Savage Attacker: her Shadow Blade and Sneak Attack dice roll twice and keep the higher. Level 3 scroll scribing. Shadow Blade reaches 3d8 from a 3rd-level slot.",
@@ -176,7 +177,7 @@
    ],
    "prepare": {
     "count": 7,
-    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Glyph of Warding", "Fear", "Slow", "Blindness"],
+    "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Enhance Leap", "Haste", "Glyph of Warding", "Blindness"],
     "note": "Same as level 9."
    },
    "scribe_up_to": 3,
@@ -189,13 +190,13 @@
    "class_level": 7,
    "choices": [
     {"label": "New spell", "abilities": ["Mirror Image"]},
-    {"label": "Replace spell (optional)", "replace": ["Disguise Self", "Misty Step"], "text": "only if you'll use Mask of the Shapeshifter for disguises from now on"}
+    {"label": "Replace spell", "replace": ["Disguise Self", "Misty Step"], "text": "use Mask of the Shapeshifter for disguises from now on"}
    ],
-   "warnings": ["Mirror Image is now always prepared. Take it out of the Wizard list."],
+   "warnings": ["Mirror Image and Misty Step are now always prepared. Take them out of the Wizard list."],
    "prepare": {
     "count": 7,
-    "abilities": ["Shadow Blade", "Misty Step", "Glyph of Warding", "Fear", "Slow", "Haste", "Blindness"],
-    "note": "If you swapped Disguise Self for Misty Step, Misty Step is always prepared too: prepare Protection from Evil and Good in its place."
+    "abilities": ["Shadow Blade", "Enhance Leap", "Glyph of Warding", "Hold Person", "Fear", "Haste", "Blindness"],
+    "note": "Mirror Image and Misty Step no longer use Wizard spots, so Hold Person and Fear take them. Swap either for Slow when the fight calls for it."
    },
    "scribe_up_to": 3,
    "gains": "Evasion, Sneak Attack 4d6, and Booming Blade adds 2d8 thunder, and 3d8 when the target moves.",
@@ -212,8 +213,8 @@
    "warnings": ["Counterspell has no scroll. Don't skip it."],
    "prepare": {
     "count": 8,
-    "abilities": ["Shadow Blade", "Counterspell", "Misty Step", "Glyph of Warding", "Phantasmal Killer", "Slow", "Fear", "Hold Person"],
-    "note": "If Misty Step is already an Arcane Trickster spell, prepare Blindness instead. She has one 4th-level slot, so prepare one 4th-level spell: out of combat, swap Phantasmal Killer for Greater Invisibility or Fire Shield if the next fight calls for it. Swap Slow, Fear or Hold Person for Blindness or Haste by fight."
+    "abilities": ["Shadow Blade", "Counterspell", "Enhance Leap", "Glyph of Warding", "Phantasmal Killer", "Haste", "Blindness", "Hold Person"],
+    "note": "She has one 4th-level slot, so prepare one 4th-level spell: out of combat, swap Phantasmal Killer for Greater Invisibility or Fire Shield if the next fight calls for it. Swap Hold Person for Slow or Fear by fight."
    },
    "scribe_up_to": 4,
    "gains": "Counterspell, 8 Wizard preparations, and level 4 scroll scribing.",
@@ -240,7 +241,7 @@
   {"item": "Gloves of Thievery", "priority": "swap", "note": "Advantage on Sleight of Hand. Theft kit, not combat gloves."},
   {"item": "Cloak of Cunning Brume", "priority": "swap", "note": "Disengage makes a 2 m fog cloud for 1 turn: a reusable place to Hide and pickpocket from Act 2 on, instead of a Darkness arrow. The wiki now says the fog only appears in combat, so test it first. Sold by Mattis at Last Light Inn."},
   {"item": "Smuggler's Ring", "priority": "swap", "note": "+2 Stealth and Sleight of Hand for stealing, locks and traps, but −1 Charisma: take it off before a Deception check."},
-  {"item": "Mask of the Shapeshifter", "priority": "optional", "note": "In reserve: she learns Disguise Self. Use the Mask if you replace Disguise Self at level 11. Digital Deluxe Upgrade only."},
+  {"item": "Mask of the Shapeshifter", "priority": "swap", "note": "Her disguise from level 11, when she replaces Disguise Self with Misty Step. Digital Deluxe Upgrade only."},
   {"item": "The Speedy Lightfeet", "priority": "core", "note": "Cunning Dash gives 3 Lightning Charges every turn of her hit-and-run loop. Needs medium armour proficiency."},
   {"item": "Knife of the Undermountain King", "priority": "core", "note": "Her Act 1 weapon: crits on 19–20, rerolls low damage, Advantage on obscured targets.", "claim": "Vesper until Shadow Blade arrives (the Shadow Blade Ring in Act 2), then Zetharis if they fight in melee. Pearl's melee slot holds the Club of Hill Giant Strength."},
   {"item": "Phalar Aluve", "priority": "optional", "note": "Finesse longsword fallback. Any teammate can pull it from the stone (DC 15 Strength or Religion) and hand it over."},
@@ -348,7 +349,7 @@
    "label": "Act 3",
    "intro": "Damage and debuffs first, in medium armour and a shield, with The Reviving Hands the one tanking piece she wears by default. The survival swaps sit in each slot's alternates.",
    "slots": [
-    {"slot": "Head", "items": ["Helm of Balduran"], "alternates": ["Helmet of Arcane Acuity", "Sarevok's Horned Helmet", "Holy Lance Helm", "Mask of the Shapeshifter"], "note": "Balduran for most fights: as the tank she can't afford crits or stuns, and Viconia's shield doesn't stop crits. The Helmet of Arcane Acuity in fights where she's casting more than tanking: her spell DC builds with each Booming Blade hit. Sarevok's when someone else is tanking and she's free to burn down a boss (18–20 with Bloodthirst), or for Fear-heavy fights. Holy Lance against crowds of weaker attackers. The Mask waits in the camp's Traveller's Chest, for if she drops Disguise Self at level 11."},
+    {"slot": "Head", "items": ["Helm of Balduran"], "alternates": ["Helmet of Arcane Acuity", "Sarevok's Horned Helmet", "Holy Lance Helm", "Mask of the Shapeshifter"], "note": "Balduran for most fights: as the tank she can't afford crits or stuns, and Viconia's shield doesn't stop crits. The Helmet of Arcane Acuity in fights where she's casting more than tanking: her spell DC builds with each Booming Blade hit. Sarevok's when someone else is tanking and she's free to burn down a boss (18–20 with Bloodthirst), or for Fear-heavy fights. Holy Lance against crowds of weaker attackers. The Mask waits in the camp's Traveller's Chest, for when she drops Disguise Self at level 11."},
     {"slot": "Cloak", "items": ["Cloak of Displacement"], "alternates": ["Vivacious Cloak", "Cloak of Cunning Brume"]},
     {"slot": "Chest", "items": ["Armour of Agility"], "alternates": ["Yuan-Ti Scale Mail"]},
     {"slot": "Gloves", "items": ["The Reviving Hands"], "alternates": ["Braindrain Gloves", "Gloves of Battlemage's Power", "Stalker Gloves", "Wondrous Gloves", "Gloves of Thievery"], "note": "The Hands only work with the Helm of Balduran's heal, so swap them out too if she changes helmets. Wear Braindrain in fights she leads with Phantasmal Killer, Slow or Fear, or sets up Alene's Hold Person."},
@@ -382,7 +383,7 @@
    ]
   },
   "start_of_day": [
-   "Ask Pearl for Longstrider: more movement for running in and back out.",
+   "Cast Longstrider: more movement for running in and back out.",
    "Prepare the Wizard spells for her level, then swap freely out of combat.",
    "From level 8, cast Shadow Blade. From level 9, use a 3rd-level slot.",
    "Before a theft: Boon ring, cast Disguise Self, then theft ring and gloves.",
@@ -392,7 +393,7 @@
    {
     "title": "Get ready",
     "steps": [
-     "Put on Shapeshifter's Boon Ring, then cast Disguise Self (or use Mask of the Shapeshifter if you swapped at level 11).",
+     "Put on Shapeshifter's Boon Ring, then cast Disguise Self (from level 11, use Mask of the Shapeshifter).",
      "Put on Smuggler's Ring and Gloves of Thievery, and from Act 2 Cloak of Cunning Brume. Get Guidance from Alene, or cast it with the Silver Pendant."
     ]
    },

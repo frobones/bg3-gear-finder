@@ -50,6 +50,13 @@ The wiki was last checked against these notes on 2026-11-04.
   weigh the gloves against Braindrain again. A web search on 2026-11-04 found
   no report either way.
 
+- **Enhance Leap range and unpreparing.** Cast it out of combat and check the
+  jump range (the wiki's formula gives about 13.5 m at STR 8). Then unprepare
+  it and see whether the buff stays, as that decides if it needs a permanent
+  spot. Do the same for Longstrider.
+- **Scribed Bone Chill.** Scribe the scroll at level 6 and see whether the
+  cantrip needs a prepare slot, or is always available like her others.
+
 ### Alene
 
 - **Boots of Stormy Clamour with Radiating Orb.** Hit with radiant damage in
