@@ -161,7 +161,7 @@
    "prepare": {
     "count": 7,
     "abilities": ["Shadow Blade", "Mirror Image", "Misty Step", "Enhance Leap", "Haste", "Glyph of Warding", "Blindness"],
-    "note": "Scribe Haste from a scroll, and prepare Fear until you have it. Casting another concentration spell while Hasted ends the new spell and makes her Lethargic. Swap in Fear, Slow, Hold Person, Hypnotic Pattern, Web or Fireball when the fight calls for it. Glyph of Warding is her area attack: cast on enemies it triggers at once, you pick the damage type, it adds 3 Arcane Ward charges, and it needs no concentration. It can hit her too until Evasion at level 11."
+    "note": "All her level 3 spells come from scrolls until level 12, so seek out Haste and Glyph of Warding and scribe them. Traders sell them. Casting another concentration spell while Hasted ends the new spell and makes her Lethargic. Swap in Fear, Slow, Hold Person, Hypnotic Pattern, Web or Fireball when the fight calls for it. Glyph of Warding is her area attack: cast on enemies it triggers at once, you pick the damage type, it adds 3 Arcane Ward charges, and it needs no concentration. It can hit her too until Evasion at level 11."
    },
    "scribe_up_to": 3,
    "gains": "Savage Attacker: her Shadow Blade and Sneak Attack dice roll twice and keep the higher. Level 3 scroll scribing. Shadow Blade reaches 3d8 from a 3rd-level slot.",
