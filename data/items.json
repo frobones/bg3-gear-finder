@@ -211,8 +211,8 @@
   "notes_links": [
    {
     "text": "Mind Flayer",
-    "page": "Mind Flayer",
-    "url": "https://bg3.wiki/wiki/Mind_Flayer"
+    "page": "Dead Mind Flayer (Goblin Camp)",
+    "url": "https://bg3.wiki/wiki/Dead_Mind_Flayer_(Goblin_Camp)"
    },
    {
     "text": "Confidant of a Duke",
@@ -589,8 +589,8 @@
   "notes_links": [
    {
     "text": "Demonspirit Madness",
-    "page": "Demonspirit Madness (condition)",
-    "url": "https://bg3.wiki/wiki/Demonspirit_Madness_(condition)"
+    "page": "Demonspirit Madness",
+    "url": "https://bg3.wiki/wiki/Demonspirit_Madness"
    },
    {
     "text": "Accursed Spectres",
@@ -2189,8 +2189,8 @@
    },
    {
     "text": "Castigated By Divinity",
-    "page": "Castigated By Divinity (condition)",
-    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity_(condition)"
+    "page": "Castigated By Divinity",
+    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity"
    }
   ],
   "has_location_data": true
@@ -3744,6 +3744,145 @@
   "notes": "• Underwear cannot be looted regularly. A party member must pick up the corpse to loot the underwear.",
   "notes_links": [],
   "has_location_data": true
+ },
+ {
+  "id": "Auntie Ethel's Hair",
+  "kind": "misc",
+  "wiki_url": "https://bg3.wiki/wiki/Auntie_Ethel's_Hair",
+  "variants": [],
+  "page": "Auntie Ethel's Hair",
+  "name": "Auntie Ethel's Hair",
+  "uid": "Quest_HAG_HagHair_Strength",
+  "uuid": "8f6b0c08-d1b1-4ae7-ade2-da3c679ce323",
+  "stats": "QUEST_HAG_HagHair_Strength",
+  "legacy": null,
+  "type": "Consumables",
+  "image": "Hags Hair Icon.png",
+  "image_url": "https://bg3.wiki/w/images/6/63/Hags_Hair_Icon.png",
+  "controller_icon": "Hags Hair Unfaded.png",
+  "controller_icon_url": "https://bg3.wiki/w/images/2/22/Hags_Hair_Unfaded.png",
+  "icon": "Hags Hair Unfaded Icon.png",
+  "icon_url": "https://bg3.wiki/w/images/f/f3/Hags_Hair_Unfaded_Icon.png",
+  "description": "Auntie Ethel's Hair is a common item that can be used to permanently increase a character's Ability Score by 1. The player character must choose which ability score the hair increases when receiving it.",
+  "quote": "Two lice still scurry around on the little flap of skin attached to this clump of matted, crusty hair.",
+  "camp_supplies": 0,
+  "rarity": "common",
+  "action_type": null,
+  "effect": "Consuming this piece of fey flesh grants a permanent +1 bonus to an Ability Score of your choice.",
+  "condition_duration": null,
+  "condition_save": null,
+  "price": 280,
+  "weight_kg": 0.2,
+  "book_author": null,
+  "notes": "• During the fight against Auntie Ethel in the Overgrown Tunnel, if she is reduced below 20% of her maximum HP and has a turn to act, she begs for her life and implores the party to let her keep Mayrina and her unborn child, offering the player character power in return. If the interacting party member passes a DC 20 Deception or Intimidation Check against Auntie Ethel, it is possible to both free Mayrina and get this item, at the cost of letting Auntie Ethel go. Fighters and Barbarians instead get a DC 15 Intimidation Check, with Advantage, in place of the standard Intimidation check to obtain her hair and also save Mayrina. Failing one check makes the other unavailable, leaving only the options to take the deal, free Mayrina, or kill Auntie Ethel. The hag:\n• Cannot offer this bargain if she is Silenced\n• Cannot bargain for Mayrina if she is Knocked Out\n• Does not bargain for Mayrina if she is fought at the Riverside Teahouse, even if her Hit Points are lowered below 20% before she teleports Mayrina to the Overgrown Tunnel\n• The increase to an ability score is uncapped, but takes effect before other items and bonuses which raise abilities to a capped amount. The hair has no effect on abilities set to a fixed number through equipment or consumables, such as the Gloves of Dexterity or an Elixir of Hill Giant Strength.\n• Paladins who take any deal break their Oath.\n• The passive \"Auntie Ethel's Boon\" appears in the character's Notable Features section after consuming it.\n• It is possible to obtain Auntie Ethel's Hair, free Mayrina, and also kill Auntie Ethel:\n• Leave one party member hidden and out of combat, while the rest of the party whittle Auntie Ethel's Hit Points down to a range where the next hit will kill her.\n• When the dialogue is triggered, succeed an Intimidation or Deception check to make her both give the hair and free Mayrina, but do not end the dialogue.\n• Switch to the out-of-combat party member. They can see the quest reward window, where the version (ability score) of the hair can be chosen.\n• Confirm the quest reward window, then finish off Auntie Ethel while she is still in dialogue with another party member.\n• This method does not work in a multiplayer game.\n• It is recommended to get her Hit Points down as low as possible because there is only one chance to attack her; otherwise, the out-of-combat character is dragged into the dialogue, and the hag can escape.\n• This method does not leave a corpse to be looted.\n• Prior to patch 7, a unique interaction could happen if playing in Honour mode when the player character was making their dialogue skill check. If any spell was used for the check, like Guidance, Auntie Ethel would trigger her legendary action, Weird Magic Surge, which would create an illusory duplicate. This action would throw the talking party member out of the dialogue and into combat once more. Even if the skill check was successful, no reward would be given, and the dialogue would not trigger again. Other non-spell effects, however, such as Bardic Inspiration, would still work on this check.",
+  "notes_links": [
+   {
+    "text": "Auntie Ethel",
+    "page": "Auntie Ethel",
+    "url": "https://bg3.wiki/wiki/Auntie_Ethel"
+   },
+   {
+    "text": "Overgrown Tunnel",
+    "page": "Overgrown Tunnel",
+    "url": "https://bg3.wiki/wiki/Overgrown_Tunnel"
+   },
+   {
+    "text": "Mayrina",
+    "page": "Mayrina",
+    "url": "https://bg3.wiki/wiki/Mayrina"
+   },
+   {
+    "text": "Deception",
+    "page": "Deception",
+    "url": "https://bg3.wiki/wiki/Deception"
+   },
+   {
+    "text": "Intimidation",
+    "page": "Intimidation",
+    "url": "https://bg3.wiki/wiki/Intimidation"
+   },
+   {
+    "text": "Check",
+    "page": "Ability check",
+    "url": "https://bg3.wiki/wiki/Ability_check"
+   },
+   {
+    "text": "Fighter",
+    "page": "Fighter",
+    "url": "https://bg3.wiki/wiki/Fighter"
+   },
+   {
+    "text": "Barbarian",
+    "page": "Barbarian",
+    "url": "https://bg3.wiki/wiki/Barbarian"
+   },
+   {
+    "text": "Advantage",
+    "page": "Advantage",
+    "url": "https://bg3.wiki/wiki/Advantage"
+   },
+   {
+    "text": "Silenced",
+    "page": "Silenced (condition)",
+    "url": "https://bg3.wiki/wiki/Silenced_(condition)"
+   },
+   {
+    "text": "Knocked Out",
+    "page": "Knocked Out (condition)",
+    "url": "https://bg3.wiki/wiki/Knocked_Out_(condition)"
+   },
+   {
+    "text": "Riverside Teahouse",
+    "page": "Riverside Teahouse",
+    "url": "https://bg3.wiki/wiki/Riverside_Teahouse"
+   },
+   {
+    "text": "takes effect before",
+    "page": "Abilities",
+    "url": "https://bg3.wiki/wiki/Abilities#Priority"
+   },
+   {
+    "text": "Gloves of Dexterity",
+    "page": "Gloves of Dexterity",
+    "url": "https://bg3.wiki/wiki/Gloves_of_Dexterity"
+   },
+   {
+    "text": "Elixir of Hill Giant Strength",
+    "page": "Elixir of Hill Giant Strength",
+    "url": "https://bg3.wiki/wiki/Elixir_of_Hill_Giant_Strength"
+   },
+   {
+    "text": "Paladin",
+    "page": "Paladin",
+    "url": "https://bg3.wiki/wiki/Paladin"
+   },
+   {
+    "text": "Honour mode",
+    "page": "Honour mode",
+    "url": "https://bg3.wiki/wiki/Honour_mode"
+   },
+   {
+    "text": "skill check",
+    "page": "Skill Check",
+    "url": "https://bg3.wiki/wiki/Skill_Check"
+   },
+   {
+    "text": "Guidance",
+    "page": "Guidance",
+    "url": "https://bg3.wiki/wiki/Guidance"
+   },
+   {
+    "text": "Weird Magic Surge",
+    "page": "Legendary Action: Weird Magic Surge",
+    "url": "https://bg3.wiki/wiki/Legendary_Action:_Weird_Magic_Surge"
+   },
+   {
+    "text": "Bardic Inspiration",
+    "page": "Bardic Inspiration (condition)",
+    "url": "https://bg3.wiki/wiki/Bardic_Inspiration_(condition)"
+   }
+  ],
+  "has_location_data": false
  },
  {
   "id": "Azer Warhammer",
@@ -9630,8 +9769,8 @@
    },
    {
     "text": "Burning",
-    "page": "Burning (condition)",
-    "url": "https://bg3.wiki/wiki/Burning_(condition)"
+    "page": "Burning",
+    "url": "https://bg3.wiki/wiki/Burning"
    },
    {
     "text": "torch",
@@ -13208,8 +13347,8 @@
   "notes_links": [
    {
     "text": "Meenlocks",
-    "page": "Meenlock",
-    "url": "https://bg3.wiki/wiki/Meenlock"
+    "page": "Meenlock (creature)",
+    "url": "https://bg3.wiki/wiki/Meenlock_(creature)"
    },
    {
     "text": "Sleight of Hand",
@@ -16606,8 +16745,8 @@
    },
    {
     "text": "Arcane Synergy",
-    "page": "Arcane Synergy (condition)",
-    "url": "https://bg3.wiki/wiki/Arcane_Synergy_(condition)"
+    "page": "Arcane Synergy",
+    "url": "https://bg3.wiki/wiki/Arcane_Synergy"
    },
    {
     "text": "Aura of Hate",
@@ -16911,8 +17050,8 @@
   "notes_links": [
    {
     "text": "Castigated By Divinity",
-    "page": "Castigated By Divinity (condition)",
-    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity_(condition)"
+    "page": "Castigated By Divinity",
+    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity"
    },
    {
     "text": "Planar Ally: Djinni",
@@ -17258,8 +17397,8 @@
    },
    {
     "text": "Bone Chilled",
-    "page": "Bone Chilled (condition)",
-    "url": "https://bg3.wiki/wiki/Bone_Chilled_(condition)"
+    "page": "Bone Chilled",
+    "url": "https://bg3.wiki/wiki/Bone_Chilled"
    },
    {
     "text": "Apostle of Myrkul",
@@ -18229,8 +18368,8 @@
    },
    {
     "text": "Burning",
-    "page": "Burning (condition)",
-    "url": "https://bg3.wiki/wiki/Burning_(condition)"
+    "page": "Burning",
+    "url": "https://bg3.wiki/wiki/Burning"
    },
    {
     "text": "torch",
@@ -20193,7 +20332,7 @@
   "special": null,
   "legacy": null,
   "bugs": null,
-  "notes": "• Succeeding in identifying the armour awards the The Spider's Gift inspirational event to party members with the Guild Artisan background.",
+  "notes": "• Succeeding in identifying the armour awards the The Spider's Gift inspirational event to party members with the Guild Artisan background.\n• The party must include a character who has +5 to History or higher, or one belonging to any Underdark race (Drow, Duergar, or Deep Gnome), at the moment when the armour is picked up. This includes hirelings belonging to these races.",
   "notes_links": [
    {
     "text": "The Spider's Gift",
@@ -20204,6 +20343,36 @@
     "text": "Guild Artisan",
     "page": "Guild Artisan",
     "url": "https://bg3.wiki/wiki/Guild_Artisan"
+   },
+   {
+    "text": "History",
+    "page": "History",
+    "url": "https://bg3.wiki/wiki/History"
+   },
+   {
+    "text": "Underdark",
+    "page": "Underdark",
+    "url": "https://bg3.wiki/wiki/Underdark"
+   },
+   {
+    "text": "Drow",
+    "page": "Drow",
+    "url": "https://bg3.wiki/wiki/Drow"
+   },
+   {
+    "text": "Duergar",
+    "page": "Duergar",
+    "url": "https://bg3.wiki/wiki/Duergar"
+   },
+   {
+    "text": "Deep Gnome",
+    "page": "Deep Gnome",
+    "url": "https://bg3.wiki/wiki/Deep_Gnome"
+   },
+   {
+    "text": "hirelings",
+    "page": "hirelings",
+    "url": "https://bg3.wiki/wiki/hirelings"
    }
   ],
   "has_location_data": true
@@ -21383,18 +21552,18 @@
    },
    {
     "text": "Acid Infusion",
-    "page": "Acid Infusion (condition)",
-    "url": "https://bg3.wiki/wiki/Acid_Infusion_(condition)"
+    "page": "Acid Infusion",
+    "url": "https://bg3.wiki/wiki/Acid_Infusion"
    },
    {
     "text": "Cold Infusion",
-    "page": "Cold Infusion (condition)",
-    "url": "https://bg3.wiki/wiki/Cold_Infusion_(condition)"
+    "page": "Cold Infusion",
+    "url": "https://bg3.wiki/wiki/Cold_Infusion"
    },
    {
     "text": "Fire Infusion",
-    "page": "Fire Infusion (condition)",
-    "url": "https://bg3.wiki/wiki/Fire_Infusion_(condition)"
+    "page": "Fire Infusion",
+    "url": "https://bg3.wiki/wiki/Fire_Infusion"
    },
    {
     "text": "Ring of Elemental Infusion",
@@ -21876,7 +22045,7 @@
   "special": null,
   "legacy": null,
   "bugs": null,
-  "notes": "• The party must give Dammon one piece of Infernal Iron. Upon obtaining the first piece, he crafts this item.\n• Asking Dammon to create Flawed Helldusk Armour, the Flawed Helldusk Helmet or Flawed Helldusk Gloves requires a piece of Infernal Iron for each piece of equipment.",
+  "notes": "• The party must give Dammon one piece of Infernal Iron. Upon obtaining the first piece, he crafts this item.\n• Asking Dammon to create Flawed Helldusk Armour, the Flawed Helldusk Helmet or Flawed Helldusk Gloves requires a piece of Infernal Iron for each piece of equipment.\n• Obtaining the first part of the set from Dammon grants the Hellish Armaments inspiration to characters with the Guild Artisan background.",
   "notes_links": [
    {
     "text": "Dammon",
@@ -21902,6 +22071,16 @@
     "text": "Flawed Helldusk Gloves",
     "page": "Flawed Helldusk Gloves",
     "url": "https://bg3.wiki/wiki/Flawed_Helldusk_Gloves"
+   },
+   {
+    "text": "Hellish Armaments",
+    "page": "Guild Artisan",
+    "url": "https://bg3.wiki/wiki/Guild_Artisan#Hellish_Armaments"
+   },
+   {
+    "text": "Guild Artisan",
+    "page": "Guild Artisan",
+    "url": "https://bg3.wiki/wiki/Guild_Artisan"
    }
   ],
   "has_location_data": true
@@ -27094,8 +27273,8 @@
    },
    {
     "text": "Atrophied",
-    "page": "Atrophied (condition)",
-    "url": "https://bg3.wiki/wiki/Atrophied_(condition)"
+    "page": "Atrophied",
+    "url": "https://bg3.wiki/wiki/Atrophied"
    }
   ],
   "has_location_data": true
@@ -29068,8 +29247,8 @@
    },
    {
     "text": "Castigated By Divinity",
-    "page": "Castigated By Divinity (condition)",
-    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity_(condition)"
+    "page": "Castigated By Divinity",
+    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity"
    }
   ],
   "has_location_data": true
@@ -41395,7 +41574,7 @@
   "special_weapon_actions": [],
   "special": null,
   "bugs": "• The Moonlantern containing Dolly Dolly Dolly still produces a stationary Moonshield Aura when dropped on the ground even after she has been freed from it.",
-  "notes": "• The Moonlantern carried by Kar'niss contains a foul-mouthed pixie Dolly Dolly Dolly who wants out. If freed using Inspect Moonlantern, she grants the party a Pixie Blessing.\n• If Dolly is freed, her Moonlantern remains in the inventory of the character who freed her, but its inventory icon changes to a broken version and the lantern cannot be equipped anymore.\n• If Kar'niss arrives at Moonrise Towers with the lantern (whether he escorted the party or not), Dolly dies inside it.\n• If Kar'niss is killed at the ambush and the lantern is taken by the Harpers, the party can follow them back to Last Light Inn. There Isobel gives the party the same Moonlantern with Dolly Dolly Dolly alive inside; she can be freed and the Pixie Blessing may then still be obtained.\n• Switching to ranged weapons while having a Moonlantern equipped retains the Moonshield effect but removes the illumination, allowing darkness-requiring effects such as Covert Critical and Shadow Step to be safely used within the Shadow-Cursed Lands.\n• See also:\n• Broken Moonlantern\n• Dead Pixie\n• Filigreed Feywild Bell\n• Shadow Lantern",
+  "notes": "• The Moonlantern carried by Kar'niss contains a foul-mouthed pixie Dolly Dolly Dolly who wants out. If freed using Inspect Moonlantern, she grants the party a Pixie Blessing. Also, characters with the Guild Artisan background get the Trust and a Little Pixie Dust inspiration, but only when the Moonlantern is inspected for the first time in a playthrough.\n• If Dolly is freed, her Moonlantern remains in the inventory of the character who freed her, but its inventory icon changes to a broken version and the lantern cannot be equipped anymore.\n• Taking the Moonlantern from Kar'niss (regardless of the way it is obtained) grants the inspiration Shiny Trinkets and Baubles ( Criminal background).\n• If Kar'niss arrives at Moonrise Towers with the lantern (whether he escorted the party or not), Dolly dies inside it. This earns the inspiration Fly-Swatter ( Haunted One background).\n• If Kar'niss is killed at the ambush and the lantern is taken by the Harpers, the party can follow them back to Last Light Inn. There Isobel gives the party the same Moonlantern with Dolly Dolly Dolly alive inside; she can be freed and the Pixie Blessing may then still be obtained.\n• Switching to ranged weapons while having a Moonlantern equipped retains the Moonshield effect but removes the illumination, allowing darkness-requiring effects such as Covert Critical and Shadow Step to be safely used within the Shadow-Cursed Lands.\n• See also:\n• Broken Moonlantern\n• Dead Pixie\n• Filigreed Feywild Bell\n• Shadow Lantern",
   "notes_links": [
    {
     "text": "Kar'niss",
@@ -41416,6 +41595,36 @@
     "text": "Pixie Blessing",
     "page": "Pixie Blessing (condition)",
     "url": "https://bg3.wiki/wiki/Pixie_Blessing_(condition)"
+   },
+   {
+    "text": "Guild Artisan",
+    "page": "Guild Artisan",
+    "url": "https://bg3.wiki/wiki/Guild_Artisan"
+   },
+   {
+    "text": "Trust and a Little Pixie Dust",
+    "page": "Guild Artisan",
+    "url": "https://bg3.wiki/wiki/Guild_Artisan#Trust_and_a_Little_Pixie_Dust"
+   },
+   {
+    "text": "Shiny Trinkets and Baubles",
+    "page": "Criminal",
+    "url": "https://bg3.wiki/wiki/Criminal#Shiny_Trinkets_and_Baubles"
+   },
+   {
+    "text": "Criminal",
+    "page": "Criminal",
+    "url": "https://bg3.wiki/wiki/Criminal"
+   },
+   {
+    "text": "Fly-Swatter",
+    "page": "Haunted One",
+    "url": "https://bg3.wiki/wiki/Haunted_One#Fly-Swatter"
+   },
+   {
+    "text": "Haunted One",
+    "page": "Haunted One",
+    "url": "https://bg3.wiki/wiki/Haunted_One"
    },
    {
     "text": "Last Light Inn",
@@ -45271,8 +45480,8 @@
    },
    {
     "text": "Bleeding",
-    "page": "Bleeding (condition)",
-    "url": "https://bg3.wiki/wiki/Bleeding_(condition)"
+    "page": "Bleeding",
+    "url": "https://bg3.wiki/wiki/Bleeding"
    },
    {
     "text": "Blood Sacrifice",
@@ -45656,8 +45865,8 @@
    },
    {
     "text": "Burning",
-    "page": "Burning (condition)",
-    "url": "https://bg3.wiki/wiki/Burning_(condition)"
+    "page": "Burning",
+    "url": "https://bg3.wiki/wiki/Burning"
    },
    {
     "text": "torch",
@@ -46656,13 +46865,13 @@
    },
    {
     "text": "Brittle",
-    "page": "Brittle (condition)",
-    "url": "https://bg3.wiki/wiki/Brittle_(condition)"
+    "page": "Brittle",
+    "url": "https://bg3.wiki/wiki/Brittle"
    },
    {
     "text": "Frozen",
-    "page": "Frozen (condition)",
-    "url": "https://bg3.wiki/wiki/Frozen_(condition)"
+    "page": "Frozen",
+    "url": "https://bg3.wiki/wiki/Frozen"
    },
    {
     "text": "Superheated",
@@ -50641,8 +50850,8 @@
    },
    {
     "text": "Bleeding",
-    "page": "Bleeding (condition)",
-    "url": "https://bg3.wiki/wiki/Bleeding_(condition)"
+    "page": "Bleeding",
+    "url": "https://bg3.wiki/wiki/Bleeding"
    },
    {
     "text": "items which inflict reverberation",
@@ -51095,7 +51304,7 @@
   "special_weapon_actions": [],
   "special": null,
   "bugs": null,
-  "notes": "• Picking up this dagger:\n• Is disapproved of by Shadowheart (-1), unless she does this herself.\n• Grants the inspiration A Dark Edge for party members with the Criminal background and Ruthless Craftsmanship for party members with the Guild Artisan background.\n• Spawns three powerful sentinels that attack the party.\n• The fight with sentinels is still triggered if the dagger is moved from the altar, which also prevents the party from picking up the dagger at all, even after defeating the sentinels – unless it is thrown so Scratch can fetch it.\n• As with most weapons, the extra elemental damage (in this case, 1d4 Necrotic) is not applied if Thrown.",
+  "notes": "• Picking up this dagger:\n• Is disapproved of by Shadowheart (-1), unless she does this herself.\n• Grants the following inspirations: A Dark Edge ( Criminal background) and Ruthless Craftsmanship ( Guild Artisan background).\n• Spawns three powerful sentinels that attack the party.\n• The fight with sentinels is still triggered if the dagger is moved from the altar, which also prevents the party from picking up the dagger at all, even after defeating the sentinels – unless it is thrown so Scratch can fetch it.\n• As with most weapons, the extra elemental damage (in this case, 1d4 Necrotic) is not applied if Thrown.",
   "notes_links": [
    {
     "text": "Shadowheart",
@@ -57016,8 +57225,8 @@
    },
    {
     "text": "Shadow",
-    "page": "Shadow",
-    "url": "https://bg3.wiki/wiki/Shadow"
+    "page": "Shadow (creature)",
+    "url": "https://bg3.wiki/wiki/Shadow_(creature)"
    }
   ],
   "has_location_data": true
@@ -58368,8 +58577,8 @@
   "notes_links": [
    {
     "text": "Castigated By Divinity",
-    "page": "Castigated By Divinity (condition)",
-    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity_(condition)"
+    "page": "Castigated By Divinity",
+    "url": "https://bg3.wiki/wiki/Castigated_By_Divinity"
    }
   ],
   "has_location_data": true
@@ -59153,13 +59362,13 @@
   "notes_links": [
    {
     "text": "BOOOAL's Blessing",
-    "page": "BOOOAL's Blessing (condition)",
-    "url": "https://bg3.wiki/wiki/BOOOAL's_Blessing_(condition)"
+    "page": "BOOOAL's Blessing",
+    "url": "https://bg3.wiki/wiki/BOOOAL's_Blessing"
    },
    {
     "text": "BOOOAL's Benediction",
-    "page": "BOOOAL's Benediction (condition)",
-    "url": "https://bg3.wiki/wiki/BOOOAL's_Benediction_(condition)"
+    "page": "BOOOAL's Benediction",
+    "url": "https://bg3.wiki/wiki/BOOOAL's_Benediction"
    },
    {
     "text": "BOOOAL",
@@ -70096,8 +70305,8 @@
    },
    {
     "text": "Burning",
-    "page": "Burning (condition)",
-    "url": "https://bg3.wiki/wiki/Burning_(condition)"
+    "page": "Burning",
+    "url": "https://bg3.wiki/wiki/Burning"
    }
   ],
   "has_location_data": true
@@ -70154,12 +70363,47 @@
   "special_weapon_actions": [],
   "special": null,
   "bugs": null,
-  "notes": "• This item is needed for the quest Free the Artist.\n• The Torch of Revocation is one of only a few weapons in the game that deals two types of extra damage at once (only true when it is lit).\n• The flame of this torch burns green, rather than orange like standard torches.",
+  "notes": "• This item is needed for the quest Free the Artist.\n• Using the torch on the Painting of a Smiling Maiden throughout the quest may grant one or more of the following inspirations: Flames of Passion ( Guild Artisan background), True Exorcism ( Acolyte background), and Using the Proper Means ( Sage background).\n• The Torch of Revocation is one of only a few weapons in the game that deals two types of extra damage at once (only true when it is lit).\n• The flame of this torch burns green, rather than orange like standard torches.",
   "notes_links": [
    {
     "text": "Free the Artist",
     "page": "Free the Artist",
     "url": "https://bg3.wiki/wiki/Free_the_Artist"
+   },
+   {
+    "text": "Painting of a Smiling Maiden",
+    "page": "Painting of a Smiling Maiden",
+    "url": "https://bg3.wiki/wiki/Painting_of_a_Smiling_Maiden"
+   },
+   {
+    "text": "Flames of Passion",
+    "page": "Guild Artisan",
+    "url": "https://bg3.wiki/wiki/Guild_Artisan#Flames_of_Passion"
+   },
+   {
+    "text": "Guild Artisan",
+    "page": "Guild Artisan",
+    "url": "https://bg3.wiki/wiki/Guild_Artisan"
+   },
+   {
+    "text": "True Exorcism",
+    "page": "Acolyte",
+    "url": "https://bg3.wiki/wiki/Acolyte#True_Exorcism"
+   },
+   {
+    "text": "Acolyte",
+    "page": "Acolyte",
+    "url": "https://bg3.wiki/wiki/Acolyte"
+   },
+   {
+    "text": "Using the Proper Means",
+    "page": "Sage",
+    "url": "https://bg3.wiki/wiki/Sage#Using_the_Proper_Means"
+   },
+   {
+    "text": "Sage",
+    "page": "Sage",
+    "url": "https://bg3.wiki/wiki/Sage"
    }
   ],
   "has_location_data": true
@@ -71419,13 +71663,13 @@
    },
    {
     "text": "Ensnared",
-    "page": "Ensnared (Ensnaring Strike) (condition)",
-    "url": "https://bg3.wiki/wiki/Ensnared_(Ensnaring_Strike)_(condition)"
+    "page": "Ensnared (Ensnaring Strike)",
+    "url": "https://bg3.wiki/wiki/Ensnared_(Ensnaring_Strike)"
    },
    {
     "text": "Ensnared",
-    "page": "Ensnared (condition)",
-    "url": "https://bg3.wiki/wiki/Ensnared_(condition)"
+    "page": "Ensnared",
+    "url": "https://bg3.wiki/wiki/Ensnared"
    },
    {
     "text": "Grasp of the Forest",
@@ -71434,8 +71678,8 @@
    },
    {
     "text": "Entangled",
-    "page": "Entangled (condition)",
-    "url": "https://bg3.wiki/wiki/Entangled_(condition)"
+    "page": "Entangled",
+    "url": "https://bg3.wiki/wiki/Entangled"
    }
   ],
   "has_location_data": true
@@ -75411,8 +75655,8 @@
    },
    {
     "text": "Ephemeral Whispers",
-    "page": "Ephemeral Whispers (condition)",
-    "url": "https://bg3.wiki/wiki/Ephemeral_Whispers_(condition)"
+    "page": "Ephemeral Whispers",
+    "url": "https://bg3.wiki/wiki/Ephemeral_Whispers"
    },
    {
     "text": "Paladin",

@@ -2292,32 +2292,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Burning_Fury"
  },
  {
-  "id": "Burning Hands",
-  "kind": "spell",
-  "name": "Burning Hands",
-  "type": null,
-  "brief": null,
-  "description": "Each flammable target is hit with 3d6 Fire damage.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/3/37/Burning_Hands_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Fire",
-    "page": "Fire",
-    "url": "https://bg3.wiki/wiki/Fire"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Burning_Hands",
-  "spell_level": 1,
-  "school": "Evocation",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "Self"
- },
- {
   "id": "Burst of Speed",
   "kind": "passive",
   "name": "Burst of Speed",
@@ -5635,42 +5609,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Fire_Acuity"
  },
  {
-  "id": "Fire Shield",
-  "kind": "spell",
-  "name": "Fire Shield",
-  "type": null,
-  "brief": null,
-  "description": "Wreathe your body in flames that shed light in a 3 m (10 ft) radius, provide Resistance to Fire or Cold damage, and retaliate against melee attacks.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/3/31/Fire_Shield_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Resistance",
-    "page": "Resistance",
-    "url": "https://bg3.wiki/wiki/Resistance"
-   },
-   {
-    "text": "Fire",
-    "page": "Fire",
-    "url": "https://bg3.wiki/wiki/Fire"
-   },
-   {
-    "text": "Cold",
-    "page": "Cold",
-    "url": "https://bg3.wiki/wiki/Cold"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Fire_Shield",
-  "spell_level": 4,
-  "school": "Evocation",
-  "concentration": null,
-  "ritual": null,
-  "action_type": "action",
-  "range": "self"
- },
- {
   "id": "First Blood",
   "kind": "passive",
   "name": "First Blood",
@@ -6558,37 +6496,6 @@
   "ritual": null,
   "action_type": "action",
   "range": "18 / 60"
- },
- {
-  "id": "Greater Invisibility",
-  "kind": "spell",
-  "name": "Greater Invisibility",
-  "type": null,
-  "brief": null,
-  "description": "Turn a creature Invisible. Attacks against it have Disadvantage. It attacks with Advantage.",
-  "extra_description": "Invisibility breaks when you fail increasingly harder Stealth Checks on attacking, casting spells, or interacting with items.",
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/3/38/Greater_Invisibility_Unfaded_Icon.webp",
-  "links": [
-   {
-    "text": "Disadvantage",
-    "page": "Disadvantage",
-    "url": "https://bg3.wiki/wiki/Disadvantage"
-   },
-   {
-    "text": "Advantage",
-    "page": "Advantage",
-    "url": "https://bg3.wiki/wiki/Advantage"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Greater_Invisibility",
-  "spell_level": 4,
-  "school": "Illusion",
-  "concentration": true,
-  "ritual": null,
-  "action_type": "action",
-  "range": "1.5 / 5"
  },
  {
   "id": "Greater Kushigo Counter",
@@ -10409,36 +10316,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Perfectly_Balanced_Strike"
  },
  {
-  "id": "Performer",
-  "kind": "passive",
-  "name": "Performer",
-  "type": null,
-  "brief": null,
-  "description": "You gain Instruments proficiency, and your Charisma increases by 1, to a maximum of 20.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": null,
-  "links": [
-   {
-    "text": "Instruments",
-    "page": "Instruments",
-    "url": "https://bg3.wiki/wiki/Instruments"
-   },
-   {
-    "text": "proficiency",
-    "page": "proficiency",
-    "url": "https://bg3.wiki/wiki/proficiency"
-   },
-   {
-    "text": "Charisma",
-    "page": "Charisma",
-    "url": "https://bg3.wiki/wiki/Charisma"
-   }
-  ],
-  "wiki_url": "https://bg3.wiki/wiki/Performer"
- },
- {
   "id": "Personal Space",
   "kind": "passive",
   "name": "Personal Space",
@@ -13145,26 +13022,6 @@
   "wiki_url": "https://bg3.wiki/wiki/Slippery_Slapsticky"
  },
  {
-  "id": "Slow",
-  "kind": "spell",
-  "name": "Slow",
-  "type": null,
-  "brief": null,
-  "description": "Alter time around up to 6 enemies to Slow them. They won't get far, they can't do much, and they're easier to hit.",
-  "extra_description": null,
-  "recharge": null,
-  "cost": null,
-  "icon_url": "https://bg3.wiki/w/images/a/af/Slow_Unfaded_Icon.webp",
-  "links": [],
-  "wiki_url": "https://bg3.wiki/wiki/Slow",
-  "spell_level": 3,
-  "school": "Transmutation",
-  "concentration": true,
-  "ritual": null,
-  "action_type": "action",
-  "range": "ranged"
- },
- {
   "id": "Smite the Graceless",
   "kind": "passive",
   "name": "Smite the Graceless",
@@ -13849,6 +13706,20 @@
    }
   ],
   "wiki_url": "https://bg3.wiki/wiki/Staff_of_the_Ram_(passive_feature)"
+ },
+ {
+  "id": "Stalker's Flurry",
+  "kind": "passive",
+  "name": "Stalker's Flurry",
+  "type": null,
+  "brief": null,
+  "description": "When you miss with a weapon attack, you can make another one for free.",
+  "extra_description": null,
+  "recharge": "Per turn",
+  "cost": null,
+  "icon_url": "https://bg3.wiki/w/images/e/e0/Stalker%27s_Flurry_Icon.webp",
+  "links": [],
+  "wiki_url": "https://bg3.wiki/wiki/Stalker's_Flurry"
  },
  {
   "id": "Staunch Blessing",
