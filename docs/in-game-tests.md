@@ -64,6 +64,19 @@ The wiki was last checked against these notes on 2026-11-04.
 
 - **Boots of Stormy Clamour with Radiating Orb.** Hit with radiant damage in
   Luminous gear, then with Coruscation Ring. Which sources add Reverberation.
+- **Auntie Ethel's Hair in co-op.** When Auntie Ethel offers the hair, see
+  which player gets the window that picks the ability, so Alene can take WIS.
+- **The Whispering Promise on her own heal.** In Chalice form with Wapira's
+  Crown, cast Healing Word on an ally. Whether she gets the +1d4 from her
+  Crown heal as well as both heal targets.
+- **Chalice Healing from Amulet of Restoration.** Cast the amulet's Healing
+  Word in Chalice form. The wiki says it doesn't refresh Chalice Healing; a
+  Reddit report says it does.
+- **Moonbasking on a free swap.** At level 10, spend some of the 22 temporary
+  HP, then swap constellations. Whether it drops or comes back to 22.
+- **Starry Form near a Wraith.** Walk into a Wraith's aura in a Starry Form,
+  then out again. Whether the form comes back or has to be recast for a
+  charge.
 
 ### Pearl
 

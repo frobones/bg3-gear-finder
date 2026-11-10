@@ -20,8 +20,10 @@
   {"level": 4, "picks": [{"label": "Feat", "entries": [{"ability": "Athlete: Standing Up", "note": "+1 DEX for 18; stand up from Prone for less movement and jump further"}]}]},
   {"level": 6, "picks": [{"label": "Favoured Enemy", "entries": [{"ability": "Bounty Hunter", "note": "take whichever you skipped at level 1"}, {"ability": "Ranger Knight", "note": "take whichever you skipped at level 1"}]}, {"label": "Natural Explorer", "entries": [{"ability": "Beast Tamer", "note": "take whichever you skipped at level 1"}, {"ability": "Wasteland Wanderer: Poison", "note": "take whichever you skipped at level 1"}]}]},
   {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "Sharpshooter: All In", "note": "−5 to hit, +10 damage, a toggle that starts on. On Tactician the +10 applies to each damage instance, so elemental arrows gain more"}]}]},
+  {"level": 9, "picks": [{"label": "Gloom Stalker spell", "entries": [{"ability": "Fear", "note": "always prepared: a 9 m cone of enemies drop their weapons and get Disadvantage; WIS sets its DC"}]}]},
   {"level": 10, "picks": [{"label": "Favoured Enemy", "entries": [{"ability": "Keeper of the Veil", "note": "Protection from Evil and Good"}]}, {"label": "Natural Explorer", "entries": [{"ability": "Wasteland Wanderer: Cold", "note": "resistance to Cold, common late"}]}]},
-  {"level": 12, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 DEX for 20"}, {"ability": "Alert", "note": "+5 initiative, can't be surprised"}]}]}
+  {"level": 11, "picks": [{"label": "Gloom Stalker feature", "entries": [{"ability": "Stalker's Flurry", "note": "once a turn, a missed attack gets a free extra attack; Sharpshooter's −5 means more misses to trigger it"}]}]},
+  {"level": 12, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 DEX for 20, the better pick"}, {"ability": "Alert", "note": "+5 initiative, can't be surprised; her gear already stacks initiative, so only if surprise rounds hurt"}]}]}
  ],
 
  "gear": [

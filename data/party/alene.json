@@ -6,7 +6,7 @@
  "classes": "Druid 12 (Circle of the Stars)",
  "portrait": "assets/portraits/alene.jpg",
  "portrait_full": "assets/portraits/full/alene.jpg",
- "role": "The party's controller and only healer. She opens with a concentration spell such as Spike Growth, Hold Person, Moonbeam or Call Lightning, then spends her bonus action in a Starry Form: Archer for radiant shots that pile on Reverberation and Radiating Orb, or Chalice to heal as she casts healing spells. Dragon suits fights where she's being hit: concentration save rolls of 9 or lower count as 10. Each form costs a Wild Shape charge, so pick one per fight until level 10, when she can swap free once a turn. On blighted ground in the Shadow-Cursed Lands, Moonbeam loses Concentration.",
+ "role": "The party's controller and only healer. She opens with a concentration spell such as Spike Growth, Hold Person, Moonbeam or Call Lightning, then spends her bonus action in a Starry Form: Archer for radiant shots that pile on Reverberation and Radiating Orb, or Chalice to heal as she casts healing spells. Dragon suits fights where she's being hit: concentration save rolls of 9 or lower count as 10. Its Dazzling Breath sets its save DC with CON, not WIS. Each form costs a Wild Shape charge, so pick one per fight until level 10, when she can swap free once a turn. On blighted ground in the Shadow-Cursed Lands, Moonbeam loses Concentration. A Starry Form lights her against the Shadow-Curse, but a Wraith's aura snuffs it.",
 
  "spells": [
   {"label": "Cantrips (Guidance arrives free at level 2)", "from": 1, "abilities": ["Guidance", "Produce Flame", "Thorn Whip"]},
@@ -19,8 +19,8 @@
  ],
 
  "levels": [
-  {"level": 4, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS for 20, if you got the one-time +1 WIS boost found in Act 1"}, {"text": "Ability Improvement", "note": "+1 WIS and +1 CON for WIS 18, without that boost"}]}]},
-  {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "War Caster: Concentration", "note": "if WIS is already 20; Advantage on concentration saves"}, {"text": "Ability Improvement", "note": "+2 WIS for 20, if you didn't get the Act 1 boost"}]}]},
+  {"level": 4, "picks": [{"label": "Feat", "entries": [{"text": "Ability Improvement", "note": "+2 WIS for 20, if she took Auntie Ethel's Hair's +1 WIS in Act 1"}, {"text": "Ability Improvement", "note": "+1 WIS and +1 CON for WIS 18, without that boost"}]}]},
+  {"level": 8, "picks": [{"label": "Feat", "entries": [{"ability": "War Caster: Concentration", "note": "if WIS is already 20; Advantage on concentration saves"}, {"text": "Ability Improvement", "note": "+2 WIS for 20, if she didn't get Auntie Ethel's Hair"}]}]},
   {"level": 12, "picks": [{"label": "Feat", "entries": [{"ability": "Alert", "note": "go first and can't be surprised"}, {"ability": "War Caster: Concentration", "note": "if you didn't take it at level 8"}]}]}
  ],
 
@@ -28,7 +28,8 @@
   {"item": "Melf's First Staff", "tags": ["dc"], "note": "+1 spell DC and spell attack; Melf's Acid Arrow once a day."},
   {"item": "The Protecty Sparkswall", "tags": ["dc"], "note": "Clothing: +1 spell DC. Its +1 AC and saves need Lightning Charges, which nothing on this page gives you."},
   {"item": "Wapira's Crown", "tags": ["healing"], "note": "You regain 1d6 HP whenever you heal someone else. A reward from Zevlor for helping the refugees: accept the money, and it's in the Patched-Together Sack."},
-  {"item": "Luminous Armour", "tags": ["radiant"], "note": "Medium armour: your radiant damage sets off a shockwave that adds Radiating Orb. With Boots of Stormy Clamour, that Radiating Orb should add Reverberation too (check in game). Its shockwave doesn't trigger from Moonbeam (wiki)."},
+  {"item": "Auntie Ethel's Hair", "tags": ["dc"], "note": "+1 to an ability for good: pick WIS. Auntie Ethel offers it if she gets a turn below 20% HP in her Sunlit Wetlands lair and you let her go. Pass DC 20 Deception or Intimidation to free Mayrina as well."},
+  {"item": "Luminous Armour", "tags": ["radiant"], "note": "Medium armour: your radiant damage sets off a shockwave that adds Radiating Orb. With Boots of Stormy Clamour, that Radiating Orb should add Reverberation too (check in game). Its shockwave doesn't trigger from Moonbeam (wiki). Dragon form's breath sets it off with the shockwave on the cursor, so aim into a group."},
   {"item": "The Oak Father's Embrace", "tags": ["survival"], "note": "Medium armour, AC 13 + DEX (max 2). Undead that hit you take 1d6 radiant, but beasts that hit you deal 1d6 more radiant, so swap it out against beasts. On a headless skeleton near the owlbear nest in Act 1."},
   {"item": "Gloves of Belligerent Skies", "tags": ["radiant"], "note": "Radiant, thunder and lightning damage add Reverberation (−1 to STR, DEX and CON saves per turn). Not Moonbeam, and an area spell only affects its first target."},
   {"item": "Boots of Stormy Clamour", "tags": ["radiant"], "note": "Inflicting a condition also adds 2 turns of Reverberation, once per action and on the first target only. Radiating Orb from Luminous Armour, Luminous Gloves or Coruscation Ring is listed as a condition on the wiki, so it should set the boots off on radiant hits, though an older wiki note says Coruscation Ring's doesn't: check in game."},
@@ -36,7 +37,7 @@
   {"item": "Vital Conduit Boots", "tags": ["concentration"], "note": "8 temporary HP when you first cast a concentration spell; free recasts of Moonbeam or Call Lightning don't count."},
   {"item": "Ring of Protection", "tags": ["survival"], "note": "+1 AC and saves."},
   {"item": "Hellrider's Pride", "tags": ["healing"], "note": "Heals you give others grant resistance to bludgeoning, piercing and slashing damage for 2 turns (a bug widens it beyond weapons). Healing yourself doesn't count."},
-  {"item": "The Whispering Promise", "tags": ["healing"], "note": "Your heals give +1d4 to attacks and saves for 2 turns, even on a target at full health and on everyone a Mass Healing Word reaches."},
+  {"item": "The Whispering Promise", "tags": ["healing"], "note": "Your heals give +1d4 to attacks and saves for 2 turns, even on a target at full health and on everyone a Mass Healing Word reaches. In Chalice form one Healing Word can reach three: the target, Chalice Healing's target and herself through Wapira's Crown."},
   {"item": "Fistbreaker Helm", "tags": ["dc"], "note": "+1 spell DC and +1 initiative."},
   {"item": "Ketheric's Shield", "tags": ["dc"], "note": "+1 spell DC and spell attack, Advantage on DEX saves. Ketheric only drops it at the very end of Act 2, so it's an Act 3 pick."},
   {"item": "Robe of the Weave", "tags": ["dc", "survival"], "note": "+1 spell DC and spell attack, +2 AC, and 1d6 HP back whenever you pass a save against a spell. In a Globe of Invulnerability in Act 3: See Invisibility reveals the lever, then each character gets one Arcana DC 20 try. Nobody in the party has that spell yet."},
@@ -61,7 +62,7 @@
   {"item": "Ring of Feywild Sparks", "tags": ["dc"], "note": "+1 spell DC for any caster."},
   {"item": "Shapeshifter Hat", "tags": ["utility"], "note": "One more Wild Shape charge: one more Starry Form a day."},
   {"item": "Hellrider Longbow", "tags": ["utility"], "note": "Ranged slot: +3 initiative. Druids aren't proficient with longbows, so its chance of Faerie Fire on a hit is a bonus, not a plan."},
-  {"item": "Armour of Moonbasking", "tags": ["survival"], "note": "Starry Form counts as Wild Shape: 22 temporary HP each time you take it, +4 AC (+2 doubled by a bug) and Advantage on saves against spells. Swapping constellations drops the temporary HP."},
+  {"item": "Armour of Moonbasking", "tags": ["survival"], "note": "Starry Form counts as Wild Shape: 22 temporary HP each time you take it, +4 AC (+2 doubled by a bug) and Advantage on saves against spells. Swapping constellations drops the temporary HP, though a Reddit report says the level 10 free swap refreshes it: check in game."},
   {"item": "Cloak of the Weave", "tags": ["dc"], "note": "+1 spell DC and spell attack. Its Absorb Elements is bugged (per the wiki)."}
  ],
 
@@ -79,7 +80,8 @@
     {"slot": "Rings", "items": ["Ring of Protection", "The Whispering Promise", "Ring of Salving"]},
     {"slot": "Main hand", "items": ["Melf's First Staff"]},
     {"slot": "Off hand", "items": ["Safeguard Shield"]},
-    {"slot": "Ranged", "items": ["Bow of Awareness"]}
+    {"slot": "Ranged", "items": ["Bow of Awareness"]},
+    {"slot": "Carried", "items": ["Auntie Ethel's Hair"]}
    ]
   },
   {
