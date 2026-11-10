@@ -56,6 +56,9 @@ The wiki was last checked against these notes on 2026-11-04.
   spot. Do the same for Longstrider.
 - **Scribed Bone Chill.** Scribe the scroll at level 6 and see whether the
   cantrip needs a prepare slot, or is always available like her others.
+- **Booming Blade and forced movement.** Booming Blade a target, then shove
+  it or push it with Thunderwave. Whether the thunder fires. A Reddit guide
+  says forced movement and teleports don't count as moving.
 
 ### Alene
 

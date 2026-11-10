@@ -9,7 +9,7 @@
  "difficulty": "Tactician",
  "portrait": "assets/portraits/vesper.jpg",
  "portrait_full": "assets/portraits/full/vesper.jpg",
- "role": "The party's front-line tank and thief. In medium armour and a shield she Dashes in, Booming Blades with her Shadow Blade and steps back, so enemies take thunder chasing her. With Braindrain Gloves on, her psychic hits stack Mental Fatigue, setting up her own Phantasmal Killer and Hold Person, and Alene's Hold Person. In Act 3 she wears The Reviving Hands to tank, and swaps Braindrain back in for those fights.",
+ "role": "The party's front-line tank and thief. Enemies often skip a high-AC, warded target for softer friends, so she tanks by punishing: in medium armour and a shield she Dashes in, Booming Blades with her Shadow Blade and steps back, so enemies take thunder chasing her. With Braindrain Gloves on, her psychic hits stack Mental Fatigue, setting up her own Phantasmal Killer and Hold Person, and Alene's Hold Person. In Act 3 she wears The Reviving Hands to tank, and swaps Braindrain back in for those fights.",
  "bio": [
   "Vesper never knew her parents. The Lower City of Baldur's Gate raised her: its alleys, its rooftops, and the lessons of being a horned girl in a city that crosses the street when it sees one.",
   "By sixteen she was the eldest of the Rats, a handful of orphans who slept in the loft of a burned-out chandlery above the docks. She fed them the way urchins do: lifted purses, emptied lockboxes, and a light touch that never left a trace.",
@@ -30,10 +30,10 @@
     {"label": "Class", "text": "Rogue"},
     {"label": "Abilities", "text": "STR 8 · DEX 17 · CON 14 · INT 16 · WIS 10 · CHA 8"},
     {"label": "Skills", "text": "Perception, Deception, Acrobatics, Athletics"},
-    {"label": "Expertise", "text": "Sleight of Hand, Stealth"}
+    {"label": "Expertise", "text": "Sleight of Hand, Athletics"}
    ],
    "gains": "Sneak Attack 1d6 and Expertise.",
-   "play": "Finesse weapon and light armour. Vesper is the party's lock, trap and scouting specialist."
+   "play": "Finesse weapon and light armour. Vesper is the party's lock, trap and scouting specialist. Athletics expertise makes her own shoves and throws off ledges reliable."
   },
   {
    "level": 2,
@@ -172,7 +172,7 @@
    "class": "Rogue",
    "class_level": 6,
    "choices": [
-    {"label": "Expertise", "text": "Perception, Deception"},
+    {"label": "Expertise", "text": "Stealth, Deception"},
     {"label": "Replace spell", "text": "Skip, unless Misty Step is on the list. If it is, make the level 11 swap now."}
    ],
    "prepare": {
@@ -181,8 +181,8 @@
     "note": "Same as level 9."
    },
    "scribe_up_to": 3,
-   "gains": "Expertise in Perception and Deception.",
-   "play": "Spotting traps and talking her way out of a caught theft both get much more reliable."
+   "gains": "Expertise in Stealth and Deception.",
+   "play": "Sneaking in for a theft and talking her way out of a caught one both get much more reliable."
   },
   {
    "level": 11,
@@ -214,7 +214,7 @@
    "prepare": {
     "count": 8,
     "abilities": ["Shadow Blade", "Counterspell", "Enhance Leap", "Glyph of Warding", "Phantasmal Killer", "Haste", "Blindness", "Hold Person"],
-    "note": "She has one 4th-level slot, so prepare one 4th-level spell: out of combat, swap Phantasmal Killer for Greater Invisibility or Fire Shield if the next fight calls for it. Swap Hold Person for Slow or Fear by fight."
+    "note": "She has one 4th-level slot, so prepare one 4th-level spell: out of combat, swap Phantasmal Killer for Greater Invisibility or Fire Shield if the next fight calls for it. Pick Fire Shield's Chill version: its cold retaliation hits Wet enemies twice as hard. Swap Hold Person for Slow or Fear by fight."
    },
    "scribe_up_to": 4,
    "gains": "Counterspell, 8 Wizard preparations, and level 4 scroll scribing.",
@@ -378,6 +378,7 @@
     {"title": "Arcane Ward is empty", "text": "An empty Arcane Ward refills to her Wizard level the next time she casts Booming Blade or gains Lightning Charges or Arcane Acuity. It only works at exactly 0 charges. The wiki lists this refill as a bug, so a patch could remove it."},
     {"title": "Can't reach the target", "text": "Can't reach a target? Cast Blade Ward and Dash past enemies instead: resistance plus Uncanny Dodge cuts their physical hits by 75%."},
     {"title": "Dash is too risky", "text": "If an opportunity attack would be too dangerous, use Cunning Disengage instead of Dash."},
+    {"title": "Shoves and teleports", "text": "Booming Blade's thunder only fires when the target moves itself. Shoving or throwing it, Thunderwave's push and teleports don't set it off."},
     {"title": "Bombs", "text": "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends. Before one, fill her Arcane Ward and boost her saves with Bless or Resistance.", "from_level": 11},
     {"title": "Friends' area spells", "text": "From level 11, Evasion means a passed DEX save takes no damage from Alene's Call Lightning or Ice Storm, Pearl's Conjure Barrage, Glyph of Warding, Fireball and most grenades, so friends can aim them at enemies around her. Smokepowder Arrows aren't covered, and the wiki doesn't list Spike Growth, Hunger of Hadar, Cone of Cold, Sunbeam, Insect Plague or Wall of Fire.", "from_level": 11}
    ]
