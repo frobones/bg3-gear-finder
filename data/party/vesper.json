@@ -429,7 +429,8 @@
   ],
   "mage_hand": [
    {"title": "Scout", "text": "Scout dangerous rooms while it's invisible. It turns visible when it acts and goes invisible again on a short rest."},
-   {"title": "Potion courier", "text": "Drop a potion for the Hand to throw to an ally."},
+   {"title": "Potion courier", "text": "Drop a potion for the Hand to throw to an ally. A thrown Potion of Speed hastes everyone within 1 m of where it lands, so aim it between friends standing together."},
+   {"title": "Water bottles", "text": "Drop water bottles for the Hand to throw. They leave enemies Wet, so Fire Shield: Chill's cold and Alene's lightning hit them twice as hard. An enemy a friend has already Chilled becomes Frozen instead, and takes double thunder from her Booming Blade, though it can't move to set off the second burst. It only works in that order: Wet first, then Chilled, doesn't freeze."},
    {"title": "Flanking buddy", "text": "Stand it next to an enemy to count as the ally Sneak Attack needs."},
    {"title": "Lights out", "text": "Turn off lights so targets are obscured, which gives her Shadow Blade Advantage (untested: the wiki doesn't confirm the Hand can do this)."},
    {"title": "Ledge shove", "text": "Before combat, throw or shove enemies off ledges or into chasms. Give the Hand a Hill Giant Strength elixir first so the throw succeeds."},
