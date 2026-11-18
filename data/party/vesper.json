@@ -247,6 +247,7 @@
   {"item": "Phalar Aluve", "priority": "optional", "note": "Finesse longsword fallback. Any teammate can pull it from the stone (DC 15 Strength or Religion) and hand it over."},
   {"item": "Sussur Dagger", "priority": "optional", "note": "Silences a caster it hits if they fail a Constitution save."},
   {"item": "Rupturing Blade", "priority": "optional", "note": "+1 finesse rapier, so Sneak Attack works. Searing Blood (short rest) is the original guide's bomb trick: each damage type it carries sets off the bomb again, and she takes 1d6 slashing. Bombs are her last resort. Sold by Brem after Find the Missing Shipment."},
+  {"item": "Practice Sword", "priority": "matchup", "note": "The only finesse weapon that deals Bludgeoning, and Sneak Attack takes its damage type. Against skeletons, Grym once it's Superheated and Frozen enemies, its damage, her DEX bonus and Sneak Attack are all doubled; Booming Blade's thunder isn't. Cursed Skulls are immune to Shadow Blade's psychic damage but vulnerable to it. Four are in the Emerald Grove's Hollow, where Wyll trains the tiefling children."},
   {"item": "Drakethroat Glaive", "priority": "yield", "claim": "Pearl: the enchant adds +1 to hit and +1d4 to every arrow, which pays off far more over her many shots than on one Booming Blade."},
   {"item": "Shadow Blade Ring", "priority": "core", "note": "Arabella's reward at camp: save her and the Grove, let her stay at camp, find her parents in the House of Healing's children's ward, tell her, then long rest and talk to her again. It casts Shadow Blade once per short rest, and the blade lasts until a long rest without Concentration, so her Act 2 weapon arrives before level 8. The spell's blade is lost if she's knocked unconscious; check whether the ring's is too. Cast it, then swap the ring back out before casting a concentration spell, because unequipping it breaks Concentration while the blade is out."},
   {"item": "Absolute's Warboard", "act": "one", "priority": "optional", "note": "+2 AC and Heroism once per long rest, for use until the Adamantine Shield is forged. Its +1 to saves needs the Absolute's Brand. Carried by True Soul Gut in the Shattered Sanctum."},
@@ -318,7 +319,7 @@
     {"slot": "Amulet", "items": ["Periapt of Wound Closure"], "alternates": ["Moondrop Pendant", "Silver Pendant"], "note": "Moondrop Pendant stops opportunity attacks at 50% HP or less. Silver Pendant gives Guidance when Alene isn't nearby."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring"], "note": "Put on the Boon ring before disguising: it does nothing if put on afterwards."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Smuggler's Ring"], "note": "Swap to Smuggler's for stealing, locks and traps."},
-    {"slot": "Main hand", "items": ["Knife of the Undermountain King"], "alternates": ["Phalar Aluve", "Sussur Dagger", "Rupturing Blade"], "note": "Finesse, so Sneak Attack works. Hand the Knife on once Shadow Blade arrives: the Shadow Blade Ring in Act 2, or her own spell at level 8."},
+    {"slot": "Main hand", "items": ["Knife of the Undermountain King"], "alternates": ["Phalar Aluve", "Sussur Dagger", "Rupturing Blade", "Practice Sword"], "note": "Finesse, so Sneak Attack works. Hand the Knife on once Shadow Blade arrives: the Shadow Blade Ring in Act 2, or her own spell at level 8."},
     {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": ["Absolute's Warboard"]},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []}
    ],
@@ -337,7 +338,7 @@
     {"slot": "Amulet", "items": ["Periapt of Wound Closure"], "alternates": ["Amulet of the Harpers", "Moondrop Pendant", "Silver Pendant"]},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition", "Smuggler's Ring", "Ring of Free Action"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Hold Person, Fear or Slow. Free Action against Hold Person casters and webs."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Shapeshifter's Boon Ring", "Shadow Blade Ring"], "note": "Wear the Shadow Blade Ring just long enough to cast its blade, then swap back before casting a concentration spell, because unequipping it breaks Concentration."},
-    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King"], "note": "From the Shadow Blade Ring partway through the act, then her own spell from level 8. From level 9, cast it with a 3rd-level slot for 3d8."},
+    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Knife of the Undermountain King", "Practice Sword"], "note": "From the Shadow Blade Ring partway through the act, then her own spell from level 8. From level 9, cast it with a 3rd-level slot for 3d8."},
     {"slot": "Off hand", "items": ["Adamantine Shield"], "alternates": []},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
     {"slot": "Carried", "items": ["Resonance Stone"], "note": "Carry the Stone only when the party is clear of its aura. An Act 2 find in the Mind Flayer Colony."}
@@ -357,7 +358,7 @@
     {"slot": "Amulet", "items": ["Amulet of Greater Health"], "alternates": ["Periapt of Wound Closure", "Moondrop Pendant", "Silver Pendant"], "note": "Optional: once the amulet never comes off, respec at Withers from CON 14 / WIS 10 to CON 8 / WIS 15 for +2 WIS saves against Hold, Fear and Dominate. Without the amulet she's then on CON 8 HP."},
     {"slot": "Ring", "items": ["Ring of Elemental Infusion"], "alternates": ["Ring of Mental Inhibition", "Smuggler's Ring", "Ring of Free Action"], "note": "Infusion adds thunder after every Booming Blade. Wear Mental Inhibition in fights where she leads with Phantasmal Killer, Slow or Fear."},
     {"slot": "Ring", "items": ["Ring of Arcane Synergy"], "alternates": ["Band of the Mystic Scoundrel", "Shapeshifter's Boon Ring"]},
-    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": [], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic."},
+    {"slot": "Main hand", "items": ["Shadow Blade (weapon)"], "alternates": ["Practice Sword"], "note": "Summoned by her Shadow Blade spell. Cast with a 3rd-level slot for 3d8 psychic."},
     {"slot": "Off hand", "items": ["Viconia's Walking Fortress"], "alternates": ["Adamantine Shield", "Bloodthirst"]},
     {"slot": "Ranged", "items": ["Bow of the Banshee"], "alternates": []},
     {"slot": "Carried", "items": ["Resonance Stone"], "note": "Carry the Stone only when the party is clear of its aura. Check in game that it still works in Act 3."}
@@ -379,6 +380,7 @@
     {"title": "Can't reach the target", "text": "Can't reach a target? Cast Blade Ward and Dash past enemies instead: resistance plus Uncanny Dodge cuts their physical hits by 75%."},
     {"title": "Dash is too risky", "text": "If an opportunity attack would be too dangerous, use Cunning Disengage instead of Dash."},
     {"title": "Shoves and teleports", "text": "Booming Blade's thunder only fires when the target moves itself. Shoving or throwing it, Thunderwave's push and teleports don't set it off."},
+    {"title": "Skeletons and Grym", "text": "Against skeletons, Grym once it's Superheated, Cursed Skulls and Frozen enemies, fight with the Practice Sword: they take double Bludgeoning, so its hits and Sneak Attack deal double. Start the fight with it rather than swapping mid-fight (untested: swapping may dismiss Shadow Blade)."},
     {"title": "Bombs", "text": "Bombs are a last resort. From level 11, Evasion makes point-blank bombs much safer for her, but not for her friends. Before one, fill her Arcane Ward and boost her saves with Bless or Resistance.", "from_level": 11},
     {"title": "Friends' area spells", "text": "From level 11, Evasion means a passed DEX save takes no damage from Alene's Call Lightning or Ice Storm, Pearl's Conjure Barrage, Glyph of Warding, Fireball and most grenades, so friends can aim them at enemies around her. Smokepowder Arrows aren't covered, and the wiki doesn't list Spike Growth, Hunger of Hadar, Cone of Cold, Sunbeam, Insect Plague or Wall of Fire.", "from_level": 11}
    ]

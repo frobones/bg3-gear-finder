@@ -63,6 +63,9 @@ The wiki was last checked against these notes on 2026-11-04.
   concentration spell and let her Arcane Ward run low, then see whether more
   of them go for her. A Reddit post says the AI skips targets it expects to
   deal no damage to.
+- **Swapping off Shadow Blade.** Mid-fight, swap her main hand to the
+  Practice Sword and back. Whether Shadow Blade is dismissed, or comes back
+  when she swaps again.
 
 ### Alene
 
