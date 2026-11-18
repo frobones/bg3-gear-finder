@@ -59,6 +59,10 @@ The wiki was last checked against these notes on 2026-11-04.
 - **Booming Blade and forced movement.** Booming Blade a target, then shove
   it or push it with Thunderwave. Whether the thunder fires. A Reddit guide
   says forced movement and teleports don't count as moving.
+- **Drawing attacks.** In a fight where enemies keep ignoring her, hold a
+  concentration spell and let her Arcane Ward run low, then see whether more
+  of them go for her. A Reddit post says the AI skips targets it expects to
+  deal no damage to.
 
 ### Alene
 
